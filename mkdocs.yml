@@ -1,0 +1,74 @@
+site_name: 'MeterSphere 文档'
+site_url: 'https://metersphere.io'
+site_description: 'Document'
+site_author: 'wangzhen'
+
+repo_name: 'MeterSphere Docs'
+repo_url: 'https://github.com/metersphere/docs'
+
+theme:
+    name: 'material'
+    logo: 'img/logo-white.png'
+    favicon: 'img/facio.ico'
+    language: 'zh'
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+
+nav:
+    - 介绍: index.md
+    - 快速开始: quick_start.md
+    - 用户手册: 
+        - 系统架构: user_manual/system_arch.md
+        - 安装部署: user_manual/installation.md
+        - 系统管理: user_manual/system_management.md
+        - 测试跟踪: user_manual/test_track.md
+        - 接口测试: user_manual/api_test.md
+        - 性能测试: user_manual/performance_test.md
+    - 常见问题: faq.md
+    - 开发文档: dev_manual.md
+    - 关于:
+        - 更新说明: about/changelog.md
+        - 联系我们: about/contact.md
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+        guess_lang: True
+        linenums: False
+    - toc:
+        permalink: True
+    - footnotes
+    - attr_list
+    - def_list
+    - tables
+    - abbr
+    - md_in_html
+    - pymdownx.extra
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_png
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist
+    - pymdownx.tilde
+    - pymdownx.betterem
+    - pymdownx.superfences
+    - pymdownx.progressbar
+
+extra_css:
+    - css/extra.css
+
+copyright: Copyright &copy; 2014-2020 <a href="https://www.fit2cloud.com">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+
+plugins:
+    - search
