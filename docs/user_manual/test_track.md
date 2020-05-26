@@ -16,6 +16,13 @@
 ## 测试用例
 ### 模块管理
 > 页面左侧为模块树，模块属于某个项目，测试用例以模块为单位进行统一管理；模块树支持添加、修改、删除以及拖拽操作
+
+![模块拖拽](../img/track/test-module-drag.jpg)
+
+![创建模块](../img/track/test-module-edit.jpg)
+
+
+## 用例列表
 ### 用例列表
 > 页面右侧为用例列表，测试用例属于某个项目；该页面支持测试用例的创建、修改、删除、复制以及Excel导入等操作
 
@@ -26,13 +33,12 @@
 ![导入测试用例](../img/track/test-case-import.jpg)
 
 
-
 ## 测试计划
 > 测试计划属于某个项目，并可关联该项目下的测试用例；该页面功能包括测试计划的添加、修改、删除操作；点击某行，跳转至对应计划详情页面
 
-![测试用例](../img/track/plan.jpg)
+![测试计划](../img/track/plan.jpg)
 
-![测试用例](../img/track/plan-create.jpg)
+![创建测试计划](../img/track/plan-create.jpg)
 
 
 ## 测试计划详情
@@ -45,13 +51,18 @@
 
 ![导入测试用例](../img/track/test-paln-test-case-edit.jpg)
 
-### 测试报告
-> 测试详情页面，可根据模版创建该计划对应的测试报告，模版可在「系统设置」-「工作空间」-「测试报告模版」中由测试管理人员创建；测试报告支持部分内容自定义
 
-![关联测试用例](../img/track/plan-report-create.jpg)
+## 测试报告
+> 测试详情页面中，可根据模版创建该计划对应的测试报告，模版可在「系统设置」-「工作空间」-「测试报告模版」中由测试管理人员创建；
 
-![关联测试用例](../img/track/plan-report-view.jpg)
+![创建测试报告](../img/track/plan-report-create.jpg)
 
-![导入测试用例](../img/track/plan-report-template.jpg)
+### 测试报告详情
+> 根据该测试计划的执行结果生成对应的测试报告详情页面，其中包括基础信息、测试结果列表、测试结果统计等模块
 
+![测试报告详情](../img/track/plan-report-view.jpg)
 
+### 编辑测试报告组件
+> 可以从组件库拖拽，自定义测试报告内容
+
+![测试报告编辑](../img/track/plan-report-template.jpg)
