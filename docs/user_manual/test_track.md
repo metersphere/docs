@@ -4,13 +4,13 @@
 ## 最近测试
 > 页面右侧是最近测试列表，展示了我最近执行的测试用例，点击某行，跳转至该用例的编辑页面
 
-![首页](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/home.jpg)
+![首页](../img/track/home.jpg)
 
 
 # 项目
 > 项目是测试用例和测试计划的管理单位，该页面包括项目的创建、编辑、查看、删除等管理功能；
 
-![项目](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/project.jpg)
+![项目](../img/track/project.jpg)
 
 
 # 测试用例
@@ -19,39 +19,39 @@
 ## 用例列表
 > 页面右侧为用例列表，测试用例属于某个项目；该页面支持测试用例的创建、修改、删除、复制以及Excel导入等操作
 
-![测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/test-case.jpg)
+![测试用例](../img/track/test-case.jpg)
 
-![创建测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/test-case-create.jpg)
+![创建测试用例](../img/track/test-case-create.jpg)
 
-![导入测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/test-case-import.jpg)
+![导入测试用例](../img/track/test-case-import.jpg)
 
 
 
 # 测试计划
 > 测试计划属于某个项目，并可关联该项目下的测试用例；该页面功能包括测试计划的添加、修改、删除操作；点击某行，跳转至对应计划详情页面
 
-![测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/plan.jpg)
+![测试用例](../img/track/plan.jpg)
 
-![测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/plan-create.jpg)
+![测试用例](../img/track/plan-create.jpg)
 
 
 # 测试计划详情
 ## 用例管理
 > 该页面可关联对应项目的下的测试用例，关联后的用例是测试执行的基本单位；该页面管理了测试用例执行的生命周期，支持测试用例的创建、修改、删除、批量执行、批量变更执行人、创建测试报告等操作
 
-![测试计划详情](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/test-plan-view.jpg)
+![测试计划详情](../img/track/test-plan-view.jpg)
 
-![关联测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/test-case-related.jpg)
+![关联测试用例](../img/track/test-case-related.jpg)
 
-![导入测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/test-paln-test-case-edit.jpg)
+![导入测试用例](../img/track/test-paln-test-case-edit.jpg)
 
 ## 测试报告
 > 测试详情页面，可根据模版创建该计划对应的测试报告，模版可在「系统设置」-「工作空间」-「测试报告模版」中由测试管理人员创建；测试报告支持部分内容自定义
 
-![关联测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/plan-report-create.jpg)
+![关联测试用例](../img/track/plan-report-create.jpg)
 
-![关联测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/plan-report-view.jpg)
+![关联测试用例](../img/track/plan-report-view.jpg)
 
-![导入测试用例](/Users/chenjianxing/Documents/sources/master/MS/docs/docs/img/track/plan-report-template.jpg)
+![导入测试用例](../img/track/plan-report-template.jpg)
 
 
