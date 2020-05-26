@@ -9,8 +9,8 @@
 
 请自行下载 MeterSphere 完整离线包，并复制到目标机器的 /tmp 目录下
 
-!!! tip "下载链接"
-    https://github.com/KubeOperator/KubeOperator/releases
+!!! tip ""
+    下载链接: https://github.com/metersphere/metersphere/releases
 
 ## 解压离线包
 
@@ -20,14 +20,14 @@
 cd /tmp
 # 解压离线包
 tar zxvf metersphere-v1.0.0-release.tar.gz
+cd metersphere-v1.0.0-release
 ```
 
 ## 修改安装配置(可选)
 
-进入安装包解压后的目录，编辑修改安装参数
+在安装包解压后的目录，编辑修改安装参数
 
 ```sh
-cd metersphere-v1.0.0-release
 vim install.conf
 ```
 
@@ -83,3 +83,20 @@ cd metersphere-v1.0.0-release
 # 查看 MeterSphere 状态
 msctl status
 ```
+
+## 升级
+
+按照本文档前述步骤, 下载新版本安装包并上传解压后, 执行如下命令进行升级
+
+```sh
+# 进入项目目录
+cd metersphere-v1.0.0-release
+# 运行安装脚本
+./install.sh upgrade
+# 查看 MeterSphere 状态
+msctl status
+```
+
+!!! warning "注意"
+    如果在旧版本安装过程中有修改安装目录(默认为 /opt 目录), 在执行升级脚本前需要修改 install.conf 文件并配置安装目录为旧版本的安装目录 
+
