@@ -1,3 +1,15 @@
+.md-header {
+  background-color: #783887;
+}
+
+.md-footer {
+  background-color: #783887;
+}
+
+.md-footer-nav__link {
+  padding-top: .8rem;
+}
+
 .progress-label {
   position: absolute;
   text-align: center;
