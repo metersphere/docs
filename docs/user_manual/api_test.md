@@ -100,7 +100,7 @@
 ### 修改测试
 > 请求执行顺序和场景执行顺序支持拖拽调整
 
-  ![拖拽效果](/Users/luoting/Documents/Camtasia/拖拽效果.gif)
+  ![拖拽效果](../img/api/拖拽效果.gif)
 
 
 ### 删除测试
