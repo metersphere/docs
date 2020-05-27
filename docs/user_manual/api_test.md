@@ -122,3 +122,25 @@
 
 #### 报告
 
+​       对接口测试报告的查询和删除操作
+
+- ##### 查询报告：查询全部报告，点击显示全部，查询单个报告可以根据名称搜索
+
+  ![image-20200527120703844](/Users/luoting/Library/Application Support/typora-user-images/image-20200527120703844.png)
+
+- ##### 报告详情：展示接口测试的执行结果，包含响应时间、错误、断言以及请求的具体响应报文等
+
+  ![image-20200527122540613](/Users/luoting/Library/Application Support/typora-user-images/image-20200527122540613.png)
+
+  ![image-20200527122840205](/Users/luoting/Library/Application Support/typora-user-images/image-20200527122840205.png)
+
+  ![image-20200527123022645](/Users/luoting/Library/Application Support/typora-user-images/image-20200527123022645.png)
+
+- ##### 删除报告：点击报告-显示全部，选择要删除的报告，点击删除按钮
+
+  ![image-20200527120836405](/Users/luoting/Library/Application Support/typora-user-images/image-20200527120836405.png)
+
+
+
+
+
