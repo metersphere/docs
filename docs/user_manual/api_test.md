@@ -82,7 +82,9 @@
 
 - ##### 修改测试：请求执行顺序和场景执行顺序支持拖拽调整
 
-  ![拖拽效果](/Users/luoting/Documents/拖拽效果.gif)
+  ![拖拽效果](/Users/luoting/Documents/Camtasia/拖拽效果.gif)
+
+  
 
 - ##### 删除测试：点击测试-显示全部，选择要删除的测试，点击删除按钮
 
