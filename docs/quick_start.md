@@ -18,7 +18,7 @@
 以 root 用户 ssh 登录目标服务器, 执行如下命令
 
 ```sh
-curl https://github.com/metersphere/metersphere/release/latest/quick_start.sh | sh
+curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | sh
 ```
 
 安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录
