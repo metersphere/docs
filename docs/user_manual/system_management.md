@@ -147,7 +147,7 @@
 
 > 点击编辑按钮可以对SMTP信息进行修改，保存SMTP信息
 
-![image-20200526151627711](../img/system_management/编辑SMTP信息.png)
+![image-20200526151627711](../img/system_management/编辑smtp信息.png)
 
 
 ## 组织
