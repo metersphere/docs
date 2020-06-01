@@ -61,64 +61,64 @@
 ##### 自定义变量
 > 在场景配置中自定义变量的名称和值, 接口运行或者测试集合里面可以通过 ${BASE} 来访问当前场景下定义的全局变量
 
-![image-20200526182004257](../img/api/image-20200526182004257.png)
+![api-custom-var](../img/api/api-custom-var.png)
 
 ##### 请求头
 > 这里增加全局 header，可以在项目中设置全局 header 值
 
-![image-20200526182452449](../img/api/image-20200526182452449.png)
+![api-custom-header.](../img/api/api-custom-header.png)
 
 #### 请求配置
 
 ##### 请求参数
 > 接口 url 的查询字符串
 
-![image-20200526183529482](../img/api/image-20200526183529482.png)
+![api-request-parameter](../img/api/api-request-parameter.png)
 
 ##### 请求头
 > http请求的header，作用域为请求内
 
-![image-20200526184041858](../img/api/image-20200526184041858.png)
+![api-request-header](../img/api/api-request-header.png)
 
 ##### 请求内容
 > http 请求的 body 部分，如果http请求方式是 post, put 等请求方式时会有 请求内容 部分，形式有2种，分别是 键值对（form）、文本（json）
 
-![image-20200526184241522](../img/api/image-20200526184241522.png)
+![api-request-content](../img/api/api-request-content.png)
 
 
 ##### 断言
 > 断言支持文本、正则和响应时间三种方式，选择断言方式后，点击“+”生成规则即可生效
 
-![image-20200526184822836](../img/api/image-20200526184822836.png)
+![api-assert](../img/api/api-assert.png)
 
 ##### 提取
 > 支持从响应中提取返回值作为变量存储，作用域为场景内，提取方式为正则、JSONPath、XPath三种
 
-![image-20200526190002190](../img/api/image-20200526190002190.png)
+![api-extract](../img/api/api-extract.png)
 
 
 ### 修改测试
 > 请求执行顺序和场景执行顺序支持拖拽调整；变更结束点击保存
 
-  ![拖拽效果](../img/api/拖拽效果.gif)
+  ![api-test-update](../img/api/api-test-update.gif)
 
 
 ### 删除测试
 > 点击测试-显示全部，选择要删除的测试，点击删除按钮
 
-  ![image-20200526190751152](../img/api/image-20200526190751152.png)
+  ![api-test-delete](../img/api/api-test-delete.png)
 
 ### 查询测试
 > 查询全部测试，点击显示全部，查询单个测试可以根据名称搜索
 
-  ![image-20200526191200568](../img/api/image-20200526191200568.png)
+  ![api-test-select](../img/api/api-test-select.png)
 
 ### 执行测试
 > 保存成功的测试点击“执行”按钮，编辑完成的测试也可以点击“保存并执行”按钮，页面将会跳转到当前测试的测试报告中。
 
-  ![image-20200526191445792](../img/api/image-20200526191445792.png)
+  ![api-test-execute](../img/api/api-test-execute.png)
 
-  ![image-20200526191647234](../img/api/image-20200526191647234.png)
+  ![api-test-execute1](../img/api/api-test-execute1.png)
 
 ### 更多操作
 > 暂未实现
@@ -131,23 +131,23 @@
 
 > 查询全部报告，点击显示全部，查询单个报告可以根据名称搜索
 
-![image-20200527120703844](../img/api/image-20200527120703844.png)
+![api-report-selectAll](../img/api/api-report-selectAll.png)
 
 ### 报告详情
 
 > 展示接口测试的执行结果，包含响应时间、错误、断言以及请求的具体响应报文等
 
-![image-20200527122540613](../img/api/image-20200527122540613.png)
+![api-report-detail](../img/api/api-report-detail.png)
 
-![image-20200527122840205](../img/api/image-20200527122840205.png)
+![api-report-detail1](../img/api/api-report-detail1.png)
 
-![image-20200527123022645](../img/api/image-20200527123022645.png)
+![api-report-detail2.](../img/api/api-report-detail2.png)
 
 ### 删除报告
 
 > 点击报告-显示全部，选择要删除的报告，点击删除按钮
 
-![image-20200527120836405](../img/api/image-20200527120836405.png)
+![api-report-delete](../img/api/api-report-delete.png)
 
 
 
