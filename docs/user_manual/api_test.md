@@ -9,40 +9,40 @@
 
 - 测试日历：按时间维度展示接口测试执行的频次，颜色越深，代表使用频次越高
 
-![image-20200526151627711](../img/api/image-20200526151627711.png)
+![api-home](../img/api/api-home.png)
 
 ## 项目
 > 对项目进行新增、修改、删除、查询操作
 
-![image-20200526160337680](../img/api/image-20200526160337680.png)
+![api-project](../img/api/api-project.png)
 
 
 
 ### 新增项目
 > 点击“创建项目”，录入项目名称和描述
 
-  ![image-20200526161235890](../img/api/image-20200526161235890.png)
+  ![api-project-create](../img/api/api-project-create.png)
 
   
 
 ### 修改项目
 > 选择要修改的项目，点击编辑按钮
 
-  ![image-20200526161657718](../img/api/image-20200526161657718.png)
+  ![api-project-edit](../img/api/api-project-edit.png)
 
   
 
 ### 删除项目
 > 选择要删除的项目，点击删除按钮
 
-  ![image-20200526161844214](../img/api/image-20200526161844214.png)
+  ![api-project-delete](../img/api/api-project-delete.png)
 
   
 
 ### 查询项目
 > 查询全部项目选择“显示全部”，查询单个项目可以根据名称搜索
 
-  ![image-20200526162045573](../img/api/image-20200526162045573.png)
+  ![api-project-search](../img/api/api-project-search.png)
 
   
 
@@ -53,7 +53,7 @@
 ### 创建测试
 > 点击创建测试，如图 5 步即可成功创建接口测试
 
-  ![image-20200526164346609](../img/api/image-20200526164346609.png)
+  ![api-test-create](../img/api/api-test-create.png)
 
 #### 场景配置
 > 场景内的全局变量和请求头配置，作用域为场景内
