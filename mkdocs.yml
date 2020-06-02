@@ -19,9 +19,11 @@ theme:
 nav:
     - 介绍: index.md
     - 快速开始: quick_start.md
+    - 系统架构: system_arch.md
+    - 安装部署: 
+        - 在线安装: installation/online_installation.md
+        - 离线安装: installation/offline_installation.md
     - 用户手册: 
-        - 系统架构: user_manual/system_arch.md
-        - 安装部署: user_manual/installation.md
         - 系统管理: user_manual/system_management.md
         - 测试跟踪: user_manual/test_track.md
         - 接口测试: user_manual/api_test.md
