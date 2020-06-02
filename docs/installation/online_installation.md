@@ -6,21 +6,21 @@
     * 磁盘空间: 50G
     * 可访问互联网
 
-## 下载离线包
+## 下载安装包
 
-请自行下载 MeterSphere 完整离线包，并复制到目标机器的 /tmp 目录下
+请自行下载 MeterSphere 最新版本的在线安装包，并复制到目标机器的 /tmp 目录下
 
 !!! tip ""
-    下载链接: https://github.com/metersphere/metersphere/releases
+    安装包下载链接: https://github.com/metersphere/metersphere/releases
 
-## 解压离线包
+## 解压安装包
 
 以 root 用户 ssh 登录到目标机器, 并执行如下命令
 
 ```sh
 cd /tmp
-# 解压离线包
-tar zxvf metersphere-release-v1.0.0-offline.tar.gz
+# 解压安装包
+tar zxvf metersphere-release-v1.0.0.tar.gz
 ```
 
 ## 修改安装配置(可选)
@@ -28,7 +28,7 @@ tar zxvf metersphere-release-v1.0.0-offline.tar.gz
 在安装包解压后的目录，编辑修改安装参数
 
 ```sh
-cd metersphere-release-v1.0.0-offline
+cd metersphere-release-v1.0.0
 vim install.conf
 ```
 
@@ -81,8 +81,8 @@ vim install.conf
 ## 执行安装脚本
 
 ```sh
-# 进入离线包目录
-cd metersphere-release-v1.0.0-offline
+# 进入安装包目录
+cd metersphere-release-v1.0.0
 # 运行安装脚本
 sh install.sh
 # 等待安装脚本执行完成后，查看 MeterSphere 状态
@@ -95,7 +95,7 @@ msctl status
 
 ```sh
 # 进入项目目录
-cd metersphere-v1.x.y-release-offline
+cd metersphere-v1.x.y-release
 # 运行安装脚本
 sh install.sh
 # 查看 MeterSphere 状态
