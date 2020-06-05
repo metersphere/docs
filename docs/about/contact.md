@@ -8,6 +8,10 @@
 
 ![wechat-official](../img/wechat-official.jpg)
 
+## 微信群
+
+![wechat-group](../img/wechat-group.jpg)
+
 ## QQ 群
 
 ![qq](../img/qq-group.png)
