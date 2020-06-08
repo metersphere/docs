@@ -121,7 +121,11 @@
   ![api-test-execute1](../img/api/api-test-execute1.png)
 
 ### 更多操作
-> 暂未实现
+> 创建性能测试，接口测试保存后可以直接创建该场景对应的性能测试，配置压力测试参数后，可一键执行
+
+![api-test-more-operations](../img/api/api-test-more-operations.png)
+
+![api-test-more-operations1](../img/api/api-test-more-operations1.png)
 
 ## 报告
 
