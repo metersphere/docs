@@ -30,7 +30,7 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
 安装成功后，通过浏览器访问如下页面登录 MeterSphere
 
 ```
-地址: http://目标服务器IP地址
+地址: http://目标服务器IP地址:8081
 用户名: admin
 密码: metersphere
 ```
