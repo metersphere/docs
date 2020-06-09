@@ -11,7 +11,6 @@
     - Kafka: 接收 JMeter 产生的性能测试结果数据
     - [Data streaming](https://github.com/metersphere/data-streaming): 从 Kafka 中获取性能测试结果数据进行处理后存入 MySQL 数据库
     - Docker engine: 为 Node Controller 提供 JMeter 容器运行环境
-    - Kubernetes: 为 Operator 提供性能测试任务的运行环境
   
     各个组件间的关系可参考下图
 
