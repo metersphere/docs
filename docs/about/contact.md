@@ -10,7 +10,7 @@
 
 ## 微信群
 
-![wechat-group](../img/wechat-group.jpg)
+![wechat-group](../img/wechat-group.png)
 
 ## QQ 群
 
