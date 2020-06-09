@@ -1,13 +1,12 @@
 ## 整体架构
 
-![整体架构](../img/system-arch.png)
+![整体架构](./img/system-arch.png)
 
 !!! info "组件说明"
     - [Frontend](https://github.com/metersphere/metersphere): MeterSphere 的前端工程, 基于 vue.js 进行开发
     - [Backend](https://github.com/metersphere/metersphere): MeterSphere 的后端后称, 基于 Sprint boot 进行开发, 为 MeterSphere 的功能主体
     - [Chrome plugin](https://github.com/metersphere/chrome-exetions): 浏览器插件, 录制 web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试
     - [Node controller](https://github.com/metersphere/node-controller): 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter 容器完成性能测试
-    - [Operator](https://github.com/metersphere/operator): 为性能测试提供 Kubernetes 集群类型的测试资源池, 接收来自系统的性能测试任务, 动态的创建 Kubernetes 集群中的性能测试 Job 完成性能测试
     - MySQL: MeterSphere 项目的主要数据均存储在 MySQL
     - Kafka: 接收 JMeter 产生的性能测试结果数据
     - [Data streaming](https://github.com/metersphere/data-streaming): 从 Kafka 中获取性能测试结果数据进行处理后存入 MySQL 数据库
@@ -16,11 +15,11 @@
   
     各个组件间的关系可参考下图
 
-    ![组件说明](../img/components.png)
+    ![组件说明](./img/components.png)
 
 ## 管理模型
 
-![管理模型](../img/management-model.png)
+![管理模型](./img/management-model.png)
 
 !!! info "概念说明"
     MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在团队的实际情况进行灵活的租户体系映射

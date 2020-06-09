@@ -102,9 +102,6 @@ MeterSphere 是一站式的开源企业级持续测试平台，涵盖测试用�
             <td>分布式压力测试</td>
         </tr>
         <tr>
-            <td>支持独立主机、Kubernetes&nbsp;集群等多种类型的测试执行环境</td>
-        </tr>
-        <tr>
             <td>支持参数化测试</td>
         </tr>
         <tr>
