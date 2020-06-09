@@ -22,7 +22,6 @@ MeterSphere 是一站式的开源企业级持续测试平台，涵盖测试用�
 
 <!-- 添加截图 -->
 - 测试跟踪: 远超 TestLink 的使用体验
-![测试跟踪](img/track/test-case.jpg)
 - 接口测试: 类似 Postman 的体验, 天然支持团队协作
 - 性能测试: 兼容 JMeter，支持 Kubernetes 和云环境，
 轻松支持高并发、分布式的性能测试
@@ -91,8 +90,8 @@ MeterSphere 是一站式的开源企业级持续测试平台，涵盖测试用�
             <td>测试报告导出</td>
         </tr>
         <tr>
-            <td rowspan="10">性能测试</td>
-            <td rowspan="6">测试脚本</td>
+            <td rowspan="9">性能测试</td>
+            <td rowspan="5">测试脚本</td>
             <td>完全兼容&nbsp;JMeter&nbsp;脚本</td>
         </tr>
         <tr>

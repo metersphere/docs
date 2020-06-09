@@ -67,8 +67,8 @@
             <td>测试报告导出</td>
         </tr>
         <tr>
-            <td rowspan="10">性能测试</td>
-            <td rowspan="6">测试脚本</td>
+            <td rowspan="9">性能测试</td>
+            <td rowspan="5">测试脚本</td>
             <td>完全兼容&nbsp;JMeter&nbsp;脚本</td>
         </tr>
         <tr>
