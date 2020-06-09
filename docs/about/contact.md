@@ -1,5 +1,3 @@
-# 联系方式
-
 ## 技术咨询
 
 [点击提交技术咨询][jinshuju]
@@ -20,11 +18,11 @@
 
 - [MeterSphere][metersphere] ![metersphere stars][metersphere stars]
 
----
+## 联系方式
 
-- http://www.metersphere.io
-- support@fit2cloud.com
-- 400-052-0755
+- 官网：http://www.metersphere.io
+- 邮箱：support@fit2cloud.com
+- 电话：400-052-0755
 
 [jinshuju]: https://jinshuju.net/
 [metersphere]: https://github.com/metersphere/metersphere
