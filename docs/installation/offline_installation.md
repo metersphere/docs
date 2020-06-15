@@ -83,7 +83,7 @@ vim install.conf
 # 进入安装包目录
 cd metersphere-release-v1.0.0-offline
 # 运行安装脚本
-sh install.sh
+/bin/bash install.sh
 # 等待安装脚本执行完成后，查看 MeterSphere 状态
 msctl status
 ```
@@ -96,7 +96,7 @@ msctl status
 # 进入项目目录
 cd metersphere-v1.x.y-release-offline
 # 运行安装脚本
-sh install.sh
+/bin/bash install.sh
 # 查看 MeterSphere 状态
 msctl status
 ```
