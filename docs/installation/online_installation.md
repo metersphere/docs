@@ -89,6 +89,14 @@ cd metersphere-release-v1.0.0
 msctl status
 ```
 
+安装成功后，通过浏览器访问如下页面登录 MeterSphere
+
+```
+地址: http://目标服务器IP地址:8081
+用户名: admin
+密码: metersphere
+```
+
 ## 升级
 
 按照本文档前述步骤, 下载新版本安装包并上传解压后, 重新执行安装命令进行升级
