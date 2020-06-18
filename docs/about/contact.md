@@ -24,6 +24,6 @@
 - 邮箱：support@fit2cloud.com
 - 电话：400-052-0755
 
-[jinshuju]: https://jinshuju.net/
+[jinshuju]: https://jinshuju.net/f/qQOZj1
 [metersphere]: https://github.com/metersphere/metersphere
 [metersphere stars]: https://img.shields.io/github/stars/metersphere/metersphere.svg
