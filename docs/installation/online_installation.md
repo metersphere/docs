@@ -41,7 +41,7 @@ vim install.conf
     MS_PREFIX=''
     ## MeterSphere 相关组件所使用 Docker 镜像的镜像标签
     MS_TAG=dev
-    ## 安装模式, 支持的安装模式有 allinone | server | node_controller 三种
+    ## 安装模式, 支持的安装模式有 allinone | server | node-controller 三种
     MS_MODE=allinone
     ## MeterSphere Web 服务的监听端口
     MS_PORT=8081
