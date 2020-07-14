@@ -5,7 +5,7 @@ site_author: 'wangzhen'
 google_analytics: ['UA-147297392-7', 'metersphere.io']
 
 repo_name: 'MeterSphere Docs'
-repo_url: 'https://github.com/metersphere/docs'
+repo_url: 'https://github.com/metersphere/metersphere'
 
 theme:
     name: 'material'
