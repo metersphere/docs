@@ -20,7 +20,7 @@
 ```sh
 cd /tmp
 # 解压安装包
-tar zxvf metersphere-release-v1.0.0.tar.gz
+tar zxvf metersphere-release-v1.0.3.tar.gz
 ```
 
 ## 修改安装配置(可选)
@@ -28,7 +28,7 @@ tar zxvf metersphere-release-v1.0.0.tar.gz
 在安装包解压后的目录，编辑修改安装参数
 
 ```sh
-cd metersphere-release-v1.0.0
+cd metersphere-release-v1.0.3
 vim install.conf
 ```
 
@@ -82,7 +82,7 @@ vim install.conf
 
 ```sh
 # 进入安装包目录
-cd metersphere-release-v1.0.0
+cd metersphere-release-v1.0.3
 # 运行安装脚本
 /bin/bash install.sh
 # 等待安装脚本执行完成后，查看 MeterSphere 状态
