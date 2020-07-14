@@ -30,7 +30,7 @@ nav:
         - 接口测试: user_manual/api_test.md
         - 性能测试: user_manual/performance_test.md
     - 常见问题: faq.md
-    # - 开发文档: dev_manual.md
+    - 开发文档: dev_manual.md
     - 关于:
         - 更新说明: about/changelog.md
         - 联系我们: about/contact.md
