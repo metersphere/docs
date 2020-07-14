@@ -77,6 +77,8 @@ metersphere-server 服务依赖的 Jmeter 核心类库需要加载 jmeter 配置
 
 在启动配置中添加 Spring Boot 启动项，直接启动 Spring Boot 项目即可
 
+![server-start](./img/dev/server-start.png)
+
 ### 前端
 MeterSphere 前端使用了 Vue.js 作为前端框架，ElementUI 作为 UI 框架，并使用 npm 作为包管理工具。开发者请先下载 Node.js 作为运行环境，IDEA 用户建议安装 Vue.js 插件，便于开发
 
