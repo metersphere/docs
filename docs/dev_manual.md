@@ -70,7 +70,7 @@ run.mode=local
 
 metersphere-server 服务依赖的 Jmeter 核心类库需要加载 jmeter 配置文件，默认加载 /opt/jmeter 下的配置文件
 
-开发这需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter 目录
+开发这需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter/bin 目录
 
 
 #### 运行后端服务
