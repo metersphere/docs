@@ -34,10 +34,17 @@ MeterSphere 后端使用了 Java 语言的 Spring Boot 框架，并使用 Maven 
 #### 初始化配置
 
 ##### 数据库初始化
-MeterSphere 使用 Mysql 作为数据库服务器，推荐版本 5.7；请先创建 metersphere 数据库，使用 utf8mb4 字符集；metersphere-server 服务启动是会初始化数据库。
 
-##### Metersphere 配置文件
-Metersphere 会默认加载配置文件 /opt/metersphere/conf/metersphere.properties，请参考下列配置创建对应目录及配置文件
+!!! info "注意"
+    MeterSphere 使用 MySQL 数据库，推荐使用 MySQL 5.7 版本
+
+请参考文档中的建库语句创建 metersphere 数据库，使用 utf8mb4 字符集，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
+```mysql
+CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
+```
+
+##### MeterSphere 配置文件
+MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/metersphere.properties，请参考下列配置创建对应目录及配置文件
 
 ```
 # 数据库配置
@@ -61,15 +68,17 @@ run.mode=local
 
 ##### Jmeter 配置文件
 
-metersphere-server 服务依赖的 Jmeter 核心类库需要加载 jmeter 配置文件，默认加载文件夹：/opt/jmeter 下的配置文件，先创建好对应文件夹，并将 metersphere-server/backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter 目录。
+metersphere-server 服务依赖的 Jmeter 核心类库需要加载 jmeter 配置文件，默认加载 /opt/jmeter 下的配置文件
+
+开发这需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter 目录
 
 
 #### 运行后端服务
 
-在启动配置中添加 Spring Boot 启动项，直接启动 Spring Boot 项目即可。
+在启动配置中添加 Spring Boot 启动项，直接启动 Spring Boot 项目即可
 
 ### 前端
-MeterSphere 前端使用了 Vue.js 作为前端框架，ElementUI 作为 UI 框架，并使用 npm 作为包管理工具。开发者请先下载 Node.js 作为运行环境，IDEA 用户建议安装 Vue.js 插件，便于开发。
+MeterSphere 前端使用了 Vue.js 作为前端框架，ElementUI 作为 UI 框架，并使用 npm 作为包管理工具。开发者请先下载 Node.js 作为运行环境，IDEA 用户建议安装 Vue.js 插件，便于开发
 
 #### 初始化配置
 进入 metersphere-server/frontend/ 目录，执行以下命令安装相关前端组件
