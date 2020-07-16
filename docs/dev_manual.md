@@ -36,9 +36,28 @@ MeterSphere 后端使用了 Java 语言的 Spring Boot 框架，并使用 Maven 
 ##### 数据库初始化
 
 !!! info "注意"
-    MeterSphere 使用 MySQL 数据库，推荐使用 MySQL 5.7 版本
+    MeterSphere 使用 MySQL 数据库，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改开发环境中的数据库配置文件
 
-请参考文档中的建库语句创建 metersphere 数据库，使用 utf8mb4 字符集，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
+```
+[mysqld]
+default-storage-engine=INNODB
+lower_case_table_names=1
+table_open_cache=128
+max_connections=2000
+max_connect_errors=6000
+innodb_file_per_table=1
+innodb_buffer_pool_size=1G
+max_allowed_packet=64M
+transaction_isolation=READ-COMMITTED
+innodb_flush_method=O_DIRECT
+innodb_lock_wait_timeout=1800
+innodb_flush_log_at_trx_commit=0
+sync_binlog=0
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+skip-name-resolve
+```
+
+请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
 ```mysql
 CREATE DATABASE `metersphere_dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
 ```
