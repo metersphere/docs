@@ -40,7 +40,7 @@ MeterSphere 后端使用了 Java 语言的 Spring Boot 框架，并使用 Maven 
 
 请参考文档中的建库语句创建 metersphere 数据库，使用 utf8mb4 字符集，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
 ```mysql
-CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
+CREATE DATABASE `metersphere_dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
 ```
 
 ##### MeterSphere 配置文件
@@ -70,7 +70,7 @@ run.mode=local
 
 metersphere-server 服务依赖的 Jmeter 核心类库需要加载 jmeter 配置文件，默认加载 /opt/jmeter 下的配置文件
 
-开发这需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter/bin 目录
+开发者需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter/bin 目录
 
 
 #### 运行后端服务
