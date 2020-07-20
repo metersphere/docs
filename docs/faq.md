@@ -75,3 +75,35 @@ msctl status
 ```bash
 docker logs ms-node-controller
 ```
+
+## Q：执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
+
+系统在执行性能测试之前，会先检查安装系统时配置的 Kafka 地址是否可用。当提示该信息时，表明 MeterSphere 无法正常连接到 Kafka，可以通过以下方式进行排查定位。
+
+### 排查思路
+
+![Kafka 不可用排查](./img/kafka_invalid.png)
+
+### 检查 Kafka 是否正常运行
+如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 Kafka 服务是否正常；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请通过如下命令进行排查。
+```bash
+# 检查各组件的运行状态
+msctl status
+# 若 Kafka 容器不处于 `healthy` 状态，查看 Kafka 日志进行进一步排查
+docker logs kafka
+```
+### 检查 MeterSphere 到 Kafka 服务的网络连接
+若 Kafka 服务状态正常，请通过如下命令检查 ms-server 容器是否能正常连接到 Kafka 服务
+```bash
+# 检查 ms-server 是否能正常访问 Kafka 服务
+[root@meter-prototype ~]# docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}
+kafka (172.23.0.5:19092) open
+```
+如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
+```bash
+# 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令
+systemctl stop firewalld
+systemctl restart docker
+msctl start
+```
+若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。
