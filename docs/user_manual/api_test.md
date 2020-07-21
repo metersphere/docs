@@ -44,7 +44,7 @@
 
   ![api-project-search](../img/api/api-project-search.png)
 
-  ### 环境配置
+### 环境配置
 
 > 可以添加该项目下接口的实际环境，增加了全局 header，可以在项目中设置全局 header 值。在接口运行页面的场景中也增加环境配置弹层。
 
