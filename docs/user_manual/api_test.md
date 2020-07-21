@@ -146,7 +146,7 @@
 
 > 保存成功的测试，可以设置定时任务，测试将会在指定时间运行并产生测试报告    
 
-![api-test-scheduler](../img/api/image-20200720174249153.png)
+![api-test-scheduler](../img/api/api-test-scheduler.png)
 
 #### 创建定时任务
 
