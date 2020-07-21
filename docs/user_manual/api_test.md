@@ -44,7 +44,17 @@
 
   ![api-project-search](../img/api/api-project-search.png)
 
-  
+  ### 环境配置
+
+> 可以添加该项目下接口的实际环境，增加了全局 header，可以在项目中设置全局 header 值。在接口运行页面的场景中也增加环境配置弹层。
+
+![api-Environment-config](../img/api/api-Environment-config.png)
+
+>  新增全局变量，可以在环境列表中定义全局变量的名称和值，接口测试里面可以通过$(xx)来访问当前环境变量下定义的全局变量
+
+![api-Environment-config1](../img/api/api-Environment-config1.png)
+
+
 
 ## 测试
 
@@ -58,6 +68,12 @@
 #### 场景配置
 > 场景内的全局变量和请求头配置，作用域为场景内
 
+##### 环境配置
+
+> 场景中可以配置环境
+
+![api-Environment-config2](../img/api/api-Environment-config2.png)
+
 ##### 自定义变量
 > 在场景配置中自定义变量的名称和值, 接口运行或者测试集合里面可以通过 ${BASE} 来访问当前场景下定义的全局变量
 
@@ -66,9 +82,15 @@
 ##### 请求头
 > 这里增加全局 header，可以在项目中设置全局 header 值
 
-![api-custom-header.](../img/api/api-custom-header.png)
+![api-custom-header](../img/api/api-custom-header.png)
 
 #### 请求配置
+
+##### 引用环境
+
+> 引用环境开启后，可以引用环境中的域名、请求头和变量
+
+![api-refre-environment](../img/api/api-refre-environment.png)
 
 ##### 请求参数
 > 接口 url 的查询字符串
@@ -120,12 +142,83 @@
 
   ![api-test-execute1](../img/api/api-test-execute1.png)
 
+### 定时任务
+
+> 保存成功的测试，可以设置定时任务，测试将会在指定时间运行并产生测试报告    
+
+![api-test-scheduler](../img/api/image-20200720174249153.png)
+
+#### 创建定时任务
+
+> 点击SCHEDULER可以编辑定时任务，点击“生成表达式”可快速生成cron表达式
+
+![api-scheduler](../img/api/api-scheduler.png)
+
+![api-cron-add](../img/api/api-cron-add.png)
+
+#### 定时任务执行
+
+> 定时任务为开关控制，并展示最近一次的计划执行时间，生成的测试报告触发方式为“定时任务”
+
+![api-cron-on](../img/api/api-cron-on.png)
+
+![api-report-cron](../img/api/api-report-cron.png)
+
 ### 更多操作
+
+#### 创建性能测试
+
 > 创建性能测试，接口测试保存后可以直接创建该场景对应的性能测试，配置压力测试参数后，可一键执行
 
 ![api-test-more-operations](../img/api/api-test-more-operations.png)
 
 ![api-test-more-operations1](../img/api/api-test-more-operations1.png)
+
+#### 导出
+
+> 在更多操作中选择导出，可以将当前测试导出为json文件
+
+![api-export](../img/api/api-export.png)
+
+#### 导入
+
+> 支持快速导入MeterSphere Record ,postman, swagger数据
+
+![api-import](../img/api/api-import.png)
+
+##### MeterSphere Record
+
+> 为 MeterSphere 配套的浏览器插件，该插件可将用户在浏览器操作时的 HTTP 请求记录下来并生成 JMX 文件（JMeter 脚本文件）或  JSON 文件，用于在 MeterSphere 中进行接口测试或性能测试。
+>
+> 详细介绍与安装：https://github.com/metersphere/chrome-extensions
+
+> 录制脚本：
+
+![api-ms-record](../img/api/api-ms-record.png)
+
+> 编辑脚本：可以针对录制的请求进行编辑调整，导出格式支持JMX和JSON两种
+
+![api-ms-record-edit](../img/api/api-ms-record-edit.png)
+
+> 导入脚本：JSON脚本可以导入到平台进行接口测试，JMX脚本可以导入到平台进行性能测试
+
+![api-import-json](../img/api/api-import-json.png)
+
+![api-import-json1](../img/api/api-import-json1.png)
+
+##### postman
+
+> 导出postman测试
+
+![api-export-postman](../img/api/api-export-postman.png)
+
+![api-export-postman1](../img/api/api-export-postman1.png)
+
+> 导入到MeterSphere
+
+![api-import-postman](../img/api/api-import-postman.png)
+
+##### swagger
 
 ## 报告
 
