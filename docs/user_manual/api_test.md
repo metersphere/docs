@@ -270,7 +270,7 @@
 
 ![api-export-postman](../img/api/api-export-postman.png)
 
-![api-export-postman1](../img/api/api-export-postman1.png)
+![api-export-postman2](../img/api/api-export-postman2.png)
 
 > 导入到MeterSphere
 
