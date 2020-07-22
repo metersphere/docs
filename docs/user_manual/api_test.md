@@ -65,7 +65,12 @@
 
   ![api-test-create](../img/api/api-test-create.png)
 
+> 目前支持HTTP、DUBBO 两种协议的接口测试
+
+![api-test-creat1](../img/api/api-test-creat1.png)
+
 #### 场景配置
+
 > 场景内的全局变量和请求头配置，作用域为场景内
 
 ##### 环境配置
@@ -84,31 +89,84 @@
 
 ![api-custom-header](../img/api/api-custom-header.png)
 
+##### Dubbo配置
+
+> 主要用于Dubbo RPC接口测试
+>
+> 协议支持：zookeeper、nacos、Apollo
+>
+> dubbo参数支持：connections、loadbalance、async
+
+![api-dubbo-config](../img/api/api-dubbo-config.png)
+
 #### 请求配置
 
-##### 引用环境
+##### HTTP请求
+
+###### 引用环境
 
 > 引用环境开启后，可以引用环境中的域名、请求头和变量
 
 ![api-refre-environment](../img/api/api-refre-environment.png)
 
-##### 请求参数
+###### 请求参数
+
 > 接口 url 的查询字符串
 
 ![api-request-parameter](../img/api/api-request-parameter.png)
 
-##### 请求头
+###### 请求头
+
 > http请求的header，作用域为请求内
 
 ![api-request-header](../img/api/api-request-header.png)
 
-##### 请求内容
+###### 请求内容
+
 > http 请求的 body 部分，如果http请求方式是 post, put 等请求方式时会有 请求内容 部分，形式有2种，分别是 键值对（form）、文本（json）
 
 ![api-request-content](../img/api/api-request-content.png)
 
+##### DUBBO请求
+
+> Dubbo 请求由协议、配置中心、请求参数三部分组合而成
+
+![api-dubbo](../img/api/api-dubbo.png)
+
+###### Dubbo 协议
+
+> 目前仅支持dubbo协议
+
+![api-protocol](../img/api/api-protocol.png)
+
+###### 配置中心
+
+> Interface
+
+![api-dubbo-interface](../img/api/api-dubbo-interface.png)
+
+> Config Center 配置中心，协议支持 Zookeeper、Nacos、Apollo
+
+![api-dubbo-config-center](../img/api/api-dubbo-config-center.png)
+
+> Registry Center 注册中心，支持 Zookeeper、Redis、Multicast、simple
+
+![api-dubbo-registry-center](../img/api/api-dubbo-registry-center.png)
+
+> Consumer & Service
+
+![api-dubbo-consumer](../img/api/api-dubbo-consumer.png)
+
+###### 请求参数
+
+> Args
+
+![api-dubbo-args](../img/api/api-dubbo-args.png)
+
+
 
 ##### 断言
+
 > 断言支持文本、正则和响应时间三种方式，选择断言方式后，点击“+”生成规则即可生效
 
 ![api-assert](../img/api/api-assert.png)
@@ -218,7 +276,15 @@
 
 ![api-import-postman](../img/api/api-import-postman.png)
 
+![api-import-postman1](../img/api/api-import-postman1.png)
+
 ##### swagger
+
+swagger导入：将swagger文件导入平台
+
+![api-import-swagger](../img/api/api-import-swagger.png)
+
+![api-import-swagger1](../img/api/api-import-swagger1.png)
 
 ## 报告
 
