@@ -156,7 +156,7 @@
 
 #### LDAP 设置
 
-> 配置LDAP登录
+> 配置LDAP登录相关参数
 
 ![配置ldap](../img/system_management/配置ldap.png)
 
