@@ -103,7 +103,7 @@ msctl status
 
 ```sh
 # 进入项目目录
-cd metersphere-v1.x.y-release
+cd metersphere-release-v1.x.y
 # 运行安装脚本
 /bin/bash install.sh
 # 查看 MeterSphere 状态
