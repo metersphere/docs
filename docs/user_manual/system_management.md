@@ -11,6 +11,10 @@
 
 ![image-20200526151627711](../img/system_management/修改个人密码.png)
 
+### API Keys
+
+![APIkey](../img/system_management/APIkey.png)
+
 ## 系统
 
 ### 用户
@@ -42,8 +46,6 @@
 - 修改用户密码
 
 ![image-20200526151627711](../img/system_management/系统修改用户密码.png)
-
-
 
 ### 组织
 
@@ -161,6 +163,20 @@
 > 启用LDAP认证后，登录页会新增LDAP登录选项
 
 ![ldap登录](../img/system_management/ldap登录.png)
+
+### 插件
+
+#### Jenkins插件
+
+> 下载地址：https://github.com/metersphere/jenkins-plugin
+>
+> 在构建步骤中添加MeterSphere插件
+
+![jenkins-plugin](../img/system_management/jenkins-plugin.png)
+
+> 配置好系统参数和待执行的用例
+
+![Jenkins-config](../img/system_management/Jenkins-config.png)
 
 ## 组织
 
