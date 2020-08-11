@@ -29,6 +29,8 @@ nav:
         - 测试跟踪: user_manual/test_track.md
         - 接口测试: user_manual/api_test.md
         - 性能测试: user_manual/performance_test.md
+    - 教程:
+        - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
     - 常见问题: faq.md
     - 开发文档: dev_manual.md
     - 关于:
