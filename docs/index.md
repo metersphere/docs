@@ -13,7 +13,7 @@ MeterSphere 是一站式的开源企业级持续测试平台，涵盖测试跟�
 ![UI](./img/ui.png)
 
 !!! info "更多截图"
-    点击[这里]()查看更多功能截屏及演示视频
+    点击[这里](https://metersphere.io/features.html)查看更多功能截屏及演示视频
 
 ## 技术优势
   
