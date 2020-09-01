@@ -10,6 +10,44 @@ MeterSphere 版本号命名规则为：v大版本.功能版本.Bug修复版本
 
 像其它优秀开源项目一样，MeterSphere 将每月发布一个功能版本
 
+## v1.2.1
+------------------------
+2020年09月01日
+
+!!! info "新增功能"
+
+feat(性能测试): 支持上传多个csv
+feat(接口测试): 跟随重定向配置
+
+!!! info "功能优化"
+
+refactor(接口测试): 后置处理器可以获取提取后的变量
+refactor: track home 页面样式调整
+refactor: 优化代码
+refactor: 优化代码
+refactor: 保存jira认证信息时补全地址
+refactor: 修改 jmeter heap配置，配置文件在node-controller中读取
+refactor: 对话框不点击外部自动关闭
+refactor: 调整js代码
+refactor: 页面样式修改
+
+!!! info "Bug 修复"
+
+fix(性能测试): 修复性能测试不能复制的问题
+fix(性能测试): 点击再次执行时查询时间状态检测
+fix(接口测试): GET请求url多带了&
+fix(接口测试): 代码模版添加undefined问题
+fix(接口测试): 增加test_case 表node_path字段长度
+fix(测试跟踪): 测试步骤列表高度问题
+fix: jira 提交缺陷失败的问题
+fix: 一键运行同一项目报错提示
+fix: 一键运行同一项目报错提示
+fix: 修复切换路由之后执行时间没有查询的问题
+fix: 修复资源池下拉框显示uuid的问题
+fix: 用例导出优化
+fix: 创建测试用例点击窗口外区域不关闭当前窗口 fix:测试名称校验
+fix: 测试用例备注字符修改为500
+
 ## v1.2.0
 ------------------------
 2020年08月27日
