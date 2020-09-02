@@ -156,4 +156,9 @@ MeterSphere 是一站式的开源企业级持续测试平台，涵盖测试跟�
 - 基础设施: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
 - 测试引擎: [JMeter](https://jmeter.apache.org/)
 
+## 企业版试用
+
+- [申请企业版试用](https://jinshuju.net/f/CzzAOe)
+
+> 注: 企业版支持离线安装，申请通过后会提供高速下载链接
 
