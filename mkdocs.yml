@@ -24,6 +24,8 @@ nav:
     - 安装部署: 
         - 在线安装: installation/online_installation.md
         - 离线安装: installation/offline_installation.md
+        - 在线升级: installation/online_upgrade.md
+        - 离线升级: installation/offline_upgrade.md
     - 用户手册: 
         - 系统管理: user_manual/system_management.md
         - 测试跟踪: user_manual/test_track.md
@@ -32,6 +34,7 @@ nav:
     - 教程:
         - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
         - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
+        - 使用预执行脚本功能生成接口认证签名: tutorial/pre_processor.md
     - 常见问题: faq.md
     - 开发文档: dev_manual.md
     - 关于:
