@@ -32,7 +32,7 @@ cd metersphere-release-v1.0.3
 vim install.conf
 ```
 
-??? info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
+!!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
     # 基础配置
     ## MeterSphere 安装目录的上级目录, MeterSphere 将安装在 ${base_dir}/metersphere 目录中
