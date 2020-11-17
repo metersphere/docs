@@ -164,7 +164,7 @@
     * LDAP地址 ldap://serveurl:389 或 ldaps://serveurl:636
     * 绑定DN cn=administrator,cn=Users,dc=metersphere,dc=com
     * 用户OU ou=metersphere,dc=metersphere,dc=com
-    *  用户过滤器 sAMAccountName={0}
+    * 用户过滤器 sAMAccountName={0}
     * LDAP属性映射 {"username":"sAMAccountName","name":"cn","email":"mail"}
 
 !!! info "选项说明"
