@@ -160,6 +160,22 @@
 
 ![配置ldap](../img/system_management/配置ldap.png)
 
+!!! info "选项"
+    * LDAP地址 ldap://serveurl:389 或 ldaps://serveurl:636
+    * 绑定DN cn=administrator,cn=Users,dc=metersphere,dc=com
+    * 用户OU ou=metersphere,dc=metersphere,dc=com
+    *  用户过滤器 sAMAccountName={0}
+    * LDAP属性映射 {"username":"sAMAccountName","name":"cn","email":"mail"}
+
+!!! info "选项说明"
+    * OU 同级多OU用｜分割
+    * 用户过滤器 根据规则到 用户OU 里面去检索用户，可能的选项为 (uid={0}) 或 (sAMAccountName={0}) 或 (cn={0}) 
+    * LDAP属性映射 {"username":"sAMAccountName","name":"cn","email":"mail","phone":"phone"}，username,name,email 三项不可修改删除, phone 属性可选
+    * 启用LDAP认证 启用后登录页显示 LDAP登录选项
+ 
+ !!! warning "注意"
+    用户过滤器用什么筛选, LDAP属性映射字段要与其一致, 过滤器用 sAMAccountName, LDAP属性映射也要用 sAMAccountName
+    
 > 启用LDAP认证后，登录页会新增LDAP登录选项
 
 ![ldap登录](../img/system_management/ldap登录.png)
