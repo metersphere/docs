@@ -173,7 +173,7 @@
     * LDAP属性映射 {"username":"sAMAccountName","name":"cn","email":"mail","phone":"phone"}，username,name,email 三项不可修改删除, phone 属性可选
     * 启用LDAP认证 启用后登录页显示 LDAP登录选项
  
- !!! warning "注意"
+!!! warning "注意"
     用户过滤器用什么筛选, LDAP属性映射字段要与其一致, 过滤器用 sAMAccountName, LDAP属性映射也要用 sAMAccountName
     
 > 启用LDAP认证后，登录页会新增LDAP登录选项
