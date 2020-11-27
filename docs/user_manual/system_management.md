@@ -116,6 +116,19 @@
     
     !!! warning "注意"
         现在不支持自定义的字段配置
+        
+###### 禅道平台
+
+!!! info "指引"
+    * 账号密码为具有相应权限的禅道账号，账号需要具有超级 model 调用接口权限
+    * 保存账号信息后，需要在 Metersphere 项目中手动关联，在项目列表下编辑项目，输入 Zentao ID
+    
+    !!! warning "注意"
+            如果 禅道bug 是附属在项目上，则关联的 Zentao ID 为项目 ID
+            
+            如果 禅道bug 是附属在产品上，则关联的 Zentao ID 为产品 ID
+    * 如果提示因为安全问题api禁用，需要修改禅道服务器配置文件，加上 $config->features->apiGetModel = true; 此配置
+        
 
 ### 工作空间
 
