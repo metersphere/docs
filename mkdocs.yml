@@ -35,6 +35,11 @@ nav:
         - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
         - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
         - 使用预执行脚本功能生成接口认证签名: tutorial/pre_processor.md
+        - 【视频】MeterSphere 如何与 TAPD和 Jira 对接: https://www.bilibili.com/video/BV1jr4y1c7Lg/
+        - 【视频】MeterSphere 如何对接邮件、钉钉、企业微信: https://www.bilibili.com/video/BV1dp4y167ch/
+        - 【视频】如何在 MeterSphere 中做场景化的接口测试: https://www.bilibili.com/video/BV1vy4y1q7f7/
+        - 【视频】如何在 MeterSphere 中导入 Postman 脚本做接口测试: https://www.bilibili.com/video/BV1W54y1C7uY
+        - 【视频】如何在 MeterSphere 中导入 Swagger UI 脚本做接口测试: https://www.bilibili.com/video/BV1YK411A7E8/
     - 常见问题: faq.md
     - 开发文档: dev_manual.md
     - 用户案例: 
