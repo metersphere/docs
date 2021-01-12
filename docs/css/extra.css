@@ -80,3 +80,11 @@
 .md-typeset table:not([class]) tr:first-child td {
   border: .05rem solid var(--md-default-fg-color--lightest);
 }
+
+.lg-backdrop {
+  background-color: rgb(0 0 0 /0.8)
+}
+
+.lg-outer .lg-img-wrap {
+  padding: 80px
+}
