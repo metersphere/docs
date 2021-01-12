@@ -72,3 +72,11 @@
 .progress-0plus .progress-bar {
   background-color: #f50057;
 }
+
+.md-typeset table:not([class]) td {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tr:first-child td {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+}
