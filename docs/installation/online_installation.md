@@ -105,6 +105,22 @@ vim install.conf
 
 安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录
 
+!!! info "安装目录目录结构说明"
+    ```
+    /opt/metersphere/
+    ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
+    ├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
+    ├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
+    ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
+    ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
+    ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
+    ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
+    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker 文件
+    ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose 文件
+    ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
+    └── version                                     #-- 安装包对应的 MeterSphere 版本信息
+    ```
+
 ## 执行安装脚本
 
 ```sh

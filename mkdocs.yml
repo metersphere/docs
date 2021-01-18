@@ -24,21 +24,9 @@ nav:
     - 快速开始: 
         - 一键部署: quick_start/quick_start.md
         - 创建项目: quick_start/create_project.md
-        - 测试跟踪:
-            - 添加测试用例: test_case.md
-            - 发起用例评审: case_review.md
-            - 创建测试计划: test_plan.md
-            - 生成测试报告: test_report.md
-        - 接口测试:
-            - 维护接口定义: api_definition.md
-            - 创建单接口用例: api_case.md
-            - 创建场景用例: scenario_case.md
-            - 查看测试报告: test_report.md
-        - 性能测试:
-            - 创建测试资源池: test_resource_pool.md
-            - 创建性能测试: create_load_test.md
-            - 调整压力配置: load_config.md
-            - 执行并查看报告: test_report.md
+        - 使用测试跟踪: quick_start/test_track.md
+        - 使用接口测试: quick_start/api_test.md
+        - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署: 
         - 在线安装: installation/online_installation.md
