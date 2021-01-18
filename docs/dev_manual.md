@@ -85,7 +85,7 @@ jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
 run.mode=local
 ```
 
-##### Jmeter 配置文件
+##### JMeter 配置文件
 
 metersphere-server 服务依赖的 Jmeter 核心类库需要加载 jmeter 配置文件，默认加载 /opt/jmeter 下的配置文件
 
