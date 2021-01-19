@@ -66,23 +66,40 @@ CREATE DATABASE `metersphere_dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
 MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/metersphere.properties，请参考下列配置创建对应目录及配置文件
 
 ```
-# 数据库配置
-spring.datasource.url=jdbc:mysql://localhost:3306/metersphere_dev?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.url=jdbc:mysql://114.118.2.74:53306/metersphere_dev?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+spring.datasource.password=Calong@2015
+spring.datasource.username=metersphere
 
-# kafka 配置，node-controller 以及 data-streaming 服务需要使用 kafka 进行测试结果的收集和处理
-kafka.partitions=1
+#spring.datasource.url=jdbc:mysql://127.0.0.1:32771/metersphere_dev?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+#spring.datasource.password=Calong@2015
+#spring.datasource.username=root
+
+kafka.partitions=3
 kafka.replicas=1
 kafka.topic=JMETER_METRICS
-kafka.bootstrap-servers={KAFKA_IP}:19092
+#kafka.topic=local-runner
+kafka.bootstrap-servers=192.168.1.96:19092
+#kafka.bootstrap-servers=172.16.10.154:19092
 kafka.log.topic=JMETER_LOGS
+kafka.test.topic=LOAD_TESTS
+kafka.error.topic=JMETER_ERRORS
 
-# node-controller 所使用的 jmeter 镜像版本 
-jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
+jmeter.image=registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.3-ms14
+#run.mode=local #将这句注释后，本地运行调试时不检测密码是否正确，任意输入密码即可登陆。
 
-# 启动模式，lcoal 表示以本地开发模式启动
-run.mode=local
+jmeter.report.granularity=10000
+jmeter.heap=-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m
+
+session.timeout=84200
+
+
+
+cas.server.url=
+cas.client.url=
+cas.client.name=
+
+logger.sql.level=debug
+jmeter.pod.threads.limit=10
 ```
 
 ##### Jmeter 配置文件
