@@ -17,8 +17,6 @@ theme:
         - yaml
         - django
     custom_dir: 'theme'
-    
-
 nav:
     - 项目介绍: index.md
     - 快速开始: 
@@ -34,10 +32,32 @@ nav:
         - 在线升级: installation/online_upgrade.md
         - 离线升级: installation/offline_upgrade.md
     - 用户手册: 
-        - 系统管理: user_manual/system_management.md
-        - 测试跟踪: user_manual/test_track.md
-        - 接口测试: user_manual/api_test.md
-        - 性能测试: user_manual/performance_test.md
+        - 通用功能: user_manual/general.md
+        - 系统设置: 
+            - 模块说明: user_manual/system_management/intro.md
+            - 系统管理: user_manual/system_management/system.md
+            - 组织管理: user_manual/system_management/organization.md
+            - 工作空间管理: user_manual/system_management/workspace.md
+            - 项目管理: user_manual/system_management/project.md
+            - 个人信息管理: user_manual/system_management/personal.md
+        - 测试跟踪: 
+            - 模块说明: user_manual/test_track/intro.md
+            - 首页: user_manual/test_track/home.md
+            - 测试用例: user_manual/test_track/test_case.md
+            - 用例评审: user_manual/test_track/test_case_review.md
+            - 测试计划: user_manual/test_track/test_plan.md
+            - 报告: user_manual/test_track/test_report.md
+        - 接口测试: 
+            - 模块说明: user_manual/api_test/intro.md
+            - 首页: user_manual/api_test/home.md
+            - 接口定义: user_manual/api_test/api_definition.md
+            - 接口自动化: user_manual/api_test/api_automation.md
+            - 测试报告: user_manual/api_test/test_report.md
+        - 性能测试:
+            - 模块说明: user_manual/load_test/intro.md
+            - 首页: user_manual/load_test/home.md
+            - 性能测试: user_manual/load_test/api_definition.md
+            - 测试报告: user_manual/load_test/test_report.md
     - 使用教程:
         - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
         - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
@@ -100,3 +120,7 @@ copyright: Copyright &copy; 2014-2020 <a href="https://www.fit2cloud.com">杭州
 
 plugins:
     - search
+
+extra:
+    version:
+        method: mike
