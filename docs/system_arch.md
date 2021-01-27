@@ -32,3 +32,11 @@ MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在
 - **工作空间级角色**: 角色的权限范围限定在某个工作空间当中, 常见的角色如工作空间管理员及普通用户, 可在工作空间中创建项目、发起测试、查看测试报告等
 
 不同的角色具有怎样的权限，请参考 [权限矩阵](./user_manual/access_matrix.md)
+    
+## 技术栈
+
+- 后端: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
+- 前端: [Vue.js](https://vuejs.org/)
+- 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/)
+- 基础设施: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
+- 测试引擎: [JMeter](https://jmeter.apache.org/)
