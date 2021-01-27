@@ -29,8 +29,6 @@
 ### 后端
 MeterSphere 后端使用了 Java 语言的 Spring Boot 框架，并使用 Maven 作为项目管理工具。开发者需要先在开发环境中安装 JDK 1.8 及 Maven。
 
-后端项目中依赖了该 Github 项目 https://github.com/fit2cloud/quartz-spring-boot-starter/packages/300609 ，开发者可按照 Github Maven 仓库的[使用指导](https://help.github.com/articles/configuring-apache-maven-for-use-with-github-package-registry/)添加 Maven 仓库地址，自动下载该依赖包。
-
 #### 初始化配置
 
 ##### 数据库初始化
