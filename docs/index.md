@@ -2,8 +2,6 @@
 
 欢迎使用 MeterSphere。
 
-[MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
-
 MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口测试、性能测试、团队协作等功能，兼容JMeter 等开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量软件的交付。
 
 ![!产品定位](./img/产品定位.png)
@@ -23,7 +21,6 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 
 ## 主要功能
 
-<!-- 添加截图 -->
 -   测试跟踪: 远超 TestLink 的使用体验，覆盖从编写用例到生成测试报告的完整流程；
 -   接口测试: 集 Postman 的易用与 JMeter 的灵活于一体，接口管理、多协议支持、场景自动化，你想要的全都有；
 -   性能测试: 兼容 JMeter，支持 Kubernetes 和云环境，轻松支持高并发、分布式的性能测试；
@@ -245,17 +242,13 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
    </tr>
   </table>
 
-## 技术栈
-
-- 后端: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
-- 前端: [Vue.js](https://vuejs.org/)
-- 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/)
-- 基础设施: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
-- 测试引擎: [JMeter](https://jmeter.apache.org/)
-
 ## 企业版试用
 
 - [申请企业版试用](https://jinshuju.net/f/CzzAOe)
 
-> 注: 企业版支持离线安装，申请通过后会提供高速下载链接
+## 参考资料
 
+- [持续测试白皮书 v1.0](https://jinshuju.net/f/KqFUhq)
+- [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202101.pdf)
+- [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
+- [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
