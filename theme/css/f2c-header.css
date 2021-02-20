@@ -84,7 +84,7 @@ button::-moz-focus-inner{padding:0;border:0;}
 }
 .mega-nav-sandbox{width:100%;}
 .mega-nav-sandbox *{letter-spacing:0;line-height:1.42857143;margin-bottom:0;margin-top:0;text-transform:none;}
-.mega-nav-sandbox h4,.mega-nav-sandbox h5{line-height:1.1;}
+.mega-nav-sandbox h4,.mega-nav-sandbox h5{line-height:1.1;font-size: 24px;}
 .mega-nav-sandbox .mega-nav-banner{background-color:black;color:white;font-family:"klavika-web", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:16px;min-height:3em;}
 .mega-nav-sandbox .mega-nav-banner,.mega-nav-sandbox .mega-nav-banner>.container{align-items:center;display:flex;}
 .mega-nav-sandbox .mega-nav-banner .text-muted{color:#ffffff;}
@@ -133,7 +133,7 @@ button::-moz-focus-inner{padding:0;border:0;}
 .mega-nav-sandbox .mega-nav-body-ct{width:1140px;}
 }
 /*! CSS Used from: https://metersphere.io/css/style.css */
-.text-muted{color:#8492a6!important;}
+.text-muted{color:#8492a6!important;font-weight:600;}
 .rounded{border-radius:6px!important;}
 .card .card-body{padding:1.5rem;}
 .shadow{-webkit-box-shadow:0 0 3px rgba(60, 72, 88, 0.15)!important;box-shadow:0 0 3px rgba(60, 72, 88, 0.15)!important;}
