@@ -7,8 +7,13 @@
   background-color: #783887;
 }
 
+
 .md-footer-nav__link {
   padding-top: .8rem;
+}
+
+.md-main__inner {
+  margin-top: 3rem;
 }
 
 .progress-label {
