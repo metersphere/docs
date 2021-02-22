@@ -1,7 +1,6 @@
 .sticky{position: fixed;top: 0;right: 0;left: 0;z-index: 10;}
 /*! CSS Used from: https://metersphere.io/css/bootstrap.min.css */
 *,::after,::before{box-sizing:border-box;}
-*,::after,::before{box-sizing:border-box;}
 button{border-radius:0;}
 button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
 button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
@@ -29,13 +28,6 @@ h4,h5{margin-top:0;margin-bottom:.5rem;}
 p{margin-top:0;margin-bottom:1rem;}
 img{vertical-align:middle;border-style:none;}
 svg{overflow:hidden;vertical-align:middle;}
-button{border-radius:0;}
-button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
-button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
-button{overflow:visible;}
-button{text-transform:none;}
-[type=button],button{-webkit-appearance:button;}
-[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none;}
 h4,h5{margin-bottom:.5rem;font-weight:500;line-height:1.2;}
 h4{font-size:1.5rem;}
 h5{font-size:1.25rem;}
@@ -224,25 +216,33 @@ h4,h5{font-family:-apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro
 @font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOUbuvISTs.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}
 @font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOUb-vISTs.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
 @font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOUYevI.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-=> Duplicates:
+
+
+/*! CSS Used from: https://metersphere.io/css/bootstrap.min.css */
 *,::after,::before{box-sizing:border-box;}
-button{border-radius:0;}
-button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
-button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
-button{overflow:visible;}
-button{text-transform:none;}
-[type=button],button{-webkit-appearance:button;}
-[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none;}
-}
-.text-center{text-align:center!important;}
+section{display:block;}
+p{margin-top:0;margin-bottom:1rem;}
+a{color:#007bff;text-decoration:none;background-color:transparent;}
+a:hover{color:#0056b3;text-decoration:underline;}
+.pr-1{padding-right:.25rem!important;}
 @media print{
 *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
 a:not(.btn){text-decoration:underline;}
-@media (min-width:576px){
-.container{max-width:540px;}
-@media (min-width:768px){
-.container{max-width:720px;}
-@media (min-width:992px){
-.container{max-width:960px;}
-@media (min-width:1200px){
-.container{max-width:1140px;}
+p{orphans:3;widows:3;}
+}
+/*! CSS Used from: https://metersphere.io/css/materialdesignicons.min.css */
+.mdi:before{display:inline-block;font:normal normal normal 24px/1 "Material Design Icons";font-size:inherit;text-rendering:auto;line-height:inherit;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.mdi-download::before{content:"\F01DA";}
+/*! CSS Used from: https://metersphere.io/css/style.css */
+::-moz-selection{background:rgba(47, 85, 212, 0.9);color:#ffffff;}
+::selection{background:rgba(47, 85, 212, 0.9);color:#ffffff;}
+a{text-decoration:none!important;}
+p{line-height:1.6;}
+/*! CSS Used from: https://metersphere.io/css/colors/default.css */
+::selection{background-color:rgba(255, 91, 105, 0.9);}
+/*! CSS Used from: https://metersphere.io/css/index.css */
+p{font-family:-apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Helvetica Neue", ".PingFang SC", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Hiragino Sans GB", sans-serif;}
+.footer-start-box{position:fixed;bottom:75px!important;right:30px!important;width:230px!important;height:45px!important;padding:13px;border-radius:20px;box-shadow:0 8px 16px 0 rgba(46,37,111,.32);background-image:linear-gradient(109deg,#783887,#7565ee);color:#fff;cursor:pointer;text-align:center;}
+.footer-start-title{font-weight:600;}
+/*! CSS Used fontfaces */
+@font-face{font-family:"Material Design Icons";src:url("../fonts/materialdesignicons-webfont.woff2?v=5.3.45") format("woff2"),url("../fonts/materialdesignicons-webfont.woff?v=5.3.45") format("woff"),url("../fonts/materialdesignicons-webfont.ttf?v=5.3.45") format("truetype");font-weight:normal;font-style:normal;}
