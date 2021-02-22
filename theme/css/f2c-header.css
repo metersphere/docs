@@ -222,8 +222,8 @@ h4,h5{font-family:-apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro
 *,::after,::before{box-sizing:border-box;}
 section{display:block;}
 p{margin-top:0;margin-bottom:1rem;}
-a{color:#007bff;text-decoration:none;background-color:transparent;}
-a:hover{color:#0056b3;text-decoration:underline;}
+a{color:#a4b1b2;text-decoration:none;background-color:transparent;}
+a:hover{color:#a4b1b2;text-decoration:underline;}
 .pr-1{padding-right:.25rem!important;}
 @media print{
 *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
