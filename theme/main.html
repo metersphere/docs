@@ -4,6 +4,18 @@
 {% include "f2c-header.html" %}
 {% endblock %}
 
+{% block footer %}
+{{ super() }}
+<section id="footer_start">
+    <div class="footer-start-box" >
+        <div class="footer-start-title">
+            <p role="img" aria-label="celibrate" style="font-size: 14px"><a target="_blank" href="https://jinshuju.net/f/KqFUhq" style="color: white"><i class="mdi mdi-download pr-1" style="font-size: 14px"></i>点击下载《持续测试白皮书》</a>️</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
 {% block styles %}
     <link rel="stylesheet" href="{{ base_url }}/css/lightgallery.min.css">
 
