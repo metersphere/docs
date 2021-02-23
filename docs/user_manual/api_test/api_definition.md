@@ -49,9 +49,9 @@
 
 ### 导入接口定义
 MeterSphere 支持从已有文件中导入接口定义，目前支持的文件格式有 `MeterSphere` 导出文件，`Postman` 文件，`Swagger` 文件。
-![!导入Swagger文件](../../img/api/导入Swagger文件.gif)
+![!导入Swagger文件](../../img/api/导入swagger文件.gif)
 
-![!接口导入](../../img/api/接口导入.gif)
+![!接口导入](../../img/api/接口导入.png)
 
 !!! info "参数说明"
     1. **数据格式**：选择要导入的文件的格式。
