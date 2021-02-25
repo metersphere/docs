@@ -7,6 +7,7 @@ google_analytics: ['UA-147297392-7', 'metersphere.io']
 repo_name: 'MeterSphere Docs'
 repo_url: 'https://github.com/metersphere/metersphere'
 
+edit_uri: https://github.com/metersphere/docs/edit/master/docs/
 theme:
     name: 'material'
     logo: 'img/logo-white.png'
@@ -74,7 +75,13 @@ nav:
         - 【视频】如何在 MeterSphere 中做场景化的接口测试: https://www.bilibili.com/video/BV1vy4y1q7f7/
         - 【视频】如何在 MeterSphere 中导入 Postman 脚本做接口测试: https://www.bilibili.com/video/BV1W54y1C7uY
         - 【视频】如何在 MeterSphere 中导入 Swagger UI 脚本做接口测试: https://www.bilibili.com/video/BV1YK411A7E8/
-    - 常见问题: faq.md
+    - 常见问题:
+        - 安装部署相关: faq/installation.md
+        - 测试跟踪相关: faq/test_track.md
+        - 接口测试相关: faq/api_test.md
+        - 性能测试相关: faq/load_test.md
+        - 系统设置相关: faq/system_management.md
+        - 其他问题: faq/others.md
     - 开发文档: dev_manual.md
     - 用户案例: 
         - 88完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
