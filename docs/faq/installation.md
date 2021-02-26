@@ -7,3 +7,7 @@ service docker start
 msctl start
 msctl status
 ```
+
+## 在哪里修改默认端口？
+
+cat /opt/metersphere/.env 然后msctl reload
