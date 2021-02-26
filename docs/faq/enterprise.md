@@ -4,6 +4,8 @@
 
 相比 MeterSphere 开源版，MeterSphere 企业版提供面向企业级应用场景的 X-Pack 增强包，以及高等级的原厂企业级支持服务，有效助力企业快速构建并运营自己的持续测试平台，加速高质量软件的交付。其中，X-Pack 增强包括一些企业级客户所需的附加功能，比如自定义 Logo和主题、配额管理、单点登录支持等。X-Pack 增强包的具体功能会随新版发布持续增加。
 
-## 如何申请企业版？
+更多企业版详情请查看：https://metersphere.io/enterprise.html
 
-MeterSphere 一站式开源持续测试平台-企业版申请链接地址：https://jinshuju.net/f/CzzAOe
+## 如何申请企业版试用？
+
+MeterSphere 企业版试用申请请点击：https://jinshuju.net/f/CzzAOe
