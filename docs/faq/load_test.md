@@ -98,3 +98,28 @@ systemctl restart docker
 msctl start
 ```
 若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。
+
+## 站点配置的URL是什么？
+
+站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址
+
+## MeterSphere 压测运行不起来，报这个错误（或一直处于starting）
+2021-01-27 17:30:28,272 [qtp359742806-37] WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver ? - Resolved [org.springframework.web.bind.ServletRequestBindingException: Failed to find lookupPath '//jmeter/download' within requestUri '/jmeter/download'. This could be because the path has invalid encoded characters or isn't normalized.; nested exception is org.springframework.web.servlet.resource.ResourceUrlEncodingFilter$LookupPathIndexException: Failed to find lookupPath '//jmeter/download' within requestUri '/jmeter/download'. This could be because the path has invalid encoded characters or isn't normalized.]
+
+### 在当前站点这里配置访问的域名，URL后不要/
+![压测starting](../img/faq/站点设置.png)
+
+## MeterSphere执行性能测试报错，内存溢出，怎么解决?
+
+修改 node-controller 节点上的 /opt/metersphere/conf/metersphere.properties 里的 jmeter.heap 参数，可以调整启动的 jmeter 容器的内存配置，可以调高一点再看下
+
+jmeter.heap=-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m 然后重启
+
+## 如果性能测试jmx有依赖的jar包，需要怎么处理？
+
+跟jmx文件一起上传
+
+## 在压测过程中，可以手动调整TPS吗？
+
+不可以
+

@@ -9,3 +9,7 @@ update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
 ```
 
 连接到数据库后，执行上面的 SQL 语句可以将用户 `admin` 的密码重置为 `metersphere`。
+
+## 系统设置-集成JIRA/Tapd/禅道，能切换到其他组织吗?
+
+不同组织可以集成不同jira，但是需要系统管理员的权限
