@@ -8,6 +8,8 @@ msctl start
 msctl status
 ```
 
-## 在哪里修改默认端口？
+## 如何修改应用的默认端口？
 
-cat /opt/metersphere/.env 然后msctl reload
+修改 /opt/metersphere/.env 文件中的对应配置后，执行 `msctl reload` 命令重新加载应用。
+
+> 配置文件说明请参考 [修改安装配置(可选)](/installation/online_installation/#_4)
