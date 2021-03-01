@@ -103,23 +103,26 @@ msctl start
 
 站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址
 
-## MeterSphere 压测运行不起来，报这个错误（或一直处于starting）
-2021-01-27 17:30:28,272 [qtp359742806-37] WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver ? - Resolved [org.springframework.web.bind.ServletRequestBindingException: Failed to find lookupPath '//jmeter/download' within requestUri '/jmeter/download'. This could be because the path has invalid encoded characters or isn't normalized.; nested exception is org.springframework.web.servlet.resource.ResourceUrlEncodingFilter$LookupPathIndexException: Failed to find lookupPath '//jmeter/download' within requestUri '/jmeter/download'. This could be because the path has invalid encoded characters or isn't normalized.]
+## 执行性能测试时提示 `无法运行测试，请检查当前站点配置` 如何解决？
 
-### 在当前站点这里配置访问的域名，URL后不要/
-![压测starting](../img/faq/站点设置.png)
+执行性能测试过程中，node-controller 节点需要通过 `系统`-`系统设置`-`系统参数设置` 中配置的 `当前站点 URL` 下载相关文件。出现该问题时用户需要检查该配置参数，确保 node-controller 节点可以正常访问到该 URL。
 
-## MeterSphere执行性能测试报错，内存溢出，怎么解决?
+URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https://demo.metersphere.com`。
 
-修改 node-controller 节点上的 /opt/metersphere/conf/metersphere.properties 里的 jmeter.heap 参数，可以调整启动的 jmeter 容器的内存配置，可以调高一点再看下
+## 执行性能测试时 JMeter 容器内存溢出如何解决?
 
-jmeter.heap=-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m 然后重启
+修改 node-controller 节点上的 /opt/metersphere/conf/metersphere.properties 里的 jmeter.heap 参数，可以调整启动的 jmeter 容器的内存配置，根据节点配置适当增加内存配置。
+
+修改后执行 `msctl restart` 重启 node-controller 服务后再次执行性能测试。
+
+!!! info "配置示例"
+    jmeter.heap=-Xms2g -Xmx2g -XX:MaxMetaspaceSize=256m
 
 ## 如果性能测试jmx有依赖的jar包，需要怎么处理？
 
-跟jmx文件一起上传
+在创建性能测试时，可以将依赖的 jar 包与 jmx 文件一起上传。
 
 ## 在压测过程中，可以手动调整TPS吗？
 
-不可以
+目前还不支持。
 
