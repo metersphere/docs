@@ -73,6 +73,7 @@ spring.datasource.password=root
 kafka.partitions=1
 kafka.replicas=1
 kafka.topic=JMETER_METRICS
+kafka.test.topic=JMETER_TESTS
 kafka.bootstrap-servers={KAFKA_IP}:19092
 kafka.log.topic=JMETER_LOGS
 
