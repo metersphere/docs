@@ -9,3 +9,8 @@
 ## 如何申请企业版试用？
 
 MeterSphere 企业版试用申请请点击：https://jinshuju.net/f/CzzAOe
+
+## 在哪里可以看到MeterSphere后续版本更新的重点？
+
+在github的Issues可以看到规划。https://github.com/metersphere/metersphere/issues
+
