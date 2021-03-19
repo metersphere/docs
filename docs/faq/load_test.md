@@ -51,7 +51,7 @@ MeterSphere 通过在测试资源池中添加多个测试执行节点的方式�
 
 ## 如何向测试资源池中添加节点？
 
-首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](installation/online_installation.md)或[「离线安装」](installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_MODE 字段的值为 node-controller 后执行安装脚本。
+首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_MODE 字段的值为 node-controller 后执行安装脚本。
 
 安装完成通过查看组件状态是否正常
 
