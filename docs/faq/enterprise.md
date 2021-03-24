@@ -12,5 +12,5 @@ MeterSphere 企业版试用申请请点击：https://jinshuju.net/f/CzzAOe
 
 ## 在哪里可以看到MeterSphere后续版本更新的重点？
 
-在github的Issues可以看到规划。https://github.com/metersphere/metersphere/issues
+在 GitHub 的置顶 Issue 中可以看到后续版本的规划。https://github.com/metersphere/metersphere/issues
 

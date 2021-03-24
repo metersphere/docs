@@ -51,7 +51,7 @@ MeterSphere 通过在测试资源池中添加多个测试执行节点的方式�
 
 ## 如何向测试资源池中添加节点？
 
-首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](installation/online_installation.md)或[「离线安装」](installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_MODE 字段的值为 node-controller 后执行安装脚本。
+首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_MODE 字段的值为 node-controller 后执行安装脚本。
 
 安装完成通过查看组件状态是否正常
 
@@ -128,9 +128,9 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 ## 执行性能测试时，提示“并发数超额”，该怎么解决？
 
-可以把资源池的最大并发数调大一些。
+修改系统设置-测试资源池中的最大并发数后再次执行测试。
 
-## Jenkins执行邮件里，测试报告点击link进去后，提示报告不存在，是什么原因？
+## Jenkins执行邮件里，测试报告点击链接后，提示报告不存在，是什么原因？
 
 报告不存在可能是因为这个报告在其他的组织、工作空间下的项目里。
 
