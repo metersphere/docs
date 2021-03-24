@@ -31,225 +31,225 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 ## 功能列表
 
   <table> 
-   <tr height="22.55" style='height:22.55pt;mso-height-source:userset;mso-height-alt:451;'>
-    <td class="xl77" height="22.55" style='height:22.55pt;' x:str>功能分类</td>
-    <td class="xl77" x:str>一级功能</td>
-    <td class="xl77" x:str>具体功能描述</td>
+   <tr>
+    <td>**功能分类**</td>
+    <td>**一级功能**</td>
+    <td>**具体功能描述**</td>
    </tr>
-   <tr height="22.55" style='height:22.55pt;mso-height-source:userset;mso-height-alt:451;'>
-    <td class="xl78" height="424.85" rowspan="19" style='height:424.85pt;' x:str>测试跟踪</td>
-    <td class="xl79" rowspan="8" x:str>测试用例管理</td>
-    <td class="xl79" x:str>在线编辑用例</td>
+   <tr>
+    <td rowspan="19">测试跟踪</td>
+    <td rowspan="8">测试用例管理</td>
+    <td>在线编辑用例</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>编辑窗口支持上传附件</td>
+   <tr>
+    <td>编辑窗口支持上传附件</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>查看与编辑窗口显示评审评论</td>
+   <tr>
+    <td>查看与编辑窗口显示评审评论</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>以树状形式展示项目的模块及其用例</td>
+   <tr>
+    <td>以树状形式展示项目的模块及其用例</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持测试用例模块树拖拽排序</td>
+   <tr>
+    <td>支持测试用例模块树拖拽排序</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>自定义用例等级/用例类型/测试方式</td>
+   <tr>
+    <td>自定义用例等级/用例类型/测试方式</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持Excel/Xmind格式快速导入用例到系统</td>
+   <tr>
+    <td>支持Excel/Xmind格式快速导入用例到系统</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持Excel格式快速导出用例到本地</td>
+   <tr>
+    <td>支持Excel格式快速导出用例到本地</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="4" x:str>测试用例评审</td>
-    <td class="xl79" x:str>基于已有用例发起评审</td>
+   <tr>
+    <td rowspan="4">测试用例评审</td>
+    <td>基于已有用例发起评审</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持添加多个评审人</td>
+   <tr>
+    <td>支持添加多个评审人</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>在线更新评审结果</td>
+   <tr>
+    <td>在线更新评审结果</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持多人在线添加评审评论</td>
+   <tr>
+    <td>支持多人在线添加评审评论</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="7"x:str>测试计划跟踪</td>
-    <td class="xl79" x:str>基于已有用例发起测试计划</td>
+   <tr>
+    <td rowspan="7">测试计划跟踪</td>
+    <td>基于已有用例发起测试计划</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持在线更新用例执行结果</td>
+   <tr>
+    <td>支持在线更新用例执行结果</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>在线生成测试报告，支持自定义测试报告模板</td>
+   <tr>
+    <td>在线生成测试报告，支持自定义测试报告模板</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>与平台中的接口测试、性能测试功能联动，自动更新关联用例的结果</td>
+   <tr>
+    <td>与平台中的接口测试、性能测试功能联动，自动更新关联用例的结果</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>记录测试用例关联的缺陷</td>
+   <tr>
+    <td>记录测试用例关联的缺陷</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>缺陷记录支持关联到 JIRA/TAPD/禅道</td>
+   <tr>
+    <td>缺陷记录支持关联到 JIRA/TAPD/禅道</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持PDF格式测试报告导出</td>
+   <tr>
+    <td>支持PDF格式测试报告导出</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl78" height="603.45" rowspan="27" style='height:603.45pt;' x:str>接口测试</td>
-    <td class="xl79" rowspan="13" x:str>接口定义</td>
-    <td class="xl79" x:str>在线编辑接口测试内容</td>
+   <tr>
+    <td rowspan="27">接口测试</td>
+    <td rowspan="13">接口定义</td>
+    <td>在线编辑接口测试内容</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持 HTTP/Dubbo/SQL/TCP 类型接口请求</td>
+   <tr>
+    <td>支持 HTTP/Dubbo/SQL/TCP 类型接口请求</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持接口快捷调制</td>
+   <tr>
+    <td>支持接口快捷调制</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持接口列表和用例列表切换显示</td>
+   <tr>
+    <td>支持接口列表和用例列表切换显示</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持用例编辑窗口正则/JsonPath/XPath等多种类型的断言规则</td>
+   <tr>
+    <td>支持用例编辑窗口正则/JsonPath/XPath等多种类型的断言规则</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持用例编辑窗口正则/JsonPath/XPath类型的参数提取</td>
+   <tr>
+    <td>支持用例编辑窗口正则/JsonPath/XPath类型的参数提取</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持用例编辑窗口前后置 BeanShell/Python 脚本</td>
+   <tr>
+    <td>支持用例编辑窗口前后置 BeanShell/Python 脚本</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>测试环境信息管理</td>
+   <tr>
+    <td>测试环境信息管理</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持单接口测试引用环境信息</td>
+   <tr>
+    <td>支持单接口测试引用环境信息</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持通过浏览器插件快速录制测试脚本</td>
+   <tr>
+    <td>支持通过浏览器插件快速录制测试脚本</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持Metersphere Json/Postman/Swagger格式快速导入用例到系统</td>
+   <tr>
+    <td>支持Metersphere Json/Postman/Swagger格式快速导入用例到系统</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持Metersphere Json格式快速导出用例到本地</td>
+   <tr>
+    <td>支持Metersphere Json格式快速导出用例到本地</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持上传并引用自定义 Jar 包</td>
+   <tr>
+    <td>支持上传并引用自定义 Jar 包</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="12" x:str>接口自动化</td>
-    <td class="xl79" x:str>创建多接口的场景化测试</td>
+   <tr>
+    <td rowspan="12">接口自动化</td>
+    <td>创建多接口的场景化测试</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持自定义场景标签</td>
+   <tr>
+    <td>支持自定义场景标签</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持多层级场景嵌套结构</td>
+   <tr>
+    <td>支持多层级场景嵌套结构</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持接口列表快速导入测试场景</td>
+   <tr>
+    <td>支持接口列表快速导入测试场景</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持测试场景复用</td>
+   <tr>
+    <td>支持测试场景复用</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持添加自定义请求/自定义脚本</td>
+   <tr>
+    <td>支持添加自定义请求/自定义脚本</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持添加等待时间/条件判断等多类型逻辑控制器</td>
+   <tr>
+    <td>支持添加等待时间/条件判断等多类型逻辑控制器</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>场景调试支持引用已有环境信息</td>
+   <tr>
+    <td>场景调试支持引用已有环境信息</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持定时任务</td>
+   <tr>
+    <td>支持定时任务</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持通过 Jenkins 插件触发测试执行</td>
+   <tr>
+    <td>支持通过 Jenkins 插件触发测试执行</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>Jenkins 插件支持 Pipeline 方式调用</td>
+   <tr>
+    <td>Jenkins 插件支持 Pipeline 方式调用</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持一键创建性能测试</td>
+   <tr>
+    <td>支持一键创建性能测试</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="2"  x:str>测试报告</td>
-    <td class="xl79" x:str>测试执行后自动生成测试报告</td>
+   <tr>
+    <td rowspan="2">测试报告</td>
+    <td>测试执行后自动生成测试报告</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持PDF格式测试报告导出</td>
+   <tr>
+    <td>支持PDF格式测试报告导出</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl78" height="178.80" rowspan="8" style='height:178.80pt;' x:str>性能测试</td>
-    <td class="xl79" rowspan="4" x:str>性能测试脚本</td>
-    <td class="xl79" x:str>支持上传JMX/CSV/JAR格式文件创建性能测试</td>
+   <tr>
+    <td rowspan="8">性能测试</td>
+    <td rowspan="4">性能测试脚本</td>
+    <td>支持上传JMX/CSV/JAR格式文件创建性能测试</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持分线程组配置压力参数</td>
+   <tr>
+    <td>支持分线程组配置压力参数</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持下载 JTL 文件</td>
+   <tr>
+    <td>支持下载 JTL 文件</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持通过浏览器插件快速录制测试脚本</td>
+   <tr>
+    <td>支持通过浏览器插件快速录制测试脚本</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="2"  x:str>测试执行</td>
-    <td class="xl79" x:str>内置定时任务支持</td>
+   <tr>
+    <td rowspan="2">测试执行</td>
+    <td>内置定时任务支持</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持通过 Jenkins 插件触发测试执行</td>
+   <tr>
+    <td>支持通过 Jenkins 插件触发测试执行</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="2" x:str>测试报告</td>
-    <td class="xl79" x:str>测试执行后自动生成动态实时测试报告</td>
+   <tr>
+    <td rowspan="2">测试报告</td>
+    <td>测试执行后自动生成动态实时测试报告</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持PDF格式测试报告导出</td>
+   <tr>
+    <td>支持PDF格式测试报告导出</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl78" height="223.50" rowspan="10" style='height:223.50pt;' x:str>系统管理</td>
-    <td class="xl79" rowspan="3" x:str>用户租户管理</td>
-    <td class="xl79" x:str>支持多级租户体系</td>
+   <tr>
+    <td rowspan="10">系统管理</td>
+    <td rowspan="3">用户租户管理</td>
+    <td>支持多级租户体系</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持多种租户角色</td>
+   <tr>
+    <td>支持多种租户角色</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持LDAP 认证对接</td>
+   <tr>
+    <td>支持LDAP 认证对接</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>测试资源管理</td>
-    <td class="xl79" x:str>性能测试资源池管理</td>
+   <tr>
+    <td>测试资源管理</td>
+    <td>性能测试资源池管理</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="2"  x:str>消息通知配置</td>
-    <td class="xl79" x:str>支持企业微信/钉钉等多种IM 工具通知配置</td>
+   <tr>
+    <td rowspan="2">消息通知配置</td>
+    <td>支持企业微信/钉钉等多种IM 工具通知配置</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持邮件通知配置</td>
+   <tr>
+    <td>支持邮件通知配置</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" rowspan="3"  x:str>集成与扩展</td>
-    <td class="xl79" x:str>配置API 列表</td>
+   <tr>
+    <td rowspan="3">集成与扩展</td>
+    <td>配置API 列表</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持对接 Jenkins 等持续集成工具</td>
+   <tr>
+    <td>支持对接 Jenkins 等持续集成工具</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>支持对接 JIRA/TAPD/禅道等缺陷管理工具</td>
+   <tr>
+    <td>支持对接 JIRA/TAPD/禅道等缺陷管理工具</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl79" x:str>项目管理</td>
-    <td class="xl79" x:str>多项目支持，测试用例、测试计划与项目关联</td>
+   <tr>
+    <td>项目管理</td>
+    <td>多项目支持，测试用例、测试计划与项目关联</td>
    </tr>
-   <tr height="22.35" style='height:22.35pt;mso-height-source:userset;mso-height-alt:447;'>
-    <td class="xl78" height="22.35" style='height:22.35pt;' x:str>报表统计</td>
-    <td class="xl79" x:str>报表统计</td>
-    <td class="xl79" x:str>支持跨项目、多维度统计测试数据，灵活配置报表模版，自动发送报表邮件</td>
+   <tr>
+    <td>报表统计</td>
+    <td>报表统计</td>
+    <td>支持跨项目、多维度统计测试数据，灵活配置报表模版，自动发送报表邮件</td>
    </tr>
   </table>
 
