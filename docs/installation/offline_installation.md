@@ -72,7 +72,12 @@ vim install.conf
     MS_KAFKA_TOPIC=JMETER_METRICS
     ## Kafka Log Topic
     MS_KAFKA_LOG_TOPIC=JMETER_LOGS
-
+    ## Kafka Test Topic
+    MS_KAFKA_TEST_TOPIC=JMETER_TESTS
+    ## Kafka 外部访问地址
+    MS_KAFKA_EXT_HOST=
+    ## Kafka 外部访问端口
+    MS_KAFKA_EXT_PORT=19092  
     ```
 
 !!! info "注意"
