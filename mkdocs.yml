@@ -26,6 +26,12 @@ nav:
         - 使用测试跟踪: quick_start/test_track.md
         - 使用接口测试: quick_start/api_test.md
         - 使用性能测试: quick_start/load_test.md
+    - 快速开始（动图版）: 
+        - 一键部署: quick_start_gif/quick_start_gif.md
+        - 创建项目: quick_start_gif/create_project_gif.md
+        - 使用测试跟踪: quick_start_gif/test_track_gif.md
+        - 使用接口测试: quick_start_gif/api_test_gif.md
+        - 使用性能测试: quick_start_gif/load_test_gif.md
     - 系统架构: system_arch.md
     - 安装部署: 
         - 在线安装: installation/online_installation.md
