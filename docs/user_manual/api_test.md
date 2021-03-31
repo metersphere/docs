@@ -180,7 +180,7 @@
 ### 修改测试
 > 请求执行顺序和场景执行顺序支持拖拽调整；变更结束点击保存
 
-  ![api-test-update](../img/api/api-test-update.gif)
+  ![api-test-update](../img/api/api-test-update.png)
 
 
 ### 删除测试
