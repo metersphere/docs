@@ -101,7 +101,7 @@ msctl start
 
 ## 站点配置的URL是什么？
 
-站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址
+站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址。
 
 ## 执行性能测试时提示 `无法运行测试，请检查当前站点配置` 如何解决？
 
@@ -111,12 +111,10 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 ## 执行性能测试时 JMeter 容器内存溢出如何解决?
 
-修改 node-controller 节点上的 /opt/metersphere/conf/metersphere.properties 里的 jmeter.heap 参数，可以调整启动的 jmeter 容器的内存配置，根据节点配置适当增加内存配置。
-
-修改后执行 `msctl restart` 重启 node-controller 服务后再次执行性能测试。
+可以修改系统设置中所使用的测试资源池配置中的 HEAP 配置来调整 JMeter 容器的内存参数。
 
 !!! info "配置示例"
-    jmeter.heap=-Xms2g -Xmx2g -XX:MaxMetaspaceSize=256m
+    -Xms2g -Xmx2g -XX:MaxMetaspaceSize=256m
 
 ## 如果性能测试jmx有依赖的jar包，需要怎么处理？
 
@@ -130,23 +128,16 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 修改系统设置-测试资源池中的最大并发数后再次执行测试。
 
-## Jenkins执行邮件里，测试报告点击链接后，提示报告不存在，是什么原因？
-
-报告不存在可能是因为这个报告在其他的组织、工作空间下的项目里。
-
 ## MeterSphere可以做全链路压测吗
 
-目前我们可以做为其中的发压端
+目前我们可以做为其中的发压端。
 
 ## 执行性能测试时，显示image not found
 
-在“系统设置” - “测试资源池”，把镜像默认设置为空
+执行性能测试所需的 JMeter 容器需要事先存在于所选的测试资源池的节点上，请检查确保容器镜像存在后，更新测试资源池的镜像配置为正确的镜像标签。
 
 ## 压测报告折现图形可以配置吗?
 
-性能测试报告的取样频率可以修改MeterSphere服务器上的metersphere.properties采样配置
+在创建性能测试时的高级设置中可以修改报告数据的聚合时间。
 
-## 压测时，导入自定义的jar包，运行的时候提示找不到该jar包。
-
-现在性能测试时，需要在创建测试的地方再单独传一下 jar 包
 
