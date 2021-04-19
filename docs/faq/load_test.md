@@ -150,3 +150,24 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 现在性能测试时，需要在创建测试的地方再单独传一下 jar 包
 
+## 压测执行的时候报错
+Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.   这个错误也已经删除；
+
+在部署 node-controller 的机器上，使用hostname命令获取主机名
+[root@nginx metersphere-release-v1.8.0]# hostname
+nginx.novalocal
+将获取到的主机名nginx.novalocal配置到 /etc/hosts 文件中，配置完成效果如下：
+配置前
+127.0.0.1       localhost
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.110.149.133 nginx111
+配置后
+127.0.0.1       localhost
+127.0.0.1       nginx.novalocal
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.110.149.133 nginx111
+
+## 性能测试时并发量加大的时候报错 Non HTTP response code: java.net.SocketTimeoutException
+
+修改单个接口的连接超时时间
+

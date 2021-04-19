@@ -80,3 +80,8 @@ SQL请求可通过如下方法进行断言：
 ## 场景变量的类型为随机数，但执行过程中为什么没有实际生成？
 
 场景变量支持随机数，但随机数长度要控制在MeterSphere限制内。
+
+## 如何引用csv
+
+在场景中，点击场景变量进行添加
+可参考操作手册 https://metersphere.io/docs/user_manual/api_test/api_automation/#_6
