@@ -14,7 +14,5 @@ update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
 
 资源池是指性能测试中所使用的发压服务器的集合。
 
-## 如何在k8s搭建ms
 
-这里有helm模板 可以参照。https://github.com/metersphere/helm-chart
 
