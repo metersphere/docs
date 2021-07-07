@@ -14,3 +14,7 @@ msctl status
 
 > 配置文件说明请参考 [修改安装配置(可选)](/installation/online_installation/#_4)
 
+## 如何在 Kubernetes 中搭建 MeterSphere？
+
+可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)
+
