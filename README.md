@@ -113,11 +113,8 @@ mkdocs build
 git clone https://github.com/your-github-account/docs.git
 ```
 
-### 本地修改并ffffff调试    c
+### 本地修改并调试
 
 ### Push 修改内容到 GitHub 仓库
 
 ### 提交 Pull Request 到本仓库
-dwdsa
-ds
-adsadsadadsadsa
