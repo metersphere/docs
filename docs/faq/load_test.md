@@ -99,15 +99,15 @@ msctl start
 ```
 若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。
 
-## 站点配置的URL是什么？
-
-站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址。
-
 ## 执行性能测试时提示 `无法运行测试，请检查当前站点配置` 如何解决？
 
 执行性能测试过程中，node-controller 节点需要通过 `系统`-`系统设置`-`系统参数设置` 中配置的 `当前站点 URL` 下载相关文件。出现该问题时用户需要检查该配置参数，确保 node-controller 节点可以正常访问到该 URL。
 
 URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https://demo.metersphere.com`。
+
+## 站点配置的URL是什么？
+
+站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址。
 
 ## 执行性能测试时 JMeter 容器内存溢出如何解决?
 
@@ -128,11 +128,11 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 修改系统设置-测试资源池中的最大并发数后再次执行测试。
 
-## MeterSphere可以做全链路压测吗
+## MeterSphere可以做全链路压测吗？
 
 目前我们可以做为其中的发压端。
 
-## 执行性能测试时，显示image not found
+## 执行性能测试时，显示image not found如何处理？
 
 执行性能测试所需的 JMeter 容器需要事先存在于所选的测试资源池的节点上，请检查确保容器镜像存在后，更新测试资源池的镜像配置为正确的镜像标签。
 
@@ -140,27 +140,40 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 在创建性能测试时的高级设置中可以修改报告数据的聚合时间。
 
-
-## 压测执行的时候报错
-Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.   这个错误也已经删除；
+## 压测执行的时候报如下错如何解决？
+```
+Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.
+```
 
 在部署 node-controller 的机器上，使用hostname命令获取主机名
+
+```
 [root@nginx metersphere-release-v1.8.0]# hostname
 nginx.novalocal
-将获取到的主机名nginx.novalocal配置到 /etc/hosts 文件中，配置完成效果如下：
+```
+
+将获取到的主机名 `nginx.novalocal` 配置到 /etc/hosts 文件中，配置完成效果如下：
+
 配置前
+
+```
 127.0.0.1       localhost
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 10.110.149.133 nginx111
+```
+
 配置后
+
+```
 127.0.0.1       localhost
 127.0.0.1       nginx.novalocal
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 10.110.149.133 nginx111
+```
 
-## 性能测试时并发量加大的时候报错 Non HTTP response code: java.net.SocketTimeoutException
+## 性能测试时并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
 
-修改单个接口的连接超时时间
+修改单个接口的连接超时时间后重新执行测试。
 
 ## 同一脚本执行多次，可以将多次的报告结果进行对比吗？
 
