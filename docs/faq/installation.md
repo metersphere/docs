@@ -48,3 +48,13 @@ cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相�
 查看对应version的flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后 重新执行下，然后修改metersphere_version
 表对应版本的的success值为1，然后 msclt reload 重启服务即可
 
+## 如何备份数据库
+
+docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
+
+## mysqldump: Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94
+
+添加max_allowed_packet参数，如下
+docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
+
+
