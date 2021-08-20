@@ -84,6 +84,10 @@ nav:
         - 88完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
         - 蔚澜环保基于MeterSphere的自动化测试实践: case_studies/weilanep.md
         - 易盛信息MeterSphere接口测试使用经验: case_studies/esunny.md
+        - 永福信息基于MeterSphere从项目维度持续推进测试任务: case_studies/yongfu.md
+        - 九里云基于MeterSphere落地一站式自动化测试平台: case_studies/jiuliyun.md
+        - 民生科技基于MeterSphere平台实现测试用例复用: case_studies/mskj.md
+        - 360借助MeterSphere提升自动化测试水平: case_studies/360b.md
     - 关于:
         - 更新说明: about/changelog.md
         - 联系我们: about/contact.md
