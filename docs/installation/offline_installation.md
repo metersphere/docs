@@ -10,7 +10,7 @@
 请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下
 
 !!! tip ""
-    安装包下载链接: https://github.com/metersphere/metersphere/releases
+    安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
 
 ## 解压安装包
 
@@ -60,7 +60,7 @@ vim install.conf
     MS_MYSQL_USER=root
     ## MySQL 数据库密码
     MS_MYSQL_PASSWORD=Password123@mysql
-
+    
     # Kafka 配置
     ## 是否使用外部 kafka
     MS_EXTERNAL_KAFKA=false
@@ -101,7 +101,7 @@ vim install.conf
     sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
     skip-name-resolve
     ```
-
+    
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
     ```mysql
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
