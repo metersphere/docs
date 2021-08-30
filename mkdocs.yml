@@ -47,13 +47,14 @@ nav:
             - 测试用例: user_manual/test_track/test_case.md
             - 用例评审: user_manual/test_track/test_case_review.md
             - 测试计划: user_manual/test_track/test_plan.md
-            - 报告: user_manual/test_track/test_report.md
+            - 缺陷管理: user_manual/test_track/test_defect.md
+            - 测试跟踪报告中心: user_manual/test_track/test_report.md
         - 接口测试: 
             - 模块说明: user_manual/api_test/intro.md
             - 首页: user_manual/api_test/home.md
             - 接口定义: user_manual/api_test/api_definition.md
             - 接口自动化: user_manual/api_test/api_automation.md
-            - 测试报告: user_manual/api_test/test_report.md
+            - 接口测试报告中心: user_manual/api_test/test_report.md
             - 用例步骤说明: user_manual/api_test/api_step.md
             # - 接口详情说明: user_manual/api_test/api_detail.md
             - 内置函数: user_manual/api_test/functions.md
@@ -62,7 +63,7 @@ nav:
             - 模块说明: user_manual/load_test/intro.md
             - 首页: user_manual/load_test/home.md
             - 性能测试: user_manual/load_test/load_test.md
-            - 测试报告: user_manual/load_test/test_report.md
+            - 性能测试报告中心: user_manual/load_test/test_report.md
     - 使用教程:
         - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
         - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
