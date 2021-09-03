@@ -251,7 +251,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
         <td>手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
     </tr>
     <tr>
-        <td style="background-color: #7838874d;"><p class="title-p">百万级TPS性能测试优化（X-Pack）</p></td>
+        <td style="background-color: #7838874d;"><p class="title-p">百万级TPS性能测试（X-Pack）</p></td>
     </tr>    
     <tr>
         <td rowspan="4">测试报告</td>
