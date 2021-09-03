@@ -1,35 +1,10 @@
-## 环境要求
+## 仅需两步快速安装 MeterSphere
 
-!!! info "部署服务器要求"
-    * 操作系统: CentOS 7.x
-    * CPU/内存: 4核8G
-    * 磁盘空间: 50G
-    * 可访问互联网
+1. 准备一台不小于 8 G 内存且可以访问互联网的 64 位 Linux 主机；
+2. 以 root 用户执行如下命令一键安装 MeterSphere。
 
-## 下载安装包
-
-请自行下载 MeterSphere 最新版本的在线安装包，并复制到目标机器的 /tmp 目录下
-
-!!! tip ""
-    安装包下载链接: https://github.com/metersphere/metersphere/releases/latest
-
-## 解压安装包
-
-以 root 用户 ssh 登录到目标机器, 并执行如下命令
-
-```sh
-cd /tmp
-# 解压安装包
-tar zxvf metersphere-release-v1.0.3.tar.gz
 ```
-
-## 修改安装配置(可选)
-
-在安装包解压后的目录，编辑修改安装参数
-
-```sh
-cd metersphere-release-v1.0.3
-vim install.conf
+curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | sh
 ```
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
