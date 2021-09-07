@@ -221,7 +221,6 @@ h4,h5{font-family:-apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro
 /*! CSS Used from: https://metersphere.io/css/bootstrap.min.css */
 *,::after,::before{box-sizing:border-box;}
 section{display:block;}
-p{margin-top:0;margin-bottom:1rem;}
 a{color:#a4b1b2;text-decoration:none;background-color:transparent;}
 a:hover{color:#a4b1b2;text-decoration:underline;}
 .pr-1{padding-right:.25rem!important;}
@@ -237,7 +236,6 @@ p{orphans:3;widows:3;}
 ::-moz-selection{background:rgba(47, 85, 212, 0.9);color:#ffffff;}
 ::selection{background:rgba(47, 85, 212, 0.9);color:#ffffff;}
 a{text-decoration:none!important;}
-p{line-height:1.6;}
 /*! CSS Used from: https://metersphere.io/css/colors/default.css */
 ::selection{background-color:rgba(255, 91, 105, 0.9);}
 /*! CSS Used from: https://metersphere.io/css/index.css */
