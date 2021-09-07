@@ -78,7 +78,7 @@ nav:
         - 测试跟踪相关: faq/test_track.md
         - 接口测试相关: faq/api_test.md
         - 性能测试相关: faq/load_test.md
-        - 报表统计相关: report_statistics.md
+        - 报表统计相关: faq/report_statistics.md
         - 系统设置相关: faq/system_management.md
         - 企业版相关: faq/enterprise.md
     - 开发文档: dev_manual.md
