@@ -2,17 +2,39 @@
 
 {% block header %}
 {% include "f2c-header.html" %}
+{{ super() }}
+{% endblock %}
+
+{% block outdated %}
+  You're not viewing the latest version.
+  <a href="{{ '../' ~ base_url }}">
+    <strong>Click here to go to latest.</strong>
+  </a>
 {% endblock %}
 
 {% block footer %}
-{{ super() }}
-<section id="footer_start">
-    <div class="footer-start-box" >
-        <div class="footer-start-title">
-            <p role="img" aria-label="celibrate" style="font-size: 14px"><a target="_blank" href="https://jinshuju.net/f/KqFUhq" style="color: white"><i class="mdi mdi-download pr-1" style="font-size: 14px"></i>点击下载《持续测试白皮书》</a>️</p>
+<!-- {{ super() }} -->
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          {% if config.copyright %}
+            <div class="md-footer-copyright__highlight">
+              {{ config.copyright }}
+            </div>
+          {% endif %}
         </div>
+        {% include "partials/social.html" %}
+      </div>
     </div>
-</section>
+    <section id="footer_start">
+        <div class="footer-start-box" >
+            <div class="footer-start-title">
+                <p role="img" aria-label="celibrate" style="font-size: 14px"><a target="_blank" href="https://jinshuju.net/f/KqFUhq" style="color: white"><i class="mdi mdi-download pr-1" style="font-size: 14px"></i>点击下载《持续测试白皮书》</a>️</p>
+            </div>
+        </div>
+    </section>
+  </footer>
 {% endblock %}
 
 

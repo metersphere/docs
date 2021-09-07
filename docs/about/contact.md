@@ -14,10 +14,6 @@
 
 ![qq](../img/qq-group.png)
 
-## 项目地址
-
-- [MeterSphere][metersphere] ![metersphere stars][metersphere stars]
-
 ## 联系方式
 
 - 官网：http://www.metersphere.io
