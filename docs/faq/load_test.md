@@ -193,4 +193,8 @@ nginx.novalocal
 
 被监控服务器需要安装node export组件，相当于收集监控的一个客户端。主服务会在安装MeterSphere系统时默认安装，如果添加其他服务器，则需要单独安装。
 
+## MeterSphere可以监控被测系统服务器指标吗？
+
+MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控。可以在性能测试模块的高级测试里面，添加被测系统服务器，同时在该服务器安装node_exporter插件，即可在执行性能测试的时候完成相关指标的监控。
+
 

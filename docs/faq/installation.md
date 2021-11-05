@@ -15,6 +15,27 @@ msctl status
 > 配置文件说明请参考 [修改安装配置(可选)](/installation/online_installation/#_4)
 
 ## 如何在 Kubernetes 中搭建 MeterSphere？
-
 可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)
 
+## 性能测试时并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
+
+修改单个接口的连接超时时间。
+
+## 如何在k8s搭建ms
+
+可以参照这里的helm模板：https://github.com/metersphere/helm-chart
+
+## 数据库如何不区分大小写
+
+chmod 644 /opt/metersphere/conf/my.cnf 
+
+修改完成后，重启数据库。
+
+## docker-compose 版本与配置文件不兼容，提示请重新安装最新版本的 docker-compose
+
+可以把安装包里的docker-compose-xx 在安装目录替换一下。
+
+## 设置数据库忽略大小未生效，lower_case_table_names=1
+
+chmod /opt/metersphere/conf/my.cnf 
+然后重启数据库 docker restart mysql
