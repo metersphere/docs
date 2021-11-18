@@ -22,12 +22,12 @@ theme:
           accent: deep purple
           toggle:
               icon: material/weather-sunny
-              name: Switch to dark mode
+              name: 切换为深色模式
         - scheme: slate
           accent: deep purple
           toggle:
               icon: material/weather-night
-              name: Switch to light mode
+              name: 切换为浅色模式
     features:
         - navigation.instant
         - navigation.tracking
