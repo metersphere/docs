@@ -133,41 +133,42 @@ msctl status
 密码: metersphere
 ```
 
-!!! warning "注意"
-    如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
-    ```
-    server {
-        listen 80;
-        server_name demo.metersphere.com;
-        server_tokens off;
-        return 301 https://$host$request_uri;
-    }
-    server {
-        listen 443 ssl;
-        # RSA certificate
-        ssl_certificate /etc/nginx/ssl/metersphere.com/fullchain.cer; # managed by Certbot
-        ssl_certificate_key /etc/nginx/ssl/metersphere.com/metersphere.com.key; # managed by Certbot
-        server_name  demo.metersphere.com;
-        proxy_connect_timeout       300;
-        proxy_send_timeout          300;
-        proxy_read_timeout          300;
-        send_timeout                300;
-        proxy_set_header Host $host;
-        proxy_set_header X-Forwarded-For $remote_addr;
-        proxy_set_header X-Forwarded-Host $server_name;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_redirect http:// $scheme://;
-        # 配置 websocket 支持
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
+## 配置反向代理
+
+如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
+```
+server {
+    listen 80;
+    server_name demo.metersphere.com;
+    server_tokens off;
+    return 301 https://$host$request_uri;
+}
+server {
+    listen 443 ssl;
+    # RSA certificate
+    ssl_certificate /etc/nginx/ssl/metersphere.com/fullchain.cer; # managed by Certbot
+    ssl_certificate_key /etc/nginx/ssl/metersphere.com/metersphere.com.key; # managed by Certbot
+    server_name  demo.metersphere.com;
+    proxy_connect_timeout       300;
+    proxy_send_timeout          300;
+    proxy_read_timeout          300;
+    send_timeout                300;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header X-Forwarded-Host $server_name;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect http:// $scheme://;
+    # 配置 websocket 支持
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
 
 
-        location / {
-            proxy_pass http://ip:8081;
-            client_max_body_size 1000m;
-            #access_log off;
-        }
+    location / {
+        proxy_pass http://ip:8081;
+        client_max_body_size 1000m;
+        #access_log off;
     }
-    ```
+}
+```
