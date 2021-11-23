@@ -4,7 +4,7 @@
 2. 以 root 用户执行如下命令一键安装 MeterSphere。
 
 ```
-curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | sh
+curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
 ```
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
