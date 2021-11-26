@@ -118,3 +118,8 @@ git clone https://github.com/your-github-account/docs.git
 ### Push 修改内容到 GitHub 仓库
 
 ### 提交 Pull Request 到本仓库
+
+
+## 问题反馈
+
+如果您发现文档中存在错误，或对文档内容存在疑问，请提交 GitHub Issue 到 [MeterSphere 项目的主仓库](https://github.com/metersphere/metersphere/issues)
