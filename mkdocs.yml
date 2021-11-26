@@ -21,13 +21,13 @@ theme:
         - scheme: default
           accent: deep purple
           toggle:
-              icon: material/weather-sunny
-              name: 切换为深色模式
+              icon: material/weather-night
+              name: 切换为浅色模式
         - scheme: slate
           accent: deep purple
           toggle:
-              icon: material/weather-night
-              name: 切换为浅色模式
+              icon: material/weather-sunny
+              name: 切换为深色模式
     features:
         - navigation.instant
         - navigation.tracking
