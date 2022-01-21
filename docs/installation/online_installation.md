@@ -159,16 +159,16 @@ server {
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_redirect http:// $scheme://;
-    # 配置 websocket 支持
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";
-
 
     location / {
         proxy_pass http://ip:8081;
         client_max_body_size 1000m;
         #access_log off;
+
+        # 配置 websocket 支持
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
     }
 }
 ```
