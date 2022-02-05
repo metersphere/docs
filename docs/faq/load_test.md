@@ -171,10 +171,6 @@ nginx.novalocal
 10.110.149.133 nginx111
 ```
 
-## 性能测试时并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
-
-修改单个接口的连接超时时间后重新执行测试。
-
 ## 同一脚本执行多次，可以将多次的报告结果进行对比吗？
 
 在报告列表，同个任务下，已完成状态的报告可以进行对比。
@@ -199,9 +195,8 @@ MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控�
 在压力配置里，提供了3种分配策略，分别为“自动分配、固定节点、自定义”，可以为每个线程组指定一个节点，或者按比例分配多个节点。
 
 
-## 性能测试并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
+## 性能测试并发量加大的时候报错 `Non HTTP response code: java.net.SocketTimeoutException`
 
 高级配置增加超时时间
-
 
 ![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)
