@@ -14,7 +14,6 @@ update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
 
 测试资源池相当于MeterSphere中的执行机集合，可以用于执行指定的接口或性能测试。
 
-
 ## LDAP测试连接，提示 “用户不存在或者不唯一”。
 
 更改用户过滤器为 (cn={0})；LDAP属性映射为｛"username": "cn"｝

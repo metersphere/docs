@@ -76,9 +76,13 @@ kafka.topic=JMETER_METRICS
 kafka.test.topic=JMETER_TESTS
 kafka.bootstrap-servers={KAFKA_IP}:19092
 kafka.log.topic=JMETER_LOGS
+kafka.report.topic=JMETER_REPORT
 
 # node-controller 所使用的 jmeter 镜像版本 
 jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
+
+# TCP Mock 端口范围
+tcp.mock.port=10000
 
 # 启动模式，lcoal 表示以本地开发模式启动
 run.mode=local
