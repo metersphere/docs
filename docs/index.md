@@ -8,11 +8,12 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 
 ## 界面展示
 
-![!界面展示](./img/ui.png)
+![!界面展示](https://metersphere.oss-cn-hangzhou.aliyuncs.com/img/UIdemo.gif)
 
 !!! info "快速体验 MeterSphere"
--    [演示视频](https://www.bilibili.com/video/BV1yp4y1p72C/)
--    [在线体验](https://jinshuju.net/f/WuI6IO)
+
+-   [演示视频](https://www.bilibili.com/video/BV1yp4y1p72C/)
+-   [在线体验](https://jinshuju.net/f/WuI6IO)
 
 ## 产品优势
 
@@ -23,6 +24,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 ## 主要功能
 
 <!-- 添加截图 -->
+
 -   **测试跟踪**: 远超 TestLink 的使用体验，覆盖从编写用例到生成测试报告的完整流程；
 -   **接口测试**: 集 Postman 的易用与 JMeter 的灵活于一体，接口管理、多协议支持、场景自动化，你想要的全都有；
 -   **性能测试**: 兼容 JMeter，支持 Kubernetes 和云环境，轻松支持高并发、分布式的性能测试；
@@ -30,236 +32,317 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 
 ## 功能列表
 
-  <table> 
-   <tr>
-    <td>**功能分类**</td>
-    <td>**一级功能**</td>
-    <td>**具体功能描述**</td>
-   </tr>
-   <tr>
-    <td rowspan="19">测试跟踪</td>
-    <td rowspan="8">测试用例管理</td>
-    <td>在线编辑用例</td>
-   </tr>
-   <tr>
-    <td>编辑窗口支持上传附件</td>
-   </tr>
-   <tr>
-    <td>查看与编辑窗口显示评审评论</td>
-   </tr>
-   <tr>
-    <td>以树状形式展示项目的模块及其用例</td>
-   </tr>
-   <tr>
-    <td>支持测试用例模块树拖拽排序</td>
-   </tr>
-   <tr>
-    <td>自定义用例等级/用例类型/测试方式</td>
-   </tr>
-   <tr>
-    <td>支持Excel/Xmind格式快速导入用例到系统</td>
-   </tr>
-   <tr>
-    <td>支持Excel格式快速导出用例到本地</td>
-   </tr>
-   <tr>
-    <td rowspan="4">测试用例评审</td>
-    <td>基于已有用例发起评审</td>
-   </tr>
-   <tr>
-    <td>支持添加多个评审人</td>
-   </tr>
-   <tr>
-    <td>在线更新评审结果</td>
-   </tr>
-   <tr>
-    <td>支持多人在线添加评审评论</td>
-   </tr>
-   <tr>
-    <td rowspan="7">测试计划跟踪</td>
-    <td>基于已有用例发起测试计划</td>
-   </tr>
-   <tr>
-    <td>支持在线更新用例执行结果</td>
-   </tr>
-   <tr>
-    <td>在线生成测试报告，支持自定义测试报告模板</td>
-   </tr>
-   <tr>
-    <td>与平台中的接口测试、性能测试功能联动，自动更新关联用例的结果</td>
-   </tr>
-   <tr>
-    <td>记录测试用例关联的缺陷</td>
-   </tr>
-   <tr>
-    <td>缺陷记录支持关联到 JIRA/TAPD/禅道</td>
-   </tr>
-   <tr>
-    <td>支持PDF格式测试报告导出</td>
-   </tr>
-   <tr>
-    <td rowspan="27">接口测试</td>
-    <td rowspan="13">接口定义</td>
-    <td>在线编辑接口测试内容</td>
-   </tr>
-   <tr>
-    <td>支持 HTTP/Dubbo/SQL/TCP 类型接口请求</td>
-   </tr>
-   <tr>
-    <td>支持接口快捷调制</td>
-   </tr>
-   <tr>
-    <td>支持接口列表和用例列表切换显示</td>
-   </tr>
-   <tr>
-    <td>支持用例编辑窗口正则/JsonPath/XPath等多种类型的断言规则</td>
-   </tr>
-   <tr>
-    <td>支持用例编辑窗口正则/JsonPath/XPath类型的参数提取</td>
-   </tr>
-   <tr>
-    <td>支持用例编辑窗口前后置 BeanShell/Python 脚本</td>
-   </tr>
-   <tr>
-    <td>测试环境信息管理</td>
-   </tr>
-   <tr>
-    <td>支持单接口测试引用环境信息</td>
-   </tr>
-   <tr>
-    <td>支持通过浏览器插件快速录制测试脚本</td>
-   </tr>
-   <tr>
-    <td>支持Metersphere Json/Postman/Swagger格式快速导入用例到系统</td>
-   </tr>
-   <tr>
-    <td>支持Metersphere Json格式快速导出用例到本地</td>
-   </tr>
-   <tr>
-    <td>支持上传并引用自定义 Jar 包</td>
-   </tr>
-   <tr>
-    <td rowspan="12">接口自动化</td>
-    <td>创建多接口的场景化测试</td>
-   </tr>
-   <tr>
-    <td>支持自定义场景标签</td>
-   </tr>
-   <tr>
-    <td>支持多层级场景嵌套结构</td>
-   </tr>
-   <tr>
-    <td>支持接口列表快速导入测试场景</td>
-   </tr>
-   <tr>
-    <td>支持测试场景复用</td>
-   </tr>
-   <tr>
-    <td>支持添加自定义请求/自定义脚本</td>
-   </tr>
-   <tr>
-    <td>支持添加等待时间/条件判断等多类型逻辑控制器</td>
-   </tr>
-   <tr>
-    <td>场景调试支持引用已有环境信息</td>
-   </tr>
-   <tr>
-    <td>支持定时任务</td>
-   </tr>
-   <tr>
-    <td>支持通过 Jenkins 插件触发测试执行</td>
-   </tr>
-   <tr>
-    <td>Jenkins 插件支持 Pipeline 方式调用</td>
-   </tr>
-   <tr>
-    <td>支持一键创建性能测试</td>
-   </tr>
-   <tr>
-    <td rowspan="2">测试报告</td>
-    <td>测试执行后自动生成测试报告</td>
-   </tr>
-   <tr>
-    <td>支持PDF格式测试报告导出</td>
-   </tr>
-   <tr>
-    <td rowspan="8">性能测试</td>
-    <td rowspan="4">性能测试脚本</td>
-    <td>支持上传JMX/CSV/JAR格式文件创建性能测试</td>
-   </tr>
-   <tr>
-    <td>支持分线程组配置压力参数</td>
-   </tr>
-   <tr>
-    <td>支持下载 JTL 文件</td>
-   </tr>
-   <tr>
-    <td>支持通过浏览器插件快速录制测试脚本</td>
-   </tr>
-   <tr>
-    <td rowspan="2">测试执行</td>
-    <td>内置定时任务支持</td>
-   </tr>
-   <tr>
-    <td>支持通过 Jenkins 插件触发测试执行</td>
-   </tr>
-   <tr>
-    <td rowspan="2">测试报告</td>
-    <td>测试执行后自动生成动态实时测试报告</td>
-   </tr>
-   <tr>
-    <td>支持PDF格式测试报告导出</td>
-   </tr>
-   <tr>
-    <td rowspan="10">系统管理</td>
-    <td rowspan="3">用户租户管理</td>
-    <td>支持多级租户体系</td>
-   </tr>
-   <tr>
-    <td>支持多种租户角色</td>
-   </tr>
-   <tr>
-    <td>支持LDAP 认证对接</td>
-   </tr>
-   <tr>
-    <td>测试资源管理</td>
-    <td>性能测试资源池管理</td>
-   </tr>
-   <tr>
-    <td rowspan="2">消息通知配置</td>
-    <td>支持企业微信/钉钉等多种IM 工具通知配置</td>
-   </tr>
-   <tr>
-    <td>支持邮件通知配置</td>
-   </tr>
-   <tr>
-    <td rowspan="3">集成与扩展</td>
-    <td>配置API 列表</td>
-   </tr>
-   <tr>
-    <td>支持对接 Jenkins 等持续集成工具</td>
-   </tr>
-   <tr>
-    <td>支持对接 JIRA/TAPD/禅道等缺陷管理工具</td>
-   </tr>
-   <tr>
-    <td>项目管理</td>
-    <td>多项目支持，测试用例、测试计划与项目关联</td>
-   </tr>
-   <tr>
-    <td>报表统计</td>
-    <td>报表统计</td>
-    <td>支持跨项目、多维度统计测试数据，灵活配置报表模版，自动发送报表邮件</td>
-   </tr>
-  </table>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   功能模块
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   一级功能
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   一级功能描述
+  </td>
+  <tbody>
+    <tr>
+        <td rowspan="24">测试跟踪</td>
+        <td rowspan="9">测试用例管理</td>
+        <td>表单方式编辑用例</td>
+    </tr>
+    <tr>
+        <td>脑图方式编辑用例</td>
+    </tr>
+    <tr>
+        <td>以树状形式展示项目的模块及用例</td>
+    </tr>
+    <tr>
+        <td>支持配置用例自定义字段</td>
+    </tr>
+    <tr>
+        <td>功能用例关联接口、性能用例</td>
+    </tr>
+    <tr>
+        <td>与Jira、TAPD、禅道等平台上的需求进行关联</td>
+    </tr>
+    <tr>
+        <td>与Jira、TAPD、禅道等平台上的缺陷进行关联</td>
+    </tr>
+    <tr>
+        <td>支持查看用例变更历史</td>
+    </tr>
+    <tr>
+        <td>通过Excel、Xmind格式快速导入、导出用例</td>
+    </tr>
+    <tr>
+        <td rowspan="4">测试用例评审</td>
+        <td>快速选择已有用例发起评审</td>
+    </tr>
+    <tr>
+        <td>同时支持列表及脑图两种评审方式</td>
+    </tr>
+    <tr>
+        <td>支持自定义评审人</td>
+    </tr>
+    <tr>
+        <td>在线添加评审评论及更新评审结果</td>
+    </tr>
+    <tr>
+        <td rowspan="7">测试计划跟踪</td>
+        <td>快速选择已有用例发起测试计划</td>
+    </tr>
+    <tr>
+        <td>支持在线更新用例执行结果</td>
+    </tr>
+    <tr>
+        <td>支持列表及脑图两种交互方式</td>
+    </tr>
+    <tr>
+        <td>同时添加功能用例、接口用例、性能用例等多种用例类型</td>
+    </tr>
+    <tr>
+        <td>支持手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
+    </tr>
+    <tr>
+        <td>在线生成多种多种用例类型汇总的测试报告，支持自定义测试报告模板</td>
+    </tr>
+    <tr>
+        <td>测试报告导出</td>
+    </tr>
+    <tr>
+        <td rowspan="4">缺陷管理</td>
+        <td>在线创建缺陷</td>
+    </tr>
+    <tr>
+        <td>支持缺陷与用例关联</td>
+    </tr>
+    <tr>
+        <td>对接并同步Jira、TAPD、禅道等平台上的缺陷</td>
+    </tr>
+    <tr>
+        <td>支持配置缺陷自定义字段</td>
+    </tr>
+    <tr>
+        <td rowspan="32">接口测试</td>
+        <td rowspan="15">接口定义</td>
+        <td>在线添加并编辑接口定义</td>
+    </tr>
+    <tr>
+        <td>以树状形式展示项目的模块及对应接口</td>
+    </tr>
+    <tr>
+        <td>支持HTTP、Dubbo、SQL、TCP类型接口请求</td>
+    </tr>
+    <tr>
+        <td>支持通过MeterSphere Json、Postman、Swagger 等多种格式文件快速导入接口</td>
+    </tr>
+    <tr>
+        <td>支持接口快捷调试</td>
+    </tr>
+    <tr>
+        <td>根据接口定义快速配置Mock服务</td>
+    </tr>
+    <tr>
+        <td>接口列表、用例列表、文档模式多种模式灵活切换</td>
+    </tr>
+    <tr>
+        <td>测试环境信息管理功能</td>
+    </tr>
+    <tr>
+        <td>单接口用例支持引用环境</td>
+    </tr>
+    <tr>
+        <td>支持正则匹配、jsonpath、xpath等多种类型的断言规则</td>
+    </tr>
+    <tr>
+        <td>支持正则匹配、jsonpath、xpath等多种类型的参数提取</td>
+    </tr>
+    <tr>
+        <td>支持BeanShell、Python、Groovy、JavaScript等多种语言的前后置脚本</td>
+    </tr>
+    <tr>
+        <td>支持上传并引用自定义Jar包</td>
+    </tr>
+    <tr>
+        <td>支持查看接口及用例变更历史</td>
+    </tr>
+    <tr>
+        <td>手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
+    </tr>
+    <tr>
+        <td rowspan="14">接口自动化</td>
+        <td>创建多接口串联的场景化测试</td>
+    </tr>
+    <tr>
+        <td>从接口列表中快速导入接口或接口用例</td>
+    </tr>
+    <tr>
+        <td>跨项目的场景引用功能</td>
+    </tr>
+    <tr>
+        <td>客户端SSL证书认证配置</td>
+    </tr>
+    <tr>
+        <td>场景用例支持引用环境</td>
+    </tr>
+    <tr>
+        <td>支持条件、循环、事务等多种类型的控制器</td>
+    </tr>
+    <tr>
+        <td>支持正则匹配、jsonpath、xpath等多种类型的断言规则</td>
+    </tr>
+    <tr>
+        <td>支持正则匹配、jsonpath、xpath等多种类型的参数提取</td>
+    </tr>
+    <tr>
+        <td>支持BeanShell、Python、Groovy、JavaScript等多种语言的前后置脚本</td>
+    </tr>
+    <tr>
+        <td>支持上传并引用自定义Jar包</td>
+    </tr>
+    <tr>
+        <td>支持查看场景用例变更历史</td>
+    </tr>
+    <tr>
+        <td>手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
+    </tr>
+    <tr>
+        <td>串行、并行两种批量执行方式自由选择</td>
+    </tr>
+    <tr>
+        <td>支持指定测试资源池远程执行</td>
+    </tr>
+    <tr>
+        <td rowspan="3">测试报告</td>
+        <td>测试执行后自动生成测试报告</td>
+    </tr>
+    <tr>
+        <td>批量执行时支持生成整合报告</td>
+    </tr>
+    <tr>
+        <td>测试报告导出</td>
+    </tr>
+    <tr>
+        <td rowspan="14">性能测试</td>
+        <td rowspan="7">测试管理</td>
+        <td>支持上传JMX、CSV、JAR格式文件创建性能测试</td>
+    </tr>
+    <tr>
+        <td>支持按线程组分别配置压力参数</td>
+    </tr>
+    <tr>
+        <td>通过浏览器插件快速录制测试脚本</td>
+    </tr>
+    <tr>
+        <td>自定义域名解析</td>
+    </tr>
+    <tr>
+        <td>多节点执行时支持分割CSV数据文件</td>
+    </tr>
+    <tr>
+        <td>支持添加监控对象</td>
+    </tr>
+    <tr>
+        <td>通过接口用例、接口自动化场景用例快速创建性能测试</td>
+    </tr>
+    <tr>
+        <td rowspan="3">测试执行</td>
+        <td>指定测试资源池分布式执行</td>
+    </tr>
+    <tr>
+        <td>手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
+    </tr>
+    <tr>
+        <td style="background-color: #7838874d;"><p class="title-p">百万级TPS性能测试（X-Pack）</p></td>
+    </tr>    
+    <tr>
+        <td rowspan="4">测试报告</td>
+        <td>测试报告数据实时刷新</td>
+    </tr>
+    <tr>
+        <td>集成监控系统汇总监控数据</td>
+    </tr>
+    <tr>
+        <td>多次测试报告对比功能</td>
+    </tr>
+    <tr>
+        <td>测试报告导出</td>
+    </tr>
+    <tr>
+        <td rowspan="20">系统管理</td>
+        <td rowspan="5">用户租户管理</td>
+        <td>支持多级租户体系</td>
+    </tr>
+    <tr>
+        <td>自定义配置用户角色及权限</td>
+    </tr>
+    <tr>
+        <td>支持LDAP认证对接</td>
+    </tr>
+    <tr>
+        <td style="background-color: #7838874d;">单点登录系统对接（X-Pack）</td>
+    </tr>                    
+    <tr>
+        <td style="background-color: #7838874d;">租户配额管理（X-Pack）</td>
+    </tr>                    
+    <tr>
+        <td rowspan="2">项目管理</td>
+        <td>以项目为单位管理各种测试资源</td>
+    </tr>
+    <tr>
+        <td>跨项目的测试用例共享</td>
+    </tr>
+    <tr>
+        <td rowspan="4">测试资源管理</td>
+        <td>测试资源池管理</td>
+    </tr>
+    <tr>
+        <td>独立节点资源池</td>
+    </tr>                                                                 
+    <tr>
+        <td style="background-color: #7838874d;">Kubernetes资源池（X-Pack）</td>
+    </tr>                                                                 
+    <tr>
+        <td>测试资源池支持接口测试、性能测试执行</td>
+    </tr>                                                                 
+    <tr>
+        <td rowspan="4">消息通知配置</td>
+        <td>支持企业微信、钉钉、飞书等多种IM工具</td>
+    </tr>
+    <tr>
+        <td>支持邮件通知配置</td>
+    </tr>
+    <tr>
+        <td>自定义通知事件及通知人</td>
+    </tr>
+    <tr>
+        <td style="background-color: #7838874d;">自定义消息通知模板（X-Pack）</td>
+    </tr>
+    <tr>
+        <td rowspan="3">集成与扩展</td>
+        <td>提供完善的API</td>
+    </tr>
+    <tr>
+        <td>支持对接Jenkins等持续集成工具</td>
+    </tr>
+    <tr>
+        <td>支持对接Jira、TAPD、禅道等平台</td>
+    </tr>
+    <tr>
+        <td rowspan="2">系统设置</td>
+        <td style="background-color: #7838874d;">自定义LOGO与主题配色（X-Pack）</td>
+    </tr>
+    <tr>
+        <td style="background-color: #7838874d;">功能模块启用禁用控制（X-Pack）</td>
+    </tr>                          
+  </tbody>
+</table>
 
 ## 企业版试用
 
-- [申请企业版试用](https://jinshuju.net/f/CzzAOe)
+-   [申请企业版试用](https://jinshuju.net/f/CzzAOe)
 
 ## 参考资料
 
-- [持续测试白皮书 v1.0](https://jinshuju.net/f/KqFUhq)
-- [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202101.pdf)
-- [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
-- [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
+-   [持续测试白皮书 v1.0](https://jinshuju.net/f/KqFUhq)
+-   [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202101.pdf)
+-   [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
+-   [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)

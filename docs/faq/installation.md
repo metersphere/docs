@@ -12,11 +12,12 @@ msctl status
 
 修改 /opt/metersphere/.env 文件中的对应配置后，执行 `msctl reload` 命令重新加载应用。
 
-> 配置文件说明请参考 [修改安装配置(可选)](/installation/online_installation/#_4)
+> 配置文件说明请参考 [修改安装配置(可选)](/installation/offline_installation/#_4)
 
 ## 如何在 Kubernetes 中搭建 MeterSphere？
 
 可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)
+
 
 ## docker-compose 版本与配置文件不兼容，请重新安装最新版本的 docker-compose?
 
@@ -57,4 +58,9 @@ docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersph
 添加max_allowed_packet参数，如下
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
 
+## 关于"Log4j2远程代码执行漏洞"的修复
+
+由于 MeterSphere 使用到的 Kafka 及依赖的 JMeter 会受此漏洞的影响，在 Kafka 及 JMeter 发布解决该漏洞的版本前，用户可以手动在 docker compose 文件 (docker-compose-kafka.yml，docker-compose-node-controller.yml 及 docker-compose-server.yml) 里添加 `FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS: 'true'` 环境变量规避此问题。
+
+具体修改方式请参考该 [GitHub Commit](https://github.com/metersphere/installer/commit/36a60b09117d17735eeadc36af2dc9b5e67a54f7?diff=unified)，修改完成后执行 `msctl reload` 命令重建容器使环境变量生效。
 
