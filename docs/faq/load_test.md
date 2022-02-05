@@ -180,3 +180,9 @@ nginx.novalocal
 在报告列表，同个任务下，已完成状态的报告可以进行对比。
 
 ![! 报告对比](../img/faq/报告对比.png)
+
+## 性能测试并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
+
+高级配置增加超时时间
+
+![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)
