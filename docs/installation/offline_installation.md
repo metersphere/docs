@@ -10,7 +10,7 @@
 请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下
 
 !!! tip ""
-    安装包下载链接: https://github.com/metersphere/metersphere/releases
+    安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
 
 ## 解压安装包
 
@@ -33,51 +33,63 @@ vim install.conf
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
-    # 基础配置
-    ## MeterSphere 安装目录的上级目录, MeterSphere 将安装在 ${base_dir}/metersphere 目录中
+    ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
     MS_BASE=/opt
-    ## MeterSphere 相关组件所使用 Docker 镜像的镜像地址前缀
-    MS_PREFIX=''
-    ## MeterSphere 相关组件所使用 Docker 镜像的镜像标签
-    MS_TAG=dev
-    ## 安装模式, 支持的安装模式有 allinone | server | node-controller 三种
-    MS_MODE=allinone
-    ## MeterSphere Web 服务的监听端口
-    MS_PORT=8081
-    ## Node controller Web 服务的监听端口
+    ## MeterSphere 使用的 docker 网络网段信息
+    MS_DOCKER_SUBNET=172.30.10.0/24
+    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere/
+    MS_IMAGE_PREFIX='registry.cn-qingdao.aliyuncs.com/metersphere/'
+    ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
+    MS_IMAGE_TAG=dev
+    ## 性能测试使用的 JMeter 镜像
+    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.4.1-ms3-jdk8
+    ## 安装模式
+    MS_INSTALL_MODE=allinone
+    ## MeterSphere 主程序的 HTTP 服务监听端口
+    MS_SERVER_PORT=8081
+    ## MeterSphere Node-Controller 组件的 HTTP 服务监听端口
     MS_NODE_CONTROLLER_PORT=8082
+    MS_NODEEXPORTER_PORT=9100
 
     # 数据库配置
-    ## 是否使用外部 MySQL 数据库
+    ## 是否使用外部数据库
     MS_EXTERNAL_MYSQL=false
-    ## MySQL 数据库地址，仅在使用外部数据库时修改
+    ## 数据库地址
     MS_MYSQL_HOST=mysql
-    ## MySQL 数据库端口，仅在使用外部数据库时修改
+    ## 数据库端口
     MS_MYSQL_PORT=3306
-    ## MySQL 数据库库名, 仅在使用外部数据库时修改
+    ## 数据库库名
     MS_MYSQL_DB=metersphere
-    ## MySQL 数据库用户名
+    ## 数据库用户名
     MS_MYSQL_USER=root
-    ## MySQL 数据库密码
+    ## 数据库密码
     MS_MYSQL_PASSWORD=Password123@mysql
 
+    # Prometheus 配置
+    ## 是否使用外部Prometheus
+    MS_EXTERNAL_PROM=false
+    MS_PROMETHEUS_PORT=9090
+
     # Kafka 配置
-    ## 是否使用外部 kafka
+    ## 是否使用外部 Kafka
     MS_EXTERNAL_KAFKA=false
-    ## Kafka 地址, 仅在使用外部 Kafka 时修改
-    MS_KAFKA_HOST=$(hostname -I|cut -d" " -f 1)
-    ## Kafka 端口, 仅在使用外部 Kafka 时修改
-    MS_KAFKA_PORT=19092
-    ## Kafka Topic
+    ## Kafka 地址
+    MS_KAFKA_EXT_HOST=$(hostname -I|cut -d" " -f 1)
+    MS_KAFKA_HOST=kafka
+    ## Kafka 端口
+    MS_KAFKA_EXT_PORT=19092
+    MS_KAFKA_PORT=9092
+    ## 性能测试结果数据使用的 Kafka Topic
     MS_KAFKA_TOPIC=JMETER_METRICS
-    ## Kafka Log Topic
+    ## 性能测试日志数据使用的 Kafka Topic
     MS_KAFKA_LOG_TOPIC=JMETER_LOGS
-    ## Kafka Test Topic
-    MS_KAFKA_TEST_TOPIC=JMETER_TESTS
-    ## Kafka 外部访问地址
-    MS_KAFKA_EXT_HOST=
-    ## Kafka 外部访问端口
-    MS_KAFKA_EXT_PORT=19092  
+    ## 性能测试定时任务通知使用的 Kafka Topic
+    MS_KAFKA_TEST_TOPIC=LOAD_TESTS
+    ## 重构后性能测试结果数据使用的 Kafka Topic
+    MS_KAFKA_REPORT_TOPIC=JMETER_REPORTS
+
+    # TCP MOCK 端口范围
+    MS_TCP_MOCK_PORT=10000-10010
     ```
 
 !!! info "注意"
@@ -101,7 +113,7 @@ vim install.conf
     sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
     skip-name-resolve
     ```
-
+    
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
     ```mysql
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
@@ -144,3 +156,41 @@ msctl status
 密码: metersphere
 ```
 
+!!! warning "注意"
+    如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
+    ```
+    server {
+        listen 80;
+        server_name demo.metersphere.com;
+        server_tokens off;
+        return 301 https://$host$request_uri;
+    }
+    server {
+        listen 443 ssl;
+        # RSA certificate
+        ssl_certificate /etc/nginx/ssl/metersphere.com/fullchain.cer; # managed by Certbot
+        ssl_certificate_key /etc/nginx/ssl/metersphere.com/metersphere.com.key; # managed by Certbot
+        server_name  demo.metersphere.com;
+        proxy_connect_timeout       300;
+        proxy_send_timeout          300;
+        proxy_read_timeout          300;
+        send_timeout                300;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect http:// $scheme://;
+        
+        location / {
+            proxy_pass http://ip:8081;
+            client_max_body_size 1000m;
+            #access_log off;
+            
+            # 配置 websocket 支持
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+    }
+    ```
