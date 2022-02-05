@@ -39,11 +39,11 @@ msctl uninstall -v
 
 卸载不会影响数据
 
-## 升级报 /usr/local/bin/msctl: line 115 ....
+## 升级报 `/usr/local/bin/msctl: line 115 ....`
 
 cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相关处理
 
-## 升级报 Schema `metersphere` contains a faied migration to version 86 !
+## 升级报 `Schema `metersphere` contains a faied migration to version 86 !`
 
 到github源码上 https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration
 查看对应version的flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后 重新执行下，然后修改metersphere_version
@@ -51,12 +51,16 @@ cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相�
 
 ## 如何备份数据库
 
+```
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
+```
 
-## mysqldump: Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94
+## mysqldump: `Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94`
 
+```
 添加max_allowed_packet参数，如下
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
+```
 
 ## 关于"Log4j2远程代码执行漏洞"的修复
 
@@ -87,5 +91,7 @@ chmod 644 /opt/metersphere/conf/my.cnf
 
 ## 设置数据库忽略大小未生效，lower_case_table_names=1
 
+```
 chmod /opt/metersphere/conf/my.cnf 
 然后重启数据库 docker restart mysql
+```
