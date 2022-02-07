@@ -2,18 +2,13 @@
 
 欢迎使用 MeterSphere。
 
-MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口测试、性能测试、团队协作等功能，兼容JMeter 等开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量软件的交付。
+MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口测试、性能测试、团队协作等功能，兼容 JMeter 等开源标准，有效助力开发和测试团队充分利用云弹性进行高度可扩展的自动化测试，加速高质量软件的交付。
 
-![!产品定位](./img/产品定位.png)
+![!产品定位](https://metersphere.oss-cn-hangzhou.aliyuncs.com/img/ms-architecture.png)
 
 ## 界面展示
 
-![!界面展示](https://metersphere.oss-cn-hangzhou.aliyuncs.com/img/UIdemo.gif)
-
-!!! info "快速体验 MeterSphere"
-
--   [演示视频](https://www.bilibili.com/video/BV1yp4y1p72C/)
--   [在线体验](https://jinshuju.net/f/WuI6IO)
+![!界面展示](img/api/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E9%A6%96%E9%A1%B5.png)
 
 ## 产品优势
 
@@ -22,8 +17,6 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
 -   **持续测试**：能将测试融入持续交付和 DevOps 体系；无缝对接 Bug 管理工具和持续集成工具等；支持团队协作和资产沉淀。
 
 ## 主要功能
-
-<!-- 添加截图 -->
 
 -   **测试跟踪**: 远超 TestLink 的使用体验，覆盖从编写用例到生成测试报告的完整流程；
 -   **接口测试**: 集 Postman 的易用与 JMeter 的灵活于一体，接口管理、多协议支持、场景自动化，你想要的全都有；
@@ -336,13 +329,9 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
   </tbody>
 </table>
 
-## 企业版试用
-
--   [申请企业版试用](https://jinshuju.net/f/CzzAOe)
-
-## 参考资料
+## 了解更多
 
 -   [持续测试白皮书 v1.0](https://jinshuju.net/f/KqFUhq)
--   [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202101.pdf)
+-   [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202112.pdf)
 -   [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
 -   [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
