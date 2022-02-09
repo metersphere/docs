@@ -260,7 +260,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
         <td>测试报告导出</td>
     </tr>
     <tr>
-        <td rowspan="20">系统管理</td>
+        <td rowspan="22">系统管理</td>
         <td rowspan="5">用户管理</td>
     </tr>
     <tr>
