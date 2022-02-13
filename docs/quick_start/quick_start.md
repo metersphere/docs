@@ -76,5 +76,4 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
 
 ### 界面说明
 
-![!界面说明](../img/layout.png)
-
+![界面说明](../img/界面展示.png)
