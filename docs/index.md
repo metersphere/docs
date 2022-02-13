@@ -386,11 +386,11 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
         <td>版本管理（X-Pack）</td>
         <td>创建版本及启用配置</td>
     </tr>
-     <tr style="background-color: #7838874d;">
-        <td rowspan="2">应用管理（X-Pack）</td>
+     <tr>
+        <td rowspan="2">应用管理</td>
         <td>设置测试跟踪、接口测试、性能测试报告的保留时长</td>
     </tr>
-    <tr style="background-color: #7838874d;">
+    <tr>
         <td>测试用例公共用例库、测试用例自定义ID、TCP Mock 端口范围等一些基础配置参数的启用、关闭配置</td>
     </tr>
     <tr>
