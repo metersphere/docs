@@ -20,23 +20,25 @@
             <td>三级功能</td>
             <td>具体用例</td>
             <td>系统管理员</td>
-            <td>组织管理员</td>
             <td>工作空间管理员</td>
-            <td>工作空间用户</td>
-            <td>工作空间只读用户</td>
-            <td colspan="1">无角色用户</td>
+            <td>工作空间成员</td>
+            <td>项目管理员</td>
+            <td>项目成员</td>
+            <td>只读用户</td>
+            <td>自定义角色</td>
         </tr>
         <tr>
             <td rowspan="43">系统管理</td>
-            <td rowspan="26">系统</td>
-            <td rowspan="5">用户管理</td>
+            <td rowspan="24">系统</td>
+            <td rowspan="6">用户管理</td>
             <td>列出系统中的所有用户</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>指定用户&nbsp;ID、用户名、邮箱、电话、密码等信息创建新用户</td>
@@ -45,7 +47,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>修改指定用户的用户名、邮箱、电话、密码等信息</td>
@@ -54,7 +57,18 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>添加、修改指定用户的角色</td>
+            <td>Y</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>删除指定用户</td>
@@ -63,7 +77,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>启用、禁用指定用户，用户禁用后无法登录系统</td>
@@ -72,81 +87,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td rowspan="4">组织管理</td>
-            <td>列出系统中的所有组织</td>
-            <td>Y</td>
             <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>指定组织名称、描述等信息创建新组织</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>修改指定组织的名称、描述等信息</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>删除指定组织</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td rowspan="4">组织成员管理</td>
-            <td>列出该组织中的所有成员及其角色信息</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>选择系统中已有用户并指定组织级角色添加至组织成员</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>修改指定成员在该组织中的角色</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>从组织中删除指定成员（去除角色信息）</td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td rowspan="4">工作空间管理</td>
@@ -156,7 +98,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>指定工作空间名称、描述及所属组织等信息创建新工作空间</td>
@@ -165,7 +108,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>修改指定工作空间的名称、描述及所属组织等信息</td>
@@ -174,7 +118,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>删除指定工作空间</td>
@@ -183,63 +128,80 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td rowspan="4">工作空间成员管理</td>
-            <td>列出该工作空间中的所有成员及其角色信息</td>
+            <td rowspan="5">用户组与权限管理</td>
+            <td>列出系统所有角色信息</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>选择系统中已有用户并指定工作空间级角色添加至工作空间成员</td>
+            <td>创建、修改用户组基本信息</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>修改指定成员在该工作空间中的角色</td>
+            <td>修改用户组权限</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>从工作空间中删除指定成员（去除角色信息）</td>
+            <td>给用户组添加、删除成员</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td rowspan="4">测试资源池管理</td>
+            <td>删除用户组</td>
+            <td>Y</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td rowspan="6">测试资源池管理</td>
             <td>列出系统中的所有测试资源池</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>指定测试资源池名称、具体配置等信息创建新测试资源池</td>
+            <td>设置测试资源池名称、具体配置等信息创建新测试资源池</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>修改指定测试资源池的名称、具体等信息</td>
@@ -248,7 +210,8 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+           <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>删除指定测试资源池</td>
@@ -257,129 +220,59 @@
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>系统设置</td>
-            <td>配置&nbsp;SMTP&nbsp;信息</td>
+            <td>启用、禁用指定测试资源池</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td rowspan="12">组织</td>
-            <td rowspan="4">组织成员管理</td>
-            <td>列出该组织中的所有成员及其角色信息</td>
-            <td><br></td>
+            <td>给指定资源池添加、删除压力节点</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>选择系统中已有用户并指定组织级角色添加至组织成员</td>
-            <td><br></td>
+            <td rowspan="3">系统设置</td>
+            <td>基本信息配置</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>修改指定成员在该组织中的角色</td>
-            <td><br></td>
+            <td>邮件设置</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
-            <td>从组织中删除指定成员（去除角色信息）</td>
-            <td><br></td>
+            <td>LDAP设置</td>
             <td>Y</td>
             <td><br></td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td rowspan="4">组织下工作空间管理</td>
-            <td>列出系统中的所有工作空间</td>
-            <td><br></td>
-            <td>Y</td>
             <td><br></td>
             <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>指定工作空间名称、描述及所属组织等信息创建新工作空间</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>修改指定工作空间的名称、描述及所属组织等信息</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>删除指定工作空间</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td rowspan="4">组织下工作空间成员管理</td>
-            <td>列出该工作空间中的所有成员及其角色信息</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>选择系统中已有用户并指定工作空间级角色添加至工作空间成员</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>修改指定成员在该工作空间中的角色</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
-        </tr>
-        <tr>
-            <td>从工作空间中删除指定成员（去除角色信息）</td>
-            <td><br></td>
-            <td>Y</td>
-            <td><br></td>
-            <td><br></td>
-            <td><br></td>
-            <td colspan="1"><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td rowspan="4">工作空间</td>
@@ -390,7 +283,8 @@
             <td>Y</td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>选择系统中已有用户并指定工作空间级角色添加至工作空间成员</td>
@@ -399,7 +293,8 @@
             <td>Y</td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>修改指定成员在该工作空间中的角色</td>
@@ -408,7 +303,8 @@
             <td>Y</td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
         <tr>
             <td>从工作空间中删除指定成员（去除角色信息）</td>
@@ -417,18 +313,30 @@
             <td>Y</td>
             <td><br></td>
             <td><br></td>
-            <td colspan="1"><br></td>
+            <td><br></td>
+            <td>*</td>
         </tr>
+        <td rowspan="4">服务集成</td>
+            <td>配置Tapd、Jira、禅道等服务集成信息</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td>*</td>
         <tr>
             <td>个人信息</td>
             <td>个人设置</td>
             <td>修改自己的用户名、邮箱、电话、密码等信息</td>
-            <td><br></td>
-            <td><br></td>
             <td>Y</td>
             <td>Y</td>
             <td>Y</td>
-            <td colspan="1">Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>*</td>
         </tr>
         <tr>
             <td rowspan="23">测试跟踪</td>
