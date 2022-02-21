@@ -88,7 +88,7 @@ nav:
           - 系统设置:
                 - 模块说明: user_manual/system_management/intro.md
                 - 系统管理: user_manual/system_management/system.md
-                - 组织管理: user_manual/system_management/organization.md
+                # - 组织管理: user_manual/system_management/organization.md
                 - 工作空间管理: user_manual/system_management/workspace.md
                 - 项目管理: user_manual/system_management/project.md
                 - 个人信息管理: user_manual/system_management/personal.md      

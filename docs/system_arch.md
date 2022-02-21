@@ -33,9 +33,10 @@ MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在
 - **自定义角色**: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。
 
 不同的角色对应的具体权限，请到 `系统设置->用户组与权限->设置权限` 查看和设置。
-![!查看权限](../../img/system_management/查看权限.png)
+![!查看权限](./img/system_management/查看权限.png)
 
-![!查看权限](../../img/system_management/查看权限2.png)    
+![!查看权限](./img/system_management/查看权限2.png) 
+
 ## 技术栈
 
 - 后端: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
