@@ -74,7 +74,9 @@ nav:
                 - 模块说明: user_manual/load_test/intro.md
                 - 首页: user_manual/load_test/home.md
                 - 性能测试: user_manual/load_test/load_test.md
-                - 性能测试报告中心: user_manual/load_test/test_report.md
+                - 性能测试报告: user_manual/load_test/test_report.md
+          - 报表统计:
+                - 项目报表: user_manual/report_statistics/project_statistics.md
           - 项目设置:
                 - 项目信息: user_manual/project_management/project_info.md
                 - 项目成员: user_manual/project_management/project_user.md
@@ -85,11 +87,9 @@ nav:
                 - 操作日志: user_manual/project_management/operation_log.md
                 - 应用管理: user_manual/project_management/application_management.md
           - 系统设置:
-                - 模块说明: user_manual/system_management/intro.md
-                - 系统管理: user_manual/system_management/system.md
-                - 工作空间管理: user_manual/system_management/workspace.md
-                - 项目管理: user_manual/system_management/project.md
-                - 个人信息管理: user_manual/system_management/personal.md      
+              - 模块说明: user_manual/system_management/intro.md
+              - 系统: user_manual/system_management/system.md
+              - 工作空间: user_manual/system_management/workspace.md
     - 使用教程:
           - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
           - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
