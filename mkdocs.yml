@@ -54,18 +54,10 @@ nav:
           - 离线升级: installation/offline_upgrade.md
     - 用户手册:
           - 通用功能: user_manual/general.md
-
-          - 系统设置(1.14及以上):
-                - 模块说明: user_manual/system_management1/intro.md
-                - 系统: user_manual/system_management1/system.md
-                - 工作空间: user_manual/system_management1/workspace.md
-          - 系统设置(1.14以下）:
+          - 系统设置:
                 - 模块说明: user_manual/system_management/intro.md
-                - 系统管理: user_manual/system_management/system.md
-                - 组织管理: user_manual/system_management/organization.md
-                - 工作空间管理: user_manual/system_management/workspace.md
-                - 项目管理: user_manual/system_management/project.md
-                - 个人信息管理: user_manual/system_management/personal.md
+                - 系统: user_manual/system_management/system.md
+                - 工作空间: user_manual/system_management/workspace.md
           - 测试跟踪:
                 - 模块说明: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
@@ -88,10 +80,9 @@ nav:
                 - 模块说明: user_manual/load_test/intro.md
                 - 首页: user_manual/load_test/home.md
                 - 性能测试: user_manual/load_test/load_test.md
-                - 性能测试报告中心: user_manual/load_test/test_report.md
+                - 性能测试报告: user_manual/load_test/test_report.md
           - 报表统计:
                 - 项目报表: user_manual/report_statistics/project_statistics.md
-                - 项目报告: user_manual/report_statistics/project_report.md
 
     - 使用教程:
           - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
