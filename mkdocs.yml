@@ -80,13 +80,13 @@ nav:
           - 项目设置:
                 - 项目信息: user_manual/project_management/project_info.md
                 - 项目成员: user_manual/project_management/project_user.md
-                - 用户组与权限: user_manual/project_management/usergroup_permission.md
+                - 用户组与权限: user_manual/prosject_management/usergroup_permission.md
                 - 项目环境: user_manual/project_management/project_environment.md
                 - 文件管理: user_manual/project_management/file_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
                 - 操作日志: user_manual/project_management/operation_log.md
                 - 应用管理: user_manual/project_management/application_management.md
-          - 系统设置:   
+          - 系统设置:
               - 模块说明: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
               - 工作空间: user_manual/system_management/workspace.md
