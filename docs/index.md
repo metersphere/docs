@@ -304,7 +304,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
     </tr>
     <tr>
         <td rowspan="18">性能测试</td>
-        <td rowspan="8">测试管理</td>
+        <td rowspan="9">测试管理</td>
         <td>支持上传JMX、CSV、JAR格式文件创建性能测试</td>
     </tr>
     <tr>
@@ -329,7 +329,10 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
         <td>支持查看测试任务变更历史</td>
     </tr>
     <tr>
-        <td rowspan="6">测试执行</td>
+        <td style="background-color: #7838874d;">性能测试版本管理（X-Pack）</td>
+    </tr>  
+    <tr>
+        <td rowspan="5">测试执行</td>
         <td>指定测试资源池分布式执行</td>
     </tr>
     <tr>
@@ -343,10 +346,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
     </tr>  
     <tr>
         <td style="background-color: #7838874d;"><p class="title-p">性能测试支持两种配置，默认配置可以支持10万级别的TPS，百万级的性能测试 需要 X-Pack（X-Pack）</p></td>
-    </tr>  
-    <tr>
-        <td style="background-color: #7838874d;">性能测试版本管理（X-Pack）</td>
-    </tr>  
+    </tr>
     <tr>
         <td rowspan="4">测试报告</td>
         <td>测试报告数据实时刷新</td>

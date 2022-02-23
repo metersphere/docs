@@ -80,7 +80,7 @@ nav:
           - 项目设置:
                 - 项目信息: user_manual/project_management/project_info.md
                 - 项目成员: user_manual/project_management/project_user.md
-                - 用户组与权限: user_manual/prosject_management/usergroup_permission.md
+                - 用户组与权限: user_manual/project_management/usergroup_permission.md
                 - 项目环境: user_manual/project_management/project_environment.md
                 - 文件管理: user_manual/project_management/file_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
