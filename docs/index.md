@@ -367,7 +367,7 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
     </tr>
     <tr>
         <td style="background-color: #7838874d;">项目报告（X-Pack）</td>
-        <td style="background-color: #7838874d;">增加项目报告，支持手动及定时发送</td>
+        <td style="background-color: #7838874d;">增加项目报告，支持自定义设置报告内容，支持手动及定时发送</td>
     </tr>
     <tr>
         <td rowspan="6">项目设置</td>
