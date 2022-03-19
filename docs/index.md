@@ -571,6 +571,13 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
   </tbody>
 </table>
 
+## 精品课程
+
+-   [玩转 MeterSphere 开源持续测试平台系列教程之测试跟踪](https://live.vhall.com/v3/lives/subscribe/107566953)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之接口测试](https://live.vhall.com/v3/lives/subscribe/657846498)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之性能测试](https://live.vhall.com/v3/lives/subscribe/703013378)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之企业版 X-Pack 增强功能](https://live.vhall.com/v3/lives/subscribe/419824723)
+
 ## 了解更多
 
 -   [持续测试白皮书 v1.0](https://jinshuju.net/f/KqFUhq)
