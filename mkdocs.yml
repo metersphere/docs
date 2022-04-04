@@ -84,6 +84,8 @@ nav:
                 - 项目环境: user_manual/project_management/project_environment.md
                 - 文件管理: user_manual/project_management/file_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
+                - 模版管理: user_manual/project_management/template_management.md
+                - 消息设置: user_manual/project_management/notice_management.md
                 - 操作日志: user_manual/project_management/operation_log.md
                 - 应用管理: user_manual/project_management/application_management.md
           - 系统设置:

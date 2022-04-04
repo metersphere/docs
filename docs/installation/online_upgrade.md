@@ -1,6 +1,5 @@
 
 如果您的服务器可以访问互联网, 可以通过以下命令直接升级 metersphere 至最新版本
-
 ## 方式一
 ```sh
 # 升级至最新版本
@@ -9,6 +8,13 @@ msctl upgrade
 msctl status
 ```
 ## 方式二
+```sh
+# 升级至指定版本
+msctl upgrade v1.x.y
+# 查看 MeterSphere 状态
+msctl status
+```
+## 方式三
 ```sh
 # 到github release 下载在线安装包
 例如：wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.x.y.tar.gz
