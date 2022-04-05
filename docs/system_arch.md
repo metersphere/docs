@@ -1,20 +1,23 @@
 ## 整体架构
 
-![整体架构](./img/system-arch.png)
+![整体架构](./img/system-arch-1.png)
 
 ### 组件说明
 
 - **[Frontend](https://github.com/metersphere/metersphere)**: MeterSphere 的前端工程, 基于 Vue.js 进行开发
 - **[Backend](https://github.com/metersphere/metersphere)**: MeterSphere 的后端工程, 基于 Spring Boot 进行开发, 为 MeterSphere 的功能主体
 - **[Chrome plugin](https://github.com/metersphere/chrome-extensions)**: 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及能测试
+- **[Jenkins plugin](https://github.com/metersphere/jenkins-plugin)**: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。
 - **[Node controller](https://github.com/metersphere/node-controller)**: 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter容器完成性能测试
 - **MySQL**: MeterSphere 项目的主要数据均存储在 MySQL
-- **Kafka**: 接收 JMeter 产生的性能测试结果数据
-- **[Data streaming](https://github.com/metersphere/data-streaming)**: 从 Kafka 中获取性能测试结果数据进行处理后存入 MySQL 数据库
+- **Redis**: MeterSphere 项目登录用户的session存储在 Redis
+- **Kafka**: 接收 JMeter 产生的接口测试或者性能测试的结果数据
+- **Prometheus**: 收集压力机及被测系统的监控数据
+- **[Data streaming](https://github.com/metersphere/data-streaming)**: 从 Kafka 中获取接口测试或者性能测试结果数据进行处理后存入 MySQL 数据库
 - **Docker engine**: 为 Node Controller 提供 JMeter 容器运行环境
 
 各个组件间的关系可参考下图
-![组件说明](./img/components.png)
+![组件说明](./img/components-1.png)
 
 ## 管理模型
 
@@ -41,6 +44,6 @@ MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在
 
 - 后端: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
 - 前端: [Vue.js](https://vuejs.org/)
-- 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/)
+- 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/), [Redis](https://redis.io/), [Prometheus](https://prometheus.io/)
 - 基础设施: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
 - 测试引擎: [JMeter](https://jmeter.apache.org/)
