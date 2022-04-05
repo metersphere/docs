@@ -1,17 +1,35 @@
-## 仅需两步快速安装 MeterSphere
+## 环境要求
 
-1. 准备一台不小于 8 G 内存且可以访问互联网的 64 位 Linux 主机；
-2. 以 root 用户执行如下命令一键安装 MeterSphere。
+!!! info "部署服务器要求"
+    * 操作系统: CentOS 7.x
+    * CPU/内存: 4核8G
+    * 磁盘空间: 50G
+    * 可访问互联网
 
+### 方式一
+在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere：
 ```
 curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
 ```
+
+### 方式二
+GitHub release 链接: https://github.com/metersphere/metersphere/releases
+```sh
+# 到github release 下载在线安装包
+wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.x.y.tar.gz
+# 解压在线安装包
+tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
+# 执行install.sh安装脚本
+cd metersphere-online-installer-v1.x.y
+/bin/bash install.sh
+```
+
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
-    MS_BASE=/opt
+    MS_BASE=/opts
     ## MeterSphere 使用的 docker 网络网段信息
     MS_DOCKER_SUBNET=172.30.10.0/24
     ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere/
