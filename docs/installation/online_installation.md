@@ -132,17 +132,6 @@ cd metersphere-online-installer-v1.x.y
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ```
 
-## 执行安装脚本
-
-```sh
-# 进入安装包目录
-cd metersphere-release-v1.0.3
-# 运行安装脚本
-/bin/bash install.sh
-# 等待安装脚本执行完成后，查看 MeterSphere 状态
-msctl status
-```
-
 安装成功后，通过浏览器访问如下页面登录 MeterSphere
 
 ```
