@@ -6,30 +6,71 @@
     * 磁盘空间: 50G
     * 可访问互联网
 
-### 方式一
+## 一键安装（采用默认安装参数）
+
 在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere：
 ```
 curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
 ```
 
-### 方式二
-GitHub release 链接: https://github.com/metersphere/metersphere/releases
+安装成功后，通过浏览器访问如下页面登录 MeterSphere
+
+```
+地址: http://目标服务器IP地址:8081
+用户名: admin
+密码: metersphere
+```
+
+安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录
+
+!!! info "安装目录目录结构说明"
+    ```
+    /opt/metersphere/
+    ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
+    ├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
+    ├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
+    ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
+    ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
+    ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
+    ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
+    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker 文件
+    ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose 文件
+    ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
+    └── version                                     #-- 安装包对应的 MeterSphere 版本信息
+    ```
+
+## 手动安装（可配置安装参数）
+
+到 GitHub release 页面下载在线安装包，链接为: https://github.com/metersphere/metersphere/releases
+
 ```sh
-# 到github release 下载在线安装包
+# 下载在线安装包
 wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.x.y.tar.gz
 # 解压在线安装包
 tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
-# 执行install.sh安装脚本
+
 cd metersphere-online-installer-v1.x.y
+
+# 配置安装参数，参数说见下文
+# vi install.conf
+
+# 执行install.sh安装脚本
 /bin/bash install.sh
 ```
 
+安装成功后，通过浏览器访问如下页面登录 MeterSphere：
+
+```
+地址: http://目标服务器IP地址:8081
+用户名: admin
+密码: metersphere
+```
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
-    MS_BASE=/opts
+    MS_BASE=/opt
     ## MeterSphere 使用的 docker 网络网段信息
     MS_DOCKER_SUBNET=172.30.10.0/24
     ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere/
@@ -113,32 +154,6 @@ cd metersphere-online-installer-v1.x.y
     ```mysql
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
-
-安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录
-
-!!! info "安装目录目录结构说明"
-    ```
-    /opt/metersphere/
-    ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
-    ├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
-    ├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
-    ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
-    ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
-    ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
-    ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
-    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker 文件
-    ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose 文件
-    ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
-    └── version                                     #-- 安装包对应的 MeterSphere 版本信息
-    ```
-
-安装成功后，通过浏览器访问如下页面登录 MeterSphere
-
-```
-地址: http://目标服务器IP地址:8081
-用户名: admin
-密码: metersphere
-```
 
 ## 配置反向代理
 
