@@ -33,16 +33,17 @@ vim install.conf
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
+    # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
     MS_BASE=/opt
     ## MeterSphere 使用的 docker 网络网段信息
     MS_DOCKER_SUBNET=172.30.10.0/24
-    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere/
-    MS_IMAGE_PREFIX='registry.cn-qingdao.aliyuncs.com/metersphere/'
+    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere
+    MS_IMAGE_PREFIX=registry.cn-qingdao.aliyuncs.com/metersphere
     ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
-    MS_IMAGE_TAG=dev
+    MS_IMAGE_TAG=v1.19.1
     ## 性能测试使用的 JMeter 镜像
-    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.4.1-ms3-jdk8
+    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.4.3-ms4-jdk8
     ## 安装模式
     MS_INSTALL_MODE=allinone
     ## MeterSphere 主程序的 HTTP 服务监听端口
@@ -70,14 +71,22 @@ vim install.conf
     MS_EXTERNAL_PROM=false
     MS_PROMETHEUS_PORT=9090
 
+    # Redis 配置
+    ## 是否使用外部Redis
+    MS_EXTERNAL_REDIS=false
+    ## Redis 端口
+    MS_REDIS_PORT=6379
+    ## Redis 密码
+    MS_REDIS_PASSWORD=Password123@redis
+    ## Redis地址
+    MS_REDIS_HOST=$(hostname -I|cut -d" " -f 1)
+
     # Kafka 配置
     ## 是否使用外部 Kafka
     MS_EXTERNAL_KAFKA=false
     ## Kafka 地址
-    MS_KAFKA_EXT_HOST=$(hostname -I|cut -d" " -f 1)
-    MS_KAFKA_HOST=kafka
+    MS_KAFKA_HOST=10.1.*.*
     ## Kafka 端口
-    MS_KAFKA_EXT_PORT=19092
     MS_KAFKA_PORT=9092
     ## 性能测试结果数据使用的 Kafka Topic
     MS_KAFKA_TOPIC=JMETER_METRICS
@@ -90,6 +99,10 @@ vim install.conf
 
     # TCP MOCK 端口范围
     MS_TCP_MOCK_PORT=10000-10010
+
+    # Chrome 容器配置
+    ## 是否启动Chrome容器
+    MS_CHROME_ENABLED=false
     ```
 
 !!! info "注意"
@@ -110,6 +123,12 @@ vim install.conf
     innodb_lock_wait_timeout=1800
     innodb_flush_log_at_trx_commit=0
     sync_binlog=0
+
+    server-id=1
+    log-bin=mysql-bin
+    expire_logs_days = 2
+    binlog_format=mixed
+    
     sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
     skip-name-resolve
     ```
