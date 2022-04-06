@@ -33,8 +33,11 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
     ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
     ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
     ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
-    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker 文件
-    ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose 文件
+    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
+    ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose文件
+    ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
+    ├── docker-compose-prometheus.yml               #-- MeterSphere Server 及 Prometheus 所需的Docker Compose 文件
+    ├── install.conf -> /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
     ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ```
@@ -73,12 +76,12 @@ cd metersphere-online-installer-v1.x.y
     MS_BASE=/opt
     ## MeterSphere 使用的 docker 网络网段信息
     MS_DOCKER_SUBNET=172.30.10.0/24
-    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere/
-    MS_IMAGE_PREFIX='registry.cn-qingdao.aliyuncs.com/metersphere/'
+    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere
+    MS_IMAGE_PREFIX=registry.cn-qingdao.aliyuncs.com/metersphere
     ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
-    MS_IMAGE_TAG=dev
+    MS_IMAGE_TAG=v1.19.1
     ## 性能测试使用的 JMeter 镜像
-    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.4.1-ms3-jdk8
+    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.4.3-ms4-jdk8
     ## 安装模式
     MS_INSTALL_MODE=allinone
     ## MeterSphere 主程序的 HTTP 服务监听端口
@@ -106,14 +109,22 @@ cd metersphere-online-installer-v1.x.y
     MS_EXTERNAL_PROM=false
     MS_PROMETHEUS_PORT=9090
 
+    # Redis 配置
+    ## 是否使用外部Redis
+    MS_EXTERNAL_REDIS=false
+    ## Redis 端口
+    MS_REDIS_PORT=6379
+    ## Redis 密码
+    MS_REDIS_PASSWORD=Password123@redis
+    ## Redis地址
+    MS_REDIS_HOST=$(hostname -I|cut -d" " -f 1)
+
     # Kafka 配置
     ## 是否使用外部 Kafka
     MS_EXTERNAL_KAFKA=false
     ## Kafka 地址
-    MS_KAFKA_EXT_HOST=$(hostname -I|cut -d" " -f 1)
-    MS_KAFKA_HOST=kafka
+    MS_KAFKA_HOST=10.1.*.*
     ## Kafka 端口
-    MS_KAFKA_EXT_PORT=19092
     MS_KAFKA_PORT=9092
     ## 性能测试结果数据使用的 Kafka Topic
     MS_KAFKA_TOPIC=JMETER_METRICS
@@ -126,6 +137,10 @@ cd metersphere-online-installer-v1.x.y
 
     # TCP MOCK 端口范围
     MS_TCP_MOCK_PORT=10000-10010
+
+    # Chrome 容器配置
+    ## 是否启动Chrome容器
+    MS_CHROME_ENABLED=false
     ```
 
 !!! info "注意"
@@ -146,6 +161,12 @@ cd metersphere-online-installer-v1.x.y
     innodb_lock_wait_timeout=1800
     innodb_flush_log_at_trx_commit=0
     sync_binlog=0
+
+    server-id=1
+    log-bin=mysql-bin
+    expire_logs_days = 2
+    binlog_format=mixed
+
     sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
     skip-name-resolve
     ```
