@@ -54,7 +54,7 @@ tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
 
 cd metersphere-online-installer-v1.x.y
 
-# 配置安装参数，参数说见下文
+# 配置安装参数，参数说明见下文
 # vi install.conf
 
 # 执行install.sh安装脚本
