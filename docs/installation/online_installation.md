@@ -36,7 +36,7 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
     ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
     ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose文件
     ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
-    ├── docker-compose-prometheus.yml               #-- MeterSphere Server 及 Prometheus 所需的Docker Compose 文件
+    ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
     ├── install.conf -> /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
     ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
