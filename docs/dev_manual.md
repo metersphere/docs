@@ -3,24 +3,29 @@
 ```
 .
 ├── Dockerfile                                      # 构建容器镜像使用的 dockerfile
+├── Jenkinsfile                                     # 构建JAR包使用的 jenkinsfile
 ├── LICENSE
+├── OWNERS
 ├── README.md
-├── ROADMAP.md
+├── README-EN.md
+├── SECURITY.md                                     # 安全说明
+├── CODE_OF_CONDUCT.md                        
+├── CONTRIBUTING.md               
 ├── backend                                         # 后端项目主目录
-│   ├── backend.iml
+│   ├── src                                         # 后端代码目录
 │   ├── pom.xml                                     # 后端 maven 项目使用的 pom 文件
-│   └── src                                         # 后端代码目录
+│   └── .gitignore                                  
 ├── frontend                                        # 前端项目主目录
-│   ├── babel.config.js
-│   ├── frontend.iml
-│   ├── node
-│   ├── node_modules
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── pom.xml                                     # 前端 maven 项目使用的 pom 文件
 │   ├── public
-│   └── src                                         # 前端代码目录
-├── metersphere-server.iml
+│   ├── src                                         # 前端代码目录
+│   ├── .editorconfig
+│   ├── .gitignore
+│   ├── babel.config.js
+│   ├── package.json
+│   ├── vue.config.js                               # 前端 maven 项目使用的 pom 文件
+│   └── 代码规范.MD
+├── .gitignore
+├── .gitmodules
 └── pom.xml                                         # 整体 maven 项目使用的 pom 文件
 ```
 
@@ -51,6 +56,12 @@ innodb_flush_method=O_DIRECT
 innodb_lock_wait_timeout=1800
 innodb_flush_log_at_trx_commit=0
 sync_binlog=0
+
+server-id=1
+log-bin=mysql-bin
+expire_logs_days = 2
+binlog_format=mixed
+
 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
 skip-name-resolve
 ```
@@ -82,7 +93,7 @@ kafka.report.topic=JMETER_REPORT
 jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
 
 # TCP Mock 端口范围
-tcp.mock.port=10000
+tcp.mock.port=10000-10010
 
 # 启动模式，lcoal 表示以本地开发模式启动
 run.mode=local
