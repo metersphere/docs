@@ -4,7 +4,7 @@ MeterSphere 默认内置了命令行运维工具 - msctl，通过执行 msctl he
 ## msctl
 
 !!! Abstract "" 
-    MeterSphere 默认内置了命令行运维工具 - dectl，通过执行 msctl help 命令，可以查看相关的帮助文档。
+    MeterSphere 默认内置了命令行运维工具 - msctl，通过执行 msctl help 命令，可以查看相关的帮助文档。
 
 ```
 MeterSphere 控制脚本
