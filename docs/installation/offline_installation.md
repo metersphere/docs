@@ -178,6 +178,7 @@ msctl status
 密码: metersphere
 ```
 
+## 配置反向代理
 !!! warning "注意"
     如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
     ```
