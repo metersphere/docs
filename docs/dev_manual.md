@@ -95,6 +95,11 @@ jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
 # TCP Mock 端口范围
 tcp.mock.port=10000-10010
 
+# Redis 配置
+spring.redis.host={REDIS_IP}
+spring.redis.port=6379
+spring.redis.password=Password123@redis
+
 # 启动模式，lcoal 表示以本地开发模式启动
 run.mode=local
 ```
