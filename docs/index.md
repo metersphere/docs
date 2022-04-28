@@ -305,7 +305,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>测试报告导出</td>
     </tr>
 	<tr style="background-color: #7838874d;">
-        <td rowspan="5">UI 测试</td>
+        <td rowspan="5">UI 测试（X-Pack）</td>
         <td >元素库</td>
 		<td >元素库模块方便管理元素</td>
     </tr>
