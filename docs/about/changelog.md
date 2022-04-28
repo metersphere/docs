@@ -8,7 +8,9 @@ MeterSphere 版本号命名规则为：v大版本.功能版本.Bug修复版本
     v1.0.1 是 v1.0.0 之后的Bug修复版本
     v1.1.0 是 v1.0.0 之后的功能版本
 
-像其它优秀开源项目一样，MeterSphere 将每月发布一个功能版本
+像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。
+
+MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。
 
 ## v1.19.3
 
