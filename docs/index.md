@@ -303,6 +303,25 @@ MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口�
     <tr>
         <td>测试报告导出</td>
     </tr>
+	<tr style="background-color: #7838874d;">
+        <td rowspan="5">UI 测试</td>
+        <td >元素库</td>
+		<td >元素库模块方便管理元素</td>
+    </tr>
+    <tr style="background-color: #7838874d;">
+        <td rowspan="3">UI自动化</td>
+        <td>支持导入SeleniumIDE录制的side脚本文件</td>
+    </tr>
+    <tr style="background-color: #7838874d;">
+        <td>支持在线添加并编辑UI自动化场景</td>
+    </tr>
+	<tr style="background-color: #7838874d;">
+        <td>支持浏览器，弹窗，元素，鼠标，输入框等多种操作模式</td>
+    </tr>
+    <tr style="background-color: #7838874d;">
+        <td >测试报告</td>
+		<td >支持查看UI自动化报告详情</td>
+    </tr>
     <tr>
         <td rowspan="18">性能测试</td>
         <td rowspan="9">测试管理</td>
