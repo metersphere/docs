@@ -606,3 +606,4 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
 -   [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
 -   [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
 -   [MeterSphere 知识库](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
+-   [JMeter 资源合集](../awesome-jmeter/)

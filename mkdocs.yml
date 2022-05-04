@@ -121,7 +121,6 @@ nav:
           - 360借助MeterSphere提升自动化测试水平: case_studies/360b.md
     - 更新日志: about/changelog.md
     - 联系我们: about/contact.md
-    - JMeter 资源合集: awesome-jmeter.md
     - 企业版试用: enterprise.md
 
 markdown_extensions:
