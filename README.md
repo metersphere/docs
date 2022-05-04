@@ -95,7 +95,7 @@ nav:
           - 九里云基于MeterSphere落地一站式自动化测试平台: case_studies/jiuliyun.md
           - 民生科技基于MeterSphere平台实现测试用例复用: case_studies/mskj.md
           - 360借助MeterSphere提升自动化测试水平: case_studies/360b.md
-    - 更新说明: about/changelog.md
+    - 更新日志: about/changelog.md
     - 联系我们: about/contact.md
     - JMeter 资源合集: awesome-jmeter.md
     - 企业版试用: enterprise.md
