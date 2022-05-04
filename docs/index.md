@@ -605,3 +605,4 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
 -   [如何构建持续测试平台？](https://metersphere.io/download/how_to_build_a_continous_platform-202112.pdf)
 -   [揭秘MeterSphere一站式开源持续测试平台](https://live.vhall.com/725359622)
 -   [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
+-   [MeterSphere 知识库](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
