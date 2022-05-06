@@ -1,7 +1,3 @@
-## 技术咨询
-
-[点击提交技术咨询][jinshuju]
-
 ## 微信公众号
 
 ![wechat-official](../img/wechat-official.jpg)
