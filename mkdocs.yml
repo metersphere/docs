@@ -48,10 +48,12 @@ nav:
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
-          - 在线安装: installation/online_installation.md
-          - 离线安装: installation/offline_installation.md
-          - 在线升级: installation/online_upgrade.md
-          - 离线升级: installation/offline_upgrade.md
+          - Linux单机部署:
+                - 在线安装: installation/online_installation.md
+                - 离线安装: installation/offline_installation.md
+                - 在线升级: installation/online_upgrade.md
+                - 离线升级: installation/offline_upgrade.md
+          - Kubernetes中部署: installation/kubernetes_installation.md
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md
@@ -112,7 +114,7 @@ nav:
           - 企业版相关: faq/enterprise.md
     - 开发文档: dev_manual.md
     - 用户案例:
-          - 中国移动上研院基于MeterSphere构建规范化测试体系: case_studies/china-mobile-research-institute-shanghai.md
+          - 中国移动上研院基于MeterSphere构建规范化测试体系: case_studies/china_mobile_research_institute_shanghai.md
           - 88完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
           - 蔚澜环保基于MeterSphere的自动化测试实践: case_studies/weilanep.md
           - 易盛信息MeterSphere接口测试使用经验: case_studies/esunny.md
