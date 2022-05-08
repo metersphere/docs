@@ -1,62 +1,66 @@
-## helm部署MeterSphere
+## Helm Charts 方式部署 MeterSphere
 
-### helm 在线部署
+### Helm Charts 在线部署
 
 ```sh
 kubectl create ns ms
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add metersphere https://metersphere.github.io/helm-chart/
-helm repo update  # 从 chart 仓库中更新本地可用chart的信息
+# 从 chart 仓库中更新本地可用chart的信息
+helm repo update  
 helm install metersphere metersphere/metersphere -n ms
 ```
-### helm 离线部署
+### Helm Charts 离线部署
 
-导入镜像
-
-下载 MeterSphere 最新版本的离线安装包并且解压，将安装包里 `image` 目录下的镜像tar包上传到kubernetes的镜像库里或者
-手动load到kubernetes各个宿主机节点上。
-
-!!! tip ""
-    MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
-
-下载离线chart包
-
-!!! tip ""
-    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases
-
-如：https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz
-
-安装
-```sh
-helm install metersphere metersphere-1.0.10.tgz -n ms
-```
-### helm 在线升级
-
-```sh
-helm repo update  # 从 chart 仓库中更新本地可用chart的信息
-helm upgrade  metersphere metersphere/metersphere -n ms
-```
-
-### helm 离线升级
-
-导入新版本镜像
+1.导入镜像
 
 下载 MeterSphere 最新版本的离线安装包并且解压，将安装包里 `image` 目录下的镜像tar包上传到kubernetes的镜像库里或者手动load到kubernetes各个宿主机节点上。
 
 !!! tip ""
     MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
 
-下载最新离线chart包
+2.下载离线 Chart 包
 
 !!! tip ""
     helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases
 
 如：https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz
 
-升级
+3.安装
+
+```sh
+helm install metersphere metersphere-1.0.10.tgz -n ms
+```
+
+### Helm Charts 在线升级
+
+```sh
+helm repo update  # 从 chart 仓库中更新本地可用chart的信息
+helm upgrade  metersphere metersphere/metersphere -n ms
+```
+
+### Helm Charts 离线升级
+
+1.导入新版本镜像
+
+下载 MeterSphere 最新版本的离线安装包并且解压，将安装包里 `image` 目录下的镜像tar包上传到kubernetes的镜像库里或者手动 load 到 kubernetes 各个宿主机节点上。
+
+!!! tip ""
+    MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
+
+2.下载最新离线 Chart 包
+
+!!! tip ""
+    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases
+
+如：https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz
+
+3.升级
+
 ```sh
 helm upgrade metersphere metersphere-1.0.10.tgz -n ms
 ```
+
 ### values.yaml
 ```sh
 ingress:    # 不使用 ingress 可以关闭
@@ -243,14 +247,14 @@ zookeeper:      # 引用外部kafka时，可以修改为false,启动时不再安
   enabled: true
 ```
 
-### 引用外部Kafka
+### 引用外部 Kafka
 ```sh
 vim values.yaml
 将 values.yaml 中 zookeeper.enabled 和 kafka.enabled 改为 false
 common.kafka.host、common.kafka.port 改为外部 kafka 的地址和端口
 ```
 
-### 引用外部 MySql
+### 引用外部 MySQL
 ```sh
 vim values.yaml
 将 values.yaml 中 mysql.enabled 改为 false
@@ -264,8 +268,8 @@ vim values.yaml
 common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
 ```
 
-### 创建一个nodeport的访问方式
-如果不使用 ingress 的访问方式，可以创建一个nodeport
+### 创建一个 Node Port 的访问方式
+如果不使用 ingress 的访问方式，可以创建一个 nodeport
 ```sh
 vi ms-server-nodeport.yaml
 
@@ -288,5 +292,4 @@ spec:
 kubectl create -f ms-server-nodeport.yaml 
 ```
 
-访问mstersphere页面
-http://nodeIP:30801
+访问 MeterSphere 页面: http://nodeIP:30801
