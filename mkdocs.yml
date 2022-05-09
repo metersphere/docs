@@ -104,6 +104,7 @@ nav:
           - 【视频】如何在 MeterSphere 中做场景化的接口测试: https://www.bilibili.com/video/BV1vy4y1q7f7/
           - 【视频】如何在 MeterSphere 中导入 Postman 脚本做接口测试: https://www.bilibili.com/video/BV1W54y1C7uY
           - 【视频】如何在 MeterSphere 中导入 Swagger UI 脚本做接口测试: https://www.bilibili.com/video/BV1YK411A7E8/
+    - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md
           - 测试跟踪相关: faq/test_track.md
