@@ -81,7 +81,7 @@ docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allo
 
 ## 数据库如何不区分大小写
 
-chmod 644 /opt/metersphere/conf/my.cnf 
+chmod 655 /opt/metersphere/conf/my.cnf 
 
 修改完成后，重启数据库。
 
