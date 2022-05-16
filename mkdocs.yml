@@ -73,6 +73,12 @@ nav:
                 - 接口测试报告中心: user_manual/api_test/test_report.md
                 - 用例步骤说明: user_manual/api_test/api_step.md
                 - 内置函数: user_manual/api_test/functions.md
+          - UI 测试（X-Pack）:
+                - 模块说明: user_manual/ui_test/intro.md
+                - 注意事项: user_manual/ui_test/info.md
+                - 元素库: user_manual/ui_test/ui_element_store.md
+                - UI 自动化: user_manual/ui_test/ui_automation.md
+                - 测试报告: user_manual/ui_test/ui_test_report.md  
           - 性能测试:
                 - 模块说明: user_manual/load_test/intro.md
                 - 首页: user_manual/load_test/home.md
