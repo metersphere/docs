@@ -45,6 +45,7 @@ nav:
           - 创建项目: quick_start/create_project.md
           - 使用测试跟踪: quick_start/test_track.md
           - 使用接口测试: quick_start/api_test.md
+          - 使用UI 测试: quick_start/ui_test.md
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
