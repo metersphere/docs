@@ -53,7 +53,7 @@ MeterSphere 通过在测试资源池中添加多个测试执行节点的方式�
 
 首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_MODE 字段的值为 node-controller 后执行安装脚本。
 
-安装完成通过查看组件状态是否正常
+安装完成通过查看组件状态是否正常。
 
 ```bash
 msctl status
@@ -84,7 +84,7 @@ msctl status
 docker logs kafka
 ```
 ### 检查 MeterSphere 到 Kafka 服务的网络连接
-若 Kafka 服务状态正常，请通过如下命令检查 ms-server 容器是否能正常连接到 Kafka 服务
+若 Kafka 服务状态正常，请通过如下命令检查 ms-server 容器是否能正常连接到 Kafka 服务。
 ```bash
 # 检查 ms-server 是否能正常访问 Kafka 服务
 [root@meter-prototype ~]# docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}
@@ -145,14 +145,14 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.
 ```
 
-在部署 node-controller 的机器上，使用hostname命令获取主机名
+在部署 node-controller 的机器上，使用hostname命令获取主机名。
 
 ```
 [root@nginx metersphere-release-v1.8.0]# hostname
 nginx.novalocal
 ```
 
-将获取到的主机名 `nginx.novalocal` 配置到 /etc/hosts 文件中，配置完成效果如下：
+将获取到的主机名 `nginx.novalocal` 配置到 /etc/hosts 文件中，配置完成效果如下。
 
 配置前
 
@@ -197,6 +197,6 @@ MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控�
 
 ## 性能测试并发量加大的时候报错 `Non HTTP response code: java.net.SocketTimeoutException`
 
-高级配置增加超时时间
+高级配置增加超时时间。
 
 ![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)

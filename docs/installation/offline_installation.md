@@ -7,14 +7,14 @@
 
 ## 下载安装包
 
-请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下
+请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下。
 
 !!! tip ""
     安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
 
 ## 解压安装包
 
-以 root 用户 ssh 登录到目标机器, 并执行如下命令
+以 root 用户 ssh 登录到目标机器, 并执行如下命令。
 
 ```sh
 cd /tmp
@@ -24,7 +24,7 @@ tar zxvf metersphere-release-v1.0.3-offline.tar.gz
 
 ## 修改安装配置(可选)
 
-在安装包解压后的目录，编辑修改安装参数
+在安装包解压后的目录，编辑修改安装参数。
 
 ```sh
 cd metersphere-release-v1.0.3-offline
@@ -106,7 +106,7 @@ vim install.conf
     ```
 
 !!! info "注意"
-    如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件
+    如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
     ```
     [mysqld]
@@ -138,7 +138,7 @@ vim install.conf
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
-安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录
+安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
 !!! info "安装目录目录结构说明"
     ```
@@ -170,7 +170,7 @@ cd metersphere-release-v1.0.3-offline
 msctl status
 ```
 
-安装成功后，通过浏览器访问如下页面登录 MeterSphere
+安装成功后，通过浏览器访问如下页面登录 MeterSphere。
 
 ```
 地址: http://目标服务器IP地址:8081
