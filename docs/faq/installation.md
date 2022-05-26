@@ -12,20 +12,20 @@ msctl status
 
 修改 /opt/metersphere/.env 文件中的对应配置后，执行 `msctl reload` 命令重新加载应用。
 
-> 配置文件说明请参考 [修改安装配置(可选)](/installation/offline_installation/#_4)
+> 配置文件说明请参考 [修改安装配置(可选)](/installation/offline_installation/#_4)。
 
 ## 如何在 Kubernetes 中搭建 MeterSphere？
 
-可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)
-
+可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)。
+详见在线文档/安装部署/Kubernetes中部署：https://metersphere.io/docs/installation/kubernetes_installation/
 
 ## docker-compose 版本与配置文件不兼容，请重新安装最新版本的 docker-compose?
 
-把安装包里的docker-compose-xx 在 安装目录替换下
+把安装包里的docker-compose-xx 在 安装目录替换下。
 
 ## 升级指定版本
 
-msctl upgrade 后边跟版本号，如 msctl upgrade v1.10.6-lts
+msctl upgrade 后边跟版本号，如 msctl upgrade v1.10.6-lts 。
 
 ## 卸载命令
 
@@ -33,23 +33,23 @@ msctl uninstall -v
 
 ## 重新安装命令
 
-进入到安装包，然后重新执行 ./install.sh
+进入到安装包，然后重新执行 ./install.sh 。
 
-## 卸载会导致数据清空么
+## 卸载会导致数据清空么？
 
 卸载不会影响数据
 
 ## 升级报 `/usr/local/bin/msctl: line 115 ....`
 
-cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相关处理
+cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相关处理。
 
-## 升级报 `Schema `metersphere` contains a faied migration to version 86 !`
+## 升级报 `Schema ` metersphere `contains a faied migration to version 86 !`
 
 到github源码上 https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration
-查看对应version的flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后 重新执行下，然后修改metersphere_version
-表对应版本的的success值为1，然后 msclt reload 重启服务即可
+查看对应version的flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后重新执行下，然后修改metersphere_version
+表对应版本的的success值为1，然后 msclt reload 重启服务即可。
 
-## 如何备份数据库
+## 如何备份数据库?
 
 ```
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
@@ -58,7 +58,7 @@ docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersph
 ## mysqldump: `Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94`
 
 ```
-添加max_allowed_packet参数，如下
+添加max_allowed_packet参数，如下。
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
 ```
 
@@ -68,16 +68,9 @@ docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allo
 
 具体修改方式请参考该 [GitHub Commit](https://github.com/metersphere/installer/commit/36a60b09117d17735eeadc36af2dc9b5e67a54f7?diff=unified)，修改完成后执行 `msctl reload` 命令重建容器使环境变量生效。
 
-## 如何在 Kubernetes 中搭建 MeterSphere？
-可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)
-
 ## 性能测试时并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
 
 修改单个接口的连接超时时间。
-
-## 如何在k8s搭建ms
-
-可以参照这里的helm模板：https://github.com/metersphere/helm-chart
 
 ## 数据库如何不区分大小写
 
@@ -85,7 +78,7 @@ chmod 655 /opt/metersphere/conf/my.cnf
 
 修改完成后，重启数据库。
 
-## docker-compose 版本与配置文件不兼容，提示请重新安装最新版本的 docker-compose
+## docker-compose 版本与配置文件不兼容，提示请重新安装最新版本的 docker-compose。
 
 可以把安装包里的docker-compose-xx 在安装目录替换一下。
 

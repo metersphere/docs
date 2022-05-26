@@ -8,12 +8,12 @@
 
 ## 一键安装（采用默认安装参数）
 
-在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere：
+在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。
 ```
 curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
 ```
 
-安装成功后，通过浏览器访问如下页面登录 MeterSphere
+安装成功后，通过浏览器访问如下页面登录 MeterSphere。
 
 ```
 地址: http://目标服务器IP地址:8081
@@ -21,7 +21,7 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
 密码: metersphere
 ```
 
-安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录
+安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
 !!! info "安装目录目录结构说明"
     ```
@@ -61,7 +61,7 @@ cd metersphere-online-installer-v1.x.y
 /bin/bash install.sh
 ```
 
-安装成功后，通过浏览器访问如下页面登录 MeterSphere：
+安装成功后，通过浏览器访问如下页面登录 MeterSphere。
 
 ```
 地址: http://目标服务器IP地址:8081
@@ -144,7 +144,7 @@ cd metersphere-online-installer-v1.x.y
     ```
 
 !!! info "注意"
-    如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件
+    如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
     ```
     [mysqld]

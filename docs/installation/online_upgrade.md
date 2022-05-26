@@ -1,5 +1,5 @@
 
-如果您的服务器可以访问互联网, 可以通过以下命令直接升级 metersphere 至最新版本
+如果您的服务器可以访问互联网, 可以通过以下命令直接升级 metersphere 至最新版本。
 
 ## 一键升级至最新版本
 ```sh
@@ -18,7 +18,7 @@ msctl status
 ```
 
 !!! info "注意"
-    自 MeterSphere v1.3.0 起之后的版本才提供 upgrade 命令 
+    自 MeterSphere v1.3.0 起之后的版本才提供 upgrade 命令。
 
 ## 手动升级
 GitHub release 链接: https://github.com/metersphere/metersphere/releases
