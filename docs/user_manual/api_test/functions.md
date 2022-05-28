@@ -1,4 +1,4 @@
-MeterSphere 接口测试基于 JMeter 实现，因此 JMeter 中的内置函数及变量在 MeterSphere 中都可以正常使用。内置函数及变量可以用在多个位置，包括请求名称、请求参数、请求内容等。
+MeterSphere 接口测试基于 JMeter 实现，因此 JMeter 中的内置函数及变量在 MeterSphere 中都可以正常使用。内置函数及变量可以用在多个位置，包括QUERY参数、REST参数、请求体、前后置脚本等。
 
 内置函数一般以两个下划线开头，并使用类似 `${__functionName(var1,var2,var3)}` 的形式调用。
 

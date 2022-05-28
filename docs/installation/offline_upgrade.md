@@ -2,7 +2,7 @@
 按照本文档 [离线安装](./offline_installation.md) 步骤, 下载新版本安装包并上传解压后, 重新执行安装命令进行升级。
 
 ```sh
-# 进入项目目录
+# 进入离线部署包解压缩目录
 cd metersphere-release-v1.x.y-offline
 # 运行安装脚本
 /bin/bash install.sh
