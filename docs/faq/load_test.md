@@ -107,7 +107,7 @@ URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https:/
 
 ## 站点配置的URL是什么？
 
-站点配置为部署MeterSphere sever的地址，可以是域名或者是IP地址。
+站点配置为部署MeterSphere Sever的地址，可以是域名或者是IP地址。
 
 ## 执行性能测试时 JMeter 容器内存溢出如何解决?
 
