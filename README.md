@@ -24,13 +24,17 @@ nav:
           - 创建项目: quick_start/create_project.md
           - 使用测试跟踪: quick_start/test_track.md
           - 使用接口测试: quick_start/api_test.md
+          - 使用UI 测试: quick_start/ui_test.md
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
-          - 在线安装: installation/online_installation.md
-          - 离线安装: installation/offline_installation.md
-          - 在线升级: installation/online_upgrade.md
-          - 离线升级: installation/offline_upgrade.md
+          - Linux单机部署:
+                - 在线安装: installation/online_installation.md
+                - 离线安装: installation/offline_installation.md
+                - 在线升级: installation/online_upgrade.md
+                - 离线升级: installation/offline_upgrade.md
+          - Kubernetes中部署: installation/kubernetes_installation.md
+          - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md
           - 测试跟踪:
@@ -49,35 +53,40 @@ nav:
                 - 接口测试报告中心: user_manual/api_test/test_report.md
                 - 用例步骤说明: user_manual/api_test/api_step.md
                 - 内置函数: user_manual/api_test/functions.md
+          - UI 测试:
+                - 模块说明: user_manual/ui_test/intro.md
+                - 注意事项: user_manual/ui_test/info.md
+                - 元素库: user_manual/ui_test/ui_element_store.md
+                - UI 自动化: user_manual/ui_test/ui_automation.md
+                - 测试报告: user_manual/ui_test/ui_test_report.md  
           - 性能测试:
                 - 模块说明: user_manual/load_test/intro.md
                 - 首页: user_manual/load_test/home.md
                 - 性能测试: user_manual/load_test/load_test.md
-                - 性能测试报告中心: user_manual/load_test/test_report.md
+                - 性能测试报告: user_manual/load_test/test_report.md
+          - 报表统计:
+                - 项目报表: user_manual/report_statistics/project_statistics.md
           - 项目设置:
                 - 项目信息: user_manual/project_management/project_info.md
                 - 项目成员: user_manual/project_management/project_user.md
-                - 用户组与权限: user_manual/prosject_management/usergroup_permission.md
+                - 用户组与权限: user_manual/project_management/usergroup_permission.md
                 - 项目环境: user_manual/project_management/project_environment.md
                 - 文件管理: user_manual/project_management/file_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
+                - 模版管理: user_manual/project_management/template_management.md
+                - 消息设置: user_manual/project_management/notice_management.md
                 - 操作日志: user_manual/project_management/operation_log.md
                 - 应用管理: user_manual/project_management/application_management.md
           - 系统设置:
-                - 模块说明: user_manual/system_management/intro.md
-                - 系统管理: user_manual/system_management/system.md
-                - 工作空间管理: user_manual/system_management/workspace.md
-                - 项目管理: user_manual/system_management/project.md
-                - 个人信息管理: user_manual/system_management/personal.md      
+              - 模块说明: user_manual/system_management/intro.md
+              - 系统: user_manual/system_management/system.md
+              - 工作空间: user_manual/system_management/workspace.md
     - 使用教程:
+          - MeterSphere的UI测试模块如何远程调用浏览器: tutorial/ui_testing.md
           - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
           - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
           - 使用预执行脚本功能生成接口认证签名: tutorial/pre_processor.md
-          - 【视频】MeterSphere 如何与 TAPD和 Jira 对接: https://www.bilibili.com/video/BV1jr4y1c7Lg/
-          - 【视频】MeterSphere 如何对接邮件、钉钉、企业微信: https://www.bilibili.com/video/BV1dp4y167ch/
-          - 【视频】如何在 MeterSphere 中做场景化的接口测试: https://www.bilibili.com/video/BV1vy4y1q7f7/
-          - 【视频】如何在 MeterSphere 中导入 Postman 脚本做接口测试: https://www.bilibili.com/video/BV1W54y1C7uY
-          - 【视频】如何在 MeterSphere 中导入 Swagger UI 脚本做接口测试: https://www.bilibili.com/video/BV1YK411A7E8/
+    - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md
           - 测试跟踪相关: faq/test_track.md
@@ -88,6 +97,7 @@ nav:
           - 企业版相关: faq/enterprise.md
     - 开发文档: dev_manual.md
     - 用户案例:
+          - 中国移动上研院基于MeterSphere构建规范化测试体系: case_studies/china_mobile_research_institute_shanghai.md
           - 88完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
           - 蔚澜环保基于MeterSphere的自动化测试实践: case_studies/weilanep.md
           - 易盛信息MeterSphere接口测试使用经验: case_studies/esunny.md
@@ -97,8 +107,6 @@ nav:
           - 360借助MeterSphere提升自动化测试水平: case_studies/360b.md
     - 更新日志: about/changelog.md
     - 联系我们: about/contact.md
-    - JMeter 资源合集: awesome-jmeter.md
-    - 企业版试用: enterprise.md
 ..........
 ```
 
