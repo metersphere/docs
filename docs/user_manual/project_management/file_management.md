@@ -3,7 +3,7 @@
 ![!项目设置](../../img/project_management/上传jar包.png)
 
 同时可以当前项目级别的jar包，进行删除、更新。
-!!! info "删除或者更新jar包需要重启ms-server服务"
+!!! info "删除或者更新jar包需要重启ms-server服务"。
 ![!项目设置](../../img/project_management/删除jar包.png)
 
 Jar包的管理功能，详细功能操作及说明参考 [系统->工作空间->项目管理->Jar包管理](../../system_management/workspace/#_2)
