@@ -35,3 +35,11 @@
 
 [![用户组与权限](https://www.fit2cloud.com/metersphere/images/video/5.1.jpg){ width="280" }](https://www.bilibili.com/video/BV18A4y1S7hd/)
 [![Jenkins 插件调用 MeterSphere API](https://www.fit2cloud.com/metersphere/images/video/5.2.jpg){ width="280" }](https://www.bilibili.com/video/BV1TF41177cG/)
+
+## 六、其他视频
+
+- [MeterSphere 如何与 TAPD和 Jira 对接](https://www.bilibili.com/video/BV1jr4y1c7Lg/)
+- [MeterSphere 如何对接邮件、钉钉、企业微信](https://www.bilibili.com/video/BV1dp4y167ch/)
+- [如何在 MeterSphere 中做场景化的接口测试](https://www.bilibili.com/video/BV1vy4y1q7f7/)
+- [如何在 MeterSphere 中导入 Postman 脚本做接口测试](https://www.bilibili.com/video/BV1W54y1C7uY)
+- [如何在 MeterSphere 中导入 Swagger UI 脚本做接口测试](https://www.bilibili.com/video/BV1YK411A7E8/)
