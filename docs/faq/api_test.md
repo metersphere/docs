@@ -69,7 +69,7 @@ SQL请求可通过如下方法进行断言：
 
 ## 如何创建SQL协议的接口测试？
 
-具体操作请参考：https://brucelong.blog.csdn.net/article/details/110133647
+具体操作请参考：https://brucelong.blog.csdn.net/article/details/110133647 。
 
 
 ## 接口自动化测试，一个项目下的不同接口场景，是否可以引用同一个脚本？
@@ -83,7 +83,7 @@ SQL请求可通过如下方法进行断言：
 ## 如何引用csv？
 
 在场景编辑页面，点击场景变量添加csv类型的场景变量。
-具体操作可参考 https://metersphere.io/docs/user_manual/api_test/api_automation/#_6
+具体操作可参考 https://metersphere.io/docs/user_manual/api_test/api_automation/#_6 。
 
 ## 接口自动化里，同一场景下是否支持配置多个接口域名？
 
