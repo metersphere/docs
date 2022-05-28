@@ -4,7 +4,7 @@ site_description: "Document"
 site_author: "wangzhen"
 google_analytics: ['UA-147297392-7', 'metersphere.io']
 
-repo_name: "MeterSphere Docs"
+repo_name: "metersphere/metersphere"
 repo_url: "https://github.com/metersphere/metersphere"
 
 edit_uri: https://github.com/metersphere/docs/edit/master/docs/
@@ -74,7 +74,7 @@ nav:
                 - 接口测试报告中心: user_manual/api_test/test_report.md
                 - 用例步骤说明: user_manual/api_test/api_step.md
                 - 内置函数: user_manual/api_test/functions.md
-          - UI 测试（X-Pack）:
+          - UI 测试:
                 - 模块说明: user_manual/ui_test/intro.md
                 - 注意事项: user_manual/ui_test/info.md
                 - 元素库: user_manual/ui_test/ui_element_store.md
