@@ -55,6 +55,7 @@ nav:
                 - 在线升级: installation/online_upgrade.md
                 - 离线升级: installation/offline_upgrade.md
           - Kubernetes中部署: installation/kubernetes_installation.md
+          - Windows中部署: installation/offline_installation_windows.md
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md

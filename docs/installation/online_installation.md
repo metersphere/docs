@@ -1,4 +1,4 @@
-## 环境要求
+## 1 环境要求
 
 !!! info "部署服务器要求"
     * 操作系统: CentOS 7.x
@@ -6,7 +6,7 @@
     * 磁盘空间: 50G
     * 可访问互联网
 
-## 一键安装（采用默认安装参数）
+## 2 一键安装（采用默认安装参数）
 
 在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。
 ```
@@ -42,8 +42,8 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ```
 
-## 手动安装（可配置安装参数）
-
+## 3 手动安装（可配置安装参数）
+### 3.1 手动安装
 到 GitHub release 页面下载在线安装包，链接为: https://github.com/metersphere/metersphere/releases
 
 ```sh
@@ -68,6 +68,8 @@ cd metersphere-online-installer-v1.x.y
 用户名: admin
 密码: metersphere
 ```
+
+### 3.2 安装配置文件说明
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
@@ -143,6 +145,8 @@ cd metersphere-online-installer-v1.x.y
     MS_CHROME_ENABLED=false
     ```
 
+### 3.3 数据库配置文件说明
+
 !!! info "注意"
     如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
@@ -176,7 +180,7 @@ cd metersphere-online-installer-v1.x.y
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
-## 配置反向代理
+## 4 配置反向代理
 !!! warning "注意"
     如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
     ```
