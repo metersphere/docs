@@ -1,4 +1,5 @@
-显示当前项目下的所有文件，可在项目级别统一管理自动化脚本和性能测试脚本所需要的jar包、数据文档等资源。
+可上传测试所需的jar包、脚本、相关文件，在项目级别统一管理。
+
 ## Jar包管理功能
 ![!项目设置](../../img/project_management/上传jar包.png)
 
@@ -9,7 +10,7 @@
 
 ![!项目设置](../../img/project_management/删除jar包.png)
 
-Jar包的管理功能，详细功能操作及说明参考 [系统->工作空间->项目管理->Jar包管理](../../system_management/workspace/#_2)
+Jar包的管理功能，详细功能操作及说明参考 [系统->工作空间->项目管理->Jar包管理](../../system_management/workspace/#_2)。
 
 
 ## 性能测试文件管理
