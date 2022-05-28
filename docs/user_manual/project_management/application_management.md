@@ -4,7 +4,7 @@
 如果 `项目设置` 里看不到 `应用管理` 菜单，表示此用户没有此权限，需要到 `用户组与权限` 修改 `项目管理员` 的权限。
 ![!项目设置](../../img/project_management/应用管理权限2.png)
 
-选中‘应用管理’权限即可
+选中‘应用管理’权限即可。
 ![!项目设置](../../img/project_management/应用管理权限3.png)
 
 ## 应用管理设置
@@ -18,7 +18,7 @@
 ![!项目设置](../../img/project_management/测试跟踪设置1.png)
 
 #### <font size=4> 测试用例自定义ID </font>
-开启后，在创建 `测试用例` 页面，可以自定义设置用例ID
+开启后，在创建 `测试用例` 页面，可以自定义设置用例ID。
 ![!项目设置](../../img/project_management/测试跟踪设置2.png)
 
 #### <font size=4> 定时清理测试计划报告 </font>
@@ -29,11 +29,11 @@
 ![!项目设置](../../img/project_management/接口测试设置1.png)
 
 ####  <font size=4> 接口定义URL可重复 </font>
-启用后接口定义重复性校验将不校验URL，同一个项目下允许接口路径想相同的 `接口定义` 
+启用后接口定义重复性校验将不校验URL，同一个项目下允许接口路径想相同的 `接口定义`。
 ![!项目设置](../../img/project_management/接口测试设置2.png)
 
 #### <font size=4> 场景自定义ID </font>
-启用后创建场景支持自定义设置场景ID
+启用后创建场景支持自定义设置场景ID。
 ![!项目设置](../../img/project_management/接口测试设置3.png)
 
 #### <font size=4> TCP Mock Port </font>

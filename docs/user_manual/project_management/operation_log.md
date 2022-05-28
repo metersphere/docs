@@ -3,4 +3,4 @@
 ## 操作日志
 ![!项目设置](../../img/project_management/操作日志.png)
 
-详细功能操作及说明参考 [系统->工作空间->操作日志](../../system_management/workspace/#_2)
+详细功能操作及说明参考 [系统->工作空间->操作日志](../../system_management/workspace/#_2)。
