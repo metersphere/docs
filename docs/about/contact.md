@@ -12,9 +12,13 @@
 
 ## 联系方式
 
+- 技术咨询: https://jinshuju.net/f/qQOZj1
+- 企业版试用: https://jinshuju.net/f/CzzAOe
 - 官网：http://www.metersphere.io
 - 邮箱：support@fit2cloud.com
 - 电话：400-052-0755
+
+
 
 [jinshuju]: https://jinshuju.net/f/qQOZj1
 [metersphere]: https://github.com/metersphere/metersphere
