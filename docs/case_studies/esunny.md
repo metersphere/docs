@@ -35,17 +35,20 @@
 MeterSphere基于Docker提供服务，并提供完备的私有化部署能力，支持一键安装和升级，整个过程非常流畅，体验良好。容器化的部署方式避免了测试人员安装工具的成本，搭建好平台后即可直接使用。
 
 ![](../img/case_studies/esunny/1.png)
-▲图1 MeterSphere支持一键安装和升级
+
+图1 MeterSphere支持一键安装和升级
 
 - 管理规范
 
 MeterSphere能够实现组织、工作空间、项目、测试、场景等多级管理，角色权限分离，井井有条。它还可以与内部LDAP对接，使用起来非常方便。
 
 ![](../img/case_studies/esunny/2.png)
-▲图2 MeterSphere可与LDAP进行对接
+
+图2 MeterSphere可与LDAP进行对接
 
 ![](../img/case_studies/esunny/3.png)
-▲图3 MeterSphere支持用户、组织和工作空间管理
+
+图3 MeterSphere支持用户、组织和工作空间管理
 
 ### 与MeterSphere的“一见钟情”
 
@@ -56,24 +59,28 @@ MeterSphere能够实现组织、工作空间、项目、测试、场景等多级
 测试过程中常常需要调试，MeterSphere贴心地提供了调试按钮，可以立刻看到当前接口的执行情况，方便使用者及时调整，这方面体验和Postman完全一样。
 
 ![](../img/case_studies/esunny/4.png)
-▲图4 MeterSphere接口测试提供了与Postman类似的体验
+
+图4 MeterSphere接口测试提供了与Postman类似的体验
 
 - 支持Python的前后置脚本
 
 Postman支持使用JavaScript编写脚本，但我的同事们更熟悉Python，而MeterSphere支持Python的前后置脚本就给接口测试增加了更多的灵活性。在这方面，MeterSphere更具优势。
 
 ![](../img/case_studies/esunny/5.png)
-▲图5 MeterSphere支持Python的前后置脚本
+
+图5 MeterSphere支持Python的前后置脚本
 
 - 支持SQL语句
 
 这应该是支持我的团队开始使用MeterSphere最关键的原因了。支持SQL就满足了我们在接口测试中50%的需求，结合自定义变量和数据库源配置及调试功能，可以非常便捷地编写用例。即使测试人员不会写代码只会写SQL，也可以通过简单的培训快速上手，相较于原有需要测试人员手动编写Python测试代码要便捷许多。
 
 ![](../img/case_studies/esunny/6.png)
-▲ 图6 MeterSphere在接口测试中支持SQL语句
+
+图6 MeterSphere在接口测试中支持SQL语句
 
 ![](../img/case_studies/esunny/6.png)
-▲图7 SQL请求返回结果
+
+图7 SQL请求返回结果
 
 ### 支持测试跟踪和性能测试
 
@@ -95,7 +102,7 @@ MeterSphere提供了Jenkins插件用来打通持续集成，能够和内部的CI
 
 MeterSphere开源持续测试平台是一款经过细心雕琢的产品，易用性相较于之前接触过的开源工具有极大的提升。
 
-社区的活跃度是评价一个开源项目的关键指标。没有社区哪来的生命力？MeterSphere团队的同学非常热情，积极协助我们解决使用中的各种问题，同时我们将发现的问题和意见建议提交Issue，官方再有选择地采纳，这就形成了一个良性的互补和循环，互相促进各自的产品质量持续提升，共同受益。
+社区的活跃度是评价一个开源项目的关键指标。没有社区哪来的生命力？MeterSphere团队的同学非常热情，积极协助我们解决使用中的各种问题，同时我们将发现的问题和意见建议提交Issue，官方在有选择地采纳，这就形成了一个良性的互补和循环，互相促进各自的产品质量持续提升，共同受益。
 
 ## 期待与建议
 
