@@ -1,18 +1,18 @@
-## 环境要求
+## 1 环境要求
 
 !!! info "部署服务器要求"
     * 操作系统: CentOS 7.x
     * CPU/内存: 4核8G
     * 磁盘空间: 50G
 
-## 下载安装包
+## 2 下载安装包
 
 请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下。
 
 !!! tip ""
     安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
 
-## 解压安装包
+## 3 解压安装包
 
 以 root 用户 ssh 登录到目标机器, 并执行如下命令。
 
@@ -22,7 +22,8 @@ cd /tmp
 tar zxvf metersphere-release-v1.0.3-offline.tar.gz
 ```
 
-## 修改安装配置(可选)
+## 4 修改安装配置(可选)
+### 4.1 解压
 
 在安装包解压后的目录，编辑修改安装参数。
 
@@ -30,6 +31,7 @@ tar zxvf metersphere-release-v1.0.3-offline.tar.gz
 cd metersphere-release-v1.0.3-offline
 vim install.conf
 ```
+### 4.2 安装配置文件说明
 
 !!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装"
     ```vim
@@ -105,6 +107,8 @@ vim install.conf
     MS_CHROME_ENABLED=false
     ```
 
+### 4.3 数据库配置文件说明
+
 !!! info "注意"
     如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
@@ -140,7 +144,9 @@ vim install.conf
 
 安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
-!!! info "安装目录目录结构说明"
+### 4.4 安装目录结构说明
+
+!!! info "安装目录结构说明"
     ```
     /opt/metersphere/
     ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
@@ -159,7 +165,7 @@ vim install.conf
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ```
 
-## 执行安装脚本
+## 5 执行安装脚本
 
 ```sh
 # 进入安装包目录
@@ -178,7 +184,7 @@ msctl status
 密码: metersphere
 ```
 
-## 配置反向代理
+## 6 配置反向代理
 !!! warning "注意"
     如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
     ```

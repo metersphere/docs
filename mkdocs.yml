@@ -49,12 +49,13 @@ nav:
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
-          - Linux单机部署:
+          - Linux中单机部署:
                 - 在线安装: installation/online_installation.md
                 - 离线安装: installation/offline_installation.md
                 - 在线升级: installation/online_upgrade.md
                 - 离线升级: installation/offline_upgrade.md
           - Kubernetes中部署: installation/kubernetes_installation.md
+          - Windows中部署: installation/offline_installation_windows.md
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md
