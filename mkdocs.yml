@@ -49,7 +49,7 @@ nav:
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
-          - Linux单机部署:
+          - Linux中单机部署:
                 - 在线安装: installation/online_installation.md
                 - 离线安装: installation/offline_installation.md
                 - 在线升级: installation/online_upgrade.md
