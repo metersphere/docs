@@ -55,16 +55,16 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>功能用例关联接口、性能用例</td>
     </tr>
     <tr>
-        <td>与Jira、TAPD、禅道等平台上的需求进行关联</td>
+        <td>与JIRA、TAPD、禅道等平台上的需求进行关联</td>
     </tr>
     <tr>
-        <td>与Jira、TAPD、禅道等平台上的缺陷进行关联</td>
+        <td>与JIRA、TAPD、禅道等平台上的缺陷进行关联</td>
     </tr>
     <tr>
         <td>支持查看用例变更历史</td>
     </tr>
     <tr>
-        <td>通过Excel、Xmind格式快速导入、导出用例</td>
+        <td>通过Excel、XMind格式快速导入、导出用例</td>
     </tr>
     <tr>
         <td>用例批量处理：编辑、移动、删除</td>
@@ -139,7 +139,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持缺陷与用例关联</td>
     </tr>
     <tr>
-        <td>对接并同步Jira、TAPD、禅道等平台上的缺陷</td>
+        <td>对接并同步JIRA、TAPD、禅道等平台上的缺陷</td>
     </tr>
     <tr>
         <td>支持配置缺陷自定义模版、自定义字段</td>
@@ -159,10 +159,10 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>以树状形式展示项目的模块及对应接口</td>
     </tr>
     <tr>
-        <td>支持HTTP、Dubbo、SQL、TCP类型接口请求</td>
+        <td>支持HTTP、TCP、SQL、DUBBO类型接口请求</td>
     </tr>
     <tr>
-        <td>支持通过MeterSphere Json、Postman、Swagger 等多种格式文件快速导入接口，Swagger可通过URL定时同步</td>
+        <td>支持通过MeterSphere JSON、Postman、Swagger 等多种格式文件快速导入接口，Swagger可通过URL定时同步</td>
     </tr>
     <tr>
         <td>支持接口快捷调试</td>
@@ -180,10 +180,10 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>单接口用例支持引用环境</td>
     </tr>
     <tr>
-        <td>支持正则匹配、jsonpath、xpath等多种类型的断言规则</td>
+        <td>支持正则匹配、JSONPath、XPath等多种类型的断言规则</td>
     </tr>
     <tr>
-        <td>支持正则匹配、jsonpath、xpath等多种类型的参数提取</td>
+        <td>支持正则匹配、JSONPath、XPath等多种类型的参数提取</td>
     </tr>
     <tr>
         <td>支持BeanShell、Python、Groovy、JavaScript等多种语言的前后置脚本</td>
@@ -195,7 +195,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持查看接口及用例变更历史</td>
     </tr>
     <tr>
-        <td>手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
+        <td>支持手动执行、定时任务、Jenkins插件触发等多种执行方式</td>
     </tr>
     <tr>
         <td>API、CASE一键复制</td>
@@ -241,10 +241,10 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持条件、循环、事务等多种类型的控制器</td>
     </tr>
     <tr>
-        <td>支持正则匹配、jsonpath、xpath等多种类型的断言规则</td>
+        <td>支持正则匹配、JSONPath、XPath等多种类型的断言规则</td>
     </tr>
     <tr>
-        <td>支持正则匹配、jsonpath、xpath等多种类型的参数提取</td>
+        <td>支持正则匹配、JSONPath、XPath等多种类型的参数提取</td>
     </tr>
     <tr>
         <td>支持BeanShell、Python、Groovy、JavaScript等多种语言的前后置脚本</td>
@@ -496,7 +496,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
     </tr>
     <tr>
         <td rowspan="2">服务集成</td>
-        <td>支持对接Jira、TAPD、禅道平台</td>
+        <td>支持对接JIRA、TAPD、禅道平台</td>
     </tr>
     <tr>
         <td style="background-color: #7838874d;">支持对接Azure DevOps平台</td>
