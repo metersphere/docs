@@ -1,7 +1,7 @@
 site_name: "MeterSphere 文档"
 site_url: "https://metersphere.io"
 site_description: "Document"
-site_author: "wangzhen"
+site_author: "MeterSphere 项目组"
 google_analytics: ['UA-147297392-7', 'metersphere.io']
 
 repo_name: "metersphere/metersphere"
@@ -45,17 +45,17 @@ nav:
           - 创建项目: quick_start/create_project.md
           - 使用测试跟踪: quick_start/test_track.md
           - 使用接口测试: quick_start/api_test.md
-          - 使用UI 测试: quick_start/ui_test.md
+          - 使用 UI 测试: quick_start/ui_test.md
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
-          - Linux中单机部署:
+          - Linux 中部署:
                 - 在线安装: installation/online_installation.md
-                - 离线安装: installation/offline_installation.md
                 - 在线升级: installation/online_upgrade.md
+                - 离线安装: installation/offline_installation.md                
                 - 离线升级: installation/offline_upgrade.md
-          - Kubernetes中部署: installation/kubernetes_installation.md
-          - Windows中部署: installation/offline_installation_windows.md
+          - Kubernetes 中部署: installation/kubernetes_installation.md
+          - Windows 中部署: installation/offline_installation_windows.md
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md
@@ -104,7 +104,7 @@ nav:
               - 系统: user_manual/system_management/system.md
               - 工作空间: user_manual/system_management/workspace.md
     - 使用教程:
-          - MeterSphere的UI测试模块如何远程调用浏览器: tutorial/ui_testing.md
+          - MeterSphere 的 UI 测试模块如何远程调用浏览器: tutorial/ui_testing.md
           - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
           - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
           - 使用预执行脚本功能生成接口认证签名: tutorial/pre_processor.md
@@ -119,14 +119,14 @@ nav:
           - 企业版相关: faq/enterprise.md
     - 开发文档: dev_manual.md
     - 用户案例:
-          - 中国移动上研院基于MeterSphere构建规范化测试体系: case_studies/china_mobile_research_institute_shanghai.md
-          - 88完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
-          - 蔚澜环保基于MeterSphere的自动化测试实践: case_studies/weilanep.md
-          - 易盛信息MeterSphere接口测试使用经验: case_studies/esunny.md
-          - 永福信息基于MeterSphere从项目维度持续推进测试任务: case_studies/yongfu.md
-          - 九里云基于MeterSphere落地一站式自动化测试平台: case_studies/jiuliyun.md
-          - 民生科技基于MeterSphere平台实现测试用例复用: case_studies/mskj.md
-          - 360借助MeterSphere提升自动化测试水平: case_studies/360b.md
+          - 中国移动上研院基于 MeterSphere 构建规范化测试体系: case_studies/china_mobile_research_institute_shanghai.md
+          - 88 完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
+          - 蔚澜环保基于 MeterSphere 的自动化测试实践: case_studies/weilanep.md
+          - 易盛信息 MeterSphere 接口测试使用经验: case_studies/esunny.md
+          - 永福信息基于 MeterSphere 从项目维度持续推进测试任务: case_studies/yongfu.md
+          - 九里云基于 MeterSphere 落地一站式自动化测试平台: case_studies/jiuliyun.md
+          - 民生科技基于 MeterSphere 平台实现测试用例复用: case_studies/mskj.md
+          - 360借助 MeterSphere 提升自动化测试水平: case_studies/360b.md
     - 更新日志: about/changelog.md
     - 联系我们: about/contact.md
 
@@ -185,5 +185,3 @@ extra:
           link: mailto:support@fit2cloud.com
         - icon: fontawesome/solid/phone
           link: tel://400-052-0755
-        - icon: fontawesome/brands/qq
-          link: https://jq.qq.com/?_wv=1027&k=vtwka3RQ

@@ -6,7 +6,7 @@
 同时可以删除、更新当前项目级别的jar包。
 
 !!! info "说明" 
-    info "删除或者更新jar包需要重启ms-server服务"。
+    删除或者更新jar包需要重启ms-server服务。
 
 ![!项目设置](../../img/project_management/删除jar包.png)
 

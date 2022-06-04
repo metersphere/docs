@@ -14,7 +14,7 @@ MeterSphere调起浏览器的动作其实是由浏览器驱动完成的。因为
 ## 2 MeterSphere远程调用浏览器配置过程
 ### 2.1 下载驱动程序
 
-百度网盘链接：https://pan.baidu.com/s/17TdUZvGSP628YPbu7q-OWA?pwd=h619
+百度网盘链接：https://pan.baidu.com/s/1ya5orSd36fZFJchUltxfjA?pwd=yt5v
 
 !!! info ""
     1. 网盘程序中包含100.0.4896.127版本的Mac OS、Windows的ChromeDriver插件，其他版本请通过（http://chromedriver.storage.googleapis.com/index.html）下载替换（驱动名称与程序中的驱动名称一致）即可。<br>
