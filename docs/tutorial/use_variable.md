@@ -381,7 +381,8 @@ cpu_usage,host=10.1.13.131,app=dataease value=${usage} ${__time()}000000
 ![配置添加循环控制器地址](../img/tutorial/use_variable/添加循环控制器.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-30 添加循环控制器</font><br>
 
-4、导入之前已创建的接口用例“写入虚拟机某分钟CPU使用率监控数据”。接口用例导入时选择“复制”，导入后将它添加到循环控制器下，然后修改请求体，设置请求体内容为如图2-31所示内容。
+4、导入之前已创建的接口用例“写入虚拟机某分钟CPU使用率监控数据”。接口用例导入时选择“复制”，导入后将它添加到循环控制器下，然后修改请求体，设置请求体内容为如图2-31所示内容。<br>
+
 ![配置设置请求体地址](../img/tutorial/use_variable/设置请求体.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-31 设置请求体</font><br>
 
