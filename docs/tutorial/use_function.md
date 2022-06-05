@@ -1,11 +1,11 @@
-## 1. 目的
+## 1 目的
 MeterSphere的接口测试、性能测试均基于JMeter实现，兼容JMeter中的函数。在使用MeterSphere做接口测试、准备测试数据时，经常需要使用变量JMeter函数构造生成接口测试的测试数据，过程中经常需要查看具体的变量及JMeter使用范围方法和试验摸索一些具体的使用范围方法，为了备忘、方便查看了解具体的使用范围及方法、让大家减少一些摸索试验的时间，写了这个专题做一个集中深入详细的总结和演示，希望对大家有所帮助。
 
-## 2. 变量和JMeter函数的设置使用
+## 2 变量和JMeter函数的设置使用
 
 ### 2.1 设置使用变量
 
-#### <font size=4> 2.1.1 在环境中设置和使用 </font>
+2.1.1 在环境中设置和使用
 
 对于变量，在MeterSphere中，可以在环境、场景变量中设置，在请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中引用使用。也可以在前置脚本中设置变量，在请求体、后置操作脚本中引用使用。需要注意的是，在环境中设置的环境变量类型只支持常量类型，在场景变量中，除常量类型之外，还支持列表、CSV、计数器、随机数类型。
 下表为在请求参数的QUERY参数、REST参数、请求体、前后置BeanShell脚本、前后置Python脚本中引用变量的方法、设置变量方法以及调试时需要打印变量值到控制台查看的方法。
@@ -30,38 +30,39 @@ MeterSphere的接口测试、性能测试均基于JMeter实现，兼容JMeter中
         <td >${dbname}</td>
     </tr>
      <tr>
-        <td >在请求参数之前后置BeanShell脚本中引用及常用方法<br>
-             //BeanShell注意事项<br>
-             //1) 每行须以分号结尾<br>
-             //2) 注释是//<br>
-             //3）log.info打印变量和vars.put设置变量时，需要变量类型为字符串类型<br>
+        <td >
+        在请求参数之前后置BeanShell脚本中引用及常用方法<br>
+            BeanShell注意事项<br>
+              1.每行须以分号结尾<br>
+              2.注释是//<br>
+              3.log.info打印变量和vars.put设置变量时，需要变量类型为字符串类型<br>
         </td>
-        <td >//1. 获取变量值方法1 <br>
+        <td >1.获取变量值方法1 <br>
         dbname="${dbname}";<br>
-        //2. 获取变量值方法2 <br>
+        2.获取变量值方法2 <br>
         dbname2=vars.get("dbname");<br>
-        //3. 打印到控制台输出查看变量值，调试时用<br>
+        3.打印到控制台输出查看变量值，调试时用<br>
         log.info("dbname="+dbname);<br>
         log.info("dbname2="+dbname2);<br>
-        //4. 将字符串转换成数字类型<br>
+        4.将字符串转换成数字类型<br>
         iCount=Integer.valueOf(strCount);<br>
-        //5. 将数字转成成字符串，在设置变量时经常用到<br>
+        5.将数字转成成字符串，在设置变量时经常用到<br>
         strCount=String.valueOf(iCount);<br>
         vars.put("count", strCount);
         </td>
      </tr>
      <tr>
          <td >在请求参数之前后置Python脚本中引用及常用方法</td>
-         <td >#1. 获取变量值<br>
+         <td >1.获取变量值<br>
               dbname="${dbname}";<br>
-              #2. 获取变量值<br>
+              2.获取变量值<br>
               dbname2=vars.get("dbname");<br>
-              #3. 打印到控制台输出查看变量值，调试时用<br>
+              3.打印到控制台输出查看变量值，调试时用<br>
               log.info("dbname="+dbname);<br>
               log.info("dbname2="+dbname2);<br>
-              #4. 将字符串转换成数字类型<br>
+              4.将字符串转换成数字类型<br>
               iCount=int(strCount);<br>
-              #5. 将数字转成成字符串，在设置变量时经常用到<br>
+              5.将数字转成成字符串，在设置变量时经常用到<br>
               strCount=str(iCount);<br>
               vars.put("count", strCount);
          </td>
