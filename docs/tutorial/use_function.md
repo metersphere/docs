@@ -167,7 +167,7 @@ vars.put("usage", cpuUsage);
 
 以下通过一些场景示例演示具体引用使用变量、JMeter函数的方法。
 
-## 3. 变量设置使用示例
+## 3 变量设置使用示例
 下面我们以InfluxDB接口测试场景演示变量的具体使用方法。假设我们是InfluxDB测试团队，现在要对InfluxDB支持的一系列操作进行测试，包括创建database、查询database列表、写入主机监控点数据等。<br>
 如跟随本文的示例步骤实操，请先使用以下命令在CentOS7.x虚拟机上部署Influxdb,打开8086端口。
 ```
@@ -389,7 +389,7 @@ vars.put("pointTime", String.valueOf(pointTime));
 ![配置查看循环2控制台输出-请求内容中场景变量值地址](../img/tutorial/use_function/查看循环2控制台输出-请求内容中场景变量值.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-34 查看循环2控制台输出-请求内容中场景变量值</font><br>
 
-## 4. JMeter函数使用示例
+## 4 JMeter函数使用示例
 
 ### 4.1 常用的JMeter函数及示例
 对于常用的JMeter函数可以百度查看JMeter官方文档，或搜索相关文章。<br>
@@ -519,7 +519,7 @@ cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.0030912
 ![配置查看请求内容地址](../img/tutorial/use_function/查看请求内容.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-8 查看请求内容</font><br>
 
-## 5. MockJS函数使用示例
+## 5 MockJS函数使用示例
 
 我们在设置请求参数时，点击到值输入框后，会列出来一堆@boolean、@integrer、@float、@string、@date、@time的函数，选择这些函数后，可以随机生成对应类型的值，如@integer随机生成整数值，可以几个组合起来拼接成字符串。
 如图5-1，添加了两个QUERY参数，一个键为pretty, 值为@booleam；一个键为serverName，值为date@time，执行用例后，可在响应体的【请求内容】选项卡中查看这些函数生成的随机值，如图5-2的【请求内容】所示。
@@ -532,5 +532,5 @@ cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.0030912
 ![配置请求内容中查看函数输出地址](../img/tutorial/use_function/请求内容中查看函数输出.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图5-2 请求内容中查看函数输出</font><br>
 
-## 6. 总结
+## 6 总结
 以上通过InfluxDB的接口测试场景演示了变量和JMeter函数在MeterSphere中的使用，如何设置，如何在请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中引用使用，以及MockJS函数的使用， 希望对大家有帮助。

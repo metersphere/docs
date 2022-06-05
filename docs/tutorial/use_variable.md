@@ -1,6 +1,6 @@
 在MeterSphere接口测试中如何设置使用变量
 
-## 1. 设置使用变量
+## 1 设置使用变量
 ### 1.1 设置和使用环境变量
 在MeterSphere中有如下环境变量设置：
 
@@ -166,7 +166,7 @@ JMeter BeanShell内置变量的使用范围为前置操作脚本和后置操作�
 ![配置前置操作脚本中使用BeanShell内置变量地址](../img/tutorial/use_variable/前置操作脚本中使用BeanShell内置变量.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图1-9 前置操作脚本中使用BeanShell内置变量</font><br>
 
-## 2. 变量设置使用示例
+## 2 变量设置使用示例
 接下来我们将在InfluxDB接口测试场景中演示变量的具体使用方法。
 
 假设我们是InfluxDB测试团队，现在要对InfluxDB支持的一系列操作进行测试，包括创建database、查询database列表、写入主机监控点数据等。
@@ -410,5 +410,5 @@ vars.put("pointTime", String.valueOf(pointTime));
 ![配置查看循环2控制台输出-请求内容中场景变量值地址](../img/tutorial/use_variable/查看循环2控制台输出-请求内容中场景变量值.png){:height="100%" width="70%"} <br>
 <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-34 查看循环2控制台输出-请求内容中场景变量值</font><br>
 
-## 3. 总结
+## 3 总结
 本篇总结了在MeterSphere中使用各类变量的方式和方法，并通过InfluxDB的接口测试场景进行了详细的演示。大家可以通过保存并阅读、学习这篇文章，在实现接口测试用例和自动化测试场景时，查阅、复制粘贴，缩短试错和摸索的时间。希望本文能对大家有所帮助。
