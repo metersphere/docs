@@ -74,20 +74,20 @@ MeterSphere的接口测试、性能测试均基于JMeter实现，兼容JMeter中
 在【项目环境】页面中，如图2-1所示，可以选择【创建环境】打开如图2-2所示【创建环境】对话框，在对话框中【通用配置】选项卡下配置环境变量。也可选择要设置变量的环境，选择【编辑】按钮打开如图2-3所示【配置环境】对话框，在对话框中【通用配置】选项卡下配置环境变量。<br>
 
 ![配置项目环境管理页面地址](../img/tutorial/use_function/项目环境管理页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-1 项目环境管理页面</font><br>
+<font size=2 class="png-lable-span">图2-1 项目环境管理页面</font><br>
 ![配置创建环境对话框地址](../img/tutorial/use_function/创建环境对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-2 创建环境对话框</font><br>
+<font size=2 class="png-lable-span">图2-2 创建环境对话框</font><br>
 ![配置配置环境对话框地址](../img/tutorial/use_function/配置环境对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-3 配置环境对话框</font><br>
+<font size=2 class="png-lable-span">图2-3 配置环境对话框</font><br>
 
 也可以在接口用例页面中，如图2-4所示，在右上角【保存】按钮旁，打开运行环境下拉列表，在列表中选择【环境配置】打开【环境配置】对话框，如图2-5所示，在对话框中【通用配置】选项卡中设置环境变量。
 
 ![配置接口用例页面地址](../img/tutorial/use_function/接口用例页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-4 接口用例页面</font><br>
+<font size=2 class="png-lable-span">图2-4 接口用例页面</font><br>
 ![配置环境配置对话框地址](../img/tutorial/use_function/环境配置对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-5 环境配置对话框</font><br>
+<font size=2 class="png-lable-span">图2-5 环境配置对话框</font><br>
 
-#### <font size=4> 2.1.2 在前后置脚本中设置使用 </font>
+<font size=4> 2.1.2 在前后置脚本中设置使用 </font>
 在前后置脚本中，可使用BeanShell内置变量vars的put方法进行设置，如图2-6示。
 ```
 vars.put("变量名", 变量值); //注意：变量值需为字符串类型
@@ -100,14 +100,14 @@ log.info("cpuUsage="+cpuUsage);
 vars.put("usage", cpuUsage);
 ```
 ![配置前置脚本中设置变量地址](../img/tutorial/use_function/前置脚本中设置变量.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-6 前置脚本中设置变量</font><br>
+<font size=2 class="png-lable-span">图2-6 前置脚本中设置变量</font><br>
 
-#### <font size=4> 2.1.3 在场景变量中设置使用 </font>
+<font size=4> 2.1.3 在场景变量中设置使用 </font>
 在接口自动化的场景中，可以在场景变量中设置变量，之后在场景中导入的接口用例、自定义请求中的QUERY参数、REST参数、请求体、前后置脚本中引用使用。如图2-7所示，在【创建场景】页面中，选择【场景变量】打开【场景变量】对话框，如图2-8所示，在对话框中添加管理变量。可添加常量、列表、CSV、计数器、随机数变量。
 ![配置创建场景页面地址](../img/tutorial/use_function/创建场景页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-7 创建场景页面</font><br>
+<font size=2 class="png-lable-span">图2-7 创建场景页面</font><br>
 ![配置场景变量对话框地址](../img/tutorial/use_function/场景变量对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-8 场景变量对话框</font><br>
+<font size=2 class="png-lable-span">图2-8 场景变量对话框</font><br>
 
 ### 2.2 使用BeanShell内置变量
 对于JMeter BeanShell的内置变量，使用范围为前置操作脚本、后置操作脚本中。常用的内置变量有以下变量。可使用vars获取变量值、设置变量，如图2-9所示。调试脚本时使用log打印查看变量值。在后置脚本中，使用prev获取调用接口后返回的信息和响应码。
@@ -146,24 +146,24 @@ vars.put("usage", cpuUsage);
 </table>  
 
 ![配置前置操作脚本中使用BeanShell内置变量地址](../img/tutorial/use_function/前置操作脚本中使用BeanShell内置变量.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-9 前置操作脚本中使用BeanShell内置变量</font><br>
+<font size=2 class="png-lable-span">图2-9 前置操作脚本中使用BeanShell内置变量</font><br>
 
 ### 2.3 设置使用JMeter函数
 对于JMeter函数，在MeterSphere中，可在接口、接口用例的请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中设置使用。<br>
 在QUERY参数、REST参数中设置使用时，选择如图2-10所示的【编辑】按钮打开【参数设置】对话框，在对话框中选择设置，如图2-11所示。<br>
 设置之后，执行用例时，会使用JMeter函数生成的值发出请求。<br>
 ![配置选择打开【参数设置】对话框地址](../img/tutorial/use_function/选择打开【参数设置】对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-10 选择打开【参数设置】对话框</font><br>
+<font size=2 class="png-lable-span">图2-10 选择打开【参数设置】对话框</font><br>
 ![配置参数设置-设置JMeter函数地址](../img/tutorial/use_function/参数设置-设置JMeter函数.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-11 参数设置-设置JMeter函数</font><br>
+<font size=2 class="png-lable-span">图2-11 参数设置-设置JMeter函数</font><br>
 
 ### 2.4 设置使用MockJS函数
 对于MockJS函数，在MeterSphere中，在请求参数的QUERY参数、REST参数值设置时使用。MockJS函数，请加参数设置页面中列表，如图2-13所示。可将MockJS设置到参数值中，在请求时，随机生成布尔值、自然数、整数、浮点数、字符、字符串、日期、时间、日期时间、当前时间等参数值，使用生成的参数值发出请求。<br>
 需要注意的是，在请求体和前后置脚本中，不能使用MockJS函数，可以使用JMeter函数。
 ![配置选择打开【参数设置】对话框地址](../img/tutorial/use_function/选择打开【参数设置】对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-12 选择打开【参数设置】对话框</font><br>
+<font size=2 class="png-lable-span">图2-12 选择打开【参数设置】对话框</font><br>
 ![配置参数设置-选择MockJS函数地址](../img/tutorial/use_function/参数设置-选择MockJS函数.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-13 参数设置-选择MockJS函数</font><br>
+<font size=2 class="png-lable-span">图2-13 参数设置-选择MockJS函数</font><br>
 
 以下通过一些场景示例演示具体引用使用变量、JMeter函数的方法。
 
@@ -183,7 +183,7 @@ systemctl start influxdb
 ### 3.1 设置使用环境变量示例
 以下我们用创建InfluxDB DEV测试环境，设置dbname环境变量，以及创建Influxdb database接口测试用例，演示设置环境变量，及在请求参数之QUERY参数中引用变量、在请求参数之请求体中引用、在请求参数之前后置BeanShell脚本中引用。
 
-#### <font size=4> 3.1.1 设置环境变量 </font>
+<font size=4> 3.1.1 设置环境变量 </font>
 下面我们先在登陆MeterSphere进入指定工作空间下后，创建一个InfluxDB测试环境，并在测试环境中的设置dbname环境变量，后续在各个API接口测试用例中引用这个变量创建database，向其中写入监控数据，从中获取监控数据。操作步骤如下。<br>
 （1）在【项目设置】下选择【项目环境】打开【项目环境】页面，如图3-1所示。<br>
 （2）在【项目环境】页面中，选择【创建环境】按钮打开【创建环境】对话框，如图3-2所示。<br>
@@ -195,17 +195,17 @@ systemctl start influxdb
 
 （4）最后，点击【确定】按钮完成【InfluxDB DEV测试环境】的创建，在如图3-4, 3-5所示页面中，可看到新建的【InfluxDB DEV测试环境】。<br>
 ![配置【项目环境】页面地址](../img/tutorial/use_function/【项目环境】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-1 【项目环境】页面</font><br>
+<font size=2 class="png-lable-span">图3-1 【项目环境】页面</font><br>
 ![配置【创建环境】对话框地址](../img/tutorial/use_function/【创建环境】对话框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-2 【创建环境】对话框</font><br>
+<font size=2 class="png-lable-span">图3-2 【创建环境】对话框</font><br>
 ![配置【HTTP配置】选项卡地址](../img/tutorial/use_function/【HTTP配置】选项卡.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-3 【HTTP配置】选项卡</font><br>
+<font size=2 class="png-lable-span">图3-3 【HTTP配置】选项卡</font><br>
 ![配置完成【HTTP配置】选项卡-添加环境域名地址](../img/tutorial/use_function/完成【HTTP配置】选项卡-添加环境域名.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-4 完成【HTTP配置】选项卡-添加环境域名</font><br>
+<font size=2 class="png-lable-span">图3-4 完成【HTTP配置】选项卡-添加环境域名</font><br>
 ![配置完成环境创建地址](../img/tutorial/use_function/完成环境创建.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-5 完成环境创建</font><br>
+<font size=2 class="png-lable-span">图3-5 完成环境创建</font><br>
 
-#### <font size=4> 3.1.2 在请求体中引用环境变量 </font>
+<font size=4> 3.1.2 在请求体中引用环境变量 </font>
 前面已创建【InfluxDB DEV测试环境】，这里我们以创建【InfluxDB查询接口】及【InfluxDB查询数据库接口用例】演示在前后置脚本中设置变量，以及给后面演示引用获取使用变量使用。
 
 操作步骤如下。
@@ -215,17 +215,17 @@ systemctl start influxdb
 （2）在【接口列表】页面中，选择【+】下【创建接口】选项，打开【创建接口】页面，如图3-7所示，在页面中输入接口名称【InfluxDB Query POST接口】，请求协议选择【POST】，请求路径输入框输入【/query】，如图3-7所示，然后选择页面右上角的【保存】按钮，打开【编辑接口】页面，如图3-8所示。
 
 ![配置【接口列表】页面地址](../img/tutorial/use_function/【接口列表】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-6 【接口列表】页面</font><br>
+<font size=2 class="png-lable-span">图3-6 【接口列表】页面</font><br>
 ![配置【创建接口】页面地址](../img/tutorial/use_function/【创建接口】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-7 【创建接口】页面</font><br>
+<font size=2 class="png-lable-span">图3-7 【创建接口】页面</font><br>
 ![配置【编辑接口】页面地址](../img/tutorial/use_function/【编辑接口】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-8 【编辑接口】页面</font><br>
+<font size=2 class="png-lable-span">图3-8 【编辑接口】页面</font><br>
 
 （3）在【编辑接口】页面中，选择【CASE】标签打开【接口用例列表】页面，如图3-9所示，在页面中，选择【+添加】按钮，打开【创建用例】页面，如图3-10所示。
 ![配置【接口用例】页面地址](../img/tutorial/use_function/【接口用例】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-9 【接口用例】页面</font><br>
+<font size=2 class="png-lable-span">图3-9 【接口用例】页面</font><br>
 ![配置【创建接口用例】页面地址](../img/tutorial/use_function/【创建接口用例】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-10 【创建接口用例】页面</font><br>
+<font size=2 class="png-lable-span">图3-10 【创建接口用例】页面</font><br>
 
 （4）在【创建接口用例】页面中，如图3-10所示，
 
@@ -235,15 +235,15 @@ systemctl start influxdb
 
 然后点击【保存】按钮，点击蓝色的【执行】按钮执行。<br>
 ![配置选择环境地址](../img/tutorial/use_function/选择环境.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-11 选择环境</font><br>
+<font size=2 class="png-lable-span">图3-11 选择环境</font><br>
 ![配置设置请求体-引用dbname变量地址](../img/tutorial/use_function/设置请求体-引用dbname变量.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-12 设置请求体-引用dbname变量</font><br>
+<font size=2 class="png-lable-span">图3-12 设置请求体-引用dbname变量</font><br>
 
 （5）执行后，在【接口用例】执行页面中，如图3-13所示，可在最下方【响应内容】部分看到【响应体】，状态码为200，说明执行成功。
 
 以上演示了在环境中设置了dbname变量，设置要创建使用的database名字为monitoringdb，然后在【创建database接口用例】的请求体中，通过【create database ${dbname}】引用了dbname变量，执行后，成功在influxDB中创建了database monitoringdb。
 ![配置执行接口用例完毕地址](../img/tutorial/use_function/执行接口用例完毕.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-13 执行接口用例完毕</font><br>
+<font size=2 class="png-lable-span">图3-13 执行接口用例完毕</font><br>
 
 我们可以用以下curl命令调用influxDB query接口API查看databases列表，可以看到输出中，monitoringdb已被创建成功，如图3-14所示。
 ```
@@ -251,9 +251,9 @@ systemctl start influxdb
 curl -G 'http://10.1.13.12:8086/query?pretty=true' --data-urlencode "q=show databases"
 ```
 ![配置curl命令调用influxdb API查询database列表地址](../img/tutorial/use_function/curl命令调用influxdb API查询database列表.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-14 curl命令调用influxdb API查询database列表</font><br>
+<font size=2 class="png-lable-span">图3-14 curl命令调用influxdb API查询database列表</font><br>
 
-#### <font size=4> 3.1.3 在前后置脚本中引用环境变量并debug打印查看变量值 </font>
+<font size=4> 3.1.3 在前后置脚本中引用环境变量并debug打印查看变量值 </font>
 接上面完成【创建database接口用例】执行，接下来通过【查看database列表接口用例】演示在前后置脚本中引用环境变量并打印到控制台查看变量值，调试脚本时，经常需要打印查看变量值。我们将会在【查看database列表接口用例】实现中，在前置BeanShell脚本中获取dbname变量的值，并打印到控制台，在后置Python脚本中，获取dbname变量的值，并打印到控制台。<br>
 
 操作步骤如下。
@@ -261,7 +261,7 @@ curl -G 'http://10.1.13.12:8086/query?pretty=true' --data-urlencode "q=show data
 （1）如图3-15所示，创建接口【InfluxDB Query GET接口】，选择请求的协议为【GET】，请求路径输入【/query】，然后选择【保存】，打开【InfluxDB Query GET接口用例列表】页面，如图3-16所示。
 
 ![配置创建【InfluxDB Query GET接口】地址](../img/tutorial/use_function/创建【InfluxDB Query GET接口】.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-15 创建【InfluxDB Query GET接口】</font><br>
+<font size=2 class="png-lable-span">图3-15 创建【InfluxDB Query GET接口】</font><br>
 
 （2）在【InfluxDB Query GET接口用例列表】页面，点击【+添加】按钮，打开【接口用例】页面，如图3-17所示，
   
@@ -274,11 +274,11 @@ curl -G 'http://10.1.13.12:8086/query?pretty=true' --data-urlencode "q=show data
  （3）执行完毕后，在页面【响应内容】下【响应体】选项卡中可看到接口用例执行后的接口返回响应内容，如图3-18所示，可以看到之前调用接口创建的monitoringdb datbase。
 
 ![配置【InfluxDB Query GET接口用例列表】页面地址](../img/tutorial/use_function/【InfluxDB Query GET接口用例列表】页面.png){:height="100%" width="70%"} <br>
- <font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-16 【InfluxDB Query GET接口用例列表】页面</font><br>
+ <font size=2 class="png-lable-span">图3-16 【InfluxDB Query GET接口用例列表】页面</font><br>
 ![配置【查询database列表接口用例】页面地址](../img/tutorial/use_function/【查询database列表接口用例】页面.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-17 【查询database列表接口用例】页面</font><br>
+<font size=2 class="png-lable-span">图3-17 【查询database列表接口用例】页面</font><br>
 ![配置【查询database列表接口用例】执行成功后响应体地址](../img/tutorial/use_function/【查询database列表接口用例】执行成功后响应体.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-18 【查询database列表接口用例】执行成功后响应体</font><br>
+<font size=2 class="png-lable-span">图3-18 【查询database列表接口用例】执行成功后响应体</font><br>
 
 （4）在【查询database列表接口用例】页面中，在【请求参数】下【前置操作】标签打开【前置操作】选项卡，如图3-19所示，在选项卡中，选择【添加】按钮添加前置脚本，然后，如图3-20所示，点击前置脚本展开文本内容框，如图3-21所示。
 
@@ -293,15 +293,15 @@ dbname2=vars.get("dbname");
 log.info("dbname2="+dbname2);
 ```
 ![配置【查询database列表接口用例】前置操作选项卡地址](../img/tutorial/use_function/【查询database列表接口用例】前置操作选项卡.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-19 【查询database列表接口用例】前置操作选项卡</font><br>
+<font size=2 class="png-lable-span">图3-19 【查询database列表接口用例】前置操作选项卡</font><br>
 ![配置添加前置脚本完成地址](../img/tutorial/use_function/添加前置脚本完成.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-20 添加前置脚本完成</font><br>
+<font size=2 class="png-lable-span">图3-20 添加前置脚本完成</font><br>
 ![配置展开前置脚本文本框地址](../img/tutorial/use_function/展开前置脚本文本框.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-21 展开前置脚本文本框</font><br>
+<font size=2 class="png-lable-span">图3-21 展开前置脚本文本框</font><br>
 ![配置设置前置脚本内容地址](../img/tutorial/use_function/设置前置脚本内容.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-22 设置前置脚本内容</font><br>
+<font size=2 class="png-lable-span">图3-22 设置前置脚本内容</font><br>
 ![配置响应内容-控制台输出地址](../img/tutorial/use_function/响应内容-控制台输出.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-23 响应内容-控制台输出</font><br>
+<font size=2 class="png-lable-span">图3-23 响应内容-控制台输出</font><br>
 
 ### 3.2 在前后置脚本中设置使用变量示例
 在前后置脚本中，可以使用BeanShell内置变量进行设置。这里我们以InfluxDB写入接口测试场景演示。我们现在实现一个写入接口用例，在前置脚本中计算生成监控cpu usage，并设置到usage变量中，之后在请求体中引用使用。
@@ -326,11 +326,11 @@ cpu_usage,host=10.1.13.131,app=dataease value=${usage} ${__time()}000000
 
 （3）执行用例并查看控制台输出、请求体内容，如图3-25、3-26所示。
 ![配置设置前置脚本-设置usage变量地址](../img/tutorial/use_function/设置前置脚本-设置usage变量.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-24 设置前置脚本-设置usage变量</font><br>
+<font size=2 class="png-lable-span">图3-24 设置前置脚本-设置usage变量</font><br>
 ![配置控制台中打印cpuUsage值地址](../img/tutorial/use_function/控制台中打印cpuUsage值.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-25 控制台中打印cpuUsage值</font><br>
+<font size=2 class="png-lable-span">图3-25 控制台中打印cpuUsage值</font><br>
 ![配置响应内容-查看请求体中变量值地址](../img/tutorial/use_function/响应内容-查看请求体中变量值.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-26 响应内容-查看请求体中变量值</font><br>
+<font size=2 class="png-lable-span">图3-26 响应内容-查看请求体中变量值</font><br>
 
 ### 3.3 在自动化场景中设置使用变量示例
 在自动化场景中可设置场景变量，在导入场景的接口用例请求参数中、自定义请求中使用。在场景变量中，由于需要在编排的多个任务中需要，因此除了常量类型外，还支持列表、CSV、计数器、随机数类型的变量。<br>
@@ -350,20 +350,20 @@ cpu_usage,host=10.1.13.131,app=dataease value=${usage} ${__time()}000000
 
 添加常量hostIP，值设置为10.1.13.131，如图3-27所示。
 ![配置添加变量hostIP地址](../img/tutorial/use_function/添加变量hostIP.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-27 添加变量hostIP</font><br>
+<font size=2 class="png-lable-span">图3-27 添加变量hostIP</font><br>
 ![配置添加计数器变量counter地址](../img/tutorial/use_function/添加计数器变量counter.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-28 添加计数器变量counter</font><br>
+<font size=2 class="png-lable-span">图3-28 添加计数器变量counter</font><br>
 ![配置添加随机数变量cpuUsage地址](../img/tutorial/use_function/添加随机数变量cpuUsage.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-29 添加随机数变量cpuUsage</font><br>
+<font size=2 class="png-lable-span">图3-29 添加随机数变量cpuUsage</font><br>
 ![配置添加循环控制器地址](../img/tutorial/use_function/添加循环控制器.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-30 添加循环控制器</font><br>
+<font size=2 class="png-lable-span">图3-30 添加循环控制器</font><br>
 
 （4）导入之前已创建的接口用例【写入虚拟机某分钟CPU使用率监控数据】，导入时选择【复制】，导入之后添加到循环控制器下，之后修改请求体，设置请求体内容为以下内容，如图3-31所示。
 ```
 cpu_usage,host=${hostIP},app=dataease value=${cpuUsage} ${pointTime}000000000
 ```
 ![配置设置请求体址](../img/tutorial/use_function/设置请求体.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-31 设置请求体</font><br>
+<font size=2 class="png-lable-span">图3-31 设置请求体</font><br>
 
 （5）设置接口用例的前置脚本，脚本类型选择BeanShell，内容填写以下内容，如图3-32所示。
 ```
@@ -381,13 +381,14 @@ log.info("pointTime=" + String.valueOf(pointTime));
 vars.put("pointTime", String.valueOf(pointTime));
 ```
 ![配置设置前置BeanShell脚本体地址](../img/tutorial/use_function/设置前置BeanShell脚本.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-32 设置前置BeanShell脚本</font><br>
+<font size=2 class="png-lable-span">图3-31 设置请求体</font><br>
+<font size=2 class="png-lable-span">图3-32 设置前置BeanShell脚本</font><br>
 
 （6）运行环境选择【InfluxDB DEV测试环境】，执行循环控制器，执行完毕后查看响应内容。在【响应内容】面板的【控制台】输出中可以看到，如图3-33所示，循环2的计数器变量的值为2，随机数变量的值为99，计算出的pointTime为1653148980，使用date -d @1653148980 查看时间为【Sun May 22 00:03:00 CST 2022】。在【请求内容】选项卡中，如图3-34所示，可看到请求内容里，场景变量${hostIP}、${cpuUsage}、均被替换为场景变量的值和根据计数器变量值计算出的时间点值。
 ![配置查看循环2控制台输出-场景变量值地址](../img/tutorial/use_function/查看循环2控制台输出-场景变量值.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-33 查看循环2控制台输出-场景变量值</font><br>
+<font size=2 class="png-lable-span">图3-33 查看循环2控制台输出-场景变量值</font><br>
 ![配置查看循环2控制台输出-请求内容中场景变量值地址](../img/tutorial/use_function/查看循环2控制台输出-请求内容中场景变量值.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图3-34 查看循环2控制台输出-请求内容中场景变量值</font><br>
+<font size=2 class="png-lable-span">图3-34 查看循环2控制台输出-请求内容中场景变量值</font><br>
 
 ## 4 JMeter函数使用示例
 
@@ -447,19 +448,19 @@ vars.put("pointTime", String.valueOf(pointTime));
     </tr>
     <tr>
         <td >在请求参数之前后置BeanShell脚本中引用</td>
-        <td >//BeanShell注意事项 <br>
-             //1. 每行须以分号结尾 <br>
-             //2. 注释是// <br>
+        <td >BeanShell注意事项 <br>
+             1.每行须以分号结尾 <br>
+             2.注释是// <br>
              uuid="${__UUID}"; <br>
-             //打印到控制台输出查看变量值，调试时用 <br>
+             打印到控制台输出查看变量值，调试时用 <br>
              log.info("uuid="+uuid);
         </td>
     </tr>
     <tr>
        <td >在请求参数之前后置Python脚本中引用</td>
-       <td >#获取变量值<br>
+       <td >获取变量值<br>
             uuid="${__UUID}";<br>
-            #打印到控制台输出查看变量值，调试时用<br>
+            打印到控制台输出查看变量值，调试时用<br>
             log.info("uuid="+uuid);
        </td>
     </tr>
@@ -476,9 +477,9 @@ log.info("strTime="+strTime);
 log.info("--------pre script end-------------");
 ```
 ![配置在前置脚本中使用JMeter函数地址](../img/tutorial/use_function/在前置脚本中使用JMeter函数.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-1 在前置脚本中使用JMeter函数</font><br>
+<font size=2 class="png-lable-span">图4-1 在前置脚本中使用JMeter函数</font><br>
 ![配置控制台输出JMeter函数地址](../img/tutorial/use_function/控制台输出JMeter函数.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-2 控制台输出JMeter函数</font><br>
+<font size=2 class="png-lable-span">图4-2 控制台输出JMeter函数</font><br>
 
 ### 4.3 使用JMeter函数做InfluxDB写入接口测试
 下面用InfluxDB写入接口测试场景演示变量和JMeter函数的使用。
@@ -503,21 +504,21 @@ curl -i -XPOST 'http://10.1.13.12:8086/write?db=monitoringdb' --data-binary 'cpu
 使用JMeter函数_UUID做为host ID，使用_time函数生成13位的时间戳，使用usage变量，usage变量在前置脚本中使用python random函数计算，保存在usage变量中。
 
 ![配置创建写入接口地址](../img/tutorial/use_function/创建写入接口.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-3 创建写入接口</font><br>
+<font size=2 class="png-lable-span">图4-3 创建写入接口</font><br>
 ![配置选择创建写入接口用例地址](../img/tutorial/use_function/选择创建写入接口用例.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-4 选择创建写入接口用例</font><br>
+<font size=2 class="png-lable-span">图4-4 选择创建写入接口用例</font><br>
 ![配置设置QUERY参数db地址](../img/tutorial/use_function/设置QUERY参数db.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-5 设置QUERY参数db</font><br>
+<font size=2 class="png-lable-span">图4-5 设置QUERY参数db</font><br>
 ![配置设置请求体-监控数据地址](../img/tutorial/use_function/设置请求体-监控数据.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-6 设置请求体-监控数据</font><br>
+<font size=2 class="png-lable-span">图4-6 设置请求体-监控数据</font><br>
 ![配置设置前置python脚本-生成usage并保存到变量地址](../img/tutorial/use_function/设置前置python脚本-生成usage并保存到变量.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-7 设置前置python脚本-生成usage并保存到变量</font><br>
+<font size=2 class="png-lable-span">图4-7 设置前置python脚本-生成usage并保存到变量</font><br>
 
 （4）保存并执行用例，在【响应内容】下【请求内容】中查看请求内容POST data，如图4-8所示，可以看到使用JMeter函数生成的数值以及python random函数生成的值。
 
 cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.00309123923176 1652670605313000000 <br>
 ![配置查看请求内容地址](../img/tutorial/use_function/查看请求内容.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图4-8 查看请求内容</font><br>
+<font size=2 class="png-lable-span">图4-8 查看请求内容</font><br>
 
 ## 5 MockJS函数使用示例
 
@@ -528,9 +529,9 @@ cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.0030912
   * serverName的date@time函数生成的是gl8Im02011-12-2116:10:31
 
 ![配置MockJS函数(以@开头)地址](../img/tutorial/use_function/MockJS函数(以@开头).png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图5-1 MockJS函数(以@开头)</font><br>
+<font size=2 class="png-lable-span">图5-1 MockJS函数(以@开头)</font><br>
 ![配置请求内容中查看函数输出地址](../img/tutorial/use_function/请求内容中查看函数输出.png){:height="100%" width="70%"} <br>
-<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图5-2 请求内容中查看函数输出</font><br>
+<font size=2 class="png-lable-span">图5-2 请求内容中查看函数输出</font><br>
 
 ## 6 总结
 以上通过InfluxDB的接口测试场景演示了变量和JMeter函数在MeterSphere中的使用，如何设置，如何在请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中引用使用，以及MockJS函数的使用， 希望对大家有帮助。
