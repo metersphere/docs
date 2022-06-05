@@ -117,3 +117,9 @@
 .md-top {
   margin-top: 2rem;
 }
+
+.x-pack-span {
+  background-color: #783887;
+  padding: 2px 5px;
+  color: #ffffff;
+}
