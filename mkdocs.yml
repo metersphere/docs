@@ -108,6 +108,8 @@ nav:
           - 使用 MeterSphere 进行 Dubbo 接口测试: tutorial/dubbo.md
           - 使用 MeterSphere 进行场景化接口测试: tutorial/api_testing.md
           - 使用预执行脚本功能生成接口认证签名: tutorial/pre_processor.md
+          - 在MeterSphere接口测试中如何设置使用变量: tutorial/use_variable.md
+          - 在MeterSphere中如何使用变量及JMeter、MockJS函数: tutorial/use_function.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md
