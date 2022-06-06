@@ -221,7 +221,7 @@ systemctl start influxdb
 ![配置【编辑接口】页面地址](../img/tutorial/use_function/【编辑接口】页面.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-8 【编辑接口】页面</font><br>
 
-（3）在【编辑接口】页面中，选择【CASE】标签打开【接口用例列表】页面，如图3-9所示，在页面中，选择【+添加】按钮，打开【创建用例】页面，如图3-10所示。
+（3）在【编辑接口】页面中，选择【CASE】标签打开【接口用例列表】页面，如图3-9所示，在页面中，选择【+添加】按钮，打开【创建用例】页面，如图3-10所示。<br>
 ![配置【接口用例】页面地址](../img/tutorial/use_function/【接口用例】页面.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-9 【接口用例】页面</font><br>
 ![配置【创建接口用例】页面地址](../img/tutorial/use_function/【创建接口用例】页面.png){:height="100%" width="70%"} <br>

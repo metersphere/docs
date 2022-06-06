@@ -64,7 +64,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持查看用例变更历史</td>
     </tr>
     <tr>
-        <td>通过Excel、XMind格式快速导入、导出用例</td>
+        <td>通过Excel、XMind 格式快速导入、导出用例</td>
     </tr>
     <tr>
         <td>用例批量处理：编辑、移动、删除</td>
