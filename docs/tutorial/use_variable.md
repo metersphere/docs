@@ -146,9 +146,9 @@ JMeter BeanShell内置变量的使用范围为前置操作脚本和后置操作�
     <tr>
         <td >prev <br>
              获取之前Sampler返回的信息 </td>
-        <td >获取相应信息：<br>
+        <td >获取响应信息：<br>
              prev.getResponseDataAsString();<br>
-             获取相应Code码：<br>
+             获取响应Code码：<br>
              prev.getResponseCode();</td>
     </tr>
     <tr>
