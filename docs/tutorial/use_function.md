@@ -1,5 +1,5 @@
 ## 1 目的
-MeterSphere的接口测试、性能测试均基于JMeter实现，兼容JMeter中的函数。在使用MeterSphere做接口测试、准备测试数据时，经常需要使用变量JMeter函数构造生成接口测试的测试数据，过程中经常需要查看具体的变量及JMeter使用范围方法和试验摸索一些具体的使用范围方法，为了备忘、方便查看了解具体的使用范围及方法、让大家减少一些摸索试验的时间，写了这个专题做一个集中深入详细的总结和演示，希望对大家有所帮助。
+MeterSphere的接口测试、性能测试均基于JMeter实现，兼容JMeter中的函数。在使用MeterSphere做接口测试、准备测试数据时，经常需要使用变量JMeter函数构造生成接口测试的测试数据，过程中经常需要查看具体的变量及JMeter函数使用范围方法和试验摸索一些具体的使用范围方法，为了备忘、方便查看了解具体的使用范围及方法、让大家减少一些摸索试验的时间，写了这个专题做一个集中深入详细的总结和演示，希望对大家有所帮助。
 
 ## 2 变量和JMeter函数的设置使用
 
@@ -530,10 +530,10 @@ cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.0030912
 ## 5 MockJS函数使用示例
 
 我们在设置请求参数时，点击到值输入框后，会列出来一堆@boolean、@integrer、@float、@string、@date、@time的函数，选择这些函数后，可以随机生成对应类型的值，如@integer随机生成整数值，可以几个组合起来拼接成字符串。
-如图5-1，添加了两个QUERY参数，一个键为pretty, 值为@booleam；一个键为serverName，值为date@time，执行用例后，可在响应体的【请求内容】选项卡中查看这些函数生成的随机值，如图5-2的【请求内容】所示。
+如图5-1，添加了两个QUERY参数，一个键为pretty, 值为@booleam；一个键为serverName，值为@date@time，执行用例后，可在响应体的【请求内容】选项卡中查看这些函数生成的随机值，如图5-2的【请求内容】所示。
 
   * pretty的@boolean函数生成的是false。
-  * serverName的date@time函数生成的是gl8Im02011-12-2116:10:31
+  * serverName的@date@time函数生成的是gl8Im02011-12-2116:10:31
 
 ![配置MockJS函数(以@开头)地址](../img/tutorial/use_function/MockJS函数(以@开头).png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图5-1 MockJS函数(以@开头)</font><br>
