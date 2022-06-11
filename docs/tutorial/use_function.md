@@ -104,7 +104,6 @@ vars.put("usage", cpuUsage);
 
 <font size=4> 2.1.3 在场景变量中设置使用 </font>
 在接口自动化的场景中，可以在场景变量中设置变量，之后在场景中导入的接口用例、自定义请求中的QUERY参数、REST参数、请求体、前后置脚本中引用使用。如图2-7所示，在【创建场景】页面中，选择【场景变量】打开【场景变量】对话框，如图2-8所示，在对话框中添加管理变量。可添加常量、列表、CSV、计数器、随机数变量。
-
 ![配置创建场景页面地址](../img/tutorial/use_function/创建场景页面.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图2-7 创建场景页面</font><br>
 ![配置场景变量对话框地址](../img/tutorial/use_function/场景变量对话框.png){:height="100%" width="70%"} <br>
@@ -132,9 +131,9 @@ vars.put("usage", cpuUsage);
     <tr>
         <td >prev <br>
              获取之前Sampler返回的信息 </td>
-        <td >//获取响应信息：<br>
+        <td >//获取相应信息：<br>
              prev.getResponseDataAsString();<br>
-             //获取响应Code码：<br>
+             //获取相应Code码：<br>
              prev.getResponseCode();</td>
     </tr>
     <tr>
@@ -352,17 +351,10 @@ cpu_usage,host=10.1.13.131,app=dataease value=${usage} ${__time()}000000
 添加常量hostIP，值设置为10.1.13.131，如图3-27所示。
 ![配置添加变量hostIP地址](../img/tutorial/use_function/添加变量hostIP.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-27 添加变量hostIP</font><br>
-
-添加常量startTime，值设置为1653148860。<br>
-添加计数器变量counter，从0到59，每次循环加1，如图3-28所示。<br>
 ![配置添加计数器变量counter地址](../img/tutorial/use_function/添加计数器变量counter.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-28 添加计数器变量counter</font><br>
-
-添加随机数变量cpuUsage，最小值为1，最大值为99,如图3-29所示。
 ![配置添加随机数变量cpuUsage地址](../img/tutorial/use_function/添加随机数变量cpuUsage.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-29 添加随机数变量cpuUsage</font><br>
-
-（3）添加循环控制器，设置使用次数循环，次数为60次，如图3-30所示。
 ![配置添加循环控制器地址](../img/tutorial/use_function/添加循环控制器.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-30 添加循环控制器</font><br>
 
@@ -389,6 +381,7 @@ log.info("pointTime=" + String.valueOf(pointTime));
 vars.put("pointTime", String.valueOf(pointTime));
 ```
 ![配置设置前置BeanShell脚本体地址](../img/tutorial/use_function/设置前置BeanShell脚本.png){:height="100%" width="70%"} <br>
+<font size=2 class="png-lable-span">图3-31 设置请求体</font><br>
 <font size=2 class="png-lable-span">图3-32 设置前置BeanShell脚本</font><br>
 
 （6）运行环境选择【InfluxDB DEV测试环境】，执行循环控制器，执行完毕后查看响应内容。在【响应内容】面板的【控制台】输出中可以看到，如图3-33所示，循环2的计数器变量的值为2，随机数变量的值为99，计算出的pointTime为1653148980，使用date -d @1653148980 查看时间为【Sun May 22 00:03:00 CST 2022】。在【请求内容】选项卡中，如图3-34所示，可看到请求内容里，场景变量${hostIP}、${cpuUsage}、均被替换为场景变量的值和根据计数器变量值计算出的时间点值。
