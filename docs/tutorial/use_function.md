@@ -106,8 +106,9 @@ log.info("--------pre script end-------------");
 <font size=2 class="png-lable-span">图2-3 选择打开【参数设置】对话框</font><br>
 ![配置参数设置-设置JMeter函数地址](../img/tutorial/use_function/参数设置-设置JMeter函数.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图2-4 参数设置-设置JMeter函数</font><br>
-![配置参数设置-输入$在下拉列表中选择JMeter函数](../img/tutorial/use_function/参数设置-在下拉列表中选择JMeter函数.png){:height="100%" width="70%"} <br>
-<font size=2 class="png-lable-span">图2-5 参数设置-输入$在下拉列表中选择JMeter函数</font><br>
+
+![配置参数设置-输入“\$”在下拉列表中选择JMeter函数](../img/tutorial/use_function/参数设置-在下拉列表中选择JMeter函数.png){:height="100%" width="70%"} <br>
+<font size=2 class="png-lable-span">图2-5 参数设置-输入“\$”在下拉列表中选择JMeter函数</font><br>
 
 
 ### 2.4 具体场景演示示例
