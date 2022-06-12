@@ -1,5 +1,3 @@
-在MeterSphere接口测试中如何设置使用变量
-
 ## 1 设置使用变量
 
 !!! info "在MeterSphere中有如下环境变量设置："
