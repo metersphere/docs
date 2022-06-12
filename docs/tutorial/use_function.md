@@ -150,7 +150,7 @@ cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.0030912
 ![配置查看请求内容地址](../img/tutorial/use_function/查看请求内容.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图2-11 查看请求内容</font><br>
 
-### 3 MockJS函数的设置使用
+## 3 MockJS函数的设置使用
 对于MockJS函数，在MeterSphere中，在请求参数的QUERY参数、REST参数值设置时使用。MockJS函数，请加参数设置页面中列表，如图2-13所示。可将MockJS设置到参数值中，在请求时，随机生成布尔值、自然数、整数、浮点数、字符、字符串、日期、时间、日期时间、当前时间等参数值，使用生成的参数值发出请求。<br>
 需要注意的是，在请求体和前后置脚本中，不能使用MockJS函数，可以使用JMeter函数。
 ![配置选择打开【参数设置】对话框地址](../img/tutorial/use_function/选择打开【参数设置】对话框.png){:height="100%" width="70%"} <br>
