@@ -158,7 +158,7 @@ cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.0030912
 ![配置参数设置-选择MockJS函数地址](../img/tutorial/use_function/参数设置-选择MockJS函数.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-2 参数设置-选择MockJS函数</font><br>
 
-也可以直接在在参数值的输入框输入“@”，之后从下拉MockJS函数列表中选择要使用的MockJS函数，如图3-3所示。
+也可以直接在在参数值的输入框输入“@”，之后从下拉MockJS函数列表中选择要使用的MockJS函数，如图3-3所示。<br>
 ![配置参数设置-输入@列出MockJS并选择](../img/tutorial/use_function/参数设置-列出MockJS并选择.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图3-3 参数设置-列出MockJS并选择</font><br>
 
