@@ -1,16 +1,14 @@
-在MeterSphere接口测试中如何设置使用变量
-
 ## 1 设置使用变量
 
 !!! info "在MeterSphere中有如下环境变量设置："
-    1.可以在环境中设置环境变量，在接口用例请求参数之QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中引用使用。在环境中设置的环境变量类型只支持常量类型，不支持列表、CSV、计数器、随机数类型；<br>
+    1.可以在环境中设置环境变量，在接口用例请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中引用使用。在环境中设置的环境变量类型只支持常量类型，不支持列表、CSV、计数器、随机数类型；<br>
     2.可以在前置脚本中设置用例变量，在用例的请求体、后置操作脚本中引用使用；<br>
     3.可以在场景中设置场景变量，在场景下的接口用例、自定义请求的请求参数中引用使用。除常量类型之外，场景变量还支持列表、CSV、计数器、随机数类型。<br>
 
 ### 1.1 设置和使用环境变量
 
 在MeterSphere中，可以设置“环境变量”，给使用指定同一测试环境参数测试的接口测试、场景自动化测试用例使用。
-下表为在请求参数之QUERY参数、REST参数、请求体、前后置BeanShell脚本、前后置Python脚本中引用、设置变量的方法，以及调试时打印变量值且能够到控制台查看、转换变量类型的常用方法。
+下表为在请求参数的QUERY参数、REST参数、请求体、前后置BeanShell脚本、前后置Python脚本中引用、设置变量的方法，以及调试时打印变量值且能够到控制台查看、转换变量类型的常用方法。
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
    引用使用
@@ -109,7 +107,7 @@ vars.put("变量名", 变量值);
 ```
 比如，要在调用InfluxDB write API写入监控数据前生成随机的cpu usage数据，可在前置脚本中生成随机数并设置到cpuUsage变量，之后调用接口时在请求体使用这个变量。
 ```
-#BeanShell
+//BeanShell
 cpuUsage=${__Random(1,99,usage)};
 log.info("cpuUsage="+cpuUsage);
 vars.put("usage", cpuUsage);
@@ -185,7 +183,7 @@ systemctl start influxdb
 接下来我们可以创建InfluxDB DEV测试环境，设置dbname环境变量，创建Influxdb database接口测试用例，演示设置环境变量，并在请求参数之QUERY参数、请求体、前后置BeanShell脚本中引用变量。
 
 <font size=4> 2.1.1 设置环境变量 </font>
-登录MeterSphere进入指定工作空间后，需要先创建一个InfluxDB测试环境，并在测试环境中设置dbname环境变量。后续需要在各个API接口测试用例中引用这个变量创建database，向其中写入监控设置，并从中获取监控数据。
+登录MeterSphere进入指定工作空间后，需要先创建一个InfluxDB测试环境，并在测试环境中设置dbname环境变量。后续需要在各个API接口测试用例中引用这个变量创建database，向其中写入监控数据，并从中获取监控数据。
 
 操作步骤如下：<br>
 1.在“项目设置”栏下选择“项目环境”一项，打开“项目环境”页面，如图2-1所示；
@@ -213,7 +211,7 @@ systemctl start influxdb
 <font size=2 class="png-lable-span">图2-5 完成环境创建</font><br>
 
 <font size=4>2.1.2 在请求体中引用环境变量 </font>
-创建“InfluxDB DEV测试环境”成功之后，我们可以接着以创建“InfluxDB查询接口”及“InfluxDB查询数据库接口用例”为例演示在前后置脚本中设置变量的过程，并为之后要进行的引用步骤演示如何获取所需的使用变量。
+创建“InfluxDB DEV测试环境”成功之后，我们可以接着以创建“InfluxDB查询接口”及“InfluxDB查询数据库接口用例”为例演示在前后置脚本中设置变量的过程，并在之后要进行的引用步骤演示如何获取所需的使用变量。
 
 操作步骤如下：
 
@@ -278,7 +276,7 @@ curl -G 'http://10.1.13.12:8086/query?pretty=true' --data-urlencode "q=show data
 
 ④ 点击右上角“保存”按钮，最后点击蓝色的“执行”按钮；
 
-3.执行完毕后，在页面“响应内容”下的“响应体”选项卡中，可以看到接口用例执行后的接口返回响应内容。如图2-18所示，可以看到之前调用接口创建的“monitoringdb datbase”；<br>
+3.执行完毕后，在页面“响应内容”下的“响应体”选项卡中，可以看到接口用例执行后的接口返回响应内容。如图2-18所示，可以看到之前调用接口创建的“monitoringdb database”；<br>
 ![配置“InfluxDB Query GET接口用例列表”页面地址](../img/tutorial/use_variable/“InfluxDB Query GET接口用例列表”页面.png){:height="100%" width="70%"} <br>
 <font size=2 class="png-lable-span">图2-16 “InfluxDB Query GET接口用例列表”页面</font><br>
 ![配置“查询database列表接口用例”页面地址](../img/tutorial/use_variable/“查询database列表接口用例”页面.png){:height="100%" width="70%"} <br>
@@ -311,7 +309,7 @@ log.info("dbname2="+dbname2);
 <font size=2 class="png-lable-span">图2-23 响应内容-控制台输出</font><br>
 
 ### 2.2 设置使用用例变量示例
-在前后置脚本中，可以使用BeanShell内置变量进行用例的设置使用。这里我们以InfluxDB写入接口测试场景为例演示，先实现写入一个接口用例，再在前置脚本中计算生成监控cpu usage，并设置到usage变量中，之后在请求体中引用使用。
+在前后置脚本中，可以使用BeanShell内置变量进行用例变量的设置使用。这里我们以InfluxDB写入接口测试场景为例演示，先实现一个写入接口用例，再在前置脚本中计算生成监控cpu usage，并设置到usage变量中，之后在请求体中引用使用。
 主要操作步骤如下（创建接口、接口用例，执行接口用例请参考上文中的具体步骤方法）：<br>
 
 1.创建InfluxDB写入接口，设置请求协议为POST、路径为/write；

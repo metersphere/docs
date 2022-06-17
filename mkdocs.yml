@@ -110,6 +110,8 @@ nav:
           - 使用预执行脚本功能生成接口认证签名: tutorial/pre_processor.md
           - 在MeterSphere接口测试中如何设置使用变量: tutorial/use_variable.md
           - 在MeterSphere中如何使用变量及JMeter、MockJS函数: tutorial/use_function.md
+          - MeterSphere 数据备份: tutorial/backup_data.md
+          - MeterSphere 分布式性能压测部署方案: tutorial/dis_pressure.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md
