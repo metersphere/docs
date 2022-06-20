@@ -188,6 +188,7 @@ WantedBy=multi-user.target
 然后保存退出
 
 echo $PATH 找到我们的jdk安装路径
+
 ![配置jdk路径地址](../img/installation/dis_pressure/jdk路径.png){:height="100%" width="70%"} <br>
 ```
 cd /usr/local/zookeeper-cluster/zk/bin
@@ -204,7 +205,8 @@ systemctl enable zookeeper #加入开机自启
 systemctl status zookeeper #检查服务状态
 ```
 
-状态如下就是正确<br>
+状态如下就是正确
+
 ![配置zk状态正确地址](../img/installation/dis_pressure/zk状态正确.png){:height="100%" width="70%"} <br>
 
 1.4.9 kafka自启动设置
