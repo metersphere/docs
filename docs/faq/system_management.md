@@ -37,3 +37,30 @@ update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
 ## 系统设置里面的“组织”为什么找不到了？
 
 为了给用户带来更好的使用体验，和更清晰的租户层级关系，在1.14版本中，“组织”模块以及相关菜单已被移除。
+
+## 邮件服务器连接不成功
+将邮件设置中的465端口改成25端口并去掉ssl选项，导致邮箱链接不成功的原因可能是465端口未开放；
+
+## 数据库连接不通
+数据库默认开启了SSL验证相应的配置，可在数据库的URL增加？useSSL=false来解决
+
+## 在一个SQL请求下如何执行多条SQL
+数据源配置的url后面加上allowMultiQueries=true
+
+## SQL链接时出现no database selected
+数据源连接url没有拼接库名
+
+## admin的系统管理员角色默认被误删的话怎么办？
+```
+进数据库执行：
+INSERT INTO user_group (id, user_id, group_id, source_id, create_time, update_time)
+VALUES (UUID(), 'admin', 'admin', 'system', 1622183788364, 1622183788364);
+```
+
+## MeterSphere如何对接第三方平台
+```
+对接TAPD: 参考 https://mp.weixin.qq.com/s/87kWZMz4eRKPS12WR6gaEA
+对接JIRA: 参考 https://mp.weixin.qq.com/s/QjwsImKG1zVUtnqMGOVrHg
+对接禅道:  参考 https://mp.weixin.qq.com/s/-Okc0E6PcAMB3T6EAALVeA
+```
+
