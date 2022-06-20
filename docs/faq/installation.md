@@ -88,3 +88,161 @@ chmod 655 /opt/metersphere/conf/my.cnf
 chmod /opt/metersphere/conf/my.cnf 
 然后重启数据库 docker restart mysql
 ```
+
+## 如何删除kafka中的临时数据，减低磁盘使用率
+```
+docker stop kafka；
+docker stop zookeeper；
+docker rm kafka；
+docker rm zookeeper；
+rm -rf /opt/metersphere/data/kafka/kafka；
+rm -rf /opt/metersphere/data/zookeeper/zookeeper；
+msctl reload；
+```
+
+## 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
+```
+增大堆内存:
+set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=1024m;
+```
+
+## jenkins插件验证通过后找不到工作空间
+检查地址，地址里多了/login路径会出现这个现象
+
+## jar包存储位置
+/opt/metersphere/data/jar
+
+## 升级或安装时后台报错:image not found : xxxxxx；
+需要在执行机上docker pull该镜像，或下载完整离线安装包；
+
+## 前端执行性能测试或接口场景报错：请检查当前站点url配置；
+本地搭建的可能要把localhost改为具体IP；
+
+## 部署和升级时后台报错：error: ms-data-streaming is unhealthy； error:encountered errors while bringing up the project；
+msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 删除多余网桥，msctl reload重启；
+
+## 怎样监控被压测的机器
+在被测服安装node-exporter服务，然后在性能测试中高级配置里添加监控，填写被测服node-exporter服务的ip和端口以及监控项
+
+## 忘记 Metersphere密码
+```
+进入容器: docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
+使用数据库: use metersphere;
+更新密码为metersphere: update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
+```
+
+## 日志报缺少某些类的属性
+这种情况大概率是安装包不全，或者镜像版本不一致导致的，可以重新下载安装包来进行镜像替换后或者重新安装来解决；
+
+## 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
+```
+1.可以删除多余的镜像；
+2.可以删除历史log文件；
+3.如果没任务执行时可以删除/opt/metersphere/data/kafka/kafka和/opt/metersphere/data/zookeeper/zookeeper目录，并重启服务；
+4.可以删除多余安装包和解压包；
+```
+
+## MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
+```
+chmod -R 755 /opt/metersphere/conf/prometheus
+docker stop ms-prometheus
+docker rm ms-prometheus
+msctl reload
+```
+
+## 遇到redis启动不起来，一直处于Restarting的问题
+```
+chmod -R 755 /opt/metersphere/conf/redis.conf
+docker stop redis
+docker rm redis
+msctl reload
+```
+
+## Redis无法连接
+```
+1.查看防护墙是否开启，如果防火墙开启了，查看6379端口是否开放，查看.env文件中配置的Redis地址是否是对于的服务器的IP地址；
+2.可以开放6379端口或者关闭防火墙后重启服务；
+```
+
+## 安装metersphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
+```
+1. 打开daemon.json文件, vi /etc/docker/daemon.json
+2. 将"exec-opts": ["native.cgroupdriver=systemd"]删掉即可, 重启docker：service docker restart
+3. 重启服务，msctl reload
+```
+
+## 环境变量和场景变量，用同个变量名，变量优先级是怎样的
+环境变量 < 整体的场景变量 < 步骤内变量< 步骤原场景变量（如勾选）
+
+## 遇到MYSQL连接数太多如何处理？java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
+```
+大概率是自带的my.cnf没有生效，没生效的原因为my.cnf文件权限不对：
+show variables like "max_connections"
+chmod -R 655 /opt/metersphere/conf/my.cnf
+docker stop mysql
+docker rm mysql
+msctl reload
+```
+
+## 后台日志出现SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
+修改环境中的数据库配置文件。 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE
+
+## 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
+在数据库后面添加 ?createDatabaseIfNotExist=true&useSSL=false；
+
+## msctl status显示服务正常，但是实际服务却访问不了怎么办？
+```
+清浏览器缓存，关闭浏览器重新访问
+IP访问：检查防火墙（firewalld,iptables等）
+域名访问：检查防火墙及NGINX等网络相关配置
+```
+
+## ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以
+```
+service network restart
+service docker restart
+msctl reload
+```
+
+## 修改session过期时间
+/opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒
+
+## K8S部署meterspher出现 413 request entity too large
+```
+#ngnix请求破除1m限制，
+kubectl edit ingress metersphere
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+annotations:
+meta.helm.sh/release-name: metersphere
+meta.helm.sh/release-namespace: default
+nginx.ingress.kubernetes.io/proxy-body-size: 50m
+```
+
+## 主机部署meterspher出现 413 request entity too large
+```
+1. 打开nginx服务的配置文件nginx.conf
+2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
+3. 保存后重启nginx，问题解决
+```
+
+## 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败
+```
+解决方案：用nginx做反向代理，需要在nginx加上websocket配置
+server{
+  ...
+  location / {
+    proxy_pass http://jumpserver_nginx;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    
+    #加上这段
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  
+  }
+}
+```
