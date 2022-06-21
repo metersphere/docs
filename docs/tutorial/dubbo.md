@@ -103,14 +103,14 @@ Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.1
 
 
 ### 创建项目
-登录 MeterSphere 平台后，点击在上方菜单中选择「接口测试」，在项目列表中点击「创建项目」。
+登录 MeterSphere 平台后，点击在上方菜单「系统设置」中的「工作空间」-「项目管理」，在项目列表中点击「创建项目」。
 ![](../img/tutorial/dubbo/create_project.png)
 
 ### 创建接口测试
-点击界面上方中央的【创建测试按钮】，创建新的接口测试集。
+点击界面上方的「接口测试」下的「接口定义」，选择项目后切换到「DUBBO」协议，创建 DUBBO 接口测试集。
 ![](../img/tutorial/dubbo/create_api_test.png)
 
-在接口测试创建页面选择该测试所属的项目，并填入接口测试集名称。
+在创建接口页面填入接口测试名称。
 ![](../img/tutorial/dubbo/create_api_test2.png)
 
 ### 配置场景信息
@@ -122,10 +122,6 @@ Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.1
 ``` info
   在场景中配置的变量、HTTP 请求头、Dubbo 配置等信息试用于该场景下的所有请求。
 ```
-
-### 添加 Dubbo 请求
-点击左侧场景列表中添加请求按钮，选择 Dubbo 类型的接口进行添加。
-![](../img/tutorial/dubbo/add_dubbo_request.png)
 
 填写该请求的名称后，点击「Get Providers List」从注册中心中获取服务列表，从下拉列表中选择需要测试的接口及方法，根据该方法的定义，传入所需的参数。
 ![](../img/tutorial/dubbo/add_dubbo_request2.png)
@@ -159,20 +155,27 @@ public class User {
 我们可以通过这样的形式传入参数值 {"name":"姓名", "age":年龄, "gender": "MALE 或 FEMALE"}。
 ![](../img/tutorial/dubbo/add_dubbo_request3.png)
 
-当接口请求都添加完成后，我们先把默认添加的那个 HTTP 请求删掉，然后就可以点击「保存并执行」按钮进行 Dubbo 接口的测试了。
+当接口请求都添加完成后，然后就可以点击「保存」按钮，切换到「TEST」页面，点击「测试」，即可运行该 Dubbo 接口了。
 ![](../img/tutorial/dubbo/run_api_test.png)
 
-### 查看报告
-测试执行完成后，即可在页面上查看到测试执行的结果报告。
+测试执行完成后，即可在页面上查看到测试执行的结果报告。<br>
 ![](../img/tutorial/dubbo/api_test_report1.png)
 
-点击报告中的场景及请求，可查看到请求的详细内容及响应内容。
+
+### 转化为接口自动化场景
+切换到「接口自动化」页面，创建场景时，填写左边基础信息以及点击右边「接口列表导入」
+![](../img/tutorial/dubbo/api_test_automator.png)
+
+将创建的 dubbo 接口导入后点击「保存」，选择「运行环境」，点击「调试」
+![](../img/tutorial/dubbo/api_test_automator_1.png)
+
+调试完成后，点击「生成报告」或者切换到「测试报告」页面，可查看到请求的详细内容及响应内容。<br>
 ![](../img/tutorial/dubbo/api_test_report2.png)
 
 ### 转化为性能测试
-接口测试执行通过后，我们还可以通过 MeterSphere 提供的接口测试转性能测试的功能，直接发起针对 Dubbo 接口的性能测试。
+接口自动化测试执行通过后，我们还可以通过 MeterSphere 提供的接口测试转性能测试的功能，直接发起针对 Dubbo 接口的性能测试。
 
-在「接口测试」页面的「测试」下拉列表中，选择我们刚创建的测试，点击更多操作中的「创建性能测试」选项。
+在「性能测试」页面的「场景配置」点击下「引用接口自动化场景」，选择我们刚创建的接口自动化场景将创建的 dubbo 接口导入后点击「保存」，选择「运行环境」，点击「调试」
 ![](../img/tutorial/dubbo/create_load_test1.png)
 
 在弹出的页面中根据需求配置压力参数后，点击「保存并执行」按钮即可发起性能测试。

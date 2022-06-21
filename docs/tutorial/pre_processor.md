@@ -17,10 +17,10 @@
 在 MeterSphere 创建接口测试，并在场景配置中添加 API 认证需要用到的 accessKey 和 secretKey 作为自定义变量。
 ![](../img/tutorial/pre_processor/pre_processor_2.png)
 
-在该场景中添加一个 HTTP 请求，调用 GET/project/listAll 获取项目列表接口，在该请求的预执行脚本中，添加以下代码生成签名并将签名值存入 signature 变量中。
+在该场景中添加一个 HTTP 请求，调用 GET/project/listAll 获取项目列表接口，在该请求的前置脚本中，添加以下代码生成签名并将签名值存入 signature 变量中。
 ![](../img/tutorial/pre_processor/pre_processor_3.png)
 
-```java
+```
 import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -49,7 +49,7 @@ try {
 }
 ```
 
-在该请求中添加 accessKey 及 signature 两个请求头，accessKey 的值为在场景中配置的 accessKey 变量，signature 的值为上一步通过预执行脚本计算出来的签名。
+在该请求中添加 accessKey 及 signature 两个请求头，accessKey 的值为在场景中配置的 accessKey 变量，signature 的值为上一步通过前置脚本计算出来的签名。
 ![](../img/tutorial/pre_processor/pre_processor_4.png)
 
 在该场景中再次添加一个 HTTP 请求作为对比，同样调用 GET /project/listAll 接口，不添加 accessKey 及 signature 请求头。
@@ -57,7 +57,6 @@ try {
 
 保存并执行该接口测试，在生成的报告中可以看到，添加了认证请求头的接口调用成功，没有添加认证请求头的接口调用失败。
 ![](../img/tutorial/pre_processor/pre_processor_6.png)
-![](../img/tutorial/pre_processor/pre_processor_7.png)
 
 
 
