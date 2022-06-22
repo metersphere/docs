@@ -1,6 +1,6 @@
 ## 方案
 
-Virtualenv是一个创建隔绝的Python环境的工具。Virtualenv创建一个包含所有必要的可执行文件的文件夹，用来使用Python工程所需的包。通过在MeterSphere持续测试平台所在宿主机上创建Virtualenv环境，安装第三方库，挂载进JMeter容器中，就可以实现在MeterSphere平台执行Python脚本时引入第三方库的操作。
+Virtualenv 是一个创建隔绝的Python环境的工具。Virtualenv 创建一个包含所有必要的可执行文件的文件夹，用来使用 Python 工程所需的包。通过在MeterSphere持续测试平台所在宿主机上创建Virtualenv环境，安装第三方库，挂载进JMeter容器中，就可以实现在MeterSphere平台执行Python脚本时引入第三方库的操作。
 
 ## 实现步骤
 

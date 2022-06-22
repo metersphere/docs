@@ -110,20 +110,15 @@ Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.1
 点击界面上方的「接口测试」下的「接口定义」，选择项目后切换到「DUBBO」协议，创建 DUBBO 接口测试集。
 ![](../img/tutorial/dubbo/create_api_test.png)
 
-在创建接口页面填入接口测试名称。
+在创建接口页面填入接口测试名称，模块，状态，责任人，描述等等相关信息
 ![](../img/tutorial/dubbo/create_api_test2.png)
 
-### 配置场景信息
-点击左侧场景列表中的场景配置，在右侧的场景信息中，填入场景名称，并选择「Dubbo 配置」标签页。
+### 配置信息
 
 在该页面中把准备的注册中心连接信息，接口版本等信息填好。
 ![](../img/tutorial/dubbo/config_scenario.png)
 
-``` info
-  在场景中配置的变量、HTTP 请求头、Dubbo 配置等信息试用于该场景下的所有请求。
-```
-
-填写该请求的名称后，点击「Get Providers List」从注册中心中获取服务列表，从下拉列表中选择需要测试的接口及方法，根据该方法的定义，传入所需的参数。
+点击「Get Providers List」从注册中心中获取服务列表，从下拉列表中选择需要测试的接口及方法，根据该方法的定义，传入所需的参数。
 ![](../img/tutorial/dubbo/add_dubbo_request2.png)
 
 上面添加的接口只有一个 String 类型的参数，再次添加一个参数类型为自定义类的请求。这里我们查看一下代码中这个接口的定义，发现其需要一个 User 类的对象作为参数。
@@ -175,9 +170,9 @@ public class User {
 ### 转化为性能测试
 接口自动化测试执行通过后，我们还可以通过 MeterSphere 提供的接口测试转性能测试的功能，直接发起针对 Dubbo 接口的性能测试。
 
-在「性能测试」页面的「场景配置」点击下「引用接口自动化场景」，选择我们刚创建的接口自动化场景将创建的 dubbo 接口导入后点击「保存」，选择「运行环境」，点击「调试」
+在「性能测试」页面的「场景配置」点击下「引用接口自动化场景」，选择我们刚创建的接口自动化场景。
 ![](../img/tutorial/dubbo/create_load_test1.png)
 
-在弹出的页面中根据需求配置压力参数后，点击「保存并执行」按钮即可发起性能测试。
+切换到「压力配置」页面，根据需求配置压力参数后，点击「保存并执行」按钮即可发起性能测试。
 ![](../img/tutorial/dubbo/create_load_test2.png)
 
