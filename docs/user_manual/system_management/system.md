@@ -173,15 +173,18 @@
 
 ## 插件管理
 
-### Jenkins 插件设置
+### MeterSphere MQTT 插件设置
 
-- 下载地址：https://github.com/metersphere/jenkins-plugin
+- 下载地址：https://github.com/metersphere/metersphere-plugin-mqtt
 
-在构建步骤中添加MeterSphere插件。
-![jenkins-plugin](../../img/system_management/jenkins-plugin.png)
+在 `系统设置`-`插件管理` 界面下，上传 MQTT 插件
 
-配置好系统参数和待执行的用例。
+![jenkins-plugin](../../img/system_management/插件管理1.png)
 
-![Jenkins-config](../../img/system_management/Jenkins-config.png)
+在 `接口测试`-`接口自动化` 界面下，新建一个场景，点击场景右下角 `+` 号，添加 MQTT 相关请求。
+
+![jenkins-plugin](../../img/system_management/插件管理2.png)
+
+![jenkins-plugin](../../img/system_management/插件管理3.png)
 
 
