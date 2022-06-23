@@ -58,11 +58,13 @@ MeterSphere 的接口文档位于所部署环境中的 /swagger-ui 路径中，�
 
 - 响应内容中的 success 字段值为 true；
 - 响应内容中不包含我们要新建的项目名称「接口测试项目」，断言编辑完成后点击「添加」按钮进行添加。
+
 ![](../img/tutorial/api_testing/api_testing_3_1.png)
 
 ■ 添加一个「创建项目」的 HTTP 请求
 
 使用 「POST /project/add」接口，根据接口定义通过 JSON 格式传入项目名称及描述信息，在这个请求中我们添加一个通用的「响应内容中的 success 字段值为 true」的断言，并通过 JSONPath 格式的提取功能，从返回数据中获取新创建的项目的 ID 存入 projectid 变量中，后续接口可以通过 ${projectid} 格式引用该变量。
+
 ![](../img/tutorial/api_testing/api_testing_4_1.png)
 
 ![](../img/tutorial/api_testing/api_testing_4_2.png)
