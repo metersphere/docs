@@ -177,3 +177,59 @@ MeterSphere在1.15版本实现了与IDEA对接。通过在IDEA安装组件，完
 
 ## 后置脚本中如何引用.js文件
 上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择nashornScript
+
+## HTTP 协议接口支持哪些文件格式导入
+支持五种：MeterSphere格式、Postman格式、Swagger格式、HAR格式、JMeter格式
+
+- MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br>
+- Postman 格式：支持 Postman Collection v2.1 格式的 json 文件，通过 Postman 导出测试集合 <br>
+- Swagger 格式：支持 Swagger 2.0 与 3.0 版本的 json 文件，通过 Swagger 页面导出或者URL直接导入 <br>
+- HAR 格式：通过浏览器的开发者工具导出 HAR 格式文件 <br>
+- JMeter 格式：支持 JMeter5.2-5.4 版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
+
+![! metersphere导入格式](../img/faq/metersphere导入格式.png)
+
+## TCP 协议接口支持哪些文件格式导入
+支持三种： MeterSphere格式、JMeter格式、ESB格式
+
+- MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br>
+- Jmeter 格式：支持 JMeter5.2-5.4版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
+- ESB 格式：支持 ESB 模版的 xlsx 文件（支持模版下载/上传）<br>
+
+![! metersphere导入格式](../img/faq/TCP导入格式.png)
+
+## SQL 协议接口支持哪些文件格式导入
+支持两种：MeterSphere格式、JMeter格式
+
+- MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br>
+- JMeter 格式：支持 JMeter5.2-5.4 版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
+
+![! metersphere导入格式](../img/faq/SQL导入格式.png)
+
+## DUBBO 协议接口支持哪些文件格式导入
+支持两种：MeterSphere格式、JMeter格式
+
+- MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br>
+- JMeter 格式：支持 JMeter5.2-5.4 版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
+
+![! metersphere导入格式](../img/faq/DUBBO导入格式.png)
+
+## 如何判断是否为同一接口
+
+- TCP、SQL、DUBBO 请求，同项目同模块同版本下，接口名称相同就是同一接口
+- 针对HTTP请求，同项目同模块同版本下，分为接口定义未开启 url 可重复和已开启 url 可重复两种情况
+
+![! metersphere导入格式](../img/faq/URL可重复.png)
+
+■ 未开启 URL 重复：请求类型+路径相同则为同一接口，如：
+
+![! metersphere导入格式](../img/faq/未开启URL重复.png)
+
+■ 开启 URL 重复：接口名称+请求类型+路径相同则为同一接口，如：
+
+![! metersphere导入格式](../img/faq/开启URL重复.png)
+
+## 导入模块&导入模式逻辑
+■ 注意：v2.0导入模式会增加选项：同步覆盖API模块（即上图中的开启模块覆盖），用户可自己选择是否将数据导入到指定的最新模块下。
+
+![! metersphere导入格式](../img/faq/导入&导出逻辑.png)
