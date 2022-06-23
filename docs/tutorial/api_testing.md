@@ -17,8 +17,8 @@ MeterSphere 的接口文档位于所部署环境中的 /swagger-ui 路径中，�
 
 - GET /project/listAll
 - POST /project/add
-- GET /project/get/{id}
-- GET /project/delete/{projectId}
+- GET /project/get/{projectid}
+- GET /project/delete/{projectid}
 
 依次查看每个接口的定义，可以发现各个接口的返回都是类似如下形式，因此我们可以通过 JSONPath 的方式来获取特定的返回值，判断其是否符合预期或提取为变量供后续请求使用。
 ```json
@@ -57,19 +57,19 @@ MeterSphere 的接口文档位于所部署环境中的 /swagger-ui 路径中，�
 使用 「GET /project/listAll」接口，在这个接口请求里我们依次添加两个断言：
 
 - 响应内容中的 success 字段值为 true；
-- 响应内容中不包含我们要新建的项目名称「接口测试项目」，断言编辑完成后点击「Add」按钮进行添加。
+- 响应内容中不包含我们要新建的项目名称「接口测试项目」，断言编辑完成后点击「添加」按钮进行添加。
 ![](../img/tutorial/api_testing/api_testing_3_1.png)
 
 ■ 添加一个「创建项目」的 HTTP 请求
 
-使用 「POST /project/add」接口，根据接口定义通过 JSON 格式传入项目名称及描述信息，在这个请求中我们添加一个通用的「响应内容中的 success 字段值为 true」的断言，并通过 JSONPath 格式的提取功能，从返回数据中获取新创建的项目的 ID 存入 projectID 变量中，后续接口可以通过 ${projectID} 格式引用该变量。
+使用 「POST /project/add」接口，根据接口定义通过 JSON 格式传入项目名称及描述信息，在这个请求中我们添加一个通用的「响应内容中的 success 字段值为 true」的断言，并通过 JSONPath 格式的提取功能，从返回数据中获取新创建的项目的 ID 存入 projectid 变量中，后续接口可以通过 ${projectid} 格式引用该变量。
 ![](../img/tutorial/api_testing/api_testing_4_1.png)
 
 ![](../img/tutorial/api_testing/api_testing_4_2.png)
 
 ■ 添加一个「查询新创建的项目」的 HTTP 请求
 
-使用「GET /project/get/{id}」接口，在该接口中我们通过在请求 URL 中引用 ${projectId} 变量的方式传入新创建的项目的 ID；同时依次添加4个断言：
+使用「GET /project/get/{projectid}」接口，在该接口中我们通过在请求 URL 中引用 ${projectid} 变量的方式传入新创建的项目的 ID；同时依次添加4个断言：
 
 - 响应内容中的 success 字段值为 true；
 - 响应内容中的项目名称与创建时填写的一致；
@@ -80,13 +80,14 @@ MeterSphere 的接口文档位于所部署环境中的 /swagger-ui 路径中，�
 
 ■ 添加一个「删除新创建的项目」的 HTTP 请求
 
-使用 「GET /project/delete/{projectId}」接口，在该接口中我们通过在请求 URL 中引用 ${projectId} 变量的方式传入新创建的项目的 ID；同时添加一个通用的「响应内容中的 success 字段值为 true」的断言。
+使用 「GET /project/delete/{projectid}」接口，在该接口中我们通过在请求 URL 中引用 ${projectid} 变量的方式传入新创建的项目的 ID；同时添加一个通用的「响应内容中的 success 字段值为 true」的断言。
 
 ![](../img/tutorial/api_testing/api_testing_6_1.png)
 
 ■ 添加一个「查询已删除的项目」的 HTTP 请求
 
-使用「GET /project/get/{id}」接口，在该接口中我们通过在请求 URL 中引用 ${projectId} 变量的方式传入新创建的项目的 ID；由于该项目已删除，根据接口定义其返回内容中的 data 字段应该为空，因而在这个接口中我们依次添加2个断言：
+使用「GET /project/get/{projectid}」接口，在该接口中我们通过在请求 URL 中引用 ${projectid} 变量的方式传入新创建的项目的 ID；由于该项目已删除，根据接口定义其返回内容中的 data 字段应该为空，因而在这个接口中我们依次添加2个断言：
+
 - 响应内容中的 success 字段值为 true；
 - 响应内容中 data 字段为空。
 
@@ -98,11 +99,12 @@ MeterSphere 的接口文档位于所部署环境中的 /swagger-ui 路径中，�
 ![](../img/tutorial/api_testing/api_testing_8_1.png)
 
 点击「运行环境」，新建一个环境配置并填入被测系统的基本信息，同时在场景配置中选择新建的环境并勾选「共享 Cookie」。<br>
-![](../img/tutorial/api_testing/api_testing_1_1.png)
+![](../img/tutorial/api_testing/api_testing_9_1.png)
 
-![](../img/tutorial/api_testing/api_testing_1_2.png)
+![](../img/tutorial/api_testing/api_testing_10_1.png)
 
-![](../img/tutorial/api_testing/api_testing_1_3.png)
+![](../img/tutorial/api_testing/api_testing_11_1.png)
 
 点击「调试」按钮，系统执行完所有测试场景后，点击「调试下拉框-生成报告」或者「测试报告」，在该页面中我们可以看到所有接口执行结果的概览，同时也可以在左侧的接口列表中选择某个接口查看其详细的请求及响应内容。<br>
+![](../img/tutorial/api_testing/api_testing_12_1.png)
 ![](../img/tutorial/api_testing/api_testing_report.png)
