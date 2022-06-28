@@ -139,7 +139,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持缺陷与用例关联</td>
     </tr>
     <tr>
-        <td>对接并同步 JIRA、TAPD、禅道、Azure devops 等平台上的缺陷</td>
+        <td>对接并同步 JIRA、TAPD、禅道、Azure Devops 等平台上的缺陷</td>
     </tr>
     <tr>
         <td>支持配置缺陷自定义模版、自定义字段</td>
@@ -162,7 +162,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持 HTTP、TCP、SQL、DUBBO 类型接口请求</td>
     </tr>
     <tr>
-        <td>支持通过 MeterSphere JSON、Postman、Swagger 等多种格式文件快速导入接口，Swagger 可通过 URL 定时同步</td>
+        <td>支持快速导入MeterSphere JSON、Postman、Swagger 等多种格式接口，Swagger 可通过 URL 定时同步</td>
     </tr>
     <tr>
         <td>支持接口快捷调试</td>
@@ -250,7 +250,7 @@ MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测
         <td>支持 BeanShell、Python、Groovy、JavaScript 等多种语言的前后置脚本</td>
     </tr>
     <tr>
-        <td>场景变量提供多种类型</td>
+        <td>支持常量、列表、CSV、计数器、随机数多种类型场景变量</td>
     </tr>
     <tr>
         <td>基于插件机制实现其他协议</td>
