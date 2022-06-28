@@ -29,7 +29,7 @@ cd python/
 virtualenv --copies .
 source bin/activate
 
-#安装第三方包，比如xpinyin
+#安装第三方包，比如requests
 pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
 #查看是否安装成功，是否有生成相应目录
 ll lib/python2.7/site-packages/
