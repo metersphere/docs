@@ -1,10 +1,10 @@
 !!! info "大致流程:"
-    * 先安装jdk
-    * 部署zookeeper集群
-    * 部署kafka集群
-    * 部署kafka-manager
+    * 先安装JDK
+    * 部署Zookeeper集群
+    * 部署Kafka集群
+    * 部署Kafka-manager
     
-## 1 部署kafka集群
+## 1 部署Kafka集群
 
 ### 1.1 关闭防火墙和 selinux
 
@@ -19,7 +19,7 @@ setenforce 0 （临时生效）
 sed -i 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config（永久生效）
 ```
 
-### 1.2 检查是否已经安装OPENjdk
+### 1.2 检查是否已经安装OpenJDK
 
 ```
 rpm -qa|grep jdk  #如果安装先卸载jdk
@@ -44,7 +44,7 @@ source /etc/profile
 java -version （检查一下jdk版本查看是否安装成功）
 ```
 
-### 1.3 搭建zookeeper集群
+### 1.3 搭建Zookeeper集群
 
 1.3.1 集群节点选用三台linux主机<br>
 
@@ -109,11 +109,11 @@ cd /usr/local/zookeeper-cluster/zk/bin
 ![配置zk状态地址](../img/installation/dis_pressure/zk状态.png){:height="100%" width="70%"} <br>
 可以看到，一台作为leader，两台作为follower，zookeeper集群搭建成功。
 
-### 1.4 kafka集群安装
+### 1.4 Kafka集群安装
 
 1.4.1 下载安装包 <br>
 
-kafka官网下载：http://kafka.apache.org/downloads <br>
+Kafka官网下载：http://kafka.apache.org/downloads <br>
 或者wget，下载 https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.2/kafka_2.12-2.6.2.tgz
 
 1.4.2 新建一个Kafka-cluster目录，将安装Kafka-cluster目录下
@@ -196,7 +196,7 @@ vim zkEnv.sh
 ```
 ![配置zk环境地址](../img/installation/dis_pressure/zk环境.png){:height="100%" width="70%"} <br>
 
-找到我们第一行的变量，把我们之前弄的java环境添加刷新一下进去在后面插入<br>
+找到我们第一行的变量，把我们之前部署的java环境添加刷新一下进去在后面插入<br>
 export JAVA_HOME=/usr/local/jdk1.8.0_251，保存退出，然后刷新一下命令<br>
 ```
 systemctl daemon-reload 
@@ -209,7 +209,7 @@ systemctl status zookeeper #检查服务状态
 
 ![配置zk状态正确地址](../img/installation/dis_pressure/zk状态正确.png){:height="100%" width="70%"} <br>
 
-1.4.9 kafka自启动设置
+1.4.9 Kafka自启动设置
 
 ```
 cd /lib/systemd/system/
@@ -239,11 +239,11 @@ systemctl status kafka
 ```
 ![配置kafka状态地址](../img/installation/dis_pressure/kafka状态.png){:height="100%" width="70%"} <br>
 
-1.4.10 建议启动kafka时先重新启动一下zookeeper，有时间可能会起不来 启动顺序，启动kafka必须先要启动zookeeper
+1.4.10 建议启动Kafka时先重新启动一下Zookeeper，有时间可能会起不来。启动Kafka前必须先要启动Zookeeper。
 
 ## 2 部署kafka-manager
 
-可以在任意一台kafka设备部署，kafka可视化，yaml如下（需要提前安装好docker环境和docker-compose环境，并下载好images）
+可以在任意一台Kafka设备部署，Kafka可视化，yaml如下（需要提前安装好Docker环境和docker-compose环境，并下载好images）
 ```
 version: '2'
 

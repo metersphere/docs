@@ -1,4 +1,4 @@
-主要是 mysql 数据库数据备份以及 /opt/metersphere/data 路径下的 body 和 jar 目录备份
+主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的 body 、 jar 目录备份。
 ## 1 手动备份
 
 ```

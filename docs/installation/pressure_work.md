@@ -2,9 +2,9 @@
 
 ### 1 修改MeterSphere的docker-compose-server.yaml文件
 
-按照下图修改为连接kafka地址
+按照下图修改为连接Kafka地址
 
-![配置修改kafka地址地址](../img/installation/dis_pressure/修改kafka地址.png){:height="100%" width="70%"} <br>
+![配置修改Kafka地址](../img/installation/dis_pressure/修改kafka地址.png){:height="100%" width="70%"} <br>
 
 ### 2 如果采用k8s集群压测，需要提前准备好k8s集群，创建好SA和token，创建如下：
 
@@ -23,10 +23,10 @@ kubectl describe sa/ms -n metersphere
 kubectl describe secrets -n metersphere ms-token-xxxx
 ```
 
-k8s对接界面配置如下，注意需要调整jmeter配置，经过测试，2500左右的vu，在无大量错误的情况下需要消耗2c4g左右资源:<br>
+k8s对接界面配置如下，注意需要调整JMeter配置，经过测试，2500左右的VU，在无大量错误的情况下需要消耗2C4G左右资源:<br>
 ![配置k8s设置地址](../img/installation/dis_pressure/k8s设置.png){:height="100%" width="70%"} <br>
 
-### 3 最终压测效果如下，打了2.5万并发vu
+### 3 最终压测效果如下，打了2.5万并发VU
 ![配置vu值地址](../img/installation/dis_pressure/vu值.png){:height="100%" width="70%"} <br>
 ![配置vu1设置地址](../img/installation/dis_pressure/vu1.png){:height="100%" width="70%"} <br>
 
