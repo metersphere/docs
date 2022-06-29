@@ -13,9 +13,7 @@
 
 ## 安装步骤
 
-### 执行快速安装脚本
-
-以 root 用户 ssh 登录目标服务器, 执行如下命令。
+以 root 用户 ssh 登录部署目标服务器, 执行以下命令。
 
 ```sh
 curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | sh
