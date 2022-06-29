@@ -5,6 +5,7 @@
 ```sh
 # 升级至最新版本
 msctl upgrade
+
 # 查看 MeterSphere 状态
 msctl status
 ```
@@ -13,6 +14,7 @@ msctl status
 ```sh
 # 升级至指定版本
 msctl upgrade v1.x.y
+
 # 查看 MeterSphere 状态
 msctl status
 ```
@@ -29,6 +31,7 @@ wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersp
 # 解压在线安装包
 tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
 
+# 进入解压缩目录
 cd metersphere-online-installer-v1.x.y
 
 # 执行install.sh安装脚本
