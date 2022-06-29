@@ -1,4 +1,4 @@
-我们准备了可以快速部署 MeterSphere 所有组件及所需的中间件的在线安装脚本, 您可以通过该脚本部署并体验 MeterSphere 。
+按部署服务器要求准备好部署环境后，可通过 MeterSphere 快速安装脚本一键快速部署。
 
 !!! warning "注意"
     快速安装脚本所部署的环境仅适用于测试体验目的, 生产环境请参考本文档[「在线安装」](../installation/online_installation.md)章节内容进行部署。
