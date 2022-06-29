@@ -10,7 +10,7 @@
 - **[Jenkins Plugin](https://github.com/metersphere/jenkins-plugin)**: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。
 - **[Node Controller](https://github.com/metersphere/node-controller)**: 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter容器完成性能测试。
 - **MySQL**: MeterSphere 项目的主要数据均存储在 MySQL。
-- **Redis**: MeterSphere 项目登录用户的session存储在 Redis。
+- **Redis**: MeterSphere 项目登录用户的Session存储在 Redis。
 - **Kafka**: 接收 JMeter 产生的接口测试或者性能测试的结果数据。
 - **Prometheus**: 收集压力机及被测系统的监控数据。
 - **[Data Streaming](https://github.com/metersphere/data-streaming)**: 从 Kafka 中获取接口测试或者性能测试结果数据进行处理后存入 MySQL 数据库。
