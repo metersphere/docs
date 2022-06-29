@@ -49,9 +49,11 @@ curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/qu
 ```sh
 # 下载在线安装包
 wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.x.y.tar.gz
+
 # 解压在线安装包
 tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
 
+# 进入解压目录
 cd metersphere-online-installer-v1.x.y
 
 # 配置安装参数，参数说明见下文
