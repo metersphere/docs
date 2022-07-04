@@ -162,6 +162,7 @@ msctl reload
 ```
 1.查看防护墙是否开启，如果防火墙开启了，查看6379端口是否开放，查看.env文件中配置的Redis地址是否是对于的服务器的IP地址；
 2.可以开放6379端口或者关闭防火墙后重启服务；
+3.确认日志中连不上的ip是redis的ip(Mac: ifconfig |grep "inet"|grep -v 127.0.0.1; Linux: hostname -I)
 ```
 
 ## 安装metersphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
@@ -246,3 +247,10 @@ server{
   }
 }
 ```
+
+## 登录进去后，点击任一菜单会立马跳到登录页面
+执行 msctl reload 就好了
+
+## 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
+1.是不是使用NG了，需要进行配置，可参考 https://metersphere.io/docs/installation/offline_installation/
+2.是不是使用 https://ip:8081 被拦截了,使用 http://ip:8081 就行
