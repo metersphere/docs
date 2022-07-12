@@ -44,5 +44,13 @@
 
 Jenkins 任务通知自动化通过 Jenkins 持续部署来启动 MeterSphere 自动化脚本时，可以在这里设置此类型的任务通知。
 
-
 ![!Jenkins任务通知-新建](../../img/system_management/Jenkins任务通知-新建.png) 
+
+
+### 自定义消息模板 (X-Pack)
+
+点击“模板”按钮，来到自定义模板页面，可以点击“模板”后的“i”，会有一些变量说明及其引用方式，可以用于自定义内容中。
+
+![!自定义模板](../../img/system_management/自定义消息模板.png) 
+
+![!自定义模板](../../img/system_management/自定义模板页面.png) 
