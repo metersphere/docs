@@ -12,7 +12,7 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 点击左侧下拉菜单中的 `导入` 按钮；
 ![!导入swagger文件](../img/api/导入swagger文件1.png)
 
-选择 Swagger 数据格式，选择MeterSphere模块，选择使用URL导入，并填入 Swagger 对应的JSON地址 `http://xxx.fit2cloud.com/swagger-ui/index.html`，导入 API 接口。
+选择 Swagger 数据格式，选择MeterSphere模块，选择使用URL导入，并填入 Swagger 对应的JSON地址 `http://xxx.fit2cloud.com/v3/api-docs`，导入 API 接口。
 
 ![!导入swagger文件](../img/api/导入swagger文件2.png)
 
