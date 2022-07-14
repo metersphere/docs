@@ -253,7 +253,8 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
           2、 用例模板：可参考【项目设置>>模板管理>>用例模板】进行自定义用例模板。
           3、 缺陷模板：可参考【项目设置>>模板管理>>缺陷模板】进行自定义缺陷模板。
 
-#### 自动生成 Jira 缺陷模版 (X-Pack)
+自动生成 Jira 缺陷模版 (X-Pack)
+
 `创建项目`，填写第三方集成平台为 Jira 后，勾选下面的`使用 Jira 缺陷模板`，填写好其他配置信息，点击`保存`即可
 ![!创建项目](../../img/system_management/创建项目JIRA平台.png)
 
