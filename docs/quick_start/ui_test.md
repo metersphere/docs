@@ -1,4 +1,4 @@
-MeterSphere UI 测试提供了元素库、UI自动化、测试报告等UI测试相关功能。 用户可以使用多级模块来组织管理项目下的UI自动化场景，执行场景，生成查看测试报告。
+MeterSphere UI 测试提供了元素库、UI 自动化、测试报告等UI测试相关功能。 用户可以使用多级模块来组织管理项目下的 UI 自动化场景，执行场景，生成查看测试报告。
 
 ## 1 企业版试用
 UI 测试模块是企业版 X-Pack 功能增强包功能，如需使用，请点击：[申请企业版试用](https://jinshuju.net/f/CzzAOe)。
@@ -9,11 +9,11 @@ https://www.metersphere.com/
 
 ## 3 注意事项
 
-!!! info "UI自动化测试工作前注意事项"
+!!! info "UI 自动化测试工作前注意事项"
     1.修改 /opt/metersphere/.env 文件，MS_SELENIARM_ENABLED=true 修改配置后加载配置文件执行 msctl reload<br>
     2. docker ps 检查 local-selenium-grid 容器是否成功启动<br>
     3.在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://local-selenium-grid:4444<br>
-    4. UI测试用例，默认 "性能模式" 没有截图展示，关掉 "性能测试" 可以查看每个步骤的截图
+    4. UI 测试用例，默认 "性能模式" 没有截图展示，关掉 "性能测试" 可以查看每个步骤的截图
 
 ## 4 创建模块
 MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧查看到UI自动化场景的模块树。 点击左侧的模块树中的 【添加子模块】按钮，为该项目添加模块。
@@ -30,7 +30,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 ## 6 创建场景
 用户可在各个模块中添加场景，可以手动创建，也可以通过导入的方式创建UI自动化场景。
 
-### 6.1 导入SelenumIDE脚本
+### 6.1 导入 Selenium IDE 脚本
 ![!使用UI测试](../img/ui_test/使用UI测试5.png)
 
 ![!使用UI测试](../img/ui_test/使用UI测试6.png)
@@ -55,7 +55,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 
 ![!使用UI测试](../img/ui_test/使用UI测试13.png)
 
-## 8 调试UI自动化场景
+## 8 调试 UI 自动化场景
 可在编辑场景页面调试UI场景，也可以在UI自动化场景列表页面执行UI场景。
 ![!使用UI测试](../img/ui_test/使用UI测试14.png)
 
