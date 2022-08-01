@@ -225,7 +225,53 @@ MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控�
 2.下载离线安装包解压后，将jmeter镜像导入到docker中；
 
 ## 性能测试状态一直是starting且无数据
-看后台日志报错no such container，jmeter容器因为某种原因没有了，重启之后就正常了
+到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
+和 info.log，看日志中是否有报错信息。<br>
+1.如果出现 org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms<br>
+```
+2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer$FutureFailure.<init>(KafkaProducer.java:1314)]
+2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.doSend(KafkaProducer.java:970)]
+2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.send(KafkaProducer.java:870)]
+2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.send(KafkaProducer.java:758)]
+2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.appender.mom.kafka.KafkaManager.send(KafkaManager.java:122)]
+2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.appender.mom.kafka.KafkaAppender.tryAppend(KafkaAppender.java:224)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.appender.mom.kafka.KafkaAppender.append(KafkaAppender.java:172)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:675)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:633)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:616)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:552)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.Logger.log(Logger.java:161)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2034)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1899)]
+2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.slf4j.Log4jLogger.info(Log4jLogger.java:184)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.jmeter.JMeter.initializeProperties(JMeter.java:737)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.jmeter.JMeter.start(JMeter.java:379)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/java.lang.reflect.Method.invoke(Method.java:566)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.jmeter.NewDriver.main(NewDriver.java:259)]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][Caused by: org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms.]
+2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][]
+```
+证明 Kafka 里缺少 Topic 信息，可以手动到 Kafka 里创建对应的 Topic<br>
+```
+docker exec -it kafka /bin/bash
+cd /opt/bitnami/kafka/bin
+./kafka-topics.sh --create --bootstrap-server 127.0.0.1:9092 --replication-factor 1 --partitions 4 --topic JMETER_LOGS
+```
 
 ## k8s资源池是否需要安装node-controller
-不需要，只要在k8s各节点上拉取node-controller和jmeter的镜像，执行性能测试的时候会自动创建对应的POD，执行完成后会销毁POD
+1.执行性能测试不需要<br>
+性能测试只需要在仓库中配置好 JMeter 镜像的地址，执行性能测试的时候会自动创建 JMeter POD 进行压测，执行完之后自动销毁。<br>
+2.执行接口测试需要<br>
+执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br>
+![! 接口测试-K8S配置](../img/faq/接口测试-K8S配置.png)

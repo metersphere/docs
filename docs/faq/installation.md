@@ -254,3 +254,14 @@ server{
 ## 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
 1.是不是使用NG了，需要进行配置，可参考 https://metersphere.io/docs/installation/offline_installation/
 2.是不是使用 https://ip:8081 被拦截了,使用 http://ip:8081 就行
+
+## 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
+![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
+
+清除下 redis 数据<br>
+```
+docker exec -it redis sh
+redis-cli   
+auth Password123@redis
+flushall
+```
