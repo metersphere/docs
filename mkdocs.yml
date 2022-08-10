@@ -124,12 +124,12 @@ nav:
           - 场景化接口测试: tutorial/api_testing.md
           - 脚本生成接口认证签名: tutorial/pre_processor.md
           - 接口测试中使用变量: tutorial/use_variable.md
-          - 使用变量及JMeter、MockJS函数: tutorial/use_function.md
-          - 前后置脚本引用 Python 第三方库: tutorial/use_python.md
-          - 前后置脚本使用 BeanShell 引用外部 Jar 包 : tutorial/use_jar.md
-          - 前后置脚本引用 JavaScript: tutorial/use_js.md
-          - Jenkins 中完成 MeterSphere 自动化接口测试: tutorial/use_jenkins.md
-          - 接口自动化做数据驱动（ddt）测试: tutorial/use_ddt.md
+          - 变量及JMeter/MockJS函数: tutorial/use_function.md
+          - 脚本引用 Python 第三方库: tutorial/use_python.md
+          - 脚本使用 BeanShell 引用外部 Jar 包 : tutorial/use_jar.md
+          - 脚本引用 JavaScript: tutorial/use_js.md
+          - Jenkins 中完成自动化接口测试: tutorial/use_jenkins.md
+          - 接口自动化做数据驱动测试: tutorial/use_ddt.md
           - 提交缺陷至禅道: tutorial/use_zentao.md
           - 对接 Jira 的配置说明: tutorial/use_jira.md
           - 提交缺陷至TAPD: tutorial/use_tapd.md
