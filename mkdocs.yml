@@ -130,9 +130,9 @@ nav:
           - 脚本引用 JavaScript: tutorial/use_js.md
           - Jenkins 中完成自动化接口测试: tutorial/use_jenkins.md
           - 接口自动化做数据驱动测试: tutorial/use_ddt.md
-          - 提交缺陷至禅道: tutorial/use_zentao.md
-          - 对接 Jira 的配置说明: tutorial/use_jira.md
-          - 提交缺陷至TAPD: tutorial/use_tapd.md
+          - 服务集成之对接禅道: tutorial/use_zentao.md
+          - 服务集成之对接 Jira: tutorial/use_jira.md
+          - 服务集成之对接 TAPD: tutorial/use_tapd.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md

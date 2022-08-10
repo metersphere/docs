@@ -19,11 +19,11 @@ $config->features->apiGetModel    = true;
 访问禅道需要账号具有超级Model权限，可用管理员账号登录禅道，在权限中进行设置，如下图：
 ![](../img/tutorial/use_zentao/禅道权限.png)
 
-在权限维护中，开启超级Model调用接口权限，保存即可。
+在权限维护中，开启超级Model调用接口权限，保存即可。<br>
 ![](../img/tutorial/use_zentao/超级model权限.png)
 
 ### 1.3 在MeterSphere中配置禅道信息
-在MeterSphere平台中，配置好禅道对接的信息，如下图：
+在MeterSphere平台中，配置好禅道对接的信息，如下图：<br>
 ![](../img/tutorial/use_zentao/配置禅道.png)
 
 测试连接，显示验证通过即可完成连接的配置。
@@ -70,10 +70,10 @@ $config->features->apiGetModel    = true;
 补充：<br/>标签是换行符。MeterSphere平台目前还不支持回车换行，如果不加这个换行符，提交到禅道后，所有的文字信息都在一行，阅读体验不友好，所以暂时用这种方式进行换行。
 
 #### 2.2.2 设置自定义字段
-设置自定义字段就是在模板基础上增加一些填写的字段。当字段名且值与禅道保持一致时，提交后就会自动填充禅道中的字段值。下面举个字段的例子进行演示，比如我们需要添加一个Bug类型的字段，禅道中的字段是这样的：
+设置自定义字段就是在模板基础上增加一些填写的字段。当字段名且值与禅道保持一致时，提交后就会自动填充禅道中的字段值。下面举个字段的例子进行演示，比如我们需要添加一个Bug类型的字段，禅道中的字段是这样的：<br>
 ![](../img/tutorial/use_zentao/自定义字段.png)
 
-在MeterSphere平台中添加自定义字段：
+在MeterSphere平台中添加自定义字段：<br>
 ![](../img/tutorial/use_zentao/ms自定义字段.png)
 
 ##### Q：禅道中的选项值在哪里看？
@@ -93,22 +93,22 @@ A：在禅道安装目录：zentao/module/bug/lang下，打开zh-cn.php查看。
 最后可以根据你的需求，继续添加其他字段，保存最终模板即可。
 
 ### 2.3 设置提交人信息
-上面的步骤都做完后，其实已经可以正常提交一个Bug至禅道了。但是在这个设置下，即使在MeterSphere平台上提交缺陷的是不同的账号，在禅道上Bug的创建人都是admin（也就是对接的时候配置的用户名），我们需要进一步地设置，来分辨该Bug是由谁提交的。在MeterSphere界面右上角设置个人信息，如下图：
+上面的步骤都做完后，其实已经可以正常提交一个Bug至禅道了。但是在这个设置下，即使在MeterSphere平台上提交缺陷的是不同的账号，在禅道上Bug的创建人都是admin（也就是对接的时候配置的用户名），我们需要进一步地设置，来分辨该Bug是由谁提交的。在MeterSphere界面右上角设置个人信息，如下图：<br>
 ![](../img/tutorial/use_zentao/个人信息.png)
 
-输入禅道账号密码，校验通过后保存。
+输入禅道账号密码，校验通过后保存。<br>
 ![](../img/tutorial/use_zentao/账号密码.png)
 
 如果校验失败，可以尝试在禅道中开启该用户的超级Model权限，就可以通过了。
 
 ## 效果展示
-在MeterSphere中新增一个缺陷并保存：
+在MeterSphere中新增一个缺陷并保存：<br>
 ![](../img/tutorial/use_zentao/新建缺陷.png)
 
-保存后的界面如下：
+保存后的界面如下：<br>
 ![](../img/tutorial/use_zentao/保存.png)
 
-再来看看禅道的界面：
+再来看看禅道的界面：<br>
 ![](../img/tutorial/use_zentao/禅道页面.png)
 
 ![](../img/tutorial/use_zentao/缺陷内容.png)

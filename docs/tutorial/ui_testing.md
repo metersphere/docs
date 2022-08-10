@@ -2,7 +2,7 @@
 
 在此前的版本中，UI场景调试默认调用MeterSphere服务端的Selenium-server，用户无法看到浏览器被唤起执行的全过程。为了提升UI场景用例调试的用户体验以及调试效率，MeterSphere在调试方式上新增了“本地调试（即远程调用浏览器）”功能。
 
-MeterSphere远程调用浏览器的效果如下图所示。
+MeterSphere远程调用浏览器的效果如下图所示。<br>
 ![远程调用浏览器效果图](../img/tutorial/ui_testing/远程调用浏览器效果图.gif)
 
 ## 1 MeterSphere远程调用浏览器实现原理
