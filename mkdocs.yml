@@ -130,6 +130,7 @@ nav:
           - 在 MeterSphere 前后置脚本引用 JavaScript: tutorial/use_js.md
           - 在 Jenkins 中完成 MeterSphere 自动化接口测试: tutorial/use_jenkins.md
           - 基于 MeterSphere 接口自动化做数据驱动（ddt）测试: tutorial/use_ddt.md
+          - MeterSphere提交缺陷至禅道的全过程详解: tutorial/use_zentao.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md
