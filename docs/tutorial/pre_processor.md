@@ -20,8 +20,7 @@
 在该场景中添加一个 HTTP 请求，调用 GET/project/listAll 获取项目列表接口，在该请求的前置脚本中，添加以下代码生成签名并将签名值存入 signature 变量中。
 ![](../img/tutorial/pre_processor/pre_processor_3.png)
 
-### BeanShell 脚本例子
-BeanShell 脚本例子，通过 Access Key，Secret Key 的方式生成签名，调用 MeterSphere API
+BeanShell 脚本，通过 Access Key，Secret Key 的方式生成签名，调用 MeterSphere API
 ```
 import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;
@@ -50,55 +49,6 @@ try {
     e.printStackTrace();
 }
 ```
-### Python 脚本例子
-Python 脚本例子，通过 Access Key，Secret Key 的方式生成签名，调用 MeterSphere API
-```python3.7
-import logging
-import time
-import requests
-from Crypto.Cipher import AES
-from base64 import b64encode
-
-
-class AESCrypt(object):
-
-    def __init__(self, akey, skey):
-        self.akey = akey
-        if len(skey) != 16:
-            raise RuntimeError("密钥长度非16位")
-        self.key = str(skey).encode('utf-8')
-        self.iv = str(akey).encode('utf-8')
-        self.MODE = AES.MODE_CBC
-        self.block_size = AES.block_size
-
-        self.padding = lambda s: (s + (self.block_size - len(s) % self.block_size) * chr(self.block_size - len(s) % self.block_size))
-        self.unpadding = lambda data: data[:-ord(data[len(data) - 1:])]
-
-    def aes_encrypt(self, plaintext):
-        try:
-            cryptor = AES.new(key=self.key, mode=self.MODE, IV=self.iv)
-            pad_pkcs5 = self.padding(plaintext).encode()
-            encrypt_aes = cryptor.encrypt(pad_pkcs5)
-            encrypt_text_str = b64encode(encrypt_aes).decode('utf-8')
-            return encrypt_text_str
-        except Exception as e:
-            logging.exception(e)
-
-    def action(self):
-        t = time.time()
-        e = self.aes_encrypt(f"{self.akey}|{int(round(t * 1000))}")  # 加密
-        return e
-
-
-if __name__ == '__main__':
-    accessKey = "${accessKey}";
-    secretKey = "${secretKey}";
-
-    signature = AESCrypt(accessKey,secretKey).action()
-    //将签名值存入 signature 变量中
-    vars.put("signature",signature);
-```
-
 
 在该请求中添加 accessKey 及 signature 两个请求头，accessKey 的值为在场景中配置的 accessKey 变量，signature 的值为上一步通过前置脚本计算出来的签名。
 ![](../img/tutorial/pre_processor/pre_processor_4.png)
