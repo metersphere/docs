@@ -20,7 +20,8 @@
 在该场景中添加一个 HTTP 请求，调用 GET/project/listAll 获取项目列表接口，在该请求的前置脚本中，添加以下代码生成签名并将签名值存入 signature 变量中。
 ![](../img/tutorial/pre_processor/pre_processor_3.png)
 
-Java代码例子，通过AK，SK的方式请求metersphere-api
+### BeanShell 脚本例子
+BeanShell 脚本例子，通过 Access Key，Secret Key 的方式生成签名，调用 MeterSphere API
 ```
 import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;
@@ -49,8 +50,8 @@ try {
     e.printStackTrace();
 }
 ```
-
-python3代码例子，通过AK，SK的方式请求metersphere-api
+### Python 脚本例子
+Python 脚本例子，通过 Access Key，Secret Key 的方式生成签名，调用 MeterSphere API
 ```python3.7
 import logging
 import time
@@ -86,19 +87,16 @@ class AESCrypt(object):
     def action(self):
         t = time.time()
         e = self.aes_encrypt(f"{self.akey}|{int(round(t * 1000))}")  # 加密
-        return {
-            "accessKey": self.akey,
-            "signature": e
-        }
+        return e
 
 
 if __name__ == '__main__':
-    ak = "ak"
-    sk = "sk"
+    accessKey = "${accessKey}";
+    secretKey = "${secretKey}";
 
-    headers = AESCrypt(ak,sk).action()
-    response = requests.get('https://cloud.metersphere.com/project/listAll', headers=headers)
-    print(response.text)
+    signature = AESCrypt(accessKey,secretKey).action()
+    //将签名值存入 signature 变量中
+    vars.put("signature",signature);
 ```
 
 
