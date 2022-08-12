@@ -51,7 +51,7 @@
 项目设置-消息设置 配置接收方式、以及创建机器人生成的 webhook 地址。
 ![](../img/tutorial/use_message/飞书消息设置.jpg)
 
-## 3.4 消息通知
+### 3.4 消息通知
 删除功能用例，测试消息推送
 ![](../img/tutorial/use_message/飞书通知.jpg)
 
