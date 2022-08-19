@@ -3,7 +3,7 @@
 ![搜索](../../img/user_manual/my_desk/created/created_1.png)
 
 ## 2 我创建的
-可切换到任意菜单，下方列表就显示对应内容。默认“功能用例”，选择当前版本号，点击列表任一数据，会跳转到对应的页面查看详细情况
+可切换到任意菜单，下方列表就显示对应内容。默认【功能用例】，选择当前版本号，点击列表任一数据，会跳转到对应的页面查看详细情况
 ![切换](../../img/user_manual/my_desk/created/created_2.png)
 
 ![跳转](../../img/user_manual/my_desk/created/created_3.png)
