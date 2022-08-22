@@ -310,7 +310,7 @@ Mock 服务显示未开启，需在【项目设置-应用管理-接口测试】�
 ![!开启TCP MOCK服务](../../img/api/开启TCPMOCK服务1.png)
 
 ###### TCP Mock设置
-其功能请参考 [HTTP Mock设置](#_46)
+其功能请参考 [HTTP Mock设置](#http-mock)
 
 ### 3.4 定时同步
 点击【更多操作-定时同步】可设置 Swagger 在线接口文档定时同步。
