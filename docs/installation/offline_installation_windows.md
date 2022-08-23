@@ -193,13 +193,13 @@
 ![常见问题](../img/installation/常见问题1.png){ width="900px" }
 
 解决方法:<br>
-将metersphere目录下的docker-compose-*.yml里的volumes都按照下面要求进行修改。(windows下的docker不要用单独的volumes定义，将下面路径写到上面，下面volumes部分可删)
+将 metersphere 目录下的 docker-compose-*.yml 里找【volumes】，将下面定义的路径替换到上面的位置，按照下面要求进行修改。( windows 下的 docker 不要用单独的 volumes 定义，将下面路径写到上面，下面 volumes 部分可删)
 
 ![常见问题](../img/installation/常见问题2.png){ width="900px" }
 
 ![常见问题](../img/installation/常见问题3.png){ width="600px" }
 
-### 3.2 执行安装脚本时，出现Container is unhealthy
+### 3.2 执行安装脚本时，出现 Container is unhealthy
 
 ![常见问题](../img/installation/常见问题4.png){ width="900px" }
 
@@ -208,20 +208,20 @@
 
 ![常见问题](../img/installation/常见问题5.png){ width="900px" }
 
-2.将挂载目录为由原来的/bitnami改为/data，重新执行/bin/bash install.sh
+2.将挂载目录为由原来的 /bitnami 改为 /data，重新执行 /bin/bash install.sh
 
 ![常见问题](../img/installation/常见问题6.png){ width="900px" }
 
-### 3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现promethus容器是Restarting状态
+### 3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 promethus 容器是 Restarting状态
 
 ![常见问题](../img/installation/常见问题7.png){ width="900px" }
 
 解决方法:<br>
-1.查看日志(docker logs containsId)，如下图发现是promethus目录下的文件没有权限
+1.查看日志(docker logs containsId)，如下图发现是 promethus 目录下的文件没有权限
 
 ![常见问题](../img/installation/常见问题8.png){ width="900px" }
 
-2.手动给promethus目录赋权
+2.手动给 promethus 目录赋权
 
 ```
 chmod +777 /opt/metersphere/conf/promethus
@@ -232,21 +232,21 @@ chmod +777 /opt/metersphere/data/promethus
 
 ![常见问题](../img/installation/常见问题9.png){ width="900px" }
 
-### 3.4 执行msctl status，发现ms-server状态是health:staring状态，访问前端也访问不了
+### 3.4 执行 msctl status，发现 ms-server 状态是 healthy:staring 状态，访问前端也访问不了
 
 ![常见问题](../img/installation/常见问题10.png){ width="900px" }
 
 ![常见问题](../img/installation/常见问题11.png){ width="900px" }
 
 解决方法:<br>
-1.查看/opt/metersphere/logs/info.log日志，如下图发现是redis连接有问题
+1.查看 /opt/metersphere/logs/info.log 日志，如下图发现是 redis 连接有问题
 
 ![常见问题](../img/installation/常见问题12.png){ width="900px" }
 
-2.修改/opt/metersphere/.env文件,将redis/kafka的ip换成本机ip，执行msctl reload后再执行msctl status，发现容器都正常启动。
+2.修改 /opt/metersphere/.env 文件,将 redis/kafka 的 ip 换成本机 ip，执行 msctl reload 后再执行 msctl status，发现容器都正常启动。
 
 ![常见问题](../img/installation/常见问题13.png){ width="900px" }
 
-输入 本机IP:端口 可以正常访问网站。
+输入 http://本机 ip:端口 可以正常访问网站。
 
 ![常见问题](../img/installation/常见问题14.png){ width="900px" }

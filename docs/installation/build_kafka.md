@@ -1,10 +1,10 @@
 !!! info "大致流程:"
-    * 先安装JDK
-    * 部署Zookeeper集群
-    * 部署Kafka集群
-    * 部署Kafka-manager
+    * 先安装 JDK
+    * 部署 Zookeeper 集群
+    * 部署 Kafka 集群
+    * 部署 Kafka-manager
     
-## 1 部署Kafka集群
+## 1 部署 Kafka 集群
 
 ### 1.1 关闭防火墙和 selinux
 
@@ -13,22 +13,22 @@
 systemctl stop firewalld.service
 systemctl disable firewalld.service
 ```
-关闭selinux
+关闭 selinux
 ```
 setenforce 0 （临时生效）
 sed -i 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config（永久生效）
 ```
 
-### 1.2 检查是否已经安装OpenJDK
+### 1.2 检查是否已经安装 OpenJDK
 
 ```
-rpm -qa|grep jdk  #如果安装先卸载jdk
+rpm -qa|grep jdk  #如果安装先卸载 jdk
 ```
 下载jdk:
 ```
 官网：https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
 ```
-选择jdk版本上传到服务器解压，这里我用的是jdk1.8.0版本
+选择jdk版本上传到服务器解压，这里我用的是 jdk1.8.0 版本
 ```
 tar -xvf jdk-8u251-linux-x64.tar.gz
 mv jdk1.8.0_251 /usr/local
@@ -44,14 +44,14 @@ source /etc/profile
 java -version （检查一下jdk版本查看是否安装成功）
 ```
 
-### 1.3 搭建Zookeeper集群
+### 1.3 搭建 Zookeeper 集群
 
 1.3.1 集群节点选用三台linux主机<br>
 
 下载地址: https://archive.apache.org/dist/zookeeper/ <br>
 或者: wget https://archive.apache.org/dist/zookeeper/zookeeper-3.5.5/apache-zookeeper-3.5.5-bin.tar.gz <br>
 
-1.3.2 新建一个zookeeper-cluster目录，将安装包上传zookeeper-cluster目录下<br>
+1.3.2 新建一个 zookeeper-cluster 目录，将安装包上传 zookeeper-cluster 目录下<br>
 ```
 cd /usr/local
 mkdir zookeeper-cluster
@@ -63,29 +63,29 @@ cd zookeeper-cluster
 tar zxvf  apache-zookeeper-3.5.5-bin.tar.gz
 ```
 
-1.3.4 配置zk1（先配一个节点，然后再复制修改相关配置）
+1.3.4 配置 zk1（先配一个节点，然后再复制修改相关配置）
 ```
 1.修改解压包名称（直观区分）
 mv apache-zookeeper-3.5.5-bin zk
 
-2.新建data，logs 目录来存放数据和日志
+2.新建 data，logs 目录来存放数据和日志
 cd zk
 mkdir data logs 
 
-3.进入conf，将zoo_sample.cfg复制重命名zoo.cfg
+3.进入 conf，将 zoo_sample.cfg 复制重命名 zoo.cfg
 cd zk/conf
 cp zoo_sample.cfg zoo.cfg
 
-4.修改conf下zoo.cfg
+4.修改 conf 下 zoo.cfg
 vi zoo.cfg
 ① 修改：dataDir=/usr/local/zookeeper-cluster/zk1/data
 ② 添加：dataLogDir=/usr/local/zookeeper-cluster/zk1/logs
 ③ clientPort=2181【clientPort是客户端的请求端口】
-④ 在zoo.cfg文件末尾追加
+④ 在 zoo.cfg 文件末尾追加
 server.1=10.1.240.150:2888:3888
 server.2=10.1.240.151:2888:3888
 server.3=10.1.240.152:2888:3888
-5.在zk的data目录下创建一个myid文件，内容为1
+5.在 zk 的 data 目录下创建一个 myid 文件，内容为 1
 cd ../data/
 echo 1 > myid
 ```
@@ -107,7 +107,7 @@ cd /usr/local/zookeeper-cluster/zk/bin
 ./zkServer.sh status
 ```
 ![配置zk状态地址](../img/installation/dis_pressure/zk状态.png){:height="100%" width="70%"} <br>
-可以看到，一台作为leader，两台作为follower，zookeeper集群搭建成功。
+可以看到，一台作为 leader，两台作为 follower，zookeeper 集群搭建成功。
 
 ### 1.4 Kafka集群安装
 
@@ -116,7 +116,7 @@ cd /usr/local/zookeeper-cluster/zk/bin
 Kafka官网下载：http://kafka.apache.org/downloads <br>
 或者wget，下载 https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.2/kafka_2.12-2.6.2.tgz
 
-1.4.2 新建一个Kafka-cluster目录，将安装Kafka-cluster目录下
+1.4.2 新建一个 Kafka-cluster 目录，将安装 Kafka-cluster 目录下
 
 ```
 cd /usr/local
@@ -137,7 +137,7 @@ cd /usr/local/kafka-cluster/kafka/config/
 vi server.properties修改
 broker.id=1  #唯一
 listeners=PLAINTEXT://172.16.150.154:9092  #修改为本机地址
-log.dirs=/Data/kafka-logs #数据目录，kafka-logs会自动采集
+log.dirs=/Data/kafka-logs #数据目录，kafka-logs 会自动采集
 zookeeper.connect=172.16.150.154:2181,172.16.150.155:2181,172.16.150.156:2181 #zokeeper集群地址，以","为分割其他的不用改
 ```
 
@@ -157,9 +157,9 @@ cd /usr/local/kafka-cluster/kafka/bin
 可以发现在窗口启动之后是一个阻塞进程，会阻塞当前窗口，我们可以重新打开一个窗口进行接下来的操作，或者在启动kafka的时候使用 -daemon 参数将它声明为守护进程后台运行。
 ./kafka-server-start.sh  -daemon ../config/server.properties
 ```
-到这一步kafka+zk已经是部署完成了
+到这一步 kafka+zk 已经是部署完成了
 
-1.4.7 使用JMX监控Kafka
+1.4.7 使用 JMX 监控 Kafka
 
 ```
 vim /usr/local/kafka-cluster/kafka/bin/kafka-server-start.sh
@@ -167,7 +167,7 @@ vim /usr/local/kafka-cluster/kafka/bin/kafka-server-start.sh
 ```
 ![配置监控kafka地址](../img/installation/dis_pressure/监控kafka.png){:height="100%" width="70%"} <br>
 
-1.4.8 服务设置开机自启，使用systemctl工具管理（在配置时，请先把原本服务关闭）
+1.4.8 服务设置开机自启，使用 systemctl 工具管理（在配置时，请先把原本服务关闭）
 
 ```
 先设置zookeeper开机启动
@@ -187,7 +187,7 @@ WantedBy=multi-user.target
 ```
 然后保存退出
 
-echo $PATH 找到我们的jdk安装路径
+echo $PATH 找到我们的 jdk 安装路径
 
 ![配置jdk路径地址](../img/installation/dis_pressure/jdk路径.png){:height="100%" width="70%"} <br>
 ```
@@ -196,7 +196,7 @@ vim zkEnv.sh
 ```
 ![配置zk环境地址](../img/installation/dis_pressure/zk环境.png){:height="100%" width="70%"} <br>
 
-找到我们第一行的变量，把我们之前部署的java环境添加刷新一下进去在后面插入<br>
+找到我们第一行的变量，把我们之前部署的 java 环境添加刷新一下进去在后面插入<br>
 export JAVA_HOME=/usr/local/jdk1.8.0_251，保存退出，然后刷新一下命令<br>
 ```
 systemctl daemon-reload 
@@ -209,7 +209,7 @@ systemctl status zookeeper #检查服务状态
 
 ![配置zk状态正确地址](../img/installation/dis_pressure/zk状态正确.png){:height="100%" width="70%"} <br>
 
-1.4.9 Kafka自启动设置
+1.4.9 Kafka 自启动设置
 
 ```
 cd /lib/systemd/system/
@@ -239,11 +239,11 @@ systemctl status kafka
 ```
 ![配置kafka状态地址](../img/installation/dis_pressure/kafka状态.png){:height="100%" width="70%"} <br>
 
-1.4.10 建议启动Kafka时先重新启动一下Zookeeper，有时间可能会起不来。启动Kafka前必须先要启动Zookeeper。
+1.4.10 建议启动 Kafka 时先重新启动一下 Zookeeper，有时间可能会起不来。启动 Kafka 前必须先要启动 Zookeeper。
 
 ## 2 部署kafka-manager
 
-可以在任意一台Kafka设备部署，Kafka可视化，yaml如下（需要提前安装好Docker环境和docker-compose环境，并下载好images）
+可以在任意一台 Kafka 设备部署，Kafka 可视化，yaml 如下（需要提前安装好 Docker 环境和 docker-compose 环境，并下载好 images）
 ```
 version: '2'
 
