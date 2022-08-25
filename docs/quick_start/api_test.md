@@ -93,8 +93,8 @@ MeterSphere 接口测试模块提供了接口定义、接口自动化等接口�
 
 ![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤7.png)
     
-2. 再次添加一个 【接口列表导入】 步骤，选择 `getUserList` 接口。修改请求头里的CSRF-TOKEN参数，设置为`${csrfToken}`，修改该接口请求中的REST参数 goPage 为1，pageSize 为10。
-  ![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤8.png)
+再次添加一个 【接口列表导入】 步骤，选择 `getUserList` 接口。修改请求头里的CSRF-TOKEN参数，设置为`${csrfToken}`，修改该接口请求中的REST参数 goPage 为1，pageSize 为10。
+![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤8.png)
 
 ## 4 查看测试报告
 ### 4.1 执行场景用例
