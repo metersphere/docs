@@ -228,9 +228,13 @@ nginx.ingress.kubernetes.io/proxy-body-size: 50m
 3. 保存后重启nginx，问题解决
 ```
 
-## 42 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败
+## 42 调试单接口、接口自动化场景、UI 场景时，页面报 “连接异常，请检查环境配置”，或者 “一直加载” ，按 F12，打开浏览器控制台可以看到 “WebSocket 连接失败，失败信息为 “WebSocket connection to 'wss://xxx.fit2cloud.com/ws/4445ba22' failed:”
+
+![! WebSocket连接异常](../img/faq/websocket连接异常.png)
+
 ```
-解决方案：用nginx做反向代理，需要在nginx加上websocket配置
+解决方案：metersphere 的内部接口和 UI 请求默认使用 websocket 协议，如果metersphere 访问使用 nginx 做反向代理的话，需要在 nginx 加上 websocket 配置
+
 server{
   ...
   location / {
