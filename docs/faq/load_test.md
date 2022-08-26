@@ -1,5 +1,4 @@
-
-## MeterSphere 和 JMeter 的主要区别是什么？
+## 1 MeterSphere 和 JMeter 的主要区别是什么？
 
 根据 51Testing软件测试网的调查报告，2009 年时仅 6% 的受访者采纳 JMeter 工具。但是到 2019年，62% 的受访者采纳 JMeter 作为性能测试工具，已经成为目前最主流的性能测试工具。 除了性能测试以外，也有很大部分用户在使用 JMeter 进行接口测试。既然有了 JMeter，为什么还需要 MeterSphere？我们将从规模扩展性、测试报告、测试管理和多人协作这四个方面详细分析 JMeter 存在的问题，及 MeterSphere 带来的变化。
 
@@ -41,7 +40,7 @@
         - B/S 架构的测试平台，只需一个现代浏览器加可以使用到平台提供的所有功能
         - 灵活的多租户、多项目管理模型，租户间测试用例、测试脚本和报告可以有效隔离，租户内方便共享协作
 
-## 是否支持/如何支持分布式的性能测试？
+## 2 是否支持/如何支持分布式的性能测试？
 
 MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。
 
@@ -49,7 +48,7 @@ MeterSphere 通过在测试资源池中添加多个测试执行节点的方式�
 
 ![测试资源池](../img/system_management/编辑测试资源池.png)
 
-## 如何向测试资源池中添加节点？
+## 3 如何向测试资源池中添加节点？
 
 首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。
 
@@ -67,7 +66,7 @@ msctl status
 docker logs ms-node-controller
 ```
 
-## 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
+## 4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
 
 1.社区版
 
@@ -80,7 +79,7 @@ docker logs ms-node-controller
 与优化前方案相比，Kafka 和 DataStreaming 需要处理的数据大大降低，整体上对于并发量较大情况下的结果处理能力大大提升。<br>
 如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 Jmeter 的真实值。
 
-## 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
+## 5 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
 
 系统在执行性能测试之前，会先检查安装系统时配置的 Kafka 地址是否可用。当提示该信息时，表明 MeterSphere 无法正常连接到 Kafka，可以通过以下方式进行排查定位。
 
@@ -112,48 +111,48 @@ msctl start
 ```
 若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。
 
-## 执行性能测试时提示 `无法运行测试，请检查当前站点配置` 如何解决？
+## 6 执行性能测试时提示 `无法运行测试，请检查当前站点配置` 如何解决？
 
 执行性能测试过程中，node-controller 节点需要通过 `系统`-`系统设置`-`系统参数设置` 中配置的 `当前站点 URL` 下载相关文件。出现该问题时用户需要检查该配置参数，确保 node-controller 节点可以正常访问到该 URL。
 
 URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https://demo.metersphere.com`。
 
-## 站点配置的URL是什么？
+## 7 站点配置的URL是什么？
 
 站点配置为部署MeterSphere Sever的地址，可以是域名或者是IP地址。
 
-## 执行性能测试时 JMeter 容器内存溢出如何解决?
+## 8 执行性能测试时 JMeter 容器内存溢出如何解决?
 
 可以修改系统设置中所使用的测试资源池配置中的 HEAP 配置来调整 JMeter 容器的内存参数。
 
 !!! info "配置示例"
     -Xms2g -Xmx2g -XX:MaxMetaspaceSize=256m
 
-## 如果性能测试jmx有依赖的jar包，需要怎么处理？
+## 9 如果性能测试jmx有依赖的jar包，需要怎么处理？
 
 在创建性能测试时，可以将依赖的 jar 包与 jmx 文件一起上传。
 
-## 在压测过程中，可以手动调整TPS吗？
+## 10 在压测过程中，可以手动调整TPS吗？
 
 目前还不支持。
 
-## 执行性能测试时，提示“并发数超额”，该怎么解决？
+## 11 执行性能测试时，提示“并发数超额”，该怎么解决？
 
 修改系统设置-测试资源池中的最大并发数后再次执行测试。
 
-## MeterSphere可以做全链路压测吗？
+## 12 MeterSphere 可以做全链路压测吗？
 
 目前我们可以做为其中的发压端。
 
-## 执行性能测试时，显示image not found如何处理？
+## 13 执行性能测试时，显示image not found如何处理？
 
 执行性能测试所需的 JMeter 容器需要事先存在于所选的测试资源池的节点上，请检查确保容器镜像存在后，更新测试资源池的镜像配置为正确的镜像标签。
 
-## 压测报告折现图形可以配置吗?
+## 14 压测报告折现图形可以配置吗?
 
 在创建性能测试时的高级设置中可以修改报告数据的聚合时间。
 
-## 压测执行的时候报如下错如何解决？
+## 15 压测执行的时候报如下错如何解决？
 ```
 Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.
 ```
@@ -184,47 +183,45 @@ nginx.novalocal
 10.110.149.133 nginx111
 ```
 
-## 同一脚本执行多次，可以将多次的报告结果进行对比吗？
+## 16 同一脚本执行多次，可以将多次的报告结果进行对比吗？
 
 在报告列表，同个任务下，已完成状态的报告可以进行对比。
 
 ![! 报告对比](../img/faq/报告对比.png)
 
 
-## 执行压测时，多台发压机的情况下，可以设置变量不重复执行吗？
+## 17 执行压测时，多台发压机的情况下，可以设置变量不重复执行吗？
 
 可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。
 
-## 性能测试监控，需要安装什么插件吗？
+## 18 性能测试监控，需要安装什么插件吗？
 
 被监控服务器需要安装node export组件，相当于收集监控的一个客户端。主服务会在安装MeterSphere系统时默认安装，如果添加其他服务器，则需要单独安装。
 
-## MeterSphere可以监控被测系统服务器指标吗？
+## 19 MeterSphere可以监控被测系统服务器指标吗？
 
 MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控。可以在性能测试模块的高级测试里面，添加被测系统服务器，同时在该服务器安装node_exporter插件，即可在执行性能测试的时候完成相关指标的监控。
 
-## 压力配置中，每个线程组是否能分别选择压力机？
+## 20 压力配置中，每个线程组是否能分别选择压力机？
 
 在压力配置里，提供了3种分配策略，分别为“自动分配、固定节点、自定义”，可以为每个线程组指定一个节点，或者按比例分配多个节点。
 
-
-## 性能测试并发量加大的时候报错 `Non HTTP response code: java.net.SocketTimeoutException`
-
+## 21 性能测试并发量加大的时候报错 `Non HTTP response code: java.net.SocketTimeoutException`
 高级配置增加超时时间。
 
 ![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)
 
-## 进行压测时，最大用户加到 50/100 就不能继续加吗？
+## 22 进行压测时，最大用户加到 50/100 就不能继续加吗？
 检查 系统设置-测试资源池-修改资源池里“最大并发数”
 
-## 性能测试相关文件在 jmeter容器中的哪个目录？
+## 23 性能测试相关文件在 jmeter容器中的哪个目录？
 在容器里的/test目录下
 
-## 执行性能测试报 jmeter镜像不存在
+## 24 执行性能测试报 jmeter镜像不存在
 1.先查看一下镜像文件，看是否存在这个镜像，docker images
 2.下载离线安装包解压后，将jmeter镜像导入到docker中；
 
-## 性能测试状态一直是starting且无数据
+## 25 性能测试状态一直是starting且无数据
 到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
 和 info.log，看日志中是否有报错信息。<br>
 1.如果出现 org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms<br>
@@ -269,7 +266,7 @@ cd /opt/bitnami/kafka/bin
 ./kafka-topics.sh --create --bootstrap-server 127.0.0.1:9092 --replication-factor 1 --partitions 4 --topic JMETER_LOGS
 ```
 
-## k8s资源池是否需要安装node-controller
+## 26 k8s资源池是否需要安装node-controller
 1.执行性能测试不需要<br>
 性能测试只需要在仓库中配置好 JMeter 镜像的地址，执行性能测试的时候会自动创建 JMeter POD 进行压测，执行完之后自动销毁。<br>
 2.执行接口测试需要<br>
