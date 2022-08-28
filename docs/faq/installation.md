@@ -233,7 +233,7 @@ nginx.ingress.kubernetes.io/proxy-body-size: 50m
 ![! WebSocket连接异常](../img/faq/websocket连接异常.png)
 
 ```
-解决方案：metersphere 的内部接口和 UI 请求默认使用 websocket 协议，如果metersphere 访问使用 nginx 做反向代理的话，需要在 nginx 加上 websocket 配置
+解决方案：metersphere 的内部接口和 UI 请求默认使用 websocket 协议，如果 metersphere 访问使用 nginx 做反向代理的话，需要在 nginx 加上 websocket 配置
 
 server{
   ...
