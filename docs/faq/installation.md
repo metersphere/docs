@@ -257,8 +257,8 @@ server{
 
 ## 45 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
 ![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
-
-清除下 redis 数据<br>
+1.清浏览器缓存，重新打开浏览器进行访问 <br>
+2.清除下 redis 数据<br>
 ```
 docker exec -it redis sh
 redis-cli   
