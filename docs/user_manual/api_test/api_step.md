@@ -19,19 +19,22 @@
 log.info("Hello World!");
 ```
 - `Label` - 前置脚本所属请求的请求名称
-- `SampleResult` - 当前请求请求结果 [SamplerResult]() 的指针
+- `SampleResult` - 当前请求请求结果 [SamplerResult]() 的指针，SampleResult 中的所有方法都可以通过 prev. 来调用
 ```
 //设置请求结果成功或失败
-SampleResult.setSuccessful(true/false);
+prev.setSuccessful(true/false);
 //设置请求返回码
-SampleResult.setResponseCode("code");
-//设置请求返回消息
-SampleResult.setResponseMessage("message");
+prev.setResponseCode("200");
+//获取请求响应结果
+log.info("getResponseDataAsString:"+prev.getResponseDataAsString());
 ```
 - `sampler` - 当前请求 [sampler]() 的指针
 ```
-//获取当前请求名称
-sampler.getName();
+//获取当前请求body请求参数
+import org.apache.jmeter.config.Arguments;
+Arguments arguments = sampler.getArguments(); // 调用时注意sampler小写
+String body = arguments.getArgument(0).getValue();
+log.info("sampler body:"+body);
 ```
 - `vars` - [JMeterVariables]()，用于操作变量
 ```
