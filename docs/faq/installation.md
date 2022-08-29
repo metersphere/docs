@@ -262,10 +262,16 @@ server{
 ## 45 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
 ![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
 
-清除下 redis 数据<br>
+1.清浏览器缓存，重新打开浏览器进行访问 <br>
+2.清除下 redis 数据<br>
 ```
 docker exec -it redis sh
 redis-cli   
 auth Password123@redis
 flushall
 ```
+
+## 46 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
+![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
+
+检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere
