@@ -269,3 +269,8 @@ redis-cli
 auth Password123@redis
 flushall
 ```
+
+## 46 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
+![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
+
+检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere
