@@ -200,7 +200,7 @@ plugins:
 
 extra:
     version:
-        method: mike
+        provider: mike
     analytics:
         provider: google
         property: UA-147297392-7
