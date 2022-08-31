@@ -12,8 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      env:
-            GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+      with:
+        token: ${{ secrets.GITHUBTOKEN }}
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
