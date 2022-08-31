@@ -12,7 +12,7 @@ msctl status
 
 修改 /opt/metersphere/.env 文件中的对应配置后，执行 `msctl reload` 命令重新加载应用。
 
-> 配置文件说明请参考 [修改安装配置(可选)](/v1.20.x-lts/installation/online_installation/#32)。
+> 配置文件说明请参考 [修改安装配置(可选)](/docs/v1.20.x-lts/installation/online_installation/#32)。
 
 ## 3 如何在 Kubernetes 中搭建 MeterSphere？
 
