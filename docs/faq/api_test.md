@@ -14,7 +14,7 @@
 
 ## 4 接口自动化如何生成报告？
 
-手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[执行指定场景](/user_manual/api_test/api_automation/#_12)
+手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[执行指定场景](/v2.x/user_manual/api_test/api_automation/#_12)
 
 ## 5 接口测试支持上传文件的接口吗？
 
@@ -73,7 +73,7 @@ SQL请求可通过如下方法进行断言：
 ## 17 如何引用 csv？
 
 在场景编辑页面，点击场景变量添加csv类型的场景变量。
-具体操作可参考 https://metersphere.io/docs/user_manual/api_test/api_automation/#_6 。
+具体操作可参考 https://metersphere.io/docs/v2.x/user_manual/api_test/api_automation/#_6 。
 
 ## 18 接口自动化里，同一场景下是否支持配置多个接口域名？
 
@@ -112,7 +112,6 @@ MeterSphere的批量执行操作，同时支持串行和并行两种方式，可
 ![! 更新接口按钮](../img/faq/更新接口按钮.png)
 
 ## 23 执行接口报错“Non HTTP response code: java.net.SocketTimeoutException”
-
 修改其他设置里接口的连接超时时间。
 
 ![! 修改连接超时](../img/faq/修改连接超时.png)
@@ -177,7 +176,7 @@ log.info(u"看看乱码了吗");
 可以在项目设置-文件管理中上传jar包，并在前置/后置脚本中使用import即可
 
 ## 39 后置脚本中如何引用.js文件
-上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择nashornScript
+上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择 JavaScript
 
 ## 40 HTTP 协议接口支持哪些文件格式导入
 支持五种：MeterSphere格式、Postman格式、Swagger格式、HAR格式、JMeter格式

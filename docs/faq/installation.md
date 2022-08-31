@@ -11,13 +11,13 @@ msctl status
 ## 2 如何修改应用的默认端口？
 
 修改 /opt/metersphere/.env 文件中的对应配置后，执行 `msctl reload` 命令重新加载应用。
-
-> 配置文件说明请参考 [修改安装配置(可选)](/installation/online_installation/#32)。
+                                  
+> 配置文件说明请参考 [修改安装配置(可选)](/v2.x/installation/online_installation/#32)。
 
 ## 3 如何在 Kubernetes 中搭建 MeterSphere？
 
 可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)。
-详见在线文档/安装部署/Kubernetes中部署：https://metersphere.io/docs/installation/kubernetes_installation/
+详见在线文档/安装部署/Kubernetes中部署：https://metersphere.io/docs/v2.x/installation/kubernetes_installation/
 
 ## 4 docker-compose 版本与配置文件不兼容，请重新安装最新版本的 docker-compose?
 
@@ -252,8 +252,9 @@ server{
 执行 msctl reload 就好了
 
 ## 44 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
-1.是不是使用NG了，需要进行配置，可参考 https://metersphere.io/docs/installation/offline_installation/
-2.是不是使用 https://ip:8081 被拦截了,使用 http://ip:8081 就行
+1.是不是使用NG了，需要进行配置，可参考 https://metersphere.io/docs/v2.x/installation/offline_installation/ <br>
+2.是不是打开了代理，如 fidder、charles等工具<br>
+3.是不是使用 https://ip:8081 被拦截了,使用 http://ip:8081 就行<br>
 
 ## 45 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
 ![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
