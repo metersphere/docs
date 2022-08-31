@@ -2742,13 +2742,14 @@ You're not viewing the latest version.
   <h1>系统架构</h1>
 
 <h2 id="_1">整体架构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><img alt="整体架构" src="../img/system-arch-1.png" /></p>
+<p><img alt="整体架构" src="../img/system-arch.png" /></p>
 <h3 id="_2">组件说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong><a href="https://github.com/metersphere/metersphere">Frontend</a></strong>: MeterSphere 的前端工程, 基于 Vue.js 进行开发。</li>
 <li><strong><a href="https://github.com/metersphere/metersphere">Backend</a></strong>: MeterSphere 的后端工程, 基于 Spring Boot 进行开发, 为 MeterSphere 的功能主体。</li>
-<li><strong><a href="https://github.com/metersphere/chrome-extensions">Chrome Plugin</a></strong>: 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。</li>
-<li><strong><a href="https://github.com/metersphere/jenkins-plugin">Jenkins Plugin</a></strong>: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。</li>
+<li><strong><a href="https://github.com/metersphere/chrome-extensions">Chrome 浏览器插件</a></strong>: Chrome 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。</li>
+<li><strong><a href="https://github.com/metersphere/jenkins-plugin">Jenkins 插件</a></strong>: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。</li>
+<li><strong><a href="https://github.com/metersphere/metersphere-idea-plugin">IDEA 插件</a></strong>: IDEA 插件，基于javadoc解析，能够自动识别类，同步接口定义到 MeterSphere。</li>
 <li><strong><a href="https://github.com/metersphere/node-controller">Node Controller</a></strong>: 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter容器完成性能测试。</li>
 <li><strong>MySQL</strong>: MeterSphere 项目的主要数据均存储在 MySQL。</li>
 <li><strong>Redis</strong>: MeterSphere 项目登录用户的Session存储在 Redis。</li>
@@ -2756,9 +2757,10 @@ You're not viewing the latest version.
 <li><strong>Prometheus</strong>: 收集压力机及被测系统的监控数据。</li>
 <li><strong><a href="https://github.com/metersphere/data-streaming">Data Streaming</a></strong>: 从 Kafka 中获取接口测试或者性能测试结果数据进行处理后存入 MySQL 数据库。</li>
 <li><strong>Docker Engine</strong>: 为 Node Controller 提供 JMeter 容器运行环境。</li>
+<li><strong>Selenium Grid</strong>: 为 UI自动化测试提供运行环境，支持分布式拓展。</li>
 </ul>
 <p>各个组件间的关系可参考下图
-<img alt="组件说明" src="../img/components-1.png" /></p>
+<img alt="组件说明" src="../img/components.png" /></p>
 <h2 id="_3">管理模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><img alt="管理模型" src="../img/management-model.png" /></p>
 <h3 id="_4">概念说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
