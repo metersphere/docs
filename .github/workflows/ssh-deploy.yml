@@ -30,7 +30,7 @@ jobs:
           REMOTE_HOST: metersphere.io
           REMOTE_USER: root
           SOURCE: ./
-          TARGET: /opt/metersphere/newdocs
+          TARGET: /opt/metersphere/docs
           # Arguments to pass to rsync
           ARGS: "-rltgoDzvO --delete"
           # An array of folder to exclude
