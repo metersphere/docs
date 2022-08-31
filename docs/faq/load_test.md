@@ -273,3 +273,12 @@ cd /opt/bitnami/kafka/bin
 2.执行接口测试需要<br>
 执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br>
 ![! 接口测试-K8S配置](../img/faq/接口测试-K8S配置.png)
+
+## 27 check node-controller status
+1.检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/"
+2.检查 jmeter 的镜像，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传jmeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的jmeter镜像，重新加载项目msctl reload。
+3.docker exec ms-server nc -zv ms-node-controller 8082 或者去容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试
+
+## 28 Error:没有足够的资源启动测试
+将【系统测试-测试资源池-JMeter HEAP】调大点
+![! 接口测试-K8S配置](../img/faq/Jmeter_Heap.jpg)
