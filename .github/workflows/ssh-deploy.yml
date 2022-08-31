@@ -25,6 +25,8 @@ jobs:
       
       - name: ssh deploy
         uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
           REMOTE_HOST: metersphere.io
