@@ -14,7 +14,7 @@
 
 ## 4 接口自动化如何生成报告？
 
-手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[执行指定场景](/user_manual/api_test/api_automation/#_12)
+手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[执行指定场景](/v1.20.x-lts/user_manual/api_test/api_automation/#_12)
 
 ## 5 接口自动化支持上传文件的接口吗？
 
@@ -74,7 +74,7 @@ SQL请求可通过如下方法进行断言：
 ## 17 如何引用csv？
 
 在场景编辑页面，点击场景变量添加csv类型的场景变量。
-具体操作可参考 https://metersphere.io/docs/user_manual/api_test/api_automation/#_6 。
+具体操作可参考 https://metersphere.io/docs/v1.20.x-lts/user_manual/api_test/api_automation/#_6 。
 
 ## 18 接口自动化里，同一场景下是否支持配置多个接口域名？
 
@@ -179,7 +179,7 @@ log.info(u"看看乱码了吗");
 可以在项目设置-文件管理中上传jar包，并在前置/后置脚本中使用import即可
 
 ## 39 后置脚本中如何引用 js 文件
-上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择nashornScript
+上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择 JavaScript
 
 ## 40 HTTP 协议接口支持哪些文件格式导入
 支持五种：MeterSphere格式、Postman格式、Swagger格式、HAR格式、JMeter格式
@@ -243,8 +243,8 @@ log.info(u"看看乱码了吗");
 ![! metersphere导入格式](../img/faq/关系依赖图.png)
 
 ## 47 配置了定时任务,为什么不在钉钉群发消息呢？
-1.确认消息通知是否正确填写
-2.开了定时任务，是不是手动执行的，如果手动执行的话不会发送消息，到了时间，任务配置里面配置会生效
+1.确认消息通知是否正确填写 <br>
+2.开了定时任务，是不是手动执行的，如果手动执行的话不会发送消息，到了时间，任务配置里面配置会生效 <br>
 
 ## 48 选择环境名称后，请求内容里只有http:/接口，没有使用到在环境配置的ip和端口
 在环境配置处，不选择“模块”或者“路径”，选择“无”即可
