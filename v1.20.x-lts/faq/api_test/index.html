@@ -3373,7 +3373,7 @@ You're not viewing the latest version.
 <p>在场景列表选中场景，点击 <code>···</code> 弹出下拉框，选择 <code>批量运行</code>。</p>
 <p><div class="lightgallery"><a data-sub-html="场景批量运行" href="../../img/faq/%E5%9C%BA%E6%99%AF%E6%89%B9%E9%87%8F%E8%BF%90%E8%A1%8C.jpg"><img alt="场景批量运行" src="../../img/faq/%E5%9C%BA%E6%99%AF%E6%89%B9%E9%87%8F%E8%BF%90%E8%A1%8C.jpg" /></a></div></p>
 <h2 id="4">4 接口自动化如何生成报告？<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考<a href="/user_manual/api_test/api_automation/#_12">执行指定场景</a></p>
+<p>手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考<a href="/v1.20.x-lts/user_manual/api_test/api_automation/#_12">执行指定场景</a></p>
 <h2 id="5">5 接口自动化支持上传文件的接口吗？<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>支持。根据接口要求的请求体类型，选择 <code>form-data</code>、<code>x-www-form-urlencoded</code> 格式的请求体，参数类型选择 file，选择要添加的文件。也可以使用 <code>binary</code> 格式的请求体，直接选择要添加的文件。</p>
 <p><div class="lightgallery"><a data-sub-html="接口上传文件类型" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.jpg"><img alt="接口上传文件类型" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.jpg" /></a></div></p>
@@ -3406,7 +3406,7 @@ You're not viewing the latest version.
 <p>请检查配置的随机数长度，随机数长度需要在MeterSphere限定范围内。</p>
 <h2 id="17-csv">17 如何引用csv？<a class="headerlink" href="#17-csv" title="Permanent link">&para;</a></h2>
 <p>在场景编辑页面，点击场景变量添加csv类型的场景变量。
-具体操作可参考 <a href="https://metersphere.io/docs/user_manual/api_test/api_automation/#_6">https://metersphere.io/docs/user_manual/api_test/api_automation/#_6</a> 。</p>
+具体操作可参考 <a href="https://metersphere.io/docs/v1.20.x-lts/user_manual/api_test/api_automation/#_6">https://metersphere.io/docs/v1.20.x-lts/user_manual/api_test/api_automation/#_6</a> 。</p>
 <h2 id="18">18 接口自动化里，同一场景下是否支持配置多个接口域名？<a class="headerlink" href="#18" title="Permanent link">&para;</a></h2>
 <p>在环境配置里面，可以分别按接口所属模块，或者接口路径这两种方式，来配置不同接口的不同域名。</p>
 <p><div class="lightgallery"><a data-sub-html=" 配置多环境域名1" href="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D1.png"><img alt=" 配置多环境域名1" src="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D1.png" /></a></div></p>
@@ -3465,7 +3465,7 @@ You're not viewing the latest version.
 <h2 id="38-jar">38 前置/后置脚本可以引用外部jar吗？<a class="headerlink" href="#38-jar" title="Permanent link">&para;</a></h2>
 <p>可以在项目设置-文件管理中上传jar包，并在前置/后置脚本中使用import即可</p>
 <h2 id="39-js">39 后置脚本中如何引用 js 文件<a class="headerlink" href="#39-js" title="Permanent link">&para;</a></h2>
-<p>上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择nashornScript</p>
+<p>上传到服务器/opt/ms/data/xx.js，load(“/opt/ms/data/xx.js”)，脚本类型选择 JavaScript</p>
 <h2 id="40-http">40 HTTP 协议接口支持哪些文件格式导入<a class="headerlink" href="#40-http" title="Permanent link">&para;</a></h2>
 <p>支持五种：MeterSphere格式、Postman格式、Swagger格式、HAR格式、JMeter格式</p>
 <ul>
@@ -3515,8 +3515,8 @@ You're not viewing the latest version.
 <p>可以生成依赖图，社区版看不到，只有企业版才能看到</p>
 <p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.png"><img alt=" metersphere导入格式" src="../../img/faq/%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.png" /></a></div></p>
 <h2 id="47">47 配置了定时任务,为什么不在钉钉群发消息呢？<a class="headerlink" href="#47" title="Permanent link">&para;</a></h2>
-<p>1.确认消息通知是否正确填写
-2.开了定时任务，是不是手动执行的，如果手动执行的话不会发送消息，到了时间，任务配置里面配置会生效</p>
+<p>1.确认消息通知是否正确填写 <br>
+2.开了定时任务，是不是手动执行的，如果手动执行的话不会发送消息，到了时间，任务配置里面配置会生效 <br></p>
 <h2 id="48-httpip">48 选择环境名称后，请求内容里只有http:/接口，没有使用到在环境配置的ip和端口<a class="headerlink" href="#48-httpip" title="Permanent link">&para;</a></h2>
 <p>在环境配置处，不选择“模块”或者“路径”，选择“无”即可</p>
 <h2 id="49">49 接口测试断言成功，但是用例显示未通过<a class="headerlink" href="#49" title="Permanent link">&para;</a></h2>

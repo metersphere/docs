@@ -3318,11 +3318,11 @@ msctl status
 <h2 id="2">2 如何修改应用的默认端口？<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>修改 /opt/metersphere/.env 文件中的对应配置后，执行 <code>msctl reload</code> 命令重新加载应用。</p>
 <blockquote>
-<p>配置文件说明请参考 <a href="/installation/online_installation/#32">修改安装配置(可选)</a>。</p>
+<p>配置文件说明请参考 <a href="/v1.20.x-lts/installation/online_installation/#32">修改安装配置(可选)</a>。</p>
 </blockquote>
 <h2 id="3-kubernetes-metersphere">3 如何在 Kubernetes 中搭建 MeterSphere？<a class="headerlink" href="#3-kubernetes-metersphere" title="Permanent link">&para;</a></h2>
 <p>可以参照我们提供的 <a href="https://github.com/metersphere/helm-chart">helm chart</a>。
-详见在线文档/安装部署/Kubernetes中部署：<a href="https://metersphere.io/docs/installation/kubernetes_installation/">https://metersphere.io/docs/installation/kubernetes_installation/</a></p>
+详见在线文档/安装部署/Kubernetes中部署：<a href="https://metersphere.io/docs/v1.20.x-lts/installation/kubernetes_installation/">https://metersphere.io/docs/v1.20.x-lts/installation/kubernetes_installation/</a></p>
 <h2 id="4-docker-compose-docker-compose">4 docker-compose 版本与配置文件不兼容，请重新安装最新版本的 docker-compose?<a class="headerlink" href="#4-docker-compose-docker-compose" title="Permanent link">&para;</a></h2>
 <p>把安装包里的docker-compose-xx 在 安装目录替换下。</p>
 <h2 id="5">5 升级指定版本<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
@@ -3485,8 +3485,9 @@ server{
 <h2 id="43">43 登录进去后，点击任一菜单会立马跳到登录页面<a class="headerlink" href="#43" title="Permanent link">&para;</a></h2>
 <p>执行 msctl reload 就好了</p>
 <h2 id="44-the-connection-is-abnormal-please-check-the-environment-configuration">44 接口运行时，页面报错: The connection is abnormal, please check the environment configuration<a class="headerlink" href="#44-the-connection-is-abnormal-please-check-the-environment-configuration" title="Permanent link">&para;</a></h2>
-<p>1.是不是使用NG了，需要进行配置，可参考 <a href="https://metersphere.io/docs/installation/offline_installation/">https://metersphere.io/docs/installation/offline_installation/</a>
-2.是不是使用 <a href="https://ip:8081">https://ip:8081</a> 被拦截了,使用 <a href="http://ip:8081">http://ip:8081</a> 就行</p>
+<p>1.是不是使用NG了，需要进行配置，可参考 <a href="https://metersphere.io/docs/v1.20.x-lts/installation/offline_installation/">https://metersphere.io/docs/v1.20.x-lts/installation/offline_installation/</a> <br>
+2.是不是打开了代理，如 fidder、charles 等工具 <br>
+3.是不是使用 <a href="https://ip:8081">https://ip:8081</a> 被拦截了,使用 <a href="http://ip:8081">http://ip:8081</a> 就行 <br></p>
 <h2 id="45-500-javaxservletservletexception-filtered-request-failed">45 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed<a class="headerlink" href="#45-500-javaxservletservletexception-filtered-request-failed" title="Permanent link">&para;</a></h2>
 <p><div class="lightgallery"><a data-sub-html=" 安装部署-500错误" href="../../img/faq/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-500%E9%94%99%E8%AF%AF.png"><img alt=" 安装部署-500错误" src="../../img/faq/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-500%E9%94%99%E8%AF%AF.png" /></a></div></p>
 <p>1.清浏览器缓存，重新打开浏览器进行访问 <br>
