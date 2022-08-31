@@ -1,13 +1,14 @@
 ## 整体架构
 
-![整体架构](./img/system-arch-1.png)
+![整体架构](./img/system-arch.png)
 
 ### 组件说明
 
 - **[Frontend](https://github.com/metersphere/metersphere)**: MeterSphere 的前端工程, 基于 Vue.js 进行开发。
 - **[Backend](https://github.com/metersphere/metersphere)**: MeterSphere 的后端工程, 基于 Spring Boot 进行开发, 为 MeterSphere 的功能主体。
-- **[Chrome Plugin](https://github.com/metersphere/chrome-extensions)**: 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。
-- **[Jenkins Plugin](https://github.com/metersphere/jenkins-plugin)**: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。
+- **[Chrome 浏览器插件](https://github.com/metersphere/chrome-extensions)**: Chrome 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。
+- **[Jenkins 插件](https://github.com/metersphere/jenkins-plugin)**: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。
+- **[IDEA 插件](https://github.com/metersphere/metersphere-idea-plugin)**: IDEA 插件，基于javadoc解析，能够自动识别类，同步接口定义到 MeterSphere。
 - **[Node Controller](https://github.com/metersphere/node-controller)**: 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter容器完成性能测试。
 - **MySQL**: MeterSphere 项目的主要数据均存储在 MySQL。
 - **Redis**: MeterSphere 项目登录用户的Session存储在 Redis。
@@ -15,9 +16,10 @@
 - **Prometheus**: 收集压力机及被测系统的监控数据。
 - **[Data Streaming](https://github.com/metersphere/data-streaming)**: 从 Kafka 中获取接口测试或者性能测试结果数据进行处理后存入 MySQL 数据库。
 - **Docker Engine**: 为 Node Controller 提供 JMeter 容器运行环境。
+- **Selenium Grid**: 为 UI自动化测试提供运行环境，支持分布式拓展。
 
 各个组件间的关系可参考下图
-![组件说明](./img/components-1.png)
+![组件说明](./img/components.png)
 
 ## 管理模型
 
@@ -35,7 +37,7 @@ MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在
 - **项目级角色**: 角色的权限范围限定在某个项目当中, 常见的角色如项目管理员、项目成员、只读用户等，可在项目中创建、修改、执行测试计划、功能测试用例、接口测试用例、性能测试用例、查看测试报告等。
 - **自定义角色**: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。
 
-不同的角色对应的具体权限，请到 `系统设置->用户组与权限->设置权限` 查看和设置。
+不同的角色对应的具体权限，请到【系统设置->用户组与权限->设置权限】查看和设置。
 ![!查看权限](./img/system_management/查看权限.png)
 
 ![!查看权限](./img/system_management/查看权限2.png) 
