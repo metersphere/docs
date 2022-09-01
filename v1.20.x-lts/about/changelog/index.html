@@ -2608,6 +2608,20 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12013-lts" class="md-nav__link">
+    v1.20.13-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v12012-lts" class="md-nav__link">
+    v1.20.12-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12011-lts" class="md-nav__link">
     v1.20.11-lts
   </a>
@@ -3210,6 +3224,20 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12013-lts" class="md-nav__link">
+    v1.20.13-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v12012-lts" class="md-nav__link">
+    v1.20.12-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12011-lts" class="md-nav__link">
     v1.20.11-lts
   </a>
@@ -3783,6 +3811,108 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12013-lts">v1.20.13-lts<a class="headerlink" href="#v12013-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年9月1日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>feat(接口测试): 修复部分Xml转JSON无法解析的问题</li>
+<li>feat(接口测试): 接口导入，如果导入的接口没有用例，且这个接口为新建的，那需要为这个接口新建一-  个用例</li>
+<li>refactor(UI自动化): 代码风格优化</li>
+<li>refactor(消息通知): 修改轮询通知数的时间范围</li>
+<li>refactor(接口定义): 优化接口定义名称过长时的显示 (#17071)</li>
+<li>refactor(接口测试): 导入case创建人优化</li>
+<li>refactor(接口测试): 优化接口测试执行过程中的部分对用户操作的步骤</li>
+<li>refactor(系统设置): 工作空间、项目数量较多时，编辑用户弹框操作卡顿</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(UI自动化): ui列表高级搜索</li>
+<li>fix(UI自动化): ui测试报告结果与列表结果不一致</li>
+<li>fix(UI自动化): 回滚ui高级搜索代码</li>
+<li>fix(UI自动化): 报告计算方式</li>
+<li>fix(UI自动化): 测试报告显示错位</li>
+<li>fix(UI自动化): 测试计划关联高级查询对话框全屏显示</li>
+<li>fix(接口测试): swagger导入formdata值处理优化</li>
+<li>fix(接口测试): swagger导入报错</li>
+<li>fix(接口测试): 解决swagger接口导入丢失数据问题</li>
+<li>fix(接口测试): 修复因dao层变动导致的程序报错</li>
+<li>fix(接口测试): 接口导入</li>
+<li>fix(接口测试): 场景导入失败</li>
+<li>fix(接口测试): 解决接口导入问题</li>
+<li>fix(接口测试): 条件控制器兼容拼接函数</li>
+<li>fix(接口测试): 修复测试计划执行失败问题</li>
+<li>fix(接口测试): 修复循环控制器执行结果处理问题</li>
+<li>fix(接口测试): 修复复制场景步骤数据源回显错误问题</li>
+<li>fix(接口定义): 修复导入JMX的场景DELETE请求处理问题</li>
+<li>fix(接口定义): 修复禁用复制的场景-调试时显示STOP状态的缺陷 (#17126)</li>
+<li>fix(接口定义): 修复只读用户可以添加mock的缺陷</li>
+<li>fix(接口定义): 修复只读用户可以执行的缺陷</li>
+<li>fix(接口定义): 修复推荐断言精度缺失的缺陷 (#17191)</li>
+<li>fix(接口定义): 修复场景只读用户可以执行的缺陷</li>
+<li>fix(接口定义): 修复场景导入场景页面模块错位的缺陷 (#17459)</li>
+<li>fix(接口定义): 修复回收站高级搜索执行结果失败的缺陷 (#17471)</li>
+<li>fix(接口定义): 修复回收站筛选执行结果失败的缺陷</li>
+<li>fix(测试跟踪): 修复MD控件按钮样式问题</li>
+<li>fix(测试跟踪): 测试计划报告-测试总结增加铅笔图标</li>
+<li>fix(测试跟踪): 测试评审用例ID排序报错</li>
+<li>fix(测试跟踪): 测试计划功能用例ID排序问题</li>
+<li>fix(测试跟踪): 功能用例列表点击的问题</li>
+<li>fix(测试跟踪): 功能用例回收站恢复报错</li>
+<li>fix(测试跟踪): 用例评审列表行拖拽的问题</li>
+<li>fix(测试跟踪): 修复执行测试计划后状态错误</li>
+<li>fix(测试跟踪): 功能用例列表用例状态的筛选问题</li>
+<li>fix(测试跟踪): 功能用例列表责任人筛选字段有误</li>
+<li>fix(测试跟踪): 用例评审添加图片链接时页面展示异常</li>
+<li>fix(测试跟踪): 功能用例在测试计划执行通过后附件被删除#17568 (#17573)</li>
+<li>fix(测试跟踪): 用例评审列表中字段排序后批量编辑报错的问题</li>
+<li>fix(系统设置): 接口权限控制问题</li>
+<li>fix(系统设置): 修改插件管理上传图标</li>
+<li>fix(项目设置): 用例状态筛选的问题</li>
+<li>fix(性能测试): 修复停止性能测试时报NULL的问题</li>
+<li>fix(性能测试): 修复查看报告详情全部取消后loading不消失的问题</li>
+<li>fix(性能测试): 修复性能测试增加响应码断言时dom错误</li>
+<li>fix(测试计划): 去掉测试计划通知模版中无用的值</li>
+<li>fix(测试计划): 修复测试计划列表完成执行后执行状态错误</li>
+<li>fix(我的工作台): 我的仪表盘数据问题</li>
+</ul>
+<h2 id="v12012-lts">v1.20.12-lts<a class="headerlink" href="#v12012-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年8月11日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(项目设置): 应用管理显示优化</li>
+<li>refactor(接口导入): 接口导入覆盖模式规则优化</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(idea插件): 导入接口空指针报错</li>
+<li>fix(接口测试): postman文件导入报错问题</li>
+<li>fix(接口测试): 修复导入ms格式的带用例的接口定义，用例的创建人不是导入用户</li>
+<li>fix(接口测试): 修复场景变量添加csv未上传文件不提示的缺陷 (#16663)</li>
+<li>fix(接口测试): 修复场景变量列表错位的缺陷</li>
+<li>fix(接口测试): 修复导入文档断言没更新的缺陷</li>
+<li>fix(接口测试): 检查并赋值测试报告查询方法参数中的必填项</li>
+<li>fix(接口测试): 修复环境配置复制环境，复制成功后页面关闭的缺陷</li>
+<li>fix(接口测试): 修复接口测试报告全选删除时删除所有的场景和接口报告的问题</li>
+<li>fix(接口测试): 导入接口后，手动添加一个接口用例，删除其他用例，再次导入，报错</li>
+<li>fix(接口测试): 修复场景步骤中case增加文档断言保存失效的缺陷</li>
+<li>fix(测试跟踪): 脑图评审用例,用例未加载时批量评审失效</li>
+<li>fix(测试跟踪): 脑图用例校验问题</li>
+<li>fix(测试跟踪): 用例模板字段标注显示问题</li>
+<li>fix(测试跟踪): 测试计划分享功能用例统计无法展示</li>
+<li>fix(系统设置): 修复用户通过api调用接口后，本身权限没有及时刷新的问题</li>
+<li>fix(系统设置): 用户仅有项目权限时不占工作空间配额</li>
+<li>fix(系统设置): 无项目权限时在项目管理菜单点击成员会被重定向</li>
+</ul>
 <h2 id="v12011-lts">v1.20.11-lts<a class="headerlink" href="#v12011-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年8月4日</p>
