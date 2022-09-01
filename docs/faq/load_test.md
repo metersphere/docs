@@ -279,5 +279,5 @@ cd /opt/bitnami/kafka/bin
 3.检查 jmeter 的镜像版本是不是对的，检查 jmeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传jmeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的jmeter镜像，重新加载项目msctl reload。<br>
 
 ## 28 Error:没有足够的资源启动测试
-将【系统测试-测试资源池-JMeter HEAP】调大点
-![! 接口测试-K8S配置](../img/faq/Jmeter_Heap.jpg)
+将【系统设置-测试资源池-JMeter HEAP】调大点
+![! 接口测试-K8S配置](../img/faq/Jmeter_Heap.png)
