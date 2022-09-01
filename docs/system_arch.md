@@ -18,7 +18,7 @@
 - **Docker Engine**: 为 Node Controller 提供 JMeter 容器运行环境。
 - **Selenium Grid**: 为 UI自动化测试提供运行环境，支持分布式拓展。
 
-各个组件间的关系可参考下图
+各个组件间的关系可参考下图<br>
 ![组件说明](./img/components.png)
 
 ## 管理模型
