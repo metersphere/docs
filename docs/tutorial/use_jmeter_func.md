@@ -89,8 +89,8 @@ JMeter 中的函数主要分为如下几类：
 </table>  
 
 ## 1 脚本函数
-### 1.1 __BeanShell
-执行 beanshell 脚本，它有两个参数，第一个参数是要执行的语句，可以是beanshell语句或者是文件地址，是必选参数；第二个参数是保存结果的变量名称，非必选参数。
+### 1.1 __BeanShell - 执行 beanshell 脚本
+它有两个参数，第一个参数是要执行的语句，可以是beanshell语句或者是文件地址，是必选参数；第二个参数是保存结果的变量名称，非必选参数。
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
@@ -131,8 +131,8 @@ ${__BeanShell(import java.util.*;Random random = new Random();int[] array = {1\,
 
 ![](../img/tutorial/use_jmeter_func/定义随机数参数复用.png)
 
-### 1.2 __javaScript
-执行 js 脚本，函数 __javaScript 可以用来执行 JavaScript 代码片段，并返回结果值。<br>
+### 1.2 __javaScript - 执行 js 脚本
+函数 __javaScript 可以用来执行 JavaScript 代码片段，并返回结果值。<br>
 该函数会调用标准的 JavaScript 解释器，还可以直接调用 JMeter 的内置函数。
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
@@ -167,8 +167,8 @@ ${__javaScript("${VAR}"=="abcd",MYRESULT)} -将VAR变量的值与abcd进行比�
 ![](../img/tutorial/use_jmeter_func/判断值大小返回值.png)
 
 ## 2 获取信息函数
-### 2.1 __log
-输出日志信息，函数记录一条消息，并返回其输入字符串<br>
+### 2.1 __log - 输出日志信息
+函数记录一条消息，并返回其输入字符串<br>
 ```
 ${__log(Message)}：写入日志文件，形如"...threadName:Message"
 ${__log(Message,OUT)}：写到控制台窗口
@@ -206,8 +206,7 @@ ${__log(${VAR},,,VAR=)}：写入日志文件，形如"...threadNameVAR=value"
 
 ![](../img/tutorial/use_jmeter_func/log使用2.png)
 
-### 2.2 __machineIP 
-返回机器（电脑）IP <br>
+### 2.2 __machineIP - 返回机器（电脑）IP
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
@@ -223,8 +222,7 @@ ${__log(${VAR},,,VAR=)}：写入日志文件，形如"...threadNameVAR=value"
 
 ![](../img/tutorial/use_jmeter_func/machineIP.png)
 
-### 2.3 __time
-通过多种格式返回当前时间 <br>
+### 2.3 __time - 通过多种格式返回当前时间
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
@@ -253,8 +251,8 @@ YMDHMS = yyyyMMdd-HHmmss
 ![](../img/tutorial/use_jmeter_func/time使用.png)
 
 ## 3 变量操作函数
-###3.1 __split
-字符串分割函数，函数 __split 会通过分隔符来拆分传递给它的字符串，并返回原始的字符串。如果分隔符紧挨在一起，那么函数就会以变量值的形式返回 "?"。拆分出来的字符串，以变量 ${VAR_1}、{VAR_2}…以此类推的形式加以返回。<br>
+###3.1 __split - 字符串分割函数
+函数 __split 会通过分隔符来拆分传递给它的字符串，并返回原始的字符串。如果分隔符紧挨在一起，那么函数就会以变量值的形式返回 "?"。拆分出来的字符串，以变量 ${VAR_1}、{VAR_2}…以此类推的形式加以返回。<br>
 
 注意: 分隔符默认是逗号，如果你想要多此一举，明确指定使用逗号，需要对逗号转义，如 “\,”
 <table>
@@ -289,8 +287,8 @@ YMDHMS = yyyyMMdd-HHmmss
 参数中示例分割字符串“admin|b|c” <br>
 ![](../img/tutorial/use_jmeter_func/split1.png)
 
-### 3.2 __V
-执行变量名表达式，函数 __V 可以用于执行变量名表达式，并返回执行结果。它可以被用于执行嵌套函数引用
+### 3.2 __V - 执行变量名表达式
+函数 __V 可以用于执行变量名表达式，并返回执行结果。它可以被用于执行嵌套函数引用
 ```
 ${A1}：能正常工作
 ${A${N}}：无法正常工作（嵌套变量引用）
@@ -317,8 +315,8 @@ ${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
 场景使用：将数据库获取的数据作为下一个接口的参数（循环控制器+计数器函数）${__V(name_${__counter(,)})} <br>
 详细使用参考：https://zhuanlan.zhihu.com/p/547953530
 
-### 3.3 __eval
-返回计算字符串表达式的结果，这允许在存储在变量中的字符串中插入变量和函数引用 <br>
+### 3.3 __eval - 返回计算字符串表达式的结果
+这允许在存储在变量中的字符串中插入变量和函数引用 <br>
 如: 给定变量 name=Smith、column=age、table=birthdays、SQL=select${column}from${table}wherename='${name}'，那么通过 ${__eval(${SQL})}，就能执行 "selectagefrombirthdayswherename='Smith'"。这样一来，就可以与 CSV 数据集相互配合，例如，将 SQL 语句和值都定义在数据文件中。
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
@@ -348,8 +346,8 @@ ${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
 
 ![](../img/tutorial/use_jmeter_func/eval5.png)
 
-### 3.4 __evalVar
-返回计算存储在变量中的表达式的结果，这允许人们从文件中读取字符串，并处理其中的任何变量引用。<br>
+### 3.4 __evalVar - 返回计算存储在变量中的表达式的结果
+这允许人们从文件中读取字符串，并处理其中的任何变量引用。<br>
 例如，如果变量“ query ”包含“ select ${column} from ${table} ”并且“ column ”和“ table ”包含“ name ”和“ customers ”，则${__evalVar(query)} 将评价为“select name from customers”
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
@@ -368,21 +366,19 @@ ${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
 ![](../img/tutorial/use_jmeter_func/evalVar.png)
 
 ## 4 数据计算函数
-### 4.1 __counter
-计数器 <br>
+### 4.1 __counter - 计数器 
 1. 每次调用计数器函数都会产生一个新值，从1开始每次加1。计数器既可以被配置成针对每个虚拟用户是独立的，也可以被配置成所有虚拟用户公用的。<br>
 2. 如果每个虚拟用户的计数器是独立增长的，那么通常被用于记录测试计划运行了多少遍。全局计数器通常被用于记录发送了多少次请求。<br>
 3. 计数器使用一个整数值来记录，允许的最大值为 2,147,483,647。<br>
 ![](../img/tutorial/use_jmeter_func/counter.png)
 
-### 4.2 __intSum
-整数求和函数 <br>
+### 4.2 __intSum - 整数求和函数
 1. 函数__intSum可以被用来计算两个或者更多整数值的合。至少需要两个整数，如果指定变量名则名称中必须包含一个非数字字母，否则它会被当成另一个整数值，而被函数用于计算。<br>
 2. 当有多个整数时点击添加按钮来增加参数，但是需要注意的是: 添加完参数后，点击”生成”的函数默认是把手动添加的函数放在后面，这时需要手动调整变量名的位置，把它放到最后，否则会报错。<br>
 ![](../img/tutorial/use_jmeter_func/intSum.png)
 
-### 4.3 __longSum
-计算两个或多个 long 类型的值，值不在 -2147483648 到 2147483647 的区间内，请使用它而不是 __intSum
+### 4.3 __longSum - 计算两个或多个 long 类型的值
+值不在 -2147483648 到 2147483647 的区间内，请使用它而不是 __intSum
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
@@ -413,8 +409,8 @@ ${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
 
 ![](../img/tutorial/use_jmeter_func/longSum.png)
 
-### 4.4 __Random
-随机数函数，返回一个介于给定最小值和最大值之间的随机数。
+### 4.4 __Random - 随机数函数
+返回一个介于给定最小值和最大值之间的随机数。
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
@@ -440,8 +436,8 @@ ${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
 
 ![](../img/tutorial/use_jmeter_func/Random.png)
 
-### 4.5 __RandomString
-随机字符串，从指定字符中返回指定长度的随机字符串
+### 4.5 __RandomString - 随机字符串
+从指定字符中返回指定长度的随机字符串
 <table>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
   <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
@@ -467,8 +463,8 @@ ${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
 
 ![](../img/tutorial/use_jmeter_func/RandomString.png)
 
-### 4.6 __UUID
-随机数函数，返回一个伪随机类型通用唯一标识符 (UUID) <br>
+### 4.6 __UUID - 生成 UUID 
+返回一个伪随机类型通用唯一标识符 (UUID) <br>
 注意：此函数无参数 <br>
 将返回此格式的 UUID：c69e0dd1-ac6b-4f2b-8d59-5d4e8743eecd <br>
 ![](../img/tutorial/use_jmeter_func/UUID.png)
