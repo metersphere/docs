@@ -134,6 +134,9 @@ nav:
           - 服务集成之对接 Jira: tutorial/use_jira.md
           - 服务集成之对接 TAPD: tutorial/use_tapd.md
           - 消息通知之对接邮件、钉钉、企业微信、飞书: tutorial/use_message.md
+          - Mock 使用: tutorial/use_mock.md
+          - Python 调用 API 触发测试计划: tutorial/use_python_api.md
+          - Jmeter 常用内置函数: tutorial/use_jmeter_func.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
           - 安装部署相关: faq/installation.md
