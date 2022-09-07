@@ -45,9 +45,8 @@ cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相�
 
 ## 10 升级报 `Schema ` metersphere `contains a faied migration to version 86 !`
 
-到github源码上 https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration
-查看对应version的flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后重新执行下，然后修改metersphere_version
-表对应版本的的success值为1，然后 msclt reload 重启服务即可。
+到 github 源码上 https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration
+查看对应 version 的 flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后重新手动一条条执行下，全部执行成功后修改 metersphere_version 表对应版本的 success 值为1，然后 msctl reload 重启服务即可。
 
 ## 11 如何备份数据库?
 
