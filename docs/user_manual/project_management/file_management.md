@@ -1,17 +1,31 @@
-可上传测试所需的 jar 包、脚本、相关文件，在项目级别统一管理。
-
-## 1 Jar包管理功能
+可上传测试所需的 JAR 包、脚本、相关文件，在项目级别统一管理。
 ![!项目设置](../../img/project_management/上传jar包.png)
 
-同时可以删除、更新当前项目级别的 jar 包。
+## 1 模块管理
+可对目录进行重命名、新增、删除等操作
+![!项目设置](../../img/project_management/模块.png)
 
-!!! info "说明" 
-    删除或者更新 jar 包需要重启 ms-server 服务。
+## 2.上传文件
+可上传 JAR、CSV、TXT、JMX、XLSX 等多种格式的文件，上传的 JAR 可在接口前后置脚本中进行使用
+![!项目设置](../../img/project_management/文件上传.png)
 
-![!项目设置](../../img/project_management/删除jar包.png)
+上传的文件可在性能测试页面进行选择
+![!项目设置](../../img/project_management/性能测试加载的文件.png)
 
-Jar包的管理功能，详细功能操作及说明参考 [系统->工作空间->项目管理->Jar包管理](../../system_management/workspace/#13)。
+## 3 查看文件
+点击查看按钮，可查看该文件的详细信息，也可在该页面增加文件的描述
+![!项目设置](../../img/project_management/文件查看.png)
 
-## 2 性能测试文件管理
-点击【上传新文件】，可在这里维护当前项目级别性能测试相关文件，比如性能测试脚本、性能测试依赖 jar 包、性能测试数据文件等。
-![!项目设置](../../img/project_management/性能上传文件.png)
+可点击上一个/下一个按钮，切换当前查看的文件
+![!项目设置](../../img/project_management/切换文件.png)
+
+可对该文件出现上传，下载，删除等操作
+![!项目设置](../../img/project_management/文件查看.png)
+
+## 4 文件下载
+可点击列表后面下载按钮进行文件下载，也可在文件查看页面进行文件下载
+![!项目设置](../../img/project_management/下载文件.png)
+
+## 5 文件删除
+可点击列表后面删除按钮进行文件删除，也可在文件查看页面进行文件删除
+![!项目设置](../../img/project_management/文件删除.png)
