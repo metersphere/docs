@@ -19,7 +19,7 @@
     
     
       
-        <title>Mock 使用 - MeterSphere 文档</title>
+        <title>Mock 功能及后置脚本的使用 - MeterSphere 文档</title>
       
     
     
@@ -279,7 +279,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mock 使用
+              Mock 功能及后置脚本的使用
             
           </span>
         </div>
@@ -2217,12 +2217,12 @@ You're not viewing the latest version.
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mock 使用
+          Mock 功能及后置脚本的使用
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Mock 使用
+        Mock 功能及后置脚本的使用
       </a>
       
         
@@ -2255,6 +2255,13 @@ You're not viewing the latest version.
         <li class="md-nav__item">
   <a href="#3-tcp-mock" class="md-nav__link">
     3 TCP MOCK设置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-mock" class="md-nav__link">
+    4 Mock 后置脚本
   </a>
   
 </li>
@@ -2719,6 +2726,13 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-mock" class="md-nav__link">
+    4 Mock 后置脚本
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2737,9 +2751,15 @@ You're not viewing the latest version.
 
 
 
-  <h1>Mock 使用</h1>
+  <h1>Mock 功能及后置脚本的使用</h1>
 
 <h2 id="1-mock">1 MOCK功能<a class="headerlink" href="#1-mock" title="Permanent link">&para;</a></h2>
+<ul>
+<li>某些大量联调系统，或者集成系统，比如：支付中最常用的扫码支付，需要和大量的银行对接，但是在测试环境中，没有这个条件模拟真实的场景，有时需要针对某些返回数据进行伪造。</li>
+<li>某依赖系统还未开发完成，就需要对被测系统进行测试，前端开发比较依赖后端开发提供的接口，然后根据接口返回值设计各类场景页面。当服务端开发人员未及时提供接口时可能会影响到前端开发及整个项目的进度，特别是在敏捷开发中，对于上下游开发顺序更加依赖；</li>
+<li>某些系统不支持重复请求，如支付功能，而Mock 服务在金融行业往往被称为“挡板”；</li>
+<li>某些系统功能有访问频次限制，获取敏感信息的接口访问有频次限制等；</li>
+</ul>
 <p>MeterSphere 提供的 Mock 功能可以根据用户输入的请求参数、返回数据生成 Mock 接口，这些接口会自动生成模拟数据，以覆盖用户的一些测试需求。而 Mock 期望则是根据设置的请求触发条件来进行过滤，然后返回期望的数据。</p>
 <p>列表功能，支持对Mock服务的开启/关闭、编辑、复制、删除操作。
 <img alt="" src="../../img/tutorial/use_mock/mock.png" /></p>
@@ -2765,6 +2785,21 @@ You're not viewing the latest version.
 <img alt="" src="../../img/tutorial/use_mock/tcp_mock.png" /></p>
 <p><img alt="" src="../../img/tutorial/use_mock/tcp_mock_1.png" /></p>
 <p>其他 TCP MOCK设置请参考【HTTP MOCK设置】</p>
+<h2 id="4-mock">4 Mock 后置脚本<a class="headerlink" href="#4-mock" title="Permanent link">&para;</a></h2>
+<p>注意: Mock 后置脚本不可打印，不能使用 Jmeter 内置函数。
+设置请求体，选择from-data格式，同模糊匹配操作和模糊匹配操作一类似，添加判断数字范围，如下图：
+<img alt="" src="../../img/tutorial/use_mock/mock_1.png" /></p>
+<p>选择添加【后置脚本】，选择脚本类型（本次使用beanshell），对用户的请求内容进行判断，如图：
+<img alt="" src="../../img/tutorial/use_mock/mock_2.png" /></p>
+<p>添加响应内容，将脚本中的返回值，作为变量传入响应内容中，如下图：
+<img alt="" src="../../img/tutorial/use_mock/mock_3.png" /></p>
+<p>设置保存后，利用 MeterSphere 的快捷调试功能测试<br>
+猜的数字小，返回的响应体
+<img alt="" src="../../img/tutorial/use_mock/mock_4.png" /></p>
+<p>猜的数字大，返回的响应体
+<img alt="" src="../../img/tutorial/use_mock/mock_5.png" /></p>
+<p>猜对的情况，返回的响应体
+<img alt="" src="../../img/tutorial/use_mock/mock_6.png" /></p>
 
 
   
