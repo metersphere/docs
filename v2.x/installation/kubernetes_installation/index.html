@@ -3075,6 +3075,10 @@ kafka:
 zookeeper:      <span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装zookeeper</span>
   enabled: <span class="nb">true</span>
 </code></pre></div>
+<p>若想控制数据库的连接数，请在 values.yml 的 DATABASE 处，新增如下两行参数
+<div class="highlight"><pre><span></span><code>spring.datasource.hikari.maximum-pool-size=你想要的数值
+spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
+</code></pre></div></p>
 <h3 id="kafka">引用外部 Kafka<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>vim values.yaml
 将 values.yaml 中 zookeeper.enabled 和 kafka.enabled 改为 <span class="nb">false</span>
