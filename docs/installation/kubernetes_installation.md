@@ -107,7 +107,7 @@ server:
     spring.datasource.url=jdbc:mysql://{{.Values.common.mysql.host}}:{{.Values.common.mysql.port}}/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
     spring.datasource.username={{.Values.common.mysql.username}}
     spring.datasource.password={{.Values.common.mysql.password}}
-    
+
     ## redis
     spring.session.store-type=redis
     spring.redis.host={{.Values.common.redis.host}}
@@ -245,6 +245,12 @@ kafka:
       value: "true"
 zookeeper:      # 引用外部kafka时，可以修改为false,启动时不再安装zookeeper
   enabled: true
+```
+
+若想控制数据库的连接数，请在 values.yml 的 DATABASE 处，新增如下两行参数
+```
+spring.datasource.hikari.maximum-pool-size=你想要的数值
+spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 ```
 
 ### 引用外部 Kafka
