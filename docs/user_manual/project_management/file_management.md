@@ -9,6 +9,9 @@
 可上传 JAR、CSV、TXT、JMX、XLSX 等多种格式的文件，上传的 JAR 可在接口前后置脚本中进行使用
 ![!项目设置](../../img/project_management/文件上传.png)
 
+用于接口测试的要开启加载 Jar 包的 Switch 开关，否则在接口前后置脚本中引用该 Jar 包不生效
+![!项目设置](../../img/project_management/开启开关.png)
+
 上传的文件可在性能测试页面进行选择
 ![!项目设置](../../img/project_management/性能测试加载的文件.png)
 
