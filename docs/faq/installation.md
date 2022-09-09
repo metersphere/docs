@@ -276,3 +276,11 @@ flushall
 ![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
 
 检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere
+
+## 47 k8s 中如何控制数据库的连接数
+1.可在名称为 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数 <br>
+2.可在名称为 values.yml 文件里，DATABASE 处新增如下两行参数
+```
+spring.datasource.hikari.maximum-pool-size=你想要的数值
+spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
+```
