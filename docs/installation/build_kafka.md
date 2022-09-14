@@ -78,8 +78,8 @@ cp zoo_sample.cfg zoo.cfg
 
 4.修改 conf 下 zoo.cfg
 vi zoo.cfg
-① 修改：dataDir=/usr/local/zookeeper-cluster/zk1/data
-② 添加：dataLogDir=/usr/local/zookeeper-cluster/zk1/logs
+① 修改：dataDir=/usr/local/zookeeper-cluster/zk/data
+② 添加：dataLogDir=/usr/local/zookeeper-cluster/zk/logs
 ③ clientPort=2181【clientPort是客户端的请求端口】
 ④ 在 zoo.cfg 文件末尾追加
 server.1=10.1.240.150:2888:3888
