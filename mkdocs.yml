@@ -56,6 +56,7 @@ nav:
                 - 离线升级: installation/offline_upgrade.md
           - Kubernetes 中部署: installation/kubernetes_installation.md
           - Windows 中部署: installation/offline_installation_windows.md
+          - Mac 中部署: installation/offline_installation_mac.md
           - MeterSphere 分布式部署:
                 - 整体部署规划: installation/pre_work.md
                 - 部署kafka集群: installation/build_kafka.md
