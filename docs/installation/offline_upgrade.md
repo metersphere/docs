@@ -14,6 +14,3 @@ cd metersphere-release-v1.x.y-offline
 # 查看 MeterSphere 状态
 msctl status
 ```
-
-!!! warning "注意"
-    如果在旧版本安装过程中修改了安装目录(默认为 /opt 目录), 在执行升级脚本前需要修改 install.conf 文件中的安装目录为旧版本的安装目录。
