@@ -64,15 +64,15 @@
 ### 3.4、执行完成后发现 ms-prometheus 服务是 Restarting 状态
 解决方案：
 
-输入docker logs ms-promethus，发现没有权限 <br>
-![docker设置](../img/installation/mac-install-promethus.png){ width="900px" }
+输入docker logs ms-prometheus，发现没有权限 <br>
+![docker设置](../img/installation/mac-install-prometheus.png){ width="900px" }
 
-手动给 promethus 目录赋权 <br>
+手动给 prometheus 目录赋权 <br>
 ```
-chmod +777 /opt/metersphere/conf/promethus
-chmod +777 /opt/metersphere/data/promethus
+chmod +777 /opt/metersphere/conf/prometheus
+chmod +777 /opt/metersphere/data/prometheus
 ```
-之后执行 docker stop ms-promethus 和 docker rm ms-promethus，然后再执行msctl reload
+之后执行 docker stop ms-prometheus 和 docker rm ms-prometheus，然后再执行msctl reload
 
 ### 3.5 msctl status 发现 ms-server 服务没有起来
 解决方案：

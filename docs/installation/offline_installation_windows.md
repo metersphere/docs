@@ -212,20 +212,20 @@
 
 ![常见问题](../img/installation/常见问题6.png){ width="900px" }
 
-### 3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 promethus 容器是 Restarting状态
+### 3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 prometheus 容器是 Restarting状态
 
 ![常见问题](../img/installation/常见问题7.png){ width="900px" }
 
 解决方法:<br>
-1.查看日志(docker logs containsId)，如下图发现是 promethus 目录下的文件没有权限
+1.查看日志(docker logs containsId)，如下图发现是 prometheus 目录下的文件没有权限
 
 ![常见问题](../img/installation/常见问题8.png){ width="900px" }
 
-2.手动给 promethus 目录赋权
+2.手动给 prometheus 目录赋权
 
 ```
-chmod +777 /opt/metersphere/conf/promethus
-chmod +777 /opt/metersphere/data/promethus
+chmod +777 /opt/metersphere/conf/prometheus
+chmod +777 /opt/metersphere/data/prometheus
 ```
 
 之后重新执行安装脚本的命令。
