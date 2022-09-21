@@ -65,7 +65,7 @@
 解决方案：
 
 输入docker logs ms-prometheus，发现没有权限 <br>
-![docker设置](../img/installation/mac-install-prometheus.png){ width="900px" }
+![docker设置](../img/installation/mac-install-promethus.png){ width="900px" }
 
 手动给 prometheus 目录赋权 <br>
 ```
