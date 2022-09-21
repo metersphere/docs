@@ -61,7 +61,7 @@
 将docker-compose-kafka.yml 文件中的挂载目录为由原来的 /bitnami 改为 /data （注意有两个），然后执行 msctl reload <br>
 ![docker设置](../img/installation/mac-install-zk1.png){ width="900px" }
 
-### 3.4、执行完成后发现 ms-promethus 服务是 Restarting 状态
+### 3.4、执行完成后发现 ms-prometheus 服务是 Restarting 状态
 解决方案：
 
 输入docker logs ms-promethus，发现没有权限 <br>
