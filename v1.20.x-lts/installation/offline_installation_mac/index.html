@@ -2972,13 +2972,13 @@ You're not viewing the latest version.
 <img alt="docker设置" src="../../img/installation/mac-install-zk1.png" width="900px" /></p>
 <h3 id="34-ms-prometheus-restarting">3.4、执行完成后发现 ms-prometheus 服务是 Restarting 状态<a class="headerlink" href="#34-ms-prometheus-restarting" title="Permanent link">&para;</a></h3>
 <p>解决方案：</p>
-<p>输入docker logs ms-promethus，发现没有权限 <br>
+<p>输入docker logs ms-prometheus，发现没有权限 <br>
 <img alt="docker设置" src="../../img/installation/mac-install-promethus.png" width="900px" /></p>
-<p>手动给 promethus 目录赋权 <br>
-<div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/promethus
-chmod +777 /opt/metersphere/data/promethus
+<p>手动给 prometheus 目录赋权 <br>
+<div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/prometheus
+chmod +777 /opt/metersphere/data/prometheus
 </code></pre></div>
-之后执行 docker stop ms-promethus 和 docker rm ms-promethus，然后再执行msctl reload</p>
+之后执行 docker stop ms-prometheus 和 docker rm ms-prometheus，然后再执行msctl reload</p>
 <h3 id="35-msctl-status-ms-server">3.5 msctl status 发现 ms-server 服务没有起来<a class="headerlink" href="#35-msctl-status-ms-server" title="Permanent link">&para;</a></h3>
 <p>解决方案：</p>
 <p>输入 docker logs ms-server 发现没成功连接 redis 和 kafka <br>

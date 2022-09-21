@@ -894,8 +894,8 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-msctl-statushealthstartingdocker-ps-apromethusrestarting" class="md-nav__link">
-    3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现promethus容器是Restarting状态
+  <a href="#33-msctl-statushealthstartingdocker-ps-aprometheusrestarting" class="md-nav__link">
+    3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现prometheus容器是Restarting状态
   </a>
   
 </li>
@@ -2983,8 +2983,8 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-msctl-statushealthstartingdocker-ps-apromethusrestarting" class="md-nav__link">
-    3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现promethus容器是Restarting状态
+  <a href="#33-msctl-statushealthstartingdocker-ps-aprometheusrestarting" class="md-nav__link">
+    3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现prometheus容器是Restarting状态
   </a>
   
 </li>
@@ -3182,14 +3182,14 @@ tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%985.png" width="900px" /></p>
 <p>2.将挂载目录为由原来的/bitnami改为/data，重新执行/bin/bash install.sh</p>
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%986.png" width="900px" /></p>
-<h3 id="33-msctl-statushealthstartingdocker-ps-apromethusrestarting">3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现promethus容器是Restarting状态<a class="headerlink" href="#33-msctl-statushealthstartingdocker-ps-apromethusrestarting" title="Permanent link">&para;</a></h3>
+<h3 id="33-msctl-statushealthstartingdocker-ps-aprometheusrestarting">3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现prometheus容器是Restarting状态<a class="headerlink" href="#33-msctl-statushealthstartingdocker-ps-aprometheusrestarting" title="Permanent link">&para;</a></h3>
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></p>
 <p>解决方法:<br>
-1.查看日志(docker logs containsId)，如下图发现是promethus目录下的文件没有权限</p>
+1.查看日志(docker logs containsId)，如下图发现是prometheus目录下的文件没有权限</p>
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%988.png" width="900px" /></p>
-<p>2.手动给promethus目录赋权</p>
-<div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/promethus
-chmod +777 /opt/metersphere/data/promethus
+<p>2.手动给prometheus目录赋权</p>
+<div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/prometheus
+chmod +777 /opt/metersphere/data/prometheus
 </code></pre></div>
 <p>之后重新执行安装脚本的命令。</p>
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%989.png" width="900px" /></p>
