@@ -87,7 +87,7 @@ kafka.topic=JMETER_METRICS
 kafka.test.topic=JMETER_TESTS
 kafka.bootstrap-servers={KAFKA_IP}:19092
 kafka.log.topic=JMETER_LOGS
-kafka.report.topic=JMETER_REPORT
+kafka.report.topic=JMETER_REPORTS
 
 # node-controller 所使用的 jmeter 镜像版本 
 jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
