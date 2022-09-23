@@ -28,24 +28,28 @@ vim docker-compose-base.yml #拷贝ms服务器的docker-compose-base.yml
 
 version: "2.1"
 volumes:
-ms-conf:
-driver_opts:
-type: none
-device: ${MS_BASE}/metersphere/conf
-o: bind
-ms-logs:
-driver_opts:
-type: none
-device: ${MS_BASE}/metersphere/logs
-o: bind
-ms-data:
-driver_opts:
-type: none
-device: ${MS_BASE}/metersphere/data
-o: bind
-
+    ms-conf:
+        driver_opts:
+            type: none
+            device: ${MS_BASE}/metersphere/conf
+            o: bind
+    ms-logs:
+        driver_opts:
+            type: none
+            device: ${MS_BASE}/metersphere/logs
+            o: bind
+    ms-data:
+        driver_opts:
+            type: none
+            device: ${MS_BASE}/metersphere/data
+            o: bind
 networks:
-ms-network:
+    ms-network:
+         driver: bridge
+            ipam:
+              driver: default
+              config:
+                - subnet: ${MS_DOCKER_SUBNET}
 ```
 
 docker-compose-ds.yml
@@ -55,35 +59,34 @@ vim docker-compose-ds.yml #新加ds yaml文件
 
 version: "2.1"
 services:
-
-ms-data-streaming:
-image: ${MS_PREFIX}/ms-data-streaming:${MS_TAG}
-container_name: ms-data-streaming
-environment:
-HOST_HOSTNAME: $HOSTNAME
-SPRING_DATASOURCE_URL: jdbc:mysql://${MS_MYSQL_HOST}:${MS_MYSQL_PORT}/${MS_MYSQL_DB}?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-SPRING_DATASOURCE_USERNAME: ${MS_MYSQL_USER}
-SPRING_DATASOURCE_PASSWORD: ${MS_MYSQL_PASSWORD}
-KAFKA_PARTITIONS: 60  #此处修改kafka分区
-KAFKA_REPLICAS: 1
-KAFKA_TOPIC: ${MS_KAFKA_TOPIC}
-KAFKA_LOG_TOPIC: ${MS_KAFKA_LOG_TOPIC}
-KAFKA_TEST_TOPIC: ${MS_KAFKA_TEST_TOPIC}
-KAFKA_BOOTSTRAP-SERVERS: ${MS_KAFKA_BOOTSTRAP_SERVERS} #此处修改为kafka集群
-ports:
-- 8084:8084
-- 8085:8085
-healthcheck:
-test: ["CMD", "nc", "-zv", "localhost", "8084"]
-interval: 6s
-timeout: 10s
-retries: 20
-restart: on-failure
-volumes:
-- ./conf/metersphere.properties:/opt/metersphere/conf/metersphere.properties
-- ${MS_BASE}/metersphere/logs/data-streaming:/opt/metersphere/logs/data-streaming
+    ms-data-streaming:
+        image: ${MS_PREFIX}/ms-data-streaming:${MS_TAG}
+        container_name: ms-data-streaming
+        environment:
+            HOST_HOSTNAME: $HOSTNAME
+            SPRING_DATASOURCE_URL: jdbc:mysql://${MS_MYSQL_HOST}:${MS_MYSQL_PORT}/${MS_MYSQL_DB}?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+            SPRING_DATASOURCE_USERNAME: ${MS_MYSQL_USER}
+            SPRING_DATASOURCE_PASSWORD: ${MS_MYSQL_PASSWORD}
+            KAFKA_PARTITIONS: 60  #此处修改kafka分区
+            KAFKA_REPLICAS: 1
+            KAFKA_TOPIC: ${MS_KAFKA_TOPIC}
+            KAFKA_LOG_TOPIC: ${MS_KAFKA_LOG_TOPIC}
+            KAFKA_TEST_TOPIC: ${MS_KAFKA_TEST_TOPIC}
+            KAFKA_BOOTSTRAP-SERVERS: ${MS_KAFKA_BOOTSTRAP_SERVERS} #此处修改为kafka集群
+            ports:
+            - 8084:8084
+            - 8085:8085
+        healthcheck:
+            test: ["CMD", "nc", "-zv", "localhost", "8084"]
+            interval: 6s
+            timeout: 10s
+            retries: 20
+        restart: on-failure
+        volumes:
+            - ./conf/metersphere.properties:/opt/metersphere/conf/metersphere.properties
+            - ${MS_BASE}/metersphere/logs/data-streaming:/opt/metersphere/logs/data-streaming
 networks:
-- ms-network
+    - ms-network
 ```
 
 启动data-streaming，执行命令:
