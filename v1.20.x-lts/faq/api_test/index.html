@@ -3520,7 +3520,65 @@ You're not viewing the latest version.
 <h2 id="32">32 如何循环取出列表变量的每一个值<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
 <p>结合循环控制器和计数器取值</p>
 <h2 id="33-unicode">33 接口响应内容为 Unicode 字符<a class="headerlink" href="#33-unicode" title="Permanent link">&para;</a></h2>
-<p>在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");</p>
+<p>1.在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");
+2.可以在后置脚本中选择BeanShel，写入如下代码
+<div class="highlight"><pre><span></span><code>String response_value=new String(prev.getResponseData(),&quot;UTF-8&quot;);
+char aChar;
+int num= response_value.length();
+StringBuffer outBuffer=new StringBuffer(num);
+for(int x =0; x &lt;num;){
+    aChar= response_value.charAt(x++);
+    if(aChar==&#39;\\&#39;){
+        aChar= response_value.charAt(x++);
+        if(aChar==&#39;u&#39;){
+            int value =0;
+            for(int i=0;i&lt;4;i++){
+                aChar= response_value.charAt(x++);
+                switch(aChar){
+                    case&#39;0&#39;:
+                    case&#39;1&#39;:
+                    case&#39;2&#39;:
+                    case&#39;3&#39;:
+                    case&#39;4&#39;:
+                    case&#39;5&#39;:
+                    case&#39;6&#39;:
+                    case&#39;7&#39;:
+                    case&#39;8&#39;:
+                    case&#39;9&#39;:
+                        value=(value &lt;&lt;4)+aChar-&#39;0&#39;;
+                        break;
+                    case&#39;a&#39;:
+                    case&#39;b&#39;:
+                    case&#39;c&#39;:
+                    case&#39;d&#39;:
+                    case&#39;e&#39;:
+                    case&#39;f&#39;:
+                        value=(value &lt;&lt;4)+10+aChar-&#39;a&#39;;
+                        break;
+                    case&#39;A&#39;:
+                    case&#39;B&#39;:
+                    case&#39;C&#39;:
+                    case&#39;D&#39;:
+                    case&#39;E&#39;:
+                    case&#39;F&#39;:
+                        value=(value &lt;&lt;4)+10+aChar-&#39;A&#39;;
+                        break;
+                    default:
+                        throw new IllegalArgumentException(
+                                &quot;Malformed   \\uxxxx  encoding.&quot;);}}
+            outBuffer.append((char) value);}else{
+            if(aChar==&#39;t&#39;)
+                aChar=&#39;\t&#39;;
+            else if(aChar==&#39;r&#39;)
+            aChar=&#39;\r&#39;;
+            else if(aChar==&#39;n&#39;)
+            aChar=&#39;\n&#39;;
+            else if(aChar==&#39;f&#39;)
+            aChar=&#39;\f&#39;;
+            outBuffer.append(aChar);}}else
+        outBuffer.append(aChar);}
+prev.setResponseData(outBuffer.toString());
+</code></pre></div></p>
 <h2 id="34">34 控制台输出乱码<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
 <p>log.info(u"看看乱码了吗");</p>
 <h2 id="35-jmeter">35 接口测试是否可以导出到jmeter<a class="headerlink" href="#35-jmeter" title="Permanent link">&para;</a></h2>
