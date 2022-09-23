@@ -2741,6 +2741,13 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#52-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" class="md-nav__link">
+    52 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3395,6 +3402,13 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#52-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" class="md-nav__link">
+    52 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3504,7 +3518,7 @@ You're not viewing the latest version.
 <h2 id="32">32 如何循环取出列表变量的每一个值<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
 <p>结合循环控制器和计数器取值</p>
 <h2 id="33-unicode">33 接口响应内容为 Unicode 字符<a class="headerlink" href="#33-unicode" title="Permanent link">&para;</a></h2>
-<p>1.在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");
+<p>1.在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8"); <br>
 2.可以在后置脚本中选择BeanShell，然后写入如下代码
 <div class="highlight"><pre><span></span><code>String response_value=new String(prev.getResponseData(),&quot;UTF-8&quot;);
 char aChar;
@@ -3633,6 +3647,9 @@ prev.setResponseData(outBuffer.toString());
 <p>因为响应码不是200，只需要勾选"忽略状态"就行</p>
 <h2 id="50">50 后置脚本中获取响应结果<a class="headerlink" href="#50" title="Permanent link">&para;</a></h2>
 <p>prev.getResponseDataAsString()</p>
+<h2 id="52-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting">52 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting<a class="headerlink" href="#52-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" title="Permanent link">&para;</a></h2>
+<p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
+<div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/mysql_yml.jpg"><img alt=" metersphere导入格式" src="../../img/faq/mysql_yml.jpg" /></a></div></p>
 
 
   
