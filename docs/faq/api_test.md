@@ -160,7 +160,66 @@ MeterSphere在1.15版本实现了与IDEA对接。通过在IDEA安装组件，完
 结合循环控制器和计数器取值
 
 ## 33 接口响应内容为 Unicode 字符
-在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");
+1.在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");
+2.可以在后置脚本中选择BeanShel，写入如下代码
+```
+String response_value=new String(prev.getResponseData(),"UTF-8");
+char aChar;
+int num= response_value.length();
+StringBuffer outBuffer=new StringBuffer(num);
+for(int x =0; x <num;){
+    aChar= response_value.charAt(x++);
+    if(aChar=='\\'){
+        aChar= response_value.charAt(x++);
+        if(aChar=='u'){
+            int value =0;
+            for(int i=0;i<4;i++){
+                aChar= response_value.charAt(x++);
+                switch(aChar){
+                    case'0':
+                    case'1':
+                    case'2':
+                    case'3':
+                    case'4':
+                    case'5':
+                    case'6':
+                    case'7':
+                    case'8':
+                    case'9':
+                        value=(value <<4)+aChar-'0';
+                        break;
+                    case'a':
+                    case'b':
+                    case'c':
+                    case'd':
+                    case'e':
+                    case'f':
+                        value=(value <<4)+10+aChar-'a';
+                        break;
+                    case'A':
+                    case'B':
+                    case'C':
+                    case'D':
+                    case'E':
+                    case'F':
+                        value=(value <<4)+10+aChar-'A';
+                        break;
+                    default:
+                        throw new IllegalArgumentException(
+                                "Malformed   \\uxxxx  encoding.");}}
+            outBuffer.append((char) value);}else{
+            if(aChar=='t')
+                aChar='\t';
+            else if(aChar=='r')
+            aChar='\r';
+            else if(aChar=='n')
+            aChar='\n';
+            else if(aChar=='f')
+            aChar='\f';
+            outBuffer.append(aChar);}}else
+        outBuffer.append(aChar);}
+prev.setResponseData(outBuffer.toString());
+```
 
 ## 34 控制台输出乱码
 log.info(u"看看乱码了吗");
