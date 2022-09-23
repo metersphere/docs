@@ -160,7 +160,7 @@ MeterSphere在1.15版本实现了与IDEA对接。通过在IDEA安装组件，完
 结合循环控制器和计数器取值
 
 ## 33 接口响应内容为 Unicode 字符
-1.在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");
+1.在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8"); <br>
 2.可以在后置脚本中选择BeanShel，写入如下代码
 ```
 String response_value=new String(prev.getResponseData(),"UTF-8");
@@ -313,3 +313,7 @@ log.info(u"看看乱码了吗");
 
 ## 50 后置脚本中获取响应结果
 prev.getResponseDataAsString()
+
+## 51 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
+![! metersphere导入格式](../img/faq/mysql_yml.jpg)

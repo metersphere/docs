@@ -281,3 +281,6 @@ cd /opt/bitnami/kafka/bin
 ## 28 Error:没有足够的资源启动测试
 将【系统设置-测试资源池-JMeter HEAP】调大点
 ![! 接口测试-K8S配置](../img/faq/Jmeter_Heap.png)
+
+## 29 性能测试中怎么跨线程传递变量
+性能测试里动态设置变量可以用属性的方式，${__setProperty(var,value,)} 设置属性，${__property(var)} 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递
