@@ -311,7 +311,7 @@ log.info(u"看看乱码了吗");
 ## 50 后置脚本中获取响应结果
 prev.getResponseDataAsString()
 
-## 52 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+## 51 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
 在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg)
 
