@@ -2529,15 +2529,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#18" class="md-nav__link">
-    18 性能测试监控，需要安装什么插件吗？
+  <a href="#18-metersphere" class="md-nav__link">
+    18 MeterSphere可以监控被测系统服务器指标吗？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#19-metersphere" class="md-nav__link">
-    19 MeterSphere可以监控被测系统服务器指标吗？
+  <a href="#19-node_exporter" class="md-nav__link">
+    19 如何安装 node_exporter 插件
   </a>
   
 </li>
@@ -3022,15 +3022,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#18" class="md-nav__link">
-    18 性能测试监控，需要安装什么插件吗？
+  <a href="#18-metersphere" class="md-nav__link">
+    18 MeterSphere可以监控被测系统服务器指标吗？
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#19-metersphere" class="md-nav__link">
-    19 MeterSphere可以监控被测系统服务器指标吗？
+  <a href="#19-node_exporter" class="md-nav__link">
+    19 如何安装 node_exporter 插件
   </a>
   
 </li>
@@ -3295,10 +3295,23 @@ nginx.novalocal
 <p><div class="lightgallery"><a data-sub-html=" 报告对比" href="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png"><img alt=" 报告对比" src="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" /></a></div></p>
 <h2 id="17">17 执行压测时，多台发压机的情况下，可以设置变量不重复执行吗？<a class="headerlink" href="#17" title="Permanent link">&para;</a></h2>
 <p>可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。</p>
-<h2 id="18">18 性能测试监控，需要安装什么插件吗？<a class="headerlink" href="#18" title="Permanent link">&para;</a></h2>
-<p>被监控服务器需要安装node export组件，相当于收集监控的一个客户端。主服务会在安装MeterSphere系统时默认安装，如果添加其他服务器，则需要单独安装。</p>
-<h2 id="19-metersphere">19 MeterSphere可以监控被测系统服务器指标吗？<a class="headerlink" href="#19-metersphere" title="Permanent link">&para;</a></h2>
-<p>MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控。可以在性能测试模块的高级测试里面，添加被测系统服务器，同时在该服务器安装node_exporter插件，即可在执行性能测试的时候完成相关指标的监控。</p>
+<h2 id="18-metersphere">18 MeterSphere可以监控被测系统服务器指标吗？<a class="headerlink" href="#18-metersphere" title="Permanent link">&para;</a></h2>
+<p>MeterSphere 使用 Prometheus 进行发压机以及被测系统服务器的监控，可以在性能测试-高级配置里面，添加被测系统服务器的 node_exporter 的地址。主服务会在安装 MeterSphere 系统时默认安装，而其他服务器，则需要单独安装 node_exporter，即可在执行性能测试的时候完成相关指标的监控。</p>
+<h2 id="19-node_exporter">19 如何安装 node_exporter 插件<a class="headerlink" href="#19-node_exporter" title="Permanent link">&para;</a></h2>
+<p>1.可使用 docker pull prom/node-exporter 拉取 node_export 镜像，之后运行容器
+<div class="highlight"><pre><span></span><code>docker pull prom/node-exporter # 拉取镜像
+docker run -d -p 9100:9100 -v &quot;/proc:/host/proc:ro&quot; -v &quot;/sys:/host/sys:ro&quot; -v &quot;/:/rootfs:ro&quot; --net=&quot;host&quot; prom/node-exporter # 启动容器
+
+http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+</code></pre></div>
+2.可下载 node_exporter 离线包，解压之后可执行命令进行启动
+<div class="highlight"><pre><span></span><code>wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+tar -zxvf node_exporter-1.3.1.linux-amd64.tar.gz
+cd node_exporter-1.3.1-amd64
+./node_exporter  # 启动 (nohup ./node_exporter &amp; 后台启动)
+
+http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+</code></pre></div></p>
 <h2 id="20">20 压力配置中，每个线程组是否能分别选择压力机？<a class="headerlink" href="#20" title="Permanent link">&para;</a></h2>
 <p>在压力配置里，提供了3种分配策略，分别为“自动分配、固定节点、自定义”，可以为每个线程组指定一个节点，或者按比例分配多个节点。</p>
 <h2 id="21-non-http-response-code-javanetsockettimeoutexception">21 性能测试并发量加大的时候报错 <code>Non HTTP response code: java.net.SocketTimeoutException</code><a class="headerlink" href="#21-non-http-response-code-javanetsockettimeoutexception" title="Permanent link">&para;</a></h2>
