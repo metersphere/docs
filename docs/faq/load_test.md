@@ -202,13 +202,26 @@ nginx.novalocal
 
 可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。
 
-## 18 性能测试监控，需要安装什么插件吗？
+## 18 MeterSphere可以监控被测系统服务器指标吗？
+MeterSphere 使用 Prometheus 进行发压机以及被测系统服务器的监控，可以在性能测试-高级配置里面，添加被测系统服务器的 node_exporter 的地址。主服务会在安装 MeterSphere 系统时默认安装，而其他服务器，则需要单独安装 node_exporter，即可在执行性能测试的时候完成相关指标的监控。
 
-被监控服务器需要安装node export组件，相当于收集监控的一个客户端。主服务会在安装MeterSphere系统时默认安装，如果添加其他服务器，则需要单独安装。
+## 19 如何安装 node_exporter 插件
+1.可使用 docker pull prom/node-exporter 拉取 node_export 镜像，之后运行容器
+```
+docker pull prom/node-exporter # 拉取镜像
+docker run -d -p 9100:9100 -v "/proc:/host/proc:ro" -v "/sys:/host/sys:ro" -v "/:/rootfs:ro" --net="host" prom/node-exporter # 启动容器
 
-## 19 MeterSphere可以监控被测系统服务器指标吗？
+http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+```
+2.可下载 node_exporter 离线包，解压之后可执行命令进行启动
+```
+wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+tar -zxvf node_exporter-1.3.1.linux-amd64.tar.gz
+cd node_exporter-1.3.1-amd64
+./node_exporter  # 启动 (nohup ./node_exporter & 后台启动)
 
-MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控。可以在性能测试模块的高级测试里面，添加被测系统服务器，同时在该服务器安装node_exporter插件，即可在执行性能测试的时候完成相关指标的监控。
+http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+```
 
 ## 20 压力配置中，每个线程组是否能分别选择压力机？
 
