@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/v2.x/faq/ui_test/</loc>
+         <lastmod>2022-09-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/v2.x/installation/backup_data/</loc>
          <lastmod>2022-09-26</lastmod>
          <changefreq>daily</changefreq>
