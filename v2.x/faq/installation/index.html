@@ -3631,9 +3631,9 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 <p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
 <div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/mysql_yml.jpg"><img alt=" metersphere导入格式" src="../../img/faq/mysql_yml.jpg" /></a></div></p>
 <h2 id="49-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space">49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space<a class="headerlink" href="#49-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" title="Permanent link">&para;</a></h2>
-<p>1.docker network prune 清除子网网段; 
-2.docker network create metersphere_ms-network ;
-3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ;
+<p>1.docker network prune 清除子网网段; <br>
+2.docker network create metersphere_ms-network ;<br>
+3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ; <br>
 4.重启服务器</p>
 <h2 id="50-could-not-find-propertiesoptmetersphereconfmetersphereproperties">50 could not find properties[/opt/metersphere/conf/metersphere.properties]<a class="headerlink" href="#50-could-not-find-propertiesoptmetersphereconfmetersphereproperties" title="Permanent link">&para;</a></h2>
 <p>安装包放的目录位置不对，将 metersphere-offcial-XX.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。</p>
