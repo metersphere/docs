@@ -289,9 +289,9 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg)
 
 ## 49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
-1.docker network prune 清除子网网段; 
-2.docker network create metersphere_ms-network ;
-3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ;
+1.docker network prune 清除子网网段; <br>
+2.docker network create metersphere_ms-network ;<br>
+3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ;<br>
 4.重启服务器
 
 ## 50 could not find properties[/opt/metersphere/conf/metersphere.properties]
