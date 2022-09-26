@@ -2696,6 +2696,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#48-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" class="md-nav__link">
+    48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" class="md-nav__link">
+    49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-could-not-find-propertiesoptmetersphereconfmetersphereproperties" class="md-nav__link">
+    50 could not find properties[/opt/metersphere/conf/metersphere.properties]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-javalangoutofmemoryerrorjava-heap-space" class="md-nav__link">
+    51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-error-unable-to-write-to-kafka-in-appender-kafka" class="md-nav__link">
+    52 ERROR Unable to write to Kafka in appender [Kafka]
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3357,6 +3392,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#48-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" class="md-nav__link">
+    48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" class="md-nav__link">
+    49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-could-not-find-propertiesoptmetersphereconfmetersphereproperties" class="md-nav__link">
+    50 could not find properties[/opt/metersphere/conf/metersphere.properties]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-javalangoutofmemoryerrorjava-heap-space" class="md-nav__link">
+    51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-error-unable-to-write-to-kafka-in-appender-kafka" class="md-nav__link">
+    52 ERROR Unable to write to Kafka in appender [Kafka]
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3575,6 +3645,28 @@ flushall
 <div class="highlight"><pre><span></span><code>spring.datasource.hikari.maximum-pool-size=你想要的数值
 spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 </code></pre></div></p>
+<h2 id="48-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting">48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting<a class="headerlink" href="#48-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" title="Permanent link">&para;</a></h2>
+<p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
+<div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/mysql_yml.jpg"><img alt=" metersphere导入格式" src="../../img/faq/mysql_yml.jpg" /></a></div></p>
+<h2 id="49-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space">49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space<a class="headerlink" href="#49-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" title="Permanent link">&para;</a></h2>
+<p>1.docker network prune 清除子网网段; 
+2.docker network create metersphere_ms-network ;
+3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ;
+4.重启服务器</p>
+<h2 id="50-could-not-find-propertiesoptmetersphereconfmetersphereproperties">50 could not find properties[/opt/metersphere/conf/metersphere.properties]<a class="headerlink" href="#50-could-not-find-propertiesoptmetersphereconfmetersphereproperties" title="Permanent link">&para;</a></h2>
+<p>安装包放的目录位置不对，将 metersphere-offcial-XX.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。</p>
+<h2 id="51-javalangoutofmemoryerrorjava-heap-space">51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space<a class="headerlink" href="#51-javalangoutofmemoryerrorjava-heap-space" title="Permanent link">&para;</a></h2>
+<p>在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
+<div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/java_heap_space.jpg"><img alt=" metersphere导入格式" src="../../img/faq/java_heap_space.jpg" /></a></div></p>
+<h2 id="52-error-unable-to-write-to-kafka-in-appender-kafka">52 ERROR Unable to write to Kafka in appender [Kafka]<a class="headerlink" href="#52-error-unable-to-write-to-kafka-in-appender-kafka" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>docker stop kafka 
+docker stop zookeeper 
+docker rm kafka 
+docker rm zookeeper 
+rm -rf /opt/metersphere/data/kafka/kafka 
+rm -rf /opt/metersphere/data/zookeeper/zookeeper 
+msctl reload
+</code></pre></div>
 
 
   

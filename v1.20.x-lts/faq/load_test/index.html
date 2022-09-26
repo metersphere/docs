@@ -3233,14 +3233,21 @@ docker logs kafka
 <span class="o">[</span>root@meter-prototype ~<span class="o">]</span><span class="c1"># docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}</span>
 kafka <span class="o">(</span><span class="m">172</span>.23.0.5:19092<span class="o">)</span> open
 </code></pre></div>
-如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
+若 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
+<div class="highlight"><pre><span></span><code>执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
+
+firewall-cmd --zone=trusted --add-source=172.18.0.1/16 --permanent；
+firewall-cmd --zone=trusted --add-source=172.19.0.1/16 --permanent；
+firewall-cmd --reload
+</code></pre></div></li>
+</ol>
+<p>如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
 <div class="highlight"><pre><span></span><code><span class="c1"># 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令</span>
 systemctl stop firewalld
 systemctl restart docker
 msctl start
 </code></pre></div>
-若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。</li>
-</ol>
+若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。</p>
 <h2 id="6">6 执行性能测试时提示 <code>无法运行测试，请检查当前站点配置</code> 如何解决？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <p>执行性能测试过程中，node-controller 节点需要通过 <code>系统</code>-<code>系统设置</code>-<code>系统参数设置</code> 中配置的 <code>当前站点 URL</code> 下载相关文件。出现该问题时用户需要检查该配置参数，确保 node-controller 节点可以正常访问到该 URL。</p>
 <p>URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 <code>https://demo.metersphere.com</code>。</p>
