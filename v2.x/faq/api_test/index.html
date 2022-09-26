@@ -2730,8 +2730,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#51-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" class="md-nav__link">
-    51 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+  <a href="#51-jmeter" class="md-nav__link">
+    51 接口测试中导入 jmeter脚本后，点击执行，查看请求内容啥也没有
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-error-standardjmeterengine-jdbc-data-source-already-defined-for" class="md-nav__link">
+    52 ERROR StandardJMeterEngine JDBC data source already defined for:测试环境数据库
   </a>
   
 </li>
@@ -3391,8 +3398,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#51-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" class="md-nav__link">
-    51 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+  <a href="#51-jmeter" class="md-nav__link">
+    51 接口测试中导入 jmeter脚本后，点击执行，查看请求内容啥也没有
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-error-standardjmeterengine-jdbc-data-source-already-defined-for" class="md-nav__link">
+    52 ERROR StandardJMeterEngine JDBC data source already defined for:测试环境数据库
   </a>
   
 </li>
@@ -3635,9 +3649,10 @@ prev.setResponseData(outBuffer.toString());
 <p>因为响应码不是200，只需要勾选"忽略状态"就行</p>
 <h2 id="50">50 后置脚本中获取响应结果<a class="headerlink" href="#50" title="Permanent link">&para;</a></h2>
 <p>prev.getResponseDataAsString()</p>
-<h2 id="51-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting">51 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting<a class="headerlink" href="#51-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" title="Permanent link">&para;</a></h2>
-<p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
-<div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/mysql_yml.jpg"><img alt=" metersphere导入格式" src="../../img/faq/mysql_yml.jpg" /></a></div></p>
+<h2 id="51-jmeter">51 接口测试中导入 jmeter脚本后，点击执行，查看请求内容啥也没有<a class="headerlink" href="#51-jmeter" title="Permanent link">&para;</a></h2>
+<p>jmx 脚本用 jmeter 打开，看是不是被禁用了,手动开启后导入即可</p>
+<h2 id="52-error-standardjmeterengine-jdbc-data-source-already-defined-for">52 ERROR StandardJMeterEngine JDBC data source already defined for:测试环境数据库<a class="headerlink" href="#52-error-standardjmeterengine-jdbc-data-source-already-defined-for" title="Permanent link">&para;</a></h2>
+<p>查看数据库-数据源，修改最大连接数</p>
 
 
   

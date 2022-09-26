@@ -3217,14 +3217,21 @@ docker logs kafka
 <span class="o">[</span>root@meter-prototype ~<span class="o">]</span><span class="c1"># docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}</span>
 kafka <span class="o">(</span><span class="m">172</span>.23.0.5:19092<span class="o">)</span> open
 </code></pre></div>
-如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
+若 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
+<div class="highlight"><pre><span></span><code>执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
+
+firewall-cmd --zone=trusted --add-source=172.18.0.1/16 --permanent；
+firewall-cmd --zone=trusted --add-source=172.19.0.1/16 --permanent；
+firewall-cmd --reload
+</code></pre></div></li>
+</ol>
+<p>如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
 <div class="highlight"><pre><span></span><code><span class="c1"># 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令</span>
 systemctl stop firewalld
 systemctl restart docker
 msctl start
 </code></pre></div>
-若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。</li>
-</ol>
+若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。</p>
 <h2 id="6">6 执行性能测试时提示 <code>无法运行测试，请检查当前站点配置</code> 如何解决？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <p>执行性能测试过程中，node-controller 节点需要通过 <code>系统</code>-<code>系统设置</code>-<code>系统参数设置</code> 中配置的 <code>当前站点 URL</code> 下载相关文件。出现该问题时用户需要检查该配置参数，确保 node-controller 节点可以正常访问到该 URL。</p>
 <p>URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 <code>https://demo.metersphere.com</code>。</p>
@@ -3282,12 +3289,13 @@ nginx.novalocal
 <p>高级配置增加超时时间。</p>
 <p><div class="lightgallery"><a data-sub-html=" 性能测试-设置超时时间" href="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png"><img alt=" 性能测试-设置超时时间" src="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" /></a></div></p>
 <h2 id="22-50100">22 进行压测时，最大用户加到 50/100 就不能继续加吗？<a class="headerlink" href="#22-50100" title="Permanent link">&para;</a></h2>
-<p>检查 系统设置-测试资源池-修改资源池里“最大并发数”</p>
+<p>可在 系统设置-测试资源池-修改资源池里“最大并发数”中配置</p>
 <h2 id="23-jmeter">23 性能测试相关文件在 jmeter容器中的哪个目录？<a class="headerlink" href="#23-jmeter" title="Permanent link">&para;</a></h2>
 <p>在容器里的/test目录下</p>
 <h2 id="24-jmeter">24 执行性能测试报 jmeter镜像不存在<a class="headerlink" href="#24-jmeter" title="Permanent link">&para;</a></h2>
-<p>1.先查看一下镜像文件，看是否存在这个镜像，docker images
-2.下载离线安装包解压后，将jmeter镜像导入到docker中；</p>
+<p>1.先查看一下镜像文件，看是否存在这个镜像，docker images <br>
+2.下载离线安装包解压后，将jmeter镜像导入到docker中 <br>
+3.可查看 /opt/metersphere/.env 中 MS_JMETER_IMAGE 地址，直接 docker pull 地址即可</p>
 <h2 id="25-starting">25 性能测试状态一直是starting且无数据<a class="headerlink" href="#25-starting" title="Permanent link">&para;</a></h2>
 <p>到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
 和 info.log，看日志中是否有报错信息。<br>
