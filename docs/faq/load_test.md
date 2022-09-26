@@ -102,6 +102,15 @@ docker logs kafka
 [root@meter-prototype ~]# docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}
 kafka (172.23.0.5:19092) open
 ```
+若 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
+```
+执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
+
+firewall-cmd --zone=trusted --add-source=172.18.0.1/16 --permanent；
+firewall-cmd --zone=trusted --add-source=172.19.0.1/16 --permanent；
+firewall-cmd --reload
+```
+
 如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
 ```bash
 # 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令
@@ -212,14 +221,15 @@ MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控�
 ![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)
 
 ## 22 进行压测时，最大用户加到 50/100 就不能继续加吗？
-检查 系统设置-测试资源池-修改资源池里“最大并发数”
+可在 系统设置-测试资源池-修改资源池里“最大并发数”中配置
 
 ## 23 性能测试相关文件在 jmeter容器中的哪个目录？
 在容器里的/test目录下
 
 ## 24 执行性能测试报 jmeter镜像不存在
-1.先查看一下镜像文件，看是否存在这个镜像，docker images
-2.下载离线安装包解压后，将jmeter镜像导入到docker中；
+1.先查看一下镜像文件，看是否存在这个镜像，docker images <br>
+2.下载离线安装包解压后，将jmeter镜像导入到docker中 <br>
+3.可查看 /opt/metersphere/.env 中 MS_JMETER_IMAGE 地址，直接 docker pull 地址即可
 
 ## 25 性能测试状态一直是starting且无数据
 到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log

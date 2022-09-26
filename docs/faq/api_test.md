@@ -311,8 +311,8 @@ log.info(u"看看乱码了吗");
 ## 50 后置脚本中获取响应结果
 prev.getResponseDataAsString()
 
-## 51 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
-在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
-![! metersphere导入格式](../img/faq/mysql_yml.jpg)
+## 51 接口测试中导入 jmeter脚本后，点击执行，查看请求内容啥也没有
+jmx 脚本用 jmeter 打开，看是不是被禁用了,手动开启后导入即可
 
-
+## 52 ERROR StandardJMeterEngine JDBC data source already defined for:测试环境数据库
+查看数据库-数据源，修改最大连接数

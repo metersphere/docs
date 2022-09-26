@@ -279,3 +279,32 @@ flushall
 spring.datasource.hikari.maximum-pool-size=你想要的数值
 spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 ```
+
+## 48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
+![! metersphere导入格式](../img/faq/mysql_yml.jpg)
+
+## 49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+1.docker network prune 清除子网网段; 
+2.docker network create metersphere_ms-network ;
+3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ;
+4.重启服务器
+
+## 50 could not find properties[/opt/metersphere/conf/metersphere.properties]
+安装包放的目录位置不对，将 metersphere-offcial-XX.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。
+
+## 51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
+在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
+![! metersphere导入格式](../img/faq/java_heap_space.jpg)
+
+## 52 ERROR Unable to write to Kafka in appender [Kafka]
+```
+docker stop kafka 
+docker stop zookeeper 
+docker rm kafka 
+docker rm zookeeper 
+rm -rf /opt/metersphere/data/kafka/kafka 
+rm -rf /opt/metersphere/data/zookeeper/zookeeper 
+msctl reload
+```
+
