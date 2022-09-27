@@ -197,17 +197,13 @@ IP访问：检查防火墙（firewalld,iptables等）
 域名访问：检查防火墙及NGINX等网络相关配置
 ```
 
-## 38 ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以
-```
-service network restart
-service docker restart
-msctl reload
-```
+## 安装报错/var/lib/docker/overlay2/xxxx no such file or directory
+docker 的持久化数据目录被删除了，要重装docker，建议以后不要清理/var/lib/docker/overlay2目录了。
 
 ## 39 修改session过期时间
-/opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒
+/opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒
 
-## 40 K8S 部署 meterspher 出现 413 request entity too large
+## 40 K8S 部署 metersphere 出现 413 request entity too large
 ```
 #ngnix请求破除1m限制，
 kubectl edit ingress metersphere
@@ -220,7 +216,7 @@ meta.helm.sh/release-namespace: default
 nginx.ingress.kubernetes.io/proxy-body-size: 50m
 ```
 
-## 41 主机部署 meterspher 出现 413 request entity too large
+## 41 主机部署 metersphere 出现 413 request entity too large
 ```
 1. 打开nginx服务的配置文件nginx.conf
 2. 在http{}中加入client_max_body_size xxm, xx根据需求改动

@@ -37,7 +37,7 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 
 ![!服务集成](../../img/system_management/服务集成首页.png)
 
-#### 1.2.1 <font size=4> 与JIRA集成 </font>
+#### <font size=4> 1.2.1 与JIRA集成 </font>
 - 第一步：填写对接JIRA的地址、认证信息和问题类型，如下。
 
 ![!填写jira](../../img/system_management/填写jira.png)
@@ -105,7 +105,7 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
 保存并提交缺陷后，缺陷同步到 JIRA 中就会出现经办人字段。
 ![!jira-缺陷同步](../../img/system_management/jira-缺陷同步.png)
 
-#### 1.2.2 <font size=4> 与TAPD集成 </font>
+#### <font size=4> 1.2.2 与TAPD集成 </font>
 - 第一步：服务集成配置。
 
 ![!TAPD-配置](../../img/system_management/TAPD-配置.png)
@@ -151,7 +151,7 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
 段名。API 字段名通过 TAPD 接口链接查询 `https://www.tapd.cn/<项目号>/dashboard/workspace/view`。
 ![!TAPD-自定义字段同步设置](../../img/system_management/TAPD-自定义字段同步设置.png)
 
-#### 1.2.3 <font size=4> 与禅道集成 </font>
+#### <font size=4> 1.2.3 与禅道集成 </font>
 - 第一步：服务集成配置。
 
 ![!禅道-服务集成配置](../../img/system_management/禅道-服务集成配置.png)
@@ -195,7 +195,7 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
 缺陷模板支持自定义字段，（自定义字段的设置同上文与 JIRA 集成第四步），设置好的字段会出现在字段的列表中，选择字段名并设置 API 字段名。API 字段名通过禅道接口链接查询 http://<IP>/zentao/dev-api-bug.html。
 ![!禅道-自定义字段同步设置](../../img/system_management/禅道-自定义字段同步设置.png)
 
-#### 1.2.4 <font size=4> 与Azure Devops集成 </font>
+#### <font size=4> 1.2.4 与Azure Devops集成 </font>
 操作步骤和`禅道集成`一样。
 
 ### 1.3 项目管理
@@ -263,7 +263,7 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
 
 点击页面左侧`工作空间`，点击`环境配置`，即可查看当前工作空间中的所有项目的所有环境列表。
 
-#### 1.5.1 <font size=4> 环境列表 </font>
+#### <font size=4> 1.5.1 环境列表 </font>
 - 创建环境
 
 点击页面列表信息左上角的`创建环境`，可新增此工作空间下任意项目的测试环境。
@@ -303,7 +303,7 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
 点击`删除环境`按钮编辑环境，可删除环境配置。
 ![!删除环境](../../img/system_management/删除环境.png)
 
-#### 1.5.2 <font size=4> 环境组 </font>
+#### <font size=4> 1.5.2 环境组 </font>
 - 创建环境组
 
 MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动化脚本引用，可以根据不同项目、已经不同环境组合成一个环境组，当自动化执行时，可以直接选择该环境组。
