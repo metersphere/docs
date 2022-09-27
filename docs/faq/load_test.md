@@ -1,308 +1,305 @@
-## 1 MeterSphere 和 JMeter 的主要区别是什么？
+## 1 重启安装服务器后，如何启动 MeterSphere 相关组件？
 
-根据 51Testing软件测试网的调查报告，2009 年时仅 6% 的受访者采纳 JMeter 工具。但是到 2019年，62% 的受访者采纳 JMeter 作为性能测试工具，已经成为目前最主流的性能测试工具。 除了性能测试以外，也有很大部分用户在使用 JMeter 进行接口测试。既然有了 JMeter，为什么还需要 MeterSphere？我们将从规模扩展性、测试报告、测试管理和多人协作这四个方面详细分析 JMeter 存在的问题，及 MeterSphere 带来的变化。
-
-1. 规模扩展性
-    - JMeter 存在的问题
-        - 并发数超过单节点承载能力时，多节点环境配置、维护复杂
-        - 默认配置下无法并行运行多个测试，需要更改配置启动额外进程
-        - 难以支持云环境下测试资源的弹性伸缩需求
-    - MeterSphere 带来的改变
-        - 压测执行节点支持一键安装
-        - 多个项目、多个测试可并行使用同一个测试资源池（最大并发数允许情况下），提高资源利用率
-        - 对接云平台 API 根据并发数自动启动、释放压测执行节点
-2. 测试报告
-    - JMeter 存在的问题
-        - 测试报告需要在测试执行完成后单独生成，实时报告需要通过第三方方案实现
-        - 测试报告不能很方便地进行共享
-        - 没有多次测试结果之间进行比较的功能支持
-    - MeterSphere 带来的改变
-        - 近乎实时的性能测试报告展示
-        - 团队共享的测试报告，方便团队成员进行协作分析
-        - 历史测试报告随时查看，多次测试结果可以快速比较
-3. 测试管理
-    - JMeter 存在的问题
-        - 如何存放这些脚本可以让整个团队很方便地使用和修改
-        - 针对不同产品、项目的脚本如何进行区分
-        - 如何控制不同成员对不同测试脚本的访问权限
-        - 同一个测试脚本的更新修改如何进行追踪回溯
-    - MeterSphere 带来的改变
-        - B/S 架构的测试平台，测试脚本统一存放在数据库，团队成员可以很方便的进行共享和协作
-        - 多租户、多项目的管理模型可以很好的将测试资源进行分隔
-        - 灵活的角色配置，根据需求为团队成员分配不同权限
-        - 针对测试脚本的修改、执行可以提供完善的记录跟踪
-        - 天然支持测试脚本与测试用例的关联， 用户在进行手工测试及接口/性能测试时体验更加一致，测试报告更加完整
-4. 多用户协作
-    - JMeter 存在的问题
-        - C/S 架构的测试工具，所有需要使用的人都需要在本地进行安装
-        - 没有内置的租户、用户管理能力，测试脚本、测试报告不能很方便地进行共享
-    - MeterSphere 带来的改变
-        - B/S 架构的测试平台，只需一个现代浏览器加可以使用到平台提供的所有功能
-        - 灵活的多租户、多项目管理模型，租户间测试用例、测试脚本和报告可以有效隔离，租户内方便共享协作
-
-## 2 是否支持/如何支持分布式的性能测试？
-
-MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。
-
-例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。
-
-![测试资源池](../img/system_management/编辑测试资源池.png)
-
-## 3 如何向测试资源池中添加节点？
-
-首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。
-
-安装完成通过查看组件状态是否正常。
+MeterSphere 在安装过程中没有配置 docker 及其相关容器的自启动。当用户重新启动部署服务器之后，需要手动启动 docker 服务及 MeterSphere 相关容器。
 
 ```bash
-msctl status
-```
-
-当组件状态正常后，使用管理员账号登录 MeterSphere，在「系统设置」-「系统」-「测试资源池」页面添加或编辑已有测试资源池，在弹出的页面中增加一个节点，IP 地址为要添加的测试执行节点的 IP，端口默认为 8082，最大并发数根据测试执行节点的机器规格进行配置。
-
-节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。若提示校验不通过，请登录测试执行节点通过如下命令查看组件日志。
-
-```bash
-docker logs ms-node-controller
-```
-
-## 4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
-
-1.社区版
-
-社区版默认采用后置监听的方式实时处理报告，即在 JMX 脚本文件中增加 Kafka BackendListener 配置，各个 NodeController 节点在本地启动 JMeter 容器执行该 JMX 脚本，过程中通过 Kafka BackendListener 将原始的 JTL 结果数据上传到指定的 Kafka Topic 中，DataStreaming 作为该 Kafka Topic 的消费者对各个节点的数据进行汇总，并计算性能测试报告中的各项指标。<br>
-因此在高并发时 Kafka 和 DataStreaming 很容易成为瓶颈，可以部署 Kafka 和 DataStreaming 集群以及增加 Partition 的数量来增加 Kafka 的吞吐量和处理能力。优化后正常可以达到2/3左右的差距。<br>
-
-2.企业版
-
-针对社区版 Kafka BackendListener 方式，需要上传和处理原始的 JTL 结果，过程中需要处理大量的数据，企业版中做了相关优化，即在执行测试过程中不再使用 BackendListener，各个 NodeController 启动 JMeter 容器时附带启动一个 Java 程序，该 Java 程序负责实时处理本地 JMeter 产生的 JTL 结果数据，生成性能测试报告中的各项指标后上传到指定的 Kafka Topic 中，DataStreaming 作为该 Kafka Topic 的消费者对各个节点的数据进行汇总。<br>
-与优化前方案相比，Kafka 和 DataStreaming 需要处理的数据大大降低，整体上对于并发量较大情况下的结果处理能力大大提升。<br>
-如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 Jmeter 的真实值。
-
-## 5 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
-
-系统在执行性能测试之前，会先检查安装系统时配置的 Kafka 地址是否可用。当提示该信息时，表明 MeterSphere 无法正常连接到 Kafka，可以通过以下方式进行排查定位。
-
-1. 排查思路
-
-![Kafka 不可用排查](../img/kafka_invalid.png)
-
-2. 检查 Kafka 是否正常运行
-如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 Kafka 服务是否正常；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请通过如下命令进行排查。
-```bash
-# 检查各组件的运行状态
-msctl status
-# 若 Kafka 容器不处于 `healthy` 状态，查看 Kafka 日志进行进一步排查
-docker logs kafka
-```
-3. 检查 MeterSphere 到 Kafka 服务的网络连接
-若 Kafka 服务状态正常，请通过如下命令检查 ms-server 容器是否能正常连接到 Kafka 服务。
-```bash
-# 检查 ms-server 是否能正常访问 Kafka 服务
-[root@meter-prototype ~]# docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}
-kafka (172.23.0.5:19092) open
-```
-若 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
-```
-执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
-
-firewall-cmd --zone=trusted --add-source=172.18.0.1/16 --permanent；
-firewall-cmd --zone=trusted --add-source=172.19.0.1/16 --permanent；
-firewall-cmd --reload
-```
-
-如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
-```bash
-# 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令
-systemctl stop firewalld
-systemctl restart docker
+service docker start
 msctl start
-```
-若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。
-
-## 6 执行性能测试时提示 `无法运行测试，请检查当前站点配置` 如何解决？
-
-执行性能测试过程中，node-controller 节点需要通过 `系统`-`系统设置`-`系统参数设置` 中配置的 `当前站点 URL` 下载相关文件。出现该问题时用户需要检查该配置参数，确保 node-controller 节点可以正常访问到该 URL。
-
-URL 地址一般为通过浏览器访问 MeterSphere 的地址，例如 `https://demo.metersphere.com`。
-
-## 7 站点配置的URL是什么？
-
-站点配置为部署MeterSphere Sever的地址，可以是域名或者是IP地址。
-
-## 8 执行性能测试时 JMeter 容器内存溢出如何解决?
-
-可以修改系统设置中所使用的测试资源池配置中的 HEAP 配置来调整 JMeter 容器的内存参数。
-
-!!! info "配置示例"
-    -Xms2g -Xmx2g -XX:MaxMetaspaceSize=256m
-
-## 9 如果性能测试jmx有依赖的jar包，需要怎么处理？
-
-在创建性能测试时，可以将依赖的 jar 包与 jmx 文件一起上传。
-
-## 10 在压测过程中，可以手动调整TPS吗？
-
-目前还不支持。
-
-## 11 执行性能测试时，提示“并发数超额”，该怎么解决？
-
-修改系统设置-测试资源池中的最大并发数后再次执行测试。
-
-## 12 MeterSphere 可以做全链路压测吗？
-
-目前我们可以做为其中的发压端。
-
-## 13 执行性能测试时，显示image not found如何处理？
-
-执行性能测试所需的 JMeter 容器需要事先存在于所选的测试资源池的节点上，请检查确保容器镜像存在后，更新测试资源池的镜像配置为正确的镜像标签。
-
-## 14 压测报告折现图形可以配置吗?
-
-在创建性能测试时的高级设置中可以修改报告数据的聚合时间。
-
-## 15 压测执行的时候报如下错如何解决？
-```
-Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.
+msctl status
 ```
 
-在部署 node-controller 的机器上，使用hostname命令获取主机名。
+## 2 如何修改应用的默认端口？
+
+修改 /opt/metersphere/.env 文件中的对应配置后，执行 `msctl reload` 命令重新加载应用。
+                                  
+> 配置文件说明请参考 [修改安装配置(可选)](/docs/v2.x/installation/online_installation/#32)。
+
+## 3 如何在 Kubernetes 中搭建 MeterSphere？
+
+可以参照我们提供的 [helm chart](https://github.com/metersphere/helm-chart)。
+详见在线文档/安装部署/Kubernetes中部署：https://metersphere.io/docs/v2.x/installation/kubernetes_installation/
+
+## 4 docker-compose 版本与配置文件不兼容，请重新安装最新版本的 docker-compose?
+
+把安装包里的docker-compose-xx 在 安装目录替换下。
+
+## 5 升级指定版本
+
+msctl upgrade 后边跟版本号，如 msctl upgrade v1.10.6-lts 。
+
+## 6 卸载命令
+
+msctl uninstall -v 
+
+## 7 重新安装命令
+
+进入到安装包，然后重新执行 ./install.sh 。
+
+## 8 卸载会导致数据清空么？
+
+卸载不会影响数据
+
+## 9 升级报 `/usr/local/bin/msctl: line 115 ....`
+
+cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相关处理。
+
+## 10 升级报 `Schema ` metersphere `contains a faied migration to version 86 !`
+
+到 github 源码上 https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration
+查看对应 version 的 flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后重新手动一条条执行下，全部执行成功后修改 metersphere_version 表对应版本的 success 值为1，然后 msctl reload 重启服务即可。
+
+## 11 如何备份数据库?
 
 ```
-[root@nginx metersphere-release-v1.8.0]# hostname
-nginx.novalocal
+docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
 ```
 
-将获取到的主机名 `nginx.novalocal` 配置到 /etc/hosts 文件中，配置完成效果如下。
-
-配置前
+## 12 mysqldump: `Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94`
 
 ```
-127.0.0.1       localhost
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-10.110.149.133 nginx111
+添加max_allowed_packet参数，如下。
+docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
 ```
 
-配置后
+## 13 关于"Log4j2远程代码执行漏洞"的修复
+
+由于 MeterSphere 使用到的 Kafka 及依赖的 JMeter 会受此漏洞的影响，在 Kafka 及 JMeter 发布解决该漏洞的版本前，用户可以手动在 docker compose 文件 (docker-compose-kafka.yml，docker-compose-node-controller.yml 及 docker-compose-server.yml) 里添加 `FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS: 'true'` 环境变量规避此问题。
+
+具体修改方式请参考该 [GitHub Commit](https://github.com/metersphere/installer/commit/36a60b09117d17735eeadc36af2dc9b5e67a54f7?diff=unified)，修改完成后执行 `msctl reload` 命令重建容器使环境变量生效。
+
+## 14 性能测试时并发量加大的时候报错Non HTTP response code: java.net.SocketTimeoutException
+
+修改单个接口的连接超时时间。
+
+## 15 数据库如何不区分大小写
+
+chmod 655 /opt/metersphere/conf/my.cnf 
+
+修改完成后，重启数据库。
+
+## 16 docker-compose 版本与配置文件不兼容，提示请重新安装最新版本的 docker-compose。
+
+可以把安装包里的docker-compose-xx 在安装目录替换一下。
+
+## 17 设置数据库忽略大小未生效，lower_case_table_names=1
 
 ```
-127.0.0.1       localhost
-127.0.0.1       nginx.novalocal
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-10.110.149.133 nginx111
+chmod /opt/metersphere/conf/my.cnf 
+然后重启数据库 docker restart mysql
 ```
 
-## 16 同一脚本执行多次，可以将多次的报告结果进行对比吗？
-
-在报告列表，同个任务下，已完成状态的报告可以进行对比。
-
-![! 报告对比](../img/faq/报告对比.png)
-
-
-## 17 执行压测时，多台发压机的情况下，可以设置变量不重复执行吗？
-
-可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。
-
-## 18 MeterSphere可以监控被测系统服务器指标吗？
-MeterSphere 使用 Prometheus 进行发压机以及被测系统服务器的监控，可以在性能测试-高级配置里面，添加被测系统服务器的 node_exporter 的地址。主服务会在安装 MeterSphere 系统时默认安装，而其他服务器，则需要单独安装 node_exporter，即可在执行性能测试的时候完成相关指标的监控。
-
-## 19 如何安装 node_exporter 插件
-1.可使用 docker pull prom/node-exporter 拉取 node_export 镜像，之后运行容器
+## 18 如何删除kafka中的临时数据，减低磁盘使用率
 ```
-docker pull prom/node-exporter # 拉取镜像
-docker run -d -p 9100:9100 -v "/proc:/host/proc:ro" -v "/sys:/host/sys:ro" -v "/:/rootfs:ro" --net="host" prom/node-exporter # 启动容器
-
-http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
-```
-2.可下载 node_exporter 离线包，解压之后可执行命令进行启动
-```
-wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
-tar -zxvf node_exporter-1.3.1.linux-amd64.tar.gz
-cd node_exporter-1.3.1-amd64
-./node_exporter  # 启动 (nohup ./node_exporter & 后台启动)
-
-http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+docker stop kafka；
+docker stop zookeeper；
+docker rm kafka；
+docker rm zookeeper；
+rm -rf /opt/metersphere/data/kafka/kafka；
+rm -rf /opt/metersphere/data/zookeeper/zookeeper；
+msctl reload；
 ```
 
-## 20 压力配置中，每个线程组是否能分别选择压力机？
-
-在压力配置里，提供了3种分配策略，分别为“自动分配、固定节点、自定义”，可以为每个线程组指定一个节点，或者按比例分配多个节点。
-
-## 21 性能测试并发量加大的时候报错 `Non HTTP response code: java.net.SocketTimeoutException`
-高级配置增加超时时间。
-
-![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)
-
-## 22 进行压测时，最大用户加到 50/100 就不能继续加吗？
-检查 系统设置-测试资源池-修改资源池里“最大并发数”
-
-## 23 性能测试相关文件在 jmeter容器中的哪个目录？
-在容器里的/test目录下
-
-## 24 执行性能测试报 jmeter镜像不存在
-1.先查看一下镜像文件，看是否存在这个镜像，docker images
-2.下载离线安装包解压后，将jmeter镜像导入到docker中；
-
-## 25 性能测试状态一直是starting且无数据
-到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
-和 info.log，看日志中是否有报错信息。<br>
-1.如果出现 org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms<br>
+## 19 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
 ```
-2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer$FutureFailure.<init>(KafkaProducer.java:1314)]
-2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.doSend(KafkaProducer.java:970)]
-2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.send(KafkaProducer.java:870)]
-2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.send(KafkaProducer.java:758)]
-2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.appender.mom.kafka.KafkaManager.send(KafkaManager.java:122)]
-2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.appender.mom.kafka.KafkaAppender.tryAppend(KafkaAppender.java:224)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.appender.mom.kafka.KafkaAppender.append(KafkaAppender.java:172)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:675)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:633)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:616)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:552)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.core.Logger.log(Logger.java:161)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2034)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1899)]
-2022-07-29 14:51:59,756 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.logging.slf4j.Log4jLogger.info(Log4jLogger.java:184)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.jmeter.JMeter.initializeProperties(JMeter.java:737)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.jmeter.JMeter.start(JMeter.java:379)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at java.base/java.lang.reflect.Method.invoke(Method.java:566)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.jmeter.NewDriver.main(NewDriver.java:259)]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][Caused by: org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms.]
-2022-07-29 14:51:59,757 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][]
-```
-证明 Kafka 里缺少 Topic 信息，可以手动到 Kafka 里创建对应的 Topic<br>
-```
-docker exec -it kafka /bin/bash
-cd /opt/bitnami/kafka/bin
-./kafka-topics.sh --create --bootstrap-server 127.0.0.1:9092 --replication-factor 1 --partitions 4 --topic JMETER_LOGS
+增大堆内存:
+set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=1024m;
 ```
 
-## 26 k8s资源池是否需要安装node-controller
-1.执行性能测试不需要<br>
-性能测试只需要在仓库中配置好 JMeter 镜像的地址，执行性能测试的时候会自动创建 JMeter POD 进行压测，执行完之后自动销毁。<br>
-2.执行接口测试需要<br>
-执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br>
-![! 接口测试-K8S配置](../img/faq/接口测试-K8S配置.png)
+## 20 jenkins插件验证通过后找不到工作空间
+检查地址，地址里多了/login路径会出现这个现象
 
-## 27 check node-controller status
-1.检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
-2.docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
-3.检查 jmeter 的镜像版本是不是对的，检查 jmeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传jmeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的jmeter镜像，重新加载项目msctl reload。<br>
+## 21 jar包存储位置
+/opt/metersphere/data/jar
 
-## 28 Error:没有足够的资源启动测试
-将【系统设置-测试资源池-JMeter HEAP】调大点
-![! 接口测试-K8S配置](../img/faq/Jmeter_Heap.png)
+## 22 升级或安装时后台报错:image not found : xxxxxx；
+需要在执行机上docker pull该镜像，或下载完整离线安装包；
 
-## 29 性能测试中怎么跨线程传递变量
-性能测试里动态设置变量可以用属性的方式，${__setProperty(var,value,)} 设置属性，${__property(var)} 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递
+## 23 前端执行性能测试或接口场景报错：请检查当前站点url配置；
+本地搭建的可能要把localhost改为具体IP；
+
+## 24 部署和升级时后台报错：error: ms-data-streaming is unhealthy； error:encountered errors while bringing up the project；
+msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 删除多余网桥，msctl reload重启；
+
+## 25 怎样监控被压测的机器
+在被测服安装node-exporter服务，然后在性能测试-高级配置里添加监控，填写被测服务器上node-exporter服务的ip和端口以及监控项
+
+## 26 忘记 MeterSphere密码
+```
+进入容器: docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
+使用数据库: use metersphere;
+更新密码为metersphere: update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
+```
+
+## 27 日志报缺少某些类的属性
+这种情况大概率是安装包不全，或者镜像版本不一致导致的，可以重新下载安装包来进行镜像替换后或者重新安装来解决；
+
+## 28 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
+```
+1.可以删除多余的镜像；
+2.可以删除历史log文件；
+3.如果没任务执行时可以删除/opt/metersphere/data/kafka/kafka和/opt/metersphere/data/zookeeper/zookeeper目录，并重启服务；
+4.可以删除多余安装包和解压包；
+```
+
+## 29 MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
+```
+chmod -R 755 /opt/metersphere/conf/prometheus
+docker stop ms-prometheus
+docker rm ms-prometheus
+msctl reload
+```
+
+## 30 遇到redis启动不起来，一直处于Restarting的问题
+```
+chmod -R 755 /opt/metersphere/conf/redis.conf
+docker stop redis
+docker rm redis
+msctl reload
+```
+
+## 31 Redis无法连接
+```
+1.查看防护墙是否开启，如果防火墙开启了，查看6379端口是否开放，查看.env文件中配置的Redis地址是否是对于的服务器的IP地址；
+2.可以开放6379端口或者关闭防火墙后重启服务；
+3.确认日志中连不上的ip是redis的ip(Mac: ifconfig |grep "inet"|grep -v 127.0.0.1; Linux: hostname -I)
+```
+
+## 32 安装MeterSphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
+```
+1. 打开daemon.json文件, vi /etc/docker/daemon.json
+2. 将"exec-opts": ["native.cgroupdriver=systemd"]删掉即可, 重启docker：service docker restart
+3. 重启服务，msctl reload
+```
+
+## 33 环境变量和场景变量，用同个变量名，变量优先级是怎样的
+环境变量 < 整体的场景变量 < 步骤内变量< 步骤原场景变量（如勾选）
+
+## 34 遇到MYSQL连接数太多如何处理？java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
+```
+大概率是自带的my.cnf没有生效，没生效的原因为my.cnf文件权限不对：
+show variables like "max_connections"
+chmod -R 655 /opt/metersphere/conf/my.cnf
+docker stop mysql
+docker rm mysql
+msctl reload
+```
+
+## 35 后台日志出现SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
+修改环境中的数据库配置文件。 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE
+
+## 36 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
+在数据库后面添加 ?createDatabaseIfNotExist=true&useSSL=false；
+
+## 37 msctl status显示服务正常，但是实际服务却访问不了怎么办？
+```
+清浏览器缓存，关闭浏览器重新访问
+IP访问：检查防火墙（firewalld,iptables等）
+域名访问：检查防火墙及NGINX等网络相关配置
+```
+
+## 38 安装报错/var/lib/docker/overlay2/xxxx  no such file or directory
+docker 的持久化数据目录被删除了，要重装docker，建议以后不要清理/var/lib/docker/overlay2目录了。
+
+## 39 修改session过期时间
+/opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒
+
+## 40 K8S 部署 metersphere 出现 413 request entity too large
+```
+#ngnix请求破除1m限制，
+kubectl edit ingress metersphere
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+annotations:
+meta.helm.sh/release-name: metersphere
+meta.helm.sh/release-namespace: default
+nginx.ingress.kubernetes.io/proxy-body-size: 50m
+```
+
+## 41 主机部署 metersphere 出现 413 request entity too large
+```
+1. 打开nginx服务的配置文件nginx.conf
+2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
+3. 保存后重启nginx，问题解决
+```
+
+## 42 安装或者升级至 1.20.0 版本 及之后，做接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
+```
+解决方案：用nginx做反向代理，需要在nginx加上websocket配置
+server{
+  ...
+  location / {
+    proxy_pass http://jumpserver_nginx;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    
+    #加上这段
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  
+  }
+}
+```
+
+## 43 登录进去后，点击任一菜单会立马跳到登录页面
+执行 msctl reload 就好了
+
+## 44 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
+1.是不是使用NG了，需要进行配置，可参考 https://metersphere.io/docs/v2.x/installation/offline_installation/ <br>
+2.是不是打开了代理，如 fidder、charles等工具<br>
+3.是不是使用 https://ip:8081 被拦截了,使用 http://ip:8081 就行<br>
+
+## 45 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
+![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
+
+1.清浏览器缓存，重新打开浏览器进行访问 <br>
+2.清除下 redis 数据<br>
+```
+docker exec -it redis sh
+redis-cli   
+auth Password123@redis
+flushall
+```
+
+## 46 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
+![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
+
+检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere
+
+## 47 k8s 中如何控制数据库的连接数
+1.可在名称为 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数 <br>
+2.可在名称为 values.yml 文件里，DATABASE 处新增如下两行参数
+```
+spring.datasource.hikari.maximum-pool-size=你想要的数值
+spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
+```
+
+## 48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
+![! metersphere导入格式](../img/faq/mysql_yml.jpg)
+
+## 49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+1.docker network prune 清除子网网段; <br>
+2.docker network create metersphere_ms-network ;<br>
+3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ; <br>
+4.重启服务器
+
+## 50 could not find properties[/opt/metersphere/conf/metersphere.properties]
+安装包放的目录位置不对，将 metersphere-offline-installer-v*.*-lts.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。
+
+## 51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
+在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
+![! metersphere导入格式](../img/faq/java_heap_space.jpg)
+
+## 52 ERROR Unable to write to Kafka in appender [Kafka]
+```
+docker stop kafka 
+docker stop zookeeper 
+docker rm kafka 
+docker rm zookeeper 
+rm -rf /opt/metersphere/data/kafka/kafka 
+rm -rf /opt/metersphere/data/zookeeper/zookeeper 
+msctl reload
+```
