@@ -805,7 +805,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/build_kafka/" class="md-nav__link">
-        部署kafka集群
+        部署Kafka集群
       </a>
     </li>
   
@@ -819,7 +819,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/build_data_streaming/" class="md-nav__link">
-        部署data-streaming集群
+        部署Data-Streaming集群
       </a>
     </li>
   
@@ -833,7 +833,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/build_node_controller/" class="md-nav__link">
-        部署node-controller集群
+        部署Node-Controller集群
       </a>
     </li>
   
@@ -2431,8 +2431,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-merterspherejmeter" class="md-nav__link">
-    4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
+  <a href="#4-meterspherejmeter" class="md-nav__link">
+    4 采用MeterSphere压测和手动使用JMeter命令行压测得到性能测试结果差距很大该如何优化？
   </a>
   
 </li>
@@ -2565,14 +2565,14 @@
       
         <li class="md-nav__item">
   <a href="#23-jmeter" class="md-nav__link">
-    23 性能测试相关文件在 jmeter容器中的哪个目录？
+    23 性能测试相关文件在 JMeter 容器中的哪个目录？
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#24-jmeter" class="md-nav__link">
-    24 执行性能测试报 jmeter镜像不存在
+    24 执行性能测试报 JMeter 镜像不存在
   </a>
   
 </li>
@@ -2924,8 +2924,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-merterspherejmeter" class="md-nav__link">
-    4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
+  <a href="#4-meterspherejmeter" class="md-nav__link">
+    4 采用MeterSphere压测和手动使用JMeter命令行压测得到性能测试结果差距很大该如何优化？
   </a>
   
 </li>
@@ -3058,14 +3058,14 @@
       
         <li class="md-nav__item">
   <a href="#23-jmeter" class="md-nav__link">
-    23 性能测试相关文件在 jmeter容器中的哪个目录？
+    23 性能测试相关文件在 JMeter 容器中的哪个目录？
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#24-jmeter" class="md-nav__link">
-    24 执行性能测试报 jmeter镜像不存在
+    24 执行性能测试报 JMeter 镜像不存在
   </a>
   
 </li>
@@ -3205,14 +3205,14 @@
 <p>节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。若提示校验不通过，请登录测试执行节点通过如下命令查看组件日志。</p>
 <div class="highlight"><pre><span></span><code>docker logs ms-node-controller
 </code></pre></div>
-<h2 id="4-merterspherejmeter">4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？<a class="headerlink" href="#4-merterspherejmeter" title="Permanent link">&para;</a></h2>
+<h2 id="4-meterspherejmeter">4 采用MeterSphere压测和手动使用JMeter命令行压测得到性能测试结果差距很大该如何优化？<a class="headerlink" href="#4-meterspherejmeter" title="Permanent link">&para;</a></h2>
 <p>1.社区版</p>
 <p>社区版默认采用后置监听的方式实时处理报告，即在 JMX 脚本文件中增加 Kafka BackendListener 配置，各个 NodeController 节点在本地启动 JMeter 容器执行该 JMX 脚本，过程中通过 Kafka BackendListener 将原始的 JTL 结果数据上传到指定的 Kafka Topic 中，DataStreaming 作为该 Kafka Topic 的消费者对各个节点的数据进行汇总，并计算性能测试报告中的各项指标。<br>
 因此在高并发时 Kafka 和 DataStreaming 很容易成为瓶颈，可以部署 Kafka 和 DataStreaming 集群以及增加 Partition 的数量来增加 Kafka 的吞吐量和处理能力。优化后正常可以达到&#8532;左右的差距。<br></p>
 <p>2.企业版</p>
 <p>针对社区版 Kafka BackendListener 方式，需要上传和处理原始的 JTL 结果，过程中需要处理大量的数据，企业版中做了相关优化，即在执行测试过程中不再使用 BackendListener，各个 NodeController 启动 JMeter 容器时附带启动一个 Java 程序，该 Java 程序负责实时处理本地 JMeter 产生的 JTL 结果数据，生成性能测试报告中的各项指标后上传到指定的 Kafka Topic 中，DataStreaming 作为该 Kafka Topic 的消费者对各个节点的数据进行汇总。<br>
 与优化前方案相比，Kafka 和 DataStreaming 需要处理的数据大大降低，整体上对于并发量较大情况下的结果处理能力大大提升。<br>
-如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 Jmeter 的真实值。</p>
+如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 JMeter 的真实值。</p>
 <h2 id="5-kafka">5 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？<a class="headerlink" href="#5-kafka" title="Permanent link">&para;</a></h2>
 <p>系统在执行性能测试之前，会先检查安装系统时配置的 Kafka 地址是否可用。当提示该信息时，表明 MeterSphere 无法正常连接到 Kafka，可以通过以下方式进行排查定位。</p>
 <ol>
@@ -3319,11 +3319,11 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 <p><div class="lightgallery"><a data-sub-html=" 性能测试-设置超时时间" href="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png"><img alt=" 性能测试-设置超时时间" src="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" /></a></div></p>
 <h2 id="22-50100">22 进行压测时，最大用户加到 50/100 就不能继续加吗？<a class="headerlink" href="#22-50100" title="Permanent link">&para;</a></h2>
 <p>可在 系统设置-测试资源池-修改资源池里“最大并发数”中配置</p>
-<h2 id="23-jmeter">23 性能测试相关文件在 jmeter容器中的哪个目录？<a class="headerlink" href="#23-jmeter" title="Permanent link">&para;</a></h2>
+<h2 id="23-jmeter">23 性能测试相关文件在 JMeter 容器中的哪个目录？<a class="headerlink" href="#23-jmeter" title="Permanent link">&para;</a></h2>
 <p>在容器里的/test目录下</p>
-<h2 id="24-jmeter">24 执行性能测试报 jmeter镜像不存在<a class="headerlink" href="#24-jmeter" title="Permanent link">&para;</a></h2>
+<h2 id="24-jmeter">24 执行性能测试报 JMeter 镜像不存在<a class="headerlink" href="#24-jmeter" title="Permanent link">&para;</a></h2>
 <p>1.先查看一下镜像文件，看是否存在这个镜像，docker images <br>
-2.下载离线安装包解压后，将jmeter镜像导入到docker中 <br>
+2.下载离线安装包解压后，将 JMeter 镜像导入到docker中 <br>
 3.可查看 /opt/metersphere/.env 中 MS_JMETER_IMAGE 地址，直接 docker pull 地址即可</p>
 <h2 id="25-starting">25 性能测试状态一直是starting且无数据<a class="headerlink" href="#25-starting" title="Permanent link">&para;</a></h2>
 <p>到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
@@ -3376,7 +3376,7 @@ cd /opt/bitnami/kafka/bin
 <h2 id="27-check-node-controller-status">27 check node-controller status<a class="headerlink" href="#27-check-node-controller-status" title="Permanent link">&para;</a></h2>
 <p>1.检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
 2.docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
-3.检查 jmeter 的镜像版本是不是对的，检查 jmeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传jmeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的jmeter镜像，重新加载项目msctl reload。<br></p>
+3.检查 JMeter 的镜像版本是不是对的，检查 JMeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传JMeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的JMeter镜像，重新加载项目msctl reload。<br></p>
 <h2 id="28-error">28 Error:没有足够的资源启动测试<a class="headerlink" href="#28-error" title="Permanent link">&para;</a></h2>
 <p>将【系统设置-测试资源池-JMeter HEAP】调大点
 <div class="lightgallery"><a data-sub-html=" 接口测试-K8S配置" href="../../img/faq/Jmeter_Heap.jpg"><img alt=" 接口测试-K8S配置" src="../../img/faq/Jmeter_Heap.jpg" /></a></div></p>

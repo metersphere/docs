@@ -805,7 +805,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/build_kafka/" class="md-nav__link">
-        部署kafka集群
+        部署Kafka集群
       </a>
     </li>
   
@@ -819,7 +819,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/build_data_streaming/" class="md-nav__link">
-        部署data-streaming集群
+        部署Data-Streaming集群
       </a>
     </li>
   
@@ -833,7 +833,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/build_node_controller/" class="md-nav__link">
-        部署node-controller集群
+        部署Node-Controller集群
       </a>
     </li>
   
@@ -2627,22 +2627,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#40-k8smeterspher-413-request-entity-too-large" class="md-nav__link">
-    40 K8S部署meterspher出现 413 request entity too large
+  <a href="#40-k8s-metersphere-413-request-entity-too-large" class="md-nav__link">
+    40 K8S 部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#41-meterspher-413-request-entity-too-large" class="md-nav__link">
-    41 主机部署meterspher出现 413 request entity too large
+  <a href="#41-metersphere-413-request-entity-too-large" class="md-nav__link">
+    41 主机部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-1200-f12websocket" class="md-nav__link">
-    42 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败
+  <a href="#42-1200-f12-websocket" class="md-nav__link">
+    42 安装或者升级至 1.20.0 版本 及之后，做接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
   </a>
   
 </li>
@@ -3337,22 +3337,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#40-k8smeterspher-413-request-entity-too-large" class="md-nav__link">
-    40 K8S部署meterspher出现 413 request entity too large
+  <a href="#40-k8s-metersphere-413-request-entity-too-large" class="md-nav__link">
+    40 K8S 部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#41-meterspher-413-request-entity-too-large" class="md-nav__link">
-    41 主机部署meterspher出现 413 request entity too large
+  <a href="#41-metersphere-413-request-entity-too-large" class="md-nav__link">
+    41 主机部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-1200-f12websocket" class="md-nav__link">
-    42 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败
+  <a href="#42-1200-f12-websocket" class="md-nav__link">
+    42 安装或者升级至 1.20.0 版本 及之后，做接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
   </a>
   
 </li>
@@ -3585,7 +3585,7 @@ msctl reload
 </code></pre></div>
 <h2 id="39-session">39 修改session过期时间<a class="headerlink" href="#39-session" title="Permanent link">&para;</a></h2>
 <p>/opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒</p>
-<h2 id="40-k8smeterspher-413-request-entity-too-large">40 K8S部署meterspher出现 413 request entity too large<a class="headerlink" href="#40-k8smeterspher-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
+<h2 id="40-k8s-metersphere-413-request-entity-too-large">40 K8S 部署 metersphere 出现 413 request entity too large<a class="headerlink" href="#40-k8s-metersphere-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>#ngnix请求破除1m限制，
 kubectl edit ingress metersphere
 apiVersion: extensions/v1beta1
@@ -3596,12 +3596,12 @@ meta.helm.sh/release-name: metersphere
 meta.helm.sh/release-namespace: default
 nginx.ingress.kubernetes.io/proxy-body-size: 50m
 </code></pre></div>
-<h2 id="41-meterspher-413-request-entity-too-large">41 主机部署meterspher出现 413 request entity too large<a class="headerlink" href="#41-meterspher-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
+<h2 id="41-metersphere-413-request-entity-too-large">41 主机部署 metersphere 出现 413 request entity too large<a class="headerlink" href="#41-metersphere-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>1. 打开nginx服务的配置文件nginx.conf
 2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
 3. 保存后重启nginx，问题解决
 </code></pre></div>
-<h2 id="42-1200-f12websocket">42 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败<a class="headerlink" href="#42-1200-f12websocket" title="Permanent link">&para;</a></h2>
+<h2 id="42-1200-f12-websocket">42 安装或者升级至 1.20.0 版本 及之后，做接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败<a class="headerlink" href="#42-1200-f12-websocket" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>解决方案：用nginx做反向代理，需要在nginx加上websocket配置
 server{
   ...
