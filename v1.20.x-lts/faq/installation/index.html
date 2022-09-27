@@ -2627,8 +2627,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#38-msipms" class="md-nav__link">
-    38 ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以
+  <a href="#varlibdockeroverlay2xxxx-no-such-file-or-directory" class="md-nav__link">
+    安装报错/var/lib/docker/overlay2/xxxx no such file or directory
   </a>
   
 </li>
@@ -2641,15 +2641,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#40-k8s-meterspher-413-request-entity-too-large" class="md-nav__link">
-    40 K8S 部署 meterspher 出现 413 request entity too large
+  <a href="#40-k8s-metersphere-413-request-entity-too-large" class="md-nav__link">
+    40 K8S 部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#41-meterspher-413-request-entity-too-large" class="md-nav__link">
-    41 主机部署 meterspher 出现 413 request entity too large
+  <a href="#41-metersphere-413-request-entity-too-large" class="md-nav__link">
+    41 主机部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
@@ -3323,8 +3323,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#38-msipms" class="md-nav__link">
-    38 ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以
+  <a href="#varlibdockeroverlay2xxxx-no-such-file-or-directory" class="md-nav__link">
+    安装报错/var/lib/docker/overlay2/xxxx no such file or directory
   </a>
   
 </li>
@@ -3337,15 +3337,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#40-k8s-meterspher-413-request-entity-too-large" class="md-nav__link">
-    40 K8S 部署 meterspher 出现 413 request entity too large
+  <a href="#40-k8s-metersphere-413-request-entity-too-large" class="md-nav__link">
+    40 K8S 部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#41-meterspher-413-request-entity-too-large" class="md-nav__link">
-    41 主机部署 meterspher 出现 413 request entity too large
+  <a href="#41-metersphere-413-request-entity-too-large" class="md-nav__link">
+    41 主机部署 metersphere 出现 413 request entity too large
   </a>
   
 </li>
@@ -3578,14 +3578,11 @@ msctl reload
 IP访问：检查防火墙（firewalld,iptables等）
 域名访问：检查防火墙及NGINX等网络相关配置
 </code></pre></div>
-<h2 id="38-msipms">38 ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以<a class="headerlink" href="#38-msipms" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>service network restart
-service docker restart
-msctl reload
-</code></pre></div>
+<h2 id="varlibdockeroverlay2xxxx-no-such-file-or-directory">安装报错/var/lib/docker/overlay2/xxxx no such file or directory<a class="headerlink" href="#varlibdockeroverlay2xxxx-no-such-file-or-directory" title="Permanent link">&para;</a></h2>
+<p>docker 的持久化数据目录被删除了，要重装docker，建议以后不要清理/var/lib/docker/overlay2目录了。</p>
 <h2 id="39-session">39 修改session过期时间<a class="headerlink" href="#39-session" title="Permanent link">&para;</a></h2>
-<p>/opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒</p>
-<h2 id="40-k8s-meterspher-413-request-entity-too-large">40 K8S 部署 meterspher 出现 413 request entity too large<a class="headerlink" href="#40-k8s-meterspher-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
+<p>/opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒</p>
+<h2 id="40-k8s-metersphere-413-request-entity-too-large">40 K8S 部署 metersphere 出现 413 request entity too large<a class="headerlink" href="#40-k8s-metersphere-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>#ngnix请求破除1m限制，
 kubectl edit ingress metersphere
 apiVersion: extensions/v1beta1
@@ -3596,7 +3593,7 @@ meta.helm.sh/release-name: metersphere
 meta.helm.sh/release-namespace: default
 nginx.ingress.kubernetes.io/proxy-body-size: 50m
 </code></pre></div>
-<h2 id="41-meterspher-413-request-entity-too-large">41 主机部署 meterspher 出现 413 request entity too large<a class="headerlink" href="#41-meterspher-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
+<h2 id="41-metersphere-413-request-entity-too-large">41 主机部署 metersphere 出现 413 request entity too large<a class="headerlink" href="#41-metersphere-413-request-entity-too-large" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>1. 打开nginx服务的配置文件nginx.conf
 2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
 3. 保存后重启nginx，问题解决
