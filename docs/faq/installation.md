@@ -291,7 +291,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 4.重启服务器
 
 ## 50 could not find properties[/opt/metersphere/conf/metersphere.properties]
-安装包放的目录位置不对，将 metersphere-offcial-XX.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。
+安装包放的目录位置不对，将 metersphere-offline-installer-v*.*-lts.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。
 
 ## 51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
 在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
