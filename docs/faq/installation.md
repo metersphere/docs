@@ -197,12 +197,8 @@ IP访问：检查防火墙（firewalld,iptables等）
 域名访问：检查防火墙及NGINX等网络相关配置
 ```
 
-## 38 MeterSphere 后台服务都正常，却无法访问环境的域名或者ip
-```
-service network restart
-service docker restart
-msctl reload
-```
+## 38 安装报错/var/lib/docker/overlay2/xxxx  no such file or directory
+docker 的持久化数据目录被删除了，要重装docker，建议以后不要清理/var/lib/docker/overlay2目录了。
 
 ## 39 修改session过期时间
 /opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒
