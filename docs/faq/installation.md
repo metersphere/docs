@@ -121,9 +121,9 @@ set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=10
 msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 删除多余网桥，msctl reload重启；
 
 ## 25 怎样监控被压测的机器
-在被测服安装node-exporter服务，然后在性能测试中高级配置里添加监控，填写被测服node-exporter服务的ip和端口以及监控项
+在被测服安装node-exporter服务，然后在性能测试-高级配置里添加监控，填写被测服务器上node-exporter服务的ip和端口以及监控项
 
-## 26 忘记 Metersphere密码
+## 26 忘记 MeterSphere密码
 ```
 进入容器: docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
 使用数据库: use metersphere;
@@ -164,7 +164,7 @@ msctl reload
 3.确认日志中连不上的ip是redis的ip(Mac: ifconfig |grep "inet"|grep -v 127.0.0.1; Linux: hostname -I)
 ```
 
-## 32 安装metersphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
+## 32 安装MeterSphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
 ```
 1. 打开daemon.json文件, vi /etc/docker/daemon.json
 2. 将"exec-opts": ["native.cgroupdriver=systemd"]删掉即可, 重启docker：service docker restart
@@ -197,7 +197,7 @@ IP访问：检查防火墙（firewalld,iptables等）
 域名访问：检查防火墙及NGINX等网络相关配置
 ```
 
-## 38 ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以
+## 38 MeterSphere 后台服务都正常，却无法访问环境的域名或者ip
 ```
 service network restart
 service docker restart
