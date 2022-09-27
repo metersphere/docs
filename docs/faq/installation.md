@@ -205,7 +205,7 @@ msctl reload
 ```
 
 ## 39 修改session过期时间
-/opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒
+/opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒
 
 ## 40 K8S 部署 metersphere 出现 413 request entity too large
 ```
