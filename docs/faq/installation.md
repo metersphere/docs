@@ -207,7 +207,7 @@ msctl reload
 ## 39 修改session过期时间
 /opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒
 
-## 40 K8S部署meterspher出现 413 request entity too large
+## 40 K8S 部署 metersphere 出现 413 request entity too large
 ```
 #ngnix请求破除1m限制，
 kubectl edit ingress metersphere
@@ -220,14 +220,14 @@ meta.helm.sh/release-namespace: default
 nginx.ingress.kubernetes.io/proxy-body-size: 50m
 ```
 
-## 41 主机部署meterspher出现 413 request entity too large
+## 41 主机部署 metersphere 出现 413 request entity too large
 ```
 1. 打开nginx服务的配置文件nginx.conf
 2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
 3. 保存后重启nginx，问题解决
 ```
 
-## 42 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败
+## 42 安装或者升级至 1.20.0 版本 及之后，做接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
 ```
 解决方案：用nginx做反向代理，需要在nginx加上websocket配置
 server{

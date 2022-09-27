@@ -66,7 +66,7 @@ msctl status
 docker logs ms-node-controller
 ```
 
-## 4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
+## 4 采用MeterSphere压测和手动使用JMeter命令行压测得到性能测试结果差距很大该如何优化？
 
 1.社区版
 
@@ -77,7 +77,7 @@ docker logs ms-node-controller
 
 针对社区版 Kafka BackendListener 方式，需要上传和处理原始的 JTL 结果，过程中需要处理大量的数据，企业版中做了相关优化，即在执行测试过程中不再使用 BackendListener，各个 NodeController 启动 JMeter 容器时附带启动一个 Java 程序，该 Java 程序负责实时处理本地 JMeter 产生的 JTL 结果数据，生成性能测试报告中的各项指标后上传到指定的 Kafka Topic 中，DataStreaming 作为该 Kafka Topic 的消费者对各个节点的数据进行汇总。<br>
 与优化前方案相比，Kafka 和 DataStreaming 需要处理的数据大大降低，整体上对于并发量较大情况下的结果处理能力大大提升。<br>
-如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 Jmeter 的真实值。
+如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 JMeter 的真实值。
 
 ## 5 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
 
@@ -236,12 +236,12 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 ## 22 进行压测时，最大用户加到 50/100 就不能继续加吗？
 可在 系统设置-测试资源池-修改资源池里“最大并发数”中配置
 
-## 23 性能测试相关文件在 jmeter容器中的哪个目录？
+## 23 性能测试相关文件在 JMeter 容器中的哪个目录？
 在容器里的/test目录下
 
-## 24 执行性能测试报 jmeter镜像不存在
+## 24 执行性能测试报 JMeter 镜像不存在
 1.先查看一下镜像文件，看是否存在这个镜像，docker images <br>
-2.下载离线安装包解压后，将jmeter镜像导入到docker中 <br>
+2.下载离线安装包解压后，将 JMeter 镜像导入到docker中 <br>
 3.可查看 /opt/metersphere/.env 中 MS_JMETER_IMAGE 地址，直接 docker pull 地址即可
 
 ## 25 性能测试状态一直是starting且无数据
@@ -300,7 +300,7 @@ cd /opt/bitnami/kafka/bin
 ## 27 check node-controller status
 1.检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
 2.docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
-3.检查 jmeter 的镜像版本是不是对的，检查 jmeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传jmeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的jmeter镜像，重新加载项目msctl reload。<br>
+3.检查 JMeter 的镜像版本是不是对的，检查 JMeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传JMeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的JMeter镜像，重新加载项目msctl reload。<br>
 
 ## 28 Error:没有足够的资源启动测试
 将【系统设置-测试资源池-JMeter HEAP】调大点

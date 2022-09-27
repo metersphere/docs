@@ -44,7 +44,7 @@ MeterSphere 提供的 Mock 功能可以根据用户输入的请求参数、返�
 其他 TCP MOCK设置请参考【HTTP MOCK设置】
 
 ## 4 Mock 后置脚本
-注意: Mock 后置脚本不可打印，不能使用 Jmeter 内置函数。<br>
+注意: Mock 后置脚本不可打印，不能使用 JMeter 内置函数。<br>
 设置请求体，选择from-data格式，添加判断数字范围，如下图：
 ![](../img/tutorial/use_mock/mock_1.png)
 

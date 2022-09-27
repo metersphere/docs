@@ -221,8 +221,8 @@ prev.setResponseData(outBuffer.toString());
 ## 34 控制台输出乱码
 log.info(u"看看乱码了吗");
 
-## 35 接口测试是否可以导出到jmeter
-可以勾选对应的场景或接口，导出为JMX格式，然后再用jmeter打开JMX文件
+## 35 接口测试是否可以导出到 JMeter
+可以勾选对应的场景或接口，导出为 JMX 格式，然后再用 JMeter 打开 JMX 文件
 
 ## 36 场景中如何使用csv文件参数；
 在场景变量中添加CSV文件；在请求中通过${CSV的文件列名}引用
@@ -252,7 +252,7 @@ log.info(u"看看乱码了吗");
 支持三种： MeterSphere格式、JMeter格式、ESB格式
 
 - MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br>
-- Jmeter 格式：支持 JMeter5.2-5.4版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
+- JMeter 格式：支持 JMeter5.2-5.4版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
 - ESB 格式：支持 ESB 模版的 xlsx 文件（支持模版下载/上传）<br>
 
 ![! metersphere导入格式](../img/faq/TCP导入格式.png)
@@ -311,8 +311,8 @@ log.info(u"看看乱码了吗");
 ## 50 后置脚本中获取响应结果
 prev.getResponseDataAsString()
 
-## 51 接口测试中导入 jmeter脚本后，点击执行，查看请求内容啥也没有
-jmx 脚本用 jmeter 打开，看是不是被禁用了,手动开启后导入即可
+## 51 接口测试中导入 JMeter 脚本后，点击执行，查看请求内容啥也没有
+jmx 脚本用 JMeter 打开，看是不是被禁用了,手动开启后导入即可
 
 ## 52 ERROR StandardJMeterEngine JDBC data source already defined for:测试环境数据库
 查看数据库-数据源，修改最大连接数
