@@ -2821,13 +2821,13 @@
 
 <p>实际项目中，文件/图片上传的场景较多。本文以百度上传图片进行搜索为例。</p>
 <p>场景: 在百度搜索框中，上传图片进行搜索<br>
-<img alt="" src="../../img/tutorial/ui_upload/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2.png" /></p>
 <p>场景步骤: 打开网页，访问 <a href="https://www.baidu.com">https://www.baidu.com</a> 网站 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E8%AE%BF%E9%97%AE%E7%99%BE%E5%BA%A6.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E8%AE%BF%E9%97%AE%E7%99%BE%E5%BA%A6.png" /></p>
 <p>设置窗口大小，将浏览器全屏展示 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E5%85%A8%E5%B1%8F.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E5%85%A8%E5%B1%8F.png" /></p>
 <p>鼠标点击上传图片的按钮，正确填写上传图片按钮的定位，在后置操作中设置等待时间 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E7%82%B9%E5%87%BB%E4%B8%8A%E4%BC%A0.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E7%82%B9%E5%87%BB%E4%B8%8A%E4%BC%A0.png" /></p>
 <p>上传图片，在 html 中上传图片定位到是个 input 标签，可使用输入框，输入图片路径进行上传。对于本地调试和后端调式而言，图片路径是不一样的。具体如下：<br></p>
 <h2 id="1">1 本地调试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="11">1.1 前提<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
@@ -2835,21 +2835,21 @@
 下载浏览器驱动-运行驱动-将本地运行 Selenium-server 配置到 MeterSphere 平台，详情参考: <a href="https://metersphere.io/docs/v1.20.x-lts/tutorial/ui_testing/#2-metersphere">https://metersphere.io/docs/v1.20.x-lts/tutorial/ui_testing/#2-metersphere</a></p>
 <h3 id="12">1.2 上传图片<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <p>输入框中，可以直接写入图片的本地路径，进行图片上传，并且在后置操作中设置等待时间 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E8%B7%AF%E5%BE%84.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E8%B7%AF%E5%BE%84.png" /></p>
 <p>不勾选性能模式，点击保存按钮，点击【本地调试】，即可看到本地浏览器上传图片的操作 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png" /></p>
 <h2 id="2">2 后端调试<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>将图片上传到 local-selenium-grid 容器里，放到某一路径下 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E5%90%8E%E5%8F%B0%E8%B0%83%E8%AF%95.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E5%90%8E%E5%8F%B0%E8%B0%83%E8%AF%95.png" /></p>
 <p>可以直接写容器内图片的路径，不勾选性能模式，即可看到后端调试时的截图情况。<br>
-<img alt="" src="../../img/tutorial/ui_upload/%E5%90%8E%E7%AB%AF%E8%B0%83%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E5%90%8E%E7%AB%AF%E8%B0%83%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png" /></p>
 <p>不勾选性能模式，点击保存按钮，点击【后端调试】，可看到该场景步骤正常执行 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E5%90%8E%E7%AB%AF%E8%B0%83%E8%AF%95%E6%88%90%E5%8A%9F.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E5%90%8E%E7%AB%AF%E8%B0%83%E8%AF%95%E6%88%90%E5%8A%9F.png" /></p>
 <h2 id="3">3 生成报告<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>在 UI 测试场景中，不勾选性能模式，点击【生成报告】，即可看到该场景的报告，且每一步都带有截图 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E7%94%9F%E6%88%90%E6%8A%A5%E5%91%8A.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E7%94%9F%E6%88%90%E6%8A%A5%E5%91%8A.png" /></p>
 <p>也可以进入【测试报告】页面，找到该场景的报告进行查看，可看到该场景的报告详情 <br>
-<img alt="" src="../../img/tutorial/ui_upload/%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" width:_1200px_="width:&quot;1200px&quot;" /></p>
+<img alt="" src="../../img/tutorial/ui_upload/%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" /></p>
 
 
   
