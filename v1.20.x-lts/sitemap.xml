@@ -236,6 +236,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/v1.20.x-lts/tutorial/ui_upload/</loc>
+         <lastmod>2022-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/v1.20.x-lts/tutorial/use_ddt/</loc>
          <lastmod>2022-09-29</lastmod>
          <changefreq>daily</changefreq>
