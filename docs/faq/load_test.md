@@ -66,7 +66,7 @@ msctl status
 docker logs ms-node-controller
 ```
 
-## 4 采用MerterSphere压测和手动使用Jmeter命令行压测得到性能测试结果差距很大该如何优化？
+## 4 采用MeterSphere压测和手动使用JMeter命令行压测得到性能测试结果差距很大该如何优化？
 
 1.社区版
 
@@ -77,7 +77,7 @@ docker logs ms-node-controller
 
 针对社区版 Kafka BackendListener 方式，需要上传和处理原始的 JTL 结果，过程中需要处理大量的数据，企业版中做了相关优化，即在执行测试过程中不再使用 BackendListener，各个 NodeController 启动 JMeter 容器时附带启动一个 Java 程序，该 Java 程序负责实时处理本地 JMeter 产生的 JTL 结果数据，生成性能测试报告中的各项指标后上传到指定的 Kafka Topic 中，DataStreaming 作为该 Kafka Topic 的消费者对各个节点的数据进行汇总。<br>
 与优化前方案相比，Kafka 和 DataStreaming 需要处理的数据大大降低，整体上对于并发量较大情况下的结果处理能力大大提升。<br>
-如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 Jmeter 的真实值。
+如果依然差距很大的话，仍然可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 JMeter 的真实值。
 
 ## 5 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
 
@@ -102,6 +102,15 @@ docker logs kafka
 [root@meter-prototype ~]# docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}
 kafka (172.23.0.5:19092) open
 ```
+若 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
+```
+执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
+
+firewall-cmd --zone=trusted --add-source=172.18.0.1/16 --permanent；
+firewall-cmd --zone=trusted --add-source=172.19.0.1/16 --permanent；
+firewall-cmd --reload
+```
+
 如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
 ```bash
 # 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令
@@ -193,13 +202,26 @@ nginx.novalocal
 
 可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。
 
-## 18 性能测试监控，需要安装什么插件吗？
+## 18 MeterSphere可以监控被测系统服务器指标吗？
+MeterSphere 使用 Prometheus 进行发压机以及被测系统服务器的监控，可以在性能测试-高级配置里面，添加被测系统服务器的 node_exporter 的地址。主服务会在安装 MeterSphere 系统时默认安装，而其他服务器，则需要单独安装 node_exporter，即可在执行性能测试的时候完成相关指标的监控。
 
-被监控服务器需要安装node export组件，相当于收集监控的一个客户端。主服务会在安装MeterSphere系统时默认安装，如果添加其他服务器，则需要单独安装。
+## 19 如何安装 node_exporter 插件
+1.可使用 docker pull prom/node-exporter 拉取 node_export 镜像，之后运行容器
+```
+docker pull prom/node-exporter # 拉取镜像
+docker run -d -p 9100:9100 -v "/proc:/host/proc:ro" -v "/sys:/host/sys:ro" -v "/:/rootfs:ro" --net="host" prom/node-exporter # 启动容器
 
-## 19 MeterSphere可以监控被测系统服务器指标吗？
+http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+```
+2.可下载 node_exporter 离线包，解压之后可执行命令进行启动
+```
+wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+tar -zxvf node_exporter-1.3.1.linux-amd64.tar.gz
+cd node_exporter-1.3.1-amd64
+./node_exporter  # 启动 (nohup ./node_exporter & 后台启动)
 
-MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控。可以在性能测试模块的高级测试里面，添加被测系统服务器，同时在该服务器安装node_exporter插件，即可在执行性能测试的时候完成相关指标的监控。
+http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
+```
 
 ## 20 压力配置中，每个线程组是否能分别选择压力机？
 
@@ -212,14 +234,15 @@ MeterSphere使用Prometheus进行发压机以及被测系统服务器的监控�
 ![! 性能测试-设置超时时间](../img/faq/性能测试-设置超时时间.png)
 
 ## 22 进行压测时，最大用户加到 50/100 就不能继续加吗？
-检查 系统设置-测试资源池-修改资源池里“最大并发数”
+可在 系统设置-测试资源池-修改资源池里“最大并发数”中配置
 
-## 23 性能测试相关文件在 jmeter容器中的哪个目录？
+## 23 性能测试相关文件在 JMeter 容器中的哪个目录？
 在容器里的/test目录下
 
-## 24 执行性能测试报 jmeter镜像不存在
-1.先查看一下镜像文件，看是否存在这个镜像，docker images
-2.下载离线安装包解压后，将jmeter镜像导入到docker中；
+## 24 执行性能测试报 JMeter 镜像不存在
+1.先查看一下镜像文件，看是否存在这个镜像，docker images <br>
+2.下载离线安装包解压后，将 JMeter 镜像导入到docker中 <br>
+3.可查看 /opt/metersphere/.env 中 MS_JMETER_IMAGE 地址，直接 docker pull 地址即可
 
 ## 25 性能测试状态一直是starting且无数据
 到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
@@ -277,7 +300,7 @@ cd /opt/bitnami/kafka/bin
 ## 27 check node-controller status
 1.检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
 2.docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
-3.检查 jmeter 的镜像版本是不是对的，检查 jmeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传jmeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的jmeter镜像，重新加载项目msctl reload。<br>
+3.检查 JMeter 的镜像版本是不是对的，检查 JMeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传JMeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的JMeter镜像，重新加载项目msctl reload。<br>
 
 ## 28 Error:没有足够的资源启动测试
 将【系统设置-测试资源池-JMeter HEAP】调大点

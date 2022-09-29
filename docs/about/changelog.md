@@ -12,6 +12,37 @@ MeterSphere 版本号命名规则为：v大版本.功能版本.Bug修复版本
 
 MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。
 
+## v2.2.0
+
+------
+
+2022年9月22日
+
+!!! info "新增功能"
+-  接口测试支持自定义模板
+-  UI测试支持自定义组合指令(X-Pack 增强包内)
+-  文件管理支持对接第三方仓库(X-Pack增强包内)
+
+!!! info "功能优化"
+-  测试跟踪: 测试计划/用例评审页用例标题展示优化；
+-  接口测试: 接口CASE高级搜索增加路径搜索；
+-  接口测试: TCP协议支持一键将xml文本格式转换成表格格式；
+-  UI测试: 列表批量执行与测试计划执行时增加失败重试机制(X-Pack)；
+-  UI测试: 测试报告支持一键分享(X-Pack)；
+-  UI测试: UI场景支持查看被引用列表(X-Pack)；
+-  UI测试: 支持在配置文件中配置浏览器的默认分辨率(X-Pack)；
+-  系统设置: 消息通知模板新增测试计划报告相关字段(X-Pack)；
+-  通用功能: 版本筛选支持手动录入版本号(X-Pack)
+
+!!! info "问题修复"
+-  测试跟踪: 修复测试计划报告点击名称链接会直接跳转到接口用例或者场景用例详情页的问题(GitHub #17993)；
+-  测试跟踪: 修复测试跟踪首页未评审“数量”、覆盖“数量”与跳转后列表用例数量不一致的问题(GitHub #17910)；
+-  测试跟踪: 修复项目自定义ID开启导入显示的是系统默认ID的问题(GitHub #17928)；
+-  接口测试: 修复环境变量优先级大于场景变量的问题(GitHub #17873)；
+-  接口测试: 修复接口自动化编辑场景保存后，列表中“通过率”未更新的问题(GitHub #17784)；
+-  UI测试: 修复UI自动化场景里复制导入了已有场景，导致场景以及子场景调试模式和测试计划里不会被执行的问题(GitHub #17649)；
+-  UI测试: 修复测试计划中定时执行多个UI自动化场景，存在已执行失败的场景被标注为“未执行”的问题(GitHub #17649)；
+
 ## v2.1.0
 
 ------
@@ -175,7 +206,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 !!! info "问题修复"
 -  fix(UI自动化): UI 列表页增加创建人的筛选
 -  fix(UI自动化): cloud环境有时候刷不出来执行时间较长的报告
--  fix(接口测试): 修复jmeter函数无法运行的缺陷
+-  fix(接口测试): 修复JMeter函数无法运行的缺陷
 -  fix(接口测试): 修复swagger定时同步覆盖模式不生效的缺陷
 -  fix(接口测试): http协议检查接口内容做非空判断
 -  fix(接口测试): mock测试查询期望的时候过滤掉非当前版本的接口数据
@@ -1126,7 +1157,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 -  接口测试: mock服务选择相应为xml格式时，version="1.0" encoding="UTF-8"无法修改或删除 #11597
 -  接口测试: 后置脚本批量执行多条SQL, 报错 #11564
 -  接口测试: 1.16.6升级到1.18.3，原有的场景中的query参数没有拼接到url上 #11687
--  接口测试: jmeter里设置的断言规则和数量导入到metersphere后不正确 #11700
+-  接口测试: JMeter里设置的断言规则和数量导入到metersphere后不正确 #11700
 -  接口测试: 接口责任人相关SQL错误 #11607
 -  接口测试: 接口测试执行无法正常结束 #11197
 -  接口测试: 在循环控制器里面嵌套另一个循环控制器，里面这个循环控制器的超时时间，每次外面的循环再次循环时，不是重置，而是累加的，保存场景也报错 #10628
@@ -1196,7 +1227,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 
 !!! info "问题修复"
 -  fix(接口测试): 导入jmx接口文件请求头导入为空
--  fix(接口测试): 修复mock请求体可以设置jmeter内置函数的问题
+-  fix(接口测试): 修复mock请求体可以设置JMeter内置函数的问题
 -  fix(接口测试): 批量执行case是集合报告名称增加必填标识
 -  fix(接口测试): 修复接口case中选择批量串行并行生成集合报告时未填写报告名称生成报告为独立报告的缺陷
 -  fix(接口测试): 修复批量执行case部分case未选择运行环境批量执行未提醒选择环境的缺陷
@@ -1342,7 +1373,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 !!! info "问题修复"
 -  fix(测试跟踪): jira模板没有同步人员多选框字段 (78dc844)
 -  fix(测试跟踪): 首页柱状图宽度不一致 (3fd0fa5)
--  fix(接口定义): 导入Jmeter格式接口失败 (305c8d1)
+-  fix(接口定义): 导入JMeter格式接口失败 (305c8d1)
 -  fix(接口测试): 修复导出jmx文件禁用状态未生效问题 (5df4e68)
 -  fix(接口测试): 修复场景引用api的数量不对的缺陷 (5cff241)
 -  fix(接口测试): 修复接口自动化删除csv文件时无法显示文件名的缺陷 (ba2b27f)
@@ -1712,7 +1743,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 -  fix(Mock期望): mock期望表字段增加语句
 -  fix(Mock测试): #1007717 修复旧版本Mock数据不展示、不匹配的问题
 -  fix(升级SQL): 去掉升级SQL中的冲突内容
--  fix(场景自动化) 修复导入jmeter提取参数解析问题
+-  fix(场景自动化) 修复导入JMeter提取参数解析问题
 -  fix(场景自动化) 修复生成依赖关系问题
 -  fix(场景自动化) 场景步骤深度复制
 -  fix(性能测试):【性能测试】执行提示参数不能为空，但是都填写了
@@ -1999,7 +2030,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 -  fix(接口测试首页): #1006467 接口测试-接口用例数量统计-已覆盖接口数 统计错误，已删除的接口用例，应该过滤掉
 -  fix(接口用例): 接口用例创建性能测试失败、json-schema转换报错
 -  fix(接口自动化) 修复添加认证报错问题
--  fix(接口自动化) 导出接口场景（jmeter格式）导出场景数量不正确
+-  fix(接口自动化) 导出接口场景（JMeter格式）导出场景数量不正确
 -  fix(接口自动化): #1006462 使用两层事务控制器，内层事务控制器下复制或引用的场景在报告中查看不了具体内容
 -  fix(查询历史报表报错的问题): 查询历史报表报错的问题，还原log配置文件设置
 -  fix(测试用例统计): 测试用例改成功能用例
@@ -2119,7 +2150,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 -  fix(性能测试): 监控节点缓存的问题
 -  fix(接口定义): 接口用例名称过长时优化；swagger定时同步，添加任务通知优化；error状态鼠标悬停后提示气泡弹窗显示优化
 -  fix(接口定义): 全局请求头与局部请求头去重
--  fix(接口定义): 上传jmeter文件断言丢失
+-  fix(接口定义): 上传JMeter文件断言丢失
 -  fix(接口自动化): 场景列表增加停止按钮
 -  fix(测试用例): 修复表格渲染时控制台报错
 -  fix(测试用例): 自定义字段无法批量编辑
@@ -2528,7 +2559,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - fix(接口测试首页): 修复部分浏览器中接口测试首页的通过率和借口覆盖率出现滚动条的问题
 - fix(接口自动化): 【github#3846】接口自动化导入JMX文件时，以脚本名命名场景名
 - fix(接口自动化): 修复场景导入，切换条件数据查不到问题
-- fix(接口自动化): 修复导入jmeter文件处理x-www-form-urlencoded 类型问题
+- fix(接口自动化): 修复导入JMeter文件处理x-www-form-urlencoded 类型问题
 - fix(接口自动化): 修复次数循环嵌套执行问题
 - fix(接口自动化): 定时任务调用节点执行时 错误修复。
 - fix(接口自动化): 导入JMX中的Beanshell脚本有多余换行符,PR来自@xiongxiaoqing614 #2420
@@ -2668,7 +2699,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 
 !!! info "问题修复"
 
--  fix(性能测试): 修复分布式压测场景 各node节点间的jmeter日志出现串联的情况
+-  fix(性能测试): 修复分布式压测场景 各node节点间的JMeter日志出现串联的情况
 -  fix(性能测试): 修复删除报告失败没有修改测试状态的问题
 -  fix(性能测试): 修复性能测试复制时名称长度超过限制的bug
 -  fix(接口定义): API列表复制功能隐藏的问题
@@ -3020,7 +3051,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - refactor(性能测试): 资源池校验修改，停止容器错误处理
 - refactor(接口定义): 默认模块校验公共方法提取
 - refactor(接口自动化，接口定义): 删除接口自动化场景调试产生的记录详情，保留最后一条
-- refactor: jmeter 版本升级
+- refactor: JMeter 版本升级
 - refactor: jsonpath推荐关闭按钮优化
 - refactor: 修改swagger-parse版本
 - refactor: 升级 openapi swagger 版本
@@ -3209,7 +3240,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - fix: 修改id长度
 - fix: 修改定时任务表key字段长度
 - fix: 另存为新用例报id重复
-- fix: 接口测试、接口自动化转性能测试时自带函数会带来jmeter报错
+- fix: 接口测试、接口自动化转性能测试时自带函数会带来JMeter报错
 - fix: 测试用例模块树拖拽报错
 
 ## v1.7.2
@@ -3666,7 +3697,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - 通用功能: 认证相关请求返回4xx响应码
 - 通用功能: 重构消息通知后台实现
 - 样式修改: 调整顶部导航菜单高度
-- 其他: 去掉 jmeter 镜像相关内容移到单独仓库 https://github.com/metersphere/jmeter-image
+- 其他: 去掉 JMeter 镜像相关内容移到单独仓库 https://github.com/metersphere/jmeter-image
 - 其他：提供 [Helm Chart](https://github.com/metersphere/helm-chart)
 
 !!! info "问题修复"
@@ -4023,14 +4054,14 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - refactor(性能测试): 修改Kafka acks配置
 - refactor(性能测试): 响应时间默认为空
 - refactor(性能测试): 增加一个response_timeout，避免目标网站不反回结果导致测试不能结束
-- refactor(性能测试): 性能测试jmeter镜像添加数据库连接的jar
+- refactor(性能测试): 性能测试JMeter镜像添加数据库连接的jar
 - refactor(性能测试): 页面可配置响应超时时间
 - refactor(接口测试): 支持提取接口到变量
 - refactor(测试计划): 删除测试计划时同时删除相关联数据
 - refactor(测试跟踪): 功能测试支持选择自动方式
 - refactor(测试跟踪): 评审页面的样式
 - refactor(用例评审): 测试评审测试用例列表去掉缺陷列
-- refactor: 修改jmeter镜像
+- refactor: 修改JMeter镜像
 - refactor: 修改session默认的timeout时间为12小时
 - refactor: 修改性能测试上传文件数量的限制判断
 - refactor: 处理创建容器的返回结果
@@ -4090,7 +4121,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - refactor: 优化代码
 - refactor: 优化代码
 - refactor: 保存jira认证信息时补全地址
-- refactor: 修改 jmeter heap配置，配置文件在node-controller中读取
+- refactor: 修改 JMeter heap配置，配置文件在node-controller中读取
 - refactor: 对话框不点击外部自动关闭
 - refactor: 调整js代码
 - refactor: 页面样式修改
@@ -4164,13 +4195,13 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - refactor: 删掉不用的controller
 - refactor: 单接口调试处理mock数据
 - refactor: 取消请求参数长度限制
-- refactor: 启动Jmeter容器的时候设置HEAP
+- refactor: 启动JMeter容器的时候设置HEAP
 - refactor: 场景中有配置环境，创建请求默认引用环境
 - refactor: 复制测试可填写测试名称
-- refactor: 打包的时候保留jmeter的jar
+- refactor: 打包的时候保留JMeter的jar
 - refactor: 接口测试报告完成状态新增成功失败
 - refactor: 更新 readme 格式
-- refactor: 添加构建jmeter镜像的dockerfile
+- refactor: 添加构建JMeter镜像的dockerfile
 - refactor: 环境域名可以设置为DbeaseUrl
 - refactor: 用例名称长度限制改为50
 - refactor: 系统设置前端页面修改
@@ -4183,7 +4214,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - style: 测试报告优化
 - refactor: 修改Errors中出现的unicode
 - refactor: 去掉不用的日志
-- refactor: 输出 jmeter console 的日志
+- refactor: 输出 JMeter console 的日志
 
 !!! info "Bug 修复"
 
@@ -4216,7 +4247,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 - fix: 修复 api test 场景复杂是列表查询慢的问题
 - fix: 修复 only_full_group_by 错误
 - fix: 修复 select distinct 错误
-- fix: 修复jmeter内置函数的提示
+- fix: 修复JMeter内置函数的提示
 - fix: 修复一键运行uuid重复
 - fix: 修复一键运行报错
 - fix: 修复保存工作控件配额时超出组织的配额的bug

@@ -89,7 +89,7 @@ networks:
     - ms-network
 ```
 
-启动data-streaming，执行命令:
+启动 Data-Streaming，执行命令:
 ```
 source .env 
 docker-compose -f docker-compose-base.yml -f docker-compose-ds.yml up -d

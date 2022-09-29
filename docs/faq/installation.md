@@ -121,9 +121,9 @@ set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=10
 msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 删除多余网桥，msctl reload重启；
 
 ## 25 怎样监控被压测的机器
-在被测服安装node-exporter服务，然后在性能测试中高级配置里添加监控，填写被测服node-exporter服务的ip和端口以及监控项
+在被测服安装node-exporter服务，然后在性能测试-高级配置里添加监控，填写被测服务器上node-exporter服务的ip和端口以及监控项
 
-## 26 忘记 Metersphere密码
+## 26 忘记 MeterSphere密码
 ```
 进入容器: docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
 使用数据库: use metersphere;
@@ -164,7 +164,7 @@ msctl reload
 3.确认日志中连不上的ip是redis的ip(Mac: ifconfig |grep "inet"|grep -v 127.0.0.1; Linux: hostname -I)
 ```
 
-## 32 安装metersphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
+## 32 安装MeterSphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
 ```
 1. 打开daemon.json文件, vi /etc/docker/daemon.json
 2. 将"exec-opts": ["native.cgroupdriver=systemd"]删掉即可, 重启docker：service docker restart
@@ -197,17 +197,13 @@ IP访问：检查防火墙（firewalld,iptables等）
 域名访问：检查防火墙及NGINX等网络相关配置
 ```
 
-## 38 ms无法访问测试环境的测试域名或者ip，但是装ms服务器可以
-```
-service network restart
-service docker restart
-msctl reload
-```
+## 38 安装报错/var/lib/docker/overlay2/xxxx  no such file or directory
+docker 的持久化数据目录被删除了，要重装docker，建议以后不要清理/var/lib/docker/overlay2目录了。
 
 ## 39 修改session过期时间
-/opt/metersphere/conf/metersohere.properties 添加配置 session.timeout，单位是秒
+/opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒
 
-## 40 K8S部署meterspher出现 413 request entity too large
+## 40 K8S 部署 metersphere 出现 413 request entity too large
 ```
 #ngnix请求破除1m限制，
 kubectl edit ingress metersphere
@@ -220,14 +216,14 @@ meta.helm.sh/release-namespace: default
 nginx.ingress.kubernetes.io/proxy-body-size: 50m
 ```
 
-## 41 主机部署meterspher出现 413 request entity too large
+## 41 主机部署 metersphere 出现 413 request entity too large
 ```
 1. 打开nginx服务的配置文件nginx.conf
 2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
 3. 保存后重启nginx，问题解决
 ```
 
-## 42 安装或者升级至1.20.0版本 及之后，做接口测试时，页面卡在加载状态，按F12可以看到websocket连接失败
+## 42 安装或者升级至 1.20.0 版本 及之后，做接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
 ```
 解决方案：用nginx做反向代理，需要在nginx加上websocket配置
 server{
@@ -279,3 +275,32 @@ flushall
 spring.datasource.hikari.maximum-pool-size=你想要的数值
 spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 ```
+
+## 48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
+![! metersphere导入格式](../img/faq/mysql_yml.jpg)
+
+## 49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+1.docker network prune 清除子网网段; <br>
+2.docker network create metersphere_ms-network ;<br>
+3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ; <br>
+4.重启服务器
+
+## 50 could not find properties[/opt/metersphere/conf/metersphere.properties]
+安装包放的目录位置不对，将 metersphere-offline-installer-v*.*-lts.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。
+
+## 51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
+在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
+![! metersphere导入格式](../img/faq/java_heap_space.jpg)
+
+## 52 ERROR Unable to write to Kafka in appender [Kafka]
+```
+docker stop kafka 
+docker stop zookeeper 
+docker rm kafka 
+docker rm zookeeper 
+rm -rf /opt/metersphere/data/kafka/kafka 
+rm -rf /opt/metersphere/data/zookeeper/zookeeper 
+msctl reload
+```
+

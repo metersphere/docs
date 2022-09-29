@@ -37,7 +37,7 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 
 ![!服务集成](../../img/system_management/服务集成首页.png)
 
-#### 1.2.1 <font size=4> 与TAPD集成 </font>
+#### <font size=4> 1.2.1 与TAPD集成 </font>
 - 第一步：服务集成配置。
 
 ![!TAPD-配置](../../img/system_management/TAPD-配置.png)
@@ -77,7 +77,7 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 在 TAPD 缺陷中可以查询到同步过来的缺陷数据。
 ![!TAPD-查询需求](../../img/system_management/TAPD-查询需求.png)
 
-#### 1.2.2 <font size=4> 与JIRA集成 </font>
+#### <font size=4> 1.2.2 与JIRA集成 </font>
 - 第一步：填写对接 JIRA 的地址、认证信息和问题类型，如下。
 
 ![!填写jira](../../img/system_management/填写jira.png)
@@ -115,7 +115,7 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 
 ![!同步缺陷](../../img/system_management/同步缺陷_Jira.png)
 
-#### 1.2.3 <font size=4> 与禅道集成 </font>
+#### <font size=4> 1.2.3 与禅道集成 </font>
 - 第一步：服务集成配置。
 
 ![!禅道-服务集成配置](../../img/system_management/禅道-服务集成配置.png)
@@ -154,7 +154,7 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 在缺陷管理提交缺陷后，数据会同步到禅道系统中。
 ![!禅道-同步需求](../../img/system_management/同步缺陷_禅道.png)
 
-#### 1.2.4 <font size=4> 与Azure Devops集成 </font>
+#### <font size=4> 1.2.4 与Azure Devops集成 </font>
 操作步骤和【禅道】集成一样。
 
 ### 1.3 项目管理
@@ -222,7 +222,7 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 
 点击页面左侧【工作空间】，点击【环境配置】，即可查看当前工作空间中的所有项目的所有环境列表。
 
-#### 1.5.1 <font size=4> 环境列表 </font>
+####  <font size=4> 1.5.1 环境列表 </font>
 - 创建环境
 
 点击页面列表信息左上角的【创建环境】，可新增此工作空间下任意项目的测试环境。
@@ -301,7 +301,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 
 - 导入环境
 
-点击【导入】按钮导入环境，仅支持通过 metershpere 导出的 json 文件。
+点击【导入】按钮导入环境，仅支持通过 metersphere 导出的 json 文件。
 ![!导入环境](../../img/system_management/导入环境.png)
 
 导入支持为一个项目批量创建不同的环境。
@@ -326,7 +326,7 @@ IP 和域名进行映射配置，可设置链接超时、响应超时时间
 点击【删除】按钮，点击【确定】，即可删除环境配置。
 ![!删除环境](../../img/system_management/删除环境.png)
 
-#### 1.5.2 <font size=4> 环境组 </font>
+#### <font size=4> 1.5.2  环境组 </font>
 - 创建环境组
 
 MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动化脚本引用，可以根据不同项目、已经不同环境组合成一个环境组，当自动化执行时，可以直接选择该环境组。

@@ -7,3 +7,16 @@
 ![切换](../../img/user_manual/my_desk/todo/todo_2.png)
 
 ![跳转](../../img/user_manual/my_desk/todo/todo_3.png)
+
+### 2.1 待完成
+展示所有待完成的接口详细信息
+![跳转](../../img/user_manual/my_desk/todo/todo_7.png)
+
+### 2.2 待更新
+已存在的接口，修改地址、请求头、请求体，进行保存时，在提示同步设置时，未进行同步操作
+![跳转](../../img/user_manual/my_desk/todo/todo_4.png)
+
+可在【待更新】页面列表中进行同步操作
+![跳转](../../img/user_manual/my_desk/todo/todo_5.png)
+
+![跳转](../../img/user_manual/my_desk/todo/todo_6.png)
