@@ -1,16 +1,16 @@
 实际项目中，文件/图片上传的场景较多。本文以百度上传图片进行搜索为例。
 
 场景: 在百度搜索框中，上传图片进行搜索<br>
-![](../img/tutorial/ui_upload/百度搜索.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/百度搜索.png)
 
 场景步骤: 打开网页，访问 https://www.baidu.com 网站 <br>
-![](../img/tutorial/ui_upload/访问百度.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/访问百度.png)
 
 设置窗口大小，将浏览器全屏展示 <br>
-![](../img/tutorial/ui_upload/全屏.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/全屏.png)
 
 鼠标点击上传图片的按钮，正确填写上传图片按钮的定位，在后置操作中设置等待时间 <br>
-![](../img/tutorial/ui_upload/点击上传.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/点击上传.png)
 
 上传图片，在 html 中上传图片定位到是个 input 标签，可使用输入框，输入图片路径进行上传。对于本地调试和后端调式而言，图片路径是不一样的。具体如下：<br>
 
@@ -21,24 +21,24 @@ MeterSphere 服务端和本机在同一网络环境 <br>
 
 ### 1.2 上传图片
 输入框中，可以直接写入图片的本地路径，进行图片上传，并且在后置操作中设置等待时间 <br>
-![](../img/tutorial/ui_upload/本地调试路径.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/本地调试路径.png)
 
 不勾选性能模式，点击保存按钮，点击【本地调试】，即可看到本地浏览器上传图片的操作 <br>
-![](../img/tutorial/ui_upload/本地调试不勾选性能模式.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/本地调试不勾选性能模式.png)
 
 ## 2 后端调试
 将图片上传到 local-selenium-grid 容器里，放到某一路径下 <br>
-![](../img/tutorial/ui_upload/后台调试.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/后台调试.png)
 
 可以直接写容器内图片的路径，不勾选性能模式，即可看到后端调试时的截图情况。<br>
-![](../img/tutorial/ui_upload/后端调试不勾选性能模式.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/后端调试不勾选性能模式.png)
 
 不勾选性能模式，点击保存按钮，点击【后端调试】，可看到该场景步骤正常执行 <br>
-![](../img/tutorial/ui_upload/后端调试成功.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/后端调试成功.png)
 
 ## 3 生成报告
 在 UI 测试场景中，不勾选性能模式，点击【生成报告】，即可看到该场景的报告，且每一步都带有截图 <br>
-![](../img/tutorial/ui_upload/生成报告.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/生成报告.png)
 
 也可以进入【测试报告】页面，找到该场景的报告进行查看，可看到该场景的报告详情 <br>
-![](../img/tutorial/ui_upload/测试报告.png){ width:"1200px" }
+![](../img/tutorial/ui_upload/测试报告.png)
