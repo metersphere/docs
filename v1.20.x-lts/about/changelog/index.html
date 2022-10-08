@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/about/changelog/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -28,7 +28,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -2678,6 +2678,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12015-lts" class="md-nav__link">
+    v1.20.15-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12014-lts" class="md-nav__link">
     v1.20.14-lts
   </a>
@@ -3301,6 +3308,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12015-lts" class="md-nav__link">
+    v1.20.15-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12014-lts" class="md-nav__link">
     v1.20.14-lts
   </a>
@@ -3897,6 +3911,38 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12015-lts">v1.20.15-lts<a class="headerlink" href="#v12015-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年9月27日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(接口定义): 去掉回收站场景列表的状态排序</li>
+<li>refactor(接口测试): 优化操作，当场景步骤只有一个时隐藏批量操作按钮</li>
+<li>refactor(场景自动化): 场景报告跳转到场景列表打开新的tab页</li>
+<li>refactor: 前端输入框Mock补全JMeter内置函数的提示</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(测试跟踪): Jira 同步经办人及项目集字段有误 (#18280)</li>
+<li>fix(测试跟踪): 自定义 ID 开启后用例列表ID显示问题 (#18012)</li>
+<li>fix(测试跟踪): 依赖关系列表布局问题 (#18276)</li>
+<li>fix(测试跟踪): 回收站功能用例筛选问题 (#18034)</li>
+<li>fix(测试跟踪): 修复关联场景执行状态不一致的缺陷 (#18065)</li>
+<li>fix(测试跟踪): 测试计划及用例评审依赖关系的显示问题 (#18277)</li>
+<li>fix(测试跟踪): 修复测试计划切换环境，接口用例切换数据源失败的缺陷 (#17924)</li>
+<li>fix(接口定义): 修复自定义 tcp 没名字时无法执行的缺陷 (#18103)</li>
+<li>fix(接口定义): 修复测试计划 case 列表页执行结果状态与接口定义case不一致的缺陷 (#18117)</li>
+<li>fix(接口定义): 修复接口定义添加 body 文件切换到 test 文件丢失的缺陷 (#18174)</li>
+<li>fix(接口定义): 修复分享场景报告 title 和页面控制台报错问题 (#18121)</li>
+<li>fix(接口定义): 修复接口定义创建新 mock 时右上角保存与缩放连接在一起的样式缺陷 (#18179)</li>
+<li>fix(接口定义): 修复文档版本无法筛选的缺陷 (#17950)</li>
+<li>fix(接口定义): 修复场景引用别的场景自定义脚本不执行的缺陷 (#18151)</li>
+<li>fix(接口定义): 修复选择模块口，首页跳转未清空模块信息的缺陷 (#17979)</li>
+</ul>
 <h2 id="v12014-lts">v1.20.14-lts<a class="headerlink" href="#v12014-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年9月8日</p>
@@ -3917,7 +3963,7 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 <li>fix(UI自动化): 回滚ui高级搜索代码</li>
 <li>fix(UI自动化): 报告计算方式</li>
 <li>fix(UI自动化): 测试报告显示错位</li>
-<li>fix(UI自动化): UI通过率计算出错</li>
+<li>fix(UI自动化): ui通过率计算出错</li>
 <li>fix(UI自动化): ui测试报告计数错误修复</li>
 <li>fix(UI自动化): ui测试报告漏掉计算错误的步骤</li>
 <li>fix(UI自动化): 含有循环的步骤一直不出报告结果</li>
@@ -8774,7 +8820,7 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
     
     
 
-      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
       
     
 <script>
