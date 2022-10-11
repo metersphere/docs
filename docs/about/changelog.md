@@ -58,7 +58,7 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 -  fix(UI自动化): 回滚ui高级搜索代码
 -  fix(UI自动化): 报告计算方式
 -  fix(UI自动化): 测试报告显示错位
--  fix(UI自动化): UI通过率计算出错
+-  fix(UI自动化): ui通过率计算出错
 -  fix(UI自动化): ui测试报告计数错误修复
 -  fix(UI自动化): ui测试报告漏掉计算错误的步骤
 -  fix(UI自动化): 含有循环的步骤一直不出报告结果
