@@ -2857,6 +2857,11 @@
 <p>1.将js文件上传到服务器 /opt/metersphere/data/xx.js <br>
 2.在前置或者后置脚本中写入 load(“/opt/metersphere/data/xx.js”)，即可使用js文件中的方法</p>
 </div>
+<div class="highlight"><pre><span></span><code>g = new Packages.org.mozilla.javascript.tools.shell.Global(Packages.org.mozilla.javascript.Context.getCurrentContext());
+this.load = g.load;
+load(&quot;/opt/metersphere/data/xx.js&quot;);
+log.info(&quot;===111====&quot;);
+</code></pre></div>
 <h2 id="js_1">使用网上 js<a class="headerlink" href="#js_1" title="Permanent link">&para;</a></h2>
 <p>js 代码(以加密为例)
 <div class="highlight"><pre><span></span><code>g = new Packages.org.mozilla.javascript.tools.shell.Global(Packages.org.mozilla.javascript.Context.getCurrentContext());
