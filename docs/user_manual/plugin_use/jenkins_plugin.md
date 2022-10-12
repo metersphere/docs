@@ -5,7 +5,7 @@
 下载 MeterSphere 对应版本的 hpi 包,在 Jenkins 的插件管理页面，上传并安装下载好的 hpi 插件包
 ```
 
-## 2 创建使用
+## 2 插件使用
 插件安装后，在指定的 Jenkins 构建任务中，添加【MeterSphere】类型的构建步骤
 ![录制](../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_1.png)
 
