@@ -1,0 +1,17 @@
+开发人员可通过该插件实时将编写的接口代码推送到 MeterSphere 系统
+
+!!! info "安装注意"
+     * 不低于 2018.3 的 IDEA Ultimate，Community 版本
+     * 下载离线包: https://plugins.jetbrains.com/plugin/18097-metersphere/versions
+   
+## 使用步骤
+【Settings】-【Plugins】-【Install Plugin from Disk】,导入下载的离线包
+![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_1.png)
+
+打开【Settings】-【MeterSphere】配置好访问地址以及 AK/SK 等详细信息，点击【test】按钮即可看到连接成功
+![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_2.png)
+
+配置导出是否覆盖、目录层级等信息后，点击【Apply】按钮即可
+![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_3.png)
+
+点击文件右键，选中【Export MeterSphere】即可将代码中的接口推送到 MeterSphere 系统中
