@@ -1,4 +1,4 @@
-主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的 body 、 jar 目录备份。
+主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的目录备份。
 ## 1 手动备份
 
 ```
@@ -6,7 +6,7 @@
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
 
 #body/jar 目录备份
-zip -r XXX.zip /opt/metersphere/data/body /opt/metersphere/data/jar
+zip -r XXX.zip /opt/metersphere/data
 ```
 若备份数据库时出现mysqldump: Error 2020: Got packet bigger than ‘max_allowed_packet’ bytes when dumping tableapi_scenario_report_detailat row: 94，则添加max_allowed_packet参数，如下:
 ```
@@ -27,7 +27,7 @@ dumpSqlFilePath=$backupDir/ms_db_$currentTime.sql
 echo dumpSqlFilePath=$dumpSqlFilePath
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > $dumpSqlFilePath
 cd $backupDir
-zip -r $backupZipFileName $dumpSqlFilePath $data/body $data/jar
+zip -r $backupZipFileName $dumpSqlFilePath $data
 echo rm -rf dumpSqlFilePath
 rm -rf $backupDir/ms_db_$currentTime.sql
 
