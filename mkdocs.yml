@@ -119,6 +119,10 @@ nav:
               - 模块说明: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
               - 工作空间: user_manual/system_management/workspace.md
+          - 插件使用教程:
+              - MeterSphere 浏览器插件: user_manual/plugin_use/chrome_plugin.md
+              - Jenkins 插件: user_manual/plugin_use/jenkins_plugin.md
+              - IDEA 插件: user_manual/plugin_use/idea_plugin.md
     - 使用教程:
           - UI 测试如何远程调用浏览器: tutorial/ui_testing.md
           - 基于 Dubbo 协议做接口测试: tutorial/dubbo.md
