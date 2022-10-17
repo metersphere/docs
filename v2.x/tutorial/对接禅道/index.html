@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/using_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/%E5%AF%B9%E6%8E%A5%E7%A6%85%E9%81%93/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>对接禅道 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-ui" class="md-skip">
+        <a href="#1-metersphere" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              对接禅道
             
           </span>
         </div>
@@ -2038,69 +2038,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../using_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-ui" class="md-nav__link">
-    1 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2518,29 +2460,129 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ui" class="md-nav__link">
-    1 UI 测试
+  <a href="#1-metersphere" class="md-nav__link">
+    1 MeterSphere 与禅道对接
   </a>
+  
+    <nav class="md-nav" aria-label="1 MeterSphere 与禅道对接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 禅道配置修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-model" class="md-nav__link">
+    1.2 开启禅道账号超级 Model 权限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-metersphere" class="md-nav__link">
+    1.3 在 MeterSphere 中配置禅道信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2 接口测试
+  <a href="#2-metersphere" class="md-nav__link">
+    2 从 MeterSphere 中提交缺陷至禅道
   </a>
+  
+    <nav class="md-nav" aria-label="2 从 MeterSphere 中提交缺陷至禅道">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-id" class="md-nav__link">
+    2.1 配置项目 ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 配置缺陷模板
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 配置缺陷模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    2.2.1 配置模板标题与内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    2.2.2 设置自定义字段
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.2 设置自定义字段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    Q：禅道中的选项值在哪里看？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-api" class="md-nav__link">
+    2.2.3 模板中绑定自定义字段的API字段名
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.3 模板中绑定自定义字段的API字段名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qapi" class="md-nav__link">
+    Q：API字段名从哪里获取呢？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 设置提交人信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
+  <a href="#_1" class="md-nav__link">
+    效果展示
   </a>
   
 </li>
@@ -2559,44 +2601,101 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/using_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/对接禅道.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>对接禅道</h1>
 
-<h2 id="1-ui">1 UI 测试<a class="headerlink" href="#1-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../UI%20%E6%B5%8B%E8%AF%95%E8%B0%83%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">UI 测试调用远程服务器</a></li>
-<li><a href="../UI%20%E6%B5%8B%E8%AF%95%E4%B9%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">UI 测试之文件上传</a></li>
-</ul>
-<h2 id="2">2 接口测试<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../Dubbo%20%E5%8D%8F%E8%AE%AE/">Dubbo 协议</a></li>
-<li><a href="../%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">场景化接口测试</a></li>
-<li><a href="../%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">生成接口认证签名</a></li>
-<li><a href="../%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F/">设置和使用变量</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20JMeter%20MockJS%20%E5%87%BD%E6%95%B0/">使用 JMeter MockJS 函数</a></li>
-<li><a href="../%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95/">数据驱动测试</a></li>
-<li><a href="../Mock%20%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8/">Mock 功能使用</a></li>
-<li><a href="../Python%20%E8%B0%83%E7%94%A8%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92/">Python 调用 API 触发测试计划</a></li>
-<li><a href="../Jmeter%20%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/">Jmeter 常用内置函数</a></li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%AF%B9%E6%8E%A5%E7%A6%85%E9%81%93/">对接禅道</a></li>
-<li><a href="../%E5%AF%B9%E6%8E%A5%20JIRA/">对接 JIRA</a></li>
-<li><a href="../%E5%AF%B9%E6%8E%A5%20TAPD/">对接 TAPD</a></li>
-<li><a href="../Jenkins%20%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">Jenkins 流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../Python%20%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">Python 第三方库</a></li>
-<li><a href="../BeanShell%20%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">BeanShell 引用外部 Jar 包</a></li>
-<li><a href="../%E5%BC%95%E7%94%A8%20JavaScript/">引用 JavaScript</a></li>
-</ul>
+<p>本文主要演示在已有禅道管理软件的情况下，如何在 MeterSphere 平台提交缺陷并推送至禅道。</p>
+<h2 id="1-metersphere">1 MeterSphere 与禅道对接<a class="headerlink" href="#1-metersphere" title="Permanent link">&para;</a></h2>
+<p>本文档所使用的 Metersphere 平台为 v1.13.1 版本（建议至少更新至 v1.11.2 版本，该版本及以后版本对接禅道的问题已基本解决）。</p>
+<p>本文档所使用的禅道为开源版 12.5.3 版本。</p>
+<h3 id="11">1.1 禅道配置修改<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>对接禅道的本质就是调用禅道提供的接口，然后传入相应的参数。想要调用禅道的接口，需要先修改相关的配置文件。</p>
+<p>在禅道安装路径中：<span class="arithmatex"><span class="MathJax_Preview">{安装路径}/zentao/config/目录下创建一个 my.php 文件，然后在里面添加如下内容：
+<div class="highlight"><pre><span></span><code>&lt;?php
+$config-&gt;features-&gt;apiGetModel    = true;
+</code></pre></div>
+注意：如果有my.php，则直接在最下方添加"</span><script type="math/tex">{安装路径}/zentao/config/目录下创建一个 my.php 文件，然后在里面添加如下内容：
+<div class="highlight"><pre><span></span><code>&lt;?php
+$config-&gt;features-&gt;apiGetModel    = true;
+</code></pre></div>
+注意：如果有my.php，则直接在最下方添加"</script></span>config-&gt;features-&gt;apiGetModel = true;"即可。</p>
+<h3 id="12-model">1.2 开启禅道账号超级 Model 权限<a class="headerlink" href="#12-model" title="Permanent link">&para;</a></h3>
+<p>访问禅道需要账号具有超级 Model 权限，可用管理员账号登录禅道，在权限中进行设置，如下图：
+<img alt="" src="../../img/tutorial/use_zentao/%E7%A6%85%E9%81%93%E6%9D%83%E9%99%90.png" /></p>
+<p>在权限维护中，开启超级 Model 调用接口权限，保存即可。<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E8%B6%85%E7%BA%A7model%E6%9D%83%E9%99%90.png" /></p>
+<h3 id="13-metersphere">1.3 在 MeterSphere 中配置禅道信息<a class="headerlink" href="#13-metersphere" title="Permanent link">&para;</a></h3>
+<p>在 MeterSphere 平台中，配置好禅道对接的信息，如下图：<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E9%85%8D%E7%BD%AE%E7%A6%85%E9%81%93.png" /></p>
+<p>测试连接，显示验证通过即可完成连接的配置。</p>
+<h2 id="2-metersphere">2 从 MeterSphere 中提交缺陷至禅道<a class="headerlink" href="#2-metersphere" title="Permanent link">&para;</a></h2>
+<p>上一个部分仅仅是让 MeterSphere 可以和禅道进行通信了，就像是在河中建好了一座桥，下面需要让车在上面跑了，也就是在MeterSphere 中提交缺陷，自动推送至禅道对应的项目中去。</p>
+<h3 id="21-id">2.1 配置项目 ID<a class="headerlink" href="#21-id" title="Permanent link">&para;</a></h3>
+<p>在禅道项目准备好之后，会自动生成一个项目 ID，比如下图：
+<img alt="" src="../../img/tutorial/use_zentao/%E7%A6%85%E9%81%93ID.png" /></p>
+<p>然后将这个项目 ID，关联到 MeterSphere 平台的项目中去，并保存，如下图：
+<img alt="" src="../../img/tutorial/use_zentao/%E5%85%B3%E8%81%94%E7%A6%85%E9%81%93.png" /></p>
+<h3 id="22">2.2 配置缺陷模板<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>其实项目 ID 配置完毕后，就已经可以在 MeterSphere 的缺陷管理中提交 Bug 至禅道了。但是当我们尝试提交一个 Bug 并登录禅道后会发现，很多字段都没有填写，比如 Bug 类型、严重等级、测试阶段、浏览器和操作系统等等。</p>
+<p>所以我们需要在 MeterSphere 中配置一个提交模板，声明禅道中需要用到的字段，这样提交过去的 Bug 就是完整的。配置模板如下：
+<img alt="" src="../../img/tutorial/use_zentao/%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /></p>
+<p>模板中分为两大块，一个是标题和内容，另外就是需要填写的字段：
+<img alt="" src="../../img/tutorial/use_zentao/%E5%A1%AB%E5%86%99%E5%AD%97%E6%AE%B5.png" /></p>
+<h4 id="221">2.2.1 配置模板标题与内容<a class="headerlink" href="#221" title="Permanent link">&para;</a></h4>
+<p>推荐的内容设置如下：
+<div class="highlight"><pre><span></span><code>[步骤]
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+[结果]
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+[期望]
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+**请在自己的环境中完成自测（包括部署），自测结果请备注在 BUG 单中！**
+</code></pre></div>
+补充：<br/>标签是换行符。MeterSphere 平台目前还不支持回车换行，如果不加这个换行符，提交到禅道后，所有的文字信息都在一行，阅读体验不友好，所以暂时用这种方式进行换行。</p>
+<h4 id="222">2.2.2 设置自定义字段<a class="headerlink" href="#222" title="Permanent link">&para;</a></h4>
+<p>设置自定义字段就是在模板基础上增加一些填写的字段。当字段名且值与禅道保持一致时，提交后就会自动填充禅道中的字段值。下面举个字段的例子进行演示，比如我们需要添加一个Bug类型的字段，禅道中的字段是这样的：<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" /></p>
+<p>在 MeterSphere 平台中添加自定义字段：<br>
+<img alt="" src="../../img/tutorial/use_zentao/ms%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" /></p>
+<h5 id="q">Q：禅道中的选项值在哪里看？<a class="headerlink" href="#q" title="Permanent link">&para;</a></h5>
+<p>A：用管理员账号登入禅道，依次进入后台→自定义→Bug，如下图：
+<img alt="" src="../../img/tutorial/use_zentao/%E7%A6%85%E9%81%93%E9%80%89%E9%A1%B9%E5%80%BC.png" /></p>
+<h4 id="223-api">2.2.3 模板中绑定自定义字段的API字段名<a class="headerlink" href="#223-api" title="Permanent link">&para;</a></h4>
+<p>当我们自定义字段准备好后，就可以添加到模板中了。这里的关键在于配置 API 字段名，如下图：
+<img alt="" src="../../img/tutorial/use_zentao/API%E5%AD%97%E6%AE%B5%E5%90%8D.png" /></p>
+<h5 id="qapi">Q：API字段名从哪里获取呢？<a class="headerlink" href="#qapi" title="Permanent link">&para;</a></h5>
+<p>A：在禅道安装目录：zentao/module/bug/lang下，打开zh-cn.php查看。如下图：
+<img alt="" src="../../img/tutorial/use_zentao/API%E5%AD%97%E6%AE%B5.png" /></p>
+<p>可以看到上图中，Bug类型对应的字段是 Type，所以在 MeterSphere 平台中配置 Type 即可。</p>
+<p>最后可以根据你的需求，继续添加其他字段，保存最终模板即可。</p>
+<h3 id="23">2.3 设置提交人信息<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>上面的步骤都做完后，其实已经可以正常提交一个 Bug 至禅道了。但是在这个设置下，即使在 MeterSphere 平台上提交缺陷的是不同的账号，在禅道上Bug的创建人都是 admin（也就是对接的时候配置的用户名），我们需要进一步地设置，来分辨该 Bug 是由谁提交的。在 MeterSphere 界面右上角设置个人信息，如下图：<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.png" /></p>
+<p>输入禅道账号密码，校验通过后保存。<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81.png" /></p>
+<p>如果校验失败，可以尝试在禅道中开启该用户的超级 Model 权限，就可以通过了。</p>
+<h2 id="_1">效果展示<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>在 MeterSphere 中新增一个缺陷并保存：<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E6%96%B0%E5%BB%BA%E7%BC%BA%E9%99%B7.png" /></p>
+<p>保存后的界面如下：<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E4%BF%9D%E5%AD%98.png" /></p>
+<p>再来看看禅道的界面：<br>
+<img alt="" src="../../img/tutorial/use_zentao/%E7%A6%85%E9%81%93%E9%A1%B5%E9%9D%A2.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_zentao/%E7%BC%BA%E9%99%B7%E5%86%85%E5%AE%B9.png" /></p>
 
 
   

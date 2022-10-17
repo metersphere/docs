@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/using_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/%E4%BD%BF%E7%94%A8%20JMeter%20MockJS%20%E5%87%BD%E6%95%B0/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>使用 JMeter MockJS 函数 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-ui" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              使用 JMeter MockJS 函数
             
           </span>
         </div>
@@ -2038,69 +2038,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../using_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-ui" class="md-nav__link">
-    1 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2518,29 +2460,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ui" class="md-nav__link">
-    1 UI 测试
+  <a href="#1" class="md-nav__link">
+    1 目的
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2 接口测试
+  <a href="#2-jmeter" class="md-nav__link">
+    2 JMeter函数的设置使用
   </a>
+  
+    <nav class="md-nav" aria-label="2 JMeter函数的设置使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-jmeter" class="md-nav__link">
+    2.1 常用的JMeter函数及示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-jmeter" class="md-nav__link">
+    2.2 在请求参数中使用JMeter函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-queryrestjmeter" class="md-nav__link">
+    2.3 在QUERY参数、REST参数中使用JMeter函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    2.4 具体场景演示示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
+  <a href="#3-mockjs" class="md-nav__link">
+    3 MockJS函数的设置使用
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4 脚本引用
+    4 总结
   </a>
   
 </li>
@@ -2559,44 +2535,168 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/using_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/使用 JMeter MockJS 函数.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>使用 JMeter MockJS 函数</h1>
 
-<h2 id="1-ui">1 UI 测试<a class="headerlink" href="#1-ui" title="Permanent link">&para;</a></h2>
+<h2 id="1">1 目的<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>MeterSphere的接口测试、性能测试均基于JMeter实现，且兼容JMeter中的函数。在使用MeterSphere做接口测试、准备测试数据时，经常需要使用JMeter函数构造生成接口测试的测试数据。数据准备过程中经常需要查看摸索JMeter函数的使用范围方法，为了备忘、便于查看，也为了让大家减少一些探究试验的时间，本文将对这部分内容做出总结和演示，希望对大家有所帮助。</p>
+<h2 id="2-jmeter">2 JMeter函数的设置使用<a class="headerlink" href="#2-jmeter" title="Permanent link">&para;</a></h2>
+<p>在MeterSphere平台，JMeter函数可在接口、接口用例的请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中设置使用。</p>
+<h3 id="21-jmeter">2.1 常用的JMeter函数及示例<a class="headerlink" href="#21-jmeter" title="Permanent link">&para;</a></h3>
+<p>对于常用的JMeter函数可以百度查看JMeter官方文档，或搜索相关文章。<br>
+函数调用的格式为：${__functionName(var1,var2,var3)} <br>
+其中，_functionName 为函数名，括号内是函数的参数，无参数时可以不用括号，如 ${_UUID}。<br>
+以下是常用的一些函数及使用示例。<br></p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   函数
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   示例
+  </td>
+  <tbody>
+    <tr>
+        <td >__time 以多种格式返回当前时间</td>
+        <td >${__time} //13位的毫秒级时间戳</td>
+    </tr>
+    <tr>
+        <td >__counter 计数器函数</td>
+        <td >${__counter(True,)} //每个线程分开计数</td>
+    </tr>
+    <tr>
+        <td >__Random 返回指定最大值和最小值之间的随机整数</td>
+        <td >${__Random(1,99, num)} //生成1到99之间的随机数</td>
+    </tr>
+    <tr>
+        <td >__UUID 通用唯一标识符函数</td>
+        <td >${__UUID} //生成uuid</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="22-jmeter">2.2 在请求参数中使用JMeter函数<a class="headerlink" href="#22-jmeter" title="Permanent link">&para;</a></h3>
+<p>在MeterSphere中，可以在请求参数的QUERY参数、REST参数、请求体、前后置脚本中引用使用JMeter函数，引用使用方法如下表以生成UUID函数为例所示。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   引用使用
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   使用方法及示例(假设函数为__UUID)
+  </td>
+  <tbody>
+    <tr>
+        <td >在请求参数之QUERY参数中引用</td>
+        <td >${__UUID}</td>
+    </tr>
+    <tr>
+        <td >在请求参数之REST参数中引用</td>
+        <td >${__UUID}</td>
+    </tr>
+    <tr>
+        <td >在请求参数之请求体中引用</td>
+        <td >${__UUID}</td>
+    </tr>
+    <tr>
+        <td >在请求参数之前后置BeanShell脚本中引用</td>
+        <td >BeanShell注意事项 <br>
+             1.每行须以分号结尾 <br>
+             2.注释是// <br>
+             uuid="${__UUID}"; <br>
+             打印到控制台输出查看变量值，调试时用 <br>
+             log.info("uuid="+uuid);
+        </td>
+    </tr>
+    <tr>
+       <td >在请求参数之前后置Python脚本中引用</td>
+       <td >获取变量值<br>
+            uuid="${__UUID}";<br>
+            打印到控制台输出查看变量值，调试时用<br>
+            log.info("uuid="+uuid);
+       </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>需要特别说明的是，在前置/后置脚本中也是可以引用使用JMeter函数的。</p>
+<p>具体的使用方法：<br>
+（1）在双引号内输入函数的调用方法，如图2-1所示； <br>
+（2）以Python脚本中的引用为例，在“查询database列表接口用例”页面中，将以下脚本内容设置为前置脚本内容，如图2-1所示；<br>
+（3）然后执行用例，在“控制台”的输出内容中能够看到打印出的uuid和time函数生成的时间戳，如图2-2所示。<br>
+<div class="highlight"><pre><span></span><code>uuid=&quot;${__UUID()}&quot;;
+strTime=&quot;${__time()}&quot;;
+log.info(&quot;--------pre script begin-------------&quot;);
+log.info(&quot;uuid=&quot;+uuid);
+log.info(&quot;strTime=&quot;+strTime);
+log.info(&quot;--------pre script end-------------&quot;);
+</code></pre></div>
+<img alt="配置在前置脚本中使用JMeter函数地址" height="100%" src="../../img/tutorial/use_function/%E5%9C%A8%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E4%B8%AD%E4%BD%BF%E7%94%A8JMeter%E5%87%BD%E6%95%B0.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-1 在前置脚本中使用JMeter函数</font><br>
+<img alt="配置控制台输出JMeter函数地址" height="100%" src="../../img/tutorial/use_function/%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BAJMeter%E5%87%BD%E6%95%B0.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-2 控制台输出JMeter函数</font><br></p>
+<h3 id="23-queryrestjmeter">2.3 在QUERY参数、REST参数中使用JMeter函数<a class="headerlink" href="#23-queryrestjmeter" title="Permanent link">&para;</a></h3>
+<p>在QUERY参数、REST参数中设置使用JMeter函数，具体操作方法为：<br>
+1、在“接口用例”页面，在“请求参数”面板的“QUERY参数”选项卡中，选择如图2-3所示的铅笔图标“编辑”按钮，打开“参数设置”对话框，在对话框中选择设置并保存，如图2-4所示；也可以直接在在参数值的输入框输入“$”，之后从下拉JMeter函数列表中选择要使用的JMeter函数，如图2-5所示。<br>
+2、设置之后，执行用例时，平台会通过JMeter函数生成的参数值发出请求。<br>
+<img alt="配置选择打开【参数设置】对话框地址" height="100%" src="../../img/tutorial/use_function/%E9%80%89%E6%8B%A9%E6%89%93%E5%BC%80%E3%80%90%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E3%80%91%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-3 选择打开【参数设置】对话框</font><br>
+<img alt="配置参数设置-设置JMeter函数地址" height="100%" src="../../img/tutorial/use_function/%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-%E8%AE%BE%E7%BD%AEJMeter%E5%87%BD%E6%95%B0.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-4 参数设置-设置JMeter函数</font><br></p>
+<p><img alt="配置参数设置-输入“$”在下拉列表中选择JMeter函数" height="100%" src="../../img/tutorial/use_function/%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-%E5%9C%A8%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8%E4%B8%AD%E9%80%89%E6%8B%A9JMeter%E5%87%BD%E6%95%B0.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-5 参数设置-输入“$”在下拉列表中选择JMeter函数</font><br></p>
+<h3 id="24">2.4 具体场景演示示例<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>下面用InfluxDB写入接口测试场景演示变量和JMeter函数的使用。
+<div class="highlight"><pre><span></span><code>#写入接口API curl调用
+curl -i -XPOST &#39;http://10.1.13.12:8086/write?db=monitoringdb&#39; --data-binary &#39;cpu_usage,host=10.1.10.131,app=dataease value=0.10 1632761023000000000&#39;
+#cpu_usage为measurement，类似关系数据库里的表, host为主机ID，app为dataease
+</code></pre></div></p>
+<p>操作步骤如下。之前的示例步骤比较详细，这里就只列出关键的步骤截图了。</p>
+<p>（1）在【接口列表】页面，创建【InfluxDB写入接口】，请求协议为POST，路径为/write，如图2-6所示。</p>
+<p>（2）在【CASE】页面，如图2-7所示，选择【+添加】打开【创建接口用例】页面，创建写入接口用例，如图4-5所示。</p>
+<p>（3）根据curl命令我们可以看到需要设置QUERY参数db，以及请求体raw内容。</p>
+<p>如图2-8所示，设置QUERY参数db，设置值使用环境变量${dbname}，dbname变量已在环境中设置，并设置值为monitoringdb。</p>
+<p>如图2-9所示，设置请求体，格式选择raw，内容设置为 cpu_usage,host=<span class="arithmatex" usage="usage"><span class="MathJax_Preview">{_UUID},app=dataease value=</span><script type="math/tex">{_UUID},app=dataease value=</script></span> ${_time()}000000 </p>
+<p>使用JMeter函数_UUID做为host ID，使用_time函数生成13位的时间戳，使用usage变量，usage变量在前置脚本中使用python random函数计算，保存在usage变量中。</p>
+<p><img alt="配置创建写入接口地址" height="100%" src="../../img/tutorial/use_function/%E5%88%9B%E5%BB%BA%E5%86%99%E5%85%A5%E6%8E%A5%E5%8F%A3.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-6 创建写入接口</font><br>
+<img alt="配置选择创建写入接口用例地址" height="100%" src="../../img/tutorial/use_function/%E9%80%89%E6%8B%A9%E5%88%9B%E5%BB%BA%E5%86%99%E5%85%A5%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-7 选择创建写入接口用例</font><br>
+<img alt="配置设置QUERY参数db地址" height="100%" src="../../img/tutorial/use_function/%E8%AE%BE%E7%BD%AEQUERY%E5%8F%82%E6%95%B0db.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-8 设置QUERY参数db</font><br>
+<img alt="配置设置请求体-监控数据地址" height="100%" src="../../img/tutorial/use_function/%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E4%BD%93-%E7%9B%91%E6%8E%A7%E6%95%B0%E6%8D%AE.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-9 设置请求体-监控数据</font><br>
+<img alt="配置设置前置python脚本-生成usage并保存到变量地址" height="100%" src="../../img/tutorial/use_function/%E8%AE%BE%E7%BD%AE%E5%89%8D%E7%BD%AEpython%E8%84%9A%E6%9C%AC-%E7%94%9F%E6%88%90usage%E5%B9%B6%E4%BF%9D%E5%AD%98%E5%88%B0%E5%8F%98%E9%87%8F.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-10 设置前置python脚本-生成usage并保存到变量</font><br></p>
+<p>（4）保存并执行用例，在【响应内容】下【请求内容】中查看请求内容POST data，如图2-11所示，可以看到使用JMeter函数生成的数值以及python random函数生成的值。</p>
+<p>cpu_usage,host=e48222aa-e98e-4974-8dfb-df9a1aecc4cc,app=dataease value=0.00309123923176 1652670605313000000 <br>
+<img alt="配置查看请求内容地址" height="100%" src="../../img/tutorial/use_function/%E6%9F%A5%E7%9C%8B%E8%AF%B7%E6%B1%82%E5%86%85%E5%AE%B9.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-11 查看请求内容</font><br></p>
+<h2 id="3-mockjs">3 MockJS函数的设置使用<a class="headerlink" href="#3-mockjs" title="Permanent link">&para;</a></h2>
+<p>对于MockJS函数，在MeterSphere中，在请求参数的QUERY参数、REST参数值设置时使用。MockJS函数，请加参数设置页面中列表，如图2-13所示。可将MockJS设置到参数值中，在请求时，随机生成布尔值、自然数、整数、浮点数、字符、字符串、日期、时间、日期时间、当前时间等参数值，使用生成的参数值发出请求。<br>
+需要注意的是，在请求体和前后置脚本中，不能使用MockJS函数，可以使用JMeter函数。
+<img alt="配置选择打开【参数设置】对话框地址" height="100%" src="../../img/tutorial/use_function/%E9%80%89%E6%8B%A9%E6%89%93%E5%BC%80%E3%80%90%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E3%80%91%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图3-1 选择打开【参数设置】对话框</font><br>
+<img alt="配置参数设置-选择MockJS函数地址" height="100%" src="../../img/tutorial/use_function/%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-%E9%80%89%E6%8B%A9MockJS%E5%87%BD%E6%95%B0.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图3-2 参数设置-选择MockJS函数</font><br></p>
+<p>也可以直接在在参数值的输入框输入“@”，之后从下拉MockJS函数列表中选择要使用的MockJS函数，如图3-3所示。<br>
+<img alt="配置参数设置-输入@列出MockJS并选择" height="100%" src="../../img/tutorial/use_function/%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-%E5%88%97%E5%87%BAMockJS%E5%B9%B6%E9%80%89%E6%8B%A9.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图3-3 参数设置-列出MockJS并选择</font><br></p>
+<p>以下通过一个创建接口用例设置参数值的场景演示一下具体的使用：<br></p>
+<p>如图3-4，在“接口用例”页面中，添加两个QUERY参数：一个键为“pretty”， 值为“@boolean”；一个键为“serverName”，值为“@date@time”。执行用例后，可在响应体的“请求内容”选项卡中查看这些函数生成的随机值，如图3-5的“请求内容”所示。</p>
 <ul>
-<li><a href="../UI%20%E6%B5%8B%E8%AF%95%E8%B0%83%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">UI 测试调用远程服务器</a></li>
-<li><a href="../UI%20%E6%B5%8B%E8%AF%95%E4%B9%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">UI 测试之文件上传</a></li>
+<li>pretty的@boolean函数生成的是false。</li>
+<li>serverName的@date@time函数生成的是gl8Im02011-12-2116:10:31</li>
 </ul>
-<h2 id="2">2 接口测试<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../Dubbo%20%E5%8D%8F%E8%AE%AE/">Dubbo 协议</a></li>
-<li><a href="../%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">场景化接口测试</a></li>
-<li><a href="../%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">生成接口认证签名</a></li>
-<li><a href="../%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F/">设置和使用变量</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20JMeter%20MockJS%20%E5%87%BD%E6%95%B0/">使用 JMeter MockJS 函数</a></li>
-<li><a href="../%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95/">数据驱动测试</a></li>
-<li><a href="../Mock%20%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8/">Mock 功能使用</a></li>
-<li><a href="../Python%20%E8%B0%83%E7%94%A8%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92/">Python 调用 API 触发测试计划</a></li>
-<li><a href="../Jmeter%20%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/">Jmeter 常用内置函数</a></li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%AF%B9%E6%8E%A5%E7%A6%85%E9%81%93/">对接禅道</a></li>
-<li><a href="../%E5%AF%B9%E6%8E%A5%20JIRA/">对接 JIRA</a></li>
-<li><a href="../%E5%AF%B9%E6%8E%A5%20TAPD/">对接 TAPD</a></li>
-<li><a href="../Jenkins%20%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">Jenkins 流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../Python%20%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">Python 第三方库</a></li>
-<li><a href="../BeanShell%20%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">BeanShell 引用外部 Jar 包</a></li>
-<li><a href="../%E5%BC%95%E7%94%A8%20JavaScript/">引用 JavaScript</a></li>
-</ul>
+<p><img alt="配置MockJS函数(以@开头)地址" height="100%" src="../../img/tutorial/use_function/MockJS%E5%87%BD%E6%95%B0%28%E4%BB%A5%40%E5%BC%80%E5%A4%B4%29.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图3-4 MockJS函数(以@开头)</font><br>
+<img alt="配置请求内容中查看函数输出地址" height="100%" src="../../img/tutorial/use_function/%E8%AF%B7%E6%B1%82%E5%86%85%E5%AE%B9%E4%B8%AD%E6%9F%A5%E7%9C%8B%E5%87%BD%E6%95%B0%E8%BE%93%E5%87%BA.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图3-5 请求内容中查看函数输出</font><br></p>
+<h2 id="4">4 总结<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>本文总结了MeterSphere中使用JMeter函数、MockJS函数的方法和注意事项，并通过具体的接口测试场景演示了JMeter函数和MockJS的使用，希望对大家有帮助。</p>
 
 
   

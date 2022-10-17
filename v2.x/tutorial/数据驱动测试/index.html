@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/using_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>数据驱动测试 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-ui" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              数据驱动测试
             
           </span>
         </div>
@@ -2038,69 +2038,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../using_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-ui" class="md-nav__link">
-    1 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2518,30 +2460,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-ui" class="md-nav__link">
-    1 UI 测试
+  <a href="#1" class="md-nav__link">
+    1 什么是数据驱动
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2 接口测试
+    2 整体流程如下图
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3 服务集成
+    3 测试数据准备
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4 脚本引用
+    4 数据驱动测试
   </a>
+  
+    <nav class="md-nav" aria-label="4 数据驱动测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-" class="md-nav__link">
+    4.1 切换到接口测试-接口自动化菜单下，选择一个模块，点击创建场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-csv" class="md-nav__link">
+    4.2 点击场景变量，上传 CSV 文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3 点击场景页面右下角 “+” 号，导入登录接口用例和循环控制器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4 设置请求参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5 设置断言规则，判断预期结果和实际结果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    4.6 选择环境，点击执行，生成测试报告
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2559,44 +2549,34 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/using_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/数据驱动测试.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>数据驱动测试</h1>
 
-<h2 id="1-ui">1 UI 测试<a class="headerlink" href="#1-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../UI%20%E6%B5%8B%E8%AF%95%E8%B0%83%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">UI 测试调用远程服务器</a></li>
-<li><a href="../UI%20%E6%B5%8B%E8%AF%95%E4%B9%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">UI 测试之文件上传</a></li>
-</ul>
-<h2 id="2">2 接口测试<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../Dubbo%20%E5%8D%8F%E8%AE%AE/">Dubbo 协议</a></li>
-<li><a href="../%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">场景化接口测试</a></li>
-<li><a href="../%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">生成接口认证签名</a></li>
-<li><a href="../%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F/">设置和使用变量</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20JMeter%20MockJS%20%E5%87%BD%E6%95%B0/">使用 JMeter MockJS 函数</a></li>
-<li><a href="../%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95/">数据驱动测试</a></li>
-<li><a href="../Mock%20%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8/">Mock 功能使用</a></li>
-<li><a href="../Python%20%E8%B0%83%E7%94%A8%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92/">Python 调用 API 触发测试计划</a></li>
-<li><a href="../Jmeter%20%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/">Jmeter 常用内置函数</a></li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%AF%B9%E6%8E%A5%E7%A6%85%E9%81%93/">对接禅道</a></li>
-<li><a href="../%E5%AF%B9%E6%8E%A5%20JIRA/">对接 JIRA</a></li>
-<li><a href="../%E5%AF%B9%E6%8E%A5%20TAPD/">对接 TAPD</a></li>
-<li><a href="../Jenkins%20%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">Jenkins 流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../Python%20%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">Python 第三方库</a></li>
-<li><a href="../BeanShell%20%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">BeanShell 引用外部 Jar 包</a></li>
-<li><a href="../%E5%BC%95%E7%94%A8%20JavaScript/">引用 JavaScript</a></li>
-</ul>
+<h2 id="1">1 什么是数据驱动<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>相同的测试脚本使用不同的测试数据来执行，测试数据和测试行为完全分离，这样的测试脚本设计模式称为数据驱动。</p>
+<h2 id="2">2 整体流程如下图<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../img/tutorial/use_ddt/ddt%E6%B5%81%E7%A8%8B%E5%9B%BE.png" /></p>
+<h2 id="3">3 测试数据准备<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE.png" /></p>
+<h2 id="4">4 数据驱动测试<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41-">4.1 切换到接口测试-接口自动化菜单下，选择一个模块，点击创建场景<a class="headerlink" href="#41-" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E5%88%9B%E5%BB%BA%E5%9C%BA%E6%99%AF.png" /></p>
+<h3 id="42-csv">4.2 点击场景变量，上传 CSV 文件<a class="headerlink" href="#42-csv" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E4%B8%8A%E4%BC%A0csv.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E4%B8%8A%E4%BC%A0csv_1.png" /></p>
+<h3 id="43">4.3 点击场景页面右下角 “+” 号，导入登录接口用例和循环控制器<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E5%99%A8.png" /></p>
+<h3 id="44">4.4 设置请求参数<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0.png" /></p>
+<h3 id="45">4.5 设置断言规则，判断预期结果和实际结果<a class="headerlink" href="#45" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E6%96%AD%E8%A8%80.png" /></p>
+<h3 id="46">4.6 选择环境，点击执行，生成测试报告<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/use_ddt/%E6%8A%A5%E5%91%8A.png" /></p>
 
 
   
