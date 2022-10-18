@@ -18,7 +18,7 @@
 ## 1 本地调试
 ### 1.1 前提
 MeterSphere 服务端和本机在同一网络环境 <br>
-下载浏览器驱动-运行驱动-将本地运行 Selenium-server 配置到 MeterSphere 平台，详情参考: https://metersphere.io/docs/v2.x/tutorial/UI 测试调用远程服务器/#2-metersphere
+下载浏览器驱动-运行驱动-将本地运行 Selenium-server 配置到 MeterSphere 平台，详情参考: [UI 测试调用远程服务器](https://metersphere.io/docs/v2.x/tutorial/UI 测试调用远程服务器/#2-metersphere)
 
 ### 1.2 上传图片
 输入框中，可以直接写入图片的本地路径，进行图片上传，并且在后置操作中设置等待时间 <br>
