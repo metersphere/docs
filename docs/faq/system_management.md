@@ -59,8 +59,8 @@ VALUES (UUID(), 'admin', 'admin', 'system', 1622183788364, 1622183788364);
 
 ## 13 MeterSphere 如何对接第三方平台
 ```
-对接TAPD: 参考 https://metersphere.io/docs/tutorial/use_tapd/
-对接JIRA: 参考 https://metersphere.io/docs/tutorial/use_jira/
-对接禅道:  参考 https://metersphere.io/docs/tutorial/use_zentao/
+对接TAPD: 参考 https://metersphere.io/docs/v2.x/tutorial/对接 TAPD/
+对接JIRA: 参考 https://metersphere.io/docs/v2.x/tutorial/对接 JIRA/
+对接禅道:  参考 https://metersphere.io/docs/v2.x/tutorial/对接禅道/
 ```
 
