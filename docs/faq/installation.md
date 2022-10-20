@@ -71,24 +71,18 @@ docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allo
 
 修改单个接口的连接超时时间。
 
-## 15 数据库如何不区分大小写
-
-chmod 655 /opt/metersphere/conf/my.cnf 
-
-修改完成后，重启数据库。
-
-## 16 docker-compose 版本与配置文件不兼容，提示请重新安装最新版本的 docker-compose。
+## 15 docker-compose 版本与配置文件不兼容，提示请重新安装最新版本的 docker-compose。
 
 可以把安装包里的docker-compose-xx 在安装目录替换一下。
 
-## 17 设置数据库忽略大小未生效，lower_case_table_names=1
+## 16 设置数据库忽略大小未生效，lower_case_table_names=1
 
 ```
 chmod /opt/metersphere/conf/my.cnf 
 然后重启数据库 docker restart mysql
 ```
 
-## 18 如何删除kafka中的临时数据，减低磁盘使用率
+## 17 如何删除kafka中的临时数据，减低磁盘使用率
 ```
 docker stop kafka；
 docker stop zookeeper；
@@ -99,41 +93,41 @@ rm -rf /opt/metersphere/data/zookeeper/zookeeper；
 msctl reload；
 ```
 
-## 19 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
+## 18 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
 ```
 增大堆内存:
 set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=1024m;
 ```
 
-## 20 jenkins插件验证通过后找不到工作空间
+## 19 jenkins插件验证通过后找不到工作空间
 检查地址，地址里多了/login路径会出现这个现象
 
-## 21 jar包存储位置
+## 20 jar包存储位置
 /opt/metersphere/data/jar
 
-## 22 升级或安装时后台报错:image not found : xxxxxx；
+## 21 升级或安装时后台报错:image not found : xxxxxx；
 需要在执行机上docker pull该镜像，或下载完整离线安装包；
 
-## 23 前端执行性能测试或接口场景报错：请检查当前站点url配置；
+## 22 前端执行性能测试或接口场景报错：请检查当前站点url配置；
 本地搭建的可能要把localhost改为具体IP；
 
-## 24 部署和升级时后台报错：error: ms-data-streaming is unhealthy； error:encountered errors while bringing up the project；
+## 23 部署和升级时后台报错：error: ms-data-streaming is unhealthy； error:encountered errors while bringing up the project；
 msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 删除多余网桥，msctl reload重启；
 
-## 25 怎样监控被压测的机器
+## 24 怎样监控被压测的机器
 在被测服安装node-exporter服务，然后在性能测试中高级配置里添加监控，填写被测服node-exporter服务的ip和端口以及监控项
 
-## 26 忘记 Metersphere密码
+## 25 忘记 Metersphere密码
 ```
 进入容器: docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
 使用数据库: use metersphere;
 更新密码为metersphere: update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
 ```
 
-## 27 日志报缺少某些类的属性
+## 26 日志报缺少某些类的属性
 这种情况大概率是安装包不全，或者镜像版本不一致导致的，可以重新下载安装包来进行镜像替换后或者重新安装来解决；
 
-## 28 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
+## 27 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
 ```
 1.可以删除多余的镜像；
 2.可以删除历史log文件；
@@ -141,7 +135,7 @@ msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 �
 4.可以删除多余安装包和解压包；
 ```
 
-## 29 MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
+## 28 MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
 ```
 chmod -R 755 /opt/metersphere/conf/prometheus
 docker stop ms-prometheus
@@ -149,7 +143,7 @@ docker rm ms-prometheus
 msctl reload
 ```
 
-## 30 遇到redis启动不起来，一直处于Restarting的问题
+## 29 遇到redis启动不起来，一直处于Restarting的问题
 ```
 chmod -R 755 /opt/metersphere/conf/redis.conf
 docker stop redis
@@ -157,24 +151,24 @@ docker rm redis
 msctl reload
 ```
 
-## 31 Redis无法连接
+## 30 Redis无法连接
 ```
 1.查看防护墙是否开启，如果防火墙开启了，查看6379端口是否开放，查看.env文件中配置的Redis地址是否是对于的服务器的IP地址；
 2.可以开放6379端口或者关闭防火墙后重启服务；
 3.确认日志中连不上的ip是redis的ip(Mac: ifconfig |grep "inet"|grep -v 127.0.0.1; Linux: hostname -I)
 ```
 
-## 32 安装metersphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
+## 31 安装metersphere遇到内核之类的问题如何解决？docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed。。。
 ```
 1. 打开daemon.json文件, vi /etc/docker/daemon.json
 2. 将"exec-opts": ["native.cgroupdriver=systemd"]删掉即可, 重启docker：service docker restart
 3. 重启服务，msctl reload
 ```
 
-## 33 环境变量和场景变量，用同个变量名，变量优先级是怎样的
+## 32 环境变量和场景变量，用同个变量名，变量优先级是怎样的
 环境变量 < 整体的场景变量 < 步骤内变量< 步骤原场景变量（如勾选）
 
-## 34 遇到MYSQL连接数太多如何处理？java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
+## 33 遇到MYSQL连接数太多如何处理？java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
 ```
 大概率是自带的my.cnf没有生效，没生效的原因为my.cnf文件权限不对：
 show variables like "max_connections"
@@ -184,26 +178,26 @@ docker rm mysql
 msctl reload
 ```
 
-## 35 后台日志出现SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
+## 34 后台日志出现SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
 修改环境中的数据库配置文件。 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE
 
-## 36 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
+## 35 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
 在数据库后面添加 ?createDatabaseIfNotExist=true&useSSL=false；
 
-## 37 msctl status显示服务正常，但是实际服务却访问不了怎么办？
+## 36 msctl status显示服务正常，但是实际服务却访问不了怎么办？
 ```
 清浏览器缓存，关闭浏览器重新访问
 IP访问：检查防火墙（firewalld,iptables等）
 域名访问：检查防火墙及NGINX等网络相关配置
 ```
 
-## 安装报错/var/lib/docker/overlay2/xxxx no such file or directory
+## 37 安装报错/var/lib/docker/overlay2/xxxx no such file or directory
 docker 的持久化数据目录被删除了，要重装docker，建议以后不要清理/var/lib/docker/overlay2目录了。
 
-## 39 修改session过期时间
+## 38 修改session过期时间
 /opt/metersphere/conf/metersphere.properties 添加配置 session.timeout，单位是秒
 
-## 40 K8S 部署 metersphere 出现 413 request entity too large
+## 39 K8S 部署 metersphere 出现 413 request entity too large
 ```
 #ngnix请求破除1m限制，
 kubectl edit ingress metersphere
@@ -216,14 +210,14 @@ meta.helm.sh/release-namespace: default
 nginx.ingress.kubernetes.io/proxy-body-size: 50m
 ```
 
-## 41 主机部署 metersphere 出现 413 request entity too large
+## 40 主机部署 metersphere 出现 413 request entity too large
 ```
 1. 打开nginx服务的配置文件nginx.conf
 2. 在http{}中加入client_max_body_size xxm, xx根据需求改动
 3. 保存后重启nginx，问题解决
 ```
 
-## 42 调试单接口、接口自动化场景、UI 场景时，页面报 “连接异常，请检查环境配置”，或者 “一直加载” ，按 F12，打开浏览器控制台可以看到 “WebSocket 连接失败，失败信息为 “WebSocket connection to 'wss://xxx.fit2cloud.com/ws/4445ba22' failed:”
+## 41 调试单接口、接口自动化场景、UI 场景时，页面报 “连接异常，请检查环境配置”，或者 “一直加载” ，按 F12，打开浏览器控制台可以看到 “WebSocket 连接失败，失败信息为 “WebSocket connection to 'wss://xxx.fit2cloud.com/ws/4445ba22' failed:”
 
 ![! WebSocket连接异常](../img/faq/websocket连接异常.png)
 
@@ -247,15 +241,15 @@ server{
 }
 ```
 
-## 43 登录进去后，点击任一菜单会立马跳到登录页面
+## 42 登录进去后，点击任一菜单会立马跳到登录页面
 执行 msctl reload 就好了
 
-## 44 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
+## 43 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
 1.是不是使用NG了，需要进行配置，可参考 https://metersphere.io/docs/v1.20.x-lts/installation/offline_installation/ <br>
 2.是不是打开了代理，如 fidder、charles 等工具 <br>
 3.是不是使用 https://ip:8081 被拦截了,使用 http://ip:8081 就行 <br>
 
-## 45 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
+## 44 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
 ![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
 
 1.清浏览器缓存，重新打开浏览器进行访问 <br>
@@ -267,12 +261,12 @@ auth Password123@redis
 flushall
 ```
 
-## 46 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
+## 45 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
 ![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
 
 检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere
 
-## 47 k8s 中如何控制数据库的连接数
+## 46 k8s 中如何控制数据库的连接数
 1.可在名称为 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数 <br>
 2.可在名称为 values.yml 文件里，DATABASE 处新增如下两行参数
 ```
@@ -280,24 +274,24 @@ spring.datasource.hikari.maximum-pool-size=你想要的数值
 spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 ```
 
-## 48 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
+## 47 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting
 在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg)
 
-## 49 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+## 48 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
 1.docker network prune 清除子网网段; <br>
 2.docker network create metersphere_ms-network ;<br>
 3./opt/metersphere/.env 里的子网改成别的 MS_DOCKER_SUBNET=172.30.11.0/24 ;<br>
 4.重启服务器
 
-## 50 could not find properties[/opt/metersphere/conf/metersphere.properties]
+## 49 could not find properties[/opt/metersphere/conf/metersphere.properties]
 安装包放的目录位置不对，将 metersphere-offcial-XX.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。
 
-## 51 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
+## 50 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space
 在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
 ![! metersphere导入格式](../img/faq/java_heap_space.jpg)
 
-## 52 ERROR Unable to write to Kafka in appender [Kafka]
+## 51 ERROR Unable to write to Kafka in appender [Kafka]
 ```
 docker stop kafka 
 docker stop zookeeper 
