@@ -123,6 +123,7 @@ nav:
               - MeterSphere 浏览器插件: user_manual/plugin_use/chrome_plugin.md
               - Jenkins 插件: user_manual/plugin_use/jenkins_plugin.md
               - IDEA 插件: user_manual/plugin_use/idea_plugin.md
+              - Selenium IDE 插件: user_manual/plugin_use/selenium_ide_plugin.md
     - 使用教程: tutorial/using_tutorial.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
