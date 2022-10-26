@@ -133,6 +133,7 @@ nav:
           - 性能测试相关: faq/load_test.md
           - 报表统计相关: faq/report_statistics.md
           - 系统设置相关: faq/system_management.md
+          - 服务集成相关: faq/service_integration.md
           - 企业版相关: faq/enterprise.md
     - 开发文档: dev_manual.md
     - 用户案例:
