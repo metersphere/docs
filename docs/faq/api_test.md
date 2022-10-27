@@ -319,3 +319,6 @@ jmx 脚本用 jmeter 打开，看是不是被禁用了,手动开启后导入即�
 
 ## 52 ERROR StandardJMeterEngine JDBC data source already defined for:测试环境数据库
 查看数据库-数据源，修改最大连接数
+
+## 53 导入 JMeter 的 JMX 文件时，页面提示“文件解析错误”，后台报错信息为 "当前JMX版本不兼容"
+脚本中使用了 JMeter 第三方插件，需要将 JMeter 第三方插件包上传到 MS 服务器的 ms-server 容器 /app/lib 目录下，重启 ms-server 服务后，即可正常导入
