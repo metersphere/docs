@@ -2687,7 +2687,7 @@ cd zk
 mkdir data logs 
 
 3.进入conf，将zoo_sample.cfg复制重命名zoo.cfg
-cd zk/conf
+cd conf
 cp zoo_sample.cfg zoo.cfg
 
 4.修改conf下zoo.cfg
@@ -2808,7 +2808,7 @@ WantedBy=multi-user.target
 保存退出，刷新一下
 <div class="highlight"><pre><span></span><code>systemctl daemon-reload
 systemctl start kafka
-systemctl enable kfka
+systemctl enable kafka
 systemctl status kafka
 </code></pre></div>
 <img alt="配置kafka状态地址" height="100%" src="../../img/installation/dis_pressure/kafka%E7%8A%B6%E6%80%81.png" width="70%" /> <br></p>
