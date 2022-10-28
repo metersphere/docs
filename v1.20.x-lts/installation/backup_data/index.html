@@ -2601,7 +2601,7 @@ done
 <p>install_ms_backup.sh
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
-timedate_fields=&quot;0 1 * * *&quot;  //每天凌晨1:00执行备份程序
+timedate_fields=&quot;0 1 * * *&quot;  #每天凌晨1:00执行备份程序
 cmd=&quot;bash /opt/db_bak/ms_backup.sh&quot;
 crontab -l | grep &quot;$cmd &quot; &gt; /dev/null 2&gt;&amp;1
 if test $? -ne 0; then
@@ -2610,6 +2610,7 @@ if test $? -ne 0; then
     crontab crontab.tmp
 fi
 </code></pre></div></p>
+<p>执行 crontab -l 即可</p>
 
 
   
