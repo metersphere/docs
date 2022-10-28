@@ -50,7 +50,7 @@ install_ms_backup.sh
 ```
 #!/bin/bash
 
-timedate_fields="0 1 * * *"  //每天凌晨1:00执行备份程序
+timedate_fields="0 1 * * *"  #每天凌晨1:00执行备份程序
 cmd="bash /opt/db_bak/ms_backup.sh"
 crontab -l | grep "$cmd " > /dev/null 2>&1
 if test $? -ne 0; then
@@ -59,3 +59,5 @@ if test $? -ne 0; then
     crontab crontab.tmp
 fi
 ```
+
+执行 crontab -l 即可
