@@ -44,7 +44,7 @@ MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在
 
 ## 技术栈
 
-- 后端: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
+- 后端: [Spring Cloud](https://www.tutorialspoint.com/spring_cloud/spring_cloud_introduction.htm)
 - 前端: [Vue.js](https://vuejs.org/)
 - 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/), [Redis](https://redis.io/), [Prometheus](https://prometheus.io/)
 - 基础设施: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
