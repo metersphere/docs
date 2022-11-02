@@ -6,7 +6,7 @@
 
 ```sh
 # 进入离线部署包解压缩目录
-cd metersphere-release-v1.x.y-offline
+cd metersphere-release-v2.x.y-offline
 
 # 运行安装脚本
 /bin/bash install.sh
