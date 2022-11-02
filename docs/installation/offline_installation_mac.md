@@ -19,6 +19,7 @@
 ![安装MeterSphere](../img/installation/mac-install-metersphere.png){ width="900px" }
 
 解压安装包，进入目录，执行安装命令 sh install.sh，安装过程中的提示，输入 y
+
 ![安装MeterSphere](../img/installation/mac-install-tar.png){ width="900px" }
 
 ![安装MeterSphere](../img/installation/mac-install-sh.png){ width="900px" }
