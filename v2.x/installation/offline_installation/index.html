@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://metersphere.io/v2.x/installation/offline_installation/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
     
     
       
@@ -2717,12 +2717,12 @@
 <p>以 root 用户 ssh 登录到目标机器, 并执行如下命令。</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> /tmp
 <span class="c1"># 解压安装包</span>
-tar zxvf metersphere-release-v1.0.3-offline.tar.gz
+tar zxvf metersphere-release-v2.3.0-offline.tar.gz
 </code></pre></div>
 <h2 id="4">4 修改安装配置(可选)<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <h3 id="41">4.1 解压<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
 <p>在安装包解压后的目录，编辑修改安装参数。</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> metersphere-release-v1.0.3-offline
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> metersphere-release-v2.3.0-offline
 vim install.conf
 </code></pre></div>
 <h3 id="42">4.2 安装配置文件说明<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
@@ -2736,9 +2736,9 @@ MS_DOCKER_SUBNET<span class="p">=</span><span class="m">172</span>.<span class="
 ## 镜像前缀<span class="p">,</span> MeterSphere 相关组件使用的 Docker 镜像前缀<span class="p">,</span> 例如 registry.<span class="k">cn</span><span class="p">-</span>qingdao.aliyuncs.<span class="k">com</span>/metersphere
 MS_IMAGE_PREFIX<span class="p">=</span>registry.<span class="k">cn</span><span class="p">-</span>qingdao.aliyuncs.<span class="k">com</span>/metersphere
 ## 镜像标签<span class="p">,</span> MeterSphere 相关组件使用的 Docker 镜像标签
-MS_IMAGE_TAG<span class="p">=</span>v1.<span class="m">19</span>.<span class="m">1</span>
+MS_IMAGE_TAG<span class="p">=</span>v2.<span class="m">3</span>.<span class="m">0</span>
 ## 性能测试使用的 JMeter 镜像
-MS_JMETER_IMAGE<span class="p">=</span>${MS_IMAGE_PREFIX}/jmeter<span class="p">-</span>master:<span class="m">5</span>.<span class="m">4</span>.<span class="m">3</span><span class="p">-</span>ms4<span class="p">-</span>jdk8
+MS_JMETER_IMAGE<span class="p">=</span>${MS_IMAGE_PREFIX}/jmeter<span class="p">-</span>master:<span class="m">5</span>.<span class="m">5</span><span class="p">-</span>ms2<span class="p">-</span>jdk11
 ## 安装模式
 MS_INSTALL_MODE<span class="p">=</span>allinone
 ## MeterSphere 主程序的 HTTP 服务监听端口
@@ -2792,12 +2792,21 @@ MS_KAFKA_TEST_TOPIC<span class="p">=</span>LOAD_TESTS
 ## 重构后性能测试结果数据使用的 Kafka Topic
 MS_KAFKA_REPORT_TOPIC<span class="p">=</span>JMETER_REPORTS
 
-# TCP MOCK 端口范围
-MS_TCP_MOCK_PORT<span class="p">=</span><span class="m">10000-10010</span>
+# UI容器配置
+## 是否启动UI模块
+MS_UI_ENABLED<span class="p">=</span>false
+## 是否启动工作台容器
+MS_WORKSTATION_ENABLED<span class="p">=</span>false
 
-# Chrome 容器配置
-## 是否启动Chrome容器
-MS_CHROME_ENABLED<span class="p">=</span>false
+# minio 配置
+## 是否使用外部minio
+MS_EXTERNAL_MINIO<span class="p">=</span>false
+## minio 地址
+MS_MINIO_ENDPOINT<span class="p">=</span>http:<span class="sr">//</span>minio:<span class="m">9000</span>
+## minio access
+MS_MINIO_ACCESS_KEY<span class="p">=</span>admin
+## minio 密码
+MS_MINIO_SECRET_KEY<span class="p">=</span>Password123@minio
 </code></pre></div>
 </div>
 <h3 id="43">4.3 数据库配置文件说明<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
@@ -2805,27 +2814,41 @@ MS_CHROME_ENABLED<span class="p">=</span>false
 <p class="admonition-title">注意</p>
 <p>如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。</p>
 <div class="highlight"><pre><span></span><code>[mysqld]
+datadir=/var/lib/mysql
+
 default-storage-engine=INNODB
+character_set_server=utf8mb4
 lower_case_table_names=1
+performance_schema=off
 table_open_cache=128
-max_connections=2000
-max_connect_errors=6000
-innodb_file_per_table=1
-innodb_buffer_pool_size=1G
-max_allowed_packet=64M
 transaction_isolation=READ-COMMITTED
+max_connections=1000
+max_connect_errors=6000
+max_allowed_packet=64M
+innodb_file_per_table=1
+innodb_buffer_pool_size=512M
 innodb_flush_method=O_DIRECT
 innodb_lock_wait_timeout=1800
-innodb_flush_log_at_trx_commit=0
-sync_binlog=0
 
 server-id=1
 log-bin=mysql-bin
 expire_logs_days = 2
 binlog_format=mixed
 
-sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+character-set-client-handshake = FALSE
+character-set-server=utf8mb4
+collation-server=utf8mb4_general_ci
+init_connect=&#39;SET default_collation_for_utf8mb4=utf8mb4_general_ci&#39;
+
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+
 skip-name-resolve
+
+[mysql]
+default-character-set=utf8mb4
+
+[mysql.server]
+default-character-set=utf8mb4
 </code></pre></div>
 <p>请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n n-Quoted">`metersphere`</span><span class="w"> </span><span class="cm">/*!40100 DEFAULT CHARACTER SET utf8mb4 */</span><span class="w"></span>
@@ -2840,12 +2863,22 @@ skip-name-resolve
 ├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
 ├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
 ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
+├── docker-compose-gateway.yml                  #-- MeterSphere 的 API 网关
+├── docker-compose-eureka.yml                   #-- MeterSphere 的服务注册中心
 ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
+├── docker-compose-workstation.yml              #-- MeterSphere 工作台模块的 Docker Compose 文件 
+├── docker-compose-test-track.yml               #-- MeterSphere 测试跟踪模块的 Docker Compose 文件 
+├── docker-compose-api-test.yml                 #-- MeterSphere 接口测试模块的 Docker Compose 文件 
+├── docker-compose-ui-test.yml                  #-- MeterSphere UI 测试模块的 Docker Compose 文件 
+├── docker-compose-performance-test.yml         #-- MeterSphere 性能测试模块的 Docker Compose 文件  
+├── docker-compose-report-stat.yml              #-- MeterSphere 报表统计模块的 Docker Compose 文件  
+├── docker-compose-project-management.yml       #-- MeterSphere 项目管理模块的 Docker Compose 文件  
+├── docker-compose-system-setting.yml           #-- MeterSphere 系统设置模块的 Docker Compose 文件  
 ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
 ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
 ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
-├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose文件
 ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
+├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
 ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
 ├── install.conf -&gt; /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
 ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
@@ -2854,13 +2887,13 @@ skip-name-resolve
 </div>
 <h2 id="5">5 执行安装脚本<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 进入安装包目录</span>
-<span class="nb">cd</span> metersphere-release-v1.0.3-offline
+<span class="nb">cd</span> metersphere-release-v2.3.0-offline
 <span class="c1"># 运行安装脚本</span>
 /bin/bash install.sh
-<span class="c1"># 等待安装脚本执行完成后，查看 MeterSphere 状态</span>
-msctl status
 </code></pre></div>
-<p>安装成功后，通过浏览器访问如下页面登录 MeterSphere。</p>
+<p>执行完安装脚本后，会在线拉取镜像，等提示安装完成后，可以用 msctl status 查看服务各个组件状态
+<img alt="服务状态" src="../../img/installation/ms-status.png" /></p>
+<p>等待2分钟至各个组件都是 healthy 状态后，可通过浏览器访问如下页面登录 MeterSphere。</p>
 <div class="highlight"><pre><span></span><code>地址: http://目标服务器IP地址:8081
 用户名: admin
 密码: metersphere

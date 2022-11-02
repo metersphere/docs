@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://metersphere.io/v2.x/installation/online_upgrade/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
     
     
       
@@ -2599,25 +2599,21 @@ msctl status
 </code></pre></div>
 <h2 id="2">2 一键升级至指定版本<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 升级至指定版本</span>
-msctl upgrade v1.x.y
+msctl upgrade v2.x.y
 
 <span class="c1"># 查看 MeterSphere 状态</span>
 msctl status
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">注意</p>
-<p>自 MeterSphere v1.3.0 起之后的版本才提供 upgrade 命令。</p>
-</div>
 <h2 id="3">3 手动升级<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>GitHub release 链接: <a href="https://github.com/metersphere/metersphere/releases">https://github.com/metersphere/metersphere/releases</a>
 <div class="highlight"><pre><span></span><code><span class="c1"># 下载在线安装包</span>
-wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.x.y.tar.gz
+wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v2.x.y.tar.gz
 
 <span class="c1"># 解压在线安装包</span>
-tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
+tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
 
 <span class="c1"># 进入解压缩目录</span>
-<span class="nb">cd</span> metersphere-online-installer-v1.x.y
+<span class="nb">cd</span> metersphere-online-installer-v2.x.y
 
 <span class="c1"># 执行install.sh安装脚本</span>
 /bin/bash install.sh
