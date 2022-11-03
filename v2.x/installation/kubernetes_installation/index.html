@@ -2739,8 +2739,8 @@ helm upgrade  metersphere metersphere/metersphere -n ms
 <div class="highlight"><pre><span></span><code>helm upgrade metersphere metersphere-1.0.10.tgz -n ms
 </code></pre></div>
 <h3 id="valuesyaml">values.yaml<a class="headerlink" href="#valuesyaml" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>ingress:    <span class="c1"># 不使用 ingress 可以关闭</span>
-  enabled: <span class="nb">true</span>        
+<div class="highlight"><pre><span></span><code>ingress: <span class="c1"># 不使用 ingress 可以关闭</span>
+  enabled: <span class="nb">true</span>
   host: ms-dev.apps.metersphere.com
   annotations: <span class="o">{}</span>
     <span class="c1">## example for ingress annotions.</span>
@@ -2754,95 +2754,116 @@ common:
   imagePrefix: <span class="s2">&quot;registry.cn-qingdao.aliyuncs.com/metersphere/&quot;</span>
   imagePullSecrets: nil
   storageClass: default
-  imageTag: v1.20.0-lts
-  imagePullPolicy: Always
-  mysql:        <span class="c1"># 数据库相关配置</span>
-    host: metersphere-mysql
-    port: <span class="m">3306</span>
-    username: root
-    password: Password123@mysql
-  redis:        <span class="c1"># Redis相关配置</span>
-    host: metersphere-redis
-    port: <span class="m">6379</span>
-    password: Password123@redis
-    database: <span class="m">1</span>
-  kafka:        <span class="c1"># Kafka相关配置</span>
-    host: metersphere-kafka 
-    port: <span class="m">9092</span>
-    metricTopic: JMETER_METRICS
-    logTopic: JMETER_LOGS
-    testTopic: LOAD_TESTS
-    reportTopic: JMETER_REPORTS
-
-server:
-  enabled: <span class="nb">true</span>
-  image: metersphere
-  replicas: <span class="m">1</span>
+  imageTag: v2.3.0     <span class="c1"># 安装的版本号</span>
+  imagePullPolicy: Always  <span class="c1"># 镜像拉取策略</span>
   properties: <span class="p">|</span>-
     <span class="c1">## DATABASE</span>
-    spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.common.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span><span class="nb">false</span>
-    spring.datasource.username<span class="o">={{</span>.Values.common.mysql.username<span class="o">}}</span>
-    spring.datasource.password<span class="o">={{</span>.Values.common.mysql.password<span class="o">}}</span>
-
+    spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span>false<span class="p">&amp;</span><span class="nv">allowPublicKeyRetrieval</span><span class="o">=</span><span class="nb">true</span>
+    spring.datasource.username<span class="o">={{</span>.Values.mysql.username<span class="o">}}</span>
+    spring.datasource.password<span class="o">={{</span>.Values.mysql.password<span class="o">}}</span>
     <span class="c1">## redis</span>
     spring.session.store-type<span class="o">=</span>redis
-    spring.redis.host<span class="o">={{</span>.Values.common.redis.host<span class="o">}}</span>
-    spring.redis.port<span class="o">={{</span>.Values.common.redis.port<span class="o">}}</span>
-    spring.redis.database<span class="o">={{</span>.Values.common.redis.database<span class="o">}}</span>
-    spring.redis.password<span class="o">={{</span>.Values.common.redis.password<span class="o">}}</span>
-
+    spring.redis.host<span class="o">={{</span>.Values.redis.host<span class="o">}}</span>
+    spring.redis.port<span class="o">={{</span>.Values.redis.port<span class="o">}}</span>
+    spring.redis.database<span class="o">={{</span>.Values.redis.database<span class="o">}}</span>
+    spring.redis.password<span class="o">={{</span>.Values.redis.password<span class="o">}}</span>
     <span class="c1">## KAFKA</span>
     kafka.partitions<span class="o">=</span><span class="m">1</span>
     kafka.replicas<span class="o">=</span><span class="m">1</span>
-    kafka.topic<span class="o">={{</span>.Values.common.kafka.metricTopic<span class="o">}}</span>
-    kafka.bootstrap-servers<span class="o">={{</span>.Values.common.kafka.host<span class="o">}}</span>.<span class="o">{{</span>.Release.Namespace<span class="o">}}</span>:<span class="o">{{</span>.Values.common.kafka.port<span class="o">}}</span>
-    kafka.log.topic<span class="o">={{</span>.Values.common.kafka.logTopic<span class="o">}}</span>
-    kafka.test.topic<span class="o">={{</span>.Values.common.kafka.testTopic<span class="o">}}</span>
-    kafka.report.topic<span class="o">={{</span>.Values.common.kafka.reportTopic<span class="o">}}</span>
+    kafka.topic<span class="o">={{</span>.Values.kafka.metricTopic<span class="o">}}</span>
+    kafka.bootstrap-servers<span class="o">={{</span>.Values.kafka.host<span class="o">}}</span>.<span class="o">{{</span>.Release.Namespace<span class="o">}}</span>:<span class="o">{{</span>.Values.kafka.port<span class="o">}}</span>
+    kafka.log.topic<span class="o">={{</span>.Values.kafka.logTopic<span class="o">}}</span>
+    kafka.test.topic<span class="o">={{</span>.Values.kafka.testTopic<span class="o">}}</span>
+    kafka.report.topic<span class="o">={{</span>.Values.kafka.reportTopic<span class="o">}}</span>
     tcp.mock.port<span class="o">=</span><span class="m">10000</span>
-
+    <span class="c1">## minio</span>
+    minio.endpoint<span class="o">=</span>http://<span class="o">{{</span>.Values.minio.host<span class="o">}}</span>:<span class="o">{{</span>.Values.minio.port<span class="o">}}</span>
+    minio.access-key<span class="o">={{</span>.Values.minio.username<span class="o">}}</span>
+    minio.secret-key<span class="o">={{</span>.Values.minio.password<span class="o">}}</span>
     <span class="c1">## JMETER</span>
     jmeter.image<span class="o">={{</span> .Values.common.imagePrefix <span class="o">}}{{</span>.Values.jmeter.image<span class="o">}}</span>:<span class="o">{{</span>.Values.jmeter.imageTag<span class="o">}}</span>
     jmeter.pod.threads.limit<span class="o">=</span><span class="m">500</span>
-
     <span class="c1">## K8S</span>
     k8s.node-controller-image<span class="o">={{</span> .Values.common.imagePrefix <span class="o">}}{{</span>.Values.nodeController.image<span class="o">}}</span>:<span class="o">{{</span>.Values.common.imageTag<span class="o">}}</span>
-
+    <span class="c1">## spring cloud</span>
+    eureka.client.service-url.defaultZone<span class="o">=</span>http://<span class="o">{{</span>.Values.eureka.host<span class="o">}}</span>:<span class="o">{{</span>.Values.eureka.port<span class="o">}}</span>/eureka/
     logger.sql.level<span class="o">=</span>info
-
-dataStreaming:
+apiTest:  <span class="c1"># 接口测试模块,可以修改为false,启动时不再安装接口测试模块</span>
   enabled: <span class="nb">true</span>
-  image: ms-data-streaming
+  image: api-test
+  replicas: <span class="m">1</span>
+
+performanceTest: <span class="c1"># 性能测试模块,可以修改为false,启动时不再安装性能测试模块</span>
+  enabled: <span class="nb">true</span>
+  image: performance-test
+  replicas: <span class="m">1</span>
+
+systemSetting: <span class="c1"># 系统设置模块,可以修改为false,启动时不再安装系统设置模块</span>
+  enabled: <span class="nb">true</span>
+  image: system-setting
+  replicas: <span class="m">1</span>
+
+projectManagement: <span class="c1"># 项目管理模块,可以修改为false,启动时不再安装项目管理模块</span>
+  enabled: <span class="nb">true</span>
+  image: project-management
+  replicas: <span class="m">1</span>
+
+reportStat:  <span class="c1"># 报告管理模块,可以修改为false,启动时不再安装报告管理模块</span>
+  enabled: <span class="nb">true</span>
+  image: report-stat
+  replicas: <span class="m">1</span>
+
+testTrack: <span class="c1"># 测试跟踪模块,可以修改为false,启动时不再安装测试跟踪模块</span>
+  enabled: <span class="nb">true</span>
+  image: test-track
+  replicas: <span class="m">1</span>
+
+gateway: <span class="c1"># 网关,可以修改为false,启动时不再安装</span>
+  enabled: <span class="nb">true</span>
+  image: gateway
+  replicas: <span class="m">1</span>
+
+eureka: <span class="c1"># 服务注册中心,可以修改为false,启动时不再安装</span>
+  enabled: <span class="nb">true</span>
+  image: eureka
+  host: metersphere-eureka
+  port: <span class="m">8761</span>
+  replicas: <span class="m">1</span>
+
+dataStreaming: 
+  enabled: <span class="nb">true</span>
+  image: data-streaming
   replicas: <span class="m">1</span>
   properties: <span class="p">|</span>-
     <span class="c1">## DATABASE</span>
-    spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.common.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span><span class="nb">false</span>
-    spring.datasource.username<span class="o">={{</span>.Values.common.mysql.username<span class="o">}}</span>
-    spring.datasource.password<span class="o">={{</span>.Values.common.mysql.password<span class="o">}}</span>
-
+    spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span>false<span class="p">&amp;</span><span class="nv">allowPublicKeyRetrieval</span><span class="o">=</span><span class="nb">true</span>
+    spring.datasource.username<span class="o">={{</span>.Values.mysql.username<span class="o">}}</span>
+    spring.datasource.password<span class="o">={{</span>.Values.mysql.password<span class="o">}}</span>
     <span class="c1">## KAFKA</span>
     kafka.partitions<span class="o">=</span><span class="m">1</span>
     kafka.replicas<span class="o">=</span><span class="m">1</span>
-    kafka.topic<span class="o">={{</span>.Values.common.kafka.metricTopic<span class="o">}}</span>
-    kafka.bootstrap-servers<span class="o">={{</span>.Values.common.kafka.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.kafka.port<span class="o">}}</span>
-    kafka.log.topic<span class="o">={{</span>.Values.common.kafka.logTopic<span class="o">}}</span>
-    kafka.test.topic<span class="o">={{</span>.Values.common.kafka.testTopic<span class="o">}}</span>
-    kafka.report.topic<span class="o">={{</span>.Values.common.kafka.reportTopic<span class="o">}}</span>
+    kafka.topic<span class="o">={{</span>.Values.kafka.metricTopic<span class="o">}}</span>
+    kafka.bootstrap-servers<span class="o">={{</span>.Values.kafka.host<span class="o">}}</span>:<span class="o">{{</span>.Values.kafka.port<span class="o">}}</span>
+    kafka.log.topic<span class="o">={{</span>.Values.kafka.logTopic<span class="o">}}</span>
+    kafka.test.topic<span class="o">={{</span>.Values.kafka.testTopic<span class="o">}}</span>
+    kafka.report.topic<span class="o">={{</span>.Values.kafka.reportTopic<span class="o">}}</span>
     jmeter.report.granularity<span class="o">=</span><span class="m">5000</span>
-
+    <span class="c1">## minio</span>
+    minio.endpoint<span class="o">=</span>http://<span class="o">{{</span>.Values.minio.host<span class="o">}}</span>:<span class="o">{{</span>.Values.minio.port<span class="o">}}</span>
+    minio.access-key<span class="o">={{</span>.Values.minio.username<span class="o">}}</span>
+    minio.secret-key<span class="o">={{</span>.Values.minio.password<span class="o">}}</span>
 nodeController:
   enabled: <span class="nb">true</span>
-  image: ms-node-controller
+  image: node-controller
   replicas: <span class="m">1</span>
   properties: <span class="p">|</span>-
     <span class="c1">## TBD</span>
-
 jmeter:
   image: jmeter-master
   imageTag: <span class="m">5</span>.4.3-ms5-jdk11
 
 logPersistence:
-  enabled: <span class="nb">false</span>
+  enabled: <span class="nb">true</span>
   accessModes: ReadWriteOnce
   size: 10Gi
 
@@ -2851,31 +2872,51 @@ dataPersistence:
   accessModes: ReadWriteOnce
   size: 10Gi
 
-mysql:      
-  enabled: <span class="nb">true</span>     <span class="c1"># 引用外部数据库时，可以修改为false,启动时不再安装mysql</span>
+mysql:  <span class="c1"># 引用外部数据库时，可以修改为false,启动时不再安装mysql</span>
+  enabled: <span class="nb">true</span>
   image: mysql
-  imageTag: <span class="s2">&quot;5.7.25&quot;</span>
+  imageTag: <span class="s2">&quot;8.0.30&quot;</span>
+  host: metersphere-mysql
+  port: <span class="m">3306</span>
+  username: root
   password: Password123@mysql
   persistence:
     enabled: <span class="nb">true</span>
     accessModes: ReadWriteOnce
     size: 20Gi
-redis:
-  enabled: <span class="nb">true</span>     <span class="c1"># 引用外部redis时，可以修改为false,启动时不再安装redis</span>
+minio:
+  enabled: <span class="nb">true</span>
+  image: minio
+  imageTag: <span class="s2">&quot;latest&quot;</span>
+  username: admin
+  password: Password123@minio
+  host: metersphere-minio
+  port: <span class="m">9000</span>
+  persistence:
+    enabled: <span class="nb">true</span>
+    accessModes: ReadWriteOnce
+    size: 20Gi
+redis:   <span class="c1"># 引用外部redis时，可以修改为false,启动时不再安装redis</span>
+  enabled: <span class="nb">true</span>
   image: redis
   imageTag: <span class="s2">&quot;6.2.6&quot;</span>
   password: Password123@redis
+  host: metersphere-redis
+  port: <span class="m">6379</span>
+  database: <span class="m">1</span>
   persistence:
     enabled: <span class="nb">true</span>
     accessModes: ReadWriteOnce
     size: 10Gi
-kafka:
-  enabled: <span class="nb">true</span>     <span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装kafka</span>
-  image:
-    registry: registry.cn-qingdao.aliyuncs.com/metersphere
-    repository: kafka
-    tag: <span class="m">2</span>.8.1
+kafka:   <span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装kafka</span>
+  enabled: <span class="nb">true</span>
   fullnameOverride: metersphere-kafka
+  host: metersphere-kafka
+  port: <span class="m">9092</span>
+  metricTopic: JMETER_METRICS
+  logTopic: JMETER_LOGS
+  testTopic: LOAD_TESTS
+  reportTopic: JMETER_REPORTS
   persistence:
     enabled: <span class="nb">false</span>
   logPersistence:
@@ -2912,14 +2953,10 @@ kafka:
     persistence:
       enabled: <span class="nb">false</span>
     fullnameOverride: metersphere-zookeeper
-    image:
-      registry: registry.cn-qingdao.aliyuncs.com/metersphere
-      repository: zookeeper
-      tag: <span class="m">3</span>.7.0
   extraEnvVars:
     - name: FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS
       value: <span class="s2">&quot;true&quot;</span>
-zookeeper:      <span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装zookeeper</span>
+zookeeper:
   enabled: <span class="nb">true</span>
 </code></pre></div>
 <p>若想控制数据库的连接数，请在 values.yml 的 DATABASE 处，新增如下两行参数
