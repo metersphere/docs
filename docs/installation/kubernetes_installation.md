@@ -63,8 +63,8 @@ helm upgrade metersphere metersphere-1.0.10.tgz -n ms
 
 ### values.yaml
 ```sh
-ingress:    # 不使用 ingress 可以关闭
-  enabled: true        
+ingress: # 不使用 ingress 可以关闭
+  enabled: true
   host: ms-dev.apps.metersphere.com
   annotations: {}
     ## example for ingress annotions.
@@ -78,95 +78,116 @@ common:
   imagePrefix: "registry.cn-qingdao.aliyuncs.com/metersphere/"
   imagePullSecrets: nil
   storageClass: default
-  imageTag: v1.20.0-lts
-  imagePullPolicy: Always
-  mysql:        # 数据库相关配置
-    host: metersphere-mysql
-    port: 3306
-    username: root
-    password: Password123@mysql
-  redis:        # Redis相关配置
-    host: metersphere-redis
-    port: 6379
-    password: Password123@redis
-    database: 1
-  kafka:        # Kafka相关配置
-    host: metersphere-kafka 
-    port: 9092
-    metricTopic: JMETER_METRICS
-    logTopic: JMETER_LOGS
-    testTopic: LOAD_TESTS
-    reportTopic: JMETER_REPORTS
-
-server:
-  enabled: true
-  image: metersphere
-  replicas: 1
+  imageTag: v2.3.0     # 安装的版本号
+  imagePullPolicy: Always  # 镜像拉取策略
   properties: |-
     ## DATABASE
-    spring.datasource.url=jdbc:mysql://{{.Values.common.mysql.host}}:{{.Values.common.mysql.port}}/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    spring.datasource.username={{.Values.common.mysql.username}}
-    spring.datasource.password={{.Values.common.mysql.password}}
-
+    spring.datasource.url=jdbc:mysql://{{.Values.mysql.host}}:{{.Values.mysql.port}}/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    spring.datasource.username={{.Values.mysql.username}}
+    spring.datasource.password={{.Values.mysql.password}}
     ## redis
     spring.session.store-type=redis
-    spring.redis.host={{.Values.common.redis.host}}
-    spring.redis.port={{.Values.common.redis.port}}
-    spring.redis.database={{.Values.common.redis.database}}
-    spring.redis.password={{.Values.common.redis.password}}
-
+    spring.redis.host={{.Values.redis.host}}
+    spring.redis.port={{.Values.redis.port}}
+    spring.redis.database={{.Values.redis.database}}
+    spring.redis.password={{.Values.redis.password}}
     ## KAFKA
     kafka.partitions=1
     kafka.replicas=1
-    kafka.topic={{.Values.common.kafka.metricTopic}}
-    kafka.bootstrap-servers={{.Values.common.kafka.host}}.{{.Release.Namespace}}:{{.Values.common.kafka.port}}
-    kafka.log.topic={{.Values.common.kafka.logTopic}}
-    kafka.test.topic={{.Values.common.kafka.testTopic}}
-    kafka.report.topic={{.Values.common.kafka.reportTopic}}
+    kafka.topic={{.Values.kafka.metricTopic}}
+    kafka.bootstrap-servers={{.Values.kafka.host}}.{{.Release.Namespace}}:{{.Values.kafka.port}}
+    kafka.log.topic={{.Values.kafka.logTopic}}
+    kafka.test.topic={{.Values.kafka.testTopic}}
+    kafka.report.topic={{.Values.kafka.reportTopic}}
     tcp.mock.port=10000
-
+    ## minio
+    minio.endpoint=http://{{.Values.minio.host}}:{{.Values.minio.port}}
+    minio.access-key={{.Values.minio.username}}
+    minio.secret-key={{.Values.minio.password}}
     ## JMETER
     jmeter.image={{ .Values.common.imagePrefix }}{{.Values.jmeter.image}}:{{.Values.jmeter.imageTag}}
     jmeter.pod.threads.limit=500
-
     ## K8S
     k8s.node-controller-image={{ .Values.common.imagePrefix }}{{.Values.nodeController.image}}:{{.Values.common.imageTag}}
-
+    ## spring cloud
+    eureka.client.service-url.defaultZone=http://{{.Values.eureka.host}}:{{.Values.eureka.port}}/eureka/
     logger.sql.level=info
-    
-dataStreaming:
+apiTest:  # 接口测试模块,可以修改为false,启动时不再安装接口测试模块
   enabled: true
-  image: ms-data-streaming
+  image: api-test
+  replicas: 1
+
+performanceTest: # 性能测试模块,可以修改为false,启动时不再安装性能测试模块
+  enabled: true
+  image: performance-test
+  replicas: 1
+
+systemSetting: # 系统设置模块,可以修改为false,启动时不再安装系统设置模块
+  enabled: true
+  image: system-setting
+  replicas: 1
+
+projectManagement: # 项目管理模块,可以修改为false,启动时不再安装项目管理模块
+  enabled: true
+  image: project-management
+  replicas: 1
+
+reportStat:  # 报告管理模块,可以修改为false,启动时不再安装报告管理模块
+  enabled: true
+  image: report-stat
+  replicas: 1
+
+testTrack: # 测试跟踪模块,可以修改为false,启动时不再安装测试跟踪模块
+  enabled: true
+  image: test-track
+  replicas: 1
+
+gateway: # 网关,可以修改为false,启动时不再安装
+  enabled: true
+  image: gateway
+  replicas: 1
+
+eureka: # 服务注册中心,可以修改为false,启动时不再安装
+  enabled: true
+  image: eureka
+  host: metersphere-eureka
+  port: 8761
+  replicas: 1
+
+dataStreaming: 
+  enabled: true
+  image: data-streaming
   replicas: 1
   properties: |-
     ## DATABASE
-    spring.datasource.url=jdbc:mysql://{{.Values.common.mysql.host}}:{{.Values.common.mysql.port}}/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    spring.datasource.username={{.Values.common.mysql.username}}
-    spring.datasource.password={{.Values.common.mysql.password}}
-
+    spring.datasource.url=jdbc:mysql://{{.Values.mysql.host}}:{{.Values.mysql.port}}/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    spring.datasource.username={{.Values.mysql.username}}
+    spring.datasource.password={{.Values.mysql.password}}
     ## KAFKA
     kafka.partitions=1
     kafka.replicas=1
-    kafka.topic={{.Values.common.kafka.metricTopic}}
-    kafka.bootstrap-servers={{.Values.common.kafka.host}}:{{.Values.common.kafka.port}}
-    kafka.log.topic={{.Values.common.kafka.logTopic}}
-    kafka.test.topic={{.Values.common.kafka.testTopic}}
-    kafka.report.topic={{.Values.common.kafka.reportTopic}}
+    kafka.topic={{.Values.kafka.metricTopic}}
+    kafka.bootstrap-servers={{.Values.kafka.host}}:{{.Values.kafka.port}}
+    kafka.log.topic={{.Values.kafka.logTopic}}
+    kafka.test.topic={{.Values.kafka.testTopic}}
+    kafka.report.topic={{.Values.kafka.reportTopic}}
     jmeter.report.granularity=5000
-
+    ## minio
+    minio.endpoint=http://{{.Values.minio.host}}:{{.Values.minio.port}}
+    minio.access-key={{.Values.minio.username}}
+    minio.secret-key={{.Values.minio.password}}
 nodeController:
   enabled: true
-  image: ms-node-controller
+  image: node-controller
   replicas: 1
   properties: |-
     ## TBD
-
 jmeter:
   image: jmeter-master
   imageTag: 5.4.3-ms5-jdk11
 
 logPersistence:
-  enabled: false
+  enabled: true
   accessModes: ReadWriteOnce
   size: 10Gi
 
@@ -175,31 +196,51 @@ dataPersistence:
   accessModes: ReadWriteOnce
   size: 10Gi
 
-mysql:      
-  enabled: true     # 引用外部数据库时，可以修改为false,启动时不再安装mysql
+mysql:  # 引用外部数据库时，可以修改为false,启动时不再安装mysql
+  enabled: true
   image: mysql
-  imageTag: "5.7.25"
+  imageTag: "8.0.30"
+  host: metersphere-mysql
+  port: 3306
+  username: root
   password: Password123@mysql
   persistence:
     enabled: true
     accessModes: ReadWriteOnce
     size: 20Gi
-redis:
-  enabled: true     # 引用外部redis时，可以修改为false,启动时不再安装redis
+minio:
+  enabled: true
+  image: minio
+  imageTag: "latest"
+  username: admin
+  password: Password123@minio
+  host: metersphere-minio
+  port: 9000
+  persistence:
+    enabled: true
+    accessModes: ReadWriteOnce
+    size: 20Gi
+redis:   # 引用外部redis时，可以修改为false,启动时不再安装redis
+  enabled: true
   image: redis
   imageTag: "6.2.6"
   password: Password123@redis
+  host: metersphere-redis
+  port: 6379
+  database: 1
   persistence:
     enabled: true
     accessModes: ReadWriteOnce
     size: 10Gi
-kafka:
-  enabled: true     # 引用外部kafka时，可以修改为false,启动时不再安装kafka
-  image:
-    registry: registry.cn-qingdao.aliyuncs.com/metersphere
-    repository: kafka
-    tag: 2.8.1
+kafka:   # 引用外部kafka时，可以修改为false,启动时不再安装kafka
+  enabled: true
   fullnameOverride: metersphere-kafka
+  host: metersphere-kafka
+  port: 9092
+  metricTopic: JMETER_METRICS
+  logTopic: JMETER_LOGS
+  testTopic: LOAD_TESTS
+  reportTopic: JMETER_REPORTS
   persistence:
     enabled: false
   logPersistence:
@@ -236,14 +277,10 @@ kafka:
     persistence:
       enabled: false
     fullnameOverride: metersphere-zookeeper
-    image:
-      registry: registry.cn-qingdao.aliyuncs.com/metersphere
-      repository: zookeeper
-      tag: 3.7.0
   extraEnvVars:
     - name: FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS
       value: "true"
-zookeeper:      # 引用外部kafka时，可以修改为false,启动时不再安装zookeeper
+zookeeper:
   enabled: true
 ```
 
