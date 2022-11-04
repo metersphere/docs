@@ -1,267 +1,87 @@
-!!! info "大致流程:"
-    * 先安装 JDK
-    * 部署 Zookeeper 集群
-    * 部署 Kafka 集群
-    * 部署 Kafka-manager
-    
-## 1 部署 Kafka 集群
+Kafka 3.0 之前的架构: 元数据在 zookeeper 中，运行时动态选举 controller，由 controller 进行 Kafka 集群管理。kraft 模式架构: 不再依赖 zookeeper 集群，而是用三台 controller 节点代替 zookeeper，元数据保存在 controller 中，由 controller 直接进行 Kafka 集群管理。
 
-### 1.1 关闭防火墙和 selinux
+## 1 kraft 架构
+- Kafka不再依赖外部框架，而是能够独立运行。 <br>
+- controller管理集群时，不再需要从zookeeper中先读取数据，集群性能上升。 <br>
+- 由于不依赖zookeeper，集群扩展时不再受到zookeeper读写能力限制controller 不再动态选举，而是由配置文件规定。 这样我们可以有针对性的加强controller 节点的配置。 <br>
+- 后续版本升级方便，不用和zookeeper一起维护。 <br>
 
-关闭防火墙
+## 2 docker-compose-kafka.yml
+docker-compose-kafka.yml 配置
 ```
-systemctl stop firewalld.service
-systemctl disable firewalld.service
-```
-关闭 selinux
-```
-setenforce 0 （临时生效）
-sed -i 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config（永久生效）
-```
-
-### 1.2 检查是否已经安装 OpenJDK
-
-```
-rpm -qa|grep jdk  #如果安装先卸载 jdk
-```
-下载jdk:
-```
-官网：https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
-```
-选择jdk版本上传到服务器解压，这里我用的是 jdk1.8.0 版本
-```
-tar -xvf jdk-8u251-linux-x64.tar.gz
-mv jdk1.8.0_251 /usr/local
-
-vim  /etc/profile
- 
-export JAVA_HOME=/usr/local/jdk1.8.0_251
-export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-export PATH=$PATH:$JAVA_HOME/bin
-
-source /etc/profile
-
-java -version （检查一下jdk版本查看是否安装成功）
-```
-
-### 1.3 搭建 Zookeeper 集群
-
-1.3.1 集群节点选用三台linux主机<br>
-
-下载地址: https://archive.apache.org/dist/zookeeper/ <br>
-或者: wget https://archive.apache.org/dist/zookeeper/zookeeper-3.5.5/apache-zookeeper-3.5.5-bin.tar.gz <br>
-
-1.3.2 新建一个 zookeeper-cluster 目录，将安装包上传 zookeeper-cluster 目录下<br>
-```
-cd /usr/local
-mkdir zookeeper-cluster
-```
-
-1.3.3 解压安装包
-```
-cd zookeeper-cluster
-tar zxvf  apache-zookeeper-3.5.5-bin.tar.gz
-```
-
-1.3.4 配置 zk1（先配一个节点，然后再复制修改相关配置）
-```
-1.修改解压包名称（直观区分）
-mv apache-zookeeper-3.5.5-bin zk
-
-2.新建 data，logs 目录来存放数据和日志
-cd zk
-mkdir data logs 
-
-3.进入 conf，将 zoo_sample.cfg 复制重命名 zoo.cfg
-cd conf
-cp zoo_sample.cfg zoo.cfg
-
-4.修改 conf 下 zoo.cfg
-vi zoo.cfg
-① 修改：dataDir=/usr/local/zookeeper-cluster/zk/data
-② 添加：dataLogDir=/usr/local/zookeeper-cluster/zk/logs
-③ clientPort=2181【clientPort是客户端的请求端口】
-④ 在 zoo.cfg 文件末尾追加
-server.1=10.1.240.150:2888:3888
-server.2=10.1.240.151:2888:3888
-server.3=10.1.240.152:2888:3888
-5.在 zk 的 data 目录下创建一个 myid 文件，内容为 1
-cd ../data/
-echo 1 > myid
-```
-
-1.3.5 其他节点配置
-其他节点配置相同，除以下配置<br>
-```
-echo 1 >/usr/local/zookeeper-cluster/zk/data/myid # echo 中的值需要唯一，节点1，输出1，节点2，就写2.保证唯一
-```
-
-1.3.6 启动
-```
-cd /usr/local/zookeeper-cluster/zk/bin
-./zkServer.sh start
-```
-![配置zk启动地址](../img/installation/dis_pressure/zk启动.png){:height="100%" width="70%"} <br>
-查看集群状态
-```
-./zkServer.sh status
-```
-![配置zk状态地址](../img/installation/dis_pressure/zk状态.png){:height="100%" width="70%"} <br>
-可以看到，一台作为 leader，两台作为 follower，zookeeper 集群搭建成功。
-
-### 1.4 Kafka集群安装
-
-1.4.1 下载安装包 <br>
-
-Kafka官网下载：http://kafka.apache.org/downloads <br>
-或者wget，下载 https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.6.2/kafka_2.12-2.6.2.tgz
-
-1.4.2 新建一个 Kafka-cluster 目录，将安装 Kafka-cluster 目录下
-
-```
-cd /usr/local
-mkdir kafka-cluster
-```
-
-1.4.3 解压安装包，重命名
-
-```
-tar zxvf kafka_2.12-2.6.2.tgz
-mv kafka_2.12-2.6.2 kafka
-```
-
-1.4.4 修改配置文件
-
-```
-cd /usr/local/kafka-cluster/kafka/config/
-vi server.properties修改
-broker.id=1  #唯一
-listeners=PLAINTEXT://172.16.150.154:9092  #修改为本机地址
-log.dirs=/Data/kafka-logs #数据目录，kafka-logs 会自动采集
-zookeeper.connect=172.16.150.154:2181,172.16.150.155:2181,172.16.150.156:2181 #zokeeper集群地址，以","为分割其他的不用改
-```
-
-1.4.5 其他节点配置
-
-其他节点配置相同，除以下内容：
-```
-broker.id=1  #唯一 （确定id值是唯一）
-listeners=PLAINTEXT://172.16.150.154:9092  #修改为本机地址
-```
-
-1.4.6 启动
-
-```
-cd /usr/local/kafka-cluster/kafka/bin
-./kafka-server-start.sh ../config/server.properties
-可以发现在窗口启动之后是一个阻塞进程，会阻塞当前窗口，我们可以重新打开一个窗口进行接下来的操作，或者在启动kafka的时候使用 -daemon 参数将它声明为守护进程后台运行。
-./kafka-server-start.sh  -daemon ../config/server.properties
-```
-到这一步 kafka+zk 已经是部署完成了
-
-1.4.7 使用 JMX 监控 Kafka
-
-```
-vim /usr/local/kafka-cluster/kafka/bin/kafka-server-start.sh
-在这个字段加入export JMX_PORT="9999"
-```
-![配置监控kafka地址](../img/installation/dis_pressure/监控kafka.png){:height="100%" width="70%"} <br>
-
-1.4.8 服务设置开机自启，使用 systemctl 工具管理（在配置时，请先把原本服务关闭）
-
-```
-先设置zookeeper开机启动
-cd /lib/systemd/system/
-vim zookeeper.service  在当中输入一下内容
-[Unit]
-Description=zookeeper
-After=network.target remote-fs.target nss-lookup.target
-
-[Service]
-Type=forking
-ExecStart=/usr/local/zookeeper-cluster/zk/bin/zkServer.sh start
-ExecReload=/usr/local/zookeeper-cluster/zk/bin/zkServer.sh restart
-ExecStop=/usr/local/zookeeper-cluster/zk/bin/zkServer.sh stop
-[Install]
-WantedBy=multi-user.target
-```
-然后保存退出
-
-echo $PATH 找到我们的 jdk 安装路径
-
-![配置jdk路径地址](../img/installation/dis_pressure/jdk路径.png){:height="100%" width="70%"} <br>
-```
-cd /usr/local/zookeeper-cluster/zk/bin
-vim zkEnv.sh
-```
-![配置zk环境地址](../img/installation/dis_pressure/zk环境.png){:height="100%" width="70%"} <br>
-
-找到我们第一行的变量，把我们之前部署的 java 环境添加刷新一下进去在后面插入<br>
-export JAVA_HOME=/usr/local/jdk1.8.0_251，保存退出，然后刷新一下命令<br>
-```
-systemctl daemon-reload 
-systemctl start zookeeper #启动服务
-systemctl enable zookeeper #加入开机自启
-systemctl status zookeeper #检查服务状态
-```
-
-状态如下就是正确
-
-![配置zk状态正确地址](../img/installation/dis_pressure/zk状态正确.png){:height="100%" width="70%"} <br>
-
-1.4.9 Kafka 自启动设置
-
-```
-cd /lib/systemd/system/
-vim kafka.service
-添加一下内容：
-[Unit]
-Description=kafka
-After=network.target  zookeeper.service
-
-[Service]
-Type=simple
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/jdk1.8.0_251/bin"
-User=root
-Group=root
-ExecStart=/usr/local/kafka-cluster/kafka/bin/kafka-server-start.sh  /usr/local/kafka-cluster/kafka/config/server.properties
-ExecStop=/usr/local/kafka-cluster/kafka/bin/kafka-server-stop.sh
-PrivateTmp=on-failure
-[Install]
-WantedBy=multi-user.target
-```
-保存退出，刷新一下
-```
-systemctl daemon-reload
-systemctl start kafka
-systemctl enable kafka
-systemctl status kafka
-```
-![配置kafka状态地址](../img/installation/dis_pressure/kafka状态.png){:height="100%" width="70%"} <br>
-
-1.4.10 建议启动 Kafka 时先重新启动一下 Zookeeper，有时间可能会起不来。启动 Kafka 前必须先要启动 Zookeeper。
-
-## 2 部署kafka-manager
-
-可以在任意一台 Kafka 设备部署，Kafka 可视化，yaml 如下（需要提前安装好 Docker 环境和 docker-compose 环境，并下载好 images）
-```
-version: '2'
-
+version: "2.1"
 services:
-
-kafka-manager:
-image: sheepkiller/kafka-manager:latest
-restart: always
-container_name: kafka-manager
-hostname: kafka-manager
-ports:
-- 9000:9000
-environment:
-ZK_HOSTS: 10.1.240.154:2181,10.1.240.155:2181,10.1.240.156:2181  #修改为依据部署好的kafka集群
-KM_ARGS: -Djava.net.preferIPv4Stack=true
-networks:
-- kafka-manager
-
-networks:
-kafka-manager:
+  kafka:
+    image: '${MS_IMAGE_PREFIX}/kafka:3.2.0'
+    container_name: kafka
+    ports:
+      - '${MS_KAFKA_PORT}:${MS_KAFKA_PORT}'
+    healthcheck:
+      test: ["CMD", "bash", "-c", "< /dev/tcp/localhost/9093"]
+      interval: 6s
+      timeout: 10s
+      retries: 20
+    restart: always
+    environment:
+      KAFKA_ENABLE_KRAFT: 'yes'
+      KAFKA_BROKER_ID: 1
+      ALLOW_PLAINTEXT_LISTENER: 'yes'
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://${MS_KAFKA_HOST}:${MS_KAFKA_PORT}
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@127.0.0.1:9093
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_CFG_PROCESS_ROLES: broker,controller
+      KAFKA_CFG_LOG_RETENTION_HOURS: 64
+      KAFKA_CFG_MAX_REQUEST_SIZE: 52428800
+      KAFKA_CFG_MESSAGE_MAX_BYTES: 52428800
+      KAFKA_CFG_REPLICA_FETCH_MAX_BYTES: 52428800
+      KAFKA_CFG_FETCH_MESSAGE_MAX_BYTES: 52428800
+      KAFKA_CFG_PARTITION_FETCH_BYTES: 52428800
+      FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS: 'true'
+    networks:
+      - ms-network
+  ms-data-streaming:
+    depends_on:
+      kafka:
+        condition: service_healthy
 ```
+以 v2.1.0 版本为例，KAFKA_ENABLE_KRAFT: 'yes'，默认允许 kraft 集群模式，我们只需要把其他节点加入到集群中即可。需要修改的配置项包括 KAFKA_CFG_ADVERTISED_LISTENERS、KAFKA_CFG_CONTROLLER_QUORUM_VOTERS、KAFKA_BROKER_ID、ports。需要添加的配置项包括 KAFKA_KRAFT_CLUSTER_ID。
+
+### 2.1 Broker ID 配置
+三个节点的 docker-compose-kafka.yml 文件中，KAFKA_BROKER_ID 值分别为1、2、3。<br>
+![配置](../img/installation/dis_pressure/kafka配置_1.png){ width="600px" height:"80%"}
+
+### 2.2 Broker 地址
+这个配置是 broker 对外暴露的地址，需要填写每个节点真实的 ip 和端口。这里我写死了，没有引用环境变量。<br>
+![配置](../img/installation/dis_pressure/kafka配置_2.png){ width="900px" }
+
+### 2.3 Controller 列表
+这个是所有的 controller 列表，三个配置文件都填一样。格式：1@ip1:9093，2@ip2:9093，3@ip3:9093
+![配置](../img/installation/dis_pressure/kafka配置_3.png){ width="900px" }
+
+### 2.4 Ports 配置
+docker-compose-kafka.yml 文件中，默认没有对外暴露 9093 端口，所以需要手动修改，暴露出来。
+![配置](../img/installation/dis_pressure/kafka配置_4.png){ width="900px" }
+
+### 2.5 集群 ID
+必须给集群配置一个集群ID，否则会报错：Unexpected error INCONSISTENT_CLUSTER_ID in VOTE response: InboundResponse。<br>
+默认没有该配置，所以需要手动添加，三个节点的配置保持一致。<br>
+![配置](../img/installation/dis_pressure/kafka配置_5.png){ width="900px" }
+
+## 3 docker-compose-server.yml
+这里要配置多个 kafka 地址，service:ms-server 和 service:ms-data-streaming 中都要修改该配置，格式：ip1:9092，ip2:9092，ip3:9092。
+![配置](../img/installation/dis_pressure/kafka配置_6.png){ width="900px" }
+
+![配置](../img/installation/dis_pressure/kafka配置_7.png){ width="900px" }
+
+## 4 .env 文件配置
+保持默认配置,依然使用内置 Kafka，保持 MS_EXTERNAL_KAFKA=false，只是在 docker-compose-kafka.yml 和 docker-compose-server.yml 中 Kafka 相关参数都写死了，没有引用 .env 中的环境变量。<br>
+![配置](../img/installation/dis_pressure/kafka配置_8.png){ width="900px" }
+
+以上内容配置好之后，使用 msctl reload 命令重新加载配置文件，即可创建 kraft 集群。
+![配置](../img/installation/dis_pressure/kafka配置_9.png){ width="900px" }
+
+![配置](../img/installation/dis_pressure/kafka配置_10.png){ width="900px" }
+
+![配置](../img/installation/dis_pressure/kafka配置_11.png){ width="900px" }
