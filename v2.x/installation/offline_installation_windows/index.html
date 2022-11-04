@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://metersphere.io/v2.x/installation/offline_installation_windows/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -31,7 +31,7 @@
       <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -875,22 +875,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-container-is-unhealthy" class="md-nav__link">
-    3.2 执行安装脚本时，出现 Container is unhealthy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-msctl-status-healthystarting-docker-ps-a-prometheus-restarting" class="md-nav__link">
-    3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 prometheus 容器是 Restarting状态
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-msctl-status-ms-server-healthystaring" class="md-nav__link">
-    3.4 执行 msctl status，发现 ms-server 状态是 healthy:staring 状态，访问前端也访问不了
+  <a href="#32-msctl-status-ms-prometheus-restarting" class="md-nav__link">
+    3.2 msctl status 发现 ms-prometheus 服务是 Restarting 状态
   </a>
   
 </li>
@@ -2788,22 +2774,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-container-is-unhealthy" class="md-nav__link">
-    3.2 执行安装脚本时，出现 Container is unhealthy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-msctl-status-healthystarting-docker-ps-a-prometheus-restarting" class="md-nav__link">
-    3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 prometheus 容器是 Restarting状态
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-msctl-status-ms-server-healthystaring" class="md-nav__link">
-    3.4 执行 msctl status，发现 ms-server 状态是 healthy:staring 状态，访问前端也访问不了
+  <a href="#32-msctl-status-ms-prometheus-restarting" class="md-nav__link">
+    3.2 msctl status 发现 ms-prometheus 服务是 Restarting 状态
   </a>
   
 </li>
@@ -2925,10 +2897,10 @@
 <h3 id="210">2.10 解压安装包<a class="headerlink" href="#210" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>在 Ubuntu 中，以 root 用户执行如下命令：</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 假设安装包存放路径为 c:\metersphere-offline-installer-v1.20.4-lts.tar.gz</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># 假设安装包存放路径为 c:\metersphere-offline-installer-v2.3.0.tar.gz</span>
 <span class="nb">cd</span> /mnt/c
 <span class="c1"># 解压安装包</span>
-tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
+tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
 </code></pre></div>
 </div>
 <h3 id="211">2.11 配置安装参数（可选）<a class="headerlink" href="#211" title="Permanent link">&para;</a></h3>
@@ -2940,7 +2912,7 @@ tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
 <h3 id="212">2.12 执行安装脚本<a class="headerlink" href="#212" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <div class="highlight"><pre><span></span><code><span class="c1"># 进入安装包目录</span>
-<span class="nb">cd</span> metersphere-offline-installer-v1.20.4-lts
+<span class="nb">cd</span> metersphere-offline-installer-v2.3.0
 <span class="c1"># 运行安装脚本</span>
 /bin/bash install.sh
 </code></pre></div>
@@ -2963,10 +2935,22 @@ tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
 ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
 ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
 ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
+├── docker-compose-data-streaming.yml           #-- MeterSphere 自带的 Data-Streaming 所需的 Docker Compose 文件
 ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
-├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose文件
+├── docker-compose-seleniarm.yml                #-- MeterSphere Selenium-Grid 组件所需的 Docker Compose文件
 ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
 ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
+├── docker-compose-eureka.yml                   #-- MeterSphere Eureka 组件所需的Docker Compose 文件
+├── docker-compose-gateway.yml                  #-- MeterSphere Gateway 组件所需的Docker Compose 文件
+├── docker-compose-minio.yml                    #-- MeterSphere Minio 组件所需的Docker Compose 文件
+├── docker-compose-test-track.yml               #-- MeterSphere Test-Track 模块所需的Docker Compose 文件
+├── docker-compose-api-test.yml                 #-- MeterSphere Api-Test 模块所需的Docker Compose 文件
+├── docker-compose-ui-test.yml                  #-- MeterSphere Ui-Test 模块所需的Docker Compose 文件
+├── docker-compose-performance-test.yml         #-- MeterSphere Performance-Test 模块所需的Docker Compose 文件
+├── docker-compose-report-stat.yml              #-- MeterSphere Report-Stat 模块所需的Docker Compose 文件
+├── docker-compose-workstation.yml              #-- MeterSphere Workstation 模块所需的Docker Compose 文件
+├── docker-compose-system-setting.yml           #-- MeterSphere System-Setting 模块所需的Docker Compose 文件
+├── docker-compose-project-management.yml       #-- MeterSphere Project-Management 模块所需的Docker Compose 文件
 ├── install.conf -&gt; /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
 ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
 └── version                                     #-- 安装包对应的 MeterSphere 版本信息
@@ -2984,37 +2968,25 @@ tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
 <h3 id="31">3.1 创建容器失败，找不到文件或目录<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%981.png" width="900px" /></p>
 <p>解决方法:<br>
-将 metersphere 目录下的 docker-compose-*.yml 里找【volumes】，将下面定义的路径替换到上面的位置，按照下面要求进行修改。( windows 下的 docker 不要用单独的 volumes 定义，将下面路径写到上面，下面 volumes 部分可删)</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%982.png" width="900px" /></p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%983.png" width="600px" /></p>
-<h3 id="32-container-is-unhealthy">3.2 执行安装脚本时，出现 Container is unhealthy<a class="headerlink" href="#32-container-is-unhealthy" title="Permanent link">&para;</a></h3>
+将 metersphere 目录下所有的 docker-compose-*.yml 里找【volumes】，将下面定义的路径替换到上面的位置或者将 docker-compose-base.yml 的路径替换到相应位置，按照下面要求进行修改。( windows 下的 docker 不要用单独的 volumes 定义，将下面路径写到上面，下面 volumes 部分可删)</p>
+<p>如 docker-compose-mysql.yml 文件进行修改，将下面定义的【volumes】路径替换到上面的位置
+<img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%982.png" width="900px" /></p>
+<p>docker-composer-api-test.yml 文件进行修改，将 docker-compose-base.yml 的路径替换到相应位置
+<img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%983.png" width="900px" /></p>
+<p>所有的 docker-compose-*.yml 替换完成后，执行 msctl reload即可</p>
+<h3 id="32-msctl-status-ms-prometheus-restarting">3.2 msctl status 发现 ms-prometheus 服务是 Restarting 状态<a class="headerlink" href="#32-msctl-status-ms-prometheus-restarting" title="Permanent link">&para;</a></h3>
 <p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%984.png" width="900px" /></p>
 <p>解决方法:<br>
-1.执行命令 docker logs “23c9a9217da8”，如下图查看发现是没有权限</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%985.png" width="900px" /></p>
-<p>2.将挂载目录为由原来的 /bitnami 改为 /data，重新执行 /bin/bash install.sh</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%986.png" width="900px" /></p>
-<h3 id="33-msctl-status-healthystarting-docker-ps-a-prometheus-restarting">3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 prometheus 容器是 Restarting状态<a class="headerlink" href="#33-msctl-status-healthystarting-docker-ps-a-prometheus-restarting" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></p>
-<p>解决方法:<br>
-1.查看日志(docker logs containsId)，如下图发现是 prometheus 目录下的文件没有权限</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%988.png" width="900px" /></p>
-<p>2.手动给 prometheus 目录赋权</p>
+1.docker logs ms-prometheus 查看日志，发现是 prometheus 目录下的文件没有权限 <br>
+<img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%985.png" width="900px" /></p>
+<p>2.手动给 prometheus 目录赋权
 <div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/prometheus
 chmod +777 /opt/metersphere/data/prometheus
 </code></pre></div>
-<p>之后重新执行安装脚本的命令。</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%989.png" width="900px" /></p>
-<h3 id="34-msctl-status-ms-server-healthystaring">3.4 执行 msctl status，发现 ms-server 状态是 healthy:staring 状态，访问前端也访问不了<a class="headerlink" href="#34-msctl-status-ms-server-healthystaring" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9810.png" width="900px" /></p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9811.png" width="900px" /></p>
-<p>解决方法:<br>
-1.查看 /opt/metersphere/logs/info.log 日志，如下图发现是 redis 连接有问题</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9812.png" width="900px" /></p>
-<p>2.修改 /opt/metersphere/.env 文件,将 redis/kafka 的 ip 换成本机 ip，执行 msctl reload 后再执行 msctl status，发现容器都正常启动。</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9813.png" width="900px" /></p>
-<p>输入 <a href="http://本机">http://本机</a> ip:端口 可以正常访问网站。</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9814.png" width="900px" /></p>
+赋权之后执行 docker restart ms-prometheus 进行重启容器。</p>
+<p>3.msctl status 服务都是 Up(healthy)状态，使用浏览器访问 <a href="http://ip:8081">http://ip:8081</a> 即可
+<img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%986.png" width="900px" /></p>
+<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></p>
 
 
   
@@ -3102,7 +3074,7 @@ chmod +777 /opt/metersphere/data/prometheus
     
     
 
-      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
 <script>
