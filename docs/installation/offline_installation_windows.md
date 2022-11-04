@@ -122,10 +122,10 @@
 	**在 Ubuntu 中，以 root 用户执行如下命令：**
 
 	```sh
-	# 假设安装包存放路径为 c:\metersphere-offline-installer-v1.20.4-lts.tar.gz
+	# 假设安装包存放路径为 c:\metersphere-offline-installer-v2.3.0.tar.gz
 	cd /mnt/c
 	# 解压安装包
-	tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
+	tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
 	```
 
 ### 2.11 配置安装参数（可选）
@@ -139,7 +139,7 @@
 !!! info ""
 	```sh
 	# 进入安装包目录
-	cd metersphere-offline-installer-v1.20.4-lts
+	cd metersphere-offline-installer-v2.3.0
 	# 运行安装脚本
 	/bin/bash install.sh
 	```
@@ -166,10 +166,22 @@
     ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
     ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
     ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
+	├── docker-compose-data-streaming.yml           #-- MeterSphere 自带的 Data-Streaming 所需的 Docker Compose 文件
     ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
-    ├── docker-compose-server.yml                   #-- MeterSphere Server 及 Data-Streaming 所需的 Docker Compose文件
+    ├── docker-compose-seleniarm.yml                #-- MeterSphere Selenium-Grid 组件所需的 Docker Compose文件
     ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
     ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
+	├── docker-compose-eureka.yml                   #-- MeterSphere Eureka 组件所需的Docker Compose 文件
+	├── docker-compose-gateway.yml                  #-- MeterSphere Gateway 组件所需的Docker Compose 文件
+	├── docker-compose-minio.yml                    #-- MeterSphere Minio 组件所需的Docker Compose 文件
+	├── docker-compose-test-track.yml               #-- MeterSphere Test-Track 模块所需的Docker Compose 文件
+	├── docker-compose-api-test.yml                 #-- MeterSphere Api-Test 模块所需的Docker Compose 文件
+	├── docker-compose-ui-test.yml                  #-- MeterSphere Ui-Test 模块所需的Docker Compose 文件
+	├── docker-compose-performance-test.yml         #-- MeterSphere Performance-Test 模块所需的Docker Compose 文件
+	├── docker-compose-report-stat.yml              #-- MeterSphere Report-Stat 模块所需的Docker Compose 文件
+	├── docker-compose-workstation.yml              #-- MeterSphere Workstation 模块所需的Docker Compose 文件
+	├── docker-compose-system-setting.yml           #-- MeterSphere System-Setting 模块所需的Docker Compose 文件
+	├── docker-compose-project-management.yml       #-- MeterSphere Project-Management 模块所需的Docker Compose 文件
     ├── install.conf -> /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
     ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
@@ -193,60 +205,31 @@
 ![常见问题](../img/installation/常见问题1.png){ width="900px" }
 
 解决方法:<br>
-将 metersphere 目录下的 docker-compose-*.yml 里找【volumes】，将下面定义的路径替换到上面的位置，按照下面要求进行修改。( windows 下的 docker 不要用单独的 volumes 定义，将下面路径写到上面，下面 volumes 部分可删)
+将 metersphere 目录下所有的 docker-compose-*.yml 里找【volumes】，将下面定义的路径替换到上面的位置或者将 docker-compose-base.yml 的路径替换到相应位置，按照下面要求进行修改。( windows 下的 docker 不要用单独的 volumes 定义，将下面路径写到上面，下面 volumes 部分可删)
 
+如 docker-compose-mysql.yml 文件进行修改，将下面定义的【volumes】路径替换到上面的位置
 ![常见问题](../img/installation/常见问题2.png){ width="900px" }
 
-![常见问题](../img/installation/常见问题3.png){ width="600px" }
+docker-composer-api-test.yml 文件进行修改，将 docker-compose-base.yml 的路径替换到相应位置
+![常见问题](../img/installation/常见问题3.png){ width="900px" }
 
-### 3.2 执行安装脚本时，出现 Container is unhealthy
+所有的 docker-compose-*.yml 替换完成后，执行 msctl reload即可
 
+### 3.2 msctl status 发现 ms-prometheus 服务是 Restarting 状态
 ![常见问题](../img/installation/常见问题4.png){ width="900px" }
 
 解决方法:<br>
-1.执行命令 docker logs “23c9a9217da8”，如下图查看发现是没有权限
-
+1.docker logs ms-prometheus 查看日志，发现是 prometheus 目录下的文件没有权限 <br>
 ![常见问题](../img/installation/常见问题5.png){ width="900px" }
 
-2.将挂载目录为由原来的 /bitnami 改为 /data，重新执行 /bin/bash install.sh
-
-![常见问题](../img/installation/常见问题6.png){ width="900px" }
-
-### 3.3 执行安装脚本，安装启动都没有报错，msctl status 出现 healthy:starting，之后 docker ps -a 发现 prometheus 容器是 Restarting状态
-
-![常见问题](../img/installation/常见问题7.png){ width="900px" }
-
-解决方法:<br>
-1.查看日志(docker logs containsId)，如下图发现是 prometheus 目录下的文件没有权限
-
-![常见问题](../img/installation/常见问题8.png){ width="900px" }
-
 2.手动给 prometheus 目录赋权
-
 ```
 chmod +777 /opt/metersphere/conf/prometheus
 chmod +777 /opt/metersphere/data/prometheus
 ```
+赋权之后执行 docker restart ms-prometheus 进行重启容器。
 
-之后重新执行安装脚本的命令。
+3.msctl status 服务都是 Up(healthy)状态，使用浏览器访问 http://ip:8081 即可
+![常见问题](../img/installation/常见问题6.png){ width="900px" }
 
-![常见问题](../img/installation/常见问题9.png){ width="900px" }
-
-### 3.4 执行 msctl status，发现 ms-server 状态是 healthy:staring 状态，访问前端也访问不了
-
-![常见问题](../img/installation/常见问题10.png){ width="900px" }
-
-![常见问题](../img/installation/常见问题11.png){ width="900px" }
-
-解决方法:<br>
-1.查看 /opt/metersphere/logs/info.log 日志，如下图发现是 redis 连接有问题
-
-![常见问题](../img/installation/常见问题12.png){ width="900px" }
-
-2.修改 /opt/metersphere/.env 文件,将 redis/kafka 的 ip 换成本机 ip，执行 msctl reload 后再执行 msctl status，发现容器都正常启动。
-
-![常见问题](../img/installation/常见问题13.png){ width="900px" }
-
-输入 http://本机 ip:端口 可以正常访问网站。
-
-![常见问题](../img/installation/常见问题14.png){ width="900px" }
+![常见问题](../img/installation/常见问题7.png){ width="900px" }
