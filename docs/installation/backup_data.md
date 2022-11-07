@@ -1,11 +1,15 @@
 主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的目录备份。
+
+!!! warning "注意"
+    数据库主要有 mysqldump 和 手动备份 /opt/metersphere/data/mysql 目录两种方式，可根据企业实际情况和已有备份工具制定备份策略和备份手段
+
 ## 1 手动备份
 
 ```
 #数据库备份：
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
 
-#body/jar 目录备份
+#data 目录备份
 zip -r XXX.zip /opt/metersphere/data
 ```
 若备份数据库时出现mysqldump: Error 2020: Got packet bigger than ‘max_allowed_packet’ bytes when dumping tableapi_scenario_report_detailat row: 94，则添加max_allowed_packet参数，如下:
