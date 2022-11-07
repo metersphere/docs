@@ -19,7 +19,7 @@
 ```sh
 cd /tmp
 # 解压安装包
-tar zxvf metersphere-release-v2.3.0-offline.tar.gz
+tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
 ```
 
 ## 4 修改安装配置(可选)
@@ -28,7 +28,7 @@ tar zxvf metersphere-release-v2.3.0-offline.tar.gz
 在安装包解压后的目录，编辑修改安装参数。
 
 ```sh
-cd metersphere-release-v2.3.0-offline
+cd metersphere-offline-installer-v2.3.0
 vim install.conf
 ```
 ### 4.2 安装配置文件说明
@@ -203,7 +203,7 @@ vim install.conf
 
 ```sh
 # 进入安装包目录
-cd metersphere-release-v2.3.0-offline
+cd metersphere-offline-installer-v2.3.0
 # 运行安装脚本
 /bin/bash install.sh
 ```
