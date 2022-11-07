@@ -175,7 +175,7 @@ cd metersphere-online-installer-v2.x.y
 ### 3.3 数据库配置文件说明
 
 !!! info "注意"
-    如果使用外部数据库进行安装，请使用 MySQL 8.0 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
+    MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
     ```
     [mysqld]
