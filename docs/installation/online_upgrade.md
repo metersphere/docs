@@ -1,3 +1,5 @@
+!!! warning "注意"
+    升级前一定要进行数据备份，可参考 [MeterSphere 数据备份](./backup_data.md)。
 
 如果您的服务器可以访问互联网, 可以通过以下命令直接升级 Metersphere 至最新版本。
 
