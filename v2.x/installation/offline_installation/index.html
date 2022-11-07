@@ -2717,12 +2717,12 @@
 <p>以 root 用户 ssh 登录到目标机器, 并执行如下命令。</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> /tmp
 <span class="c1"># 解压安装包</span>
-tar zxvf metersphere-release-v2.3.0-offline.tar.gz
+tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
 </code></pre></div>
 <h2 id="4">4 修改安装配置(可选)<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <h3 id="41">4.1 解压<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
 <p>在安装包解压后的目录，编辑修改安装参数。</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> metersphere-release-v2.3.0-offline
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> metersphere-offline-installer-v2.3.0
 vim install.conf
 </code></pre></div>
 <h3 id="42">4.2 安装配置文件说明<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
@@ -2887,7 +2887,7 @@ default-character-set=utf8mb4
 </div>
 <h2 id="5">5 执行安装脚本<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 进入安装包目录</span>
-<span class="nb">cd</span> metersphere-release-v2.3.0-offline
+<span class="nb">cd</span> metersphere-offline-installer-v2.3.0
 <span class="c1"># 运行安装脚本</span>
 /bin/bash install.sh
 </code></pre></div>
