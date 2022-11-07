@@ -13,7 +13,7 @@ msctl status
 ## 2 一键升级至指定版本
 ```sh
 # 升级至指定版本
-msctl upgrade v1.x.y
+msctl upgrade v1.20.x-lts
 
 # 查看 MeterSphere 状态
 msctl status
@@ -26,13 +26,13 @@ msctl status
 GitHub release 链接: https://github.com/metersphere/metersphere/releases
 ```sh
 # 下载在线安装包
-wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.x.y.tar.gz
+wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v1.20.x-lts.tar.gz
 
 # 解压在线安装包
-tar -zxvf metersphere-online-installer-v1.x.y.tar.gz
+tar -zxvf metersphere-online-installer-v1.20.x-lts.tar.gz
 
 # 进入解压缩目录
-cd metersphere-online-installer-v1.x.y
+cd metersphere-online-installer-v1.20.x-lts
 
 # 执行install.sh安装脚本
 /bin/bash install.sh
