@@ -119,7 +119,7 @@ vim install.conf
 ### 4.3 数据库配置文件说明
 
 !!! info "注意"
-    如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
+    如果使用外部数据库进行安装，推荐使用 MySQL 8.0 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
     ```
     [mysqld]
@@ -158,6 +158,7 @@ vim install.conf
     
     [mysql.server]
     default-character-set=utf8mb4
+
     ```
     
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
