@@ -23,7 +23,7 @@ msctl status
 GitHub release 链接: https://github.com/metersphere/metersphere/releases
 ```sh
 # 下载在线安装包
-wget https://github.com/metersphere/metersphere/releases/download/v1.x.y/metersphere-online-installer-v2.x.y.tar.gz
+wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
 
 # 解压在线安装包
 tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
