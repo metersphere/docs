@@ -2470,6 +2470,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12016-lts" class="md-nav__link">
+    v1.20.16-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12015-lts" class="md-nav__link">
     v1.20.15-lts
   </a>
@@ -3100,6 +3107,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12016-lts" class="md-nav__link">
+    v1.20.16-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12015-lts" class="md-nav__link">
     v1.20.15-lts
   </a>
@@ -3703,6 +3717,57 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12016-lts">v1.20.16-lts<a class="headerlink" href="#v12016-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年11月4日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(测试跟踪): 脑图缺陷国际化</li>
+<li>refactor(测试跟踪): 增加用例评审名称长度限制</li>
+<li>refactor(测试跟踪): 测试计划用例标题显示优化</li>
+<li>refactor(消息通知): 统一发送邮件时的标题为中文</li>
+<li>refactor(接口测试): 优化缓存取值失败后再从数据库取值，不影响执行</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(UI 自动化): 遗留 UI 国际化问题</li>
+<li>fix(UI 自动化): 修复 UI 报告详情展示</li>
+<li>fix(UI 自动化): 修复 UI 报告分享链接有效期设置没生效</li>
+<li>fix(测试跟踪): Jira 项目集字段同步有误</li>
+<li>fix(测试跟踪): Jira 没勾选第三方平台模板，提交缺陷图片不显示</li>
+<li>fix(测试跟踪): 优化测试计划报告查看速度</li>
+<li>fix(测试跟踪): 自定义字段默认值设置无效</li>
+<li>fix(测试跟踪): 测试计划自动更新功能用例状态失效</li>
+<li>fix(测试跟踪): 测试计划自动更新功能用例状态失效</li>
+<li>fix(测试跟踪): 测试计划功能用例关系图显示了富文本框</li>
+<li>fix(接口测试): get 方式的 mock 接口，不设置任何匹配条件时，响应体为空</li>
+<li>fix(接口测试): 解决 TCP 协议导入其他设置丢失数据问题</li>
+<li>fix(接口测试): 修复 json 和 json-schema 转换时多层数组结构出现的问题</li>
+<li>fix(接口测试): 修复接口 json-schema 参数高级设置关闭未销毁问题</li>
+<li>fix(接口测试): 修复场景导入 har 文件丢失 formdata 问题</li>
+<li>fix(接口测试): 解决接口导入 json-schema 时没有 properties 属性数据会错乱问题</li>
+<li>fix(接口测试): 解决接口测试 swagger2 导入丢失描述问题</li>
+<li>fix(接口测试): 解决接口测试 swagger3 导入丢失非引用属性的值的问题</li>
+<li>fix(接口测试): 解决多版本创建问题</li>
+<li>fix(接口测试): 修复场景导入引用用例 id 与生成的用例 id 不一致问题</li>
+<li>fix(接口测试): 项目只读用户进入接口定义页面自动跳转到系统设置</li>
+<li>fix(接口定义): 修复 csv 无法预览的缺陷</li>
+<li>fix(接口定义): 修复 har 文件导入执行提示没环境的缺陷</li>
+<li>fix(接口定义): 修复 json-schema 没有国际化的缺陷</li>
+<li>fix(接口定义): 修复 json 格式错误仍可以转 json-schema 的缺陷</li>
+<li>fix(接口定义): 修复文档筛选不生效的问题</li>
+<li>fix(接口定义): 修复自定义请求变量缺失的缺陷</li>
+<li>fix(接口定义): 修复导入的接口定义无法添加文件的缺陷</li>
+<li>fix(接口定义): 接口定义列表用例通过率和描述去掉排序</li>
+<li>fix(接口定义): 接口定义列表用例通过率和描述去掉排序</li>
+<li>fix(系统设置): 修复复制环境，切换项目 http 请求头丢失的缺陷</li>
+<li>fix(性能测试): 测试命长较长时生成报告报 SQL 错误</li>
+<li>fix(性能测试): 只读用户可以修改性能测试报告的名称</li>
+</ul>
 <h2 id="v12015-lts">v1.20.15-lts<a class="headerlink" href="#v12015-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年9月29日</p>
