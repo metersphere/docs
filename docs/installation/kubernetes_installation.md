@@ -312,27 +312,30 @@ common.redis.host、common.redis.port、common.redis.password 改为外部 redis
 ```
 
 ### 创建一个 Node Port 的访问方式
+!!! warning "注意"
+    使用命令 kubectl get svc -n ms 可查看 metersphere-gateway 所占用的端口号。
+
 如果不使用 ingress 的访问方式，可以创建一个 nodeport
 ```sh
-vi ms-server-nodeport.yaml
+vi ms-gateway-nodeport.yaml
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: metersphere-server-nodeport
+  name: metersphere-gateway-nodeport
   namespace: ms
 spec:
   ports:
-    - name: metersphere-server
+    - name: metersphere-gateway
       protocol: TCP
       port: 8081
       targetPort: 8081
       nodePort: 30801
   type: NodePort
   selector:
-    app: metersphere-server
+    app: metersphere-gateway
 
-kubectl create -f ms-server-nodeport.yaml 
+kubectl create -f ms-gateway-nodeport.yaml 
 ```
 
 访问 MeterSphere 页面: http://nodeIP:30801
