@@ -2979,26 +2979,30 @@ common.host.host、common.host.port、common.host.username、common.host.passwor
 common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
 </code></pre></div>
 <h3 id="node-port">创建一个 Node Port 的访问方式<a class="headerlink" href="#node-port" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>使用命令 kubectl get svc -n ms 可查看 metersphere-gateway 所占用的端口号。</p>
+</div>
 <p>如果不使用 ingress 的访问方式，可以创建一个 nodeport
-<div class="highlight"><pre><span></span><code>vi ms-server-nodeport.yaml
+<div class="highlight"><pre><span></span><code>vi ms-gateway-nodeport.yaml
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: metersphere-server-nodeport
+  name: metersphere-gateway-nodeport
   namespace: ms
 spec:
   ports:
-    - name: metersphere-server
+    - name: metersphere-gateway
       protocol: TCP
       port: <span class="m">8081</span>
       targetPort: <span class="m">8081</span>
       nodePort: <span class="m">30801</span>
   type: NodePort
   selector:
-    app: metersphere-server
+    app: metersphere-gateway
 
-kubectl create -f ms-server-nodeport.yaml 
+kubectl create -f ms-gateway-nodeport.yaml 
 </code></pre></div></p>
 <p>访问 MeterSphere 页面: <a href="http://nodeIP:30801">http://nodeIP:30801</a></p>
 
