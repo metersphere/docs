@@ -2488,6 +2488,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v231" class="md-nav__link">
+    v2.3.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v230" class="md-nav__link">
     v2.3.0
   </a>
@@ -3125,6 +3132,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v231" class="md-nav__link">
+    v2.3.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v230" class="md-nav__link">
     v2.3.0
   </a>
@@ -3735,6 +3749,55 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v231">v2.3.1<a class="headerlink" href="#v231" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年11月10日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(工作台): 更改我的待办测试计划列表筛选条件</li>
+<li>refactor(接口测试): 统一任务中心Jenkins调用状态</li>
+<li>refactor(测试跟踪): 脑图缺陷国际化</li>
+<li>refactor(测试跟踪): 测试计划代码优化</li>
+<li>refactor(测试跟踪): 增加用例评审名称长度限制</li>
+<li>refactor(测试跟踪): 测试计划功能用例跨项目跳转优化</li>
+<li>refactor(测试跟踪): 没有接口测试权限的关联表不可以点击跳转</li>
+<li>refactor(任务中心): 优化任务中心按照任务类型加载</li>
+<li>refactor(任务中心): 任务统计优化只统计已经开始执</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(工作台): 修复执行失败就进入工作台待更新列表问题</li>
+<li>fix(UI自动化): jenkins执行-测试报告列表触发方式缺少API调用</li>
+<li>fix(UI自动化): 修复UI操作日志不显示问题</li>
+<li>fix(UI自动化): 修复设置模块操作日志UI映射问题</li>
+<li>fix(UI自动化): 修复开源版任务中心报错问题</li>
+<li>fix(测试跟踪): 复制测试计划没有操作日志的问题</li>
+<li>fix(测试跟踪): 测试计划报告缺陷状态统计不准确</li>
+<li>fix(测试跟踪): 首页遗留缺陷统计总数和占比统计</li>
+<li>fix(测试跟踪): 公共用例库版本字段不支持筛选问题</li>
+<li>fix(接口测试): 修复查看接口文档页面报错的缺陷</li>
+<li>fix(接口测试): 修复执行场景，通过率不更新的缺陷</li>
+<li>fix(接口测试): 修复环境配置全局认证不生效的缺陷</li>
+<li>fix(接口测试): 修复引用场景步骤能添加同级步骤问题</li>
+<li>fix(接口定义): 修复tcp执行没有提示选择环境的缺陷</li>
+<li>fix(接口定义): 修复自定义请求执行变量值缺失的缺陷</li>
+<li>fix(接口定义): 修复接口定义新值和旧值显示一样的缺陷</li>
+<li>fix(任务中心): 修复ui测试任务没有分页问题</li>
+<li>fix(系统设置): 更换系统LOGO后不生效</li>
+<li>fix(系统设置): 操作日志操作对象环境设置更改名称为环境管理</li>
+<li>fix(系统设置): 操作日志中操作对象缺少工作空间的环境管理模块</li>
+<li>fix(项目设置): 修复消息通知接口定义API更新事件一些模版字段获取不到值问题</li>
+<li>fix(项目设置): 编辑模板自定义字段默认值,文本过大无法编辑</li>
+<li>fix(性能测试): 修复显示报告时测试详情空白的问题</li>
+<li>fix(性能测试): 修复增加了自定义监控时不能正常显示监控的问题</li>
+<li>fix(性能测试): 修复编辑测试时删除文件后不能继续导入同名文件的问题</li>
+<li>fix(报告统计): 修复关闭定时任务提示框提示错误的问题</li>
+<li>fix(报告统计): 测试用例趋势报表查看项目不再以工作空间为条件</li>
+</ul>
 <h2 id="v230">v2.3.0<a class="headerlink" href="#v230" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年10月27日</p>
