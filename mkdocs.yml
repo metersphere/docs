@@ -136,15 +136,7 @@ nav:
           - 服务集成相关: faq/service_integration.md
           - 企业版相关: faq/enterprise.md
     - 开发文档: dev_manual.md
-    - 用户案例:
-          - 中国移动上研院基于 MeterSphere 构建规范化测试体系: case_studies/china_mobile_research_institute_shanghai.md
-          - 88 完美邮箱全面提升产品质量的落地指南: case_studies/88com.md
-          - 蔚澜环保基于 MeterSphere 的自动化测试实践: case_studies/weilanep.md
-          - 易盛信息 MeterSphere 接口测试使用经验: case_studies/esunny.md
-          - 永福信息基于 MeterSphere 从项目维度持续推进测试任务: case_studies/yongfu.md
-          - 九里云基于 MeterSphere 落地一站式自动化测试平台: case_studies/jiuliyun.md
-          - 民生科技基于 MeterSphere 平台实现测试用例复用: case_studies/mskj.md
-          - 360借助 MeterSphere 提升自动化测试水平: case_studies/360b.md
+    - 用户案例: case_studies/user_cases.md
     - 更新日志: about/changelog.md
     - 联系我们: about/contact.md
 
