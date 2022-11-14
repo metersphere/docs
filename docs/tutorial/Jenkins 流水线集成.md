@@ -25,7 +25,7 @@
 ### 1. 编写脚本
 Jenkins Pipeline 目前支持两种语法模式，即 Declarative 声明式（在 Pipeline Plugin 2.5 中引入）和 Scripted Pipeline 脚本式。关于这两种模式的差异可以进一步参考Jenkins的官方文档（https://www.jenkins.io/doc/book/pipeline/#pipeline-syntax-overview）。
 
-以 Declarative 声明式语法为例，接下来我们将介绍如何在 Jenkins Pipeline 中使用 eterSphere 插件。
+以 Declarative 声明式语法为例，接下来我们将介绍如何在 Jenkins Pipeline 中使用 MeterSphere 插件。
 ```
 MeterSphere插件共提供了以下参数供用户进行配置：
 
