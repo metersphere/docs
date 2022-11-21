@@ -53,8 +53,17 @@
 ```
 
 ## 配置开发环境
+### 拉取代码
+需要拉取以下三个服务，并切换到同一分支 <br>
+
+- metersphere (https://github.com/metersphere/metersphere)
+- ms-jmeter-core (https://github.com/metersphere/ms-jmeter-core)
+- jmeter-plugins-webdriver (https://github.com/metersphere/jmeter-plugins-webdriver)
 
 ### 后端
+!!! warning "注意"
+    在启动 MeterSphere 服务之前要先启动 Mysql、Redis、Kafka、Minio 等服务。
+
 MeterSphere 后端使用了 Java 语言的 Spring Cloud 框架，并使用 Maven 作为项目管理工具。开发者需要先在开发环境中安装 JDK 1.11 及 Maven。
 
 #### 初始化配置
@@ -103,7 +112,7 @@ default-character-set=utf8mb4
 default-character-set=utf8mb4
 ```
 
-请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
+请参考文档中的建库语句创建 MeterSphere 使用的数据库，MeterSphere 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
 ```mysql
 CREATE DATABASE `metersphere_dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
 ```
@@ -113,55 +122,81 @@ MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/met
 
 ```
 # eureka 配置
-eureka.client.service-url.defaultZone=http://eureka:8761/eureka/
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+
 
 # 数据库配置
-spring.datasource.url=jdbc:mysql://localhost:3306/metersphere_dev?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+spring.datasource.url=jdbc:mysql://localhost:3306/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.password=Calong@2015
+
 
 # kafka 配置，node-controller 以及 data-streaming 服务需要使用 kafka 进行测试结果的收集和处理
 kafka.partitions=1
 kafka.replicas=1
 kafka.topic=JMETER_METRICS
 kafka.test.topic=JMETER_TESTS
-kafka.bootstrap-servers={KAFKA_IP}:19092
+kafka.bootstrap-servers=127.0.0.1:9092
 kafka.log.topic=JMETER_LOGS
-kafka.report.topic=JMETER_REPORTS
+kafka.report.topic=JMETER_REPORT
 
-# node-controller 所使用的 jmeter 镜像版本 
-jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
+# node-controller 所使用的 jmeter 镜像版本
+jmeter.image=registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.5-ms2-jdk11
 
 # TCP Mock 端口范围
 tcp.mock.port=10000-10010
 
 # Redis 配置
-spring.redis.host={REDIS_IP}
+spring.redis.host=localhost
+spring.session.store-type=redis
 spring.redis.port=6379
 spring.redis.password=Password123@redis
+
 
 # 启动模式，lcoal 表示以本地开发模式启动
 run.mode=local
 
+# minio 配置
+minio.endpoint=http://localhost:9000
+minio.accessKey=minioadmin
+minio.secretKey=minioadmin
+
 ## CAS
-cas.client.name=MS_SERVER
+#cas.client.name=MS_SERVER
 ## CAS SERVER URL
-cas.server.url=http://xxx/cas
+#cas.server.url=http://xxx/cas
 ## METERSPHERE SERVER URL
-cas.client.url=http://IP:8081                              
+#cas.client.url=http://IP:8081                          
 ```
 
-##### JMeter 配置文件
+##### 项目打包
+启动 MeterSphere 需要 jmeter 依赖，因此在启动之前需要将 ms-jmeter-core 和 jmeter-plugins-webdriver 打包
+```
+mvn clean install 
+```
 
-metersphere-server 服务依赖的 JMeter 核心类库需要加载 JMeter 配置文件，默认加载 /opt/jmeter 下的配置文件。
+在项目根目录下执行以下命令 <br>
+```
+1. 依赖打包
+# parent pom 安装到本地仓库, sdk 也进行安装
+./mvnw install -N
+./mvnw clean install -pl framework,framework/sdk-parent,framework/sdk-parent/domain,framework/sdk-parent/sdk
 
-开发者需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter/bin 目录。
+#  如果是企业版本 需要加上  framework/sdk-parent/xpack-interface
 
-#### 启动 eureka 和 gateway
+2. 整体打包
+./mvnw clean package
+```
+![server-start](./img/dev/project_package.png)
 
-选择 eureka 和 gateway 的 Spring Boot 启动项，直接启动即可。
-
+#### 启动顺序
+先启动 eureka 服务，再启动 system-setting，到这一步可以启动成功，可以访问页面了。
 ![server-start](./img/dev/eureka-gateway-start.png)
+
+![server-start](./img/dev/eureka_gateway_success.png)
+
+如果要进行多模块联调的话需要启动 gateway 和其他服务，可以通过 eureka 查看服务信息，注册成功，就可以多模块联调了。
+![server-start](./img/dev/gateway_success.png)
 
 #### 运行某一模块，比如 测试跟踪模块（test-track）
 
