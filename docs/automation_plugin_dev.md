@@ -31,7 +31,7 @@
 ```
 
 ### 2.2 生成前端表单
-在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照这 JMeter 中该步骤的配置页面，使用 [表单生成器](http://www.form-create.com/designer/?fr=home) 生成前端表单的 json 文件。
+在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照这 JMeter 中该步骤的配置页面，使用 [表单生成器](http://www.form-create.com/designer/?fr=home) 生成前端表单的 json 文件。<br>
 ![表单生成器](./img/automation_plugin_dev/表单生成器.png){ width="1000px" }
 
 点击表单生成器右上角的【生成JSON】按钮，将内容保存到 src\main\resources\json\ui_dummy.json 文件中；点击右上角的【生成Options】按钮，将内容保存到 src\main\resources\json\ui_form.json 文件中。对于没有默认值的字段，可以手动编辑下 json 文件增加一个空的默认值，避免出现空指针异常。<br>
