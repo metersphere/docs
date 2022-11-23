@@ -3192,7 +3192,7 @@ msctl status
 <h2 id="9-usrlocalbinmsctl-line-115">9 升级报 <code>/usr/local/bin/msctl: line 115 ....</code><a class="headerlink" href="#9-usrlocalbinmsctl-line-115" title="Permanent link">&para;</a></h2>
 <p>cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相关处理。</p>
 <h2 id="10-schema-metersphere-contains-a-faied-migration-to-version-86">10 升级报 <code>Schema</code> metersphere <code>contains a faied migration to version 86 !</code><a class="headerlink" href="#10-schema-metersphere-contains-a-faied-migration-to-version-86" title="Permanent link">&para;</a></h2>
-<p>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration">https://github.com/metersphere/metersphere/tree/master/backend/src/main/resources/db/migration</a>
+<p>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration">https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration</a>
 查看对应 version 的 flyway sql记录，和当前数据库比对，看具体哪行sql执行失败了，然后重新手动一条条执行下，全部执行成功后修改 metersphere_version 表对应版本的 success 值为1，然后 msctl reload 重启服务即可。</p>
 <h2 id="11">11 如何备份数据库?<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere &gt; metersphere.sql
