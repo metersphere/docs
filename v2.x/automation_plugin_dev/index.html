@@ -2603,7 +2603,7 @@
 &lt;!-- 省略结尾 --&gt;
 </code></pre></div></p>
 <h3 id="22">2.2 生成前端表单<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
-<p>在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照这 JMeter 中该步骤的配置页面，使用 <a href="http://www.form-create.com/designer/?fr=home">表单生成器</a> 生成前端表单的 json 文件。
+<p>在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照这 JMeter 中该步骤的配置页面，使用 <a href="http://www.form-create.com/designer/?fr=home">表单生成器</a> 生成前端表单的 json 文件。<br>
 <img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" width="1000px" /></p>
 <p>点击表单生成器右上角的【生成JSON】按钮，将内容保存到 src\main\resources\json\ui_dummy.json 文件中；点击右上角的【生成Options】按钮，将内容保存到 src\main\resources\json\ui_form.json 文件中。对于没有默认值的字段，可以手动编辑下 json 文件增加一个空的默认值，避免出现空指针异常。<br>
 <img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" width="1000px" /></p>
