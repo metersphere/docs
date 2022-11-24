@@ -328,8 +328,8 @@ spec:
   ports:
     - name: metersphere-gateway
       protocol: TCP
-      port: 8081
-      targetPort: 8081
+      port: 8000
+      targetPort: 8000
       nodePort: 30801
   type: NodePort
   selector:
