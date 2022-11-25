@@ -208,7 +208,7 @@ cd metersphere-offline-installer-v2.3.0
 /bin/bash install.sh
 ```
 
-执行完安装脚本后，会在线拉取镜像，等提示安装完成后，可以用 msctl status 查看服务各个组件状态
+执行完安装脚本后，会安装镜像，等提示安装完成后，可以用 msctl status 查看服务各个组件状态
 ![服务状态](../img/installation/ms-status.png)
 
 等待2分钟至各个组件都是 healthy 状态后，可通过浏览器访问如下页面登录 MeterSphere。
