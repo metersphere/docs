@@ -157,10 +157,12 @@
 ![显示设置](../../img/system_management/显示设置.png)
 
 ### 5.5 认证设置 (X-Pack)
-切换至【认证设置】标签，点击【编辑】按钮，修改 CAS、OIDC 单点登录协议认证信息，也可以点击【启用/禁用】按钮或者【删除】按钮。
+切换至【认证设置】标签，点击【添加】按钮，填写 CAS、OIDC、OAuth2 等方式的单点登录协议认证信息。<br>
+![认证配置](../../img/system_management/认证配置_2.png)
+
+可以点击【启用/禁用】按钮或者【删除】按钮，若启用 CAS、OIDC 认证后，登录页会新增 CAS、OIDC 登录选项。<br>
 ![认证配置](../../img/system_management/认证配置.png)
 
-启用 CAS、OIDC 认证后，登录页会新增 CAS、OIDC 登录选项。
 ![认证配置](../../img/system_management/认证配置_1.png)
 
 ### 5.6 模块管理 (X-Pack)

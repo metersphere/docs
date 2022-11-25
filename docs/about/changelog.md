@@ -53,6 +53,12 @@ MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本
 -  fix(项目设置): 修复消息通知不能通知缺陷处理人的问题（GitHub #19855）
 -  fix(项目设置): 修复 Minio 挂掉后，页面还能上传文件的问题（GitHub #19860）
 
+!!! warning "注意"
+    v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插件
+    目前已实现 Jira 平台的插件化，原先使用 Jira 的用户，需要下载下插件，并在系统设置-插件管理上传插件
+    使用方式跟原来一致，具体参考插件项目
+    https://github.com/metersphere/metersphere-platform-plugin
+
 ## v2.3.1
 
 ------
