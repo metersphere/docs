@@ -1986,8 +1986,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-url" class="md-nav__link">
-    5.1 修改当前站点 URL
+  <a href="#51" class="md-nav__link">
+    5.1 基本配置
   </a>
   
 </li>
@@ -2592,8 +2592,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-url" class="md-nav__link">
-    5.1 修改当前站点 URL
+  <a href="#51" class="md-nav__link">
+    5.1 基本配置
   </a>
   
 </li>
@@ -2811,9 +2811,9 @@
 <h2 id="5">5 系统参数设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>点击左侧【系统】下拉菜单中的【系统参数设置】进入参数设置界面，用于平台【基本配置】、【邮件设置】、【LDAP设置】、【显示设置】、【认证设置】、【模块管理】等参数的设置。
 <img alt="系统参数设置首页" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" /></p>
-<h3 id="51-url">5.1 修改当前站点 URL<a class="headerlink" href="#51-url" title="Permanent link">&para;</a></h3>
+<h3 id="51">5.1 基本配置<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
 <p>性能测试执行过程中 node-controller 节点需要通过配置的【当前站点URL】下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。
-<div class="lightgallery"><a data-sub-html="当前站点URL" href="../../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png"><img alt="当前站点URL" src="../../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" /></a></div></p>
+<div class="lightgallery"><a data-sub-html="当前站点URL" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png"><img alt="当前站点URL" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" /></a></div></p>
 <div class="admonition info">
 <p class="admonition-title">选项</p>
 <ul>
@@ -2821,6 +2821,7 @@
 <li>【并发数】：限制场景接口自动化中场景并行执行时的并发数量。</li>
 <li>【Prometheus 地址】：Prometheus 监控服务地址。</li>
 <li>【selenium-docker 地址】：selenium 服务地址。</li>
+<li>【接口默认本地执行】：禁用后所有执行功能只能通过测试资源池执行，为了不影响接口正常执行，选择【禁用】后，请在【 项目设置-应用管理-接口测试 】中配置接口执行的资源池。</li>
 </ul>
 </div>
 <h3 id="52">5.2 邮件设置<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
