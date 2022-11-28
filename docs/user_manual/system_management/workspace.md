@@ -26,6 +26,7 @@
 ![查询成员用户](../../img/system_management/查询成员用户.png)
 
 ### 1.2 服务集成
+
 可查看当前工作空间里集成的缺陷管理平台，并设置和修改当前工作空间需要将测试用例缺陷数据同步的缺陷管理平台。
 点击【工作空间】菜单栏，点击【服务集成】，即可查看当前工作空间已集成的缺陷管理平台，同时可点击【编辑】集成 TAPD、JIRA 和禅道、Azure Devops等平台。
 
@@ -78,6 +79,11 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 ![!TAPD-查询需求](../../img/system_management/TAPD-查询需求.png)
 
 #### <font size=4> 1.2.2 与JIRA集成 </font>
+!!! warning "注意"
+    v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插件。
+    目前已实现 Jira 平台的插件化，原先使用 Jira 的用户，需要下载下插件，并在【系统设置-插件管理】上传插件。
+    使用方式跟原来一致，具体参考插件项目：https://github.com/metersphere/metersphere-platform-plugin
+
 - 第一步：填写对接 JIRA 的地址、认证信息和问题类型，如下。
 
 ![!填写jira](../../img/system_management/填写jira.png)
@@ -155,7 +161,32 @@ Metersphere 平台与管理工具集成设置可分为三步骤来完成。
 ![!禅道-同步需求](../../img/system_management/同步缺陷_禅道.png)
 
 #### <font size=4> 1.2.4 与Azure Devops集成 </font>
-操作步骤和【禅道】集成一样。
+- 第一步：服务集成配置。
+
+填写【Basic Auth 账号信息】后，点击【测试连接】即可 <br>
+![!禅道-马上关联项目](../../img/system_management/Azure配置项目.png)
+
+- 第二步： 关联项目配置
+
+配置完服务集成后，还需要配置项目中引用禅道项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。 <br>
+![!禅道-马上关联项目](../../img/system_management/Azure-马上关联项目.png)
+
+跳转到【项目管理】，点击【编辑】，编辑项目里【集成第三方平台】、【AzureDevops项目ID】、【AzureDevops过滤ID】，以及缺陷模板等相关信息。 <br>
+![!禅道-禅道项目ID](../../img/system_management/Azure-Azure项目ID.png)
+
+- 第三步：添加个人平台账号
+
+点击服务集成页面右下角的【马上添加】进行设置。 <br>
+![!禅道-马上添加](../../img/system_management/Azure-马上添加.png)
+
+选择【第三方平台账号】设置【AzureDevops 信息】，如果不设置个人平台账号，则使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。 <br>
+![!禅道-第三方平台账号](../../img/system_management/Azure-第三方平台账号.png)
+
+以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联 AzureDevops 的相关需求。 <br>
+![!禅道-相关需求](../../img/system_management/Azure-关联需求.png)
+
+在缺陷管理提交缺陷后，点击【同步按钮】，数据会同步到 AzureDevops 系统中。 <br>
+![!禅道-同步需求](../../img/system_management/同步缺陷_Azure.png)
 
 ### 1.3 项目管理
 工作空间下对所有项目及项目使用到的 Jar 包进行统一管理。
