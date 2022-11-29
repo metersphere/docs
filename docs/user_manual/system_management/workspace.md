@@ -196,7 +196,32 @@ https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#ap
 ![!禅道-自定义字段同步设置](../../img/system_management/禅道-自定义字段同步设置.png)
 
 #### <font size=4> 1.2.4 与Azure Devops集成 </font>
-操作步骤和`禅道集成`一样。
+- 第一步：服务集成配置。
+
+填写【Basic Auth 账号信息】后，点击【测试连接】即可 <br>
+![!禅道-马上关联项目](../../img/system_management/Azure配置项目.png)
+
+- 第二步： 关联项目配置
+
+配置完服务集成后，还需要配置项目中引用禅道项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。 <br>
+![!禅道-马上关联项目](../../img/system_management/Azure-马上关联项目.png)
+
+跳转到【项目管理】，点击【编辑】，编辑项目里【集成第三方平台】、【AzureDevops项目ID】、【AzureDevops过滤ID】，以及缺陷模板等相关信息。 <br>
+![!禅道-禅道项目ID](../../img/system_management/Azure-Azure项目ID.png)
+
+- 第三步：添加个人平台账号
+
+点击服务集成页面右下角的【马上添加】进行设置。 <br>
+![!禅道-马上添加](../../img/system_management/Azure-马上添加.png)
+
+选择【第三方平台账号】设置【AzureDevops 信息】，如果不设置个人平台账号，则使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。 <br>
+![!禅道-第三方平台账号](../../img/system_management/Azure-第三方平台账号.png)
+
+以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联 AzureDevops 的相关需求。 <br>
+![!禅道-相关需求](../../img/system_management/Azure-关联需求.png)
+
+在缺陷管理提交缺陷后，点击【同步按钮】，数据会同步到 AzureDevops 系统中。 <br>
+![!禅道-同步需求](../../img/system_management/同步缺陷_Azure.png)
 
 ### 1.3 项目管理
 工作空间下对所有项目及项目使用到的 Jar 包进行统一管理。
