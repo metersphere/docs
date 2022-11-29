@@ -2822,7 +2822,29 @@
 <p>缺陷模板支持自定义字段，（自定义字段的设置同上文与 JIRA 集成第四步），设置好的字段会出现在字段的列表中，选择字段名并设置 API 字段名。API 字段名通过禅道接口链接查询 http://<IP>/zentao/dev-api-bug.html。
 <div class="lightgallery"><a data-sub-html="禅道-自定义字段同步设置" href="../../../img/system_management/%E7%A6%85%E9%81%93-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%90%8C%E6%AD%A5%E8%AE%BE%E7%BD%AE.png"><img alt="禅道-自定义字段同步设置" src="../../../img/system_management/%E7%A6%85%E9%81%93-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%90%8C%E6%AD%A5%E8%AE%BE%E7%BD%AE.png" /></a></div></p>
 <h4 id="124-azure-devops"><font size=4> 1.2.4 与Azure Devops集成 </font><a class="headerlink" href="#124-azure-devops" title="Permanent link">&para;</a></h4>
-<p>操作步骤和<code>禅道集成</code>一样。</p>
+<ul>
+<li>第一步：服务集成配置。</li>
+</ul>
+<p>填写【Basic Auth 账号信息】后，点击【测试连接】即可 <br>
+<div class="lightgallery"><a data-sub-html="禅道-马上关联项目" href="../../../img/system_management/Azure%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE.png"><img alt="禅道-马上关联项目" src="../../../img/system_management/Azure%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE.png" /></a></div></p>
+<ul>
+<li>第二步： 关联项目配置</li>
+</ul>
+<p>配置完服务集成后，还需要配置项目中引用禅道项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。 <br>
+<div class="lightgallery"><a data-sub-html="禅道-马上关联项目" href="../../../img/system_management/Azure-%E9%A9%AC%E4%B8%8A%E5%85%B3%E8%81%94%E9%A1%B9%E7%9B%AE.png"><img alt="禅道-马上关联项目" src="../../../img/system_management/Azure-%E9%A9%AC%E4%B8%8A%E5%85%B3%E8%81%94%E9%A1%B9%E7%9B%AE.png" /></a></div></p>
+<p>跳转到【项目管理】，点击【编辑】，编辑项目里【集成第三方平台】、【AzureDevops项目ID】、【AzureDevops过滤ID】，以及缺陷模板等相关信息。 <br>
+<div class="lightgallery"><a data-sub-html="禅道-禅道项目ID" href="../../../img/system_management/Azure-Azure%E9%A1%B9%E7%9B%AEID.png"><img alt="禅道-禅道项目ID" src="../../../img/system_management/Azure-Azure%E9%A1%B9%E7%9B%AEID.png" /></a></div></p>
+<ul>
+<li>第三步：添加个人平台账号</li>
+</ul>
+<p>点击服务集成页面右下角的【马上添加】进行设置。 <br>
+<div class="lightgallery"><a data-sub-html="禅道-马上添加" href="../../../img/system_management/Azure-%E9%A9%AC%E4%B8%8A%E6%B7%BB%E5%8A%A0.png"><img alt="禅道-马上添加" src="../../../img/system_management/Azure-%E9%A9%AC%E4%B8%8A%E6%B7%BB%E5%8A%A0.png" /></a></div></p>
+<p>选择【第三方平台账号】设置【AzureDevops 信息】，如果不设置个人平台账号，则使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。 <br>
+<div class="lightgallery"><a data-sub-html="禅道-第三方平台账号" href="../../../img/system_management/Azure-%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0%E8%B4%A6%E5%8F%B7.png"><img alt="禅道-第三方平台账号" src="../../../img/system_management/Azure-%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0%E8%B4%A6%E5%8F%B7.png" /></a></div></p>
+<p>以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联 AzureDevops 的相关需求。 <br>
+<div class="lightgallery"><a data-sub-html="禅道-相关需求" href="../../../img/system_management/Azure-%E5%85%B3%E8%81%94%E9%9C%80%E6%B1%82.png"><img alt="禅道-相关需求" src="../../../img/system_management/Azure-%E5%85%B3%E8%81%94%E9%9C%80%E6%B1%82.png" /></a></div></p>
+<p>在缺陷管理提交缺陷后，点击【同步按钮】，数据会同步到 AzureDevops 系统中。 <br>
+<div class="lightgallery"><a data-sub-html="禅道-同步需求" href="../../../img/system_management/%E5%90%8C%E6%AD%A5%E7%BC%BA%E9%99%B7_Azure.png"><img alt="禅道-同步需求" src="../../../img/system_management/%E5%90%8C%E6%AD%A5%E7%BC%BA%E9%99%B7_Azure.png" /></a></div></p>
 <h3 id="13">1.3 项目管理<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
 <p>工作空间下对所有项目及项目使用到的 Jar 包进行统一管理。</p>
 <ul>
