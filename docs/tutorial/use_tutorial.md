@@ -17,6 +17,7 @@
 - [对接禅道](./对接禅道.md)
 - [对接 JIRA](./对接 JIRA.md)
 - [对接 TAPD](./对接 TAPD.md)
+- [对接 AzureDevops](./对接 Azure Devops.md)
 - [Jenkins 流水线集成](./Jenkins 流水线集成.md)
 
 ## 4 脚本引用
