@@ -1,0 +1,2936 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Document">
+      
+      
+        <meta name="author" content="MeterSphere 项目组">
+      
+      
+        <link rel="canonical" href="https://metersphere.io/v2.x/tutorial/MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">
+      
+      <link rel="icon" href="../../img/facio.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>MeterSphere 中各类变量的设置和使用全教程 - MeterSphere 文档</title>
+      
+    
+    
+<link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+<link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
+
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
+
+    
+
+
+    
+
+<script src="../../js/lightgallery.min.js"></script>
+
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script src="../../js/mega.js"></script>
+
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-147297392-7","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+<header id="topnav" class="defaultscroll sticky">
+    <svg class="hidden-print" aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="mega-nav-icon-angle" viewBox="0 0 13 7">
+                <polygon points="6.5,6.5 0.7,1.6 1.3,0.8 6.5,5.2 11.7,0.8 12.3,1.6 "></polygon>
+            </symbol>
+            <symbol id="mega-nav-icon-close" viewBox="0 0 13 15">
+                <path vector-effect="non-scaling-stroke" d="M1.1 14L11.9 1M11.9 14L1.1 1"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <div class="hidden-print mega-nav-sandbox">
+        <div class="mega-nav-banner">
+            <div class="container">
+                <div class="mega-nav-banner-item">
+                    <a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img src="../../img/logo/logo-light-FIT2CLOUD.svg" alt="FIT2CLOUD Logo" /></a>
+                </div>
+                <div class="mega-nav-banner-item">
+                    <p class="mega-nav-tagline">
+                        <span class="visible-xs text-muted">了解 FIT2CLOUD 飞致云旗下开源产品</span>
+                    </p>
+                    <div id="#mega-nav" class="mega-nav">
+                        <button type="button" id="mega-nav-ctrl" class="mega-nav-ctrl">
+                            <div class="mega-nav-ctrl-items">
+                                <span class="mega-nav-icon-outline">
+                                    <svg class="mega-nav-icon mega-nav-icon-angle-right" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mega-nav-icon-angle"></use>
+                                    </svg>
+                                    <span class="visuallyhidden">Open</span>
+                                </span>
+                            </div>
+                        </button>
+
+                        <div id="mega-nav-body-ct" class="mega-nav-body-ct" aria-labelledby="mega-nav-ctrl" style="display: none;">
+                            <div class="mega-nav-body">
+                                <button type="button" id="mega-nav-close" class="mega-nav-close">
+                                    <svg class="mega-nav-icon mega-nav-icon-close" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mega-nav-icon-close"></use></svg>
+                                    <span class="visuallyhidden">Close</span>
+                                </button>
+                                <div class="mega-nav-body-header">
+                                    <div class="mega-nav-body-header-item">
+                                        <h4 class="mt-3">我们基于创新的开源模式，向企业级用户交付被广泛验证、可信赖的通用工具软件。</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
+                                        <div class="card explore-feature border-0 rounded text-center bg-white shadow">
+                                            <a href="https://metersphere.io/" target="_blank" class="product-text-color">
+                                                <div class="card-body header-card-body">
+                                                    <h5 class="mt-3">测试</h5>
+                                                    <div class="">
+                                                        <img src="../../img/logo/banner-nav-MeterSphere.svg" alt="MeterSphere Logo" />
+                                                        <p class="text-muted mb-1 pl-0 pr-0">开源持续测试平台</p>
+                                                        <img alt="GitHub stars" src="https://img.shields.io/github/stars/metersphere/metersphere?style=social">
+                                                    </div>
+                                                    <div class="icon rounded-circle shadow-lg mt-3 d-inline-block bg-ms icon-size">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
+                                        <div class="card explore-feature border-0 rounded text-center bg-white shadow">
+                                            <a href="https://kubeoperator.io/" target="_blank" class="product-text-color">
+                                                <div class="card-body header-card-body">
+                                                    <h5 class="mt-3">运行</h5>
+                                                    <div class="">
+                                                        <img src="../../img/logo/banner-nav-KubeOperator.svg" alt="KubeOperator Logo" />
+                                                        <p class="text-muted mb-1">开源容器平台</p>
+                                                        <img alt="GitHub stars" src="https://img.shields.io/github/stars/kubeoperator/kubeoperator?style=social">
+                                                    </div>
+                                                    <div class="icon rounded-circle shadow-lg mt-3 d-inline-block bg-ko icon-size">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
+                                        <div class="card explore-feature border-0 rounded text-center bg-white shadow">
+                                            <a href="https://dataease.io/" target="_blank" class="product-text-color">
+                                                <div class="card-body header-card-body">
+                                                    <h5 class="mt-3">分析</h5>
+                                                    <div class="">
+                                                        <img src="../../img/logo/banner-nav-DataEase.svg" alt="DataEase Logo" />
+                                                        <p class="text-muted mb-1">开源数据可视化分析平台</p>
+                                                        <img alt="GitHub stars" src="https://img.shields.io/github/stars/dataease/dataease?style=social">
+                                                    </div>
+                                                    <div class="icon rounded-circle shadow-lg mt-3 d-inline-block bg-f2c icon-size">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
+                                        <div class="card explore-feature border-0 rounded text-center bg-white shadow">
+                                            <a href="https://www.jumpserver.org/" target="_blank" class="product-text-color">
+                                                <div class="card-body header-card-body">
+                                                    <h5 class="mt-3">保护</h5>
+                                                    <div class="">
+                                                        <img src="../../img/logo/banner-nav-JumpServer.svg" alt="JumpServer Logo" />
+                                                        <p class="text-muted mb-1">开源堡垒机</p>
+                                                        <img alt="GitHub stars" src="https://img.shields.io/github/stars/jumpserver/jumpserver?style=social">
+                                                    </div>
+                                                    <div class="icon rounded-circle shadow-lg mt-3 d-inline-block bg-js icon-size">
+                                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-nav-body-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="MeterSphere 文档" class="md-header__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
+      
+  <img src="../../img/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MeterSphere 文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MeterSphere 中各类变量的设置和使用全教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换为深色模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/metersphere/metersphere" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metersphere/metersphere
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MeterSphere 文档" class="md-nav__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
+      
+  <img src="../../img/logo-white.png" alt="logo">
+
+    </a>
+    MeterSphere 文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/metersphere/metersphere" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    metersphere/metersphere
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        项目介绍
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          快速开始
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="快速开始" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          快速开始
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/quick_start/" class="md-nav__link">
+        一键部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/create_project/" class="md-nav__link">
+        创建项目
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/test_track/" class="md-nav__link">
+        使用测试跟踪
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/api_test/" class="md-nav__link">
+        使用接口测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/ui_test/" class="md-nav__link">
+        使用 UI 测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/load_test/" class="md-nav__link">
+        使用性能测试
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system_arch/" class="md-nav__link">
+        系统架构
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          安装部署
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="安装部署" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          安装部署
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Linux 中部署
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux 中部署" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux 中部署
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/online_installation/" class="md-nav__link">
+        在线安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/online_upgrade/" class="md-nav__link">
+        在线升级
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/offline_installation/" class="md-nav__link">
+        离线安装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/offline_upgrade/" class="md-nav__link">
+        离线升级
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/kubernetes_installation/" class="md-nav__link">
+        Kubernetes 中部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/offline_installation_windows/" class="md-nav__link">
+        Windows 中部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/offline_installation_mac/" class="md-nav__link">
+        Mac 中部署
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          MeterSphere 分布式部署
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MeterSphere 分布式部署" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          MeterSphere 分布式部署
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/pre_work/" class="md-nav__link">
+        整体部署规划
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/build_kafka/" class="md-nav__link">
+        部署Kafka集群
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/build_data_streaming/" class="md-nav__link">
+        部署Data-Streaming集群
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/build_node_controller/" class="md-nav__link">
+        部署Node-Controller集群
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/pressure_work/" class="md-nav__link">
+        压测工作
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/backup_data/" class="md-nav__link">
+        MeterSphere 数据备份
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/cli/" class="md-nav__link">
+        命令行工具
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          用户手册
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="用户手册" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          用户手册
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/general/" class="md-nav__link">
+        通用功能
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          我的工作台
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="我的工作台" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          我的工作台
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/my_desk/dashboard/" class="md-nav__link">
+        我的仪表盘
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/my_desk/todo/" class="md-nav__link">
+        我的待办
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/my_desk/attention/" class="md-nav__link">
+        我的关注
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/my_desk/created/" class="md-nav__link">
+        我创建的
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          测试跟踪
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="测试跟踪" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          测试跟踪
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/intro/" class="md-nav__link">
+        模块说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/home/" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/test_case/" class="md-nav__link">
+        功能用例
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/test_case_review/" class="md-nav__link">
+        用例评审
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/test_plan/" class="md-nav__link">
+        测试计划
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/test_defect/" class="md-nav__link">
+        缺陷管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/test_track/test_report/" class="md-nav__link">
+        报告
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          接口测试
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="接口测试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          接口测试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/intro/" class="md-nav__link">
+        模块说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/home/" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/api_definition/" class="md-nav__link">
+        接口定义
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/api_automation/" class="md-nav__link">
+        接口自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/test_report/" class="md-nav__link">
+        接口测试报告中心
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/api_step/" class="md-nav__link">
+        用例步骤说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/api_test/functions/" class="md-nav__link">
+        内置函数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          UI 测试
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="UI 测试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          UI 测试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/ui_test/intro/" class="md-nav__link">
+        模块说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/ui_test/info/" class="md-nav__link">
+        注意事项
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/ui_test/ui_element_store/" class="md-nav__link">
+        元素库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/ui_test/ui_automation/" class="md-nav__link">
+        UI 自动化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/ui_test/ui_test_report/" class="md-nav__link">
+        测试报告
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          性能测试
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="性能测试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          性能测试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/load_test/intro/" class="md-nav__link">
+        模块说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/load_test/home/" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/load_test/load_test/" class="md-nav__link">
+        性能测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/load_test/test_report/" class="md-nav__link">
+        性能测试报告
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          报表统计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="报表统计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          报表统计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/report_statistics/project_statistics/" class="md-nav__link">
+        项目报表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/report_statistics/report/" class="md-nav__link">
+        项目报告
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_8">
+          项目设置
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="项目设置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          项目设置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/project_info/" class="md-nav__link">
+        项目信息
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/project_user/" class="md-nav__link">
+        项目成员
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/usergroup_permission/" class="md-nav__link">
+        用户组与权限
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/project_environment/" class="md-nav__link">
+        项目环境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/file_management/" class="md-nav__link">
+        文件管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/false_library/" class="md-nav__link">
+        误报库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/template_management/" class="md-nav__link">
+        模版管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/notice_management/" class="md-nav__link">
+        消息设置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/operation_log/" class="md-nav__link">
+        操作日志
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/version%20management/" class="md-nav__link">
+        版本管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/application_management/" class="md-nav__link">
+        应用管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/project_management/customcode_snippets/" class="md-nav__link">
+        自定义代码片段
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_9">
+          系统设置
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="系统设置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          系统设置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/system_management/intro/" class="md-nav__link">
+        模块说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/system_management/system/" class="md-nav__link">
+        系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/system_management/workspace/" class="md-nav__link">
+        工作空间
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          插件使用教程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="插件使用教程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          插件使用教程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/plugin_use/chrome_plugin/" class="md-nav__link">
+        MeterSphere 浏览器插件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/plugin_use/jenkins_plugin/" class="md-nav__link">
+        Jenkins 插件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/plugin_use/idea_plugin/" class="md-nav__link">
+        IDEA 插件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user_manual/plugin_use/selenium_ide_plugin/" class="md-nav__link">
+        Selenium IDE 插件
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
+        使用教程
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teach_video/video_index/" class="md-nav__link">
+        教学视频
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          常见问题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="常见问题" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          常见问题
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/installation/" class="md-nav__link">
+        安装部署相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/test_track/" class="md-nav__link">
+        测试跟踪相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/api_test/" class="md-nav__link">
+        接口测试相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/ui_test/" class="md-nav__link">
+        UI 测试相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/load_test/" class="md-nav__link">
+        性能测试相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/report_statistics/" class="md-nav__link">
+        报表统计相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/system_management/" class="md-nav__link">
+        系统设置相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/service_integration/" class="md-nav__link">
+        服务集成相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/enterprise/" class="md-nav__link">
+        企业版相关
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          开发文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="开发文档" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          开发文档
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev_manual/" class="md-nav__link">
+        源码搭建 (前后端分离)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation_plugin_dev/" class="md-nav__link">
+        接口自动化插件开发示例
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../case_studies/user_cases/" class="md-nav__link">
+        用户案例
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/changelog/" class="md-nav__link">
+        更新日志
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contact/" class="md-nav__link">
+        联系我们
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1 设置使用变量
+  </a>
+  
+    <nav class="md-nav" aria-label="1 设置使用变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 设置和使用环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 设置使用用例变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 设置使用场景变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-beanshell" class="md-nav__link">
+    1.4 BeanShell内置变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2 变量设置使用示例
+  </a>
+  
+    <nav class="md-nav" aria-label="2 变量设置使用示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 设置使用环境变量示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 设置使用用例变量示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 设置使用场景变量示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3 总结
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 中各类变量的设置和使用全教程.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>MeterSphere 中各类变量的设置和使用全教程</h1>
+
+<h2 id="1">1 设置使用变量<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">在MeterSphere中有如下环境变量设置：</p>
+<p>1.可以在环境中设置环境变量，在接口用例请求参数的QUERY参数、REST参数、请求体、前置操作脚本、后置操作脚本中引用使用。在环境中设置的环境变量类型只支持常量类型，不支持列表、CSV、计数器、随机数类型；<br>
+2.可以在前置脚本中设置用例变量，在用例的请求体、后置操作脚本中引用使用；<br>
+3.可以在场景中设置场景变量，在场景下的接口用例、自定义请求的请求参数中引用使用。除常量类型之外，场景变量还支持列表、CSV、计数器、随机数类型。<br></p>
+</div>
+<h3 id="11">1.1 设置和使用环境变量<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>在MeterSphere中，可以设置“环境变量”，给使用指定同一测试环境参数测试的接口测试、场景自动化测试用例使用。
+下表为在请求参数的QUERY参数、REST参数、请求体、前后置BeanShell脚本、前后置Python脚本中引用、设置变量的方法，以及调试时打印变量值且能够到控制台查看、转换变量类型的常用方法。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   引用使用
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   使用方法及实例(假设变量名为dbname)
+  </td>
+  <tbody>
+    <tr>
+        <td >在请求参数之QUERY参数中引用</td>
+        <td >${dbname}</td>
+    </tr>
+    <tr>
+        <td >在请求参数之REST参数中引用</td>
+        <td >${dbname}</td>
+    </tr>
+    <tr>
+        <td >在请求参数之请求体中引用</td>
+        <td >${dbname}</td>
+    </tr>
+     <tr>
+        <td >在请求参数之前后置BeanShell脚本中引用及常用方法 <br>
+             BeanShell注意事项：<br>
+               1.每行须以分号结尾；<br>
+               2.注释行以“//”开始；<br>
+               3.log.info打印变量和vars.put设置变量时，需要变量类型为字符串类型。<br>
+        </td>
+        <td >1.获取变量值方法1（直接引用方法）：
+             dbname="${dbname}"; <br>
+             2.获取变量值方法2（使用BeanShell内置变量获取）：<br>
+             dbname2=vars.get("dbname"); <br>
+             3.打印到控制台，输出并查看变量值（调试时常用）：<br>
+             log.info("dbname="+dbname);<br>
+             log.info("dbname2="+dbname2);<br>
+             4.将字符串转换成数字类型：<br>
+             iCount=Integer.valueOf(strCount);<br>
+             5.将数字转成字符串（在设置变量时经常用到）：<br>
+             strCount=String.valueOf(iCount);<br>
+             vars.put("count", strCount);<br>
+             6.将字符串转成数字：<br>
+             iCount=Integer.valueOf(strCount);<br>
+             7.JMeter函数赋值方法：<br>
+             uuid="${__UUID}";<br>
+        </td>
+     </tr>
+     <tr>
+        <td >在请求参数之前后置Python脚本中引用及常用方法</td>
+        <td >1.获取变量值：<br>
+             dbname="${dbname}";<br>
+             2.获取变量值：<br>
+             dbname2=vars.get("dbname");<br>
+             3.打印到控制台，输出并查看变量值（调试时用）：<br>
+             log.info("dbname="+dbname);<br>
+             log.info("dbname2="+dbname2);<br>
+             4.将字符串转换成数字类型：<br>
+             iCount=int(strCount);<br>
+             注意，打印数字类型变量和设置变量时，需要先将其转换为字符串类型。<br>
+             log.info("iCount="+str(iCount));<br>
+             vars.put("count", str(iCount));<br>
+             5.将数字转成成字符串（在设置变量时经常用到）：<br>
+             strCount=str(iCount);<br>
+             log.info("strCount="+strCount);<br>
+             vars.put("count", strCount);<br>
+             6.将字符串转成数字：<br>
+             iCount=int(strCount);<br>
+             7.JMeter函数赋值方法：<br>
+             uuid="${__UUID}";<br>
+             </td>
+     </tr>
+  </tbody>
+</table>
+
+<p>设置环境变量的页面操作步骤方法如下：</p>
+<p>1.在“项目环境”页面中，如图1-1所示，可以选择“创建环境”，打开如图1-2所示的“创建环境”对话框，在对话框中的“通用配置”选项卡下配置环境变量。</p>
+<p>2.也可选择要设置变量的环境，选择“编辑”按钮打开如图1-3所示的“配置环境”对话框，在对话框中的“通用配置”选项卡下配置环境变量。
+<img alt="配置项目环境管理页面地址" height="100%" src="../../img/tutorial/use_variable/%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br> 
+<font size=2 class="png-lable-span">图1-1 项目环境管理页面</font><br>
+<img alt="配置创建环境对话框地址" height="100%" src="../../img/tutorial/use_variable/%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2  class="png-lable-span">图1-2 创建环境对话框</font><br>
+<img alt="配置配置环境对话框地址" height="100%" src="../../img/tutorial/use_variable/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2  class="png-lable-span">图1-3 配置环境对话框</font><br></p>
+<p>3.也可以如图1-4所示，在接口用例页面中打开右上角“保存”按钮左侧的运行环境下拉列表，在列表中选择“环境配置”，打开“环境配置”对话框。如图1-5所示，在对话框中的“通用配置”选项卡中设置环境变量。<br>
+<img alt="配置接口用例页面地址" height="100%" src="../../img/tutorial/use_variable/%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br> 
+<font size=2  class="png-lable-span">图1-4 接口用例页面</font><br>
+<img alt="配置环境配置对话框地址" height="100%" src="../../img/tutorial/use_variable/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2  class="png-lable-span">图1-5 环境配置对话框</font><br></p>
+<h3 id="12">1.2 设置使用用例变量<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>在前后置脚本中，可使用BeanShell内置变量vars的put方法设置变量，如图1-6所示。
+<div class="highlight"><pre><span></span><code>vars.put(&quot;变量名&quot;, 变量值); 
+//注意：变量值需为字符串类型
+</code></pre></div>
+比如，要在调用InfluxDB write API写入监控数据前生成随机的cpu usage数据，可在前置脚本中生成随机数并设置到cpuUsage变量，之后调用接口时在请求体使用这个变量。
+<div class="highlight"><pre><span></span><code>//BeanShell
+cpuUsage=${__Random(1,99,usage)};
+log.info(&quot;cpuUsage=&quot;+cpuUsage);
+vars.put(&quot;usage&quot;, cpuUsage);
+</code></pre></div>
+<img alt="配置前置脚本中设置变量地址" height="100%" src="../../img/tutorial/use_variable/%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E4%B8%AD%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F.png" width="70%" /> <br>
+<font size=2  class="png-lable-span">图1-6 前置脚本中设置变量</font><br></p>
+<h3 id="13">1.3 设置使用场景变量<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>在接口自动化的场景中，可以在“场景变量”中设置变量，然后在场景中导入的接口用例、自定义请求中的QUERY参数、REST参数、请求体、前后置脚本中引用使用。如图1-7所示，在“创建场景”页面中，选择“场景变量”，打开“场景变量”对话框；如图1-8所示，在对话框中添加管理变量，可添加的有常量、列表、CSV、计数器、随机数变量。 <br>
+<img alt="配置创建场景页面地址" height="100%" src="../../img/tutorial/use_variable/%E5%88%9B%E5%BB%BA%E5%9C%BA%E6%99%AF%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2  class="png-lable-span">图1-7 创建场景页面</font><br>
+<img alt="配置场景变量对话框地址" height="100%" src="../../img/tutorial/use_variable/%E5%9C%BA%E6%99%AF%E5%8F%98%E9%87%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2  class="png-lable-span">图1-8 场景变量对话框</font><br></p>
+<h3 id="14-beanshell">1.4 BeanShell内置变量<a class="headerlink" href="#14-beanshell" title="Permanent link">&para;</a></h3>
+<p>JMeter BeanShell内置变量的使用范围为前置操作脚本和后置操作脚本中。</p>
+<p>常用的内置变量如下表。可使用vars获取变量值、设置变量，如图1-9所示。调试脚本时使用log打印、查看变量值。在后置脚本中，可以使用prev获取调用接口后返回的信息和响应码。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   BeanShell内置变量
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   内置变量方法
+  </td>
+  <tbody>
+    <tr>
+        <td >vars <br>
+             操作JMeter变量</td>
+        <td >获取变量值：<br>
+             vars.get("变量名");<br>
+             设置变量值需为字符串类型：<br>
+             vars.put("变量名", 变量值);<br>
+        </td>
+    </tr>
+    <tr>
+        <td >prev <br>
+             获取之前Sampler返回的信息 </td>
+        <td >获取响应信息：<br>
+             prev.getResponseDataAsString();<br>
+             获取响应Code码：<br>
+             prev.getResponseCode();</td>
+    </tr>
+    <tr>
+        <td >log<br>
+             写日志并发送到控制台</td>
+        <td >log.info("日志内容");<br>
+             log.info("变量名="+变量值);</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img alt="配置前置操作脚本中使用BeanShell内置变量地址" height="100%" src="../../img/tutorial/use_variable/%E5%89%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E8%84%9A%E6%9C%AC%E4%B8%AD%E4%BD%BF%E7%94%A8BeanShell%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图1-9 前置操作脚本中使用BeanShell内置变量</font><br></p>
+<h2 id="2">2 变量设置使用示例<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>接下来我们将在InfluxDB接口测试场景中演示变量的具体使用方法。</p>
+<p>假设我们是InfluxDB测试团队，现在要对InfluxDB支持的一系列操作进行测试，包括创建database、查询database列表、写入主机监控点数据等。</p>
+<p>如跟随本文的示例步骤实操，请先使用以下命令在CentOS7.x虚拟机上部署Influxdb，打开8086端口。
+<div class="highlight"><pre><span></span><code>wget https://dl.influxdata.com/influxdb/releases/influxdb-1.8.0.x86_64.rpm
+
+rpm -ivh influxdb-1.8.0.x86_64.rpm
+#8086 端口：使用该端口与influxdb客户端进行数据交互。
+firewall-cmd --zone=public --add-port=8086/tcp --permanent
+firewall-cmd --reload
+systemctl start influxdb
+</code></pre></div></p>
+<h3 id="21">2.1 设置使用环境变量示例<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>接下来我们可以创建InfluxDB DEV测试环境，设置dbname环境变量，创建Influxdb database接口测试用例，演示设置环境变量，并在请求参数之QUERY参数、请求体、前后置BeanShell脚本中引用变量。</p>
+<p><font size=4> 2.1.1 设置环境变量 </font>
+登录MeterSphere进入指定工作空间后，需要先创建一个InfluxDB测试环境，并在测试环境中设置dbname环境变量。后续需要在各个API接口测试用例中引用这个变量创建database，向其中写入监控数据，并从中获取监控数据。</p>
+<p>操作步骤如下：<br>
+1.在“项目设置”栏下选择“项目环境”一项，打开“项目环境”页面，如图2-1所示；</p>
+<p>2.在“项目环境”页面中，选择“创建环境”按钮，打开“创建环境”对话框，如图2-2所示；</p>
+<p>3.在“创建环境”对话框中：</p>
+<p>① 输入环境名称“InfluxDB DEV测试环境”，</p>
+<p>② 打开“通用配置”选项卡，在选项卡中，添加变量dbname，值设置为“monitoringdb”，</p>
+<p>③ 打开“HTTP配置”选项卡，在选项卡中，如图2-3所示，在“环境域名”输入框中输入“10.1.13.12:8086”(10.1.13.12是InfluxDB服务器的IP地址和端口)；</p>
+<p>4.最后，点击“确定”按钮完成“InfluxDB DEV测试环境”的创建，在如图2-4、2-5所示页面中，可看到新建的“InfluxDB DEV测试环境”。
+<img alt="配置“项目环境”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-1 “项目环境”页面</font><br>
+<img alt="配置“创建环境”对话框地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E2%80%9D%E5%AF%B9%E8%AF%9D%E6%A1%86.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-2 “创建环境”对话框</font><br>
+<img alt="配置“HTTP配置”选项卡地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9CHTTP%E9%85%8D%E7%BD%AE%E2%80%9D%E9%80%89%E9%A1%B9%E5%8D%A1.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-3 “HTTP配置”选项卡</font><br>
+<img alt="配置完成“HTTP配置”选项卡-添加环境域名地址" height="100%" src="../../img/tutorial/use_variable/%E5%AE%8C%E6%88%90%E2%80%9CHTTP%E9%85%8D%E7%BD%AE%E2%80%9D%E9%80%89%E9%A1%B9%E5%8D%A1-%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-4 完成“HTTP配置”选项卡-添加环境域名</font><br>
+<img alt="配置完成环境创建地址" height="100%" src="../../img/tutorial/use_variable/%E5%AE%8C%E6%88%90%E7%8E%AF%E5%A2%83%E5%88%9B%E5%BB%BA.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-5 完成环境创建</font><br></p>
+<p><font size=4>2.1.2 在请求体中引用环境变量 </font>
+创建“InfluxDB DEV测试环境”成功之后，我们可以接着以创建“InfluxDB查询接口”及“InfluxDB查询数据库接口用例”为例演示在前后置脚本中设置变量的过程，并在之后要进行的引用步骤演示如何获取所需的使用变量。</p>
+<p>操作步骤如下：</p>
+<p>1.在顶部菜单栏中选择“接口测试”下的“接口定义”，打开“接口列表”页面，如图2-6所示；</p>
+<p>2.在“接口列表”页面中，选择“+”下的“创建接口”选项，打开“创建接口”页面，如图2-7所示。在页面中输入接口名称“InfluxDB Query POST接口”，请求协议选择“POST”，请求路径在输入框输入“/query”，如图2-7所示。然后点击页面右上角的“保存”按钮，打开“编辑接口”页面，如图2-8所示；
+<img alt="配置“接口列表”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E6%8E%A5%E5%8F%A3%E5%88%97%E8%A1%A8%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-6 “接口列表”页面</font><br>
+<img alt="配置“创建接口”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E5%88%9B%E5%BB%BA%E6%8E%A5%E5%8F%A3%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-7 “创建接口”页面</font><br>
+<img alt="配置“编辑接口”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E7%BC%96%E8%BE%91%E6%8E%A5%E5%8F%A3%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-8 “编辑接口”页面</font><br></p>
+<p>3.在“编辑接口”页面中，选择“CASE”标签，打开“接口用例列表”页面，如图2-9所示。在“接口用例列表”页面中，选择“+添加”按钮，打开“创建用例”页面，如图2-10所示；
+<img alt="配置“接口用例”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-9 “接口用例”页面</font><br>
+<img alt="配置“创建接口用例”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E5%88%9B%E5%BB%BA%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2> &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp; &emsp; &emsp; 图2-10 “创建接口用例”页面</font><br></p>
+<p>4.如图2-10所示，在“创建接口用例”页面中：</p>
+<p>① 输入名称“创建database接口用例”，</p>
+<p>② 在右上角运行环境下拉列表中，选择“InfluxDB DEV测试环境“，如图2-11所示，</p>
+<p>③ 在”请求体“选项卡下，选择“x-www-form-urlencodeded”，第一个键输入框输入“q”，值输入框输入“create database <span class="arithmatex" 变量名="变量名"><span class="MathJax_Preview">{dbname}”，使用</span><script type="math/tex">{dbname}”，使用</script></span>引用变量，如图2-12所示；</p>
+<p>5.点击“保存”按钮，然后点击蓝色的“执行”按钮执行；
+<img alt="配置选择环境地址" height="100%" src="../../img/tutorial/use_variable/%E9%80%89%E6%8B%A9%E7%8E%AF%E5%A2%83.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-11 选择环境</font><br>
+<img alt="配置设置请求体-引用dbname变量地址" height="100%" src="../../img/tutorial/use_variable/%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E4%BD%93-%E5%BC%95%E7%94%A8dbname%E5%8F%98%E9%87%8F.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-12 设置请求体-引用dbname变量</font><br></p>
+<p>6.执行后，在“接口用例”执行页面中，可在最下方“响应内容”部分看到“响应体”，若状态码为200，则说明执行成功，如图2-13所示。</p>
+<p>设置要创建使用的database名字为“monitoringdb”。以上步骤已经演示了如何在环境中设置dbname变量，所以在“创建database接口用例”的请求体中，通过“create database ${dbname}”直接引用dbname变量。执行后，就可以成功在influxDB中创建名为“database monitoringdb”的接口用例。
+<img alt="配置执行接口用例完毕地址" height="100%" src="../../img/tutorial/use_variable/%E6%89%A7%E8%A1%8C%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E5%AE%8C%E6%AF%95.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-13 执行接口用例完毕</font><br></p>
+<p>使用以下curl命令调用influxDB query接口API来查看databases列表。可以看到输出内容中，“monitoringdb”已被成功创建，如图2-14所示。
+<div class="highlight"><pre><span></span><code>#查看influxdb下database，monitoringdb是否创建成功
+curl -G &#39;http://10.1.13.12:8086/query?pretty=true&#39; --data-urlencode &quot;q=show databases&quot;
+</code></pre></div>
+<img alt="配置curl命令调用influxdb API查询database列表地址" height="100%" src="../../img/tutorial/use_variable/curl%E5%91%BD%E4%BB%A4%E8%B0%83%E7%94%A8influxdb%20API%E6%9F%A5%E8%AF%A2database%E5%88%97%E8%A1%A8.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-14 curl命令调用influxdb API查询database列表</font><br></p>
+<p><font size=4>2.1.3 在前后置脚本中引用环境变量、debug并打印查看变量值 </font>
+完成“创建database接口用例”执行后，可以接着在“查看database列表接口用例”页面演示在前后置脚本中引用环境变量、打印到控制台并查看变量值的过程。由于调试脚本时经常需要打印、查看变量值，我们将会在“查看database列表接口用例”的实现过程中，在前置BeanShell脚本以及后置Python脚本中获取dbname变量的值，并打印到控制台。</p>
+<p>操作步骤如下：<br>
+1.如图2-15所示，创建接口“InfluxDB Query GET接口”，选择请求的协议为“GET”，请求路径输入“/query”，然后点击“保存”，打开“InfluxDB Query GET接口用例列表”页面，如图2-16所示；
+<img alt="配置创建 “InfluxDB Query GET接口”地址" height="100%" src="../../img/tutorial/use_variable/%E5%88%9B%E5%BB%BAInfluxDBQueryGET%E6%8E%A5%E5%8F%A3.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-15 创建 “InfluxDB Query GET接口”</font><br></p>
+<p>2.在“InfluxDB Query GET接口用例列表”页面，点击“+添加”按钮，打开“接口用例”页面，如图2-17所示：<br>
+① 在名称输入框中输入“查询database列表”，</p>
+<p>② 在运行环境下拉列表选择“InfluxDB DEV测试环境”，</p>
+<p>③ 在“请求参数”的“QUERY参数”选项卡中，设置第一个键值的键为“q”，值为“show databases”，</p>
+<p>④ 点击右上角“保存”按钮，最后点击蓝色的“执行”按钮；</p>
+<p>3.执行完毕后，在页面“响应内容”下的“响应体”选项卡中，可以看到接口用例执行后的接口返回响应内容。如图2-18所示，可以看到之前调用接口创建的“monitoringdb database”；<br>
+<img alt="配置“InfluxDB Query GET接口用例列表”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9CInfluxDB%20Query%20GET%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E5%88%97%E8%A1%A8%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-16 “InfluxDB Query GET接口用例列表”页面</font><br>
+<img alt="配置“查询database列表接口用例”页面地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E6%9F%A5%E8%AF%A2database%E5%88%97%E8%A1%A8%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E2%80%9D%E9%A1%B5%E9%9D%A2.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-17 “查询database列表接口用例”页面</font><br>
+<img alt="配置“查询database列表接口用例”执行成功后的响应体地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E6%9F%A5%E8%AF%A2database%E5%88%97%E8%A1%A8%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E2%80%9D%E6%89%A7%E8%A1%8C%E6%88%90%E5%8A%9F%E5%90%8E%E7%9A%84%E5%93%8D%E5%BA%94%E4%BD%93.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-18 “查询database列表接口用例”执行成功后的响应体</font><br></p>
+<p>4.在“查询database列表接口用例”页面中，在“请求参数”下的“前置操作”标签打开“前置操作”选项卡，在选项卡中点击“添加”按钮添加前置脚本，如图2-19所示；然后点击前置脚本，展开文本内容框，如图2-20、图2-21所示。</p>
+<p>5.在前置脚本文本内容框中，选择脚本语言“BeanShell”，输入以下前置脚本内容，如图2-22所示。内容演示了两种获取dbname环境变量，以及设置hostname变量的方法。输入完成后，点击蓝色“执行”按钮执行用例，之后可在“响应内容”下的“控制台”中查看打印出来的变量值，如图2-23所示。
+<div class="highlight"><pre><span></span><code>//前置脚本内容
+//获取方法1，通过${变量名}方式：
+dbname=&quot;${dbname}&quot;;
+log.info(&quot;dbname=&quot;+dbname);
+//获取方法2，通过内置变量vars.get(&quot;变量名&quot;)方法：
+dbname2=vars.get(&quot;dbname&quot;);
+log.info(&quot;dbname2=&quot;+dbname2);
+</code></pre></div></p>
+<p><img alt="配置“查询database列表接口用例”前置操作选项卡地址" height="100%" src="../../img/tutorial/use_variable/%E2%80%9C%E6%9F%A5%E8%AF%A2database%E5%88%97%E8%A1%A8%E6%8E%A5%E5%8F%A3%E7%94%A8%E4%BE%8B%E2%80%9D%E5%89%8D%E7%BD%AE%E6%93%8D%E4%BD%9C%E9%80%89%E9%A1%B9%E5%8D%A1.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-19 “查询database列表接口用例”前置操作选项卡</font><br>
+<img alt="配置添加前置脚本完成地址" height="100%" src="../../img/tutorial/use_variable/%E6%B7%BB%E5%8A%A0%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%AE%8C%E6%88%90.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-20 添加前置脚本完成</font><br>
+<img alt="配置展开前置脚本文本框地址" height="100%" src="../../img/tutorial/use_variable/%E5%B1%95%E5%BC%80%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E6%96%87%E6%9C%AC%E6%A1%86.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-21 展开前置脚本文本框</font><br>
+<img alt="配置设置前置脚本内容地址" height="100%" src="../../img/tutorial/use_variable/%E8%AE%BE%E7%BD%AE%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%86%85%E5%AE%B9.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-22 设置前置脚本内容</font><br>
+<img alt="配置响应内容-控制台输出地址" height="100%" src="../../img/tutorial/use_variable/%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9-%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-23 响应内容-控制台输出</font><br></p>
+<h3 id="22">2.2 设置使用用例变量示例<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>在前后置脚本中，可以使用BeanShell内置变量进行用例变量的设置使用。这里我们以InfluxDB写入接口测试场景为例演示，先实现一个写入接口用例，再在前置脚本中计算生成监控cpu usage，并设置到usage变量中，之后在请求体中引用使用。
+主要操作步骤如下（创建接口、接口用例，执行接口用例请参考上文中的具体步骤方法）：<br></p>
+<p>1.创建InfluxDB写入接口，设置请求协议为POST、路径为/write；</p>
+<p>2.创建InfluxDB写入接口用例“写入虚拟机某分钟CPU使用率监控数据”：</p>
+<p>① 设置QUERY参数添加参数db，设置值为${dbname}，</p>
+<p>② 设置BeanShell前置操作脚本为以下脚本内容，如图2-24所示，
+<div class="highlight"><pre><span></span><code>//生成随机使用率并打印：
+cpuUsage=&quot;${__Random(1,99,usage)}&quot;;
+log.info(&quot;cpuUsage=&quot;+cpuUsage);
+//设置CPU使用率变量usage的值为上面生成的使用率数值：
+vars.put(&quot;usage&quot;,cpuUsage);
+</code></pre></div></p>
+<p>③ 设置请求体为以下内容，在value值处引用前置脚本中设置的usage变量的值；
+<div class="highlight"><pre><span></span><code>cpu_usage,host=10.1.13.131,app=dataease value=${usage} ${__time()}000000
+</code></pre></div></p>
+<p>3.执行用例。查看控制台输出，如图2-25所示；查看请求体内容，如图2-26所示；<br>
+<img alt="配置设置前置脚本-设置usage变量地址" height="100%" src="../../img/tutorial/use_variable/%E8%AE%BE%E7%BD%AE%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC-%E8%AE%BE%E7%BD%AEusage%E5%8F%98%E9%87%8F.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-24 设置前置脚本-设置usage变量</font><br>
+<img alt="配置控制台中打印cpuUsage值地址" height="100%" src="../../img/tutorial/use_variable/%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B8%AD%E6%89%93%E5%8D%B0cpuUsage%E5%80%BC.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-25 控制台中打印cpuUsage值</font><br>
+<img alt="配置响应内容-查看请求体中变量值地址" height="100%" src="../../img/tutorial/use_variable/%E5%93%8D%E5%BA%94%E5%86%85%E5%AE%B9-%E6%9F%A5%E7%9C%8B%E8%AF%B7%E6%B1%82%E4%BD%93%E4%B8%AD%E5%8F%98%E9%87%8F%E5%80%BC.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-26 响应内容-查看请求体中变量值</font><br></p>
+<h3 id="23">2.3 设置使用场景变量示例<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>在自动化场景中可设置场景变量，并在导入场景的接口用例请求参数和自定义请求中使用。由于编排的多个任务中的需要，除了常量类型外，在场景变量中还支持列表、CSV、计数器、随机数类型的变量。
+这里我们设计了一个场景来演示常量、计数器、随机数变量的使用，即实现向InfluxDB写入某台虚拟机1小时中的每分钟CPU使用率监控点数据。</p>
+<p>■ 采用循环控制器，配置使用次数循环方式，设置60次一个循环。设置一个基准的时间点2022年5月25日0点0分，每次循环根据循环的次数加60秒；</p>
+<p>■ 使用常量host定义虚拟机IP为10.1.13.131；</p>
+<p>■ 使用常量startTime定义监控数据从2022年5月25日0点开始。使用date -d "2022-05-25 00:00:00" +%s 命令在Linux上执行，可获得时间戳数值1653408000；</p>
+<p>■ 使用计数器变量counter获取每次循环的计数，并根据这个计数值，每多循环一次增加60秒（pointTime=1653408000 + counter * 60 ）；</p>
+<p>■ 使用随机数变量，每次循环生成一个CPU使用率数值，取值范围为1到99之间。</p>
+<p>操作步骤如下：<br></p>
+<p>1.创建场景“写入某虚拟机1小时每分钟CPU使用率监控”；</p>
+<p>2.设置场景变量：</p>
+<p>① 添加常量hostIP，设置值为10.1.13.131，如图2-27所示，
+<img alt="配置添加变量hostIP地址" height="100%" src="../../img/tutorial/use_variable/%E6%B7%BB%E5%8A%A0%E5%8F%98%E9%87%8FhostIP.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-27 添加变量hostIP</font><br>
+② 添加常量startTime，设置值为1653148860；</p>
+<p>③ 添加计数器变量counter，每次从0到59循环一次后加1，如图2-28所示；
+<img alt="配置添加计数器变量counter地址" height="100%" src="../../img/tutorial/use_variable/%E6%B7%BB%E5%8A%A0%E8%AE%A1%E6%95%B0%E5%99%A8%E5%8F%98%E9%87%8Fcounter.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-28 添加计数器变量counter</font><br></p>
+<p>④ 添加随机数变量cpuUsage，设置最小值为1、最大值为99，如图2-29所示；
+<img alt="配置添加随机数变量cpuUsage地址" height="100%" src="../../img/tutorial/use_variable/%E6%B7%BB%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%8F%98%E9%87%8FcpuUsage.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-29 添加随机数变量cpuUsage</font><br></p>
+<p>3.添加循环控制器，选择“次数循环”，设置循环次数为60次，如图2-30所示；
+<img alt="配置添加循环控制器地址" height="100%" src="../../img/tutorial/use_variable/%E6%B7%BB%E5%8A%A0%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-30 添加循环控制器</font><br></p>
+<p>4.导入之前已创建的接口用例“写入虚拟机某分钟CPU使用率监控数据”。接口用例导入时选择“复制”，导入后将它添加到循环控制器下，然后修改请求体，设置请求体内容为如图2-31所示内容。<br></p>
+<p><img alt="配置设置请求体地址" height="100%" src="../../img/tutorial/use_variable/%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E4%BD%93.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-31 设置请求体</font><br></p>
+<p>5.设置接口用例的前置脚本，脚本类型选择BeanShell，内容填写以下内容，如图2-32所示；
+<div class="highlight"><pre><span></span><code>//获取变量startTime开始时间点值，2022年5月25日零点时间戳
+strStartTime=vars.get(&quot;startTime&quot;);
+//获取计数器变量counter的值，循环一次加1
+strCount=vars.get(&quot;counter&quot;);
+log.info(&quot;strCount=&quot;+strCount);
+//获取随机数变量cpuUsage生成的CPU使用率随机数值
+usage=vars.get(&quot;cpuUsage&quot;);
+log.info(&quot;usage=&quot;+usage);
+//计算生成循环对应分钟的时间戳
+pointTime=Integer.valueOf(strStartTime) + Integer.valueOf(strCount)*60;
+log.info(&quot;pointTime=&quot; + String.valueOf(pointTime));
+vars.put(&quot;pointTime&quot;, String.valueOf(pointTime));
+</code></pre></div>
+<img alt="配置设置前置BeanShell脚本地址" height="100%" src="../../img/tutorial/use_variable/%E8%AE%BE%E7%BD%AE%E5%89%8D%E7%BD%AEBeanShell%E8%84%9A%E6%9C%AC.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-32 设置前置BeanShell脚本</font><br></p>
+<p>6.选择“InfluxDB DEV测试环境”运行环境，执行循环控制器，执行完毕后查看响应内容。在“响应内容”面板的“控制台”输出内容中可以看到，循环2计数器变量的值为2，随机数变量的值为99，计算出的pointTime为1653148980，使用date -d @1653148980 查看的时间为“Sun May 22 00:03:00 CST 2022”，如图2-33所示。在“请求内容”选项卡，可以看到请求内容中，场景变量<span class="arithmatex" cpuUsage="cpuUsage"><span class="MathJax_Preview">{hostIP}、</span><script type="math/tex">{hostIP}、</script></span>均被替换为场景变量的值和根据计数器变量值计算出的时间点值，如图2-34所示。<br>
+<img alt="配置查看循环2控制台输出-场景变量值地址" height="100%" src="../../img/tutorial/use_variable/%E6%9F%A5%E7%9C%8B%E5%BE%AA%E7%8E%AF2%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA-%E5%9C%BA%E6%99%AF%E5%8F%98%E9%87%8F%E5%80%BC.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-33 查看循环2控制台输出-场景变量值</font><br>
+<img alt="配置查看循环2控制台输出-请求内容中场景变量值地址" height="100%" src="../../img/tutorial/use_variable/%E6%9F%A5%E7%9C%8B%E5%BE%AA%E7%8E%AF2%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA-%E8%AF%B7%E6%B1%82%E5%86%85%E5%AE%B9%E4%B8%AD%E5%9C%BA%E6%99%AF%E5%8F%98%E9%87%8F%E5%80%BC.png" width="70%" /> <br>
+<font size=2 class="png-lable-span">图2-34 查看循环2控制台输出-请求内容中场景变量值</font><br></p>
+<h2 id="3">3 总结<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>本篇总结了在MeterSphere中使用各类变量的方式和方法，并通过InfluxDB的接口测试场景进行了详细的演示。大家可以通过保存并阅读、学习这篇文章，在实现接口测试用例和自动化测试场景时，查阅、复制粘贴，缩短试错和摸索的时间。希望本文能对大家有所帮助。</p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2014-2022 <a href="https://www.fit2cloud.com">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+      <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/metersphere" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:support@fit2cloud.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="tel://400-052-0755" target="_blank" rel="noopener" title="400-052-0755" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64c0 247.4 200.6 448 448 448 18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368c-70.4-33.3-127.4-90.3-160.7-160.7l49.3-40.3c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+  <section id="footer_start">
+    <div class="footer-start-box">
+      <div class="footer-start-title">
+        <p role="img" aria-label="celibrate" style="font-size: 14px"><a target="_blank" href="https://metersphere.com/"
+            style="color: white"><i class="mdi mdi-download pr-1" style="font-size: 14px"></i>在线体验</a>️</p>
+      </div>
+    </div>
+  </section>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+<script>
+  var elements = document.getElementsByClassName("lightgallery");
+  for (var i = 0; i < elements.length; i++) {
+    lightGallery(elements[i]);
+  }
+</script>
+
+  </body>
+</html>

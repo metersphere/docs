@@ -236,102 +236,107 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/BeanShell%20%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/Dubbo%20%E5%8D%8F%E8%AE%AE/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/Jenkins%20%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/Jmeter%20%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/Mock%20%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/Python%20%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/Python%20%E8%B0%83%E7%94%A8%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%20%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/UI%20%E6%B5%8B%E8%AF%95%E4%B9%8B%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/UI%20%E6%B5%8B%E8%AF%95%E8%B0%83%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/using_tutorial/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E4%BD%BF%E7%94%A8%20JMeter%20MockJS%20%E5%87%BD%E6%95%B0/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E5%AF%B9%E6%8E%A5%20Azure%20Devops/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E5%AF%B9%E6%8E%A5%20JIRA/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E5%AF%B9%E6%8E%A5%20TAPD/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E5%AF%B9%E6%8E%A5%E7%A6%85%E9%81%93/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/use_tutorial/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E5%BC%95%E7%94%A8%20JavaScript/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/v2.x/tutorial/%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F/</loc>
+         <loc>https://metersphere.io/v2.x/tutorial/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://metersphere.io/v2.x/tutorial/%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
