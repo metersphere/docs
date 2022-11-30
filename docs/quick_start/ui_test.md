@@ -58,7 +58,7 @@ MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧�
 6.2.4.4 添加【输入密码】步骤，方式同上，xpath 路径输入 //input[@placeholder="密码"]。<br>
 ![!使用UI测试](../img/ui_test/使用UI测试_11.png)
 
-6.2.4.5 添加【点击登录】步骤，方式同上，xpath 路径输入 //input[//span[text()=" 登录 "]]。<br>
+6.2.4.5 添加【点击登录】步骤，方式同上，xpath 路径输入 //span[text()=" 登录 "]。<br>
 ![!使用UI测试](../img/ui_test/使用UI测试_12.png)
 
 ## 7 在场景步骤中添加高级设置
