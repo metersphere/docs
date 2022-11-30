@@ -3,11 +3,11 @@
 - [如何使用 MeterSphere 进行场景化接口测试](./如何使用 MeterSphere 进行场景化接口测试.md)
 - [如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名](./如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名.md)
 - [MeterSphere 中各类变量的设置和使用全教程](./MeterSphere 中各类变量的设置和使用全教程.md)
-- [MeterSphere 中 JMeter 函数、MockJS函数使用教程](./MeterSphere 中 JMeter 函数、MockJS函数使用教程.md)
+- [MeterSphere 中 JMeter 函数、MockJS 函数使用教程](./MeterSphere 中 JMeter 函数、MockJS 函数使用教程.md)
 - [基于 MeterSphere 接口自动化做数据驱动（ddt）测试](./基于 MeterSphere 接口自动化做数据驱动（ddt）测试.md)
 - [MeterSphere Mock 服务功能的创建和调用](./MeterSphere Mock 服务功能的创建和调用.md)
 - [使用 Python 调用 MeterSphere API 触发测试计划执行](./使用 Python 调用 MeterSphere API 触发测试计划执行.md)
-- [MeterSphere 中常用 Jmeter 函数 使用详细](./MeterSphere 中常用 Jmeter 函数 使用详细.md)
+- [MeterSphere 中常用 Jmeter 函数使用详细](./MeterSphere 中常用 Jmeter 函数使用详细.md)
 
 ## 2 UI 测试
 - [MeterSphere 的 UI 测试模块如何远程调用浏览器](./MeterSphere 的 UI 测试模块如何远程调用浏览器.md)
