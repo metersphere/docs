@@ -20,6 +20,7 @@
 在该场景中添加一个 HTTP 请求，调用 GET/project/listAll 获取项目列表接口，在该请求的前置脚本中，添加以下代码生成签名并将签名值存入 signature 变量中。
 ![](../img/tutorial/pre_processor/pre_processor_3.png)
 
+BeanShell 脚本，通过 Access Key，Secret Key 的方式生成签名，调用 MeterSphere API
 ```
 import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;
