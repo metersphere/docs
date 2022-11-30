@@ -29,4 +29,4 @@ eg: 接口参数 phone 的值为手机号，高级设置中配置正则生成数
 可使用 Mock 函数生成测试数据，按需选择，如下图选择字符串后选择 md5，得到的值就是 ms5 加密后的字符串<br>
 ![](../img/tutorial/use_testdata/函数助手.png)
 
-使用 Jmeter 方法同样也可以生成测试数据，使用详情参考：[Jmeter 常用内置函数](./Jmeter 常用内置函数.md)
+使用 Jmeter 方法同样也可以生成测试数据，使用详情参考：[MeterSphere 中常用 Jmeter 函数使用详细](./MeterSphere 中常用 Jmeter 函数使用详细.md)
