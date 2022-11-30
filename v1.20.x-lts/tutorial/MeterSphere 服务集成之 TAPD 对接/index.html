@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 服务集成之 TAPD 对接 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-tapd" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 服务集成之 TAPD 对接
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,37 +2382,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
+  <a href="#1-tapd" class="md-nav__link">
+    1 TAPD 服务集成
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#2" class="md-nav__link">
+    2 关联项目
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3 服务集成
+    3 关联个人信息
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4 脚本引用
+    4 配置缺陷模版
+  </a>
+  
+    <nav class="md-nav" aria-label="4 配置缺陷模版">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1 创建缺陷模版
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2 自定义字段
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    4.3 配置缺陷模版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4 关联模版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5 提交缺陷
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2495,49 +2464,420 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 服务集成之 TAPD 对接.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 服务集成之 TAPD 对接</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>作为一款一站式开源持续测试平台，MeterSphere 可以集成多种测试管理平台，包括 TAPD、Jira、禅道和 Azure DevOps。这里，笔者就跟大家介绍如何集成 TAPD 平台，以及集成后如何将缺陷自动推送到TAPD平台。</p>
+<h2 id="1-tapd">1 TAPD 服务集成<a class="headerlink" href="#1-tapd" title="Permanent link">&para;</a></h2>
+<p>首先进入MeterSphere界面，在“系统设置”→“组织”→“服务集成”页面中选择 TAPD，并填写 TAPD Basic Auth的账号信息，包括 API 账号和 API 口令。编辑完成后测试连接是否有效。如下图：
+<img alt="" src="../../img/tutorial/use_tapd/%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.png" /></p>
+<h2 id="2">2 关联项目<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>为保证 TAPD 项目和 MeterSphere 项目的一致性，需要将这两个平台中的项目关联起来。项目 ID 可在进入 TAPD 项目后的 URL 中获取，如下图所示：
+<img alt="" src="../../img/tutorial/use_tapd/%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE.png" /></p>
+<h2 id="3">3 关联个人信息<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>将 MeterSphere 用户和 TAPD 用户做关联后，在 MeterSphere中 提交缺陷，TAPD 上对应的处理人即为在 MeterSphere 中填写的账户名。</p>
+<p>关联方法如下图所示，在 MeterSphere 的个人信息中的 TAPD 昵称处填写 TAPD 对应的昵称（查看位置在 TAPD “我的设置”中）。
+<img alt="" src="../../img/tutorial/use_tapd/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.png" /> </p>
+<h2 id="4">4 配置缺陷模版<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 创建缺陷模版<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>如果是第一次集成 TAPD 服务，需要创建 TAPD 缺陷模版，创建步骤如下图：
+<img alt="" src="../../img/tutorial/use_tapd/%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /> </p>
+<p>在新的模版中设置模版名称、缺陷平台（此处选择 TAPD），并设置模版内容。模版包括缺陷标题、缺陷内容、缺陷字段。用户可以在缺陷标题和缺陷内容中预先定义格式，比如标题前缀、内容标题（包含测试环境、前置条件、测试步骤等）。<br>
+<img alt="" src="../../img/tutorial/use_tapd/%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF_1.png" /> </p>
+<h3 id="42">4.2 自定义字段<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>如果 MeterSphere 中默认的TAPD缺陷模版不能满足当下需求，我们还可以选择创建自定义字段。下图展示的信息中，发现阶段、缺陷类型、发现版本、项目名称等均为自定义缺陷字段。
+<img alt="" src="../../img/tutorial/use_tapd/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF.png" /> </p>
+<p>下面介绍具体的创建方法。点击“创建字段”按钮后，会出现下图所示界面。<br>
+<img alt="" src="../../img/tutorial/use_tapd/%E5%88%9B%E5%BB%BA%E5%AD%97%E6%AE%B5.png" /> </p>
 <ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
+<li>字段名：和 TAPD 平台保持一致，如 TAPD 中字段名称为“优先级”，此处就填“优先级”；</li>
+<li>使用场景：选择“缺陷模版”选项；</li>
+<li>字段类型：目前 MeterSphere 中支持多种字段类型，如“输入框”、“文本框”等。缺陷字段中使用最多的类型为“单选下拉列表”类型，所以这里就以这个类型为例，介绍如何在 MeterSphere 中创建自定义缺陷字段；</li>
+<li>单选下拉列表：单选下拉列表需要设置选项值，其中包括选项内容和选项ID。选项内容就是我们在页面中看到的选项显示内容，选项ID为TAPD添加缺陷接口该字段接收的值（可通过点击 F12 快捷键查看字段对应的选项 ID，如紧急选项对应的选项 ID 是 urgent）。</li>
 </ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<p><img alt="" src="../../img/tutorial/use_tapd/%E4%B8%8B%E6%8B%89%E6%A1%86.png" /> </p>
+<p>添加完所有选项后，点击“确定”按钮，一个自定义字段就创建完成了，其他所有的自定义字段均可按照这个方法完成。</p>
+<p>缺陷优先级（Priority）字段说明：</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   取值
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   字面值
+  </td>
+  <tbody>
+    <tr>
+        <td >urgent</td>
+        <td >紧急</td>
+    </tr>
+    <tr>
+        <td >high</td>
+        <td >高</td>
+    </tr>
+    <tr>
+        <td >medium</td>
+        <td >中</td>
+    </tr>
+    <tr>
+        <td >low</td>
+        <td >低</td>
+   </tr>
+   <tr>
+        <td >insignificant</td>
+        <td >无关紧要</td>
+   </tr>
+  </tbody>
+</table>
+
+<p>缺陷严重程度（Severity）字段说明：</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   取值
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   字面值
+  </td>
+  <tbody>
+    <tr>
+        <td >fatal</td>
+        <td >致命</td>
+    </tr>
+    <tr>
+        <td >serious</td>
+        <td >严重</td>
+    </tr>
+    <tr>
+        <td >normal</td>
+        <td >一般</td>
+    </tr>
+    <tr>
+        <td >prompt</td>
+        <td >提示</td>
+   </tr>
+   <tr>
+        <td >advice</td>
+        <td >建议</td>
+   </tr>
+  </tbody>
+</table>
+
+<h3 id="43">4.3 配置缺陷模版<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>创建好自定义字段后，需要将字段应用到缺陷模板中。点击“添加字段”，可以在界面选择需要的字段添加到模板中。
+<img alt="" src="../../img/tutorial/use_tapd/%E9%85%8D%E7%BD%AE%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /> </p>
+<p>添加好字段之后，需要将字段与TAPD添加缺陷接口中的API字段名做对应关系设置，才能将设置的字段作为缺陷的要素推送到TAPD。
+<img alt="" src="../../img/tutorial/use_tapd/%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png" /> </p>
+<p>TAPD 自定义字段的字段名可以通过接口获取，也可以通过抓包的方式在创建缺陷时获取，自定义字段的字段名形式一般为：custom_field_one、custom_field_two等。</p>
+<p>接口的链接为：<a href="https://www.tapd.cn/help/view#1120003271001001455">https://www.tapd.cn/help/view#1120003271001001455</a></p>
+<p>TAPD 添加缺陷的 API 请求参数如下，如果在 TAPD 中定义了自定义字段，也要将自定义字段也传入。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   字段名
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   必选
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+     类型及范围
+    </td>
+    <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+     说明
+    </td>
+  <tbody>
+    <tr>
+        <td >title</td>
+        <td >是</td>
+         <td >string</td>
+         <td >标题</td>
+    </tr>
+    <tr>
+         <td >priority</td>
+        <td >否</td>
+         <td >string</td>
+         <td >优先级</td>
+    </tr>
+    <tr>
+        <td >severity</td>
+        <td >否</td>
+        <td >string</td>
+        <td >严重程度</td>
+    </tr>
+    <tr>
+        <td >module</td>
+        <td >否</td>
+        <td >string</td>
+        <td >模块</td>
+   </tr>
+   <tr>
+        <td >release_id</td>
+        <td >否</td>
+        <td >integer</td>
+        <td >发布计划</td>
+   </tr>
+<tr>
+       <td >version_report</td>
+       <td >否</td>
+       <td >string</td>
+       <td >发现版本</td>
+  </tr>
+  <tr>
+      <td >version_test</td>
+      <td >否</td>
+      <td >string</td>
+      <td >验证版本</td>
+  </tr>
+  <tr>
+        <td >version_fix</td>
+        <td >否</td>
+        <td >string</td>
+        <td >合入版本</td>
+    </tr>
+  <tr>
+        <td >version_close</td>
+        <td >否</td>
+        <td >string</td>
+        <td >关闭版本</td>
+    </tr>
+  <tr>
+          <td >baseline_find</td>
+          <td >否</td>
+          <td >string</td>
+          <td >发现基线</td>
+      </tr>
+    <tr>
+          <td >baseline_join</td>
+          <td >否</td>
+          <td >string</td>
+          <td >合入基线</td>
+      </tr>
+    <tr>
+            <td >baseline_test</td>
+            <td >否</td>
+            <td >string</td>
+            <td >验证基线</td>
+        </tr>
+  <tr>
+        <td >baseline_close</td>
+        <td >否</td>
+        <td >string</td>
+        <td >关闭基线</td>
+    </tr>
+   <tr>
+           <td >current_owner</td>
+           <td >否</td>
+           <td >string</td>
+           <td >处理人</td>
+       </tr>
+     <tr>
+           <td >cc</td>
+           <td >否</td>
+           <td >string</td>
+           <td >抄送人</td>
+       </tr>
+    <tr>
+       <td >reporter</td>
+       <td >否</td>
+       <td >string</td>
+       <td >创建人</td>
+   </tr>
+    <tr>
+       <td >participator</td>
+       <td >否</td>
+       <td >string</td>
+       <td >参与人</td>
+     </tr>
+    <tr>
+       <td >te</td>
+       <td >否</td>
+       <td >string</td>
+       <td >测试人员</td>
+    </tr>
+     <tr>
+       <td >de</td>
+       <td >否</td>
+       <td >string</td>
+       <td >开发人员</td>
+       </tr>
+     <tr>
+        <td >auditer</td>
+        <td >否</td>
+        <td >string</td>
+        <td >审核人</td>
+     </tr>
+      <tr>
+        <td >confirmer</td>
+        <td >否</td>
+        <td >string</td>
+        <td >验证人</td>
+        </tr>
+     <tr>
+        <td >fixer</td>
+        <td >否</td>
+        <td >string</td>
+        <td >修复人</td>
+     </tr>
+      <tr>
+        <td >closer</td>
+        <td >否</td>
+        <td >string</td>
+        <td >关闭人</td>
+        </tr>
+      <tr>
+         <td >lastmodify</td>
+         <td >否</td>
+         <td >string</td>
+         <td >最后修改人</td>
+      </tr>
+       <tr>
+         <td >in_progress_time</td>
+         <td >否</td>
+         <td >datetime</td>
+         <td >接受处理时间</td>
+         </tr>
+      <tr>
+         <td >resolved</td>
+         <td >否</td>
+         <td >datetime</td>
+         <td >解决时间</td>
+      </tr>
+       <tr>
+         <td >verify_time</td>
+         <td >否</td>
+         <td >datetime</td>
+         <td >验证时间</td>
+         </tr>
+        <tr>
+          <td >closed</td>
+          <td >否</td>
+          <td >datetime</td>
+          <td >关闭时间</td>
+          </tr>
+        <tr>
+           <td >reject_time</td>
+           <td >否</td>
+           <td >datetime</td>
+           <td >无关紧要</td>
+        </tr>
+         <tr>
+           <td >begin</td>
+           <td >否</td>
+           <td >date</td>
+           <td >预计开始</td>
+           </tr>
+        <tr>
+           <td >due</td>
+           <td >否</td>
+           <td >date</td>
+           <td >预计结束</td>
+        </tr>
+     <tr>
+       <td >deadline</td>
+       <td >否</td>
+       <td >date</td>
+       <td >解决期限</td>
+       </tr>
+     <tr>
+      <td >os</td>
+      <td >否</td>
+      <td >string</td>
+      <td >操作系统</td>
+      </tr>
+     <tr>
+       <td >platform</td>
+       <td >否</td>
+       <td >string</td>
+       <td >软件平台</td>
+       </tr>
+     <tr>
+        <td >testmode</td>
+        <td >否</td>
+        <td >string</td>
+        <td >测试方式</td>
+     </tr>
+      <tr>
+        <td >testphase</td>
+        <td >否</td>
+        <td >string</td>
+        <td >测试阶段</td>
+        </tr>
+     <tr>
+        <td >testtype</td>
+        <td >否</td>
+        <td >string</td>
+        <td >测试类型</td>
+     </tr>
+  <tr>
+    <td >source</td>
+    <td >否</td>
+    <td >string</td>
+    <td >缺陷根源</td>
+    </tr>
+    <tr>
+       <td >bugtype</td>
+       <td >否</td>
+       <td >string</td>
+       <td >缺陷类型</td>
+    </tr>
+     <tr>
+       <td >frequency</td>
+       <td >否</td>
+       <td >string</td>
+       <td >重现规律</td>
+       </tr>
+    <tr>
+       <td >originphase</td>
+       <td >否</td>
+       <td >string</td>
+       <td >发现阶段</td>
+    </tr>
+     <tr>
+       <td >sourcephase</td>
+       <td >否</td>
+       <td >string</td>
+       <td >引入阶段</td>
+       </tr>
+     <tr>
+      <td >resolution</td>
+      <td >否</td>
+      <td >string</td>
+      <td >解决方法</td>
+      </tr>
+     <tr>
+       <td >estimate</td>
+       <td >否</td>
+       <td >integer</td>
+       <td >预计解决时间</td>
+       </tr>
+     <tr>
+        <td >description</td>
+        <td >否</td>
+        <td >string</td>
+        <td >详细描述</td>
+     </tr>
+      <tr>
+        <td >workspace_id</td>
+        <td >否</td>
+        <td >integer</td>
+        <td >项目ID</td>
+        </tr>
+     <tr>
+        <td >custom_field_</td>
+        <td >否</td>
+        <td >string或者integer</td>
+        <td >自定义字段参数，具体字段名通过接口获取</td>
+     </tr>  
+  </tbody>
+</table>
+
+<h3 id="44">4.4 关联模版<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<p>创建好缺陷模版后，还需要在项目中进行关联才能使用。选择“项目”→“项目管理”→“编辑项目”，在“缺陷模版”选项中选择新创建或修改的TAPD 缺陷模版。
+<img alt="" src="../../img/tutorial/use_tapd/%E5%85%B3%E8%81%94%E6%A8%A1%E6%9D%BF.png" /> </p>
+<h3 id="45">4.5 提交缺陷<a class="headerlink" href="#45" title="Permanent link">&para;</a></h3>
+<p>至此，缺陷模版设置完毕。在 MeterSphere 的测试跟踪中创建一个缺陷，即能同步到 TAPD 平台中了</p>
 
 
   

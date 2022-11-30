@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 如何和 Jenkins 实现流水线集成 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 如何和 Jenkins 实现流水线集成
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,37 +2382,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    插件下载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins" class="md-nav__link">
+    Jenkins 构建任务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-pipeline" class="md-nav__link">
+    Jenkins 创建 Pipeline 任务
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenkins 创建 Pipeline 任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1 接口测试
+    1. 编写脚本
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 构建任务
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2495,49 +2436,103 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 如何和 Jenkins 实现流水线集成.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 如何和 Jenkins 实现流水线集成</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
-</ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<h2 id="_1">插件下载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>要想实现在 Jenkins 中完成 MeterSphere 自动化接口测试，需要在 Jenkins 上安装 MeterSphere 提供的 Jenkins 插件。
+<div class="highlight"><pre><span></span><code>插件下载地址: https://github.com/metersphere/jenkins-plugin/releases
+下载对应版本的 hpi 包，在 Jenkins 的插件管理页面，上传并安装下载好的 hpi 插件包
+</code></pre></div></p>
+<h2 id="jenkins">Jenkins 构建任务<a class="headerlink" href="#jenkins" title="Permanent link">&para;</a></h2>
+<p>插件安装后，在指定的 Jenkins 构建任务中，添加「MeterSphere」类型的构建步骤</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_1.png" /></p>
+<p>通过配置 MeterSphere 认证信息，并指定需要触发执行的接口测试、性能测试或测试计划。</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_2.png" /></p>
+<h2 id="jenkins-pipeline">Jenkins 创建 Pipeline 任务<a class="headerlink" href="#jenkins-pipeline" title="Permanent link">&para;</a></h2>
+<p>安装完成后，可以在 Jenkins 中创建 Pipeline 任务了，点击“新建Item”后，在该页面输入任务名称，并选择“Pipeline”类型，点击“OK”按钮，即可完成一个 Pipeline 任务的创建。</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_3.png" /></p>
+<h3 id="1">1. 编写脚本<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>Jenkins Pipeline 目前支持两种语法模式，即 Declarative 声明式（在 Pipeline Plugin 2.5 中引入）和 Scripted Pipeline 脚本式。关于这两种模式的差异可以进一步参考Jenkins的官方文档（<a href="https://www.jenkins.io/doc/book/pipeline/#pipeline-syntax-overview">https://www.jenkins.io/doc/book/pipeline/#pipeline-syntax-overview</a>）。</p>
+<p>以 Declarative 声明式语法为例，接下来我们将介绍如何在 Jenkins Pipeline 中使用 MeterSphere 插件。
+<div class="highlight"><pre><span></span><code>MeterSphere插件共提供了以下参数供用户进行配置：
+
+msEndpoint：MeterSphere服务地址（例如：https://demo.metersphere.com）；
+msAccessKey：MeterSphere上某个用户的API Access Key；
+msSecretKey：上述Access Key对应的Secret Key；
+workspaceId：需要触发执行的测试所在的工作空间id；
+projectId：需要触发执行的测试所在的项目id；
+method：触发执行的任务类型（testplan：执行整个测试计划，single：执行指定的某个测试任务）；
+testPlanId：测试计划id，method参数值为testplan时有效；
+testCaseId：场景id/接口用例id/性能测试id，method参数值为single时有效；
+mode：执行方式（serial：串行执行，parallel：并行执行）；
+resourcePoolId：执行测试使用的测试资源池id。
+</code></pre></div>
+由于插件实现方式的问题，MeterSphere 插件目前还不支持在声明式 Pipeline 中的直接引用。我们可以在声明式 Pipeline 中引入 Script 步骤， 然后在 Script 步骤块中引用 MeterSphere 插件。</p>
+<p>具体如下图所示：</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_4.png" /></p>
+<p>代码块如下:
+<div class="highlight"><pre><span></span><code>pipeline {
+    agent any //任意选择
+    // agent { label &#39;local-host&#39;}   //指定agent
+
+    stages {
+        stage(&#39;Build&#39;) {
+            steps{
+                echo &quot;building&quot;
+            }
+        }
+        stage(&#39;Deploy&#39;) {
+            steps{
+                echo &quot;deploying&quot;
+            }
+        }
+        stage(&#39;Test&#39;) {
+            steps{
+                 script {
+                    meterSphere msEndpoint:&#39;http://XXXX&#39;,
+                    msAccessKey:&#39;XXXXXX&#39;,
+                    msSecretKey:&#39;XXXXXX&#39;,
+                    workspaceId:&#39;XXXXXX&#39;,
+                    projectId:&#39;XXXXXX&#39;,
+                    method:&#39;testPlan&#39;,
+                    testPlanId:&#39;XXXXXX&#39;,
+                    mode:&#39;parallel&#39;,
+                    resourcePoolId:&#39;&#39;,
+                    result:&#39;metersphere&#39;
+                }
+
+                script {
+                    meterSphere msEndpoint:&#39;http://XXXXXX&#39;,
+                    msAccessKey:&#39;XXXXXX&#39;,
+                    msSecretKey:&#39;XXXXXX&#39;,
+                    workspaceId:&#39;XXXXXX&#39;,
+                    projectId:&#39;XXXXXX&#39;,
+                    method:&#39;single&#39;,
+                    testCaseId:&#39;XXXXXX&#39;,
+                    mode:&#39;parallel&#39;,
+                    resourcePoolId:&#39;&#39;,
+                    result:&#39;metersphere&#39;
+                }
+            }  
+        }
+    }
+}
+</code></pre></div>
+注意：Pipeline 脚本可以直接写在编辑任务页面中；也可以存放在 Git 仓库的指定位置，在配置任务时再进行指定。</p>
+<h3 id="2">2. 构建任务<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>Jenkins 任务创建完成后可以点击“手动构建”按钮查看效果。在构建任务的控制台日志中，可以看到指定的测试计划和接口用例已经执行完成。</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_5.png" /></p>
+<p>同时，我们进入 MeterSphere 持续测试平台进行查看，也可以看到接口测试已经执行成功，且测试计划报告已经生成。</p>
+<p>① 接口用例执行结果；</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_6.png" /></p>
+<p>② 测试计划报告已经生成。</p>
+<p><img alt="" src="../../img/tutorial/use_jenkins/add_jenkins_7.png" /></p>
 
 
   

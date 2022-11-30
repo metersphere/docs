@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>如何使用 MeterSphere 进行 Dubbo 协议接口测试 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#dubbo" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              如何使用 MeterSphere 进行 Dubbo 协议接口测试
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,37 +2382,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
+  <a href="#dubbo" class="md-nav__link">
+    关于 Dubbo
+  </a>
+  
+    <nav class="md-nav" aria-label="关于 Dubbo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dubbo_1" class="md-nav__link">
+    Dubbo 架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    节点角色说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    调用关系说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dubbo_2" class="md-nav__link">
+    部署 Dubbo 服务
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#dubbo_3" class="md-nav__link">
+    常见的 Dubbo 接口测试方法
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
+  <a href="#metersphere-dubbo" class="md-nav__link">
+    使用 MeterSphere 持续测试平台进行 Dubbo 接口测试
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 MeterSphere 持续测试平台进行 Dubbo 接口测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    准备工作
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    创建项目
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    创建接口测试
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    配置信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    转化为接口自动化场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    转化为性能测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2495,49 +2498,166 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/如何使用 MeterSphere 进行 Dubbo 协议接口测试.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>如何使用 MeterSphere 进行 Dubbo 协议接口测试</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="dubbo">关于 Dubbo<a class="headerlink" href="#dubbo" title="Permanent link">&para;</a></h2>
+<p><a href="https://dubbo.io">Dubbo</a> 是阿里巴巴公司开源的一个优秀的 Java 高性能服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和 Spring 框架无缝集成，随着近几年微服务架构的兴起，因为其理念很契合微服务，在国内有着比较广泛的用户群体。</p>
+<h3 id="dubbo_1">Dubbo 架构<a class="headerlink" href="#dubbo_1" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../../img/tutorial/dubbo/architecture.png" /></p>
+<h3 id="_1">节点角色说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
+<li>Provider：暴露服务的服务提供方</li>
+<li>Consumer：调用远程服务的服务消费方</li>
+<li>Registry：服务注册与发现的注册中心</li>
+<li>Monitor：统计服务的调用次数和调用时间的监控中心</li>
+<li>Container：服务运行容器</li>
 </ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
+<h3 id="_2">调用关系说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>服务容器负责启动，加载，运行服务提供者。</li>
+<li>服务提供者在启动时，向注册中心注册自己提供的服务。</li>
+<li>服务消费者在启动时，向注册中心订阅自己所需的服务。</li>
+<li>注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者。</li>
+<li>服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</li>
+<li>服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心。</li>
+</ol>
+<h2 id="dubbo_2">部署 Dubbo 服务<a class="headerlink" href="#dubbo_2" title="Permanent link">&para;</a></h2>
+<p>要针对 Dubbo 接口进行测试，首先我们需要有一套基于 Dubbo 框架的应用系统。这里我准备了一个使用了 Dubbo 框架的 SpringBoot Demo 应用来进行说明，项目地址：<a href="https://github.com/metersphere/dubbo-docker">https://github.com/metersphere/dubbo-docker</a>（在此感谢下 <a href="https://github.com/binblee/dubbo-docker">原项目</a> 作者 <a href="https://github.com/binblee">binblee</a> 提供的项目）。如果大家自己已经有了现成的基于 Dubbo 框架的应用，可以忽略掉这一部分。</p>
+<p>应用整体比较简单，只提供了如下的一个接口两个方法。
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service.producer</span><span class="p">;</span><span class="w"></span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.service.Greetings</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.service.User</span><span class="p">;</span><span class="w"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Created by libin on 9/19/16.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GreetingsImpl</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Greetings</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">say</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Greetings from &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Name: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">name</span><span class="o">+</span><span class="s">&quot;, Age: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">age</span><span class="o">+</span><span class="s">&quot;, Gender: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">gender</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+项目的启动方式在 GitHub 上的 README 中已经有说明了，在此就不再赘述。当我们将项目运行起来以后，通过 HTTP GET 方法请求下 consumer 的 / 路径，可以看到 consumer 给我们返回了如下信息，说明 provider 是可以正常提供服务的。
+<div class="highlight"><pre><span></span><code><span class="o">[</span>~/Documents/workspace/dubbo-docker/docker<span class="o">]</span><span class="c1"># curl http://localhost:8899</span>
+Greetings from Dubbo Docker
+</code></pre></div></p>
+<h2 id="dubbo_3">常见的 Dubbo 接口测试方法<a class="headerlink" href="#dubbo_3" title="Permanent link">&para;</a></h2>
+<p>像 Dubbo 这样的 RPC 框架，其提供的接口更多是一个应用系统之间各个组件/服务内部通信使用的，不像基于 HTTP 的接口那样，其实可选择的测试工具不是特别多。
+根据我自己的经验，一般有如下几种方式来进行 Dubbo 接口的测试，如果大家有其他更好的方式和工具，欢迎联系作者进行补充。</p>
 <ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
+<li>自己写 Java 或 Python 等代码注册成一个 consumer 调用服务进行测试。</li>
+<li>像上面例子里的 consumer 一样，由开发团队把需要测试的接口再包装成 HTTP 接口，通过测试 HTTP 接口测手段进行测试。</li>
+<li>在测试环境中通过官方提供的 telnet 命令，直接 invoke 特定服务进行测试。</li>
 </ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>~/Documents/workspace/dubbo-docker<span class="o">]</span><span class="c1"># telnet localhost 20880</span>
+Trying ::1...
+Connected to localhost.
+Escape character is <span class="s1">&#39;^]&#39;</span>.
+
+dubbo&gt;ls
+com.example.service.Greetings
+dubbo&gt;ls com.example.service.Greetings
+say
+hello
+dubbo&gt;invoke com.example.service.Greetings.say<span class="o">(</span><span class="s2">&quot;Tom&quot;</span><span class="o">)</span>
+<span class="s2">&quot;Greetings from Tom&quot;</span>
+elapsed: <span class="m">0</span> ms.
+dubbo&gt;
+</code></pre></div>
 <ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
+<li>使用 JMeter 配合 Dubbo Sampler 插件进行测试。
+<img alt="" src="../../img/tutorial/dubbo/jmeter_dubbo.png" /></li>
 </ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h2 id="metersphere-dubbo">使用 MeterSphere 持续测试平台进行 Dubbo 接口测试<a class="headerlink" href="#metersphere-dubbo" title="Permanent link">&para;</a></h2>
+<p>除了上面提到的方法以外，我们还可以使用 MeterSphere 这样的完全兼容 JMeter 的测试平台来进行 Dubbo 接口测试。关于 MeterSphere 的详细介绍及部署使用方式，可以参考下面提供的链接。在这篇文章中，我们只聚焦于使用 MeterSphere 进行 Dubbo 接口测试进行介绍。</p>
 <ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
+<li><a href="https://metersphere.io">MeterSphere 项目官网</a></li>
+<li><a href="https://github.com/metersphere">MeterSphere 代码仓库</a></li>
+<li><a href="https://metersphere.io/jmeter-load-testing.html">MeterSphere 跟 JMeter 的比较</a></li>
 </ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="_3">准备工作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
+<li>已经部署了 MeterSphere 的环境，并且有具有执行接口测试权限的账号。</li>
+<li>准备 Dubbo 接口相关信息，包括注册中心连接信息、接口定义等。</li>
+<li>如果使用了本文中提到的 Duboo Demo 项目，由于服务注册时的 IP 地址是 producer 容器的 IP，可能会出现调用不通的情况。这里我们通过 zk 命令手动地把这个 Demo 环境的 provider 信息改一下，把原来 provider 中的容器 IP 改为部署该 Demo 应用的主机 IP。</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>~/Documents/workspace/dubbo-docker/docker<span class="o">]</span><span class="c1"># zkcli -s 192.168.2.170:2181</span>
+<span class="m">2020</span>/08/06 <span class="m">18</span>:55:25 Connected to <span class="m">192</span>.168.2.170:2181
+&gt;&gt;&gt; ls /dubbo/com.example.service.Greetings/providers
+<span class="o">[</span>dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791<span class="o">]</span>
+&gt;&gt;&gt; delete /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
+Deleted /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
+&gt;&gt;&gt; create /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.170%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791 <span class="s2">&quot;&quot;</span>
+Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.170%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
+&gt;&gt;&gt;
+</code></pre></div>
+<h3 id="_4">创建项目<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>登录 MeterSphere 平台后，点击在上方菜单「系统设置」中的「工作空间」-「项目管理」，在项目列表中点击「创建项目」。
+<img alt="" src="../../img/tutorial/dubbo/create_project.png" /></p>
+<h3 id="_5">创建接口测试<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>点击界面上方的「接口测试」下的「接口定义」，选择项目后切换到「DUBBO」协议，创建 DUBBO 接口测试集。
+<img alt="" src="../../img/tutorial/dubbo/create_api_test.png" /></p>
+<p>在创建接口页面填入接口测试名称，模块，状态，责任人，描述等等相关信息
+<img alt="" src="../../img/tutorial/dubbo/create_api_test2.png" /></p>
+<h3 id="_6">配置信息<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>在该页面中把准备的注册中心连接信息，接口版本等信息填好。
+<img alt="" src="../../img/tutorial/dubbo/config_scenario.png" /></p>
+<p>点击「Get Providers List」从注册中心中获取服务列表，从下拉列表中选择需要测试的接口及方法，根据该方法的定义，传入所需的参数。
+<img alt="" src="../../img/tutorial/dubbo/add_dubbo_request2.png" /></p>
+<p>上面添加的接口只有一个 String 类型的参数，再次添加一个参数类型为自定义类的请求。这里我们查看一下代码中这个接口的定义，发现其需要一个 User 类的对象作为参数。
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span><span class="w"></span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Created by libin on 9/19/16.</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Greetings</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">say</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+同时结合 User 类的定义
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">enum</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">MALE</span><span class="p">,</span><span class="w"> </span><span class="n">FEMALE</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+我们可以通过这样的形式传入参数值 {"name":"姓名", "age":年龄, "gender": "MALE 或 FEMALE"}。
+<img alt="" src="../../img/tutorial/dubbo/add_dubbo_request3.png" /></p>
+<p>当接口请求都添加完成后，然后就可以点击「保存」按钮，切换到「TEST」页面，点击「测试」，即可运行该 Dubbo 接口了。
+<img alt="" src="../../img/tutorial/dubbo/run_api_test.png" /></p>
+<p>测试执行完成后，即可在页面上查看到测试执行的结果报告。<br>
+<img alt="" src="../../img/tutorial/dubbo/api_test_report1.png" /></p>
+<h3 id="_7">转化为接口自动化场景<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>切换到「接口自动化」页面，创建场景时，填写左边基础信息以及点击右边「接口列表导入」
+<img alt="" src="../../img/tutorial/dubbo/api_test_automator.png" /></p>
+<p>将创建的 dubbo 接口导入后点击「保存」，选择「运行环境」，点击「调试」
+<img alt="" src="../../img/tutorial/dubbo/api_test_automator_1.png" /></p>
+<p>调试完成后，点击「生成报告」或者切换到「测试报告」页面，可查看到请求的详细内容及响应内容。<br>
+<img alt="" src="../../img/tutorial/dubbo/api_test_report2.png" /></p>
+<h3 id="_8">转化为性能测试<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>接口自动化测试执行通过后，我们还可以通过 MeterSphere 提供的接口测试转性能测试的功能，直接发起针对 Dubbo 接口的性能测试。</p>
+<p>在「性能测试」页面的「场景配置」点击下「引用接口自动化场景」，选择我们刚创建的接口自动化场景。
+<img alt="" src="../../img/tutorial/dubbo/create_load_test1.png" /></p>
+<p>切换到「压力配置」页面，根据需求配置压力参数后，点击「保存并执行」按钮即可发起性能测试。
+<img alt="" src="../../img/tutorial/dubbo/create_load_test2.png" /></p>
 
 
   

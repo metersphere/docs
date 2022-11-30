@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 中常用 Jmeter函数 使用详细 - MeterSphere 文档</title>
       
     
     
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 中常用 Jmeter函数 使用详细
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2448,36 +2383,158 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1 接口测试
+    1 脚本函数
   </a>
+  
+    <nav class="md-nav" aria-label="1 脚本函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-__beanshell-beanshell" class="md-nav__link">
+    1.1 __BeanShell - 执行 beanshell 脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-__javascript-js" class="md-nav__link">
+    1.2 __javaScript - 执行 js 脚本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#2" class="md-nav__link">
+    2 获取信息函数
   </a>
+  
+    <nav class="md-nav" aria-label="2 获取信息函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-__log-" class="md-nav__link">
+    2.1 __log - 输出日志信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-__machineip-ip" class="md-nav__link">
+    2.2 __machineIP - 返回机器（电脑）IP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-__time-" class="md-nav__link">
+    2.3 __time - 通过多种格式返回当前时间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3 服务集成
+    3 变量操作函数
   </a>
+  
+    <nav class="md-nav" aria-label="3 变量操作函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-__split-" class="md-nav__link">
+    3.1 __split - 字符串分割函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-__v-" class="md-nav__link">
+    3.2 __V - 执行变量名表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-__eval-" class="md-nav__link">
+    3.3 __eval - 返回计算字符串表达式的结果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-__evalvar-" class="md-nav__link">
+    3.4 __evalVar - 返回计算存储在变量中的表达式的结果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4 脚本引用
+    4 数据计算函数
+  </a>
+  
+    <nav class="md-nav" aria-label="4 数据计算函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-__counter-" class="md-nav__link">
+    4.1 __counter - 计数器
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
+        
+          <li class="md-nav__item">
+  <a href="#42-__intsum-" class="md-nav__link">
+    4.2 __intSum - 整数求和函数
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-__longsum-long" class="md-nav__link">
+    4.3 __longSum - 计算两个或多个 long 类型的值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-__random-" class="md-nav__link">
+    4.4 __Random - 随机数函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-__randomstring-" class="md-nav__link">
+    4.5 __RandomString - 随机字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-__uuid-uuid" class="md-nav__link">
+    4.6 __UUID - 生成 UUID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2495,49 +2552,449 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 中常用 Jmeter函数 使用详细.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 中常用 Jmeter函数 使用详细</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
-</ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<p>JMeter 提供了很多函数，如果能够熟练使用，可以为测试带来很多方便。<br></p>
+<p>函数调用的格式 ${__functionName(var1,var2,var3)} <br></p>
+<p>其中，__functionName 为函数名，括号内是函数的参数，无参数 JMeter 时可以不用括号，如 ${__UUID} <br></p>
+<p>如果参数包含逗号，那么一定要使用 “\” 来转义，否则 JMeter 会把它当作一个参数分隔符 <br></p>
+<p>在 Metersphere 实际使用时，可通过点击参数后面的铅笔选择函数，或在参数值一栏直接输入【${__】可自动联想补全<br></p>
+<p>函数亦可在脚本中使用，可参考：<a href="https://zhuanlan.zhihu.com/p/535824577">https://zhuanlan.zhihu.com/p/535824577</a> <br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/%E5%87%BD%E6%95%B0%E5%85%A5%E5%8F%A3.png" /></p>
+<p>JMeter 中的函数主要分为如下几类：</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">函数类型</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">函数名称</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">函数作用</td>
+  <tbody>
+    <tr>
+        <td rowspan="2">脚本函数</td>
+        <td >__BeanShell</td>
+        <td >执行 beanshell 脚本</td>
+    </tr>
+    <tr>
+        <td >__javaScript</td>
+        <td >执行 javaScript 脚本</td>
+    </tr>
+    <tr>
+        <td rowspan="4">获取信息函数</td>
+        <td >__log</td>
+        <td >输出日志信息</td>
+    </tr>
+    <tr>
+        <td >__machineIP</td>
+        <td >返回机器（电脑）IP</td>
+    </tr>
+    <tr>
+        <td >__machineName</td>
+        <td >返回本机的主机名</td>
+    </tr>
+    <tr>
+        <td >__time</td>
+        <td >以多种格式返回当前时间</td>
+    </tr>
+     <tr>
+        <td rowspan="4">变量操作函数</td>
+        <td >__split</td>
+        <td >根据分隔符分割传递给它的字符串</td>
+    </tr>
+    <tr>
+        <td >__V</td>
+        <td >执行嵌套函数引用</td>
+    </tr>
+    <tr>
+        <td >__eval</td>
+        <td >执行字符串表达式</td>
+    </tr>
+    <tr>
+        <td >__evalVar</td>
+        <td >执行保存在变量中的表达式</td>
+    </tr>
+     <tr>
+        <td rowspan="6">数据计算函数</td>
+        <td >__counter</td>
+        <td >计数器</td>
+    </tr>
+    <tr>
+        <td >__intSum</td>
+        <td >整数求和</td>
+    </tr>
+    <tr>
+        <td >__longSum</td>
+        <td >长整型求和</td>
+    </tr>
+    <tr>
+        <td >__Random</td>
+        <td >随机数</td>
+    </tr>
+     <tr>
+        <td >__RandomString</td>
+        <td >随机字符串</td>
+    </tr>
+     <tr>
+        <td >__UUID</td>
+        <td >伪随机类型的唯一标识符ID</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="1">1 脚本函数<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11-__beanshell-beanshell">1.1 __BeanShell - 执行 beanshell 脚本<a class="headerlink" href="#11-__beanshell-beanshell" title="Permanent link">&para;</a></h3>
+<p>它有两个参数，第一个参数是要执行的语句，可以是beanshell语句或者是文件地址，是必选参数；第二个参数是保存结果的变量名称，非必选参数。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>BeanShell script</td>
+        <td >beanshell 脚本（不是文件名）</td>
+        <td >yes</td>
+    </tr>
+    <tr>
+        <td >Name of variable</td>
+        <td >该变量存储此函数返回的值，以便后续复用</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>示例：
+<div class="highlight"><pre><span></span><code>${__BeanShell(vars.put(&quot;name&quot;\,&quot;value&quot;))} 
+
+${__BeanShell(123*456)}  返回56088
+
+//根据不同系统返回端口号
+${__BeanShell(import java.util.*;Properties props = System.getProperties();String osName  = props.getProperty(&quot;os.name&quot;);if(osName.contains(&quot;Linux&quot;))return 443;return 8443;,beanshell)} 
+
+//取数组中随机值
+${__BeanShell(import java.util.*;Random random = new Random();int[] array = {1\,100\,1000\,1100};int i = array[random.nextInt(array.length-1)];return i;,beanshell)} 
+与 beanshell 元件比较：
+
+该函数与 beanshell 元件（beanshell sampler、beanshell preprocess等）作用是一样的，只是 beanshell 函数更常用于一些简单的判断或计算等，可以把少量的脚本放在函数中直接赋值给一个变量，而不用总是添加 beanshell 元件。
+</code></pre></div>
+<img alt="" src="../../img/tutorial/use_jmeter_func/beanshell%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/beanshell%E6%89%A7%E8%A1%8C%E5%B0%91%E9%87%8F%E8%84%9A%E6%9C%AC.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/%E5%AE%9A%E4%B9%89%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%8F%82%E6%95%B0%E5%A4%8D%E7%94%A8.png" /></p>
+<h3 id="12-__javascript-js">1.2 __javaScript - 执行 js 脚本<a class="headerlink" href="#12-__javascript-js" title="Permanent link">&para;</a></h3>
+<p>函数 __javaScript 可以用来执行 JavaScript 代码片段，并返回结果值。<br>
+该函数会调用标准的 JavaScript 解释器，还可以直接调用 JMeter 的内置函数。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Expression</td>
+        <td >要执行的 JavaScript 表达式</td>
+        <td >yes</td>
+    </tr>
+    <tr>
+        <td >Name of variable</td>
+        <td >该变量存储此函数返回的值，以便后续复用</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>示例：
+<div class="highlight"><pre><span></span><code>${__javaScript(new Date(),MYDATE)}- 返回当前日期和时间
+${__javaScript(Math.floor(Math.random()*(${maxRandom}+1)),MYRESULT)}-将使用 maxRandom 变量，返回一个介于 0 和 maxRandom 之间的随机值并将其存储在 MYRESULT
+${__javaScript(${minRandom}+Math.floor(Math.random()*(${maxRandom}-${minRandom}+1)),MYRESULT)}-将使用maxRandom和minRandom变量，返回maxRandom和minRandom之间的随机值并将其存储在变量MYRESULT下
+${__javaScript(&quot;${VAR}&quot;==&quot;abcd&quot;,MYRESULT)} -将VAR变量的值与abcd进行比较，返回true或false并将结果存储在 MYRESULT
+注意：文本字符串要添加必要的引号。如果表达式中有逗号，要确保对其转义。
+
+如：${__javaScript(&#39;${sp}&#39;.slice(7\,99999))}，对 7 之后的逗号进行了转义。
+</code></pre></div>
+<img alt="" src="../../img/tutorial/use_jmeter_func/js%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/%E5%88%A4%E6%96%AD%E5%80%BC%E5%A4%A7%E5%B0%8F%E8%BF%94%E5%9B%9E%E5%80%BC.png" /></p>
+<h2 id="2">2 获取信息函数<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-__log-">2.1 __log - 输出日志信息<a class="headerlink" href="#21-__log-" title="Permanent link">&para;</a></h3>
+<p>函数记录一条消息，并返回其输入字符串<br>
+<div class="highlight"><pre><span></span><code>${__log(Message)}：写入日志文件，形如&quot;...threadName:Message&quot;
+${__log(Message,OUT)}：写到控制台窗口
+${__log(${VAR},,,VAR=)}：写入日志文件，形如&quot;...threadNameVAR=value&quot;
+</code></pre></div></p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>日志内容</td>
+        <td >引用变量名</td>
+        <td >yes</td>
+    </tr>
+    <tr>
+        <td >Log Level</td>
+        <td >OUT, ERR, DEBUG, INFO (default), WARN or ERROR</td>
+        <td >no</td>
+    </tr>
+     <tr>
+        <td >Throwable text</td>
+        <td >如果非空，则创建一个 Throwable 传递给记录器</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <td >Comment</td>
+        <td >如果存在，则显示在字符串中。用于识别正在记录的内容</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/log%E4%BD%BF%E7%94%A81.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/log%E4%BD%BF%E7%94%A82.png" /></p>
+<h3 id="22-__machineip-ip">2.2 __machineIP - 返回机器（电脑）IP<a class="headerlink" href="#22-__machineip-ip" title="Permanent link">&para;</a></h3>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Variable Name</td>
+        <td >引用变量名</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/machineIP.png" /></p>
+<h3 id="23-__time-">2.3 __time - 通过多种格式返回当前时间<a class="headerlink" href="#23-__time-" title="Permanent link">&para;</a></h3>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>格式</td>
+        <td >要传递给SimpleDateFormat的格式。该函数支持各种速记别名，见下文。如果省略，则该函数返回自纪元以来的当前时间（以毫秒为单位）</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <td>变量名</td>
+        <td >要设置的变量的名称</td>
+        <td >no</td>
+   </tr>
+  </tbody>
+</table>
+<p>如果省略了格式字符串，那么函数会以毫秒的形式返回当前时间。其他情况下，当前时间会被转成简单日期格式。</p>
+<p><div class="highlight"><pre><span></span><code>JMeter 中默认定义的时间格式属性值有：
+YMD = yyyyMMdd
+HMS = HHmmss
+YMDHMS = yyyyMMdd-HHmmss
+</code></pre></div>
+<img alt="" src="../../img/tutorial/use_jmeter_func/time%E4%BD%BF%E7%94%A8.png" /></p>
+<h2 id="3">3 变量操作函数<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31-__split-">3.1 __split - 字符串分割函数<a class="headerlink" href="#31-__split-" title="Permanent link">&para;</a></h3>
+<p>函数 __split 会通过分隔符来拆分传递给它的字符串，并返回原始的字符串。如果分隔符紧挨在一起，那么函数就会以变量值的形式返回 "?"。拆分出来的字符串，以变量 ${VAR_1}、{VAR_2}…以此类推的形式加以返回。<br></p>
+<p>注意: 分隔符默认是逗号，如果你想要多此一举，明确指定使用逗号，需要对逗号转义，如 “\,”</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>String to split</td>
+        <td >分隔字符串，例如 “a|b|c”</td>
+        <td >yes</td>
+    </tr>
+    <tr>
+        <td>Name of variable</td>
+        <td >用于重用此函数计算的值的引用名称</td>
+        <td >no</td>
+   </tr>
+    <tr>
+       <td>Delimiter</td>
+       <td >指定分隔符，如 " |  :  , ”等，若省略，默认使用","进行分割。若指定","进行分割，则需要将","进行转义为"\,"</td>
+       <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>前后置脚本中，示例特殊情况"a||c|"分割，分隔符紧挨在一起，返回"?"，以分隔符结束，返回"?"
+<img alt="" src="../../img/tutorial/use_jmeter_func/split2.png" /></p>
+<p>分割后的数组可搭配循环控制器使用，这里循环控制引用上图分割好的 ${var} 变量 <br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/split3.png" /></p>
+<p>参数中示例分割字符串“admin|b|c” <br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/split1.png" /></p>
+<h3 id="32-__v-">3.2 __V - 执行变量名表达式<a class="headerlink" href="#32-__v-" title="Permanent link">&para;</a></h3>
+<p>函数 __V 可以用于执行变量名表达式，并返回执行结果。它可以被用于执行嵌套函数引用
+<div class="highlight"><pre><span></span><code>${A1}：能正常工作
+${A${N}}：无法正常工作（嵌套变量引用）
+${__V(A${N})}：可以正常工作。A${N}变为A1，函数 __V返回变量值A1
+</code></pre></div></p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Variable name</td>
+        <td >要评估的变量</td>
+        <td >yes</td>
+    </tr>
+    <tr>
+        <td>Default value</td>
+        <td >未找到变量时的默认值，如果为空且未找到变量，则函数返回变量名称</td>
+        <td >no</td>
+   </tr>
+  </tbody>
+</table>
+
+<p>场景使用：将数据库获取的数据作为下一个接口的参数（循环控制器+计数器函数）<span __counter_="__counter(,)" class="arithmatex"><span class="MathJax_Preview">{__V(name_</span><script type="math/tex">{__V(name_</script></span>)} <br>
+详细使用参考：<a href="https://zhuanlan.zhihu.com/p/547953530">https://zhuanlan.zhihu.com/p/547953530</a></p>
+<h3 id="33-__eval-">3.3 __eval - 返回计算字符串表达式的结果<a class="headerlink" href="#33-__eval-" title="Permanent link">&para;</a></h3>
+<p>这允许在存储在变量中的字符串中插入变量和函数引用 <br>
+如: 给定变量 name=Smith、column=age、table=birthdays、SQL=select<span class="arithmatex" table="table"><span class="MathJax_Preview">{column}from</span><script type="math/tex">{column}from</script></span>wherename='${name}'，那么通过 <span SQL="SQL" class="arithmatex"><span class="MathJax_Preview">{__eval(</span><script type="math/tex">{__eval(</script></span>)}，就能执行 "selectagefrombirthdayswherename='Smith'"。这样一来，就可以与 CSV 数据集相互配合，例如，将 SQL 语句和值都定义在数据文件中。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Variable name</td>
+        <td >要评估的变量</td>
+        <td >yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>使用场景：
+场景内容对某商品的增删改查，该商品的 id 为固定前缀 xxx+32 位随机数。
+<img alt="" src="../../img/tutorial/use_jmeter_func/eval1.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/eval2.png" /></p>
+<p>原来一个注册，因为用到的参数都是随机生成，所以不方便写入 csv 参数化文件里，只能出现这种多个 if 控制器+请求样本的脚本设计来跑这些用例。这样脚本就会很繁琐，改动也不方便。</p>
+<p>数据文件中直接使用函数或者前文提取的变量。很方便的实现了数据驱动，脚本缩减。<br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/eval3.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/eval4.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/eval5.png" /></p>
+<h3 id="34-__evalvar-">3.4 __evalVar - 返回计算存储在变量中的表达式的结果<a class="headerlink" href="#34-__evalvar-" title="Permanent link">&para;</a></h3>
+<p>这允许人们从文件中读取字符串，并处理其中的任何变量引用。<br>
+例如，如果变量“ query ”包含“ select ${column} from <span __evalVar_query_="__evalVar(query)" class="arithmatex"><span class="MathJax_Preview">{table} ”并且“ column ”和“ table ”包含“ name ”和“ customers ”，则</span><script type="math/tex">{table} ”并且“ column ”和“ table ”包含“ name ”和“ customers ”，则</script></span> 将评价为“select name from customers”</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Variable name</td>
+        <td >要评估的变量</td>
+        <td >yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>使用场景同上，使用 __evalVar 里面不用 ${} 就可引用到变量
+<img alt="" src="../../img/tutorial/use_jmeter_func/evalVar.png" /></p>
+<h2 id="4">4 数据计算函数<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41-__counter-">4.1 __counter - 计数器<a class="headerlink" href="#41-__counter-" title="Permanent link">&para;</a></h3>
+<ol>
+<li>每次调用计数器函数都会产生一个新值，从1开始每次加1。计数器既可以被配置成针对每个虚拟用户是独立的，也可以被配置成所有虚拟用户公用的。<br></li>
+<li>如果每个虚拟用户的计数器是独立增长的，那么通常被用于记录测试计划运行了多少遍。全局计数器通常被用于记录发送了多少次请求。<br></li>
+<li>计数器使用一个整数值来记录，允许的最大值为 2,147,483,647。<br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/counter.png" /></li>
+</ol>
+<h3 id="42-__intsum-">4.2 __intSum - 整数求和函数<a class="headerlink" href="#42-__intsum-" title="Permanent link">&para;</a></h3>
+<ol>
+<li>函数__intSum可以被用来计算两个或者更多整数值的合。至少需要两个整数，如果指定变量名则名称中必须包含一个非数字字母，否则它会被当成另一个整数值，而被函数用于计算。<br></li>
+<li>当有多个整数时点击添加按钮来增加参数，但是需要注意的是: 添加完参数后，点击”生成”的函数默认是把手动添加的函数放在后面，这时需要手动调整变量名的位置，把它放到最后，否则会报错。<br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/intSum.png" /></li>
+</ol>
+<h3 id="43-__longsum-long">4.3 __longSum - 计算两个或多个 long 类型的值<a class="headerlink" href="#43-__longsum-long" title="Permanent link">&para;</a></h3>
+<p>值不在 -2147483648 到 2147483647 的区间内，请使用它而不是 __intSum</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>First argument</td>
+        <td >第一个长值</td>
+        <td >yes</td>
+    </tr>
+     <tr>
+        <td>Second argument</td>
+        <td >第二个长值</td>
+        <td >yes</td>
+    </tr>
+     <tr>
+        <td>nth argument</td>
+        <td >第n个长值</td>
+        <td >no</td>
+    </tr>
+     <tr>
+        <td>last argument</td>
+        <td >重用此函数计算的值的引用名称</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/longSum.png" /></p>
+<h3 id="44-__random-">4.4 __Random - 随机数函数<a class="headerlink" href="#44-__random-" title="Permanent link">&para;</a></h3>
+<p>返回一个介于给定最小值和最大值之间的随机数。</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Minimum value</td>
+        <td >最小值</td>
+        <td >yes</td>
+    </tr>
+     <tr>
+        <td>Maximum value</td>
+        <td >最大值</td>
+        <td >yes</td>
+    </tr>
+     <tr>
+        <td>Variable Name</td>
+        <td >重用此函数计算的值的引用名称</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/Random.png" /></p>
+<h3 id="45-__randomstring-">4.5 __RandomString - 随机字符串<a class="headerlink" href="#45-__randomstring-" title="Permanent link">&para;</a></h3>
+<p>从指定字符中返回指定长度的随机字符串</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">字段</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">含义</td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">是否必传</td>
+  <tbody>
+    <tr>
+        <td>Length</td>
+        <td >生成的字符串的数字长度</td>
+        <td >yes</td>
+    </tr>
+     <tr>
+        <td>Characters to use</td>
+        <td >用于生成字符串的字符</td>
+        <td >no</td>
+    </tr>
+     <tr>
+        <td>Variable Name</td>
+        <td >重用此函数计算的值的引用名称</td>
+        <td >no</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img alt="" src="../../img/tutorial/use_jmeter_func/RandomString.png" /></p>
+<h3 id="46-__uuid-uuid">4.6 __UUID - 生成 UUID<a class="headerlink" href="#46-__uuid-uuid" title="Permanent link">&para;</a></h3>
+<p>返回一个伪随机类型通用唯一标识符 (UUID) <br>
+注意：此函数无参数 <br>
+将返回此格式的 UUID：c69e0dd1-ac6b-4f2b-8d59-5d4e8743eecd <br>
+<img alt="" src="../../img/tutorial/use_jmeter_func/UUID.png" /></p>
 
 
   

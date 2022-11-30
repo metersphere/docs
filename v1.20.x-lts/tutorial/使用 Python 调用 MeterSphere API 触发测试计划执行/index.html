@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>使用 Python 调用 MeterSphere API 触发测试计划执行 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-ms-api" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              使用 Python 调用 MeterSphere API 触发测试计划执行
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,36 +2382,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
+  <a href="#1-ms-api" class="md-nav__link">
+    1 关于 MS 接口的 API 调用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
+  <a href="#2" class="md-nav__link">
+    2 调用步骤
   </a>
   
 </li>
@@ -2495,49 +2409,112 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/使用 Python 调用 MeterSphere API 触发测试计划执行.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>使用 Python 调用 MeterSphere API 触发测试计划执行</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
-</ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<h2 id="1-ms-api">1 关于 MS 接口的 API 调用<a class="headerlink" href="#1-ms-api" title="Permanent link">&para;</a></h2>
+<p>加密方式：对称加密 <br>
+加密算法：AES，加密模式：CBC，填充方式：PKCS5Padding</p>
+<h2 id="2">2 调用步骤<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>在 MeterSphere 系统【个人信息】-【API Keys】获取 accessKey 和 secretKey。
+<img alt="" src="../../img/tutorial/use_python_api/python_api.png" /></p>
+<p>用 ak 和 sk 来生成 signatur 的方法
+<div class="highlight"><pre><span></span><code>def aesEncrypt(text, secretKey, iv):
+    BS = AES.block_size  # 这个等于16
+    mode = AES.MODE_CBC
+    def pad(s): return s + (BS - len(s) % BS) * \
+                       chr(BS - len(s) % BS)
+    cipher = AES.new(secretKey.encode(&#39;UTF-8&#39;), mode, iv.encode(&#39;UTF-8&#39;))
+    encrypted = cipher.encrypt(pad(text).encode(&#39;UTF-8&#39;))
+    # 通过aes加密后，再base64加密
+    b_encrypted = base64.b64encode(encrypted)
+    return b_encrypted
+</code></pre></div></p>
+<p>生成签名，并设置到 header 
+<div class="highlight"><pre><span></span><code>def setHeaders(s,accessKey,secretKey):
+    timeStamp = int(round(time.time() * 1000))
+    combox_key = accessKey + &#39;|&#39; + str(uuid.uuid4()) + &#39;|&#39; + str(timeStamp)
+    signature = aesEncrypt(combox_key, secretKey, accessKey)
+    print(signature.decode(&#39;UTF-8&#39;))
+    header = {&#39;Content-Type&#39;: &#39;application/json&#39;, &#39;ACCEPT&#39;: &#39;application/json&#39;, &#39;accessKey&#39;: accessKey,
+               &#39;signature&#39;: signature.decode(&#39;UTF-8&#39;),&#39;Connection&#39;: &#39;close&#39;}
+    s.headers.update(header)
+    return s
+</code></pre></div></p>
+<p>获取运行环境id、测试报告方法。
+<div class="highlight"><pre><span></span><code>#获取运行环境id
+def get_test_plan_env(s,host,projectId,name):
+    url = host + &quot;/api/environment/list/{}&quot;.format(projectId)
+    r = s.get(url)
+    data = r.json().get(&quot;data&quot;)
+    if data:
+        for dat in data:
+            if dat.get(&quot;name&quot;) == name:
+                return dat.get(&quot;id&quot;)
+    else:
+        print(&quot;没有data值&quot;)
+
+#测试报告
+def get_report_url(s,host,customData):
+    url = host + &quot;/share/info/generateShareInfoWithExpired&quot;
+    body = {&quot;customData&quot;:customData,&quot;shareType&quot;:&quot;PLAN_DB_REPORT&quot;,&quot;lang&quot;:None}
+    r = s.post(url,json=body)
+    if r:
+        data = r.json().get(&quot;data&quot;)
+        if data:
+            shareUrl=data.get(&quot;shareUrl&quot;)
+            report_url = host + &quot;/sharePlanReport&quot; + shareUrl
+            return report_url
+        else:
+            print(&quot;没有返回值...&quot;)
+</code></pre></div></p>
+<p>设置请求测试计划接口需要的参数和执行方法
+<div class="highlight"><pre><span></span><code>def test_plan_run(s,host,testPlanId,projectId,envId,userId=&quot;王梅杰&quot;):
+    url = host + &quot;/test/plan/run&quot;
+    body = {
+   &quot;mode&quot;: &quot;serial&quot;,
+   &quot;reportType&quot;: &quot;iddReport&quot;,
+   &quot;onSampleError&quot;: True,
+   &quot;runWithinResourcePool&quot;: False,
+   &quot;resourcePoolId&quot;: None,
+   &quot;envMap&quot;: {
+      projectId: envId
+   },
+   &quot;testPlanId&quot;: testPlanId,
+   &quot;projectId&quot;: projectId,
+   &quot;userId&quot;: userId,
+   &quot;triggerMode&quot;: &quot;MANUAL&quot;,
+   &quot;environmentType&quot;: &quot;JSON&quot;,
+   &quot;environmentGroupId&quot;: &quot;&quot;,
+   &quot;requestOriginator&quot;: &quot;TEST_PLAN&quot;
+}
+    r = s.post(url,json=body)
+    return r
+
+def exec_run(accessKey,secretKey,host,projectId,testPlanName=&quot;测试环境使用&quot;, envName=&quot;MS环境&quot;):
+    s = requests.session()
+    s = setHeaders(s,accessKey,secretKey) #设置请求头
+    testPlanId=&quot;3e8b4795-c3dc-4899-8204-d88637912914&quot;
+    envId = get_test_plan_env(s,host,projectId,envName) #获取运行环境id,这里采用调Api获取的形式
+    r = test_plan_run(s,host,testPlanId,projectId,envId)
+    if r.json().get(&quot;success&quot;)==True:
+        data = r.json().get(&quot;data&quot;)
+        if data:
+            report_url = get_report_url(s,host,data)#获取测试报告
+            print(&quot;测试计划接口调用成功,测试计划报告地址为: {}&quot;.format(report_url))
+</code></pre></div></p>
+<p>方法调用执行
+<div class="highlight"><pre><span></span><code>exec_run(&#39;8xr2ZLKqkTbqIHF4&#39;,&#39;rIBsWJPkdwE4UE0X&#39;,&quot;https://north-ms.fit2cloud.com&quot;,&#39;6d609951-4c38-4b8e-a05b-858699271ba5&#39;)
+</code></pre></div></p>
+<p>控制台执行结果，点击报告链接可以跳转到报告页
+<img alt="" src="../../img/tutorial/use_python_api/python_api_1.png" /></p>
+<p>MeterSphere 查看测试报告，执行成功
+<img alt="" src="../../img/tutorial/use_python_api/python_api_2.png" /></p>
 
 
   

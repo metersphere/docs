@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 服务集成之 JIRA 对接 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-jira" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 服务集成之 JIRA 对接
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,36 +2382,117 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
+  <a href="#1-jira" class="md-nav__link">
+    1 对接 Jira 配置
   </a>
+  
+    <nav class="md-nav" aria-label="1 对接 Jira 配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 问题类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 需求类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 关联项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4 关联个人信息
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#2" class="md-nav__link">
+    2 需求关联效果
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3 服务集成
+    3 配置缺陷模板自定义字段
   </a>
+  
+    <nav class="md-nav" aria-label="3 配置缺陷模板自定义字段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 创建字段
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 创建字段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.1.1 字段名及使用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.1.2 字段类型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 新建或修改模块
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 关联模板
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4 脚本引用
+    4 提交缺陷
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
-    5 项目设置
+    5 修改缺陷
   </a>
   
 </li>
@@ -2495,49 +2511,65 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 服务集成之 JIRA 对接.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 服务集成之 JIRA 对接</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
-</ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<h2 id="1-jira">1 对接 Jira 配置<a class="headerlink" href="#1-jira" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 问题类型<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>在MeterSphere的测试跟踪模块创建缺陷时，如果在对接 Jira 的配置中选择了此类缺陷，则该缺陷就可以自动同步到 Jira 平台。这里问题类型需要和Jira平台里保持一致。如果在 Jira 中选择的问题类型是“故障”，MeterSphere 中也应该填写“故障”。<br>
+<img alt="" src="../../img/tutorial/use_jira/%E6%95%85%E9%9A%9C.png" /></p>
+<h3 id="12">1.2 需求类型<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>配置需求类型的主要目的是，在 MeterSphere 中编写的测试用例，可以和在Jira平台中已经创建的需求进行关联。这里需求类型要和Jira平台中保持一致。如果在Jira中需求类型为“故事”，MeterSphere 中也应该填写“故事”。<br>
+<img alt="" src="../../img/tutorial/use_jira/%E6%95%85%E4%BA%8B.png" /></p>
+<h3 id="13">1.3 关联项目<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>关联项目这个配置项主要是为了保证 Jira项目和 MeterSphere 项目的一致性，MeterSphere 中 Jira 项目 Key 对应 Jira 里面项目的关键字。
+<img alt="" src="../../img/tutorial/use_jira/%E5%85%B3%E8%81%94%E9%A1%B9%E7%9B%AE.png" /></p>
+<h3 id="14">1.4 关联个人信息<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>关联个人信息的主要目的是把 MeterSphere 用户和 Jira 用户做关联。即在 MeterSphere 中提交缺陷时，Jira 对应的报告人会是MeterSphere 中填写的 Jira 账户。
+<img alt="" src="../../img/tutorial/use_jira/jira%E8%B4%A6%E6%88%B7.png" /></p>
+<h2 id="2">2 需求关联效果<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>我们在编辑测试用例时选择关联需求，可以看到 Jira 中对应项目下的需求已经同步到了 MeterSphere 对应项目下，可以把不同的用例和需求进行关联。
+<img alt="" src="../../img/tutorial/use_jira/%E6%95%88%E6%9E%9C.png" /></p>
+<h2 id="3">3 配置缺陷模板自定义字段<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>MeterSphere 里默认的Jira缺陷模板字段比较少，所以需要根据不同的测试需求创建自定义字段。比如下图中所示，我们需要将优先级、重现频率、浏览器、关键词和缺陷等级添加到缺陷模板中。<br>
+<img alt="" src="../../img/tutorial/use_jira/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" /></p>
+<p>下面介绍如何实现该自定义字段。</p>
+<h3 id="31">3.1 创建字段<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h4 id="311">3.1.1 字段名及使用场景<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
+<p>创建字段的字段名可以和 Jira 平台字段名称保持一致，如果Jira里面字段名称是“优先级”，这里就可以填“优先级”。使用场景选择“缺陷模板”。
+<img alt="" src="../../img/tutorial/use_jira/%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /></p>
+<h4 id="312">3.1.2 字段类型<a class="headerlink" href="#312" title="Permanent link">&para;</a></h4>
+<p>目前 MeterSphere 支持的字段类型包括输入框、文本框、单/多选下拉列表和单/多选框等。这里以输入框、单选下拉列表和单选框为例，介绍如何在 MeterSphere 中配置自定义缺陷字段。</p>
+<p>A 输入框
+Jira中的关键词字段是“输入框”类型，MeterSphere 中关键字字段同样也选择“输入框”。
+<img alt="" src="../../img/tutorial/use_jira/%E8%BE%93%E5%85%A5%E6%A1%86.png" /></p>
+<p>B 单选下拉列表
+Jira中的优先级字段是单选“下拉列表”类型，MeterSphere 中同样也选择单选“下拉列表”。其中选项值是在对接 Jira 平台提交缺陷时，对应字段的属性值。可以通过 F12 查看字段对应的属性值，例如 Highest 字段对应的属性值是1。<br>
+<img alt="" src="../../img/tutorial/use_jira/%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jira/%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8_1.png" /></p>
+<p>C 单选框
+Jira中的缺陷等级字段是“单选框”，MeterSphere 中同样也选择“单选框”。可以通过 F12 查看字段对应的属性值，例如 P1 对应的属性值是10200。
+<img alt="" src="../../img/tutorial/use_jira/%E5%8D%95%E9%80%89%E6%A1%86.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jira/%E5%8D%95%E9%80%89%E6%A1%86_1.png" /></p>
+<h3 id="32">3.2 新建或修改模块<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>在缺陷模板菜单中，可以选择创建新的缺陷模板，缺陷平台选择 Jira。也可以编辑默认的 Jira 缺陷模板，并把自定义的字段添加到模板中。注意这里需要填写 API 字段名，字段名可以通过 F12 查看，如关键词对应的 API 字段名为 customfield_10300，优先级对应的API字段名为 priority。
+<img alt="" src="../../img/tutorial/use_jira/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%97.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jira/%E6%96%B0%E5%BB%BA%E6%A8%A1%E5%9D%97_1.png" /></p>
+<h3 id="33">3.3 关联模板<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>编辑项目，选择项目缺陷模板为刚才添加的自定义字段的模块。
+<img alt="" src="../../img/tutorial/use_jira/%E6%A8%A1%E6%9D%BF.png" /></p>
+<h2 id="4">4 提交缺陷<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>在测试用例中创建缺陷，选择对应的自定义属性。创建完成后，可以看到 Jira 平台成功创建了我们自定义字段的缺陷。
+<img alt="" src="../../img/tutorial/use_jira/%E7%BC%BA%E9%99%B7.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_jira/%E7%BC%BA%E9%99%B7_1.png" /></p>
+<h2 id="5">5 修改缺陷<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>我们在Jira平台上修改缺陷后，在 MeterSphere 上点击“同步缺陷”按钮，可以看到 MeterSphere 上的缺陷内容已经和 Jira 保持了一致。
+<img alt="" src="../../img/tutorial/use_jira/%E4%BF%AE%E6%94%B9%E7%BC%BA%E9%99%B7.png" /></p>
 
 
   

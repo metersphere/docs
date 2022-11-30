@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 服务集成 Azure Devops 对接 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-azure-devops" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 服务集成 Azure Devops 对接
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,37 +2382,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
+  <a href="#1-azure-devops" class="md-nav__link">
+    1 对接 Azure Devops 配置
   </a>
+  
+    <nav class="md-nav" aria-label="1 对接 Azure Devops 配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-azure-devops" class="md-nav__link">
+    1.1 配置 Azure Devops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-azure-devops" class="md-nav__link">
+    1.2 项目关联 Azure Devops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#2" class="md-nav__link">
+    2 需求关联
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3 服务集成
+    3 缺陷
+  </a>
+  
+    <nav class="md-nav" aria-label="3 缺陷">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1 同步缺陷
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2 修改缺陷
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 新增缺陷
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4 自定义缺陷字段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2495,49 +2470,59 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 服务集成 Azure Devops 对接.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 服务集成 Azure Devops 对接</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
-</ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<h2 id="1-azure-devops">1 对接 Azure Devops 配置<a class="headerlink" href="#1-azure-devops" title="Permanent link">&para;</a></h2>
+<h3 id="11-azure-devops">1.1 配置 Azure Devops<a class="headerlink" href="#11-azure-devops" title="Permanent link">&para;</a></h3>
+<p>【系统设置-工作空间-服务集成】处，选择【Azure Devops】，填写配置信息，其中 PersonalAccessTokens 和 Azure 组织ID 来自 Azure Devops 平台如下位置。<br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.png" /></p>
+<p>问题类型和需求类型来自 Azure Devops 平台-New Work Item 下拉类型 <br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E9%85%8D%E7%BD%AEbug%E5%92%8C%E9%9C%80%E6%B1%82.png" /></p>
+<p>点击测试连接即可看到验证通过的提示 <br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E6%B5%8B%E8%AF%95%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.png" /></p>
+<h3 id="12-azure-devops">1.2 项目关联 Azure Devops<a class="headerlink" href="#12-azure-devops" title="Permanent link">&para;</a></h3>
+<p>【系统设置-项目管理】处编辑项目，集成第三方平台选择 Azure Devops，项目 ID 取自 Azure Devops 平台该组织下的 Projects 名称，过滤 ID 是非必填项，取自该项目下的 Work Items 的 ID<br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AEID.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_azure/AZure%E7%9A%84%E8%BF%87%E6%BB%A4ID.png" /></p>
+<h2 id="2">2 需求关联<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>Azure Devops平台的该过滤 ID 下挂有需求和缺陷，需求里又挂有子需求 <br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E7%9A%84%E9%9C%80%E6%B1%82%E5%92%8Cbug.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_azure/Azure%E9%9C%80%E6%B1%82%E4%B8%8B%E6%8C%82%E8%BD%BD%E5%AD%90%E9%9C%80%E6%B1%82.png" /></p>
+<p>在 MS 平台功能用例需求处展示需求及子需求，若该需求下无子需求则不展示 <br>
+<img alt="" src="../../img/tutorial/use_azure/MS%E5%B1%95%E7%A4%BA%E9%9C%80%E6%B1%82.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_azure/Azure%E9%9C%80%E6%B1%82.png" /></p>
+<h2 id="3">3 缺陷<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 同步缺陷<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>Azure Devops平台的该过滤 ID 下挂有需求和缺陷，需求里又挂有缺陷 <br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E7%9A%84%E9%9C%80%E6%B1%82%E5%92%8Cbug.png" /></p>
+<p><img alt="" src="../../img/tutorial/use_azure/Azure%E9%9C%80%E6%B1%82%E9%87%8C%E6%9C%89bug.png" /></p>
+<p>点击【同步缺陷】时，会将该过滤 ID 里的缺陷以及需求下挂有的缺陷都同步到 MS 平台。<br>
+<img alt="" src="../../img/tutorial/use_azure/Azure%E5%90%8C%E6%AD%A5%E7%BC%BA%E9%99%B7.png" /></p>
+<h3 id="32">3.2 修改缺陷<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>修改同步过来的缺陷标题和缺陷状态，进行同步缺陷后，可在 Azure Devops 平台看到该缺陷的标题和缺陷状态已被同步修改。<br>
+<img alt="" src="../../img/tutorial/use_azure/%E4%BF%AE%E6%94%B9%E7%BC%BA%E9%99%B7%E5%90%8E%E5%90%8C%E6%AD%A5%E7%BC%BA%E9%99%B7.png" /></p>
+<h3 id="33">3.3 新增缺陷<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>在 MS 平台缺陷管理处新增缺陷，填写缺陷内容后点击保存<br>
+<img alt="" src="../../img/tutorial/use_azure/%E6%96%B0%E5%A2%9E%E7%BC%BA%E9%99%B7_1.png" /></p>
+<p>进行同步缺陷后，在 Azure Devops 平台可看到该缺陷已同步过来 <br>
+<img alt="" src="../../img/tutorial/use_azure/%E6%96%B0%E5%A2%9E%E7%BC%BA%E9%99%B7_2.png" /></p>
+<h3 id="34">3.4 自定义缺陷字段<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>在 MS 平台自定义 Azure Devops 上的优先级 Priority 字段，可先使用 F12 进行抓取该字段的值 <br>
+<img alt="" src="../../img/tutorial/use_azure/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%BA%E9%99%B7_2.png" /></p>
+<p>在【项目设置-模板设置-模板字段】处新增字段 Priority，字段类型为 单选下拉框，选项内容自定义，选项ID为 Azure Devops该字段的显示值(&frac12;/&frac34;) <br>
+<img alt="" src="../../img/tutorial/use_azure/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%BA%E9%99%B7_1.png" /></p>
+<p>在 MS 平台的 Azure Devops 缺陷模板中使用已定义好的模板字段 Priority，API字段名为 Azure Devops 平台上 F12 抓取的字段值<br>
+<img alt="" src="../../img/tutorial/use_azure/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%BA%E9%99%B7_3.png" /></p>
+<p>在 MS 上修改缺陷的 Priority 的值，由 low 修改为 veryhigh，进行保存 <br>
+<img alt="" src="../../img/tutorial/use_azure/%E8%B0%83%E6%95%B4%E4%BC%98%E5%85%88%E7%BA%A7_1.png" /></p>
+<p>同步缺陷后，Azure Devops 平台上同一缺陷的内容处的 Priority 字段值变成了4 <br>
+<img alt="" src="../../img/tutorial/use_azure/%E8%B0%83%E6%95%B4%E4%BC%98%E5%85%88%E7%BA%A7_2.png" /></p>
 
 
   

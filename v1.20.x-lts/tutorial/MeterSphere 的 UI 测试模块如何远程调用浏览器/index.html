@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 的 UI 测试模块如何远程调用浏览器 - MeterSphere 文档</title>
       
     
     
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-metersphere" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 的 UI 测试模块如何远程调用浏览器
             
           </span>
         </div>
@@ -2056,76 +2056,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2447,36 +2382,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
+  <a href="#1-metersphere" class="md-nav__link">
+    1 MeterSphere 远程调用浏览器实现原理
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#2-metersphere" class="md-nav__link">
+    2 MeterSphere 远程调用浏览器配置过程
   </a>
+  
+    <nav class="md-nav" aria-label="2 MeterSphere 远程调用浏览器配置过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 下载驱动程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 运行驱动程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-selenium-server-metersphere" class="md-nav__link">
+    2.3 将本地运行 Selenium-server 配置到 MeterSphere 平台
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 项目设置
+    3 特别说明
   </a>
   
 </li>
@@ -2495,49 +2443,95 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 的 UI 测试模块如何远程调用浏览器.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 的 UI 测试模块如何远程调用浏览器</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%E5%87%BD%E6%95%B0%20%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter函数 使用详细</a></li>
-</ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a>  </li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="4">4 脚本引用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="5">5 项目设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<p>5月13日，MeterSphere 开源持续测试平台发布 v1.20.2 版本。在这一版本中，MeterSphere新增“UI场景用例支持启动本地浏览器调试”的功能。</p>
+<p>在此前的版本中，UI场景调试默认调用 MeterSphere 服务端的 Selenium-server，用户无法看到浏览器被唤起执行的全过程。为了提升UI场景用例调试的用户体验以及调试效率，MeterSphere在调试方式上新增了“本地调试（即远程调用浏览器）”功能。</p>
+<p>MeterSphere远程调用浏览器的效果如下图所示。<br>
+<img alt="远程调用浏览器效果图" src="../../img/tutorial/ui_testing/%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%95%88%E6%9E%9C%E5%9B%BE.gif" /></p>
+<h2 id="1-metersphere">1 MeterSphere 远程调用浏览器实现原理<a class="headerlink" href="#1-metersphere" title="Permanent link">&para;</a></h2>
+<p>MeterSphere 调起浏览器的动作其实是由浏览器驱动完成的。因为 MeterSphere 封装了 JMeter 的相关操作交由内部使用，所以在进行UI调试操作时，会调用到 JMeter 引擎。JMeter 通过 MeterSphere 配置的 RemoteDriverConfig 找到对应的 Selenium-server地址，以及所需要调起的浏览器信息（例如 Chrome、Firefox 等），并与 Selenium-server 建立 WebSocket 连接，进而使用Selenium-server 中配置的浏览器的驱动信息，通过浏览器驱动来完成浏览器的调起。</p>
+<p><img alt="远程调用浏览器架构图" src="../../img/tutorial/ui_testing/%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%B6%E6%9E%84%E5%9B%BE.png" /></p>
+<h2 id="2-metersphere">2 MeterSphere 远程调用浏览器配置过程<a class="headerlink" href="#2-metersphere" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 下载驱动程序<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>百度网盘链接：<a href="https://pan.baidu.com/s/1ya5orSd36fZFJchUltxfjA?pwd=yt5v">https://pan.baidu.com/s/1ya5orSd36fZFJchUltxfjA?pwd=yt5v</a></p>
+<div class="admonition info">
+<ol>
+<li>网盘程序中包含100.0.4896.127版本的 Mac OS、Windows 的 ChromeDriver 插件，其他版本请通过（<a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a>）下载替换（驱动名称与程序中的驱动名称一致）即可。<br></li>
+<li>浏览器版本号与浏览器驱动只需对应前三段即可，例如100.0.4896.127。</li>
+</ol>
+</div>
+<p><img alt="浏览器版本1" height="100%" src="../../img/tutorial/ui_testing/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%89%88%E6%9C%AC1.png" width="70%" /></p>
+<p><img alt="浏览器版本2" height="100%" src="../../img/tutorial/ui_testing/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%89%88%E6%9C%AC2.png" width="70%" /></p>
+<h3 id="22">2.2 运行驱动程序<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>2.2.1 Windows 操作系统：
+解压附件中的压缩包到自定义目录，双击“windows-start.bat”运行即可。
+<img alt="运行驱动程序1" height="100%" src="../../img/tutorial/ui_testing/%E8%BF%90%E8%A1%8C%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F1.png" width="70%" /></p>
+<p>看到如下日志则证明已经运行成功。</p>
+<p><img alt="运行驱动程序2" height="100%" src="../../img/tutorial/ui_testing/%E8%BF%90%E8%A1%8C%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F2.png" width="70%" /></p>
+<p>2.2.2 Mac OS 操作系统：
+本地需要装有 JDK 环境，并且配置好环境变量。</p>
+<p>解压附件中的压缩包到自定义目录，在终端中进入文件目录，执行sh mac-start.sh即可。</p>
+<div class="admonition info">
+<p>如果没有执行权限，则需在 mac-start.sh文件所在目录执行 chmod 777 mac-start.sh命令。</p>
+</div>
+<p><img alt="运行驱动程序3" height="100%" src="../../img/tutorial/ui_testing/%E8%BF%90%E8%A1%8C%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F3.png" width="70%" /></p>
+<p>运行时默认会启动 19091 端口，若需要更改则需要编辑 bat 文件进行调整，具体细节请参考脚本参数说明。</p>
+<p>脚本参数说明：</p>
+<table>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   描述
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   参数名
+  </td>
+  <td bgcolor="#783887" align="middle" style="font-weight:bold;color: white">
+   默认值
+  </td>
+  <tbody>
+    <tr>
+        <td >启动端口</td>
+        <td >--port</td>
+        <td>19091</td>
+    </tr>
+    <tr>
+        <td >配置Chrome驱动地址   </td>
+        <td >-Dwebdriver.chrome.driver</td>
+        <td>当前drivers目录下的chromedriver
+</td>
+    </tr>
+    <tr>
+        <td >配置Firefox驱动地址</td>
+        <td >-Dwebdriver.gecko.driver</td>
+        <td>当前drivers目录下的geckodriver</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+<h3 id="23-selenium-server-metersphere">2.3 将本地运行 Selenium-server 配置到 MeterSphere 平台<a class="headerlink" href="#23-selenium-server-metersphere" title="Permanent link">&para;</a></h3>
+<p>登录 MeterSphere 平台，进入“个人信息”→“UI设置”，将步骤2中启动的server地址（如http://192.168.0.114:19091）配置到本地Selenium-server 地址中。</p>
+<div class="admonition info">
+<p>UI设置菜单需要在权限中开启，目前仅项目管理员（系统）用户组默认开启。</p>
+</div>
+<p><img alt="配置selenium-server地址" height="100%" src="../../img/tutorial/ui_testing/%E9%85%8D%E7%BD%AEselenium-server%E5%9C%B0%E5%9D%80.png" width="70%" />    </p>
+<p>在UI自动化中选择一条用例，选择“本地调式”就可以看到 MeterSphere 唤起本地浏览器执行的效果了。
+<img alt="效果图" src="../../img/tutorial/ui_testing/%E6%95%88%E6%9E%9C%E5%9B%BE.gif" />    </p>
+<h2 id="3">3 特别说明<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>上述操作均是基于 MeterSphere 服务端和本机在同一网络环境下进行的配置。如不在同一网络环境下，则需要使用 VPN 虚拟专用网络。</p>
+<p>以 OpenVPN 为例：</p>
+<p>1.打开 VPN 连接工具；</p>
+<p>2.查找到 Private IP；</p>
+<p>3.将此IP配置到“个人信息”→“UI设置”中的 Selenium-server 地址即可。</p>
+<p><img alt="VPN设置" height="50%" src="../../img/tutorial/ui_testing/VPN%E8%AE%BE%E7%BD%AE.png" width="50%" />   </p>
 
 
   
