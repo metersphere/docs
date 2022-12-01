@@ -12,7 +12,8 @@
 
 ## 2 UI 测试
 - [MeterSphere 的 UI 测试模块如何远程调用浏览器](./MeterSphere 的 UI 测试模块如何远程调用浏览器.md)
-- [MeterSphere 的 UI 自动化如何实现文件上传的场景](./MeterSphere 的 UI 自动化如何实现文件上传的场景.md)  
+- [MeterSphere 的 UI 自动化如何实现文件上传的场景](./MeterSphere 的 UI 自动化如何实现文件上传的场景.md) 
+- [MeterSphere 的 UI 测试滑块验证及页面滚动条问题处理](./MeterSphere 的 UI 测试滑块验证及页面滚动条问题处理.md)
 
 ## 3 服务集成
 - [MeterSphere 服务集成之禅道对接](./MeterSphere 服务集成之禅道对接.md)
