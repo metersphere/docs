@@ -20,12 +20,14 @@
 - [MeterSphere 服务集成之 JIRA 对接](./MeterSphere 服务集成之 JIRA 对接.md)
 - [MeterSphere 服务集成之 TAPD 对接](./MeterSphere 服务集成之 TAPD 对接.md)
 - [MeterSphere 服务集成 Azure Devops 对接](./MeterSphere 服务集成 Azure Devops 对接.md)
+
+## 4 插件使用
 - [MeterSphere 如何和 Jenkins 实现流水线集成](./MeterSphere 如何和 Jenkins 实现流水线集成.md)
 
-## 4 脚本引用
+## 5 脚本引用
 - [MeterSphere Python 前后置脚本如何引用第三方库](./MeterSphere Python 前后置脚本如何引用第三方库.md)
 - [MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包](./MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包.md)
 - [MeterSphere JavaScript 前后置脚本如何引用外部包](./MeterSphere JavaScript 前后置脚本如何引用外部包.md)
 
-## 5 项目设置
+## 6 项目设置
 - [MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书](./MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书.md)
