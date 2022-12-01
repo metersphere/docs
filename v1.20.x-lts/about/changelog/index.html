@@ -2376,6 +2376,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12017-lts" class="md-nav__link">
+    v1.20.17-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12016-lts" class="md-nav__link">
     v1.20.16-lts
   </a>
@@ -3013,6 +3020,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12017-lts" class="md-nav__link">
+    v1.20.17-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12016-lts" class="md-nav__link">
     v1.20.16-lts
   </a>
@@ -3623,6 +3637,66 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12017-lts">v1.20.17-lts<a class="headerlink" href="#v12017-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年12月1日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(性能测试): 使用K8S资源池可以配置 Job 模版</li>
+<li>refactor(性能测试): 报告显示时间为 x 时 x 分 x 秒</li>
+<li>refactor(接口测试): 增加授权校验</li>
+<li>refactor(接口测试): 优化日志抛出异常信息</li>
+<li>style(UI自动化): 元素库定义多个层级并且名字很长，在场景中选择元素对象，下拉框数据没有显示完整</li>
+<li>style(接口测试): 优化任务中心场景报告显示样式</li>
+<li>style(测试跟踪): 开启定时任务提示信息样式重叠修改</li>
+<li>feat(接口测试): mock 期望的延迟响应时间 tab 增加时间单位</li>
+<li>feat(接口测试): 接口测试支持禁用本地执行</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(UI 自动化): UI 场景支持定时任务</li>
+<li>fix(UI 自动化): UI 自动化定时任务配置页面显示优化</li>
+<li>fix(UI 自动化): 删除 UI 定时任务任务通知运行配置项目</li>
+<li>fix(UI 自动化): 测试报告-触发方式- 不能根据定时任务进行筛选</li>
+<li>fix(接口测试): 修复 mock 函数拼接值出现 undefined 问题</li>
+<li>fix(接口测试): 修复 jsonschema 高级设置属性丢失的缺陷</li>
+<li>fix(接口测试): 修复 node 执行完成后发通知获取用户异常</li>
+<li>fix(接口测试): 修复 swagger 文件导入 query 参数默认值导入失败问题</li>
+<li>fix(接口测试): 修复断言 root 层级数据添加期望值保存失效的缺陷</li>
+<li>fix(接口测试): 修复引用的 case 包含文件时可以修改的缺陷</li>
+<li>fix(接口测试): 修复接口导入 swagger3 文件报错问题</li>
+<li>fix(接口测试): 修复复制的场景中引用的 case 有时不能操作的缺陷</li>
+<li>fix(接口测试): 修复断言添加子字段无效的缺陷</li>
+<li>fix(接口测试): 修复引用的场景可以上传文件的缺陷</li>
+<li>fix(接口测试): 修复用例中高级设置页面被遮挡问题</li>
+<li>fix(接口测试): 修复状态不统一导致报告出现空白问题</li>
+<li>fix(接口测试): 禁用接口执行调用自身引发死循环问题</li>
+<li>fix(接口测试): 修复测试计划中场景执行报告内容未加载问题</li>
+<li>fix(接口测试): 修复同名数据源执行过程产生大量错误日志问题</li>
+<li>fix(接口测试): 修复查看没有入库的接口报告时前端报错的缺陷</li>
+<li>fix(接口测试): 修复无项目权限的操作人执行提示没有环境的缺陷</li>
+<li>fix(接口测试): 修复选中一条接口用例使用批量编辑用例等级，结果全部用例被修改的缺陷</li>
+<li>fix(性能测试): 修复导出报告图错乱的问题</li>
+<li>fix(测试跟踪): 高级搜索创建人列表问题</li>
+<li>fix(测试跟踪): 查询禅道需求时包含子需求</li>
+<li>fix(测试跟踪): 功能用例的关联需求显示有误</li>
+<li>fix(测试跟踪): 测试计划报告执行率统计有误</li>
+<li>fix(测试跟踪): 禅道同步缺陷后图片无法展示</li>
+<li>fix(测试跟踪): 依赖关系图显示了下层富文本框</li>
+<li>fix(测试跟踪): 测试计划执行结束时入库增加判断</li>
+<li>fix(测试跟踪): 修复测试计划批量执行报告查看异常问题</li>
+<li>fix(测试跟踪): 禅道缺陷上传图片链接后同步，图片不显示</li>
+<li>fix(测试跟踪): 优化测试计划保存最后总计算结果时的判断逻辑</li>
+<li>fix(测试跟踪): 测试报告里的通过率再存放数据库的单独字段中</li>
+<li>fix(测试跟踪): 修复测试计划报告内，未执行的场景图标没有统计的问题</li>
+<li>fix(测试计划): 执行功能用例时实际结果与步骤执行结果无关联权限无法编辑</li>
+<li>fix(接口定义): 修复自定义请求变量缺失的缺陷</li>
+<li>fix(通用功能): 修复定时任务输入错误表达式反解析页面崩溃问题</li>
+</ul>
 <h2 id="v12016-lts">v1.20.16-lts<a class="headerlink" href="#v12016-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年11月4日</p>
