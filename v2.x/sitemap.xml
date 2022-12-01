@@ -311,6 +311,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81%E5%8F%8A%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%9D%A1%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86/</loc>
+         <lastmod>2022-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/v2.x/tutorial/MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/</loc>
          <lastmod>2022-12-01</lastmod>
          <changefreq>daily</changefreq>
