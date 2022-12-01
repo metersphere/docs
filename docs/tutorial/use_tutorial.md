@@ -8,6 +8,7 @@
 - [MeterSphere Mock 服务功能的创建和调用](./MeterSphere Mock 服务功能的创建和调用.md)
 - [使用 Python 调用 MeterSphere API 触发测试计划执行](./使用 Python 调用 MeterSphere API 触发测试计划执行.md)
 - [MeterSphere 中常用 Jmeter 函数使用详细](./MeterSphere 中常用 Jmeter 函数使用详细.md)
+- [MeterSphere 快速生成测试数据(枚举、正则、函数)](./MeterSphere 快速生成测试数据(枚举、正则、函数).md)
 
 ## 2 UI 测试
 - [MeterSphere 的 UI 测试模块如何远程调用浏览器](./MeterSphere 的 UI 测试模块如何远程调用浏览器.md)
