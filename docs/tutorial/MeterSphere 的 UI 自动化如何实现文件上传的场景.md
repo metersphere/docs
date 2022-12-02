@@ -1,7 +1,7 @@
 实际项目中，文件/图片上传的场景较多。本文以百度上传图片进行搜索为例。
 
 场景: 在百度搜索框中，上传图片进行搜索<br>
-![](../img/tutorial/ui_upload/百度搜索.png)
+![](../img/tutorial/ui_upload/按图片进行搜索.png)
 
 场景步骤: 打开网页，访问 https://www.baidu.com 网站 <br>
 ![](../img/tutorial/ui_upload/访问百度.png)
@@ -10,7 +10,7 @@
 ![](../img/tutorial/ui_upload/全屏.png)
 
 鼠标点击上传图片的按钮，正确填写上传图片按钮的定位，在后置操作中设置等待时间 <br>
-![](../img/tutorial/ui_upload/点击上传.png)
+![](../img/tutorial/ui_upload/鼠标点击.png)
 
 上传图片，在 html 中上传图片定位到是个 input 标签，可使用输入框，输入图片路径进行上传。对于本地调试和后端调式而言，图片路径是不一样的。具体如下：<br>
 
@@ -21,16 +21,16 @@ MeterSphere 服务端和本机在同一网络环境 <br>
 
 ### 1.2 上传图片
 输入框中，可以直接写入图片的本地路径，进行图片上传，并且在后置操作中设置等待时间 <br>
-![](../img/tutorial/ui_upload/本地调试路径.png)
+![](../img/tutorial/ui_upload/本地文件上传.png)
 
 不勾选性能模式，点击保存按钮，点击【本地调试】，即可看到本地浏览器上传图片的操作 <br>
-![](../img/tutorial/ui_upload/本地调试不勾选性能模式.png)
+![](../img/tutorial/ui_upload/本地调试.png)
 
 ## 2 后端调试
-将图片上传到 local-selenium-grid 容器里，放到某一路径下 <br>
+将图片上传到 【项目设置-文件管理】处 <br>
 ![](../img/tutorial/ui_upload/后台调试.png)
 
-可以直接写容器内图片的路径，不勾选性能模式，即可看到后端调试时的截图情况。<br>
+添加【输入操作】，切换到【文件上传】，添加【文件管理】处上传的图片，在【其他设置】里设置等待元素超时时间和当前步骤截图<br>
 ![](../img/tutorial/ui_upload/后端调试不勾选性能模式.png)
 
 不勾选性能模式，点击保存按钮，点击【后端调试】，可看到该场景步骤正常执行 <br>
