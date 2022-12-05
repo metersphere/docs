@@ -114,7 +114,7 @@ default-character-set=utf8mb4
 
 请参考文档中的建库语句创建 MeterSphere 使用的数据库，MeterSphere 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
 ```mysql
-CREATE DATABASE `metersphere_dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
+CREATE DATABASE `metersphere_dev` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci *//*!80016 DEFAULI ENCRYPTION='N'*/;
 ```
 
 ##### MeterSphere 配置文件
