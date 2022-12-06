@@ -10,10 +10,11 @@ https://www.metersphere.com/
 ## 3 注意事项
 
 !!! info "UI 自动化测试工作前注意事项"
-    1.修改 /opt/metersphere/.env 文件，MS_SELENIARM_ENABLED=true 修改配置后加载配置文件执行 msctl reload<br>
+    1. 修改 /opt/metersphere/.env 文件，MS_SELENIARM_ENABLED=true 修改配置后加载配置文件执行 msctl reload<br>
     2. docker ps 检查 local-selenium-grid 容器是否成功启动<br>
-    3.在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://local-selenium-grid:4444<br>
-    4. UI 测试用例，默认勾选 "性能模式" 没有截图展示，不勾选 "性能测试" 可以查看每个步骤的截图
+    3. 在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://local-selenium-grid:4444 
+    4. UI 测试用例，默认勾选 "性能模式" 没有截图展示，不勾选 "性能测试" 可以查看每个步骤的截图<br>
+    5. 如果导入 License 成功后，依然没有 UI 测试模块，请到【用户组与权限】处配置 UI 模块权限
 
 ## 4 创建模块
 MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧查看到UI自动化场景的模块树。 点击左侧的模块树中的 【添加子模块】按钮，为该项目添加模块。
