@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/v1.20.x-lts/installation/network_port/</loc>
+         <lastmod>2022-12-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/offline_installation/</loc>
          <lastmod>2022-12-06</lastmod>
          <changefreq>daily</changefreq>
