@@ -17,7 +17,7 @@
 - **[性能测试](https://github.com/metersphere/metersphere)**: MeterSphere 项目的性能测试模块。
 - **[系统设置](https://github.com/metersphere/metersphere)**: MeterSphere 项目的系统设置模块。
 - **[报告统计](https://github.com/metersphere/metersphere)**: MeterSphere 项目的报告统计模块。
-- **[Node Controller](https://github.com/metersphere/node-controller)**: 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter 容器完成性能测试。
+- **[Node Controller](https://github.com/metersphere/node-controller)**: 为接口或者性能测试提供独立节点类型的测试资源池。
 - **MySQL**: MeterSphere 项目的主要数据均存储在 MySQL。
 - **Redis**: MeterSphere 项目登录用户的 Session 和任务队列信息存储在 Redis。
 - **Minio**: MeterSphere 项目的分布式对象存储模块。
