@@ -49,6 +49,7 @@ nav:
           - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
+          - 网络端口要求: installation/network_port.md
           - Linux 中部署:
                 - 在线安装: installation/online_installation.md
                 - 在线升级: installation/online_upgrade.md
