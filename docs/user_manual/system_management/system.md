@@ -132,7 +132,7 @@
 ![!编辑SMTP信息](../../img/system_management/编辑smtp信息.png)
 
 ### 5.3 LDAP 设置
-切换至【LADP设置】标签，点击【编辑】按钮配置 LDAP 登录相关参数。
+切换至【LDAP设置】标签，点击【编辑】按钮配置 LDAP 登录相关参数。
 ![配置ldap](../../img/system_management/配置ldap.png)
 
 !!! info "选项"
