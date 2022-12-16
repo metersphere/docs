@@ -126,7 +126,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
 
 
 # 数据库配置
-spring.datasource.url=jdbc:mysql://localhost:3306/metersphere?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+spring.datasource.url=jdbc:mysql://localhost:3306/metersphere_dev?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 spring.datasource.username=root
 spring.datasource.password=Calong@2015
 
