@@ -245,9 +245,10 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 3.可查看 /opt/metersphere/.env 中 MS_JMETER_IMAGE 地址，直接 docker pull 地址即可
 
 ## 25 性能测试状态一直是starting且无数据
-到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
+1.检查【系统设置-系统-系统参数设置】，当前站点配置是不是正确的 <br>
+2.到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log
 和 info.log，看日志中是否有报错信息。<br>
-1.如果出现 org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms<br>
+如果出现 org.apache.kafka.common.errors.TimeoutException: Topic JMETER_LOGS not present in metadata after 60000 ms<br>
 ```
 2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer$FutureFailure.<init>(KafkaProducer.java:1314)]
 2022-07-29 14:51:59,755 [docker-java-stream-584750660] INFO  ms-jmeter-run-log ? - Method[onNext][at org.apache.kafka.clients.producer.KafkaProducer.doSend(KafkaProducer.java:970)]
@@ -308,3 +309,63 @@ cd /opt/bitnami/kafka/bin
 
 ## 29 性能测试中怎么跨线程传递变量
 性能测试里动态设置变量可以用属性的方式，${__setProperty(var,value,)} 设置属性，${__property(var)} 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递
+
+## 30 性能测试报告刷新频率和右上角设置的不一样
+性能测试计算报告是后台自动计算的，页面上配置的这个值只是页面查询数据库的频率。也就是说如果后台计算比较慢，这里的时间间隔较小的话是不能看到图表的改动的
+
+## 31 性能测试无法正常执行，提示资源不够
+原因: 1.性能测试里有添加前后置脚本，尤其是python，消耗性能比较大 <br>
+2.测试资源池主机资源（尤其是内存）不足 <br>
+解决方法: 1.尽量不要使用前后置脚本，或者换用资源消耗小的脚本，如 groovy <br>
+2.换用单独的测试资源池，使用 node-controller 模式安装 <br>
+
+## 32 性能测试报告中，并发用户数显示和设置不一致
+原因: 1.并发用户数太少，ramp-up设置的时间长，导致加压后第一个用户已经执行完测试了，第二个用户才创建出来，看起来并发用户数就一直是1 <br>
+2.报告左上角的并发用户数在报告里显示的是平均值，不是实时变化的 <br>
+解决方法：减少ramp-up时间，可以看到并发用户数与设置一致 <br>
+
+## 33 kafka 的日志保留时间配置
+修改 /opt/metersphere/docker-compose-kafka.yml 配置文档里的 KAFKA_CFG_LOG_RETENTION_HOURS 参数<br>
+![!kafka](../img/faq/kafka_log.png)
+
+## 34 性能测试时接口读取 csv 不能按顺序读取
+所选的测试资源池有多个节点，多个节点共用一套 csv 导致取值重复，在性能测试的高级配置里，开启 csv 分割，多准备点测试数据。csv 分割是: 假设有2个节点，csv 里有100条数据，就会把 csv 里的数据均分成2份，然后节点1 使用 1-50 条数据，节点2 使用 51-100 条数据。
+
+## 35 性能测试配置里面上传 csv 文件，在高级配置里面看不到
+csv 文件没有被性能 jmx 脚本引用，jmx 引用了才能看见。修改 jmx 文件，引用上传的 csv 文件。或者在场景里添加 csv 文件后转性能测试。
+
+## 36 JMX 脚本在导入到性能测试后，性能测试执行完毕没有任何数据  
+jmx 脚本里有 csv 文件，上传 jmx 文件后有没有上传 csv 文件，同步上传 jmx 使用到的 csv 文件
+
+## 37 性能测试模块，自定义监控不支持windows服务器
+默认提供的 promQL 是 linux 的，windows 的需要自行查询来写。查询windows的cpu使用率语句: 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="%1$s"}[1m])) * 100)
+其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
+其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的exporter，只要是符合 exporter规范的都可以在自定义监控中配置
+
+## 38 部署在K8下的ms，请教自定义监控配置方法，默认方法无法生效。监控详情 没有数据 
+在 prometheus.yml 中配置
+```
+consul_sd_configs:
+- server: 'k8s中ms的ip:port'
+services: []
+```
+自定义监控中加上需要的节点，系统参数测试中设置 prometheus 的实际地址，执行测试可以显示监控
+![!kafka](../img/faq/k8s_监控.png)
+
+## 39 接口自动化创建了的性能测试，脚本及文件内容更新后，性能测试的没有跟着更新 
+转性能测试的时候生成的 jmx 文件就是当前的配置，之后再修改接口对性能测试无效，点击性能测试右上角“同步场景测试最新变更”按钮手动同步即可。
+
+## 40 接口用例转换为性能测试，无http-domain，执行性能测试失败
+选择的环境中没有配置url信息，接口用例调试成功后再转性能测试
+
+## 41 性能测试引用场景用例，执行的文件不是加载的文件 
+请求统计的显示的是接口的名称，不是场景的名称
+
+## 42 MeterSphere 页面得到的性能测试数据，只有 jmeter 命令行得到的测试数据的 70%~75% 
+ms 服务是用 docker 部署的，docker 容器只能达到虚拟机的 70% 左右的性能
+
+## 43 性能测试-首页-运行中的任务，展示为空 
+只显示性能测试定时任务列表
+
+## 44 运行性能测试的时候报错了 Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11
+没有 jmeter-master 镜像，执行命令手动拉取镜像 docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11
