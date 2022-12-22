@@ -342,7 +342,7 @@ jmx 脚本里有 csv 文件，上传 jmx 文件后有没有上传 csv 文件，�
 其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
 其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的exporter，只要是符合 exporter规范的都可以在自定义监控中配置
 
-## 38 部署在K8下的ms，请教自定义监控配置方法，默认方法无法生效。监控详情 没有数据 
+## 38 部署在K8S下的 MS 自定义监控配置方法，默认方法无法生效。监控详情没有数据 
 在 prometheus.yml 中配置
 ```
 consul_sd_configs:
