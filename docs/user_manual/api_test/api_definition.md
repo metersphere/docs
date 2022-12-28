@@ -89,7 +89,7 @@ MeterSphere提供默认请求头变量。
 QUERY参数是在接口地址栏中跟在？后面的参数，如 updateapi?id=11。
 ![!QUERY参数](../../img/api/QUERY参数1.png)
 
-点击参数后面的【高级设置】，可设置参数的其它属性。
+点击参数上面的【高级设置】，可设置参数的其它属性。
 ![!QUERY参数](../../img/api/QUERY参数2.png)
 
 ###### REST参数
