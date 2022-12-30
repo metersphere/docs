@@ -2545,6 +2545,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#45-k8s-k8s-sa-token" class="md-nav__link">
+    45 如果采用 K8S 集群压测，需要提前准备好 K8S 集群并且创建好 SA 和 Token：
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3061,6 +3068,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#45-k8s-k8s-sa-token" class="md-nav__link">
+    45 如果采用 K8S 集群压测，需要提前准备好 K8S 集群并且创建好 SA 和 Token：
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3384,6 +3398,20 @@ services: []
 <p>只显示性能测试定时任务列表</p>
 <h2 id="44-image-not-found-registrycn-qingdaoaliyuncscommeterspherejmeter-master543-ms5-jdk11">44 运行性能测试的时候报错了 Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11<a class="headerlink" href="#44-image-not-found-registrycn-qingdaoaliyuncscommeterspherejmeter-master543-ms5-jdk11" title="Permanent link">&para;</a></h2>
 <p>没有 jmeter-master 镜像，执行命令手动拉取镜像 docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11</p>
+<h2 id="45-k8s-k8s-sa-token">45 如果采用 K8S 集群压测，需要提前准备好 K8S 集群并且创建好 SA 和 Token：<a class="headerlink" href="#45-k8s-k8s-sa-token" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>1、创建 namespaces
+kubectl create namespace metersphere
+
+2、创建 SA
+kubectl create serviceaccount ms -n metersphere
+
+3、创建 namespace 授权 SA
+kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+
+4、查询 SA token
+kubectl describe sa/ms -n metersphere
+kubectl describe secrets -n metersphere ms-token-xxxx
+</code></pre></div>
 
 
   

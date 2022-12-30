@@ -2408,6 +2408,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v251" class="md-nav__link">
+    v2.5.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v250" class="md-nav__link">
     v2.5.0
   </a>
@@ -3073,6 +3080,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v251" class="md-nav__link">
+    v2.5.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v250" class="md-nav__link">
     v2.5.0
   </a>
@@ -3711,6 +3725,43 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v251">v2.5.1<a class="headerlink" href="#v251" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2022年12月30日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(接口测试): 优化模块树多次保存</li>
+<li>refactor(测试跟踪): 禁止批量删除运行中的测试计划</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(安全漏洞): 修复未检查文件名导致文件可能被上传到任意路径的问题 (CVE-2022-46178)</li>
+<li>fix(工作台): 工作台首页缺陷统计有误</li>
+<li>fix(接口测试): 修复Json数组无法使用mock数据的问题</li>
+<li>fix(接口测试): 修复json格式的请求数据冒号被替换成等号的缺陷</li>
+<li>fix(接口测试): 修复swagger3.0文件导入对content的example没有处理问题</li>
+<li>fix(接口测试): 接口参数添加mock数据时清空历史函数</li>
+<li>fix(接口测试): 统一接口测试转性能测试时storage带的参数</li>
+<li>fix(接口测试): 修复重复创建未规划接口的缺陷</li>
+<li>fix(接口测试): 修复接口测试用例和场景转性能测试时会偶发重复jmx的问题</li>
+<li>fix(接口测试): 修复点击场景报告跳转链接没有跳转到对应项目的缺陷</li>
+<li>fix(测试跟踪): 测试计划-场景/性能测试报告 不显示运行模式和资源池</li>
+<li>fix(测试跟踪): 测试计划功能用例不展示自定义字段</li>
+<li>fix(测试跟踪): 功能用例导出多值输入自定义字段为空</li>
+<li>fix(测试跟踪): 测试计划保存报告内容时不赋开始时间和结束时间</li>
+<li>fix(性能测试): 修复查询报告时无法查出已删除人执行的报告</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>自v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插件
+目前已实现 禅道、Jira 平台的插件化，原先使用 禅道、Jira 的用户，需要下载下插件，并在系统设置-插件管理上传插件
+使用方式跟原来一致，具体参考插件项目
+<a href="https://github.com/metersphere/metersphere-platform-plugin">https://github.com/metersphere/metersphere-platform-plugin</a></p>
+</div>
 <h2 id="v250">v2.5.0<a class="headerlink" href="#v250" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年12月27日</p>
