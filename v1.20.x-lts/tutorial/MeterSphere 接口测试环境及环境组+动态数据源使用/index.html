@@ -12,14 +12,14 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/MeterSphere%20%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%8E%AF%E5%A2%83%E7%BB%84%2B%E5%8A%A8%E6%80%81%E6%95%B0%E6%8D%AE%E6%BA%90%E4%BD%BF%E7%94%A8/">
       
       <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>使用教程 - MeterSphere 文档</title>
+        <title>MeterSphere 接口测试环境及环境组+动态数据源使用 - MeterSphere 文档</title>
       
     
     
@@ -269,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用教程
+              MeterSphere 接口测试环境及环境组+动态数据源使用
             
           </span>
         </div>
@@ -2072,83 +2072,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use_tutorial/" class="md-nav__link">
         使用教程
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1 接口测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 插件使用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6 项目设置
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2471,43 +2399,69 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1 接口测试
+    1. 环境配置
   </a>
+  
+    <nav class="md-nav" aria-label="1. 环境配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 通用配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-http" class="md-nav__link">
+    1.2 HTTP 配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 数据库配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4 全局脚本配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5 全局断言
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-ui" class="md-nav__link">
-    2 UI 测试
+  <a href="#2" class="md-nav__link">
+    2 环境组配置
+  </a>
+  
+    <nav class="md-nav" aria-label="2 环境组配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 支持将多个项目中的环境配置进行组合
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3 服务集成
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 插件使用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5 脚本引用
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6 项目设置
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2525,55 +2479,72 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/use_tutorial.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/MeterSphere 接口测试环境及环境组+动态数据源使用.md" title="编辑此页" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>使用教程</h1>
+  <h1>MeterSphere 接口测试环境及环境组+动态数据源使用</h1>
 
-<h2 id="1">1 接口测试<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>MeterSphere 接口测试支持环境配置，在 http 的环境以及环境组的使用场景中灵活配置运行环境</p>
+<h2 id="1">1. 环境配置<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 通用配置<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>在【项目设置-项目环境】中新建环境 <br>
+<img alt="" src="../../img/tutorial/use_env/%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83.png" width="900px" /></p>
+<p>通用配置中包含三部分</p>
 <ul>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行 Dubbo 协议接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%E5%9C%BA%E6%99%AF%E5%8C%96%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">如何使用 MeterSphere 进行场景化接口测试</a></li>
-<li><a href="../%E5%A6%82%E4%BD%95%E5%9C%A8%20MeterSphere%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20BeanShell%20%E5%89%8D%E7%BD%AE%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E7%AD%BE%E5%90%8D/">如何在 MeterSphere 中使用 BeanShell 前置脚本生成接口认证签名</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%90%84%E7%B1%BB%E5%8F%98%E9%87%8F%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8%E5%85%A8%E6%95%99%E7%A8%8B/">MeterSphere 中各类变量的设置和使用全教程</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%20JMeter%20%E5%87%BD%E6%95%B0%E3%80%81MockJS%20%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">MeterSphere 中 JMeter 函数、MockJS 函数使用教程</a></li>
-<li><a href="../%E5%9F%BA%E4%BA%8E%20MeterSphere%20%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E5%81%9A%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%EF%BC%88ddt%EF%BC%89%E6%B5%8B%E8%AF%95/">基于 MeterSphere 接口自动化做数据驱动（ddt）测试</a></li>
-<li><a href="../MeterSphere%20Mock%20%E6%9C%8D%E5%8A%A1%E5%8A%9F%E8%83%BD%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%83%E7%94%A8/">MeterSphere Mock 服务功能的创建和调用</a></li>
-<li><a href="../%E4%BD%BF%E7%94%A8%20Python%20%E8%B0%83%E7%94%A8%20MeterSphere%20API%20%E8%A7%A6%E5%8F%91%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">使用 Python 调用 MeterSphere API 触发测试计划执行</a></li>
-<li><a href="../MeterSphere%20%E4%B8%AD%E5%B8%B8%E7%94%A8%20Jmeter%20%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E8%AF%A6%E7%BB%86/">MeterSphere 中常用 Jmeter 函数使用详细</a></li>
-<li><a href="../MeterSphere%20%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%28%E6%9E%9A%E4%B8%BE%E3%80%81%E6%AD%A3%E5%88%99%E3%80%81%E5%87%BD%E6%95%B0%29/">MeterSphere 快速生成测试数据(枚举、正则、函数)</a></li>
-<li><a href="../MeterSphere%20%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%8E%AF%E5%A2%83%E7%BB%84%2B%E5%8A%A8%E6%80%81%E6%95%B0%E6%8D%AE%E6%BA%90%E4%BD%BF%E7%94%A8/">MeterSphere 接口测试环境及环境组+动态数据源使用</a></li>
+<li>环境变量：支持单个添加和批量添加 </li>
+<li>配置域名解析：域名和服务器 IP 进行映射</li>
+<li>链接超时和响应超时配置：可以设置超时时间</li>
 </ul>
-<h2 id="2-ui">2 UI 测试<a class="headerlink" href="#2-ui" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/">MeterSphere 的 UI 测试模块如何远程调用浏览器</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9C%BA%E6%99%AF/">MeterSphere 的 UI 自动化如何实现文件上传的场景</a></li>
-<li><a href="../MeterSphere%20%E7%9A%84%20UI%20%E6%B5%8B%E8%AF%95%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81%E5%8F%8A%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%9D%A1%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86/">MeterSphere 的 UI 测试滑块验证及页面滚动条问题处理</a></li>
-</ul>
-<h2 id="3">3 服务集成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%E7%A6%85%E9%81%93%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之禅道对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20JIRA%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 JIRA 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E4%B9%8B%20TAPD%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成之 TAPD 对接</a></li>
-<li><a href="../MeterSphere%20%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%20Azure%20Devops%20%E5%AF%B9%E6%8E%A5/">MeterSphere 服务集成 Azure Devops 对接</a></li>
-</ul>
-<h2 id="4">4 插件使用<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E5%A6%82%E4%BD%95%E5%92%8C%20Jenkins%20%E5%AE%9E%E7%8E%B0%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%9B%86%E6%88%90/">MeterSphere 如何和 Jenkins 实现流水线集成</a></li>
-</ul>
-<h2 id="5">5 脚本引用<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20Python%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">MeterSphere Python 前后置脚本如何引用第三方库</a></li>
-<li><a href="../MeterSphere%20BeanShell%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%20Jar%20%E5%8C%85/">MeterSphere BeanShell 前后置脚本如何引用外部 Jar 包</a></li>
-<li><a href="../MeterSphere%20JavaScript%20%E5%89%8D%E5%90%8E%E7%BD%AE%E8%84%9A%E6%9C%AC%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8%E5%8C%85/">MeterSphere JavaScript 前后置脚本如何引用外部包</a></li>
-</ul>
-<h2 id="6">6 项目设置<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../MeterSphere%20%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B9%8B%E5%AF%B9%E6%8E%A5%E9%82%AE%E4%BB%B6%E3%80%81%E9%92%89%E9%92%89%E3%80%81%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6/">MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书</a></li>
-</ul>
+<p><img alt="" src="../../img/tutorial/use_env/%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE.png" width="900px" /></p>
+<h3 id="12-http">1.2 HTTP 配置<a class="headerlink" href="#12-http" title="Permanent link">&para;</a></h3>
+<p>启用条件支持【无】【模块】【路径】等三种模式 <br>
+启用条件为【无】的 http 配置只能有一条，【模块】和【路径】的 http 配置可以有多条 <br>
+当一个接口既有【模块】又有【路径】匹配时，【模块】http 设置优先级大于【路径】http 设置 </p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>同一接口设置环境后优先级是【模块】&gt;【路径】&gt;【无】 
+当父子级模块只添加父级模块时，子级接口不能匹配到模块，模块需父子模块都选择上，才可匹配到</p>
+</div>
+<p>当一个项目的接口有多个服务端时，通过配置多个 http 配置，区分运行环境<br>
+<img alt="" src="../../img/tutorial/use_env/http%E9%85%8D%E7%BD%AE.png" width="900px" /></p>
+<h3 id="13">1.3 数据库配置<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>1.3.1 多数据源配置 <br>
+数据库可配置多个，支持配置 mysql，oracle，sqlserver，postgresql 数据库配置，点击校验可测试链接数据库<br>
+<img alt="" src="../../img/tutorial/use_env/%E6%95%B0%E6%8D%AE%E5%BA%93.png" width="900px" /></p>
+<p>1.3.2 动态数据源切换<br>
+配置多个数据库之后，环境变动，MeterSphere 会动态切换数据源<br>
+如下图，在接口的前置/后置 SQL 中选择某环境，则数据源默认是改环境中数据库配置的第一个
+<img alt="" src="../../img/tutorial/use_env/%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83.png" width="900px" /></p>
+<p>切换环境，会自动切换到数据库名称一致的数据源 <br>
+<img alt="" src="../../img/tutorial/use_env/%E5%88%87%E6%8D%A2%E6%95%B0%E6%8D%AE%E6%BA%90.png" width="900px" /></p>
+<p>如环境中没有数据库配置，选择该环境，前置/后置 SQL 的数据库名称就为空，执行此 CASE 会报错误提示
+<img alt="" src="../../img/tutorial/use_env/%E6%95%B0%E6%8D%AE%E6%BA%90%E7%A9%BA.png" width="900px" /></p>
+<p>当 CASE 的执行环境发生变化时，CASE 中的 SQL 环境和数据源也会动态变化，当单个前置/后置 SQL 中的运行环境发生变化时，CASE 的执行环境不会动态变化，因此接口中的每一个前置/后置 SQL 都可以拥有各自独自且不一致的数据源<br>
+<img alt="" src="../../img/tutorial/use_env/%E8%81%94%E5%8A%A8.png" width="900px" /></p>
+<h3 id="14">1.4 全局脚本配置<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>【全局前置脚本/全局后置脚本】可选择单个请求步骤前执行或所有场景步骤前执行，点击两个脚本选项，即可出现脚本框，使用该环境的接口/场景，会执行到脚本
+<img alt="" src="../../img/tutorial/use_env/%E5%85%A8%E5%B1%80%E8%84%9A%E6%9C%AC.png" width="900px" /></p>
+<h3 id="15">1.5 全局断言<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<p>环境可【开启/关闭误报库】，在环境中可添加环境的误报断言规则 <br>
+<img alt="" src="../../img/tutorial/use_env/%E5%85%A8%E5%B1%80%E6%96%AD%E8%A8%80.png" width="900px" /></p>
+<p>【项目设置-误报库】，可添加项目级别的误报规则设置 <br>
+<img alt="" src="../../img/tutorial/use_env/%E8%AF%AF%E6%8A%A5%E5%BA%93.png" width="900px" /></p>
+<h2 id="2">2 环境组配置<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 支持将多个项目中的环境配置进行组合<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>环境组应用于常用多个环境组合，减少重复环境配置，【系统设置-工作空间-环境管理】可新建环境组 <br>
+<img alt="" src="../../img/tutorial/use_env/%E7%8E%AF%E5%A2%83%E7%BB%84%E9%A1%B5%E9%9D%A2.png" width="900px" /></p>
+<p>无环境组时，场景中多项目 CASE 执行，需要每次给每个项目设置运行环境 <br>
+<img alt="" src="../../img/tutorial/use_env/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%A7%E8%A1%8C%E9%80%89%E7%8E%AF%E5%A2%83.png" width="900px" /></p>
+<p>环境组设置后，显示可用环境组可选择，选择环境组后可直接运行，可用环境组是从环境组组中筛选同时包含当前场景的所有项目环境 <br>
+举例：某项目组中有 a/b/c 三个项目的环境，某场景中需要用到 a/b 环境，因此此场景可用环境组中包含此环境组  <br>
+<img alt="" src="../../img/tutorial/use_env/%E7%8E%AF%E5%A2%83%E7%BB%84%E5%8F%AF%E7%94%A8.png" width="900px" /></p>
+<p>测试计划接口选择环境/执行测试计划选择环境，不显示可选环境组，点击确认环境时，才会验证环境是否可用  <br>
+<img alt="" src="../../img/tutorial/use_env/%E8%AE%A1%E5%88%92%E9%80%89%E6%8B%A9.png" width="900px" /></p>
+<p><img alt="" src="../../img/tutorial/use_env/%E7%BC%BA%E5%B0%91%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83.png" width="900px" /></p>
+<p><img alt="" src="../../img/tutorial/use_env/%E6%89%A7%E8%A1%8C%E7%BC%BA%E5%B0%91%E7%8E%AF%E5%A2%83.png" width="900px" /></p>
 
 
   
