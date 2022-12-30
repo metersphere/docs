@@ -369,3 +369,19 @@ ms 服务是用 docker 部署的，docker 容器只能达到虚拟机的 70% 左
 
 ## 44 运行性能测试的时候报错了 Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11
 没有 jmeter-master 镜像，执行命令手动拉取镜像 docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11
+
+## 45 如果采用 K8S 集群压测，需要提前准备好 K8S 集群并且创建好 SA 和 Token：
+```
+1、创建 namespaces
+kubectl create namespace metersphere
+
+2、创建 SA
+kubectl create serviceaccount ms -n metersphere
+
+3、创建 namespace 授权 SA
+kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+
+4.查询 SA token
+kubectl describe sa/ms -n metersphere
+kubectl describe secrets -n metersphere ms-token-xxxx
+```
