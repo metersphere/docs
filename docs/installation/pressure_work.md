@@ -18,7 +18,7 @@ kubectl create serviceaccount ms -n metersphere
 3、创建namespace授权SA
 kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
 
-4.查询SA token
+4、查询SA token
 kubectl describe sa/ms -n metersphere
 kubectl describe secrets -n metersphere ms-token-xxxx
 ```
