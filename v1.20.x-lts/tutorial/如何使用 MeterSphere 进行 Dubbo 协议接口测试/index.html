@@ -14,8 +14,10 @@
       
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/tutorial/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20MeterSphere%20%E8%BF%9B%E8%A1%8C%20Dubbo%20%E5%8D%8F%E8%AE%AE%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/">
       
+      
+      
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +30,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +280,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +287,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -2514,10 +2511,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/tutorial/如何使用 MeterSphere 进行 Dubbo 协议接口测试.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>如何使用 MeterSphere 进行 Dubbo 协议接口测试</h1>
@@ -2546,27 +2542,27 @@
 <h2 id="dubbo_2">部署 Dubbo 服务<a class="headerlink" href="#dubbo_2" title="Permanent link">&para;</a></h2>
 <p>要针对 Dubbo 接口进行测试，首先我们需要有一套基于 Dubbo 框架的应用系统。这里我准备了一个使用了 Dubbo 框架的 SpringBoot Demo 应用来进行说明，项目地址：<a href="https://github.com/metersphere/dubbo-docker">https://github.com/metersphere/dubbo-docker</a>（在此感谢下 <a href="https://github.com/binblee/dubbo-docker">原项目</a> 作者 <a href="https://github.com/binblee">binblee</a> 提供的项目）。如果大家自己已经有了现成的基于 Dubbo 框架的应用，可以忽略掉这一部分。</p>
 <p>应用整体比较简单，只提供了如下的一个接口两个方法。
-<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service.producer</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service.producer</span><span class="p">;</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.service.Greetings</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.service.User</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.service.Greetings</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.service.User</span><span class="p">;</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Created by libin on 9/19/16.</span>
-<span class="cm"> */</span><span class="w"></span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GreetingsImpl</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Greetings</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">say</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Greetings from &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GreetingsImpl</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Greetings</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">say</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Greetings from &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Name: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">name</span><span class="o">+</span><span class="s">&quot;, Age: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">age</span><span class="o">+</span><span class="s">&quot;, Gender: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">gender</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Name: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">name</span><span class="o">+</span><span class="s">&quot;, Age: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">age</span><span class="o">+</span><span class="s">&quot;, Gender: &quot;</span><span class="o">+</span><span class="n">user</span><span class="p">.</span><span class="na">gender</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 项目的启动方式在 GitHub 上的 README 中已经有说明了，在此就不再赘述。当我们将项目运行起来以后，通过 HTTP GET 方法请求下 consumer 的 / 路径，可以看到 consumer 给我们返回了如下信息，说明 provider 是可以正常提供服务的。
 <div class="highlight"><pre><span></span><code><span class="o">[</span>~/Documents/workspace/dubbo-docker/docker<span class="o">]</span><span class="c1"># curl http://localhost:8899</span>
-Greetings from Dubbo Docker
+Greetings<span class="w"> </span>from<span class="w"> </span>Dubbo<span class="w"> </span>Docker
 </code></pre></div></p>
 <h2 id="dubbo_3">常见的 Dubbo 接口测试方法<a class="headerlink" href="#dubbo_3" title="Permanent link">&para;</a></h2>
 <p>像 Dubbo 这样的 RPC 框架，其提供的接口更多是一个应用系统之间各个组件/服务内部通信使用的，不像基于 HTTP 的接口那样，其实可选择的测试工具不是特别多。
@@ -2577,18 +2573,18 @@ Greetings from Dubbo Docker
 <li>在测试环境中通过官方提供的 telnet 命令，直接 invoke 特定服务进行测试。</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>~/Documents/workspace/dubbo-docker<span class="o">]</span><span class="c1"># telnet localhost 20880</span>
-Trying ::1...
-Connected to localhost.
-Escape character is <span class="s1">&#39;^]&#39;</span>.
+Trying<span class="w"> </span>::1...
+Connected<span class="w"> </span>to<span class="w"> </span>localhost.
+Escape<span class="w"> </span>character<span class="w"> </span>is<span class="w"> </span><span class="s1">&#39;^]&#39;</span>.
 
 dubbo&gt;ls
 com.example.service.Greetings
-dubbo&gt;ls com.example.service.Greetings
+dubbo&gt;ls<span class="w"> </span>com.example.service.Greetings
 say
 hello
-dubbo&gt;invoke com.example.service.Greetings.say<span class="o">(</span><span class="s2">&quot;Tom&quot;</span><span class="o">)</span>
+dubbo&gt;invoke<span class="w"> </span>com.example.service.Greetings.say<span class="o">(</span><span class="s2">&quot;Tom&quot;</span><span class="o">)</span>
 <span class="s2">&quot;Greetings from Tom&quot;</span>
-elapsed: <span class="m">0</span> ms.
+elapsed:<span class="w"> </span><span class="m">0</span><span class="w"> </span>ms.
 dubbo&gt;
 </code></pre></div>
 <ul>
@@ -2609,13 +2605,13 @@ dubbo&gt;
 <li>如果使用了本文中提到的 Duboo Demo 项目，由于服务注册时的 IP 地址是 producer 容器的 IP，可能会出现调用不通的情况。这里我们通过 zk 命令手动地把这个 Demo 环境的 provider 信息改一下，把原来 provider 中的容器 IP 改为部署该 Demo 应用的主机 IP。</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>~/Documents/workspace/dubbo-docker/docker<span class="o">]</span><span class="c1"># zkcli -s 192.168.2.170:2181</span>
-<span class="m">2020</span>/08/06 <span class="m">18</span>:55:25 Connected to <span class="m">192</span>.168.2.170:2181
-&gt;&gt;&gt; ls /dubbo/com.example.service.Greetings/providers
+<span class="m">2020</span>/08/06<span class="w"> </span><span class="m">18</span>:55:25<span class="w"> </span>Connected<span class="w"> </span>to<span class="w"> </span><span class="m">192</span>.168.2.170:2181
+&gt;&gt;&gt;<span class="w"> </span>ls<span class="w"> </span>/dubbo/com.example.service.Greetings/providers
 <span class="o">[</span>dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791<span class="o">]</span>
-&gt;&gt;&gt; delete /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
-Deleted /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
-&gt;&gt;&gt; create /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.170%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791 <span class="s2">&quot;&quot;</span>
-Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.170%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
+&gt;&gt;&gt;<span class="w"> </span>delete<span class="w"> </span>/dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
+Deleted<span class="w"> </span>/dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F172.19.0.2%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
+&gt;&gt;&gt;<span class="w"> </span>create<span class="w"> </span>/dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.170%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791<span class="w"> </span><span class="s2">&quot;&quot;</span>
+Created<span class="w"> </span>/dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.170%3A20880%2Fcom.example.service.Greetings%3Fanyhost%3Dtrue%26application%3Dproducer-app%26dubbo%3D2.5.3%26interface%3Dcom.example.service.Greetings%26methods%3Dsay%2Chello%26pid%3D1%26revision%3D1.0-SNAPSHOT%26side%3Dprovider%26timestamp%3D1596709972791
 &gt;&gt;&gt;
 </code></pre></div>
 <h3 id="_4">创建项目<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -2632,28 +2628,28 @@ Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.1
 <p>点击「Get Providers List」从注册中心中获取服务列表，从下拉列表中选择需要测试的接口及方法，根据该方法的定义，传入所需的参数。
 <img alt="" src="../../img/tutorial/dubbo/add_dubbo_request2.png" /></p>
 <p>上面添加的接口只有一个 String 类型的参数，再次添加一个参数类型为自定义类的请求。这里我们查看一下代码中这个接口的定义，发现其需要一个 User 类的对象作为参数。
-<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Created by libin on 9/19/16.</span>
-<span class="cm"> */</span><span class="w"></span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Greetings</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">say</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Greetings</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">say</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 同时结合 User 类的定义
-<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span>
 
-<span class="kd">enum</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">MALE</span><span class="p">,</span><span class="w"> </span><span class="n">FEMALE</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">enum</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">MALE</span><span class="p">,</span><span class="w"> </span><span class="n">FEMALE</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 我们可以通过这样的形式传入参数值 {"name":"姓名", "age":年龄, "gender": "MALE 或 FEMALE"}。
 <img alt="" src="../../img/tutorial/dubbo/add_dubbo_request3.png" /></p>
@@ -2757,11 +2753,11 @@ Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.1
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -2771,6 +2767,5 @@ Created /dubbo/com.example.service.Greetings/providers/dubbo%3A%2F%2F192.168.2.1
   }
 </script>
 
-    
   </body>
 </html>

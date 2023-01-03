@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/installation/offline_installation_windows/">
       
+      
+        <link rel="prev" href="../kubernetes_installation/">
+      
+      
+        <link rel="next" href="../offline_installation_mac/">
+      
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -2733,10 +2734,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/installation/offline_installation_windows.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Windows 中部署</h1>
@@ -2816,14 +2816,14 @@
 <h3 id="28-ubuntu">2.8 启动 Ubuntu<a class="headerlink" href="#28-ubuntu" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>在应用商店里，选择 Ubuntu，点击"启动"按钮启动 Ubuntu，并执行命令切换到 root 用户：</strong></p>
-<div class="highlight"><pre><span></span><code>sudo su -
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su<span class="w"> </span>-
 </code></pre></div>
 </div>
 <p><img alt="启动Ubuntu" src="../../img/installation/launch-ubuntu.png" width="600px" /></p>
 <h3 id="29-docker">2.9 检查 Docker 环境<a class="headerlink" href="#29-docker" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>在 Ubuntu 命令行中执行命令：</strong>
-<div class="highlight"><pre><span></span><code>docker version
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
 </code></pre></div></p>
 <p>如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，请根据提示信息解决异常问题。</p>
 </div>
@@ -2832,9 +2832,9 @@
 <div class="admonition info">
 <p><strong>在 Ubuntu 中，以 root 用户执行如下命令：</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 假设安装包存放路径为 c:\metersphere-offline-installer-v1.20.4-lts.tar.gz</span>
-<span class="nb">cd</span> /mnt/c
+<span class="nb">cd</span><span class="w"> </span>/mnt/c
 <span class="c1"># 解压安装包</span>
-tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
+tar<span class="w"> </span>zxvf<span class="w"> </span>metersphere-offline-installer-v1.20.4-lts.tar.gz
 </code></pre></div>
 </div>
 <h3 id="211">2.11 配置安装参数（可选）<a class="headerlink" href="#211" title="Permanent link">&para;</a></h3>
@@ -2846,9 +2846,9 @@ tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
 <h3 id="212">2.12 执行安装脚本<a class="headerlink" href="#212" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <div class="highlight"><pre><span></span><code><span class="c1"># 进入安装包目录</span>
-<span class="nb">cd</span> metersphere-offline-installer-v1.20.4-lts
+<span class="nb">cd</span><span class="w"> </span>metersphere-offline-installer-v1.20.4-lts
 <span class="c1"># 运行安装脚本</span>
-/bin/bash install.sh
+/bin/bash<span class="w"> </span>install.sh
 </code></pre></div>
 </div>
 <div class="admonition info">
@@ -2856,7 +2856,7 @@ tar zxvf metersphere-offline-installer-v1.20.4-lts.tar.gz
 <p><strong>如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。<br>
 具体参数说明见：<a href="../offline_installation/#43">数据库配置文件说明</a></strong></p>
 <p>请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n n-Quoted">`metersphere`</span><span class="w"> </span><span class="cm">/*!40100 DEFAULT CHARACTER SET utf8mb4 */</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n n-Quoted">`metersphere`</span><span class="w"> </span><span class="cm">/*!40100 DEFAULT CHARACTER SET utf8mb4 */</span>
 </code></pre></div></p>
 </div>
 <div class="admonition info">
@@ -3004,11 +3004,11 @@ chmod +777 /opt/metersphere/data/prometheus
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -3018,6 +3018,5 @@ chmod +777 /opt/metersphere/data/prometheus
   }
 </script>
 
-    
   </body>
 </html>

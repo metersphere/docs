@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/user_manual/system_management/workspace/">
       
+      
+        <link rel="prev" href="../system/">
+      
+      
+        <link rel="next" href="../../plugin_use/chrome_plugin/">
+      
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -2663,10 +2664,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/user_manual/system_management/workspace.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>工作空间</h1>
@@ -2805,11 +2805,11 @@
 </ul>
 <p><div class="lightgallery"><a data-sub-html="禅道-服务集成配置" href="../../../img/system_management/%E7%A6%85%E9%81%93-%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE.png"><img alt="禅道-服务集成配置" src="../../../img/system_management/%E7%A6%85%E9%81%93-%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE.png" /></a></div></p>
 <p>禅道目前存在 GET 和 PATH_INFO 两种接口调用方式（即其requestType 参数）对于禅道接口的调用使用的是 PATH_INFO 方式和 GET 请求方式的支持，用户可以根据自己使用的禅道系统的配置情况自主选择请求方式。</p>
-<div class="codehilite"><pre><span></span><code><span class="err">说明：</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="err">说明：</span>
 
-<span class="mf">1.</span><span class="w"> </span><span class="err">账号密码为具有相应权限的</span><span class="w"> </span><span class="n">Zentao</span><span class="w"> </span><span class="err">账号，账号需要具有超级</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="err">调用接口权限。</span><span class="w"></span>
-<span class="mf">2.</span><span class="w"> </span><span class="err">请求方式：在禅道里具体查看：参考禅道配置文件中$</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">requestType</span><span class="w"> </span><span class="err">的值；配置文件参考路径：</span><span class="o">/</span><span class="kr">opt</span><span class="o">/</span><span class="n">zbox</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">zentao</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">my</span><span class="p">.</span><span class="n">php</span><span class="w"> </span><span class="err">。</span><span class="w"></span>
-<span class="mf">3.</span><span class="w"> </span><span class="err">如果提示因为安全问题</span><span class="w"> </span><span class="n">api</span><span class="w"> </span><span class="err">禁用，需要修改禅道服务器配置文件，加上</span><span class="w"> </span><span class="s">&#39;$config-&gt;features-&gt;apiGetModel = true;&#39;</span><span class="w"> </span><span class="err">这个配置。</span><span class="w"></span>
+<span class="mf">1.</span><span class="w"> </span><span class="err">账号密码为具有相应权限的</span><span class="w"> </span><span class="n">Zentao</span><span class="w"> </span><span class="err">账号，账号需要具有超级</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="err">调用接口权限。</span>
+<span class="mf">2.</span><span class="w"> </span><span class="err">请求方式：在禅道里具体查看：参考禅道配置文件中$</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">requestType</span><span class="w"> </span><span class="err">的值；配置文件参考路径：</span><span class="o">/</span><span class="kr">opt</span><span class="o">/</span><span class="n">zbox</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">zentao</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">my</span><span class="p">.</span><span class="n">php</span><span class="w"> </span><span class="err">。</span>
+<span class="mf">3.</span><span class="w"> </span><span class="err">如果提示因为安全问题</span><span class="w"> </span><span class="n">api</span><span class="w"> </span><span class="err">禁用，需要修改禅道服务器配置文件，加上</span><span class="w"> </span><span class="s">&#39;$config-&gt;features-&gt;apiGetModel = true;&#39;</span><span class="w"> </span><span class="err">这个配置。</span>
 </code></pre></div>
 
 <ul>
@@ -3065,11 +3065,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -3079,6 +3079,5 @@
   }
 </script>
 
-    
   </body>
 </html>

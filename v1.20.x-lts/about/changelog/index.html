@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/about/changelog/">
       
+      
+        <link rel="prev" href="../../case_studies/user_cases/">
+      
+      
+        <link rel="next" href="../contact/">
+      
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -2392,6 +2393,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12018-lts" class="md-nav__link">
+    v1.20.18-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12017-lts" class="md-nav__link">
     v1.20.17-lts
   </a>
@@ -3036,6 +3044,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12018-lts" class="md-nav__link">
+    v1.20.18-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12017-lts" class="md-nav__link">
     v1.20.17-lts
   </a>
@@ -3637,10 +3652,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/about/changelog.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="_1">更新日志<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
@@ -3653,6 +3667,36 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12018-lts">v1.20.18-lts<a class="headerlink" href="#v12018-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年1月3日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(接口测试): 优化模块树多次保存</li>
+<li>refactor(测试跟踪): 禁止批量删除运行中的测试计划</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(安全漏洞): 修复未检查文件名导致文件可能被上传到任意路径的问题 (CVE-2022-46178)</li>
+<li>fix(工作台): 工作台首页缺陷统计有误</li>
+<li>fix(接口测试): 修复Json数组无法使用mock数据的问题</li>
+<li>fix(接口测试): 修复json格式的请求数据冒号被替换成等号的缺陷</li>
+<li>fix(接口测试): 修复swagger3.0文件导入对content的example没有处理问题</li>
+<li>fix(接口测试): 接口参数添加mock数据时清空历史函数</li>
+<li>fix(接口测试): 统一接口测试转性能测试时storage带的参数</li>
+<li>fix(接口测试): 修复重复创建未规划接口的缺陷</li>
+<li>fix(接口测试): 修复接口测试用例和场景转性能测试时会偶发重复jmx的问题</li>
+<li>fix(接口测试): 修复点击场景报告跳转链接没有跳转到对应项目的缺陷</li>
+<li>fix(测试跟踪): 测试计划-场景/性能测试报告 不显示运行模式和资源池</li>
+<li>fix(测试跟踪): 测试计划功能用例不展示自定义字段</li>
+<li>fix(测试跟踪): 功能用例导出多值输入自定义字段为空</li>
+<li>fix(测试跟踪): 测试计划保存报告内容时不赋开始时间和结束时间</li>
+<li>fix(性能测试): 修复查询报告时无法查出已删除人执行的报告</li>
+</ul>
 <h2 id="v12017-lts">v1.20.17-lts<a class="headerlink" href="#v12017-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2022年12月1日</p>
@@ -8669,11 +8713,11 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -8683,6 +8727,5 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
   }
 </script>
 
-    
   </body>
 </html>

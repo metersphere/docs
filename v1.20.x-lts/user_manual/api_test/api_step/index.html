@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/user_manual/api_test/api_step/">
       
+      
+        <link rel="prev" href="../test_report/">
+      
+      
+        <link rel="next" href="../functions/">
+      
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -3117,10 +3118,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/user_manual/api_test/api_step.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>用例步骤说明</h1>
@@ -3306,17 +3306,17 @@ vars.remove(&quot;VAR3&quot;);
 <div class="admonition warn">
 <p class="admonition-title">示例</p>
 <p><strong>请求的响应体</strong>：
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ddc86657-d402-4c10-b458-2ba2e4604cef&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myorg&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;form api&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;createTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;updateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ddc86657-d402-4c10-b458-2ba2e4604cef&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myorg&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;form api&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;createTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <strong>断言需求</strong>：判断响应体 <code>data</code> 中的 <code>name</code> 字段值为 <code>myorg</code></p>
 <p><strong>断言配置</strong>：</p>
@@ -3337,28 +3337,28 @@ vars.remove(&quot;VAR3&quot;);
 <div class="admonition warn">
 <p class="admonition-title">示例</p>
 <p><strong>请求的响应体</strong>：
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;root</span> <span class="na">xmlns:foo=</span><span class="s">&quot;http://www.foo.org/&quot;</span> <span class="na">xmlns:bar=</span><span class="s">&quot;http://www.bar.org&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;employees&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Johnny Dapp<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Al Pacino<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>Robert De Niro<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>Kevin Spacey<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>Denzel Washington<span class="nt">&lt;/employee&gt;</span>
-    <span class="nt">&lt;/employees&gt;</span>
-    <span class="nt">&lt;foo:companies&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;6&quot;</span><span class="nt">&gt;</span>Tata Consultancy Services<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>Wipro<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>Infosys<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;9&quot;</span><span class="nt">&gt;</span>Microsoft<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>IBM<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;11&quot;</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>Oracle<span class="nt">&lt;/foo:company&gt;</span>
-    <span class="nt">&lt;/foo:companies&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;root</span><span class="w"> </span><span class="na">xmlns:foo=</span><span class="s">&quot;http://www.foo.org/&quot;</span><span class="w"> </span><span class="na">xmlns:bar=</span><span class="s">&quot;http://www.bar.org&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;employees&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Johnny<span class="w"> </span>Dapp<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Al<span class="w"> </span>Pacino<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>Robert<span class="w"> </span>De<span class="w"> </span>Niro<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>Kevin<span class="w"> </span>Spacey<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>Denzel<span class="w"> </span>Washington<span class="nt">&lt;/employee&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/employees&gt;</span>
+<span class="w">    </span><span class="nt">&lt;foo:companies&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;6&quot;</span><span class="nt">&gt;</span>Tata<span class="w"> </span>Consultancy<span class="w"> </span>Services<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>Wipro<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>Infosys<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;9&quot;</span><span class="nt">&gt;</span>Microsoft<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>IBM<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;11&quot;</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>Oracle<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/foo:companies&gt;</span>
 <span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
 <strong>断言需求</strong>：判断响应体中的 id 为 10 的公司名称为 <code>IBM</code></p>
 <p><strong>断言配置</strong>：</p>
-<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">XPath</span><span class="w"> </span><span class="n">表达式</span><span class="o">**</span><span class="err">：</span><span class="o">//</span><span class="nl">foo</span><span class="p">:</span><span class="n">company</span><span class="o">[</span><span class="n">@id=10</span><span class="o">]=</span><span class="s1">&#39;IBM&#39;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">XPath</span><span class="w"> </span><span class="n">表达式</span><span class="o">**</span><span class="err">：</span><span class="o">//</span><span class="nl">foo</span><span class="p">:</span><span class="n">company</span><span class="o">[</span><span class="n">@id=10</span><span class="o">]=</span><span class="s1">&#39;IBM&#39;</span>
 </code></pre></div>
 
 </div>
@@ -3462,17 +3462,17 @@ vars.remove(&quot;VAR3&quot;);
 <div class="admonition warn">
 <p class="admonition-title">示例</p>
 <p><strong>请求的响应体</strong>：
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ddc86657-d402-4c10-b458-2ba2e4604cef&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myorg&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;form api&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;createTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;updateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ddc86657-d402-4c10-b458-2ba2e4604cef&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myorg&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;form api&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;createTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;updateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1611154807818</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <strong>提取需求</strong>：提取响应体 <code>data</code> 中的 <code>name</code> 字段并存储在 <code>name</code> 变量中。</p>
 <p><strong>提取配置</strong>：</p>
@@ -3494,23 +3494,23 @@ vars.remove(&quot;VAR3&quot;);
 <div class="admonition warn">
 <p class="admonition-title">示例</p>
 <p><strong>请求的响应体</strong>：
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;root</span> <span class="na">xmlns:foo=</span><span class="s">&quot;http://www.foo.org/&quot;</span> <span class="na">xmlns:bar=</span><span class="s">&quot;http://www.bar.org&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;employees&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Johnny Dapp<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Al Pacino<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>Robert De Niro<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>Kevin Spacey<span class="nt">&lt;/employee&gt;</span>
-        <span class="nt">&lt;employee</span> <span class="na">id=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>Denzel Washington<span class="nt">&lt;/employee&gt;</span>
-    <span class="nt">&lt;/employees&gt;</span>
-    <span class="nt">&lt;foo:companies&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;6&quot;</span><span class="nt">&gt;</span>Tata Consultancy Services<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>Wipro<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>Infosys<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;9&quot;</span><span class="nt">&gt;</span>Microsoft<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>IBM<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;11&quot;</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/foo:company&gt;</span>
-        <span class="nt">&lt;foo:company</span> <span class="na">id=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>Oracle<span class="nt">&lt;/foo:company&gt;</span>
-    <span class="nt">&lt;/foo:companies&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;root</span><span class="w"> </span><span class="na">xmlns:foo=</span><span class="s">&quot;http://www.foo.org/&quot;</span><span class="w"> </span><span class="na">xmlns:bar=</span><span class="s">&quot;http://www.bar.org&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;employees&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>Johnny<span class="w"> </span>Dapp<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>Al<span class="w"> </span>Pacino<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">&gt;</span>Robert<span class="w"> </span>De<span class="w"> </span>Niro<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>Kevin<span class="w"> </span>Spacey<span class="nt">&lt;/employee&gt;</span>
+<span class="w">        </span><span class="nt">&lt;employee</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>Denzel<span class="w"> </span>Washington<span class="nt">&lt;/employee&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/employees&gt;</span>
+<span class="w">    </span><span class="nt">&lt;foo:companies&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;6&quot;</span><span class="nt">&gt;</span>Tata<span class="w"> </span>Consultancy<span class="w"> </span>Services<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>Wipro<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>Infosys<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;9&quot;</span><span class="nt">&gt;</span>Microsoft<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>IBM<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;11&quot;</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">        </span><span class="nt">&lt;foo:company</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;12&quot;</span><span class="nt">&gt;</span>Oracle<span class="nt">&lt;/foo:company&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/foo:companies&gt;</span>
 <span class="nt">&lt;/root&gt;</span>
 </code></pre></div>
 <strong>提取需求</strong>：提取响应体中的 <code>id</code> 为 3 的员工的姓名，即上述响应中的 <code>Robert De Niro</code>，并存储在 <code>employeeName</code> 变量中。</p>
@@ -3702,11 +3702,11 @@ vars.remove(&quot;VAR3&quot;);
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -3716,6 +3716,5 @@ vars.remove(&quot;VAR3&quot;);
   }
 </script>
 
-    
   </body>
 </html>

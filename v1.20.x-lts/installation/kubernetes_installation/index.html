@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/installation/kubernetes_installation/">
       
+      
+        <link rel="prev" href="../offline_upgrade/">
+      
+      
+        <link rel="next" href="../offline_installation_windows/">
+      
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -2595,22 +2596,21 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/installation/kubernetes_installation.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>Kubernetes 中部署</h1>
 
 <h2 id="helm-charts-metersphere">Helm Charts 方式部署 MeterSphere<a class="headerlink" href="#helm-charts-metersphere" title="Permanent link">&para;</a></h2>
 <h3 id="helm-charts">Helm Charts 在线部署<a class="headerlink" href="#helm-charts" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl create ns ms
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo add metersphere https://metersphere.github.io/helm-chart/
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>ns<span class="w"> </span>ms
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>bitnami<span class="w"> </span>https://charts.bitnami.com/bitnami
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>metersphere<span class="w"> </span>https://metersphere.github.io/helm-chart/
 <span class="c1"># 从 chart 仓库中更新本地可用chart的信息</span>
-helm repo update  
-helm install metersphere metersphere/metersphere -n ms
+helm<span class="w"> </span>repo<span class="w"> </span>update<span class="w">  </span>
+helm<span class="w"> </span>install<span class="w"> </span>metersphere<span class="w"> </span>metersphere/metersphere<span class="w"> </span>-n<span class="w"> </span>ms
 </code></pre></div>
 <h3 id="helm-charts_1">Helm Charts 离线部署<a class="headerlink" href="#helm-charts_1" title="Permanent link">&para;</a></h3>
 <p>1.导入镜像</p>
@@ -2624,11 +2624,11 @@ helm install metersphere metersphere/metersphere -n ms
 </div>
 <p>如：<a href="https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz">https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz</a></p>
 <p>3.安装</p>
-<div class="highlight"><pre><span></span><code>helm install metersphere metersphere-1.0.10.tgz -n ms
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>metersphere<span class="w"> </span>metersphere-1.0.10.tgz<span class="w"> </span>-n<span class="w"> </span>ms
 </code></pre></div>
 <h3 id="helm-charts_2">Helm Charts 在线升级<a class="headerlink" href="#helm-charts_2" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>helm repo update  <span class="c1"># 从 chart 仓库中更新本地可用chart的信息</span>
-helm upgrade  metersphere metersphere/metersphere -n ms
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>update<span class="w">  </span><span class="c1"># 从 chart 仓库中更新本地可用chart的信息</span>
+helm<span class="w"> </span>upgrade<span class="w">  </span>metersphere<span class="w"> </span>metersphere/metersphere<span class="w"> </span>-n<span class="w"> </span>ms
 </code></pre></div>
 <h3 id="helm-charts_3">Helm Charts 离线升级<a class="headerlink" href="#helm-charts_3" title="Permanent link">&para;</a></h3>
 <p>1.导入新版本镜像</p>
@@ -2642,232 +2642,232 @@ helm upgrade  metersphere metersphere/metersphere -n ms
 </div>
 <p>如：<a href="https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz">https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz</a></p>
 <p>3.升级</p>
-<div class="highlight"><pre><span></span><code>helm upgrade metersphere metersphere-1.0.10.tgz -n ms
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>metersphere<span class="w"> </span>metersphere-1.0.10.tgz<span class="w"> </span>-n<span class="w"> </span>ms
 </code></pre></div>
 <h3 id="valuesyaml">values.yaml<a class="headerlink" href="#valuesyaml" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>ingress:    <span class="c1"># 不使用 ingress 可以关闭</span>
-  enabled: <span class="nb">true</span>        
-  host: ms-dev.apps.metersphere.com
-  annotations: <span class="o">{}</span>
-    <span class="c1">## example for ingress annotions.</span>
-    <span class="c1"># kubernetes.io/ingress.class: nginx</span>
-    <span class="c1"># kubernetes.io/tls-acme: &quot;true&quot;      </span>
-  https:
-    enabled: <span class="nb">false</span>
-    secretName: <span class="s2">&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code>ingress:<span class="w">    </span><span class="c1"># 不使用 ingress 可以关闭</span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span><span class="w">        </span>
+<span class="w">  </span>host:<span class="w"> </span>ms-dev.apps.metersphere.com
+<span class="w">  </span>annotations:<span class="w"> </span><span class="o">{}</span>
+<span class="w">    </span><span class="c1">## example for ingress annotions.</span>
+<span class="w">    </span><span class="c1"># kubernetes.io/ingress.class: nginx</span>
+<span class="w">    </span><span class="c1"># kubernetes.io/tls-acme: &quot;true&quot;      </span>
+<span class="w">  </span>https:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">false</span>
+<span class="w">    </span>secretName:<span class="w"> </span><span class="s2">&quot;&quot;</span>
 
 common:
-  imagePrefix: <span class="s2">&quot;registry.cn-qingdao.aliyuncs.com/metersphere/&quot;</span>
-  imagePullSecrets: nil
-  storageClass: default
-  imageTag: v1.20.0-lts
-  imagePullPolicy: Always
-  mysql:        <span class="c1"># 数据库相关配置</span>
-    host: metersphere-mysql
-    port: <span class="m">3306</span>
-    username: root
-    password: Password123@mysql
-  redis:        <span class="c1"># Redis相关配置</span>
-    host: metersphere-redis
-    port: <span class="m">6379</span>
-    password: Password123@redis
-    database: <span class="m">1</span>
-  kafka:        <span class="c1"># Kafka相关配置</span>
-    host: metersphere-kafka 
-    port: <span class="m">9092</span>
-    metricTopic: JMETER_METRICS
-    logTopic: JMETER_LOGS
-    testTopic: LOAD_TESTS
-    reportTopic: JMETER_REPORTS
+<span class="w">  </span>imagePrefix:<span class="w"> </span><span class="s2">&quot;registry.cn-qingdao.aliyuncs.com/metersphere/&quot;</span>
+<span class="w">  </span>imagePullSecrets:<span class="w"> </span>nil
+<span class="w">  </span>storageClass:<span class="w"> </span>default
+<span class="w">  </span>imageTag:<span class="w"> </span>v1.20.0-lts
+<span class="w">  </span>imagePullPolicy:<span class="w"> </span>Always
+<span class="w">  </span>mysql:<span class="w">        </span><span class="c1"># 数据库相关配置</span>
+<span class="w">    </span>host:<span class="w"> </span>metersphere-mysql
+<span class="w">    </span>port:<span class="w"> </span><span class="m">3306</span>
+<span class="w">    </span>username:<span class="w"> </span>root
+<span class="w">    </span>password:<span class="w"> </span>Password123@mysql
+<span class="w">  </span>redis:<span class="w">        </span><span class="c1"># Redis相关配置</span>
+<span class="w">    </span>host:<span class="w"> </span>metersphere-redis
+<span class="w">    </span>port:<span class="w"> </span><span class="m">6379</span>
+<span class="w">    </span>password:<span class="w"> </span>Password123@redis
+<span class="w">    </span>database:<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>kafka:<span class="w">        </span><span class="c1"># Kafka相关配置</span>
+<span class="w">    </span>host:<span class="w"> </span>metersphere-kafka<span class="w"> </span>
+<span class="w">    </span>port:<span class="w"> </span><span class="m">9092</span>
+<span class="w">    </span>metricTopic:<span class="w"> </span>JMETER_METRICS
+<span class="w">    </span>logTopic:<span class="w"> </span>JMETER_LOGS
+<span class="w">    </span>testTopic:<span class="w"> </span>LOAD_TESTS
+<span class="w">    </span>reportTopic:<span class="w"> </span>JMETER_REPORTS
 
 server:
-  enabled: <span class="nb">true</span>
-  image: metersphere
-  replicas: <span class="m">1</span>
-  properties: <span class="p">|</span>-
-    <span class="c1">## DATABASE</span>
-    spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.common.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span><span class="nb">false</span>
-    spring.datasource.username<span class="o">={{</span>.Values.common.mysql.username<span class="o">}}</span>
-    spring.datasource.password<span class="o">={{</span>.Values.common.mysql.password<span class="o">}}</span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>image:<span class="w"> </span>metersphere
+<span class="w">  </span>replicas:<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>properties:<span class="w"> </span><span class="p">|</span>-
+<span class="w">    </span><span class="c1">## DATABASE</span>
+<span class="w">    </span>spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.common.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span>spring.datasource.username<span class="o">={{</span>.Values.common.mysql.username<span class="o">}}</span>
+<span class="w">    </span>spring.datasource.password<span class="o">={{</span>.Values.common.mysql.password<span class="o">}}</span>
 
-    <span class="c1">## redis</span>
-    spring.session.store-type<span class="o">=</span>redis
-    spring.redis.host<span class="o">={{</span>.Values.common.redis.host<span class="o">}}</span>
-    spring.redis.port<span class="o">={{</span>.Values.common.redis.port<span class="o">}}</span>
-    spring.redis.database<span class="o">={{</span>.Values.common.redis.database<span class="o">}}</span>
-    spring.redis.password<span class="o">={{</span>.Values.common.redis.password<span class="o">}}</span>
+<span class="w">    </span><span class="c1">## redis</span>
+<span class="w">    </span>spring.session.store-type<span class="o">=</span>redis
+<span class="w">    </span>spring.redis.host<span class="o">={{</span>.Values.common.redis.host<span class="o">}}</span>
+<span class="w">    </span>spring.redis.port<span class="o">={{</span>.Values.common.redis.port<span class="o">}}</span>
+<span class="w">    </span>spring.redis.database<span class="o">={{</span>.Values.common.redis.database<span class="o">}}</span>
+<span class="w">    </span>spring.redis.password<span class="o">={{</span>.Values.common.redis.password<span class="o">}}</span>
 
-    <span class="c1">## KAFKA</span>
-    kafka.partitions<span class="o">=</span><span class="m">1</span>
-    kafka.replicas<span class="o">=</span><span class="m">1</span>
-    kafka.topic<span class="o">={{</span>.Values.common.kafka.metricTopic<span class="o">}}</span>
-    kafka.bootstrap-servers<span class="o">={{</span>.Values.common.kafka.host<span class="o">}}</span>.<span class="o">{{</span>.Release.Namespace<span class="o">}}</span>:<span class="o">{{</span>.Values.common.kafka.port<span class="o">}}</span>
-    kafka.log.topic<span class="o">={{</span>.Values.common.kafka.logTopic<span class="o">}}</span>
-    kafka.test.topic<span class="o">={{</span>.Values.common.kafka.testTopic<span class="o">}}</span>
-    kafka.report.topic<span class="o">={{</span>.Values.common.kafka.reportTopic<span class="o">}}</span>
-    tcp.mock.port<span class="o">=</span><span class="m">10000</span>
+<span class="w">    </span><span class="c1">## KAFKA</span>
+<span class="w">    </span>kafka.partitions<span class="o">=</span><span class="m">1</span>
+<span class="w">    </span>kafka.replicas<span class="o">=</span><span class="m">1</span>
+<span class="w">    </span>kafka.topic<span class="o">={{</span>.Values.common.kafka.metricTopic<span class="o">}}</span>
+<span class="w">    </span>kafka.bootstrap-servers<span class="o">={{</span>.Values.common.kafka.host<span class="o">}}</span>.<span class="o">{{</span>.Release.Namespace<span class="o">}}</span>:<span class="o">{{</span>.Values.common.kafka.port<span class="o">}}</span>
+<span class="w">    </span>kafka.log.topic<span class="o">={{</span>.Values.common.kafka.logTopic<span class="o">}}</span>
+<span class="w">    </span>kafka.test.topic<span class="o">={{</span>.Values.common.kafka.testTopic<span class="o">}}</span>
+<span class="w">    </span>kafka.report.topic<span class="o">={{</span>.Values.common.kafka.reportTopic<span class="o">}}</span>
+<span class="w">    </span>tcp.mock.port<span class="o">=</span><span class="m">10000</span>
 
-    <span class="c1">## JMETER</span>
-    jmeter.image<span class="o">={{</span> .Values.common.imagePrefix <span class="o">}}{{</span>.Values.jmeter.image<span class="o">}}</span>:<span class="o">{{</span>.Values.jmeter.imageTag<span class="o">}}</span>
-    jmeter.pod.threads.limit<span class="o">=</span><span class="m">500</span>
+<span class="w">    </span><span class="c1">## JMETER</span>
+<span class="w">    </span>jmeter.image<span class="o">={{</span><span class="w"> </span>.Values.common.imagePrefix<span class="w"> </span><span class="o">}}{{</span>.Values.jmeter.image<span class="o">}}</span>:<span class="o">{{</span>.Values.jmeter.imageTag<span class="o">}}</span>
+<span class="w">    </span>jmeter.pod.threads.limit<span class="o">=</span><span class="m">500</span>
 
-    <span class="c1">## K8S</span>
-    k8s.node-controller-image<span class="o">={{</span> .Values.common.imagePrefix <span class="o">}}{{</span>.Values.nodeController.image<span class="o">}}</span>:<span class="o">{{</span>.Values.common.imageTag<span class="o">}}</span>
+<span class="w">    </span><span class="c1">## K8S</span>
+<span class="w">    </span>k8s.node-controller-image<span class="o">={{</span><span class="w"> </span>.Values.common.imagePrefix<span class="w"> </span><span class="o">}}{{</span>.Values.nodeController.image<span class="o">}}</span>:<span class="o">{{</span>.Values.common.imageTag<span class="o">}}</span>
 
-    logger.sql.level<span class="o">=</span>info
+<span class="w">    </span>logger.sql.level<span class="o">=</span>info
 
 dataStreaming:
-  enabled: <span class="nb">true</span>
-  image: ms-data-streaming
-  replicas: <span class="m">1</span>
-  properties: <span class="p">|</span>-
-    <span class="c1">## DATABASE</span>
-    spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.common.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span><span class="nb">false</span>
-    spring.datasource.username<span class="o">={{</span>.Values.common.mysql.username<span class="o">}}</span>
-    spring.datasource.password<span class="o">={{</span>.Values.common.mysql.password<span class="o">}}</span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>image:<span class="w"> </span>ms-data-streaming
+<span class="w">  </span>replicas:<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>properties:<span class="w"> </span><span class="p">|</span>-
+<span class="w">    </span><span class="c1">## DATABASE</span>
+<span class="w">    </span>spring.datasource.url<span class="o">=</span>jdbc:mysql://<span class="o">{{</span>.Values.common.mysql.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.mysql.port<span class="o">}}</span>/metersphere?autoReconnect<span class="o">=</span>false<span class="p">&amp;</span><span class="nv">useUnicode</span><span class="o">=</span>true<span class="p">&amp;</span><span class="nv">characterEncoding</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">characterSetResults</span><span class="o">=</span>UTF-8<span class="p">&amp;</span><span class="nv">zeroDateTimeBehavior</span><span class="o">=</span>convertToNull<span class="p">&amp;</span><span class="nv">useSSL</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span>spring.datasource.username<span class="o">={{</span>.Values.common.mysql.username<span class="o">}}</span>
+<span class="w">    </span>spring.datasource.password<span class="o">={{</span>.Values.common.mysql.password<span class="o">}}</span>
 
-    <span class="c1">## KAFKA</span>
-    kafka.partitions<span class="o">=</span><span class="m">1</span>
-    kafka.replicas<span class="o">=</span><span class="m">1</span>
-    kafka.topic<span class="o">={{</span>.Values.common.kafka.metricTopic<span class="o">}}</span>
-    kafka.bootstrap-servers<span class="o">={{</span>.Values.common.kafka.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.kafka.port<span class="o">}}</span>
-    kafka.log.topic<span class="o">={{</span>.Values.common.kafka.logTopic<span class="o">}}</span>
-    kafka.test.topic<span class="o">={{</span>.Values.common.kafka.testTopic<span class="o">}}</span>
-    kafka.report.topic<span class="o">={{</span>.Values.common.kafka.reportTopic<span class="o">}}</span>
-    jmeter.report.granularity<span class="o">=</span><span class="m">5000</span>
+<span class="w">    </span><span class="c1">## KAFKA</span>
+<span class="w">    </span>kafka.partitions<span class="o">=</span><span class="m">1</span>
+<span class="w">    </span>kafka.replicas<span class="o">=</span><span class="m">1</span>
+<span class="w">    </span>kafka.topic<span class="o">={{</span>.Values.common.kafka.metricTopic<span class="o">}}</span>
+<span class="w">    </span>kafka.bootstrap-servers<span class="o">={{</span>.Values.common.kafka.host<span class="o">}}</span>:<span class="o">{{</span>.Values.common.kafka.port<span class="o">}}</span>
+<span class="w">    </span>kafka.log.topic<span class="o">={{</span>.Values.common.kafka.logTopic<span class="o">}}</span>
+<span class="w">    </span>kafka.test.topic<span class="o">={{</span>.Values.common.kafka.testTopic<span class="o">}}</span>
+<span class="w">    </span>kafka.report.topic<span class="o">={{</span>.Values.common.kafka.reportTopic<span class="o">}}</span>
+<span class="w">    </span>jmeter.report.granularity<span class="o">=</span><span class="m">5000</span>
 
 nodeController:
-  enabled: <span class="nb">true</span>
-  image: ms-node-controller
-  replicas: <span class="m">1</span>
-  properties: <span class="p">|</span>-
-    <span class="c1">## TBD</span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>image:<span class="w"> </span>ms-node-controller
+<span class="w">  </span>replicas:<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>properties:<span class="w"> </span><span class="p">|</span>-
+<span class="w">    </span><span class="c1">## TBD</span>
 
 jmeter:
-  image: jmeter-master
-  imageTag: <span class="m">5</span>.4.3-ms5-jdk11
+<span class="w">  </span>image:<span class="w"> </span>jmeter-master
+<span class="w">  </span>imageTag:<span class="w"> </span><span class="m">5</span>.4.3-ms5-jdk11
 
 logPersistence:
-  enabled: <span class="nb">false</span>
-  accessModes: ReadWriteOnce
-  size: 10Gi
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">false</span>
+<span class="w">  </span>accessModes:<span class="w"> </span>ReadWriteOnce
+<span class="w">  </span>size:<span class="w"> </span>10Gi
 
 dataPersistence:
-  enabled: <span class="nb">true</span>
-  accessModes: ReadWriteOnce
-  size: 10Gi
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>accessModes:<span class="w"> </span>ReadWriteOnce
+<span class="w">  </span>size:<span class="w"> </span>10Gi
 
-mysql:      
-  enabled: <span class="nb">true</span>     <span class="c1"># 引用外部数据库时，可以修改为false,启动时不再安装mysql</span>
-  image: mysql
-  imageTag: <span class="s2">&quot;5.7.25&quot;</span>
-  password: Password123@mysql
-  persistence:
-    enabled: <span class="nb">true</span>
-    accessModes: ReadWriteOnce
-    size: 20Gi
+mysql:<span class="w">      </span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span><span class="w">     </span><span class="c1"># 引用外部数据库时，可以修改为false,启动时不再安装mysql</span>
+<span class="w">  </span>image:<span class="w"> </span>mysql
+<span class="w">  </span>imageTag:<span class="w"> </span><span class="s2">&quot;5.7.25&quot;</span>
+<span class="w">  </span>password:<span class="w"> </span>Password123@mysql
+<span class="w">  </span>persistence:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>accessModes:<span class="w"> </span>ReadWriteOnce
+<span class="w">    </span>size:<span class="w"> </span>20Gi
 redis:
-  enabled: <span class="nb">true</span>     <span class="c1"># 引用外部redis时，可以修改为false,启动时不再安装redis</span>
-  image: redis
-  imageTag: <span class="s2">&quot;6.2.6&quot;</span>
-  password: Password123@redis
-  persistence:
-    enabled: <span class="nb">true</span>
-    accessModes: ReadWriteOnce
-    size: 10Gi
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span><span class="w">     </span><span class="c1"># 引用外部redis时，可以修改为false,启动时不再安装redis</span>
+<span class="w">  </span>image:<span class="w"> </span>redis
+<span class="w">  </span>imageTag:<span class="w"> </span><span class="s2">&quot;6.2.6&quot;</span>
+<span class="w">  </span>password:<span class="w"> </span>Password123@redis
+<span class="w">  </span>persistence:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>accessModes:<span class="w"> </span>ReadWriteOnce
+<span class="w">    </span>size:<span class="w"> </span>10Gi
 kafka:
-  enabled: <span class="nb">true</span>     <span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装kafka</span>
-  image:
-    registry: registry.cn-qingdao.aliyuncs.com/metersphere
-    repository: kafka
-    tag: <span class="m">2</span>.8.1
-  fullnameOverride: metersphere-kafka
-  persistence:
-    enabled: <span class="nb">false</span>
-  logPersistence:
-    enabled: <span class="nb">false</span>
-  logFlushIntervalMessages: _10000
-  logFlushIntervalMs: <span class="m">1000</span>
-  logRetentionBytes: _1073741824
-  logRetentionCheckIntervalMs: <span class="m">300000</span>
-  logRetentionHours: <span class="m">168</span>
-  logSegmentBytes: _1073741824
-  maxMessageBytes: _1000012
-  livenessProbe:
-    initialDelaySeconds: <span class="m">20</span>
-    periodSeconds: <span class="m">15</span>
-    timeoutSeconds: <span class="m">15</span>
-  readinessProbe:
-    initialDelaySeconds: <span class="m">20</span>
-    periodSeconds: <span class="m">15</span>
-    timeoutSeconds: <span class="m">15</span>
-  externalAccess:
-    enabled: <span class="nb">true</span>
-    service:
-      type: NodePort
-      useHostIPs: <span class="nb">true</span>
-    autoDiscovery:
-      enabled: <span class="nb">true</span>
-  serviceAccount:
-    create: <span class="nb">true</span>
-  rbac:
-    create: <span class="nb">true</span>
-  zookeeper:
-    enabled: <span class="nb">true</span>
-    logLevel: ERROR
-    persistence:
-      enabled: <span class="nb">false</span>
-    fullnameOverride: metersphere-zookeeper
-    image:
-      registry: registry.cn-qingdao.aliyuncs.com/metersphere
-      repository: zookeeper
-      tag: <span class="m">3</span>.7.0
-  extraEnvVars:
-    - name: FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS
-      value: <span class="s2">&quot;true&quot;</span>
-zookeeper:      <span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装zookeeper</span>
-  enabled: <span class="nb">true</span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span><span class="w">     </span><span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装kafka</span>
+<span class="w">  </span>image:
+<span class="w">    </span>registry:<span class="w"> </span>registry.cn-qingdao.aliyuncs.com/metersphere
+<span class="w">    </span>repository:<span class="w"> </span>kafka
+<span class="w">    </span>tag:<span class="w"> </span><span class="m">2</span>.8.1
+<span class="w">  </span>fullnameOverride:<span class="w"> </span>metersphere-kafka
+<span class="w">  </span>persistence:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">false</span>
+<span class="w">  </span>logPersistence:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">false</span>
+<span class="w">  </span>logFlushIntervalMessages:<span class="w"> </span>_10000
+<span class="w">  </span>logFlushIntervalMs:<span class="w"> </span><span class="m">1000</span>
+<span class="w">  </span>logRetentionBytes:<span class="w"> </span>_1073741824
+<span class="w">  </span>logRetentionCheckIntervalMs:<span class="w"> </span><span class="m">300000</span>
+<span class="w">  </span>logRetentionHours:<span class="w"> </span><span class="m">168</span>
+<span class="w">  </span>logSegmentBytes:<span class="w"> </span>_1073741824
+<span class="w">  </span>maxMessageBytes:<span class="w"> </span>_1000012
+<span class="w">  </span>livenessProbe:
+<span class="w">    </span>initialDelaySeconds:<span class="w"> </span><span class="m">20</span>
+<span class="w">    </span>periodSeconds:<span class="w"> </span><span class="m">15</span>
+<span class="w">    </span>timeoutSeconds:<span class="w"> </span><span class="m">15</span>
+<span class="w">  </span>readinessProbe:
+<span class="w">    </span>initialDelaySeconds:<span class="w"> </span><span class="m">20</span>
+<span class="w">    </span>periodSeconds:<span class="w"> </span><span class="m">15</span>
+<span class="w">    </span>timeoutSeconds:<span class="w"> </span><span class="m">15</span>
+<span class="w">  </span>externalAccess:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>service:
+<span class="w">      </span>type:<span class="w"> </span>NodePort
+<span class="w">      </span>useHostIPs:<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>autoDiscovery:
+<span class="w">      </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>serviceAccount:
+<span class="w">    </span>create:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>rbac:
+<span class="w">    </span>create:<span class="w"> </span><span class="nb">true</span>
+<span class="w">  </span>zookeeper:
+<span class="w">    </span>enabled:<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>logLevel:<span class="w"> </span>ERROR
+<span class="w">    </span>persistence:
+<span class="w">      </span>enabled:<span class="w"> </span><span class="nb">false</span>
+<span class="w">    </span>fullnameOverride:<span class="w"> </span>metersphere-zookeeper
+<span class="w">    </span>image:
+<span class="w">      </span>registry:<span class="w"> </span>registry.cn-qingdao.aliyuncs.com/metersphere
+<span class="w">      </span>repository:<span class="w"> </span>zookeeper
+<span class="w">      </span>tag:<span class="w"> </span><span class="m">3</span>.7.0
+<span class="w">  </span>extraEnvVars:
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS
+<span class="w">      </span>value:<span class="w"> </span><span class="s2">&quot;true&quot;</span>
+zookeeper:<span class="w">      </span><span class="c1"># 引用外部kafka时，可以修改为false,启动时不再安装zookeeper</span>
+<span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span>
 </code></pre></div>
 <p>若想控制数据库的连接数，请在 values.yml 的 DATABASE 处，新增如下两行参数
 <div class="highlight"><pre><span></span><code>spring.datasource.hikari.maximum-pool-size=你想要的数值
 spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 </code></pre></div></p>
 <h3 id="kafka">引用外部 Kafka<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>vim values.yaml
-将 values.yaml 中 zookeeper.enabled 和 kafka.enabled 改为 <span class="nb">false</span>
-common.kafka.host、common.kafka.port 改为外部 kafka 的地址和端口
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>values.yaml
+将<span class="w"> </span>values.yaml<span class="w"> </span>中<span class="w"> </span>zookeeper.enabled<span class="w"> </span>和<span class="w"> </span>kafka.enabled<span class="w"> </span>改为<span class="w"> </span><span class="nb">false</span>
+common.kafka.host、common.kafka.port<span class="w"> </span>改为外部<span class="w"> </span>kafka<span class="w"> </span>的地址和端口
 </code></pre></div>
 <h3 id="mysql">引用外部 MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>vim values.yaml
-将 values.yaml 中 mysql.enabled 改为 <span class="nb">false</span>
-common.host.host、common.host.port、common.host.username、common.host.password 改为外部 mysql 的地址、端口及用户名、密码
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>values.yaml
+将<span class="w"> </span>values.yaml<span class="w"> </span>中<span class="w"> </span>mysql.enabled<span class="w"> </span>改为<span class="w"> </span><span class="nb">false</span>
+common.host.host、common.host.port、common.host.username、common.host.password<span class="w"> </span>改为外部<span class="w"> </span>mysql<span class="w"> </span>的地址、端口及用户名、密码
 </code></pre></div>
 <h3 id="redis">引用外部 Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>vim values.yaml
-将 values.yaml 中 redis.enabled 改为 <span class="nb">false</span>
-common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>values.yaml
+将<span class="w"> </span>values.yaml<span class="w"> </span>中<span class="w"> </span>redis.enabled<span class="w"> </span>改为<span class="w"> </span><span class="nb">false</span>
+common.redis.host、common.redis.port、common.redis.password<span class="w"> </span>改为外部<span class="w"> </span>redis<span class="w"> </span>的地址、端口和密码
 </code></pre></div>
 <h3 id="node-port">创建一个 Node Port 的访问方式<a class="headerlink" href="#node-port" title="Permanent link">&para;</a></h3>
 <p>如果不使用 ingress 的访问方式，可以创建一个 nodeport
-<div class="highlight"><pre><span></span><code>vi ms-server-nodeport.yaml
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>ms-server-nodeport.yaml
 
-apiVersion: v1
-kind: Service
+apiVersion:<span class="w"> </span>v1
+kind:<span class="w"> </span>Service
 metadata:
-  name: metersphere-server-nodeport
-  namespace: ms
+<span class="w">  </span>name:<span class="w"> </span>metersphere-server-nodeport
+<span class="w">  </span>namespace:<span class="w"> </span>ms
 spec:
-  ports:
-    - name: metersphere-server
-      protocol: TCP
-      port: <span class="m">8081</span>
-      targetPort: <span class="m">8081</span>
-      nodePort: <span class="m">30801</span>
-  type: NodePort
-  selector:
-    app: metersphere-server
+<span class="w">  </span>ports:
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>metersphere-server
+<span class="w">      </span>protocol:<span class="w"> </span>TCP
+<span class="w">      </span>port:<span class="w"> </span><span class="m">8081</span>
+<span class="w">      </span>targetPort:<span class="w"> </span><span class="m">8081</span>
+<span class="w">      </span>nodePort:<span class="w"> </span><span class="m">30801</span>
+<span class="w">  </span>type:<span class="w"> </span>NodePort
+<span class="w">  </span>selector:
+<span class="w">    </span>app:<span class="w"> </span>metersphere-server
 
-kubectl create -f ms-server-nodeport.yaml 
+kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>ms-server-nodeport.yaml<span class="w"> </span>
 </code></pre></div></p>
 <p>访问 MeterSphere 页面: <a href="http://nodeIP:30801">http://nodeIP:30801</a></p>
 
@@ -2953,11 +2953,11 @@ kubectl create -f ms-server-nodeport.yaml
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -2967,6 +2967,5 @@ kubectl create -f ms-server-nodeport.yaml
   }
 </script>
 
-    
   </body>
 </html>
