@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v2.x/installation/online_upgrade/">
       
+      
+        <link rel="prev" href="../online_installation/">
+      
+      
+        <link rel="next" href="../offline_installation/">
+      
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -2503,10 +2504,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/installation/online_upgrade.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>在线升级</h1>
@@ -2518,31 +2518,31 @@
 <p>如果您的服务器可以访问互联网, 可以通过以下命令直接升级 Metersphere 至最新版本。</p>
 <h2 id="1">1 一键升级至最新版本<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 升级至最新版本</span>
-msctl upgrade
+msctl<span class="w"> </span>upgrade
 
 <span class="c1"># 查看 MeterSphere 状态</span>
-msctl status
+msctl<span class="w"> </span>status
 </code></pre></div>
 <h2 id="2">2 一键升级至指定版本<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1"># 升级至指定版本</span>
-msctl upgrade v2.x.y
+msctl<span class="w"> </span>upgrade<span class="w"> </span>v2.x.y
 
 <span class="c1"># 查看 MeterSphere 状态</span>
-msctl status
+msctl<span class="w"> </span>status
 </code></pre></div>
 <h2 id="3">3 手动升级<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>GitHub release 链接: <a href="https://github.com/metersphere/metersphere/releases">https://github.com/metersphere/metersphere/releases</a>
 <div class="highlight"><pre><span></span><code><span class="c1"># 下载在线安装包</span>
-wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
+wget<span class="w"> </span>https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
 
 <span class="c1"># 解压在线安装包</span>
-tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
+tar<span class="w"> </span>-zxvf<span class="w"> </span>metersphere-online-installer-v2.x.y.tar.gz
 
 <span class="c1"># 进入解压缩目录</span>
-<span class="nb">cd</span> metersphere-online-installer-v2.x.y
+<span class="nb">cd</span><span class="w"> </span>metersphere-online-installer-v2.x.y
 
 <span class="c1"># 执行install.sh安装脚本</span>
-/bin/bash install.sh
+/bin/bash<span class="w"> </span>install.sh
 </code></pre></div></p>
 
 
@@ -2627,11 +2627,11 @@ tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -2641,6 +2641,5 @@ tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
   }
 </script>
 
-    
   </body>
 </html>

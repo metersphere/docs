@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://metersphere.io/v2.x/faq/load_test/">
       
+      
+        <link rel="prev" href="../ui_test/">
+      
+      
+        <link rel="next" href="../report_statistics/">
+      
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
     
     
       
@@ -28,11 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -279,8 +284,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为浅色模式"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="切换为浅色模式" for="__palette_2" hidden>
@@ -288,8 +291,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="deep-purple"  aria-label="切换为深色模式"  type="radio" name="__palette" id="__palette_2">
           
@@ -3089,10 +3090,9 @@
                 
                   
 
-  <a href="https://github.com/metersphere/docs/edit/master/docs/faq/load_test.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
   <h1>性能测试相关</h1>
@@ -3169,11 +3169,11 @@
 <h2 id="3">3 如何向测试资源池中添加节点？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档<a href="../../installation/online_installation/">「在线安装」</a>或<a href="../../installation/offline_installation/">「离线安装」</a>章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。</p>
 <p>安装完成通过查看组件状态是否正常。</p>
-<div class="highlight"><pre><span></span><code>msctl status
+<div class="highlight"><pre><span></span><code>msctl<span class="w"> </span>status
 </code></pre></div>
 <p>当组件状态正常后，使用管理员账号登录 MeterSphere，在「系统设置」-「系统」-「测试资源池」页面添加或编辑已有测试资源池，在弹出的页面中增加一个节点，IP 地址为要添加的测试执行节点的 IP，端口默认为 8082，最大并发数根据测试执行节点的机器规格进行配置。</p>
 <p>节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。若提示校验不通过，请登录测试执行节点通过如下命令查看组件日志。</p>
-<div class="highlight"><pre><span></span><code>docker logs ms-node-controller
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>logs<span class="w"> </span>ms-node-controller
 </code></pre></div>
 <h2 id="4-meterspherejmeter">4 采用MeterSphere压测和手动使用JMeter命令行压测得到性能测试结果差距很大该如何优化？<a class="headerlink" href="#4-meterspherejmeter" title="Permanent link">&para;</a></h2>
 <p>1.社区版</p>
@@ -3193,15 +3193,15 @@
 <li>检查 Kafka 是否正常运行
 如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 Kafka 服务是否正常；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请通过如下命令进行排查。
 <div class="highlight"><pre><span></span><code><span class="c1"># 检查各组件的运行状态</span>
-msctl status
+msctl<span class="w"> </span>status
 <span class="c1"># 若 Kafka 容器不处于 `healthy` 状态，查看 Kafka 日志进行进一步排查</span>
-docker logs kafka
+docker<span class="w"> </span>logs<span class="w"> </span>kafka
 </code></pre></div></li>
 <li>检查 MeterSphere 到 Kafka 服务的网络连接
 若 Kafka 服务状态正常，请通过如下命令检查 ms-server 容器是否能正常连接到 Kafka 服务。
 <div class="highlight"><pre><span></span><code><span class="c1"># 检查 ms-server 是否能正常访问 Kafka 服务</span>
-<span class="o">[</span>root@meter-prototype ~<span class="o">]</span><span class="c1"># docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}</span>
-kafka <span class="o">(</span><span class="m">172</span>.23.0.5:19092<span class="o">)</span> open
+<span class="o">[</span>root@meter-prototype<span class="w"> </span>~<span class="o">]</span><span class="c1"># docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}</span>
+kafka<span class="w"> </span><span class="o">(</span><span class="m">172</span>.23.0.5:19092<span class="o">)</span><span class="w"> </span>open
 </code></pre></div>
 若 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
 <div class="highlight"><pre><span></span><code>执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
@@ -3213,9 +3213,9 @@ firewall-cmd --reload
 </ol>
 <p>如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 MeterSphere 部署服务器到 Kafka 服务之间的网络连接是否正常，是否有防火墙、安全组等安全策略的影响；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请检查 MeterSphere 部署服务器上的防火墙配置，是否放通了 Kafka 的服务端口（默认 19092），也可以选择直接禁用防火墙后，重启 docker 服务和 MeterSphere 组件进行重试。
 <div class="highlight"><pre><span></span><code><span class="c1"># 以 CentOS 7 操作系统为例，禁用防火墙及重启服务命令</span>
-systemctl stop firewalld
-systemctl restart docker
-msctl start
+systemctl<span class="w"> </span>stop<span class="w"> </span>firewalld
+systemctl<span class="w"> </span>restart<span class="w"> </span>docker
+msctl<span class="w"> </span>start
 </code></pre></div>
 若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。</p>
 <h2 id="6">6 执行性能测试时提示 <code>无法运行测试，请检查当前站点配置</code> 如何解决？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
@@ -3495,11 +3495,11 @@ kubectl describe secrets -n metersphere ms-token-xxxx
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
     
 <script>
@@ -3509,6 +3509,5 @@ kubectl describe secrets -n metersphere ms-token-xxxx
   }
 </script>
 
-    
   </body>
 </html>
