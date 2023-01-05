@@ -21,6 +21,7 @@
 - [MeterSphere 服务集成之 JIRA 对接](./MeterSphere 服务集成之 JIRA 对接.md)
 - [MeterSphere 服务集成之 TAPD 对接](./MeterSphere 服务集成之 TAPD 对接.md)
 - [MeterSphere 服务集成 Azure Devops 对接](./MeterSphere 服务集成 Azure Devops 对接.md)
+- [在 MeterSphere 平台添加并使用 Kubernetes 资源池](https://kb.fit2cloud.com/archives/80)
 
 ## 4 插件使用
 - [MeterSphere 如何和 Jenkins 实现流水线集成](./MeterSphere 如何和 Jenkins 实现流水线集成.md)
