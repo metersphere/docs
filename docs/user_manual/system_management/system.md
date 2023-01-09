@@ -90,16 +90,54 @@
 
 - 创建 Node 资源池
 
-点击`创建资源池`按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，`类型`选择`Node`，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
+### 4.1 创建 Node 资源池
+!!! info "注意"
+    在服务器上安装 node-controller 服务后，再来配置 Node 资源池。
+
+点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Node】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!创建资源池](../../img/system_management/系统下创建资源池.png)
 
-- 创建 Kubernetes 资源池 (X-Pack)
 
-点击`创建资源池`按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，`类型`选择`Kubernetes`，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
+### 4.2 创建 Kubernetes 资源池 (X-Pack)
+!!! info "注意"
+    在服务器上安装 k8s 服务后，再来配置 Kubernetes 资源池。
+
+点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!创建K8S资源池](../../img/system_management/系统下创建K8S资源池.png)
 
-!!! info "说明"
-     Node 类型资源池须手动安装 JMeter 工具；K8S 类型资源池系统默认自动安装 JMeter 工具。
+4.2.1 获取 Master URL，输入 kubectl describe svc kubernetes 可获得 Endpoints 地址
+
+4.2.2 获取 Token，需要有 k8s 集群环境，之后创建好 SA 和 token，命令如下
+```
+# 1 创建 namespaces
+kubectl create namespace metersphere
+# 2 创建 SA
+kubectl create serviceaccount ms -n metersphere
+# 3 创建 namespace 授权 SA
+kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+# 4 查询 SA token
+kubectl describe sa/ms -n metersphere
+kubectl describe secrets -n metersphere ms-token-xxxx
+```
+4.2.3 Namespace 可以进行自定义，在 k8s 集群上创建自定义的 Namespace
+```
+kubectl create ns ms-pool
+```
+4.2.4 下载 deployment.yaml 上传到 k8s 集群服务器上，输入命令使其生效后，输入命令查询自定义 Namespace 下的 ms-node-controller 是否正常起来
+```
+# 使 deployment.yaml 生效
+kubectl apply -f deployment.yaml -n ms-pool
+# 查询 ms-node-controller 服务
+kubectl get all -n ms-pool
+```
+![!创建K8S资源池](../../img/system_management/下载yaml文件.png)
+
+4.2.5 Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。
+
+4.2.6 配置完成后，点击确定即可。在资源池列表中有该资源池，在性能测试页面-压力配置处也可以看到该资源池。
+![!创建K8S资源池](../../img/system_management/k8s资源池配置完成.png)
+
+![!创建K8S资源池](../../img/system_management/k8s列表显示.png)
 
 - 查询资源池
 
