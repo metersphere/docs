@@ -90,18 +90,54 @@
 点击左侧【系统】下拉菜单中的【测试资源池】进入资源池界面。测试资源池主要用于接口测试及性能等测试。右侧资源池列表中，可以通过【Switch】开关切换资源池启用状态，点击【编辑】按钮更改资源池信息，点击【删除】按钮删除选定资源池。
 ![!测试资源池管理](../../img/system_management/系统测试资源池首页.png)
 
-- 创建 Node 资源池
+### 4.1 创建 Node 资源池
+!!! info "注意"
+    在服务器上安装 node-controller 服务后，再来配置 Node 资源池。
 
 点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Node】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!创建资源池](../../img/system_management/系统下创建资源池.png)
 
-- 创建 Kubernetes 资源池 (X-Pack)
+
+### 4.2 创建 Kubernetes 资源池 (X-Pack)
+!!! info "注意"
+    在服务器上安装 k8s 服务后，再来配置 Kubernetes 资源池。
 
 点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!创建K8S资源池](../../img/system_management/系统下创建K8S资源池.png)
 
-!!! info "说明"
-     Node 类型资源池须手动安装 JMeter 工具；K8S 类型资源池系统默认自动安装 JMeter 工具。
+4.2.1 获取 Master URL，输入 kubectl describe svc kubernetes 可获得 Endpoints 地址
+
+4.2.2 获取 Token，需要有 k8s 集群环境，之后创建好 SA 和 token，命令如下
+```
+# 1 创建 namespaces
+kubectl create namespace metersphere
+# 2 创建 SA
+kubectl create serviceaccount ms -n metersphere
+# 3 创建 namespace 授权 SA
+kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+# 4 查询 SA token
+kubectl describe sa/ms -n metersphere
+kubectl describe secrets -n metersphere ms-token-xxxx
+```
+4.2.3 Namespace 可以进行自定义，在 k8s 集群上创建自定义的 Namespace
+```
+kubectl create ns ms-pool
+```
+4.2.4 下载 deployment.yaml 上传到 k8s 集群服务器上，输入命令使其生效后，输入命令查询自定义 Namespace 下的 ms-node-controller 是否正常起来
+```
+# 使 deployment.yaml 生效
+kubectl apply -f deployment.yaml -n ms-pool
+# 查询 ms-node-controller 服务
+kubectl get all -n ms-pool
+```
+![!创建K8S资源池](../../img/system_management/下载yaml文件.png)
+
+4.2.5 Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。
+
+4.2.6 配置完成后，点击确定即可。在资源池列表中有该资源池，在性能测试页面-压力配置处也可以看到该资源池。
+![!创建K8S资源池](../../img/system_management/k8s资源池配置完成.png)
+
+![!创建K8S资源池](../../img/system_management/k8s列表显示.png)
 
 - 查询资源池
 
@@ -171,7 +207,7 @@
 切换至【模块管理】标签，点击【启用/禁用】按钮，系统只显示【启用】的模块，【禁用】的模块不会在系统中出现。
 ![模块管理](../../img/system_management/模块管理.png)
 
-### 6 配额管理 (X-Pack)
+## 6 配额管理 (X-Pack)
 进入【配额管理】页面，可【编辑】上方的工作空间默认配额，编辑完成后，在配额列表中使用默认配置的，将同步更新编辑的数据。
 ![!配额管理](../../img/system_management/工作空间配额管理编辑.png)
 
