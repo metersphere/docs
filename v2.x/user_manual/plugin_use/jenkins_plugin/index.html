@@ -21,7 +21,7 @@
         <link rel="next" href="../idea_plugin/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -34,7 +34,7 @@
 <link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.9c788c91.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
@@ -335,7 +335,7 @@
           <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -2521,8 +2521,10 @@
 <h2 id="2">2 插件使用<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>插件安装后，在指定的 Jenkins 构建任务中，添加【MeterSphere】类型的构建步骤
 <img alt="录制" src="../../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_1.png" /></p>
-<p>通过配置 MeterSphere 认证信息，并指定需要触发执行的接口测试、性能测试或测试计划。
+<p>通过配置 MeterSphere 认证信息，并指定需要触发执行的接口测试、性能测试或测试计划，配置完成后即可运行 Jenkins Job
 <img alt="" src="../../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_2.png" /></p>
+<p>将 Jenkins Job 的运行结果变更为当前运行的测试计划或用例的实际运行结果，即用例运行失败则 Jenkins Job 的状态也为失败。
+<img alt="" src="../../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_3.png" /></p>
 
 
   
@@ -2610,7 +2612,7 @@
     
     
 
-      <script src="../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
 <script>

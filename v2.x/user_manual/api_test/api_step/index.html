@@ -21,7 +21,7 @@
         <link rel="next" href="../functions/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
@@ -34,7 +34,7 @@
 <link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.9c788c91.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
@@ -335,7 +335,7 @@
           <div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -3218,6 +3218,12 @@ vars.remove(&quot;VAR3&quot;);
 <p>可自动生成获取响应头、获取响应码、获取响应等脚本，以获取接口调试结果中的响应头、响应码、响应结果等信息。
 <div class="lightgallery"><a data-sub-html="自定义变量" href="../../../img/api/%E8%8E%B7%E5%8F%96%E5%93%8D%E5%BA%94.png"><img alt="自定义变量" src="../../../img/api/%E8%8E%B7%E5%8F%96%E5%93%8D%E5%BA%94.png" /></a></div></p>
 <h4 id="113"><font size=4> 1.1.3 项目环境 </font><a class="headerlink" href="#113" title="Permanent link">&para;</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>vars.put(${__metersphere_env_id}+"key","value"); // 将值存储为环境变量，可在【环境-通用设置】处看到值<br>
+vars.put("key","value")。 // 将值存储为场景变量 <br>
+存为环境变量的值，在当前请求引用不到，结合存为变量的代码，在当前请求以及之后请求都可引用到</p>
+</div>
 <p>设置环境参数将变量设置为项目环境变量，供当前环境下的所有接口使用。
 <div class="lightgallery"><a data-sub-html="项目环境" href="../../../img/api/%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0.png"><img alt="项目环境" src="../../../img/api/%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0.png" /></a></div></p>
 <h4 id="114"><font size=4> 1.1.4 自定义代码片段 </font><a class="headerlink" href="#114" title="Permanent link">&para;</a></h4>
@@ -3741,7 +3747,7 @@ vars.remove(&quot;VAR3&quot;);
     
     
 
-      <script src="../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
 <script>
