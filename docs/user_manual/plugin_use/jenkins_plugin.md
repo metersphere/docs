@@ -9,5 +9,8 @@
 插件安装后，在指定的 Jenkins 构建任务中，添加【MeterSphere】类型的构建步骤
 ![录制](../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_1.png)
 
-通过配置 MeterSphere 认证信息，并指定需要触发执行的接口测试、性能测试或测试计划。
+通过配置 MeterSphere 认证信息，并指定需要触发执行的接口测试、性能测试或测试计划，配置完成后即可运行 Jenkins Job
 ![](../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_2.png)
+
+将 Jenkins Job 的运行结果变更为当前运行的测试计划或用例的实际运行结果，即用例运行失败则 Jenkins Job 的状态也为失败。
+![](../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_3.png)
