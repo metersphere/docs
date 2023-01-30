@@ -12,32 +12,32 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/dev_manual/">
+        <link rel="canonical" href="https://metersphere.io/v1.20.x-lts/user_manual/plugin_use/api_test_plugin/">
       
       
-        <link rel="prev" href="../faq/enterprise/">
+        <link rel="prev" href="../selenium_ide_plugin/">
       
       
-        <link rel="next" href="../automation_plugin_dev/">
+        <link rel="next" href="../../../tutorial/use_tutorial/">
       
-      <link rel="icon" href="../img/facio.ico">
+      <link rel="icon" href="../../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.8">
     
     
       
-        <title>源码搭建 (前后端分离) - MeterSphere 文档</title>
+        <title>接口测试插件 - MeterSphere 文档</title>
       
     
     
-<link rel="stylesheet" href="../css/lightgallery.min.css">
+<link rel="stylesheet" href="../../../css/lightgallery.min.css">
 
-<link href="../css/f2c-header.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -46,11 +46,11 @@
 
     
 
-<script src="../js/lightgallery.min.js"></script>
+<script src="../../../js/lightgallery.min.js"></script>
 
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/mega.js"></script>
+<script src="../../../js/jquery-3.5.1.min.js"></script>
+<script src="../../../js/bootstrap.bundle.min.js"></script>
+<script src="../../../js/mega.js"></script>
 
 
     
@@ -63,9 +63,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -105,11 +105,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -135,7 +130,7 @@
         <div class="mega-nav-banner">
             <div class="container">
                 <div class="mega-nav-banner-item">
-                    <a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img src="../img/logo/logo-light-FIT2CLOUD.svg" alt="FIT2CLOUD Logo" /></a>
+                    <a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img src="../../../img/logo/logo-light-FIT2CLOUD.svg" alt="FIT2CLOUD Logo" /></a>
                 </div>
                 <div class="mega-nav-banner-item">
                     <p class="mega-nav-tagline">
@@ -171,7 +166,7 @@
                                                 <div class="card-body header-card-body">
                                                     <h5 class="mt-3">测试</h5>
                                                     <div class="">
-                                                        <img src="../img/logo/banner-nav-MeterSphere.svg" alt="MeterSphere Logo" />
+                                                        <img src="../../../img/logo/banner-nav-MeterSphere.svg" alt="MeterSphere Logo" />
                                                         <p class="text-muted mb-1 pl-0 pr-0">开源持续测试平台</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/metersphere/metersphere?style=social">
                                                     </div>
@@ -190,7 +185,7 @@
                                                 <div class="card-body header-card-body">
                                                     <h5 class="mt-3">运行</h5>
                                                     <div class="">
-                                                        <img src="../img/logo/banner-nav-KubeOperator.svg" alt="KubeOperator Logo" />
+                                                        <img src="../../../img/logo/banner-nav-KubeOperator.svg" alt="KubeOperator Logo" />
                                                         <p class="text-muted mb-1">开源容器平台</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/kubeoperator/kubeoperator?style=social">
                                                     </div>
@@ -209,7 +204,7 @@
                                                 <div class="card-body header-card-body">
                                                     <h5 class="mt-3">分析</h5>
                                                     <div class="">
-                                                        <img src="../img/logo/banner-nav-DataEase.svg" alt="DataEase Logo" />
+                                                        <img src="../../../img/logo/banner-nav-DataEase.svg" alt="DataEase Logo" />
                                                         <p class="text-muted mb-1">开源数据可视化分析平台</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/dataease/dataease?style=social">
                                                     </div>
@@ -228,7 +223,7 @@
                                                 <div class="card-body header-card-body">
                                                     <h5 class="mt-3">保护</h5>
                                                     <div class="">
-                                                        <img src="../img/logo/banner-nav-JumpServer.svg" alt="JumpServer Logo" />
+                                                        <img src="../../../img/logo/banner-nav-JumpServer.svg" alt="JumpServer Logo" />
                                                         <p class="text-muted mb-1">开源堡垒机</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/jumpserver/jumpserver?style=social">
                                                     </div>
@@ -256,9 +251,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="MeterSphere 文档" class="md-header__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
+    <a href="../../.." title="MeterSphere 文档" class="md-header__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
       
-  <img src="../img/logo-white.png" alt="logo">
+  <img src="../../../img/logo-white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -274,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              源码搭建 (前后端分离)
+              接口测试插件
             
           </span>
         </div>
@@ -380,9 +375,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="MeterSphere 文档" class="md-nav__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
+    <a href="../../.." title="MeterSphere 文档" class="md-nav__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
       
-  <img src="../img/logo-white.png" alt="logo">
+  <img src="../../../img/logo-white.png" alt="logo">
 
     </a>
     MeterSphere 文档
@@ -410,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         项目介绍
       </a>
     </li>
@@ -466,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_start/quick_start/" class="md-nav__link">
+      <a href="../../../quick_start/quick_start/" class="md-nav__link">
         一键部署
       </a>
     </li>
@@ -480,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_start/create_project/" class="md-nav__link">
+      <a href="../../../quick_start/create_project/" class="md-nav__link">
         创建项目
       </a>
     </li>
@@ -494,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_start/test_track/" class="md-nav__link">
+      <a href="../../../quick_start/test_track/" class="md-nav__link">
         使用测试跟踪
       </a>
     </li>
@@ -508,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_start/api_test/" class="md-nav__link">
+      <a href="../../../quick_start/api_test/" class="md-nav__link">
         使用接口测试
       </a>
     </li>
@@ -522,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_start/ui_test/" class="md-nav__link">
+      <a href="../../../quick_start/ui_test/" class="md-nav__link">
         使用 UI 测试
       </a>
     </li>
@@ -536,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_start/load_test/" class="md-nav__link">
+      <a href="../../../quick_start/load_test/" class="md-nav__link">
         使用性能测试
       </a>
     </li>
@@ -558,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_arch/" class="md-nav__link">
+      <a href="../../../system_arch/" class="md-nav__link">
         系统架构
       </a>
     </li>
@@ -618,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/network_port/" class="md-nav__link">
+      <a href="../../../installation/network_port/" class="md-nav__link">
         网络端口要求
       </a>
     </li>
@@ -669,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/online_installation/" class="md-nav__link">
+      <a href="../../../installation/online_installation/" class="md-nav__link">
         在线安装
       </a>
     </li>
@@ -683,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/online_upgrade/" class="md-nav__link">
+      <a href="../../../installation/online_upgrade/" class="md-nav__link">
         在线升级
       </a>
     </li>
@@ -697,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/offline_installation/" class="md-nav__link">
+      <a href="../../../installation/offline_installation/" class="md-nav__link">
         离线安装
       </a>
     </li>
@@ -711,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/offline_upgrade/" class="md-nav__link">
+      <a href="../../../installation/offline_upgrade/" class="md-nav__link">
         离线升级
       </a>
     </li>
@@ -732,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/kubernetes_installation/" class="md-nav__link">
+      <a href="../../../installation/kubernetes_installation/" class="md-nav__link">
         Kubernetes 中部署
       </a>
     </li>
@@ -746,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/offline_installation_windows/" class="md-nav__link">
+      <a href="../../../installation/offline_installation_windows/" class="md-nav__link">
         Windows 中部署
       </a>
     </li>
@@ -760,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/offline_installation_mac/" class="md-nav__link">
+      <a href="../../../installation/offline_installation_mac/" class="md-nav__link">
         Mac 中部署
       </a>
     </li>
@@ -813,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/pre_work/" class="md-nav__link">
+      <a href="../../../installation/pre_work/" class="md-nav__link">
         整体部署规划
       </a>
     </li>
@@ -827,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/build_kafka/" class="md-nav__link">
+      <a href="../../../installation/build_kafka/" class="md-nav__link">
         部署kafka集群
       </a>
     </li>
@@ -841,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/build_data_streaming/" class="md-nav__link">
+      <a href="../../../installation/build_data_streaming/" class="md-nav__link">
         部署data-streaming集群
       </a>
     </li>
@@ -855,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/build_node_controller/" class="md-nav__link">
+      <a href="../../../installation/build_node_controller/" class="md-nav__link">
         部署node-controller集群
       </a>
     </li>
@@ -869,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/pressure_work/" class="md-nav__link">
+      <a href="../../../installation/pressure_work/" class="md-nav__link">
         压测工作
       </a>
     </li>
@@ -890,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/backup_data/" class="md-nav__link">
+      <a href="../../../installation/backup_data/" class="md-nav__link">
         MeterSphere 数据备份
       </a>
     </li>
@@ -904,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/cli/" class="md-nav__link">
+      <a href="../../../installation/cli/" class="md-nav__link">
         命令行工具
       </a>
     </li>
@@ -924,14 +919,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
@@ -962,7 +959,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           用户手册
@@ -975,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/general/" class="md-nav__link">
+      <a href="../../general/" class="md-nav__link">
         通用功能
       </a>
     </li>
@@ -1026,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/my_desk/dashboard/" class="md-nav__link">
+      <a href="../../my_desk/dashboard/" class="md-nav__link">
         我的仪表盘
       </a>
     </li>
@@ -1040,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/my_desk/todo/" class="md-nav__link">
+      <a href="../../my_desk/todo/" class="md-nav__link">
         我的待办
       </a>
     </li>
@@ -1054,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/my_desk/attention/" class="md-nav__link">
+      <a href="../../my_desk/attention/" class="md-nav__link">
         我的关注
       </a>
     </li>
@@ -1068,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/my_desk/created/" class="md-nav__link">
+      <a href="../../my_desk/created/" class="md-nav__link">
         我创建的
       </a>
     </li>
@@ -1132,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/intro/" class="md-nav__link">
+      <a href="../../test_track/intro/" class="md-nav__link">
         模块说明
       </a>
     </li>
@@ -1146,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/home/" class="md-nav__link">
+      <a href="../../test_track/home/" class="md-nav__link">
         首页
       </a>
     </li>
@@ -1160,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/test_case/" class="md-nav__link">
+      <a href="../../test_track/test_case/" class="md-nav__link">
         功能用例
       </a>
     </li>
@@ -1174,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/test_case_review/" class="md-nav__link">
+      <a href="../../test_track/test_case_review/" class="md-nav__link">
         用例评审
       </a>
     </li>
@@ -1188,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/test_plan/" class="md-nav__link">
+      <a href="../../test_track/test_plan/" class="md-nav__link">
         测试计划
       </a>
     </li>
@@ -1202,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/test_defect/" class="md-nav__link">
+      <a href="../../test_track/test_defect/" class="md-nav__link">
         缺陷管理
       </a>
     </li>
@@ -1216,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/test_track/test_report/" class="md-nav__link">
+      <a href="../../test_track/test_report/" class="md-nav__link">
         报告
       </a>
     </li>
@@ -1280,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/intro/" class="md-nav__link">
+      <a href="../../api_test/intro/" class="md-nav__link">
         模块说明
       </a>
     </li>
@@ -1294,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/home/" class="md-nav__link">
+      <a href="../../api_test/home/" class="md-nav__link">
         首页
       </a>
     </li>
@@ -1308,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/api_definition/" class="md-nav__link">
+      <a href="../../api_test/api_definition/" class="md-nav__link">
         接口定义
       </a>
     </li>
@@ -1322,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/api_automation/" class="md-nav__link">
+      <a href="../../api_test/api_automation/" class="md-nav__link">
         接口自动化
       </a>
     </li>
@@ -1336,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/test_report/" class="md-nav__link">
+      <a href="../../api_test/test_report/" class="md-nav__link">
         接口测试报告中心
       </a>
     </li>
@@ -1350,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/api_step/" class="md-nav__link">
+      <a href="../../api_test/api_step/" class="md-nav__link">
         用例步骤说明
       </a>
     </li>
@@ -1364,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/api_test/functions/" class="md-nav__link">
+      <a href="../../api_test/functions/" class="md-nav__link">
         内置函数
       </a>
     </li>
@@ -1424,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/ui_test/intro/" class="md-nav__link">
+      <a href="../../ui_test/intro/" class="md-nav__link">
         模块说明
       </a>
     </li>
@@ -1438,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/ui_test/info/" class="md-nav__link">
+      <a href="../../ui_test/info/" class="md-nav__link">
         注意事项
       </a>
     </li>
@@ -1452,7 +1449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/ui_test/ui_element_store/" class="md-nav__link">
+      <a href="../../ui_test/ui_element_store/" class="md-nav__link">
         元素库
       </a>
     </li>
@@ -1466,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/ui_test/ui_automation/" class="md-nav__link">
+      <a href="../../ui_test/ui_automation/" class="md-nav__link">
         UI 自动化
       </a>
     </li>
@@ -1480,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/ui_test/ui_test_report/" class="md-nav__link">
+      <a href="../../ui_test/ui_test_report/" class="md-nav__link">
         测试报告
       </a>
     </li>
@@ -1538,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/load_test/intro/" class="md-nav__link">
+      <a href="../../load_test/intro/" class="md-nav__link">
         模块说明
       </a>
     </li>
@@ -1552,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/load_test/home/" class="md-nav__link">
+      <a href="../../load_test/home/" class="md-nav__link">
         首页
       </a>
     </li>
@@ -1566,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/load_test/load_test/" class="md-nav__link">
+      <a href="../../load_test/load_test/" class="md-nav__link">
         性能测试
       </a>
     </li>
@@ -1580,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/load_test/test_report/" class="md-nav__link">
+      <a href="../../load_test/test_report/" class="md-nav__link">
         性能测试报告
       </a>
     </li>
@@ -1634,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/report_statistics/project_statistics/" class="md-nav__link">
+      <a href="../../report_statistics/project_statistics/" class="md-nav__link">
         项目报表
       </a>
     </li>
@@ -1648,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/report_statistics/report/" class="md-nav__link">
+      <a href="../../report_statistics/report/" class="md-nav__link">
         项目报告
       </a>
     </li>
@@ -1722,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/project_info/" class="md-nav__link">
+      <a href="../../project_management/project_info/" class="md-nav__link">
         项目信息
       </a>
     </li>
@@ -1736,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/project_user/" class="md-nav__link">
+      <a href="../../project_management/project_user/" class="md-nav__link">
         项目成员
       </a>
     </li>
@@ -1750,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/usergroup_permission/" class="md-nav__link">
+      <a href="../../project_management/usergroup_permission/" class="md-nav__link">
         用户组与权限
       </a>
     </li>
@@ -1764,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/project_environment/" class="md-nav__link">
+      <a href="../../project_management/project_environment/" class="md-nav__link">
         项目环境
       </a>
     </li>
@@ -1778,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/file_management/" class="md-nav__link">
+      <a href="../../project_management/file_management/" class="md-nav__link">
         文件管理
       </a>
     </li>
@@ -1792,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/customcode_snippets/" class="md-nav__link">
+      <a href="../../project_management/customcode_snippets/" class="md-nav__link">
         自定义代码片段
       </a>
     </li>
@@ -1806,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/false_library/" class="md-nav__link">
+      <a href="../../project_management/false_library/" class="md-nav__link">
         误报库
       </a>
     </li>
@@ -1820,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/template_management/" class="md-nav__link">
+      <a href="../../project_management/template_management/" class="md-nav__link">
         模版管理
       </a>
     </li>
@@ -1834,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/notice_management/" class="md-nav__link">
+      <a href="../../project_management/notice_management/" class="md-nav__link">
         消息设置
       </a>
     </li>
@@ -1848,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/operation_log/" class="md-nav__link">
+      <a href="../../project_management/operation_log/" class="md-nav__link">
         操作日志
       </a>
     </li>
@@ -1862,7 +1859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/version%20management/" class="md-nav__link">
+      <a href="../../project_management/version%20management/" class="md-nav__link">
         版本管理
       </a>
     </li>
@@ -1876,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/project_management/application_management/" class="md-nav__link">
+      <a href="../../project_management/application_management/" class="md-nav__link">
         应用管理
       </a>
     </li>
@@ -1932,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/system_management/intro/" class="md-nav__link">
+      <a href="../../system_management/intro/" class="md-nav__link">
         模块说明
       </a>
     </li>
@@ -1946,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/system_management/system/" class="md-nav__link">
+      <a href="../../system_management/system/" class="md-nav__link">
         系统
       </a>
     </li>
@@ -1960,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/system_management/workspace/" class="md-nav__link">
+      <a href="../../system_management/workspace/" class="md-nav__link">
         工作空间
       </a>
     </li>
@@ -1979,14 +1976,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" checked>
       
       
         
@@ -2007,7 +2006,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_10">
           <span class="md-nav__icon md-icon"></span>
           插件使用教程
@@ -2020,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/plugin_use/chrome_plugin/" class="md-nav__link">
+      <a href="../chrome_plugin/" class="md-nav__link">
         MeterSphere 浏览器插件
       </a>
     </li>
@@ -2034,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/plugin_use/jenkins_plugin/" class="md-nav__link">
+      <a href="../jenkins_plugin/" class="md-nav__link">
         Jenkins 插件
       </a>
     </li>
@@ -2048,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/plugin_use/idea_plugin/" class="md-nav__link">
+      <a href="../idea_plugin/" class="md-nav__link">
         IDEA 插件
       </a>
     </li>
@@ -2062,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user_manual/plugin_use/selenium_ide_plugin/" class="md-nav__link">
+      <a href="../selenium_ide_plugin/" class="md-nav__link">
         Selenium IDE 插件
       </a>
     </li>
@@ -2074,11 +2073,19 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../user_manual/plugin_use/api_test_plugin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         接口测试插件
       </a>
+      
     </li>
   
 
@@ -2105,7 +2112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/use_tutorial/" class="md-nav__link">
+      <a href="../../../tutorial/use_tutorial/" class="md-nav__link">
         使用教程
       </a>
     </li>
@@ -2120,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../teach_video/video_index/" class="md-nav__link">
+      <a href="../../../teach_video/video_index/" class="md-nav__link">
         教学视频
       </a>
     </li>
@@ -2180,7 +2187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/installation/" class="md-nav__link">
+      <a href="../../../faq/installation/" class="md-nav__link">
         安装部署相关
       </a>
     </li>
@@ -2194,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/test_track/" class="md-nav__link">
+      <a href="../../../faq/test_track/" class="md-nav__link">
         测试跟踪相关
       </a>
     </li>
@@ -2208,7 +2215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/api_test/" class="md-nav__link">
+      <a href="../../../faq/api_test/" class="md-nav__link">
         接口测试相关
       </a>
     </li>
@@ -2222,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/load_test/" class="md-nav__link">
+      <a href="../../../faq/load_test/" class="md-nav__link">
         性能测试相关
       </a>
     </li>
@@ -2236,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/report_statistics/" class="md-nav__link">
+      <a href="../../../faq/report_statistics/" class="md-nav__link">
         报表统计相关
       </a>
     </li>
@@ -2250,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/system_management/" class="md-nav__link">
+      <a href="../../../faq/system_management/" class="md-nav__link">
         系统设置相关
       </a>
     </li>
@@ -2264,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/service_integration/" class="md-nav__link">
+      <a href="../../../faq/service_integration/" class="md-nav__link">
         服务集成相关
       </a>
     </li>
@@ -2278,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/enterprise/" class="md-nav__link">
+      <a href="../../../faq/enterprise/" class="md-nav__link">
         企业版相关
       </a>
     </li>
@@ -2298,16 +2305,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
         
@@ -2322,7 +2327,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           开发文档
@@ -2333,142 +2338,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          源码搭建 (前后端分离)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../dev_manual/" class="md-nav__link">
         源码搭建 (前后端分离)
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    项目结构
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    配置开发环境
-  </a>
-  
-    <nav class="md-nav" aria-label="配置开发环境">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    后端
-  </a>
-  
-    <nav class="md-nav" aria-label="后端">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    初始化配置
-  </a>
-  
-    <nav class="md-nav" aria-label="初始化配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    数据库初始化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metersphere" class="md-nav__link">
-    MeterSphere 配置文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jmeter" class="md-nav__link">
-    JMeter 配置文件
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    运行后端服务
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    前端
-  </a>
-  
-    <nav class="md-nav" aria-label="前端">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    初始化配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    运行前端服务
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2480,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../automation_plugin_dev/" class="md-nav__link">
+      <a href="../../../automation_plugin_dev/" class="md-nav__link">
         接口自动化插件开发示例
       </a>
     </li>
@@ -2502,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case_studies/user_cases/" class="md-nav__link">
+      <a href="../../../case_studies/user_cases/" class="md-nav__link">
         用户案例
       </a>
     </li>
@@ -2517,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/changelog/" class="md-nav__link">
+      <a href="../../../about/changelog/" class="md-nav__link">
         更新日志
       </a>
     </li>
@@ -2532,7 +2406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/contact/" class="md-nav__link">
+      <a href="../../../about/contact/" class="md-nav__link">
         联系我们
       </a>
     </li>
@@ -2557,115 +2431,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    项目结构
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    配置开发环境
-  </a>
-  
-    <nav class="md-nav" aria-label="配置开发环境">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    后端
-  </a>
-  
-    <nav class="md-nav" aria-label="后端">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    初始化配置
-  </a>
-  
-    <nav class="md-nav" aria-label="初始化配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    数据库初始化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metersphere" class="md-nav__link">
-    MeterSphere 配置文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jmeter" class="md-nav__link">
-    JMeter 配置文件
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    运行后端服务
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    前端
-  </a>
-  
-    <nav class="md-nav" aria-label="前端">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    初始化配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    运行前端服务
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2683,117 +2448,18 @@
 
 
 
-  <h1>源码搭建 (前后端分离)</h1>
-
-<h2 id="_1">项目结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>.
-├── Dockerfile                                      # 构建容器镜像使用的 dockerfile
-├── Jenkinsfile                                     # 构建JAR包使用的 jenkinsfile
-├── LICENSE
-├── OWNERS
-├── README.md
-├── README-EN.md
-├── SECURITY.md                                     # 安全说明
-├── CODE_OF_CONDUCT.md                        
-├── CONTRIBUTING.md               
-├── backend                                         # 后端项目主目录
-│   ├── src                                         # 后端代码目录
-│   ├── pom.xml                                     # 后端 maven 项目使用的 pom 文件
-│   └── .gitignore                                  
-├── frontend                                        # 前端项目主目录
-│   ├── public
-│   ├── src                                         # 前端代码目录
-│   ├── .editorconfig
-│   ├── .gitignore
-│   ├── babel.config.js
-│   ├── package.json
-│   ├── vue.config.js                               # 前端 maven 项目使用的 pom 文件
-│   └── 代码规范.MD
-├── .gitignore
-├── .gitmodules
-└── pom.xml                                         # 整体 maven 项目使用的 pom 文件
-</code></pre></div>
-<h2 id="_2">配置开发环境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">后端<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>MeterSphere 后端使用了 Java 语言的 Spring Boot 框架，并使用 Maven 作为项目管理工具。开发者需要先在开发环境中安装 JDK 1.11 及 Maven。</p>
-<h4 id="_4">初始化配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="_5">数据库初始化<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
 <div class="admonition info">
 <p class="admonition-title">注意</p>
-<p>MeterSphere 使用 MySQL 数据库，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改开发环境中的数据库配置文件。</p>
+<ul>
+<li>WebSocket/MQTT/AMQP 等协议插件包是企业版功能，暂不开源</li>
+</ul>
 </div>
-<div class="highlight"><pre><span></span><code>[mysqld]
-default-storage-engine=INNODB
-lower_case_table_names=1
-table_open_cache=128
-max_connections=2000
-max_connect_errors=6000
-innodb_file_per_table=1
-innodb_buffer_pool_size=1G
-max_allowed_packet=64M
-transaction_isolation=READ-COMMITTED
-innodb_flush_method=O_DIRECT
-innodb_lock_wait_timeout=1800
-innodb_flush_log_at_trx_commit=0
-sync_binlog=0
-
-server-id=1
-log-bin=mysql-bin
-expire_logs_days = 2
-binlog_format=mixed
-
-sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
-skip-name-resolve
-</code></pre></div>
-<p>请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n n-Quoted">`metersphere_dev`</span><span class="w"> </span><span class="cm">/*!40100 DEFAULT CHARACTER SET utf8mb4 */</span>
-</code></pre></div></p>
-<h5 id="metersphere">MeterSphere 配置文件<a class="headerlink" href="#metersphere" title="Permanent link">&para;</a></h5>
-<p>MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/metersphere.properties，请参考下列配置创建对应目录及配置文件。</p>
-<div class="highlight"><pre><span></span><code># 数据库配置
-spring.datasource.url=jdbc:mysql://localhost:3306/metersphere_dev?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false
-spring.datasource.username=root
-spring.datasource.password=root
-
-# kafka 配置，node-controller 以及 data-streaming 服务需要使用 kafka 进行测试结果的收集和处理
-kafka.partitions=1
-kafka.replicas=1
-kafka.topic=JMETER_METRICS
-kafka.test.topic=JMETER_TESTS
-kafka.bootstrap-servers={KAFKA_IP}:19092
-kafka.log.topic=JMETER_LOGS
-kafka.report.topic=JMETER_REPORTS
-
-# node-controller 所使用的 jmeter 镜像版本 
-jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.6
-
-# TCP Mock 端口范围
-tcp.mock.port=10000-10010
-
-# Redis 配置
-spring.redis.host={REDIS_IP}
-spring.redis.port=6379
-spring.redis.password=Password123@redis
-
-# 启动模式，lcoal 表示以本地开发模式启动
-run.mode=local
-</code></pre></div>
-<h5 id="jmeter">JMeter 配置文件<a class="headerlink" href="#jmeter" title="Permanent link">&para;</a></h5>
-<p>metersphere-server 服务依赖的 JMeter 核心类库需要加载 JMeter 配置文件，默认加载 /opt/jmeter 下的配置文件。</p>
-<p>开发者需要先创建好对应文件夹，并将工程目录中 backend/src/main/resources/jmeter/bin 目录下的配置文件拷贝到 /opt/jmeter/bin 目录。</p>
-<h4 id="_6">运行后端服务<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>在启动配置中添加 Spring Boot 启动项，直接启动 Spring Boot 项目即可。</p>
-<p><img alt="server-start" src="../img/dev/server-start.png" /></p>
-<h3 id="_7">前端<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>MeterSphere 前端使用了 Vue.js 作为前端框架，ElementUI 作为 UI 框架，并使用 npm 作为包管理工具。开发者请先下载 Node.js 作为运行环境，IDEA 用户建议安装 Vue.js 插件，便于开发。</p>
-<h4 id="_8">初始化配置<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>进入 metersphere-server/frontend/ 目录，执行以下命令安装相关前端组件。
-<div class="highlight"><pre><span></span><code>npm install
-</code></pre></div></p>
-<h4 id="_9">运行前端服务<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<p>进入到 metersphere-server/frontend/ 目录，执行以下命令启动前端服务。
-<div class="highlight"><pre><span></span><code>npm run serve
-</code></pre></div></p>
+<p>MeterSphere 支持常用协议外，还支持其他扩展协议，如 WebSocket/MQTT/AMQP 等协议，但是需要在【系统设置-插件管理】界面，上传扩展协议的插件包。</p>
+<p>以 MQTT 协议为例，在【系统设置-插件管理】界面下，上传 MQTT 插件
+<img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%861.png" /></p>
+<p>在【接口测试-接口自动化】界面下，新建一个场景，点击场景右下角【+】号，添加 MQTT 相关请求。
+<img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%862.png" /></p>
+<p><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%863.png" /></p>
 
 
   
@@ -2877,11 +2543,11 @@ run.mode=local
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a00a7c5e.min.js"></script>
       
     
 <script>
