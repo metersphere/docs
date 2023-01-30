@@ -2083,30 +2083,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6 授权管理
+  <a href="#6-x-pack" class="md-nav__link">
+    6 配额管理 (X-Pack)
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#7" class="md-nav__link">
-    7 操作日志
+    7 授权管理
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#8" class="md-nav__link">
-    8 插件管理
+    8 操作日志
   </a>
   
-    <nav class="md-nav" aria-label="8 插件管理">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9 插件管理
+  </a>
+  
+    <nav class="md-nav" aria-label="9 插件管理">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-metersphere-mqtt-x-pack" class="md-nav__link">
-    8.1 MeterSphere MQTT 插件设置 (X-Pack)
+  <a href="#91-metersphere-mqtt-x-pack" class="md-nav__link">
+    9.1 MeterSphere MQTT 插件设置 (X-Pack)
   </a>
   
 </li>
@@ -2705,30 +2712,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    6 授权管理
+  <a href="#6-x-pack" class="md-nav__link">
+    6 配额管理 (X-Pack)
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#7" class="md-nav__link">
-    7 操作日志
+    7 授权管理
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#8" class="md-nav__link">
-    8 插件管理
+    8 操作日志
   </a>
   
-    <nav class="md-nav" aria-label="8 插件管理">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    9 插件管理
+  </a>
+  
+    <nav class="md-nav" aria-label="9 插件管理">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-metersphere-mqtt-x-pack" class="md-nav__link">
-    8.1 MeterSphere MQTT 插件设置 (X-Pack)
+  <a href="#91-metersphere-mqtt-x-pack" class="md-nav__link">
+    9.1 MeterSphere MQTT 插件设置 (X-Pack)
   </a>
   
 </li>
@@ -2947,14 +2961,22 @@ kubectl get all -n ms-pool
 <h3 id="56-x-pack">5.6 模块管理 (X-Pack)<a class="headerlink" href="#56-x-pack" title="Permanent link">&para;</a></h3>
 <p>切换至<code>模块管理</code>标签，点击<code>启用/禁用</code>按钮，系统只显示<code>启用</code>的模块，<code>禁用</code>的模块不会在系统中出现。
 <img alt="模块管理" src="../../../img/system_management/%E6%A8%A1%E5%9D%97%E7%AE%A1%E7%90%86.png" /></p>
-<h2 id="6">6 授权管理<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h2 id="6-x-pack">6 配额管理 (X-Pack)<a class="headerlink" href="#6-x-pack" title="Permanent link">&para;</a></h2>
+<p>进入<code>配额管理</code>页面，可<code>编辑</code>上方的工作空间默认配额，编辑完成后，在配额列表中使用默认配置的，将同步更新编辑的数据。
+<img alt="配额管理" src="../../../img/system_management/%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86.png" /></p>
+<p><img alt="配额管理" src="../../../img/system_management/%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86_1.png" /></p>
+<p>点击工作空间的<code>编辑</code>按钮，可对单个工作空间进行配额管理设置
+<img alt="配额管理" src="../../../img/system_management/%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86_2.png" /></p>
+<p>点击<code>删除</code>按钮，即可删除已配置好的内容，恢复到最初状态，使用默认配额的状态也由<code>是</code>变成<code>否</code>
+<img alt="配额管理" src="../../../img/system_management/%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86_3.png" /></p>
+<h2 id="7">7 授权管理<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <p>点击左侧<code>系统</code>下拉菜单中的<code>授权管理</code>进入授权管理界面，点击<code>授权验证</code>导入企业版证书，开启 X-Pack 功能。
 <img alt="授权管理首页" src="../../../img/system_management/%E6%8E%88%E6%9D%83%E7%AE%A1%E7%90%86%E9%A6%96%E9%A1%B5.png" /></p>
-<h2 id="7">7 操作日志<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h2 id="8">8 操作日志<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <p>点击左侧<code>系统</code>下拉菜单中的<code>操作日志</code>进入日志界面，显示登录用户权限范围内的全部测试资源日志信息，并支持使用高级查询来快速查找相关日志。
 <img alt="操作日志首页" src="../../../img/system_management/%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97%E9%A6%96%E9%A1%B5.png" /></p>
-<h2 id="8">8 插件管理<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
-<h3 id="81-metersphere-mqtt-x-pack">8.1 MeterSphere MQTT 插件设置 (X-Pack)<a class="headerlink" href="#81-metersphere-mqtt-x-pack" title="Permanent link">&para;</a></h3>
+<h2 id="9">9 插件管理<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h3 id="91-metersphere-mqtt-x-pack">9.1 MeterSphere MQTT 插件设置 (X-Pack)<a class="headerlink" href="#91-metersphere-mqtt-x-pack" title="Permanent link">&para;</a></h3>
 <p>在 <code>系统设置</code>-<code>插件管理</code> 界面下，上传 MQTT 插件
 <img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%861.png" /></p>
 <p>在 <code>接口测试</code>-<code>接口自动化</code> 界面下，新建一个场景，点击场景右下角 <code>+</code> 号，添加 MQTT 相关请求。
