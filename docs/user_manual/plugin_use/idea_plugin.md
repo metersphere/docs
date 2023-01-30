@@ -1,8 +1,8 @@
 开发人员可通过该插件实时将编写的接口代码推送到 MeterSphere 系统
 
 !!! info "安装注意"
-* 不低于 2018.3 的 IDEA Ultimate，Community 版本
-* 下载离线包: https://plugins.jetbrains.com/plugin/18097-metersphere/versions
+    * 不低于 2018.3 的 IDEA Ultimate，Community 版本
+    * 下载离线包: https://plugins.jetbrains.com/plugin/18097-metersphere/versions
 
 ## 1 安装步骤
 ### 1.1 在线安装

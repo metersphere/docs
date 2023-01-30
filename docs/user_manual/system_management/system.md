@@ -209,9 +209,7 @@ kubectl get all -n ms-pool
 ![操作日志首页](../../img/system_management/操作日志首页.png)
 
 ## 8 插件管理
-### 8.1 MeterSphere MQTT 插件设置
-- 下载地址：https://github.com/metersphere/metersphere-plugin-mqtt
-
+### 8.1 MeterSphere MQTT 插件设置 (X-Pack)
 在 `系统设置`-`插件管理` 界面下，上传 MQTT 插件
 ![jenkins-plugin](../../img/system_management/插件管理1.png)
 
