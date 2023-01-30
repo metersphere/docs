@@ -2854,7 +2854,7 @@ default-character-set=utf8mb4
 default-character-set=utf8mb4
 </code></pre></div>
 <p>请参考文档中的建库语句创建 MeterSphere 使用的数据库，MeterSphere 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n n-Quoted">`metersphere_dev`</span><span class="w"> </span><span class="cm">/*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci *//*!80016 DEFAULI ENCRYPTION=&#39;N&#39;*/</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">metersphere_dev</span><span class="w"> </span><span class="cm">/*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci *//*!80016 DEFAULT ENCRYPTION=&#39;N&#39;*/</span><span class="p">;</span>
 </code></pre></div></p>
 <h5 id="metersphere">MeterSphere 配置文件<a class="headerlink" href="#metersphere" title="Permanent link">&para;</a></h5>
 <p>MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/metersphere.properties，请参考下列配置创建对应目录及配置文件。</p>
