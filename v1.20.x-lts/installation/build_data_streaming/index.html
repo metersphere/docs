@@ -21,7 +21,7 @@
         <link rel="next" href="../build_node_controller/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
     
     
       
@@ -2486,63 +2486,62 @@ MS_KAFKA_BOOTSTRAP_SERVERS=10.1.240.154:9092,10.1.240.155:9092,10.1.240.156:9092
 
 version: &quot;2.1&quot;
 volumes:
-    ms-conf:
-        driver_opts:
-            type: none
-            device: ${MS_BASE}/metersphere/conf
-            o: bind
-    ms-logs:
-        driver_opts:
-            type: none
-            device: ${MS_BASE}/metersphere/logs
-            o: bind
-    ms-data:
-        driver_opts:
-            type: none
-            device: ${MS_BASE}/metersphere/data
-            o: bind
+  ms-conf:
+    driver_opts:
+      type: none
+      device: ${MS_BASE}/metersphere/conf
+      o: bind
+  ms-logs:
+    driver_opts:
+      type: none
+      device: ${MS_BASE}/metersphere/logs
+      o: bind
+  ms-data:
+    driver_opts:
+      type: none
+      device: ${MS_BASE}/metersphere/data
+      o: bind
+
 networks:
-    ms-network:
-         driver: bridge
-            ipam:
-              driver: default
-              config:
-                - subnet: ${MS_DOCKER_SUBNET}
+  ms-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${MS_DOCKER_SUBNET}
 </code></pre></div></p>
 <p>docker-compose-ds.yml
-<div class="highlight"><pre><span></span><code>vim docker-compose-base.yml #拷贝ms服务器的docker-compose-base.yml 
-vim docker-compose-ds.yml #新加ds yaml文件
+<div class="highlight"><pre><span></span><code>vim docker-compose-ds.yml #新加ds yaml文件
 
 version: &quot;2.1&quot;
 services:
-    ms-data-streaming:
-        image: ${MS_PREFIX}/ms-data-streaming:${MS_TAG}
-        container_name: ms-data-streaming
-        environment:
-            HOST_HOSTNAME: $HOSTNAME
-            SPRING_DATASOURCE_URL: jdbc:mysql://${MS_MYSQL_HOST}:${MS_MYSQL_PORT}/${MS_MYSQL_DB}?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false
-            SPRING_DATASOURCE_USERNAME: ${MS_MYSQL_USER}
-            SPRING_DATASOURCE_PASSWORD: ${MS_MYSQL_PASSWORD}
-            KAFKA_PARTITIONS: 60  #此处修改kafka分区
-            KAFKA_REPLICAS: 1
-            KAFKA_TOPIC: ${MS_KAFKA_TOPIC}
-            KAFKA_LOG_TOPIC: ${MS_KAFKA_LOG_TOPIC}
-            KAFKA_TEST_TOPIC: ${MS_KAFKA_TEST_TOPIC}
-            KAFKA_BOOTSTRAP-SERVERS: ${MS_KAFKA_BOOTSTRAP_SERVERS} #此处修改为kafka集群
-            ports:
-            - 8084:8084
-            - 8085:8085
-        healthcheck:
-            test: [&quot;CMD&quot;, &quot;nc&quot;, &quot;-zv&quot;, &quot;localhost&quot;, &quot;8084&quot;]
-            interval: 6s
-            timeout: 10s
-            retries: 20
-        restart: on-failure
-        volumes:
-            - ./conf/metersphere.properties:/opt/metersphere/conf/metersphere.properties
-            - ${MS_BASE}/metersphere/logs/data-streaming:/opt/metersphere/logs/data-streaming
-networks:
-    - ms-network
+  ms-data-streaming:
+    image: ${MS_IMAGE_PREFIX}/ms-data-streaming:${MS_IMAGE_TAG}
+    container_name: ms-data-streaming
+    environment:
+      HOST_HOSTNAME: $HOSTNAME
+      SPRING_DATASOURCE_URL: jdbc:mysql://${MS_MYSQL_HOST}:${MS_MYSQL_PORT}/${MS_MYSQL_DB}?autoReconnect=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;allowPublicKeyRetrieval=true&amp;useSSL=false
+      SPRING_DATASOURCE_USERNAME: ${MS_MYSQL_USER}
+      SPRING_DATASOURCE_PASSWORD: ${MS_MYSQL_PASSWORD}
+      KAFKA_PARTITIONS: 4
+      KAFKA_REPLICAS: 1
+      KAFKA_TOPIC: ${MS_KAFKA_TOPIC}
+      KAFKA_LOG_TOPIC: ${MS_KAFKA_LOG_TOPIC}
+      KAFKA_TEST_TOPIC: ${MS_KAFKA_TEST_TOPIC}
+      KAFKA_REPORT_TOPIC: ${MS_KAFKA_REPORT_TOPIC}
+      KAFKA_BOOTSTRAP-SERVERS: ${MS_KAFKA_HOST}:${MS_KAFKA_PORT}
+      FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS: &#39;true&#39;
+    healthcheck:
+      test: [&quot;CMD&quot;, &quot;nc&quot;, &quot;-zv&quot;, &quot;localhost&quot;, &quot;8084&quot;]
+      interval: 6s
+      timeout: 10s
+      retries: 20
+    restart: always
+    volumes:
+      - ./conf/metersphere.properties:/opt/metersphere/conf/metersphere.properties
+      - ${MS_BASE}/metersphere/logs/data-streaming:/opt/metersphere/logs/data-streaming
+    networks:
+      - ms-network
 </code></pre></div></p>
 <p>启动data-streaming，执行命令:
 <div class="highlight"><pre><span></span><code>source .env 
