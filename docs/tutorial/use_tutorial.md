@@ -33,3 +33,6 @@
 
 ## 6 项目设置
 - [MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书](https://kb.fit2cloud.com/archives/最佳实践metersphere如何对接邮件钉钉企业微信飞书)
+
+## 7 数据库
+- [MeterSphere 数据库提取参数和断言](https://kb.fit2cloud.com/archives/数据库提取参数和断言)
