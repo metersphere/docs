@@ -55,7 +55,6 @@ networks:
 
 docker-compose-ds.yml
 ```
-vim docker-compose-base.yml #拷贝ms服务器的docker-compose-base.yml 
 vim docker-compose-ds.yml #新加ds yaml文件
 
 version: "2.1"
