@@ -10,6 +10,7 @@
 - [MeterSphere 中常用 Jmeter 函数使用详细](https://kb.fit2cloud.com/archives/最佳实践metersphere中常用jmeter函数详细使用说明)
 - [MeterSphere 快速生成测试数据(枚举、正则、函数)](https://kb.fit2cloud.com/archives/最佳实践metersphere快速生成测试数据枚举正则函数)
 - [MeterSphere 接口测试环境及环境组+动态数据源使用](https://kb.fit2cloud.com/archives/metersphere接口测试环境及环境组动态数据源使用)
+- [MeterSphere 数据库提取参数和断言](https://kb.fit2cloud.com/archives/数据库提取参数和断言)
 
 ## 2 UI 测试
 - [MeterSphere 的 UI 测试模块如何远程调用浏览器](https://kb.fit2cloud.com/archives/metersphere的ui测试模块如何远程调用浏览器)
@@ -22,6 +23,7 @@
 - [MeterSphere 服务集成之 TAPD 对接](https://kb.fit2cloud.com/archives/metersphere服务集成之tapd对接)
 - [MeterSphere 服务集成 Azure Devops 对接](https://kb.fit2cloud.com/archives/metersphere服务集成azuredevops对接)
 - [在 MeterSphere 平台添加并使用 Kubernetes 资源池](https://kb.fit2cloud.com/archives/在metersphere平台添加并使用kubernetes资源池)
+- [MeterSphere开源持续测试平台与腾讯云CODING DevOps的集成](https://mp.weixin.qq.com/s/iFvdS_AwZdfP2m3sS7up9Q)
 
 ## 4 插件使用
 - [MeterSphere 和 Jenkins 实现流水线集成](https://kb.fit2cloud.com/archives/最佳实践metersphere和jenkins实现流水线集成)
@@ -34,5 +36,3 @@
 ## 6 项目设置
 - [MeterSphere 消息通知之对接邮件、钉钉、企业微信、飞书](https://kb.fit2cloud.com/archives/最佳实践metersphere如何对接邮件钉钉企业微信飞书)
 
-## 7 数据库
-- [MeterSphere 数据库提取参数和断言](https://kb.fit2cloud.com/archives/数据库提取参数和断言)
