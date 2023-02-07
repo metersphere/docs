@@ -21,7 +21,7 @@
         <link rel="next" href="../contact/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -2435,6 +2435,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12019-lts" class="md-nav__link">
+    v1.20.19-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12018-lts" class="md-nav__link">
     v1.20.18-lts
   </a>
@@ -3086,6 +3093,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12019-lts" class="md-nav__link">
+    v1.20.19-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12018-lts" class="md-nav__link">
     v1.20.18-lts
   </a>
@@ -3709,6 +3723,42 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12019-lts">v1.20.19-lts<a class="headerlink" href="#v12019-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年2月2日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(UI自动化): 鼠标增加右键&amp;强制点击操作</li>
+<li>refactor(接口测试): 优化CASE保存后的加载方法</li>
+<li>refactor(接口测试): 场景变量机制优化，当所有优先规则不选时，默认过程变量优先</li>
+<li>refactor(性能测试): 优化查询资源池列表，减少资源池很多的情况下查询时长</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(接口测试): 修复cron表达式无法验证年的缺陷</li>
+<li>fix(接口测试): 修复json-schema的高级设置描述过长超出页面的缺陷</li>
+<li>fix(接口测试): 修复场景列表显示unexecute状态的缺陷</li>
+<li>fix(接口测试): 修复场景单步骤调试循环控制器子步骤没有结果的缺陷</li>
+<li>fix(接口测试): 修复批量复制的场景删除后别的场景下的步骤也被删除的缺陷</li>
+<li>fix(接口测试): 优化接口场景和UI共用的报告头组件中跳转数据方法</li>
+<li>fix(接口测试): 修复部分接口导出swagger文件报错问题</li>
+<li>fix(接口测试): 接口测试报告跳转逻辑区分场景报告和UI报告</li>
+<li>fix(接口测试): 修复场景步骤单步调试无法使用环境变量问题</li>
+<li>fix(接口测试): 修复接口首页跳转时未屏蔽回收站数据的问题</li>
+<li>fix(测试跟踪): 功能用例导入下拉框值不显示</li>
+<li>fix(测试跟踪): 脑图复制粘贴后数据展示错误</li>
+<li>fix(测试跟踪): 用例列表导入多选输入字段时, 解析值有误</li>
+<li>fix(测试跟踪): 测试计划脑图更新用例后执行人没有更新</li>
+<li>fix(测试跟踪): 脑图提示错误信息后，再次保存会导致用例丢失</li>
+<li>fix(测试跟踪): 自定义字段多选输入非空校验不准确</li>
+<li>fix(测试跟踪): 修复测试计划跳转跨项目场景报告时出现的所属模块丢失的问题</li>
+<li>fix(任务中心): 修复任务中心收起显示在界外的缺陷</li>
+<li>fix(系统设置): 移除组织时处理非组织级别非全局用户组</li>
+</ul>
 <h2 id="v12018-lts">v1.20.18-lts<a class="headerlink" href="#v12018-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2023年1月3日</p>
@@ -8714,6 +8764,8 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
   
     
     
+    
+    
       
       
     
@@ -8723,10 +8775,14 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
   
     
     
+    
+    
     <a href="mailto:support@fit2cloud.com" target="_blank" rel="noopener" title="" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
     </a>
   
+    
+    
     
     
       
@@ -8759,7 +8815,7 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
     
     
 
-      <script src="../../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
 <script>
