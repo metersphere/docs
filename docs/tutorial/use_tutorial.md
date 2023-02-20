@@ -26,7 +26,7 @@
 - [MeterSphere开源持续测试平台与腾讯云CODING DevOps的集成](https://mp.weixin.qq.com/s/iFvdS_AwZdfP2m3sS7up9Q)
 
 ## 4 插件使用
-- [MeterSphere 和 Jenkins 实现流水线集成](hhttps://kb.fit2cloud.com/?p=251)
+- [MeterSphere 和 Jenkins 实现流水线集成](https://kb.fit2cloud.com/?p=251)
 
 ## 5 脚本引用
 - [MeterSphere Python 前后置脚本如何引用第三方库](https://kb.fit2cloud.com/?p=105)
