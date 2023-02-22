@@ -319,3 +319,11 @@ jmx 脚本用 JMeter 打开，看是不是被禁用了,手动开启后导入即�
 
 ## 53 导入 JMeter 的 JMX 文件时，页面提示“文件解析错误”，后台报错信息为 "当前JMX版本不兼容"
 脚本中使用了 JMeter 第三方插件，需要将 JMeter 第三方插件包上传到 MS 服务器的 ms-server 容器 /app/lib 目录下，重启 ms-server 服务后，即可正常导入
+
+## 54 接口响应内容过大（约4M）导致请求卡住不动
+查看 gateway 日志如下：
+```sh
+gateway               | 2023-02-22 12:27:11,015  WARN        reactor.netty.channel.FluxReceive: 299 - [8fe9d3b0-4, L:/172.30.10.3:39621 ! R:172.30.10.15/172.30.10.15:8004] An exception has been observed post termination, use DEBUG level to see the full stack: io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: Max frame length of 10485760 has been exceeded.
+```
+解决：在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小；修改完后 msctl reload 重新加载在配置文件。
+
