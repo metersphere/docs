@@ -2638,6 +2638,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#54-4m" class="md-nav__link">
+    54 接口响应内容过大（约4M）导致请求卡住不动
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3246,6 +3253,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#54-4m" class="md-nav__link">
+    54 接口响应内容过大（约4M）导致请求卡住不动
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3488,6 +3502,11 @@ prev.setResponseData(outBuffer.toString());
 <p>查看数据库-数据源，修改最大连接数</p>
 <h2 id="53-jmeter-jmx-jmx">53 导入 JMeter 的 JMX 文件时，页面提示“文件解析错误”，后台报错信息为 "当前JMX版本不兼容"<a class="headerlink" href="#53-jmeter-jmx-jmx" title="Permanent link">&para;</a></h2>
 <p>脚本中使用了 JMeter 第三方插件，需要将 JMeter 第三方插件包上传到 MS 服务器的 ms-server 容器 /app/lib 目录下，重启 ms-server 服务后，即可正常导入</p>
+<h2 id="54-4m">54 接口响应内容过大（约4M）导致请求卡住不动<a class="headerlink" href="#54-4m" title="Permanent link">&para;</a></h2>
+<p>查看 gateway 日志如下：
+<div class="highlight"><pre><span></span><code>gateway<span class="w">               </span><span class="p">|</span><span class="w"> </span><span class="m">2023</span>-02-22<span class="w"> </span><span class="m">12</span>:27:11,015<span class="w">  </span>WARN<span class="w">        </span>reactor.netty.channel.FluxReceive:<span class="w"> </span><span class="m">299</span><span class="w"> </span>-<span class="w"> </span><span class="o">[</span>8fe9d3b0-4,<span class="w"> </span>L:/172.30.10.3:39621<span class="w"> </span>!<span class="w"> </span>R:172.30.10.15/172.30.10.15:8004<span class="o">]</span><span class="w"> </span>An<span class="w"> </span>exception<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>observed<span class="w"> </span>post<span class="w"> </span>termination,<span class="w"> </span>use<span class="w"> </span>DEBUG<span class="w"> </span>level<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>the<span class="w"> </span>full<span class="w"> </span>stack:<span class="w"> </span>io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException:<span class="w"> </span>Max<span class="w"> </span>frame<span class="w"> </span>length<span class="w"> </span>of<span class="w"> </span><span class="m">10485760</span><span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>exceeded.
+</code></pre></div>
+解决：在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小；修改完后 msctl reload 重新加载在配置文件。</p>
 
 
   
