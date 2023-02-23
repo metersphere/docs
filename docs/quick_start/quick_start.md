@@ -31,7 +31,7 @@ MeterSphere 作为一站式持续测试平台，其正常运行需要网络环�
 ## 3 安装步骤
 以 root 用户 ssh 登录部署目标服务器, 执行以下命令。
 ```sh
-curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | sh
+curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
 ```
 安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
