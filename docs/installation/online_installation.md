@@ -10,7 +10,7 @@
 
 在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。
 ```
-curl -sSL https://github.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
+curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
 ```
 
 安装成功后，通过浏览器访问如下页面登录 MeterSphere。
