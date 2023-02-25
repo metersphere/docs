@@ -76,7 +76,10 @@ nav:
           - 测试跟踪:
                 - 模块说明: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
-                - 功能用例: user_manual/test_track/test_case.md
+                - 功能用例: 
+                  - 模块树管理: user_manual/test_track/test_case/test_case_module.md
+                  - 用例管理: user_manual/test_track/test_case/test_case.md
+                  - 公共用例库: user_manual/test_track/test_case/public_test_case.md
                 - 用例评审: user_manual/test_track/test_case_review.md
                 - 测试计划: user_manual/test_track/test_plan.md
                 - 缺陷管理: user_manual/test_track/test_defect.md
