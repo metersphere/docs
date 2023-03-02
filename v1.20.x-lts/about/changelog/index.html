@@ -21,7 +21,7 @@
         <link rel="next" href="../contact/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
@@ -2435,6 +2435,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12020-lts" class="md-nav__link">
+    v1.20.20-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12019-lts" class="md-nav__link">
     v1.20.19-lts
   </a>
@@ -3093,6 +3100,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12020-lts" class="md-nav__link">
+    v1.20.20-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12019-lts" class="md-nav__link">
     v1.20.19-lts
   </a>
@@ -3722,6 +3736,40 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 </div>
 <p>像其它优秀开源项目一样，MeterSphere 将按月发布功能版本、按年度发布 LTS（Long Term Support）版本。</p>
 <p>MeterSphere 的最新 LTS 版本为 v1.20 LTS。MeterSphere 下一个 LTS 版本为 v2.10 LTS，预计在 2023 年第二季度发布。</p>
+<h2 id="v12020-lts">v1.20.20-lts<a class="headerlink" href="#v12020-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年2月28日</p>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(系统设置): 编辑用户删除最后所属用户组时进行提示</li>
+<li>refactor(系统设置): 创建用户组开闭全局用户组开关时弹框闪动</li>
+<li>refactor(接口测试): 针对资源池调试匿名用户对附件读取方式优化</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(接口测试): 修复swagger的xml导入导出问题</li>
+<li>fix(接口测试): 修复批量执行后再批量编辑报错问题</li>
+<li>fix(接口测试): 修复任务中心误报状态显示错误的问题</li>
+<li>fix(接口测试): 修复循环控制器下的脚本执行取值问题</li>
+<li>fix(接口测试): 解决场景变量多选操作无响应问题</li>
+<li>fix(接口测试): 修复引用case没有超时时间的缺陷</li>
+<li>fix(接口测试): 修复推荐断言超过10后取不到值的缺陷</li>
+<li>fix(接口测试): 修复场景选择环境组执行引用case报错没有环境的缺陷</li>
+<li>fix(接口测试): 修复场景保存文档断言失败的缺陷</li>
+<li>fix(接口测试): 修复场景不加请求头执行报错的缺陷</li>
+<li>fix(系统设置): 编辑环境组时按钮遮挡问题</li>
+<li>fix(测试跟踪): 用例评审状态自动更新出错</li>
+<li>fix(测试跟踪): 编辑中的脑图用例被其他人删除后，保存报错</li>
+<li>fix(测试跟踪): 当测试用例状态为空时，测试计划报告数据统计有误</li>
+<li>fix(测试跟踪): 测试计划功能用例按更新时间排序后，全选编辑报错</li>
+<li>fix(项目设置): 操作日志过滤条件选择操作人后列表数据未刷新</li>
+<li>fix(项目设置): 修改项目成员所属用户组时，无法选择没有开启工作空间共享的用户组</li>
+<li>fix(定时任务): 修复设置一个过去时刻的定时问题没有把异常信息提示出来的问题</li>
+</ul>
 <h2 id="v12019-lts">v1.20.19-lts<a class="headerlink" href="#v12019-lts" title="Permanent link">&para;</a></h2>
 <hr />
 <p>2023年2月2日</p>
