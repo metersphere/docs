@@ -52,7 +52,7 @@
 
 ### 2.5 收尾打包
 增加一个与打包后的 jar 包同名的文件 src\main\resources\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies 指定插件入口。再补充一些其他的必要内容后就可以打包了。<br>
-![表单生成器](./img/automation_plugin_dev/收尾打包.png){ width="1000px" }
+![表单生成器](./img/automation_plugin_dev/收尾打包.png{ width="1000px" }
 
 ### 2.6 上传测试
 打包后将 target\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies.jar 在 MeterSphere 的插件管理页面进行上传，上传成功后就可以在接口自动化中看到插件提供的步骤。<br>

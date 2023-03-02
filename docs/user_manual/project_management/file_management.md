@@ -23,7 +23,7 @@
 ![!项目设置](../../img/project_management/切换文件.png)
 
 可对该文件出现上传，下载，删除等操作
-![!项目设置](../../img/project_management/文件查看.png)
+![!项目设置](../../img/project_management/文件重新上传.png)
 
 ## 4 文件下载
 可点击列表后面下载按钮进行文件下载，也可在文件查看页面进行文件下载

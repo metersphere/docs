@@ -64,6 +64,8 @@
 #### 2.3.6 <font size=4> 接口定义快捷添加按钮 </font>
 ![!项目设置](../../img/project_management/接口测试设置8.png)
 
+![!项目设置](../../img/project_management/接口测试设置9.png)
+
 ### 2.4 UI测试设置
 ![!项目设置](../../img/project_management/UI测试.png)
 
