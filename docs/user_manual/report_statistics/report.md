@@ -31,7 +31,7 @@
 - 删除报告
 
 点击【删除】按钮，即可删除该报告
-![!删除报告](../../img/report_statistics/删除.png)
+![!删除报告](../../img/report_statistics/测试报告_删除.png)
 
 - 定时发送
 
