@@ -47,6 +47,7 @@
 <script src="../../js/jquery-3.5.1.min.js"></script>
 <script src="../../js/bootstrap.bundle.min.js"></script>
 <script src="../../js/mega.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 
     
@@ -117,6 +118,23 @@
     
     
 <header id="topnav" class="defaultscroll sticky">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active alert alert-release alert-dismissible fade show text-center notice-phone" role="alert">
+                <span class="pr-4">《MeterSphere 性能测试系列》线上课程即将开班，报名参加学习并通过考试，将获得飞致云官方认证！</span>
+                <a target="_blank" href="https://lkh.xet.tech/s/46XfzM" class="btn-outline-release  mr-2">
+                    立即报名 </a>
+                <button type="button"  class="close" data-dismiss="alert" aria-label="Close">
+                    <span onclick="changeCss()" aria-hidden="true"> × </span>
+                </button>
+                <script>
+                    function changeCss(){
+                        document.getElementsByClassName('md-header')[0].style.top='45px'
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
     <svg class="hidden-print" aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <symbol id="mega-nav-icon-angle" viewBox="0 0 13 7">
