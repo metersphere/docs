@@ -2688,7 +2688,7 @@ tar<span class="w"> </span>-zxvf<span class="w"> </span>metersphere-online-insta
 </code></pre></div>
 <h3 id="32">3.2 安装配置文件说明<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即即可重新加载配置文件）</p>
+<p class="admonition-title">安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）</p>
 <div class="highlight"><pre><span></span><code># 基础配置
 ## 安装路径<span class="p">,</span> MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
 MS_BASE<span class="p">=</span>/<span class="k">opt</span>
@@ -2759,6 +2759,9 @@ MS_TCP_MOCK_PORT<span class="p">=</span><span class="m">10000-10010</span>
 # Chrome 容器配置
 ## 是否启动Chrome容器
 MS_CHROME_ENABLED<span class="p">=</span>false
+
+# 修改组件最大内存限制（v2.<span class="m">7</span>以上可以在 <span class="sr">/opt/</span>metersphere<span class="sr">/.env 里修改某容器服务的最大内存限制，在/</span><span class="k">opt</span><span class="sr">/metersphere/</span> 目录下的docker<span class="p">-</span>compose分别定义各自服务的最大属性值，如 api<span class="p">-</span>test 的属性在 docker<span class="p">-</span>compose<span class="p">-</span>api<span class="p">-</span>test.yml 中定义，为 MS_API_MEM_LIMIT）
+MS_API_MEM_LIMIT<span class="p">=</span><span class="m">1073741824</span>（默认为 <span class="m">1</span>g）
 </code></pre></div>
 </div>
 <h3 id="33">3.3 数据库配置文件说明<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
