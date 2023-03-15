@@ -33,7 +33,7 @@ vim install.conf
 ```
 ### 4.2 安装配置文件说明
 
-!!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即即可重新加载配置文件）"
+!!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）"
     ```vim
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
@@ -105,6 +105,9 @@ vim install.conf
     # Chrome 容器配置
     ## 是否启动Chrome容器
     MS_CHROME_ENABLED=false
+
+     # 修改组件最大内存限制（v2.7以上可以在 /opt/metersphere/.env 里修改某容器服务的最大内存限制，在/opt/metersphere/ 目录下的docker-compose分别定义各自服务的最大属性值，如 api-test 的属性在 docker-compose-api-test.yml 中定义，为 MS_API_MEM_LIMIT）
+    MS_API_MEM_LIMIT=1073741824（默认为 1g）
     ```
 
 ### 4.3 数据库配置文件说明
