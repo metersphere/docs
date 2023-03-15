@@ -170,6 +170,9 @@ cd metersphere-online-installer-v2.x.y
     MS_MINIO_ACCESS_KEY=admin
     ## minio 密码
     MS_MINIO_SECRET_KEY=Password123@minio
+
+    # 修改组件最大内存限制（v2.7以上可以在 /opt/metersphere/.env 里修改某容器服务的最大内存限制，在/opt/metersphere/ 目录下的docker-compose分别定义各自服务的最大属性值，如 api-test 的属性在 docker-compose-api-test.yml 中定义，为 MS_API_MEM_LIMIT）
+    MS_API_MEM_LIMIT=1073741824（默认为 1g）
     ```
 
 ### 3.3 数据库配置文件说明
