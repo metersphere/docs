@@ -2876,6 +2876,9 @@ MS_MINIO_ENDPOINT<span class="p">=</span>http:<span class="sr">//</span>minio:<s
 MS_MINIO_ACCESS_KEY<span class="p">=</span>admin
 ## minio 密码
 MS_MINIO_SECRET_KEY<span class="p">=</span>Password123@minio
+
+# 修改组件最大内存限制（v2.<span class="m">7</span>以上可以在 <span class="sr">/opt/</span>metersphere<span class="sr">/.env 里修改某容器服务的最大内存限制，在/</span><span class="k">opt</span><span class="sr">/metersphere/</span> 目录下的docker<span class="p">-</span>compose分别定义各自服务的最大属性值，如 api<span class="p">-</span>test 的属性在 docker<span class="p">-</span>compose<span class="p">-</span>api<span class="p">-</span>test.yml 中定义，为 MS_API_MEM_LIMIT）
+MS_API_MEM_LIMIT<span class="p">=</span><span class="m">1073741824</span>（默认为 <span class="m">1</span>g）
 </code></pre></div>
 </div>
 <h3 id="43">4.3 数据库配置文件说明<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
