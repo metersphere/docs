@@ -969,6 +969,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3 数据恢复
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2524,6 +2531,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3 数据恢复
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2602,6 +2616,19 @@ if test $? -ne 0; then
 fi
 </code></pre></div></p>
 <p>执行 crontab -l 即可</p>
+<h2 id="3">3 数据恢复<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
+<div class="highlight"><pre><span></span><code>cp metersphere.sql /opt/metersphere/data/mysql
+</code></pre></div></p>
+<p>进入 mysql 容器，进入数据库
+<div class="highlight"><pre><span></span><code>docker exec -it mysql sh
+mysql -uroot -pPassword123@mysql
+</code></pre></div></p>
+<p>创建并使用 metersphere 库，并将数据导入到库里
+<div class="highlight"><pre><span></span><code>create database metersphere;
+use metersphere;
+source /var/lib/metersphere.sql
+</code></pre></div></p>
 
 
   
