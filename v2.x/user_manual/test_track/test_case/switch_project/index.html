@@ -12,20 +12,20 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/v2.x/user_manual/test_track/test_case/public_test_case/">
+        <link rel="canonical" href="https://metersphere.io/v2.x/user_manual/test_track/test_case/switch_project/">
       
       
-        <link rel="prev" href="../test_case/">
+        <link rel="prev" href="../../home/">
       
       
-        <link rel="next" href="../../test_case_review/">
+        <link rel="next" href="../test_case_module/">
       
       <link rel="icon" href="../../../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>公共用例库 - MeterSphere 文档</title>
+        <title>项目切换 - MeterSphere 文档</title>
       
     
     
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#51" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -308,7 +308,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              公共用例库
+              项目切换
             
           </span>
         </div>
@@ -1235,11 +1235,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../switch_project/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          项目切换
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         项目切换
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1 切换工作空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2 切换项目
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1277,62 +1321,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          公共用例库
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../public_test_case/" class="md-nav__link">
         公共用例库
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    5.1 启动公共用例库
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    5.2 添加用例至公共用例库
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    5.3 从公共用例库中复制用例
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2640,22 +2633,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    5.1 启动公共用例库
+  <a href="#1" class="md-nav__link">
+    1 切换工作空间
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    5.2 添加用例至公共用例库
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    5.3 从公共用例库中复制用例
+  <a href="#2" class="md-nav__link">
+    2 切换项目
   </a>
   
 </li>
@@ -2678,21 +2664,21 @@
   
 
 
-  <h1>公共用例库</h1>
+  <h1>项目切换</h1>
 
-<p>公共用例库为同一工作空间下的不同项目均可共享使用的【公共用例】，不同项目可【添加】用例至公共用例库，和【复制】公共用例库中的用例。
-<div class="lightgallery"><a data-sub-html="公共用例库入口" href="../../../../img/track/%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93%E5%85%A5%E5%8F%A3.png"><img alt="公共用例库入口" src="../../../../img/track/%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93%E5%85%A5%E5%8F%A3.png" /></a></div></p>
-<p>公共用例库列表字段不展示自定义的模板字段
-<div class="lightgallery"><a data-sub-html="公共用例库页面" href="../../../../img/track/%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93%E9%A1%B5%E9%9D%A2.png"><img alt="公共用例库页面" src="../../../../img/track/%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93%E9%A1%B5%E9%9D%A2.png" /></a></div></p>
-<h2 id="51">5.1 启动公共用例库<a class="headerlink" href="#51" title="Permanent link">&para;</a></h2>
-<p>项目管理员可到【项目设置】-【更多选项】-【应用管理】页面下，开启【启动公共用例库】设置。
-<div class="lightgallery"><a data-sub-html="公共用例库选择数据" href="../../../../img/track/%E5%90%AF%E5%8A%A8%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93.png"><img alt="公共用例库选择数据" src="../../../../img/track/%E5%90%AF%E5%8A%A8%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93.png" /></a></div></p>
-<h2 id="52">5.2 添加用例至公共用例库<a class="headerlink" href="#52" title="Permanent link">&para;</a></h2>
-<p>点击用例【ID】或者【编辑】按钮，点击【添加到公共用例库】。
-<div class="lightgallery"><a data-sub-html="公共用例库批量处理" href="../../../../img/track/%E6%B7%BB%E5%8A%A0%E7%94%A8%E4%BE%8B%E8%87%B3%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93.png"><img alt="公共用例库批量处理" src="../../../../img/track/%E6%B7%BB%E5%8A%A0%E7%94%A8%E4%BE%8B%E8%87%B3%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93.png" /></a></div></p>
-<h2 id="53">5.3 从公共用例库中复制用例<a class="headerlink" href="#53" title="Permanent link">&para;</a></h2>
-<p>复制公共用例库中的用例到自己的项目模块中。
-<div class="lightgallery"><a data-sub-html="公共用例库批量处理" href="../../../../img/track/%E5%A4%8D%E5%88%B6%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93%E4%B8%AD%E7%9A%84%E7%94%A8%E4%BE%8B.png"><img alt="公共用例库批量处理" src="../../../../img/track/%E5%A4%8D%E5%88%B6%E5%85%AC%E5%85%B1%E7%94%A8%E4%BE%8B%E5%BA%93%E4%B8%AD%E7%9A%84%E7%94%A8%E4%BE%8B.png" /></a></div></p>
+<p>功能用例，主要用于对功能用例进行统一管理，支持用例的快捷创建及导入导出操作。</p>
+<p>进入【功能用例】界面。左上方显示当前项目，项目下方显示此项目的全部测试用例模块。所属某一项目的测试用例以模块为单位进行统一管理，页面右侧显示选定模块下的测试用例列表，支持对测试用例进行新建、查询、编辑、复制、删除等操作。
+<div class="lightgallery"><a data-sub-html="测试用例首页" href="../../../../img/track/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E9%A6%96%E9%A1%B5_1.png"><img alt="测试用例首页" src="../../../../img/track/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E9%A6%96%E9%A1%B5_1.png" /></a></div></p>
+<h2 id="1">1 切换工作空间<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>在右上角的工作空间处切换下拉菜单中进行工作空间切换，展示所属该工作空间及对应项目下的用例列表。
+<div class="lightgallery"><a data-sub-html="测试用例首页" href="../../../../img/track/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95_%E5%88%87%E6%8D%A2%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png"><img alt="测试用例首页" src="../../../../img/track/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95_%E5%88%87%E6%8D%A2%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" /></a></div></p>
+<h2 id="2">2 切换项目<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>在模块树上方的项目切换下拉菜单中进行项目切换，展示所属该项目下的用例列表。
+<div class="lightgallery"><a data-sub-html="测试用例首页" href="../../../../img/track/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95_%E5%88%87%E6%8D%A2%E9%A1%B9%E7%9B%AE.png"><img alt="测试用例首页" src="../../../../img/track/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95_%E5%88%87%E6%8D%A2%E9%A1%B9%E7%9B%AE.png" /></a></div></p>
+<div class="admonition info">
+<p class="admonition-title">说明</p>
+<p>不同项目间模块树相互独立，当切换项目后需要重新创建模块树。</p>
+</div>
 
 
   
