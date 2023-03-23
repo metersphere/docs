@@ -65,3 +65,22 @@ fi
 ```
 
 执行 crontab -l 即可
+
+## 3 数据恢复
+进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
+```
+cp metersphere.sql /opt/metersphere/data/mysql
+```
+
+进入 mysql 容器，进入数据库
+```
+docker exec -it mysql sh
+mysql -uroot -pPassword123@mysql
+```
+
+创建并使用 metersphere 库，并将数据导入到库里
+```
+create database metersphere;
+use metersphere;
+source /var/lib/metersphere.sql
+```
