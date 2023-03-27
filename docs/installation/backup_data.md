@@ -82,5 +82,5 @@ mysql -uroot -pPassword123@mysql
 ```
 create database metersphere;
 use metersphere;
-source /var/lib/metersphere.sql
+source /var/lib/mysql/metersphere.sql
 ```
