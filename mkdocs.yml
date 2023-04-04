@@ -76,7 +76,8 @@ nav:
           - 测试跟踪:
                 - 模块说明: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
-                - 功能用例: 
+                - 功能用例:
+                  - 项目切换: user_manual/test_track/test_case/switch_project.md
                   - 模块树管理: user_manual/test_track/test_case/test_case_module.md
                   - 用例管理: user_manual/test_track/test_case/test_case.md
                   - 公共用例库: user_manual/test_track/test_case/public_test_case.md
