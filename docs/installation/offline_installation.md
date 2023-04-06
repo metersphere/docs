@@ -46,7 +46,7 @@ vim install.conf
     MS_IMAGE_TAG=v2.3.0
     ## 性能测试使用的 JMeter 镜像
     MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.5-ms2-jdk11
-    ## 安装模式
+    ## 安装模式 allinone/server/node-controller/selenium-hub, 其中 selenium-hub 和 node-controller 可以专门找一台机器部署
     MS_INSTALL_MODE=allinone
     ## MeterSphere 主程序的 HTTP 服务监听端口
     MS_SERVER_PORT=8081
