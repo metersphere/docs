@@ -6,6 +6,11 @@
             mainDom.innerHTML = mainDom.innerHTML + '<br />'
         }
     });
+    function closeDiv(){
+        document.getElementsByClassName('md-header')[0].style.top='45px';
+        document.getElementsByClassName('md-main__inner')[0].style.marginTop='3rem';
+        document.getElementById("myCarousel").style.cssText += 'display: none !important';
+    }
 </script>
 <header id="topnav" class="defaultscroll sticky">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -14,7 +19,7 @@
                 <span id="tmpspan" class="pr-4">MeterSphere 专业测试云 v2.x 最新版《初级培训和认证》线上课程即将开班，报名参加学习并通过考试，将获得飞致云官方认证！</span>
                 <a target="_blank" href="https://lkh.xet.tech/s/RoBMS" class="btn-outline-release  mr-2">
                     立即报名 </a>
-                <button type="button" onclick="document.getElementsByClassName('md-header')[0].style.top='45px'" class="close" data-dismiss="alert" aria-label="Close">
+                <button type="button" onclick="closeDiv()" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"> × </span>
                 </button>
             </div>
