@@ -78,9 +78,8 @@ docker exec -it mysql sh
 mysql -uroot -pPassword123@mysql
 ```
 
-创建并使用 metersphere 库，并将数据导入到库里
+使用 metersphere 库，并将数据导入到库里
 ```
-create database metersphere;
 use metersphere;
 source /var/lib/mysql/metersphere.sql
 ```
