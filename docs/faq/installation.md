@@ -115,7 +115,7 @@ set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=10
 msctl uninstall卸载，ifconfig检查多余网桥，brctl delbr 网桥名称 删除多余网桥，msctl reload重启；
 
 ## 24 怎样监控被压测的机器
-在被测服安装node-exporter服务，然后在性能测试-高级配置里添加监控，填写被测服务器上node-exporter服务的ip和端口以及监控项
+在被测服务器上安装 node-exporter 服务，然后在 性能测试-高级配置 里添加监控，填写被测服务器上 node-exporter 服务的 ip 和端口以及监控项
 
 ## 25 忘记 MeterSphere密码
 ```
