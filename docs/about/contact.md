@@ -6,6 +6,10 @@
 
 ![wechat-group](../img/wechat-group.png)
 
+## 开源社区论坛
+
+- 飞致云官方开源社区论坛：[开源社区论坛](https://bbs.fit2cloud.com/c/ms/8)
+
 ## 其他方式
 
 - 技术咨询：https://jinshuju.net/f/qQOZj1
