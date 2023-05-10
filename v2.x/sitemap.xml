@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/v2.x/about/security_bulletins/</loc>
+         <lastmod>2023-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/v2.x/case_studies/user_cases/</loc>
          <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
