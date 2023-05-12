@@ -832,6 +832,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#valueyaml" class="md-nav__link">
+    使用修改后的 value.yaml 部署
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#node-port" class="md-nav__link">
     创建一个 Node Port 的访问方式
   </a>
@@ -2622,6 +2629,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#valueyaml" class="md-nav__link">
+    使用修改后的 value.yaml 部署
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#node-port" class="md-nav__link">
     创建一个 Node Port 的访问方式
   </a>
@@ -2695,6 +2709,10 @@ helm<span class="w"> </span>upgrade<span class="w">  </span>metersphere<span cla
 <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>metersphere<span class="w"> </span>metersphere-1.0.10.tgz<span class="w"> </span>-n<span class="w"> </span>ms
 </code></pre></div>
 <h3 id="valuesyaml">values.yaml<a class="headerlink" href="#valuesyaml" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p>以下 values.yaml 内容对应版本为 v1.1.0，最新的 value.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 value.yaml</p>
+</div>
+<p>如：<a href="https://github.com/metersphere/helm-chart/blob/metersphere-1.12.0/charts/metersphere/Chart.yaml">https://github.com/metersphere/helm-chart/blob/metersphere-1.12.0/charts/metersphere/Chart.yaml</a></p>
 <div class="highlight"><pre><span></span><code>ingress:<span class="w">    </span><span class="c1"># 不使用 ingress 可以关闭</span>
 <span class="w">  </span>enabled:<span class="w"> </span><span class="nb">true</span><span class="w">        </span>
 <span class="w">  </span>host:<span class="w"> </span>ms-dev.apps.metersphere.com
@@ -2896,6 +2914,9 @@ common.host.host、common.host.port、common.host.username、common.host.passwor
 <div class="highlight"><pre><span></span><code>vim<span class="w"> </span>values.yaml
 将<span class="w"> </span>values.yaml<span class="w"> </span>中<span class="w"> </span>redis.enabled<span class="w"> </span>改为<span class="w"> </span><span class="nb">false</span>
 common.redis.host、common.redis.port、common.redis.password<span class="w"> </span>改为外部<span class="w"> </span>redis<span class="w"> </span>的地址、端口和密码
+</code></pre></div>
+<h3 id="valueyaml">使用修改后的 value.yaml 部署<a class="headerlink" href="#valueyaml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>-n<span class="w"> </span>ms<span class="w"> </span>install<span class="w"> </span>metersphere<span class="w"> </span>./metersphere-1.1.0.tgz<span class="w"> </span>-f<span class="w"> </span>values_ext.yaml
 </code></pre></div>
 <h3 id="node-port">创建一个 Node Port 的访问方式<a class="headerlink" href="#node-port" title="Permanent link">&para;</a></h3>
 <p>如果不使用 ingress 的访问方式，可以创建一个 nodeport
