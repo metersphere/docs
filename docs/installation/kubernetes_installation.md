@@ -53,15 +53,20 @@ helm upgrade  metersphere metersphere/metersphere -n ms
 !!! tip ""
     helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases
 
-如：https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz
+如：https://github.com/metersphere/helm-chart/releases/download/metersphere-2.3.0/metersphere-2.3.0.tgz
 
 3.升级
 
 ```sh
-helm upgrade metersphere metersphere-1.0.10.tgz -n ms
+helm upgrade metersphere metersphere-2.4.0.tgz -n ms
 ```
 
 ### values.yaml
+!!! tip ""
+    以下 values.yaml 内容对应版本为 v2.3.0，最新的 value.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 value.yaml
+
+如：v2.9.1 版本 value.yaml 文件为 https://github.com/metersphere/helm-chart/blob/metersphere-2.9.1/charts/metersphere/values.yaml 
+
 ```sh
 ingress: # 不使用 ingress 可以关闭
   enabled: true
@@ -309,6 +314,11 @@ common.host.host、common.host.port、common.host.username、common.host.passwor
 vim values.yaml
 将 values.yaml 中 redis.enabled 改为 false
 common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
+```
+
+### 使用修改后的 value.yaml 部署 
+```sh
+helm -n ms install metersphere ./metersphere-2.3.0.tgz -f values_ext.yaml
 ```
 
 ### 创建一个 Node Port 的访问方式
