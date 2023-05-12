@@ -62,6 +62,11 @@ helm upgrade metersphere metersphere-1.0.10.tgz -n ms
 ```
 
 ### values.yaml
+!!! tip ""
+    以下 values.yaml 内容对应版本为 v1.1.0，最新的 value.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 value.yaml
+
+如：https://github.com/metersphere/helm-chart/blob/metersphere-1.12.0/charts/metersphere/Chart.yaml
+
 ```sh
 ingress:    # 不使用 ingress 可以关闭
   enabled: true        
@@ -272,6 +277,11 @@ common.host.host、common.host.port、common.host.username、common.host.passwor
 vim values.yaml
 将 values.yaml 中 redis.enabled 改为 false
 common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
+```
+
+### 使用修改后的 value.yaml 部署
+```sh
+helm -n ms install metersphere ./metersphere-1.1.0.tgz -f values_ext.yaml
 ```
 
 ### 创建一个 Node Port 的访问方式
