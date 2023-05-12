@@ -82,7 +82,10 @@ nav:
                   - 用例管理: user_manual/test_track/test_case/test_case.md
                   - 公共用例库: user_manual/test_track/test_case/public_test_case.md
                 - 用例评审: user_manual/test_track/test_case_review.md
-                - 测试计划: user_manual/test_track/test_plan.md
+                - 测试计划:
+                    - 计划列表: user_manual/test_track/test_plan/test_plan_list.md
+                    - 管理计划: user_manual/test_track/test_plan/test_plan_manage.md
+                    - 批量操作: user_manual/test_track/test_plan/test_plan_batch.md
                 - 缺陷管理: user_manual/test_track/test_defect.md
                 - 报告: user_manual/test_track/test_report.md
           - 接口测试:
