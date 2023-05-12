@@ -1,6 +1,6 @@
 .md-header {
   background-color: #783887;
-  top: 48px;
+  top: 92px;
 }
 
 .md-footer {
@@ -16,7 +16,13 @@
 }
 
 .md-main__inner {
-  margin-top: 3rem;
+  margin-top: 6rem;
+}
+
+@media (max-width: 768px){
+  .md-header{
+    top: 129px;
+  }
 }
 
 .progress-label {
@@ -126,4 +132,19 @@
 
 .png-lable-span {
   margin-left: 30%;
+}
+
+
+
+.md-typeset .admonition.ms-abstract,
+.md-typeset details.ms-abstract {
+  border-color: rgb(170, 80, 191);
+}
+.md-typeset .ms-abstract > .admonition-title,
+.md-typeset .ms-abstract > summary {
+  background-color: rgba(170, 80, 191, 0.1);
+}
+.md-typeset .ms-abstract > .admonition-title::before,
+.md-typeset .ms-abstract > summary::before {
+  background-color: rgb(170, 80, 191);
 }
