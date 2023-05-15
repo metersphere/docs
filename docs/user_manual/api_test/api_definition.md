@@ -75,7 +75,7 @@
 ####  REST参数
 !!! ms-abstract ""
 	REST参数是在接口地址栏中被【/】分隔的参数，如 updateapi/{id}。使用方法同上。
-![!REST参数](../../img/api/rest参数.png){ width="900px" }
+![!REST参数](../../img/api/REST参数.png){ width="900px" }
 
 ####  请求体
 !!! ms-abstract ""
@@ -100,7 +100,7 @@
 ####  请求参数
 !!! ms-abstract ""
 	请求参数可以在请求模板通过 ${xxx} 引用。
-![!TCP请求参数](../../img/api/tcp请求参数.png){ width="900px" }
+![!TCP请求参数](../../img/api/TCP请求参数.png){ width="900px" }
 
 #### 请求体
 !!! ms-abstract ""
@@ -116,7 +116,7 @@
 	一个项目支持配置多个数据源，① 选择运行环境，根据接口实际使用场景选择具体②数据源， ③ 编写sql脚本，④存储结果是将返回结果的所有字段存储到一个变量中。<br />
 	**按列存储**：直接指定返回字段的结果值，列数要和 SQL 语句中查询字段返回结果的列数相同。同时可以用逗号作为占位符代替列名，只写出要提取的列名即可，引用时 ${列名变量_n}<br />
 	**按结果存储**：是将返回结果所有的字段存储到一个变量中去，如果需要使用其中的某个字段则需要对变量进行解析，里面的实际数据是集合嵌套集合。每一行数据都是以  <字段名>：<字段值>( 即key :value)的格式存到map中的，而整个返回数据就是以一个大的map去存储每一行的数据的map ，最后得到一个结果集合，如果需要其中的数据，得通过beanshell或python脚本去解析。
-![!SQL请求参数](../../img/api/SQL请求.png){ width="900px" }
+![!SQL请求参数](../../img/api/sql请求.png){ width="900px" }
 
 ### 3.8 DUBBO请求
 ####  Interface
@@ -147,7 +147,7 @@
 #### Attachment Args
 !!! ms-abstract ""
 	可在【Attachment Args】中设置其他键值对参数。
-![!AttachmentArgs](../../img/api/Attachment.png){ width="900px" }
+![!AttachmentArgs](../../img/api/attachment.png){ width="900px" }
 
 ### 3.9 依赖关系设置
 !!! ms-abstract ""
@@ -206,7 +206,7 @@
 	5.【查看引用】：查看该接口用例被场景引用和测试计划引用情况 <br>
 	6.【执行历史】：可查看该接口用例执行历史列表及执行结果详情 <br>
 	7.【创建性能测试】：可使用当前接口用例快速创建性能测试 <br>
-![!CASE列表功能](../../img/api/CASE列表功能.png){ width="900px" }
+![!CASE列表功能](../../img/api/case列表功能.png){ width="900px" }
 	
 ### 5.2 批量操作
 !!! ms-abstract ""
@@ -215,7 +215,7 @@
 	2.【批量编辑】：批量编辑接口用例等级、标签属性 <br>
 	3.【批量执行】：批量调试接口用例，运行模式可选择串行或并行，生成报告可选生成独立报告、集合报告。 <br>
 	4.【批量同步】：批量同步接口用例，可对同步用例进行基本信息、请求参数、其他设置相关内容进行配置 <br>
-![!CASE批量操作](../../img/api/Case批量操作.png){ width="900px" }
+![!CASE批量操作](../../img/api/CASE批量操作.png){ width="900px" }
 
 ### 5.3 新建接口用例
 !!! ms-abstract ""
@@ -235,7 +235,7 @@
 ###  6.1 HTTP Mock服务设置
 !!! ms-abstract ""
 	MeterSphere 提供的Mock功能可以根据用户输入的请求参数、返回数据生成Mock接口，这些接口会自动生成模拟数据，以覆盖用户的一些测试需求。而 Mock 期望则是根据设置的请求触发条件来进行过滤，然后返回期望的数据。点击【+添加】按钮添加 Mock 服务。	
-![!新增Mock](../../img/api/添加Mock.png){ width="900px" }
+![!新增Mock](../../img/api/添加mock.png){ width="900px" }
 
 !!! ms-abstract ""
 	设置 Mock 服务触发条件。可以在请求头、QUERY参数、REST参数、请求体设置触发条件；在响应内容中设置自定义响应头、响应体、状态码、响应延迟时间相关信息
@@ -257,7 +257,7 @@
 ### 6.2 TCP Mock设置
 !!! ms-abstract ""
 	Mock 服务显示未开启，需在【项目设置-应用管理-接口测试】中开启 TCP Mock 服务。其功能设置同（HTTP Mock服务设置）
-![!开启TCP MOCK服务](../../img/api/开启TCPMOCK.png){ width="900px" }
+![!开启TCP MOCK服务](../../img/api/%E5%BC%80%E5%90%AFTCPMOCk.png){ width="900px" }
 
 ### 6.3列表功能
 !!! ms-abstract ""
@@ -283,7 +283,7 @@
 
 ##  8 导入接口
 !!! ms-abstract ""
-	MeterSphere 支持多种类型接口文档的导入，包括：MeterSphere、Postman、Swagger、HAR、JMX，点击【更多操作-导入】进入接口定义导入页面。
+	MeterSphere 支持多种类型接口文档的导入，包括：MeterSphere、Postman、Swagger、HAR、JMX，点击【更多操作q-导入】进入接口定义导入页面。
 ![!接口导入](../../img/api/导入接口.png){ width="900px" }
 
 ![!接口导入](../../img/api/导入类型.png){ width="900px" }

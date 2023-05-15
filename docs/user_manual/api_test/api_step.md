@@ -51,7 +51,7 @@
 ### 1.1 API测试 
 !!! ms-abstract "" 
     【从Api定义导入】：API定义导入可以直接导入 API 或 CASE 自动生成脚本。点击【API定义导入】按钮，从接口列表 ①  API/ ② CASE 选择 ③ 目标数据点击 ④ 【确定】会在前置脚本中默认生成 beanshell 脚本。脚本语言可切换，默认支持 beanshell 、python2 、groovy 、javascript 语法。
-![!API测试](../../img/api/选择api.png){ width="900px" }
+![!API测试](../../img/api/选择API.png){ width="900px" }
 
 ![!API测试](../../img/api/生成代码.png){ width="900px" }
 
@@ -93,8 +93,8 @@
     在请求发送之前执行 SQL 脚本。前置操作下拉选择 ① 前置SQL，配置 ② 运行环境及 ③ 目标数据源，可直接在 ④ SQL脚本中编写 SQL 语句，返回的接口支持存储结果、按列存储，支持在 SQL脚本中设置变量传参。
     * 存储结果：返回结果的所有字段存储到一个变量中。可配合脚本处理获返回结果中的某一部分值。
     * 按列存储：直接指定取出返回结果字段的值，列名要和SQL语句中查询返回结果列名对应。⑤ 可以用逗号作为占位符代替列名，只写出要提取的列名即可。 如图所示查询,用户 user 通过`${user_n}`进行引用，n为行数，`${user_1}` 为 user 列的第一行值。
-![!前置SQL](../../img/api/前置SQL编辑.png){ width="900px" }
-![!SQL请求参数](../../img/api/前置sql1.png){ width="900px" }
+![!前置SQL](../../img/api/前置sql编辑.png){ width="900px" }
+![!SQL请求参数](../../img/api/前置SQL1.png){ width="900px" }
 
 ## 4 后置SQL
 !!! ms-abstract ""  
@@ -142,8 +142,8 @@
     断言方式选择：① JSONPath 断言。填写 ② JSONPath 表达式并设置 ③ 期望值即可完成。MeterSphere 在此处提供了快捷操作，点击 ④【推荐JSONPath断言】弹出页点击文本标签即可快速生成一份断言 JSONPath 表达式。
     * JSONPath表达式：JSONPath 表达式，通过该表达式定位到特定字段。
     * 期望值：通过 JSONPath 表达式定位的字段的期望值，支持正则表达式。
-![!JSONPath断言](../../img/api/JSONPath表达式.png){ width="900px" }
-![!JSONPath断言](../../img/api/JSONPath快捷操作.png){ width="900px" }
+![!JSONPath断言](../../img/api/jsonpath表达式.png){ width="900px" }
+![!JSONPath断言](../../img/api/jsonpath快捷操作.png){ width="900px" }
 
 
 ### 5.4 XPath 断言 
@@ -151,7 +151,7 @@
     XPath 断言适用于请求的响应内容是 XML、HTML 等格式时，可以方便的通过 XPath 表达式定位到特定字段，设定其期望值。<br />
     断言方式选择：① XPath 断言。填写 ② XPath 表达式即可。
     * XPath表达式：需要进行匹配的 XPath 表达式。
-![!XPath断言](../../img/api/XPath断言1.png){ width="900px" }
+![!XPath断言](../../img/api/xpath断言1.png){ width="900px" }
 
 !!! ms-abstract "示例" 
     **请求的响应体**：
@@ -376,7 +376,7 @@
     【输出变量名称】：在循环中可以通过该变量引用到列表变量中当前迭代的变量值。<br />
     【输入变量前缀】：列表变量的变量前缀。<br />
     【循环间隔】：每次执行间的时间间隔，以毫秒为单位。
-![!ForEach循环](../../img/api/ForEach.png){ width="900px" }
+![!ForEach循环](../../img/api/foreach.png){ width="900px" }
 
 !!! ms-abstract "示例"
     在场景变量中设置列表变量 id，列表值为`1`，`2`，`3`。
