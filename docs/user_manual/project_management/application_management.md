@@ -23,45 +23,55 @@
 维护【测试跟踪】下的一些高级应用配置管理，包含 【启动公共用例库】、【测试用例自定义ID】、【定时清理测试计划报告】、【报告分享链接】配置。
 ![!项目设置](../../img/project_management/测试跟踪设置.png)
 
-#### 2.2.1 <font size=4> 启动公共用例库 </font>
+- 启动公共用例库
+
 ![!项目设置](../../img/project_management/测试跟踪设置5.png)
 
-#### 2.2.2 <font size=4> 测试用例自定义ID </font>
+- 测试用例自定义ID
+
 开启后，在创建【测试用例】页面，可以自定义设置用例 ID。
 ![!项目设置](../../img/project_management/测试跟踪设置2.png)
 
-#### 2.2.3 <font size=4> 定时清理测试计划报告 </font>
+- 定时清理测试计划报告
+
 ![!项目设置](../../img/project_management/测试跟踪设置3.png)
 
-#### 2.2.4 <font size=4> 报告分享链接 </font>
+- 报告分享链接
+
 ![!项目设置](../../img/project_management/测试跟踪设置4.png)
 
 ### 2.3 接口测试设置
 维护【接口测试】下的一些高级应用配置管理，包含【接口定义URL可重复】、【场景自定义ID】、【TCP Mock Port】以及【定时清理接口测试报告】、【报告分享链接】以及【接口定义快捷添加按钮】等配置。
 ![!项目设置](../../img/project_management/接口测试设置1.png)
 
-####  2.3.1 <font size=4> 接口定义URL可重复 </font>
+- 接口定义URL可重复
+
 启用后接口定义重复性校验将不校验URL，同一个项目下允许接口路径相同的【接口定义】。
 ![!项目设置](../../img/project_management/接口测试设置2.png)
 
-#### 2.3.2 <font size=4> 场景自定义ID </font>
+- 场景自定义ID
+
 启用后创建场景支持自定义设置场景ID。
 ![!项目设置](../../img/project_management/接口测试设置3.png)
 
-#### 2.3.3 <font size=4> TCP Mock Port </font>
+- TCP Mock Port
+
 设置接口协议为TCP的接口，Mock服务的可用性。
 ![!项目设置](../../img/project_management/接口测试设置4.png)
 
 如果 TCP 协议的接口需要使用 Mock 服务，则需要开启此服务，开启后在接口测试中，Mock 服务才可用。
 ![!项目设置](../../img/project_management/接口测试设置5.png)
 
-#### 2.3.4 <font size=4> 定时清理接口测试报告 </font>
+- 定时清理接口测试报告 
+
 ![!项目设置](../../img/project_management/接口测试设置6.png)
 
-#### 2.3.5 <font size=4> 报告分享链接 </font>
+- 报告分享链接
+
 ![!项目设置](../../img/project_management/接口测试设置7.png)
 
-#### 2.3.6 <font size=4> 接口定义快捷添加按钮 </font>
+- 接口定义快捷添加按钮
+
 ![!项目设置](../../img/project_management/接口测试设置8.png)
 
 ![!项目设置](../../img/project_management/接口测试设置9.png)
