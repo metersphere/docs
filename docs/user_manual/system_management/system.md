@@ -1,6 +1,6 @@
 系统主要针对系统级别的管理配置功能。目前，MeterSphere 内置三级租户体系并可设置只读用户。平台默认用户组及用户组角色划分为：
 
-!!! info "说明"
+!!! Example "说明"
     【系统级用户组】：系统管理员；<br>
     【工作空间级用户组】：工作空间管理员、工作空间成员；<br>
     【项目级用户组】：项目管理员、项目成员、只读用户。
@@ -11,7 +11,7 @@
 点击左侧【系统】下拉菜单中的【用户】进入用户界面。右侧显示当前系统中的全部用户列表，可以对用户进行【新增】、【编辑】、【查询】、【删除】、【更改状态】、【设置密码】等操作。
 ![!用户管理](../../img/system_management/系统用户首页.png){ width="900px" }
 
-!!! info "说明"
+!!! Example "说明"
      MeterSphere 部署成功后会自动创建一个系统管理员账户，用户名为 admin，默认密码为 metersphere。如将平台用于生产环境，请及时更改密码。
 
 - 创建用户
@@ -91,7 +91,7 @@
 ![!测试资源池管理](../../img/system_management/系统测试资源池首页.png)
 
 ### 4.1 创建 Node 资源池
-!!! info "注意"
+!!! Example "注意"
     在服务器上安装 node-controller 服务后，再来配置 Node 资源池。
 
 点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Node】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
@@ -99,7 +99,7 @@
 
 
 ### 4.2 创建 Kubernetes 资源池 (X-Pack)
-!!! info "注意"
+!!! Example "注意"
     在服务器上安装 k8s 服务后，再来配置 Kubernetes 资源池。
 
 点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
@@ -155,7 +155,7 @@ kubectl get all -n ms-pool
 性能测试执行过程中 node-controller 节点需要通过配置的【当前站点URL】下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。
 ![!当前站点URL](../../img/system_management/系统参数设置首页_1.png)
 
-!!! info "选项"
+!!! Example "选项"
 
      - 【当前站点URL】：当前 MeterSphere 站点地址，用于性能测试 JMeter 从 MeterSphere 站点获取压测脚本等数据。	 
      - 【并发数】：限制场景接口自动化中场景并行执行时的并发数量。
@@ -171,20 +171,20 @@ kubectl get all -n ms-pool
 切换至【LDAP设置】标签，点击【编辑】按钮配置 LDAP 登录相关参数。
 ![配置ldap](../../img/system_management/配置ldap.png)
 
-!!! info "选项"
+!!! Example "选项"
     * 【LDAP地址】：ldap://serveurl:389 或 ldaps://serveurl:636
     * 【绑定DN】：cn=administrator,cn=Users,dc=metersphere,dc=com
     * 【用户OU】：ou=metersphere,dc=metersphere,dc=com
     * 【用户过滤器】：sAMAccountName={0}
     * 【LDAP属性映射】：{"username":"sAMAccountName","name":"cn","email":"mail"}
 
-!!! info "选项说明"
+!!! Example "选项说明"
     * 【OU】：同级多OU用｜分割
     * 【用户过滤器】：根据规则到 用户OU 里面去检索用户，可能的选项为 (uid={0}) 或 (sAMAccountName={0}) 或 (cn={0}) 
     * 【LDAP属性映射】：{"username":"sAMAccountName","name":"cn","email":"mail","phone":"phone"}，username,name,email 三项不可修改删除, phone 属性可选
     * 【启用LDAP认证】：启用后登录页显示 LDAP 登录选项
 
-!!! warning "注意"
+!!! Example "注意"
     用户过滤器用什么筛选, LDAP 属性映射字段要与其一致, 过滤器用 sAMAccountName, LDAP属性映射也要用 sAMAccountName
     
 启用 LDAP 认证后，登录页会新增 LDAP 登录选项。
