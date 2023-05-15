@@ -14,7 +14,7 @@
 
 ### 2.2 待更新
 已存在的接口，修改地址、请求头、请求体等信息，点击保存后，未进行【同步设置】操作。
-!!! info "同步设置"
+!!! Example "同步设置"
     即在 API 接口发生变更并点击保存后，可勾选同步设置 Header、QUERY参数、REST参数等选项，勾选后，会同步更新该 API 对应的 CASE 和引用该 API 的场景。
 ![跳转](../../img/user_manual/my_desk/todo/todo_4.png){ width="900px" }
 
