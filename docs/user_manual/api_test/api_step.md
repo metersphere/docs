@@ -241,15 +241,16 @@
     - Perl型正则表达式：`name="(.*?)"`
 
 ### 6.2 JSONPath 提取 
-JSONPath 提取适用于请求的响应内容是 JSON 格式时，可以方便的通过 [JSONPath 表达式]() 定位到特定字段进行提取。
-![!JSONPath提取](../../img/api/JSONPath提取.png)
+!!! ms-abstract "" 
+    JSONPath 提取适用于请求的响应内容是 JSON 格式时，可以方便的通过 JSONPath 表达式定位到特定字段进行提取。<br />
+    JSPONPath 提取：设置 ① 变量名 ② JSONPath 表达式，点击【添加】按钮即可。MeterSphere 提供了 ③ 【推荐JSONPath 提取】的快捷提取方式，可以通过提示的标签快速生成表达式。
+    * 变量名：保存提取值的变量名，后续可以通过 `${varName}` 形式引用到，如果选择了【匹配多个】，可以通过 `${varName_matchNr}` 获取到匹配的总个数，通过 `${varName_n}` 依次获取到每个匹配值。
+    * JSONPath表达式：JSONPath 表达式，通过该表达式定位到要提取的字段。
+![!JSONPath提取](../../img/api/jp提参.png){ width="900px" }
+![!JSONPath提取](../../img/api/推荐jp.png){ width="900px" }
 
-!!! info "参数说明"
-    1. **变量名**：保存提取值的变量名，后续可以通过 `${varName}` 形式引用到，如果选择了匹配多个，可以通过 `${varName_matchNr}` 获取到匹配的总个数，通过 `${varName_n}` 依次获取到每个匹配值。
-    2. **JSONPath表达式**：JSONPath 表达式，通过该表达式定位到要提取的字段。
-
-!!! warn "示例"
-    **请求的响应体**：
+!!! ms-abstract "示例"
+    请求的响应体：
     ```json
     {
         "success": true,
@@ -263,23 +264,21 @@ JSONPath 提取适用于请求的响应内容是 JSON 格式时，可以方便�
         }
     }
     ```
-    **提取需求**：提取响应体 `data` 中的 `name` 字段并存储在 `name` 变量中。
-    
-    **提取配置**：
-    
-    - **变量名**：name
-    - **JSONPath 表达式**：$.data.name
+    提取需求：提取响应体 `data` 中的 `name` 字段并存储在 `name` 变量中。<br />
+    提取配置：
+    * 变量名：name
+    * JSONPath 表达式：$.data.name
 
 ### 6.3 XPath 提取 
-XPath 提取适用于请求的响应内容是 XML、HTML 等格式时，可以方便的通过 [XPath 表达式]() 定位到特定字段进行提取。
-![!XPath提取](../../img/api/XPath提取.png)
+!!! ms-abstract "" 
+    XPath 提取适用于请求的响应内容是 XML、HTML 等格式时，可以方便的通过 XPath 表达式定位到特定字段进行提取。<br />
+    XPath 提取：设置 ① 变量名 ② XPath 表达式，点击【添加】按钮即可。根据请求响应内容格式支持 html、xml 格式。
+    * 变量名：保存提取值的变量名，后续可以通过 `${varName}` 形式引用到，如果选择了【匹配多个】，可以通过 `${varName_matchNr}` 获取到匹配的总个数，通过 `${varName_n}` 依次获取到每个匹配值。
+    * XPath表达式：需要进行匹配的 XPath 表达式。
+![!XPath提取](../../img/api/xp提取.png){ width="900px" }
 
-!!! info "参数说明"
-    1. **变量名**：保存提取值的变量名，后续可以通过 `${varName}` 形式引用到，如果选择了匹配多个，可以通过 `${varName_matchNr}` 获取到匹配的总个数，通过 `${varName_n}` 依次获取到每个匹配值。
-    1. **XPath表达式**：需要进行匹配的 XPath 表达式。
-
-!!! warn "示例"
-    **请求的响应体**：
+!!!  ms-abstract "示例"
+    请求的响应体：
     ```xml
     <root xmlns:foo="http://www.foo.org/" xmlns:bar="http://www.bar.org">
         <employees>
@@ -300,17 +299,17 @@ XPath 提取适用于请求的响应内容是 XML、HTML 等格式时，可以�
         </foo:companies>
     </root>
     ```
-    **提取需求**：提取响应体中的 `id` 为 3 的员工的姓名，即上述响应中的 `Robert De Niro`，并存储在 `employeeName` 变量中。
+    提取需求：提取响应体中的 `id` 为 3 的员工的姓名，即上述响应中的 `Robert De Niro`，并存储在 `employeeName` 变量中。
 
-    **提取配置**：
-    
-    - **变量名**：employeeName
-    - **XPath 表达式**：string(//employee[@id='3'])
+    提取配置：
+    - 变量名：employeeName
+    - XPath 表达式：string(//employee[@id='3'])
 
 #  场景用例步骤
 
 ## 1 接口列表导入
-通过接口列表导入功能，可以直接添加接口定义功能中已维护好的接口或接口下的用例，减少重复填写接口请求参数的情况。
+!!! ms-abstract "" 
+    通过接口列表导入功能，可以直接添加接口定义功能中已维护好的接口或接口下的用例，减少重复填写接口请求参数的情况。
 
 ### 1.1 导入接口
 ![!导入接口](../../img/api/导入接口1.png)
