@@ -4,18 +4,20 @@
 !!! ms-abstract "" 
     前置脚本可以添加为请求的子步骤，在请求发送前执行，可以用在修改请求内容、初始化请求需要的参数值等场景。<br>
     目前 MeterSphere 支持以下几种语言的前置脚本：<br>
-    - BeanShell<br>
-    - Python2<br>
-    - Groovy<br>
-    - JavaScript<br>
-    与 JMeter 一样，脚本在加载前如果已经内置了部分变量，在脚本中可以直接使用这些变量。<br>
-    - `log` - [Logger]，用于在脚本执行过程中打印日志
+
+    - BeanShell
+    - Python2
+    - Groovy
+    - JavaScript
+
+    在前置脚本中还可以直接引用JMeter 预定义对象，例如：<br>
+    - `log`：用于在脚本执行过程中打印日志
     ```
     //打印 `Hello World!` 到 info 日志中
     log.info("Hello World!");
     ```
-    - `Label` - 前置脚本所属请求的请求名称
-    - `SampleResult` - 当前请求请求结果 [SamplerResult]() 的指针
+    - `Label`：前置脚本所属请求的请求名称<br>
+    - `SampleResult`：当前请求请求结果 [SamplerResult]() 的指针
     ```
     //设置请求结果成功或失败
     SampleResult.setSuccessful(true/false);
@@ -24,12 +26,12 @@
     //设置请求返回消息
     SampleResult.setResponseMessage("message");
     ```
-    - `sampler` - 当前请求 [sampler]() 的指针
+    - `sampler`：当前请求 [sampler]() 的指针
     ```
     //获取当前请求名称
     sampler.getName();
     ```
-    - `vars` - [JMeterVariables]()，用于操作变量
+    - `vars`：[JMeterVariables]()，用于操作变量
     ```
     //获取变量 VAR1 的值
     vars.get("VAR1");
@@ -47,7 +49,7 @@
 
 ### 1.1 API测试 
 !!! ms-abstract "" 
-    【从Api定义导入】：API定义导入可以直接导入 API 或 CASE 自动生成脚本。点击【API定义导入】按钮，从接口列表  API/ CASE 选择目标数据点击【确定】会在前置脚本中默认生成 beanshell 脚本。脚本语言可切换，默认支持 beanshell 、python2 、groovy 、javascript 语法。
+    【从Api定义导入】：API定义导入可以直接导入 API 或 CASE 自动生成脚本。点击【API定义导入】按钮，从接口列表  API/ CASE 选择目标数据点击【确定】会在前置脚本中默认生成 beanshell 脚本。脚本语言可切换，默认支持 beanshell 、python2 、groovy 、javascript 语言。
 
 ![!API测试](../../img/api/选择API.png){ width="900px" }
 ![!API测试](../../img/api/生成代码.png){ width="900px" }
@@ -66,32 +68,37 @@
 ### 1.3 项目环境 
 !!! ms-abstract "" 
     选择【项目环境】设置环境参数，自动生成设置环境变量方法填写对应方法键值对即可试用。<br>
-    * vars.put(${__metersphere_env_id}+"key","value"); // 将值存储为环境变量，可在【环境-通用设置】处看到值。当前环境下的所有接口使用。<br>
-    * vars.put("key","value")。 // 将值存储为场景变量 <br>
-    * 存为环境变量的值，在当前请求引用不到，需要结合存为变量的代码才可以当前请求以及之后请求都可引用到。
+    vars.put(${__metersphere_env_id}+"key","value"); // 将值存储为环境变量，可在【环境-通用设置】处看到值。当前环境下的所有接口使用。<br>
+    vars.put("key","value")。 // 将值存储为场景变量 <br>
+
 ![!项目环境](../../img/api/环境变量.png){ width="900px" }
 
 ### 1.4 自定义代码片段 
 !!! ms-abstract "" 
     选择【自定义代码】插入代码片段，选择系统定义好的自定义代码片段可直接 复用项目管理中维护的自定义代码片段。
+
 ![!项目环境](../../img/api/选择自定义代码片段1.png){ width="900px" }
 ![!项目环境](../../img/api/复用代码片段1.png){ width="900px" }
 
 ### 1.5 异常处理
 !!! ms-abstract ""  
     选择【异常处理】终止测试，可自动生成 终止测试线程的脚本。设置终止测试异常条件，接口或场景执行过程中匹配到终止条件则终止该进程。
+
 ![!终止测试](../../img/api/终止流程.png){ width="900px" }
 
 ## 2 后置脚本
 !!! ms-abstract ""  
     后置脚本与前置脚本类似，可以添加为请求的子步骤，在请求发送后执行，可以用于处理响应结果，从中提取变量等场景。
+
 ![!终止测试](../../img/api/后置脚本.png){ width="900px" }
 
 ## 3 前置 SQL
 !!! ms-abstract ""  
     在请求发送之前执行 SQL 脚本。前置操作下拉选择 前置SQL，配置 运行环境及 目标数据源，可直接在 SQL脚本中编写 SQL 语句，返回的接口支持存储结果、按列存储，支持在 SQL脚本中设置变量传参。<br>
-    * 存储结果：返回结果的所有字段存储到一个变量中。可配合脚本处理获返回结果中的某一部分值。<br>
-    * 按列存储：直接指定取出返回结果字段的值，列名要和SQL语句中查询返回结果列名对应。可以用逗号作为占位符代替列名，只写出要提取的列名即可。<br>
+
+    - 存储结果：返回结果的所有字段存储到一个变量中。可配合脚本处理获返回结果中的某一部分值。<br>
+    - 按列存储：直接指定取出返回结果字段的值，列名要和SQL语句中查询返回结果列名对应。可以用逗号作为占位符代替列名，只写出要提取的列名即可。<br>
+
     如图所示查询,用户 user 通过`${user_n}`进行引用，n为行数，`${user_1}` 为 user 列的第一行值。
 
 ![!前置SQL](../../img/api/前置sql编辑.png){ width="900px" }
@@ -219,10 +226,9 @@
 
 ### 5.7 脚本断言 
 !!! ms-abstract ""
-    当常规断言服无法满足需求时，可以选择脚本断言，即选择合适的语言编写脚本来对结果进行判断。
+    当常规断言无法满足需求时，可以选择脚本断言，即选择合适的语言编写脚本来对结果进行判断。
 
-    - 与前后置脚本一样，脚本在加载前已经内置了部分变量，目前支持 `BeanShell`、`Groovy`、`Python` 、`NashornScript`及`RhinoScript` 脚本语言。除了在之前已经介绍过的变量外，脚本断言中的脚本还额外提供了以下变量。  
-    - `AssertionResult` - 断言结果对象，通过 `AssertionResult.setFailure(true)` 方法设置断言是否成功，通过 `AssertionResult.setFailureMessage("message")` 方法设置断言失败提示信息。
+    - 与前后置脚本一样，脚本在加载前已经内置了部分变量，目前支持 `BeanShell`、`Groovy`、`Python` 、`javascript` 脚本语言。除了在之前已经介绍过的变量外，脚本断言中的脚本还额外提供了断言结果对象`AssertionResult`，通过 `AssertionResult.setFailure(true)` 方法设置断言是否成功，通过 `AssertionResult.setFailureMessage("message")` 方法设置断言失败提示信息。
 
 ![!脚本断言](../../img/api/脚本断言编辑.png){ width="900px" }
 ![!脚本断言](../../img/api/脚本断言.png){ width="900px" }
@@ -301,7 +307,7 @@
 
 ![!XPath提取](../../img/api/xp提取.png){ width="900px" }
 
-!!!  ms-abstract "示例"
+!!! ms-abstract "示例" 
     请求的响应体：
     ```xml
     <root xmlns:foo="http://www.foo.org/" xmlns:bar="http://www.bar.org">
