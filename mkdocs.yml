@@ -74,7 +74,7 @@ nav:
                 - 我的关注: user_manual/my_desk/attention.md
                 - 我创建的: user_manual/my_desk/created.md
           - 测试跟踪:
-                - 模块说明: user_manual/test_track/intro.md
+                - 概述: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
                 - 功能用例:
                   - 项目切换: user_manual/test_track/test_case/switch_project.md
@@ -125,7 +125,7 @@ nav:
                 - 应用管理: user_manual/project_management/application_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
           - 系统设置:
-              - 模块说明: user_manual/system_management/intro.md
+              - 概述: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
               - 工作空间: user_manual/system_management/workspace.md
           - 插件使用教程:
