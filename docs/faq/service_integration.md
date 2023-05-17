@@ -1,30 +1,60 @@
-## 1 在禅道上已创建的缺陷，MS 上点击“同步缺陷”，未成功同步
-禅道缺陷同步到 MS 是企业版功能，开源版只支持单向同步，只能 MS 缺陷同步到禅道上
 
-## 2 禅道在 PATH_INFO 下，项目集成失败
-禅道配置文件的请求方式与 MS 平台选择的请求方式不一致，修改禅道配置或 MS 平台设置，使禅道请求方式与 MS 平台保持一致
-```
-1.【修改禅道配置】配置文件路径：/opt/zbox/app/zentao/config/my.php，修改 $config->requestType = 'PATH_INFO' 或 'GET'，重启禅道/opt/zbox/zbox restart
-2.【修改MS配置】在“系统设置-工作空间-服务集成-禅道”配置页面，选择请求方式为'PATH_INFO' 或 'GET'
-```
+## 1 MeterSphere 如何对接第三方平台
+!!! ms-abstract ""
+    TAPD: 参考[MeterSphere 服务集成之 TAPD 对接]( https://kb.fit2cloud.com/?p=259)<br />
+    JIRA: 参考 [MeterSphere 服务集成之 JIRA 对接](https://kb.fit2cloud.com/?p=258)<br />
+    禅道:  参考[MeterSphere 服务集成之 禅道 对接](https://kb.fit2cloud.com/?p=257)<br />
+    Azure Devops:  参考[MeterSphere 服务集成之 Azure Devops 对接](https://kb.fit2cloud.com/?p=260)<br />
 
-## 3 MS 集成 TAPD，在 MS 平台上提交缺陷（上传图片），在 TAPD 中无法正确显示图片
-TAPD 没有替 MS 平台当前站点配置问题，修改 MS 平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】，需要配置成 https 的地址
+## 2 在禅道上已创建的缺陷，MS 上点击“同步缺陷”，未成功同步
+!!! ms-abstract ""
+    禅道缺陷同步到 MS 是企业版功能，开源版只支持单向同步，只能将 MS 缺陷同步到禅道上。
 
-## 4 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示 “ID不存在或者其他错误”
-造成原因:
-```
-1.没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，结果填了项目 ID;
-2.缺少配置 $config->features->apiGetModel
-3.襌道里 api 超级调用模式有没有授权
-```
-解决方法:
-```
-1.在项目编辑弹框-项目ID 后有提示说明
-2.在禅道安装路径中：${安装路径}/zentao/config/ 目录下创建一个 my.php 文件，然后在里面添加如下内容：$config->features->apiGetModel = true;
-  注意：如果有 my.php，则直接在最下方添加 "$config->features->apiGetModel = true;"即可；添加完需要重启禅道服务器，/opt/zbox/zbox restart
-3.禅道 web 端，【组织-权限-权限维护-API 接口】，勾选“超级model调用接口”即可
-```
-## 5 MS 集成 JIRA 平台，填写【JIRA项目key】后进行保存时，页面提示 "ID不存在或其他错误"
-用户没有权限访问此项目，查看该项目的用户是否存在 MS 系统【系统设置-服务集成-JIRA】处配置的账号
-![! JIRA](../img/faq/服务集成JIRA.png)
+## 3 禅道在 PATH_INFO 下，项目集成失败
+!!! ms-abstract ""
+    禅道配置文件的请求方式与 MS 平台选择的请求方式不一致，修改禅道配置或 MS 平台设置，使禅道请求方式与 MS 平台保持一致。<br />
+    1.【修改禅道配置】配置文件路径：/opt/zbox/app/zentao/config/my.php，修改 $config->requestType = 'PATH_INFO' 或 'GET'，重启禅道/opt/zbox/zbox restart<br />
+    2.【修改MS配置】在“系统设置-工作空间-服务集成-禅道”配置页面，选择请求方式为'PATH_INFO' 或 'GET'
+
+## 4 MS 集成 TAPD，在 MS 平台上提交缺陷（上传图片），在 TAPD 中无法正确显示图片
+!!! ms-abstract ""
+    问题原因：
+    浏览器的默认安全策略导致的，因为图片实际上是放在禅道的，MS 是https的，禅道的地址是http，访问 http 的禅道会自动转成 https 
+
+    解决方法：
+    MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】，需要配置成 https 的地址。
+
+## 5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示 “ID不存在或者其他错误”
+!!! ms-abstract ""
+    可能原因:<br />
+    1.禅道插件版本和当前 MS 版本不一致；<br />
+    2.没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID;<br />
+    3.缺少配置 $config->features->apiGetModel;<br />
+    4.襌道里 api 超级调用模式有没有授权;<br />
+
+    解决方法:<br />
+    1.在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。<br />
+    2.在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 <br />
+    3.在禅道安装路径中：${安装路径}/zentao/config/ 目录下创建一个 my.php 文件，然后在里面添加如下内容：<br > $config->features->apiGetModel = true;  
+    注意：如果有 my.php，则直接在最下方添加 "$config->features->apiGetModel = true;"即可；
+    添加完需要重启禅道服务器，/opt/zbox/zbox restart  <br />
+    4.禅道 web 端，【组织-权限-权限维护-API 接口】，勾选“超级model调用接口”。
+
+
+## 6 MS 集成 JIRA 平台，填写【JIRA项目key】后进行保存时，页面提示 "ID不存在或其他错误"
+!!! ms-abstract ""
+
+    一般为用户没有权限访问此项目，检查 JIRA 对应项目的管理员用户是否和 MS 系统【系统设置-服务集成-JIRA】处配置的账号一致，可配合后台日志/opt/metersphere/logs/system-setting/info.log查看报错原因。
+    ![! JIRA](../img/faq/服务集成JIRA.png){ width="900px" }
+
+## 7 同步缺陷到JIRA，可以自定义字段吗？
+!!! ms-abstract ""
+    可以在【项目设置-更多选项-模版管理】，创建模板字段；然后打开缺陷模板-JIRA默认模版，添加创建好的自定义字段，在 MeterSphere 上提交缺陷时就会出现该字段。
+
+![! JIRA自定义字段01](../img/faq/创建自定义字段.png){ width="900px" }
+
+![! JIRA自定义字段02](../img/faq/用例模板添加.png){ width="900px" }
+
+## 8 集成JIRA时，可以绑定指定账号吗？
+!!! ms-abstract ""
+    可以在【个人账号-个人信息-第三方平台账号】弹窗，配置 JIRA 账号和密码，就可以绑定账号关联需求以及同步缺陷了。
