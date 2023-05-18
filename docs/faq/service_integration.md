@@ -18,11 +18,7 @@
 
 ## 4 MS 集成 TAPD，在 MS 平台上提交缺陷（上传图片），在 TAPD 中无法正确显示图片
 !!! ms-abstract ""
-    问题原因：
-    浏览器的默认安全策略导致的，因为图片实际上是放在禅道的，MS 是https的，禅道的地址是http，访问 http 的禅道会自动转成 https 
-
-    解决方法：
-    MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】，需要配置成 https 的地址。
+    浏览器的默认安全策略导致，MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】，需要配置成 https 的地址。
 
 ## 5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示 “ID不存在或者其他错误”
 !!! ms-abstract ""
@@ -45,7 +41,7 @@
 !!! ms-abstract ""
 
     一般为用户没有权限访问此项目，检查 JIRA 对应项目的管理员用户是否和 MS 系统【系统设置-服务集成-JIRA】处配置的账号一致，可配合后台日志/opt/metersphere/logs/system-setting/info.log查看报错原因。
-    ![! JIRA](../img/faq/服务集成JIRA.png){ width="900px" }
+![! JIRA](../img/faq/服务集成JIRA.png){ width="900px" }
 
 ## 7 同步缺陷到JIRA，可以自定义字段吗？
 !!! ms-abstract ""
