@@ -1,6 +1,6 @@
 !!! ms-abstract "基于以上环境部署成功后，进行如下压测工作"
 
-## 1 修改 MeterSphere 的 docker-compose-server.yaml 文件
+## 1 修改 MeterSphere 的 docker-compose-system-setting.yaml 文件
 !!! ms-abstract ""
     按照下图修改为连接 Kafka 地址
 ![配置修改Kafka地址](../img/installation/dis_pressure/修改kafka地址.png){:height="100%" width="70%"} <br>
