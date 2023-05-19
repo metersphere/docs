@@ -1,6 +1,6 @@
 !!! ms-abstract "注意"
-    升级前一定要进行数据备份，可参考 [MeterSphere 数据备份](./backup_data.md)。<br>
-    如果您的服务器可以访问互联网, 可以通过以下命令直接升级 Metersphere 至最新版本。
+    升级前一定要进行数据库备份，请参考 [MeterSphere 数据备份](./backup_data.md)。<br>
+    如果 MeterSphere 服务器可以访问互联网，可通过以下方式升级到最新或指定版本。
 
 ## 1 一键升级至最新版本
 !!! ms-abstract ""
@@ -24,7 +24,7 @@
 
 ## 3 手动升级
 !!! ms-abstract ""
-    GitHub release 链接: https://github.com/metersphere/metersphere/releases
+    MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
     ```sh
     # 下载在线安装包
     wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
@@ -35,6 +35,6 @@
     # 进入解压缩目录
     cd metersphere-online-installer-v2.x.y
     
-    # 执行install.sh安装脚本
+    # 执行 install.sh 安装脚本
     /bin/bash install.sh
     ```

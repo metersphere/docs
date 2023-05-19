@@ -1,11 +1,11 @@
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
     * 操作系统: CentOS 7.x / Redhat 7.x
-    * CPU/内存: 最低要求 4C8G，推荐 8C16G
+    * CPU/内存: 最低要求 4C8G，推荐 8C16G (2.3.0版本及其之后的版本，最低配置 8C16G)
     * 磁盘空间: 50G
     * 网络要求：可访问互联网
 
-## 2 一键安装（采用默认安装参数）
+## 2 一键安装
 !!! ms-abstract ""
     在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。<br>
     ```
@@ -50,10 +50,10 @@
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ```
 
-## 3 手动安装（可配置安装参数）
+## 3 手动安装
 ### 3.1 手动安装
 !!! ms-abstract ""
-    到 GitHub release 页面下载在线安装包，链接为: https://github.com/metersphere/metersphere/releases
+    MeterSphere 安装包下载链接:: https://github.com/metersphere/metersphere/releases
     ```
     # 下载在线安装包
     wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
@@ -71,11 +71,11 @@
     /bin/bash install.sh
     ```
 
-    执行完安装脚本后，会在线拉取镜像，等提示安装完成后，可以用 msctl status 查看服务各个组件状态
+    执行完安装脚本后，会在线拉取镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
 ![服务状态](../img/installation/ms-status.png)
 
 !!! ms-abstract ""
-    等待2分钟至各个组件都是 healthy 状态后，可通过浏览器访问如下页面登录 MeterSphere。
+    等待几分钟后，使用命令 'msctl status' 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
     ```
      请通过以下方式访问:
 
@@ -83,14 +83,12 @@
      用户名: admin
      初始密码: metersphere
 
-    企业用户安装后需手动设置，${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
-    
-    您可以使用命令 'msctl status' 检查服务运行情况.
     ```
+    企业用户安装后需手动设置，${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
 
 ### 3.2 安装配置文件说明
 !!! ms-abstract "安装配置文件说明"
-    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）
+    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）
     ```
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
@@ -223,7 +221,7 @@
 
 ## 4 配置反向代理
 !!! ms-abstract "注意"
-    如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
+    如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```
     server {
         listen 80;
