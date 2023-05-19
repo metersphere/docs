@@ -207,10 +207,13 @@
     等待2分钟至各个组件都是 healthy 状态后，可通过浏览器访问如下页面登录 MeterSphere。
     ```
     请通过以下方式访问:
-     URL: http://$LOCAL_IP:8081
+
+     URL: http://服务器IP:8081
      用户名: admin
      初始密码: metersphere
-    企业用户升级后需手动设置 install.conf 中的 MS_UI_ENABLED=true 和 MS_WORKSTATION_ENABLED=true 并执行 'msctl reload' 来开启UI和工作台功能
+
+    企业用户升级后需手动设置 ${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
+    
     您可以使用命令 'msctl status' 检查服务运行情况.
     ```
 
