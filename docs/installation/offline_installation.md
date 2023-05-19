@@ -12,7 +12,7 @@
 ## 3 解压安装包
 !!! ms-abstract ""
     以 root 用户 ssh 登录到目标机器, 并执行如下命令。
-    ```sh
+    ```
     cd /tmp
     # 解压安装包
     tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
@@ -155,7 +155,7 @@
     ```
     
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-    ```mysql
+    ```
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
@@ -193,7 +193,7 @@
 
 ## 5 执行安装脚本
 !!! ms-abstract ""
-    ```sh
+    ```
     # 进入安装包目录
     cd metersphere-offline-installer-v2.3.0
     # 运行安装脚本

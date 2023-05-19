@@ -8,7 +8,7 @@
 ## 2 执行安装命令
 !!! ms-abstract ""
 
-    ```sh
+    ```
     # 进入离线部署包解压缩目录
     cd metersphere-offline-installer-v2.x.y
     

@@ -4,7 +4,7 @@
 
 ## 1 一键升级至最新版本
 !!! ms-abstract ""
-    ```sh
+    ```
     # 升级至最新版本
     msctl upgrade
     
@@ -14,7 +14,7 @@
 
 ## 2 一键升级至指定版本
 !!! ms-abstract ""
-    ```sh
+    ```
     # 升级至指定版本
     msctl upgrade v2.x.y
     
@@ -25,7 +25,7 @@
 ## 3 手动升级
 !!! ms-abstract ""
     MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
-    ```sh
+    ```
     # 下载在线安装包
     wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
     

@@ -53,7 +53,7 @@
 ## 3 手动安装
 ### 3.1 手动安装
 !!! ms-abstract ""
-    MeterSphere 安装包下载链接:: https://github.com/metersphere/metersphere/releases
+    MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
     ```
     # 下载在线安装包
     wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
@@ -215,7 +215,7 @@
     ```
 
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-    ```mysql
+    ```
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
