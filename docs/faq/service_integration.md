@@ -1,10 +1,10 @@
 
-## 1 MeterSphere 如何对接第三方平台
+## 1 MeterSphere 如何对接第三方平台？
 !!! ms-abstract ""
-    TAPD: 参考[MeterSphere 服务集成之 TAPD 对接]( https://kb.fit2cloud.com/?p=259)<br />
-    JIRA: 参考 [MeterSphere 服务集成之 JIRA 对接](https://kb.fit2cloud.com/?p=258)<br />
-    禅道:  参考[MeterSphere 服务集成之 禅道 对接](https://kb.fit2cloud.com/?p=257)<br />
-    Azure Devops:  参考[MeterSphere 服务集成之 Azure Devops 对接](https://kb.fit2cloud.com/?p=260)<br />
+    TAPD: 请参考[MeterSphere 服务集成之 TAPD 对接](https://kb.fit2cloud.com/?p=259)<br />
+    JIRA: 请参考 [MeterSphere 服务集成之 JIRA 对接](https://kb.fit2cloud.com/?p=258)<br />
+    禅道:  请参考[MeterSphere 服务集成之 禅道 对接](https://kb.fit2cloud.com/?p=257)<br />
+    Azure Devops: 请参考[MeterSphere 服务集成之 Azure Devops 对接](https://kb.fit2cloud.com/?p=260)<br />
 
 ## 2 在禅道上已创建的缺陷，MS 上点击“同步缺陷”，为什么未成功同步？
 !!! ms-abstract ""
@@ -12,29 +12,29 @@
 
 ## 3 禅道在 PATH_INFO 下，项目集成提示失败怎么处理?
 !!! ms-abstract ""
-    禅道配置文件的请求方式与 MS 平台选择的请求方式不一致，修改禅道配置或 MS 平台设置，使禅道请求方式与 MS 平台保持一致。<br />
-    1.【修改禅道配置】配置文件路径：/opt/zbox/app/zentao/config/my.php，修改 $config->requestType = 'PATH_INFO' 或 'GET'，重启禅道/opt/zbox/zbox restart<br />
-    2.【修改MS配置】在“系统设置-工作空间-服务集成-禅道”配置页面，选择请求方式为'PATH_INFO' 或 'GET'
+    修改禅道配置或 MS 平台设置，确保两个系统中的请求方式保持一致：<br />
+    （1）【修改禅道配置】配置文件路径：/opt/zbox/app/zentao/config/my.php，修改 $config->requestType = 'PATH_INFO' 或 'GET'，然后重启禅道`/opt/zbox/zbox restart`。<br />
+    （2）【修改MS配置】在“系统设置-工作空间-服务集成-禅道”配置页面，选择请求方式为`PATH_INFO`或 `GET`。
 
 ## 4 MS 集成 TAPD，在 MS 平台上提交缺陷（上传图片），在 TAPD 中无法正确显示图片如何处理？
 !!! ms-abstract ""
-    浏览器的默认安全策略导致，MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】，需要配置成 https 的地址。
+    浏览器的默认安全策略导致，需要在MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】中配置为 https 的地址。
 
 ## 5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示 “ID不存在或者其他错误”如何处理？
 !!! ms-abstract ""
-    可能原因:<br />
-    1.v2.4版本之后，禅道插件改用插件，插件版本和当前 MS 版本不一致；<br />
-    2.没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID;<br />
-    3.缺少配置 $config->features->apiGetModel;<br />
-    4.襌道里 api 超级调用模式有没有授权;<br />
+    可能原因包括：
+
+    - v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MS 版本不一致。
+    - 没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID。
+    - 缺少配置 $config->features->apiGetModel。
+    - 襌道里 api 超级调用模式有没有授权。
 
     解决方法:<br />
-    1.在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。<br />
-    2.在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 <br />
-    3.在禅道安装路径中：${安装路径}/zentao/config/ 目录下创建一个 my.php 文件，然后在里面添加如下内容：<br > $config->features->apiGetModel = true;  
-    注意：如果有 my.php，则直接在最下方添加 "$config->features->apiGetModel = true;"即可；
-    添加完需要重启禅道服务器，/opt/zbox/zbox restart  <br />
-    4.禅道 web 端，【组织-权限-权限维护-API 接口】，勾选“超级model调用接口”。
+
+    - 在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
+    - 在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 
+    - 在禅道安装路径中：${安装路径}/zentao/config/ 目录下 my.php (如果没有，新建 my.php 文件)中添加如下内容：`$config->features->apiGetModel = true;`然后重启禅道服务器：`/opt/zbox/zbox restart`。 
+    - 在禅道 web 端的【组织-权限-权限维护-API 接口】中，勾选“超级model调用接口”。
 
 
 ## 6 MS 集成 JIRA 平台，填写【JIRA项目key】后进行保存时，页面提示 "ID不存在或其他错误"如何处理？

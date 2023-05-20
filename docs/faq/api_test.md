@@ -25,6 +25,9 @@
 ## 6 接口自动化中模块之间是否支持共享cookie?
 !!! ms-abstract ""
     目前支持在同一模块下不同场景之间开启共享 cookie，不支持模块之间共享 cookie。
+不支持模块之间共享cookie，支持在同一模块下多个场景间共享，在不同场景之间开启共享cookie。
+
+
 
 ## 7 接口测试中，期望结果不为空，如何写断言？
 !!! ms-abstract ""
@@ -60,7 +63,7 @@
 
 ## 15 接口自动化测试，一个项目下的不同接口场景，是否可以引用同一个脚本？
 !!! ms-abstract ""
-    目前还不还不支持不同场景引用同一脚本。可以在“系统设置” - “项目管理”，给指定的项目上传jar包，然后在此项目下的不同场景就可以引用。
+    目前还不支持不同场景引用同一脚本。可以在“系统设置” - “项目管理”，给指定的项目上传jar包，然后在此项目下的不同场景就可以引用。
 
 ## 16 场景变量的类型为随机数，但执行过程中为什么没有实际生成？
 !!! ms-abstract ""
@@ -97,20 +100,20 @@
 ![! 接口自动化-批量执行](../img/faq/接口自动化-批量执行.png){ width="900px" }
 ![! 独立报告&集合报告](../img/faq/独立报告&集合报告.png){ width="900px" }
 
-## 24 接口自动化选择多场景同时运行时，可以把执行结果整合成一个测试报告吗？
+## 22 接口自动化选择多场景同时运行时，可以把执行结果整合成一个测试报告吗？
 !!! ms-abstract ""
     在 `运行配置` 弹窗的 `其他配置` 选项中选择生成 `集合报告`。
 
 ![! 多场景集成报告01](../img/faq/接口自动化-批量执行.png){ width="900px" }
 ![! 多场景集成报告02](../img/faq/多场景集成报告02.png){ width="900px" }
 
-## 22 接口定义模块，编辑接口的页面，如何保存？
+## 23 接口定义模块，编辑接口的页面，如何保存？
 !!! ms-abstract ""
     在编辑接口页面“基础信息”区域，点击测试按钮后面的向下按钮，点击“更新接口”选项即可。
 
 ![! 更新接口按钮](../img/faq/更新接口按钮.png){ width="900px" }
 
-## 23 执行接口报错“Non HTTP response code: java.net.SocketTimeoutException”
+## 24 执行接口报错“Non HTTP response code: java.net.SocketTimeoutException”
 !!! ms-abstract ""
     在接口 `其他设置` 中增加的连接超时时间。
 
@@ -292,13 +295,11 @@
 ![! metersphere导入格式](../img/faq/URL可重复.png){ width="900px" }
 
 !!! ms-abstract ""
-
     - 未开启 URL 重复：请求类型+路径相同则为同一接口，如：
 
 ![! metersphere导入格式](../img/faq/未开启URL重复.png){ width="900px" }
 
 !!! ms-abstract ""
-
     - 开启 URL 重复：接口名称+请求类型+路径相同则为同一接口，如：
 
 ![! metersphere导入格式](../img/faq/开启URL重复.png){ width="900px" }
@@ -309,37 +310,37 @@
 
 ![! metersphere导入格式](../img/faq/导入&导出逻辑.png){ width="900px" }
 
-## 47 配置了定时任务,为什么不在钉钉群发消息呢？
+## 46 配置了定时任务,为什么不在钉钉群发消息呢？
 !!! ms-abstract ""
 
     - 确认消息通知是否正确填写。
     - 定时任务是手动执行，不会发送消息。
 
-## 48 选择环境名称后，请求内容里只有http://接口，没有使用到在环境配置的ip和端口,应该如何进行
+## 47 选择环境名称后，请求内容里只有http://接口，没有使用到在环境配置的ip和端口,应该如何进行
 !!! ms-abstract ""
     在环境配置处，不选择“模块”或者“路径”，选择“无”即可
 
-## 49 接口测试断言成功，用例却为什么显示未通过？
+## 48 接口测试断言成功，用例却为什么显示未通过？
 !!! ms-abstract ""
     因为响应码不是200，只需要勾选"忽略状态"就行
 
-## 50 在后置脚本中如何获取响应结果？
+## 49 在后置脚本中如何获取响应结果？
 !!! ms-abstract ""
     prev.getResponseDataAsString()
 
-## 51 接口测试中导入 JMeter 脚本后，没有任何请求内容？
+## 50 接口测试中导入 JMeter 脚本后，没有任何请求内容？
 !!! ms-abstract ""
     使用 JMeter 打开 jmx 文件，确认接口是否被禁用, 如禁用手动开启保存后再导入。
 
-## 52 后台日志报错：ERROR StandardJMeterEngine JDBC data source already defined for: mysql
+## 51 后台日志报错：ERROR StandardJMeterEngine JDBC data source already defined for: mysql
 !!! ms-abstract ""
     查看数据库-数据源，修改最大连接数。
 
-## 53 导入 JMeter 的 JMX 文件时，页面提示“文件解析错误”，后台报错信息为 "当前JMX版本不兼容"
+## 52 导入 JMeter 的 JMX 文件时，页面提示“文件解析错误”，后台报错信息为 "当前JMX版本不兼容"
 !!! ms-abstract ""
     脚本中使用了 JMeter 第三方插件，需要将 JMeter 第三方插件包上传到 MS 服务器的 ms-server 容器 /app/lib 目录下，重启 ms-server 服务后，即可正常导入。
 
-## 54 接口响应内容过大（约4M）导致请求卡住不动
+## 53 接口响应内容过大（约4M）导致请求卡住不动
 !!! ms-abstract ""
     当响应内容过大时，在 gateway 日志中可以发现对应提示日志: `Max frame length of 10485760 has been exceeded`。 在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小，修改完后 msctl reload 重新加载在配置文件即可。
 

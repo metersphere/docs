@@ -55,12 +55,12 @@
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
     ```
 
-## 14 性能测试时并发量加大的时候报错：Non HTTP response code: java.net.SocketTimeoutException
+## 13 性能测试时并发量加大的时候报错：Non HTTP response code: java.net.SocketTimeoutException
 !!! ms-abstract ""
     多是因为服务端有较多请求正在处理（且处理时间较长），导致 MeterSphere 在有效时间内无法连接上服务器而出现，可通过修改单个接口的连接超时时间解决。
 
 
-## 16 MySQL 数据库设置了忽略大小但未生效，lower_case_table_names=1
+## 14 MySQL 数据库设置了忽略大小但未生效，lower_case_table_names=1
 !!! ms-abstract ""
      可能是因为 my.cnf 文件权限不对导致，修改权限后重启数据库。
     ```
@@ -68,43 +68,43 @@
     # docker restart mysql
     ```
 
-## 17 如何删除kafka中的临时数据，减低磁盘使用率？
+## 15 如何删除kafka中的临时数据，减低磁盘使用率？
 !!! ms-abstract ""
     ```
     // v2.3 及之后版本已经没有 zookeeper 组件了，就不需用执行 zookeeper 相关命令了
-    docker stop kafka；
-    docker rm kafka；
-    docker stop zookeeper； 
-    docker rm zookeeper；
-    rm -rf /opt/metersphere/data/kafka/kafka；
-    rm -rf /opt/metersphere/data/zookeeper/zookeeper；
-    msctl reload；
+    docker stop kafka
+    docker rm kafka
+    docker stop zookeeper
+    docker rm zookeeper
+    rm -rf /opt/metersphere/data/kafka/kafka
+    rm -rf /opt/metersphere/data/zookeeper/zookeeper
+    msctl reload
     ```
 
-## 18 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
+## 16 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
 !!! ms-abstract ""
     增大堆内存:
     ```
     set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=1024m;
     ```
 
-## 19 MeterSphere jenkins 插件验证通过后找不到工作空间
+## 17 MeterSphere jenkins 插件验证通过后找不到工作空间
 !!! ms-abstract ""
     检查地址，如果地址里多了/login路径会出现这个现象
 
-## 21 升级或安装时后台报错:image not found : xxxxxx；
+## 18 升级或安装时后台报错:image not found : xxxxxx；
 !!! ms-abstract ""
-    需要在 MeterSphere 主机上 上docker pull该镜像，或下载完整离线安装包；
+    需要在 MeterSphere 主机上docker pull该镜像，或下载完整离线安装包；
 
-## 22 前端执行性能测试或接口场景报错：请检查当前站点url配置；
+## 19 前端执行性能测试或接口场景报错：请检查当前站点url配置；
 !!! ms-abstract ""
     本地搭建的需要要把 localhost 改为具体 IP。
 
-## 24 如何监控被压测的机器？
+## 20 如何监控被压测的机器？
 !!! ms-abstract ""
     在被测服安装 node-exporter，然后在性能测试-高级配置里添加监控，填写被测服务器上node-exporter服务的ip和端口以及监控项。详细操作见[性能测试-监控](/docs/v2.x/user_mannual/loadtest/load_test.md#6)
 
-## 25 忘记 admin 密码如何处理？
+## 21 忘记 admin 密码如何处理？
 !!! ms-abstract ""
     MeterSphere 普通用户忘记密码，管理员可以在系统设置-用户页面中进行重置。如果 admin 忘记密码，则需要通过数据库操作进行重置。
     ```
@@ -116,7 +116,7 @@
     # update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
     ```
 
-## 27 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
+## 22 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
 !!! ms-abstract ""
     待补充每一步的具体操作命令
 
@@ -125,10 +125,9 @@
     - 删除历史 log 文件。
     - 停止定时任务，并停止 MeterSphere 服务，删除/opt/metersphere/data/kafka/kafka和/opt/metersphere/data/zookeeper/zookeeper（v2.3之前）目录，然后再重启 MeterSphere 服务。
 
-
-## 28 MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
+## 23 MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
 !!! ms-abstract ""
-    可能是因为 redis.conf 文件权限不对导致，修改权限后删除之前的 redis 容器并 reload。
+    可能是因为文件权限不对导致，修改权限后删除之前的 prometheus 容器并 reload。
     ```
     chmod -R 755 /opt/metersphere/conf/prometheus
     docker stop ms-prometheus
@@ -136,7 +135,7 @@
     msctl reload
     ```
 
-## 29 遇到redis启动不起来，一直处于Restarting的问题
+## 24 遇到redis启动不起来，一直处于Restarting的问题
 !!! ms-abstract ""
     可能是因为 redis.conf 文件权限不对导致，修改权限后删除之前的 redis 容器并 reload。
     ```
@@ -146,25 +145,25 @@
     msctl reload
     ```
 
-## 30 Redis 无法连接
+## 25 Redis 无法连接
 !!! ms-abstract ""
 
     - 检查防火墙是否开启。
     - 检查 6379端口是否开放。
     - 检查 .env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。
 
-## 31 docker 运行错误：docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……
+## 26 docker 运行错误：docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……
 !!! ms-abstract ""
 
     - 打开 daemon.json文件, 将 "exec-opts": ["native.cgroupdriver=systemd"] 删除。
     - 重启 docker：service docker restart。
     - 重启服务: msctl reload。
 
-## 32 环境变量和场景变量，用同个变量名，变量优先级是怎样的
+## 27 环境变量和场景变量，用同个变量名，变量优先级是怎样的
 !!! ms-abstract ""
     步骤原场景变量（如勾选） > 步骤内变量 > 整体的场景变量 > 环境变量。
 
-## 33 后台日志提示数据库连接数异常：java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
+## 28 后台日志提示数据库连接数异常：java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
 !!! ms-abstract ""
     可能是因为 my.cnf 文件权限不对导致配置文件没有生效，修改权限后删除之前的 mysql 容器并 reload。
     ```
@@ -174,23 +173,23 @@
     msctl reload
     ```
 
-## 34 后台日志提示数据库语法异常：SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
+## 29 后台日志提示数据库语法异常：SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
 !!! ms-abstract ""
     修改数据库配置文件 my.cnf，增加配置语法校验规则：sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE
 
-## 35 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
+## 30 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
 !!! ms-abstract ""
     在环境管理-数据库配置中的"数据库连接URL"后面添加 '?createDatabaseIfNotExist=true&useSSL=false'。
 
-## 36 msctl status显示服务正常，但是实际服务却访问不了怎么办？
+## 31 msctl status显示服务正常，但是实际服务却访问不了怎么办？
 !!! ms-abstract ""
     如果 MeterSphere 主机网络配置（IP、firewalld,iptables等）发生了变化，会导致之前的容器网络失效，出现浏览器无法访但使用 msctl status 时显示MeterSphere 各服务组件运行都正常得现象。需要先重启 docker，再重启 MeterSphere 服务。
 
-## 38 如何修改 session 过期时间？
+## 32 如何修改 session 过期时间？
 !!! ms-abstract ""
     在 /opt/metersphere/conf/metersphere.properties 中添加字段 session.timeout，单位秒。
 
-## 39 K8S 部署 metersphere 在上传文件时提示：413 request entity too large
+## 33 K8S 部署 metersphere 在上传文件时提示：413 request entity too large
 !!! ms-abstract ""
     配置 ngnix 请求解除默认的 1M 限制：
     ```
@@ -204,11 +203,11 @@
     nginx.ingress.kubernetes.io/proxy-body-size: 50m
     ```
 
-## 40 主机部署 metersphere 在上传文件时提示： 413 request entity too large
+## 34 主机部署 metersphere 在上传文件时提示： 413 request entity too large
 !!! ms-abstract ""
     在 nginx 服务的配置文件 nginx.conf 的 http 段中加入 client_max_body_size xxm, xx根据需求改动，保存后重启 nginx。
 
-## 41 使用Nginx配置反向代理后，在进行接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
+## 35 使用Nginx配置反向代理后，在进行接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
 !!! ms-abstract ""
     需要加上 Nginx websocket 配置:
 
@@ -229,14 +228,14 @@
     }
     ```
 
-## 43 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
+## 36 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
 !!! ms-abstract ""
 
     - 如果使用了Nginx, 请参考 [配置反向代理](https://metersphere.io/docs/v2.x/installation/offline_installation/)。
     - 如果使用了fidder、charles等代理代工具，先关闭。 
     - 如果 https://ip:8081 被拦截了，请使用 http://ip:8081 。
 
-## 44 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
+## 37 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
 ![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
 !!! ms-abstract ""
     1.清浏览器缓存，重新打开浏览器进行访问。 <br>
@@ -249,26 +248,26 @@
     flushall
     ```
 
-## 45 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
+## 38 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
 ![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
 !!! ms-abstract ""
     检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere。
 
-## 46 MeterSphere k8s部署后如何控制数据库的连接数
+## 39 MeterSphere k8s部署后如何控制数据库的连接数
 !!! ms-abstract ""
     1.可在名称为 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数 <br>
     2.可在名称为 values.yml 文件里，DATABASE 处新增如下两行参数
-```
-spring.datasource.hikari.maximum-pool-size=你想要的数值
-spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
-```
+    ```
+    spring.datasource.hikari.maximum-pool-size=你想要的数值
+    spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
+    ```
 
-## 47 安装时出现：Encountered error while bringing up the project, msctl status 时看到 mysql容器一直在 Restarting，
+## 40 安装时出现：Encountered error while bringing up the project, msctl status 时看到 mysql容器一直在 Restarting，
 !!! ms-abstract ""
     在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg)
 
-## 48 安装部署时报错：Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+## 41 安装部署时报错：Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
 !!! ms-abstract ""
     主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。
 
@@ -276,17 +275,4 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
     - 将 opt/metersphere/.env 里MS_DOCKER_SUBNET改成其它网络 <br>
     - 手动创建容器网络：docker network create metersphere_ms-network 
     - 重启服务器：msctl reload
-
-## 51 后台日志报错：ERROR Unable to write to Kafka in appender [Kafka]……
-!!! ms-abstract ""
-    出现这类错误主要原因是数据量较大，
-```
-docker stop kafka 
-docker stop zookeeper 
-docker rm kafka 
-docker rm zookeeper 
-rm -rf /opt/metersphere/data/kafka/kafka 
-rm -rf /opt/metersphere/data/zookeeper/zookeeper 
-msctl reload
-```
 
