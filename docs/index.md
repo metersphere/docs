@@ -43,9 +43,9 @@
 
 !!! ms-abstract ""
 
-    - [下载《持续测试白皮书 v1.0》](https://jinshuju.net/f/KqFUhq)
-    - [如何向团队介绍 MeterSphere？](https://metersphere.io/download/introduce-metersphere_202205.pdf)
     - [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
+    - [下载《持续测试白皮书 v1.0》](https://jinshuju.net/f/KqFUhq)
+    - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202303.pdf)
     - [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
     - [飞致云学堂](https://edu.fit2cloud.com/index)
     - [JMeter 资源合集](./awesome-jmeter.md)

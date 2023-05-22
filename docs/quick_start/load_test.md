@@ -16,7 +16,7 @@
 ![!当前站点URL](../img/quick_start/performance/当前站点URL.png){ width="900px" }
 
 ## 3 创建性能测试
-	!!! ms-abstract ""
+!!! ms-abstract ""
 	进入【性能测试】-> 【测试】页面，在性能测试列表中点击【创建性能测试】，在【场景配置】点击【引用接口自动化场景】，将已有的接口自动化场景添加到性能测试中。
 
 ![!创建性能测试](../img/quick_start/performance/创建性能测试.png){ width="900px" }
