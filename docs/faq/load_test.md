@@ -1,15 +1,15 @@
 ## 1 是否支持/如何支持分布式的性能测试？
 !!! ms-abstract ""
-   MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。
+    MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。
 
-   例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。
+    例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。
 
 ![测试资源池](../img/system_management/编辑测试资源池.png){ width="900px" }
 
 ## 2 如何向测试资源池中添加节点？
 !!! ms-abstract ""
-   首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。安装完成通过 `msctl status` 查看组件状态是否正常。<br> 
-    节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。
+    首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。安装完成通过 `msctl status` 查看组件状态是否正常。<br> 
+        节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。
 
 ## 3 采用 MeterSphere 压测和手动使用 JMeter 命令行压测得到性能测试结果差距很大该如何优化？
 !!! ms-abstract ""
@@ -241,9 +241,10 @@
 
 ## 32 性能测试模块，自定义监控不支持windows服务器
 !!! ms-abstract ""
-    默认提供的 promQL 是 linux 的，windows 的需要自行查询来写。查询windows的cpu使用率语句: 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="%1$s"}[1m])) * 100)
-其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
-其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的exporter，只要是符合 exporter规范的都可以在自定义监控中配置
+    默认提供的 promQL 是 linux 的，windows 的需要自行查询来写。查询windows的cpu使用率语句: 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="%1$s"}[1m])) * 100) 
+
+    其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
+    其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的exporter，只要是符合 exporter规范的都可以在自定义监控中配置
 
 ## 33 部署在K8S下的 MS 自定义监控配置方法，默认方法无法生效。监控详情没有数据 
 !!! ms-abstract ""
@@ -274,22 +275,23 @@
     ms 服务是用 docker 部署的，docker 容器只能达到虚拟机的 70% 左右的性能。
 
 ## 38 运行性能测试的时候报错了 Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11
+
 !!! ms-abstract ""
-   服务器本地的 jmeter-master 镜像被删除了，需要手动执行命令手动拉取镜像 `docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`。
+    服务器本地的 jmeter-master 镜像被删除了，需要手动执行命令手动拉取镜像 `docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`。
 
 ## 39 如果采用 K8S 集群压测，如何获取 SA 和 Token？
 !!! ms-abstract ""
-   ```
-   // 创建 namespaces
-   kubectl create namespace metersphere
-   
-   // 创建 SA
-   kubectl create serviceaccount ms -n metersphere
-   
-   // 创建 namespace 授权 SA
-   kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
-   
-   // 查询 SA token
-   kubectl describe sa/ms -n metersphere
-   kubectl describe secrets -n metersphere ms-token-xxxx
-   ```
+    ```
+    // 创建 namespaces
+    kubectl create namespace metersphere
+    
+    // 创建 SA
+    kubectl create serviceaccount ms -n metersphere
+    
+    // 创建 namespace 授权 SA
+    kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+    
+    // 查询 SA token
+    kubectl describe sa/ms -n metersphere
+    kubectl describe secrets -n metersphere ms-token-xxxx
+    ```

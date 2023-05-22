@@ -4,7 +4,7 @@
 
 ## 2 接口传参需要使用随机数，有内置的方法吗？
 !!! ms-abstract ""
-    可以参考使用 JMeter 内置函数或者 Mock.js 函数生成随机值。
+    可以参考使用 JMeter 内置函数或者 Mock.js 函数生成随机值。请参考[内置函数](../user_manual/api_test/functions.md)
 
 ## 3 接口自动化多场景如何进行批量运行？
 !!! ms-abstract ""
@@ -14,7 +14,7 @@
 
 ## 4 接口自动化如何生成报告？
 !!! ms-abstract ""
-    手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[执行指定场景](/docs/v2.x/user_manual/api_test/api_automation/#_12)
+    手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[批量执行场景](../user_manual/api_test/api_automation.md)
 
 ## 5 接口测试如何支持上传文件的接口吗？
 !!! ms-abstract ""
@@ -24,10 +24,7 @@
 
 ## 6 接口自动化中模块之间是否支持共享cookie?
 !!! ms-abstract ""
-    目前支持在同一模块下不同场景之间开启共享 cookie，不支持模块之间共享 cookie。
-不支持模块之间共享cookie，支持在同一模块下多个场景间共享，在不同场景之间开启共享cookie。
-
-
+     同一模块下不同场景可以开启共享 cookie，不支持模块之间共享 cookie。<br />
 
 ## 7 接口测试中，期望结果不为空，如何写断言？
 !!! ms-abstract ""
@@ -35,11 +32,12 @@
 
 ## 8 对SQL请求，如何断言？
 !!! ms-abstract ""
-    SQL请求的断言可通过如下步骤进行（** 待增加样例 **）：
+    SQL请求的断言可通过如下步骤进行：
 
     - 配置“存储结果”和“按列存储”，存储数据。
     - 配置SQL脚本，取出需要断言的参数。
     - 添加脚本断言，判断存储 SQL 结果数据的变量的变量值。
+    - 可参考[MeterSphere 数据库提取参数和断言](https://kb.fit2cloud.com/?p=364ab4d8-717a-4aee-bb90-0224d0f1dae0)
 
 ## 9 全局变量和场景变量里，包含相同变量名的变量，优先级如何判断？
 !!! ms-abstract ""
@@ -63,15 +61,15 @@
 
 ## 15 接口自动化测试，一个项目下的不同接口场景，是否可以引用同一个脚本？
 !!! ms-abstract ""
-    目前还不支持不同场景引用同一脚本。可以在“系统设置” - “项目管理”，给指定的项目上传jar包，然后在此项目下的不同场景就可以引用。
+    可以使用公共代码片段。可以在“系统设置” - “项目管理”，给指定的项目上传jar包，然后在项目设置-自定义代码片段下编写脚本，之后此项目下的不同场景就可以引用。
 
 ## 16 场景变量的类型为随机数，但执行过程中为什么没有实际生成？
 !!! ms-abstract ""
-    请检查配置的随机数长度，随机数长度需要在 MeterSphere 限定范围内。** 具体范围是？ **
+    请检查配置的随机数长度，随机数长度需要在 MeterSphere 限定范围内。
 
 ## 17 如何通过变量引用 csv 数据？
 !!! ms-abstract ""
-    在场景编辑页面，点击场景变量添加csv类型的场景变量。具体操作参考 [场景变量配置](https://metersphere.io/docs/v2.x/user_manual/api_test/api_automation/#24) 。
+    在场景编辑页面，点击场景变量添加csv类型的场景变量。具体操作参考 [场景变量配置](../user_manual/api_test/api_automation.md) 。
 
 ## 18 接口自动化里，同一场景下是否支持配置多个接口域名？
 !!! ms-abstract ""
@@ -82,7 +80,7 @@
 
 ## 19 请求里面涉及到了转发重定向，如何获取接口返回的code？
 !!! ms-abstract ""
-    在接口的 `请求参数` 区域的 `其他设置` 页面中，取消勾选 `跟随重定向` 选项。
+    在接口的【请求参数】区域的【其他设置】页面中，取消勾选 【跟随重定向】选项。
 
 ![! 跟随重定向](../img/faq/跟随重定向.png){ width="900px" }
 
@@ -132,7 +130,7 @@
 
 ## 27 MeterSphere 可以直接连接开发工具传输 API 吗？
 !!! ms-abstract ""
-    MeterSphere 在 1.15 版本实现了与 IDEA 对接。通过在 IDEA 安装组件，完成 API 信息传送。可以到 GitHub 下载此组件。
+    MeterSphere 在 1.15 版本实现了与 IDEA 对接。通过在 IDEA 安装组件，完成 API 信息传送。可以到 GitHub 下载此组件，用法参考[metersphere-idea插件](../user_manual/plugin_use/idea_plugin.md) 
 
 ## 28 接口自动化场景里可以跨项目引用接口/用例吗？
 !!! ms-abstract ""
@@ -142,7 +140,7 @@
 
 ## 29 快捷调试的时候，一直转圈等待是什么原因?
 !!! ms-abstract ""
-    安装 MeterSphere 的服务器到请求的地址网络不通,在 MeterSphere 上 telnet 被测服务端口检查。
+     MeterSphere 的服务器到被测服务的地址网络不通，可在 MeterSphere 上 telnet 被测服务端口检查网络。
 
 ## 30 进行接口case调试时，调用不同控制台信息显示连接某地址超时；
 !!! ms-abstract ""
@@ -154,12 +152,12 @@
 
 ## 32 如何循环取出列表变量的每一个值
 !!! ms-abstract ""
-    结合循环控制器和计数器取值。
+    结合循环控制器和计数器取值。参考方法[接口测试如何使用多个List进入ForEach循环控制器](https://bbs.fit2cloud.com/t/topic/399/3) 
 
 ## 33 接口响应内容为 Unicode 字符是如何处理？
 !!! ms-abstract ""
 
-    - 在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");  
+    - 在后置脚本中选择BeanShell语言处理编码，然后写入prev.setDataEncoding("UTF-8");  
     - 可以在后置脚本中选择BeanShell，然后写入如下代码：
     ```
     String response_value=new String(prev.getResponseData(),"UTF-8");
@@ -231,7 +229,7 @@
 ## 36 MeterSphere 中 CSV 文件的主要应用场景有哪些？
 !!! ms-abstract ""
 
-    - 在接口自动化中可以将CSV文件作为场景变量使用，配合循环控制器使用。
+    - 在接口自动化中可以将 CSV 文件作为批量传参文件可以用作场景变量使用，配合循环控制器使用。
     - 在性能测试中作为参数被引用。
 
 ## 37 场景中如何使用 CSV 文件参数？
@@ -322,7 +320,7 @@
 
 ## 48 接口测试断言成功，用例却为什么显示未通过？
 !!! ms-abstract ""
-    因为响应码不是200，只需要勾选"忽略状态"就行
+    如果响应码不是200，需要勾选"忽略状态"忽略状态码的判断。
 
 ## 49 在后置脚本中如何获取响应结果？
 !!! ms-abstract ""

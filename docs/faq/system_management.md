@@ -9,6 +9,9 @@
     MeterSphere 的用户信息存放在数据库中的 `user` 表中，其中 password 字段为用户密码的 `md5` 值。
 
     ```sql
+    docker exec -it mysql bash  #进入mysql容器
+    mysql -uroot -pPassword123@mysql
+    use metersphere   #切换到meterspheres数据库
     update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
     ```
 ## 2 如何理解 MeterSphere 测试资源池？
