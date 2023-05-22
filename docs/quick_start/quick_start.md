@@ -1,19 +1,20 @@
-按部署服务器要求准备好部署环境后，可通过 MeterSphere 快速安装脚本一键快速部署。
-
-!!! warning "注意"
+!!! ms-abstract ""
+    按部署服务器要求准备好部署环境后，可通过 MeterSphere 快速安装脚本一键快速部署。<br>
     快速安装脚本所部署的环境仅适用于测试体验目的, 生产环境请参考本文档[「在线安装」](../installation/online_installation.md)章节内容进行部署。
 
 ## 1 部署服务器要求
 
-!!! info "部署服务器要求"
-     * 操作系统要求：任何支持 Docker 的 Linux x64
-     * CPU内存要求：最低要求 4C8G，推荐 8C16G
-     * 部署目录空间（默认/opt目录）要求： 50G
-     * 网络要求：可访问互联网
+!!! ms-abstract "部署服务器要求"
+     - 操作系统要求：任何支持 Docker 的 Linux x64
+     - CPU内存要求：最低要求 4C8G，推荐 8C16G
+     - 部署目录空间（默认/opt目录）要求： 50G
+     - 网络要求：可访问互联网
 
 ## 2 网络端口要求
 
-MeterSphere 作为一站式持续测试平台，其正常运行需要网络环境提供如下的网络端口配置要求，管理员可根据实际环境中 MeterSphere 组件部署的方案，在网络侧和主机侧开放相关端口：
+!!! ms-abstract ""
+
+    MeterSphere 作为一站式持续测试平台，其正常运行需要网络环境提供如下的网络端口配置要求，管理员可根据实际环境中 MeterSphere 组件部署的方案，在网络侧和主机侧开放相关端口：
 
 | 组件     | 默认端口     | 说明     |
 | -------- | -------- | -------- |
@@ -29,13 +30,14 @@ MeterSphere 作为一站式持续测试平台，其正常运行需要网络环�
 | Kafka | 9092 | MeterSphere 默认安装的消息中间件对外提供的端口  |
 
 ## 3 安装步骤
-以 root 用户 ssh 登录部署目标服务器, 执行以下命令。
-```sh
-curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
-```
-安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
-!!! warning "注意"
+!!! ms-abstract ""
+    以 root 用户 ssh 登录部署目标服务器, 执行以下命令:
+    ```sh
+    curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
+    ```
+    安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
+
     如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
     ```
     server {
@@ -74,14 +76,16 @@ curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest
     }
     ```
 
+
 ## 4 登录并使用
 ### 4.1 登录
-安装成功后，在浏览器打开以下地址页面，输入用户名和密码，登录 MeterSphere。
-```
-地址: http://目标服务器IP地址:8081
-用户名: admin
-密码: metersphere
-```
+!!! ms-abstract ""
+    安装成功后，在浏览器打开以下地址页面，输入用户名和密码，登录 MeterSphere。
+    ```
+    地址: http://目标服务器IP地址:8081
+    用户名: admin
+    密码: metersphere
+    ```
 
 ### 4.2 界面说明
 ![界面说明](../img/界面说明.png)
