@@ -39,3 +39,5 @@
     密码: metersphere
     ```
 ![安装MeterSphere](../img/installation/mac-install-server.png){ width="900px" }
+
+![安装MeterSphere](../img/installation/mac-install-localhost.png){ width="900px" }
