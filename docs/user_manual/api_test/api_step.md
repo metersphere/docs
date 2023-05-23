@@ -10,7 +10,7 @@
     - Groovy
     - JavaScript
 
-    在前置脚本中还可以直接引用JMeter 预定义对象，例如：<br>
+    在前置脚本中可以直接引用JMeter 预定义对象，例如：<br>
     - `log`：用于在脚本执行过程中打印日志
     ```
     //打印 `Hello World!` 到 info 日志中
@@ -49,7 +49,7 @@
 
 ### 1.1 API测试 
 !!! ms-abstract "" 
-    【从Api定义导入】：API定义导入可以直接导入 API 或 CASE 自动生成脚本。点击【API定义导入】按钮，从接口列表  API/ CASE 选择目标数据点击【确定】会在前置脚本中默认生成 beanshell 脚本。脚本语言可切换，默认支持 beanshell 、python2 、groovy 、javascript 语言。
+    【从API定义导入】：API定义导入可以直接导入 API / CASE 自动生成脚本。<br >点击【API定义导入】按钮，从接口列表  API/ CASE 选择目标数据点击【确定】会在前置脚本中默认生成 beanshell 脚本。脚本语言可切换，默认支持 beanshell 、python2 、groovy 、javascript 语言。
 
 ![!API测试](../../img/api/选择API.png){ width="900px" }
 ![!API测试](../../img/api/生成代码.png){ width="900px" }
@@ -75,7 +75,7 @@
 
 ### 1.4 自定义代码片段 
 !!! ms-abstract "" 
-    选择【自定义代码】插入代码片段，选择系统定义好的自定义代码片段可直接 复用项目管理中维护的自定义代码片段。
+    选择【自定义代码】插入代码片段，选择在【项目管理-自定义代码片段】定义好的自定义代码片段，可实现复用脚本优化测试管理办法。
 
 ![!项目环境](../../img/api/选择自定义代码片段1.png){ width="900px" }
 ![!项目环境](../../img/api/复用代码片段1.png){ width="900px" }
@@ -295,6 +295,7 @@
     ```
     提取需求：提取响应体 `data` 中的 `name` 字段并存储在 `name` 变量中。<br />
     提取配置：
+
     * 变量名：name
     * JSONPath 表达式：$.data.name
 
@@ -332,6 +333,7 @@
     提取需求：提取响应体中的 `id` 为 3 的员工的姓名，即上述响应中的 `Robert De Niro`，并存储在 `employeeName` 变量中。
 
     提取配置：
+    
     - 变量名：employeeName
     - XPath 表达式：string(//employee[@id='3'])
 

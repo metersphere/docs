@@ -6,7 +6,7 @@
     禅道:  请参考[MeterSphere 服务集成之 禅道 对接](https://kb.fit2cloud.com/?p=257)<br />
     Azure Devops: 请参考[MeterSphere 服务集成之 Azure Devops 对接](https://kb.fit2cloud.com/?p=260)<br />
 
-## 2 在禅道上已创建的缺陷，MS 上点击“同步缺陷”，为什么未成功同步？
+## 2 在禅道上已创建的缺陷，MS 上点击【同步缺陷】，为什么未成功同步？
 !!! ms-abstract ""
     禅道缺陷同步到 MS 是企业版功能，开源版只支持单向同步，只能将 MS 缺陷同步到禅道上。
 
@@ -16,11 +16,11 @@
     （1）【修改禅道配置】配置文件路径：/opt/zbox/app/zentao/config/my.php，修改 $config->requestType = 'PATH_INFO' 或 'GET'，然后重启禅道`/opt/zbox/zbox restart`。<br />
     （2）【修改MS配置】在“系统设置-工作空间-服务集成-禅道”配置页面，选择请求方式为`PATH_INFO`或 `GET`。
 
-## 4 MS 集成 TAPD，在 MS 平台上提交缺陷（上传图片），在 TAPD 中无法正确显示图片如何处理？
+## 4 MS 集成 TAPD，在 MS 平台上提交缺陷时上传图片，但在 TAPD 中无法正确显示图片，如何处理？
 !!! ms-abstract ""
     浏览器的默认安全策略导致，需要在MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】中配置为 https 的地址。
 
-## 5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示 “ID不存在或者其他错误”如何处理？
+## 5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示`ID不存在或者其他错误`如何处理？
 !!! ms-abstract ""
     可能原因包括：
 

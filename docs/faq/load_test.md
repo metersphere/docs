@@ -1,15 +1,15 @@
 ## 1 是否支持/如何支持分布式的性能测试？
 !!! ms-abstract ""
-   MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。
+    MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。
 
-   例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。
+    例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。
 
 ![测试资源池](../img/system_management/编辑测试资源池.png){ width="900px" }
 
 ## 2 如何向测试资源池中添加节点？
 !!! ms-abstract ""
-   首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。安装完成通过 `msctl status` 查看组件状态是否正常。<br> 
-    节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。
+    首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档[「在线安装」](../installation/online_installation.md)或[「离线安装」](../installation/offline_installation.md)章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。安装完成通过 `msctl status` 查看组件状态是否正常。<br> 
+        节点添加完成点击确定后系统将对节点状态进行检查，若测试资源池为可用状态则说明该测试资源池及其中的节点可以正常使用。
 
 ## 3 采用 MeterSphere 压测和手动使用 JMeter 命令行压测得到性能测试结果差距很大该如何优化？
 !!! ms-abstract ""
@@ -22,7 +22,7 @@
     与优化前方案相比，Kafka 和 DataStreaming 需要处理的数据大大降低，整体上对于并发量较大情况下的结果处理能力大大提升。
     同时可以采用 部署 Kafka 和 DataStreaming 集群以及增加 Partition 数量的来增加 Kafka 的吞吐量和处理能力，可更加接近 JMeter 的真实值。
 
-## 4 执行性能测试时提示“Kafka 不可用，请检查配置“如何解决？
+## 4 执行性能测试时提示`Kafka 不可用，请检查配置`，如何解决？
 !!! ms-abstract ""
     系统在执行性能测试之前，会先检查安装系统时配置的 Kafka 地址是否可用。当提示该信息时，表明 MeterSphere 无法正常连接到 Kafka，可以按照以下排查思路进行分析和定位：
 
@@ -45,10 +45,8 @@
     [root@meter-prototype ~]# docker exec ms-server nc -zv ${kafka 服务 IP} ${kafka 服务端口}
     kafka (172.23.0.5:19092) open
     ```
-    如果 ms-server 不能正常访问 Kafka 服务，报错为 host is unreachable
+    如果 ms-server 不能正常访问 Kafka 服务，提示`host is unreachable`，执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
     ```
-    执行 ifconfig 将 br-XXX 和 docker-XX 的网段，加入到防火墙策略中
-    
     firewall-cmd --zone=trusted --add-source=172.18.0.1/16 --permanent；
     firewall-cmd --zone=trusted --add-source=172.19.0.1/16 --permanent；
     firewall-cmd --reload
@@ -83,16 +81,16 @@
 !!! ms-abstract ""
     在创建性能测试时，可以将依赖的 jar 包与 jmx 文件一起上传。
 
-## 9 执行性能测试时，提示“并发数超额”，该怎么解决？
+## 9 执行性能测试时，提示`并发数超额`，该怎么解决？
 !!! ms-abstract ""
     修改系统设置-测试资源池中的最大并发数后再次执行测试。
 
-## 10 执行性能测试时，显示image not found如何处理？
+## 10 执行性能测试时，显示`image not found`如何处理？
 !!! ms-abstract ""
     执行性能测试所需的 JMeter 容器需要事先存在于所选的测试资源池的节点上，请检查确保容器镜像存在后，更新测试资源池的镜像配置为正确的镜像标签。
 
 
-## 11 压测执行时报错：Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.
+## 11 压测执行时报错：`Error: Check node-controller /etc/hosts, `127.0.0.1 ${hostname}` must be contained. Please delete the report and rerun.`
 !!! ms-abstract ""
     在部署 node-controller 的机器上，使用hostname命令获取主机名。
     ```
@@ -128,7 +126,7 @@
 !!! ms-abstract ""
     MeterSphere 使用 Prometheus 进行发压机以及被测系统服务器的监控，可以在性能测试-高级配置里面，添加被测系统服务器的 node_exporter 的地址。主服务会在安装 MeterSphere 系统时默认安装，而其他服务器，则需要单独安装 node_exporter，即可在执行性能测试的时候完成相关指标的监控。
 
-## 15 如何安装 node_exporter 插件
+## 15 如何安装 node_exporter 插件？
 !!! ms-abstract ""
 
     - 方法1： docker pull prom/node-exporter 拉取 node_export 镜像，之后运行容器
@@ -167,7 +165,7 @@
 !!! ms-abstract ""
     在容器里的/test目录下。
 
-## 20 性能测试状态一直是 starting 且无数据
+## 20 性能测试状态一直是 starting 且无数据，如何排查？
 !!! ms-abstract ""
     1.检查【系统设置-系统-系统参数设置】，当前站点配置是不是正确的 <br>
     2.到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log 和 info.log，看日志中是否有报错信息。<br>
@@ -180,19 +178,19 @@
     执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br>
 ![! 接口测试-K8S配置](../img/faq/接口测试-K8S配置.png){ width="900px" }
 
-## 22 check node-controller status
+## 22 操作时提示：`check node-controller status`
 !!! ms-abstract ""
     - 检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
     - docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
     - 检查 JMeter 的镜像版本是不是对的，检查 JMeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传JMeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的JMeter镜像，重新加载项目msctl reload。<br>
 
-## 23 Error:没有足够的资源启动测试
+## 23 操作提示：`Error:没有足够的资源启动测试`
 !!! ms-abstract ""
     将【系统设置-测试资源池-JMeter HEAP】调大。
 
 ![! 接口测试-K8S配置](../img/faq/Jmeter_Heap.jpg){ width="900px" }
 
-## 24 性能测试中怎么跨线程传递变量
+## 24 性能测试中怎么跨线程传递变量？
 !!! ms-abstract ""
     性能测试里动态设置变量可以用属性的方式，${__setProperty(var,value,)} 设置属性，${__property(var)} 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递
 
@@ -200,7 +198,7 @@
 !!! ms-abstract ""
     性能测试计算报告是后台自动计算的，页面上配置的这个值只是页面查询数据库的频率。也就是说如果后台计算比较慢，这里的时间间隔较小的话是不能看到图表的改动的
 
-## 26 性能测试无法正常执行，提示资源不够
+## 26 性能测试无法正常执行，提示资源不够？
 !!! ms-abstract ""
     可能的原因有: 
 
@@ -221,7 +219,7 @@
 
     解决方法：减少ramp-up时间，可以看到并发用户数与设置一致。
 
-## 28 kafka 的日志保留时间配置
+## 28 如何修改 kafka 的日志保留时间配置？
 !!! ms-abstract ""
     修改 /opt/metersphere/docker-compose-kafka.yml 配置文档里的 KAFKA_CFG_LOG_RETENTION_HOURS 参数。
 
@@ -229,23 +227,24 @@
 
 ## 29 性能测试时接口读取 csv 不能按顺序读取
 !!! ms-abstract ""
-    所选的测试资源池有多个节点，多个节点共用一套 csv 导致取值重复，在性能测试的高级配置里，开启 csv 分割，多准备点测试数据。csv 分割是: 假设有2个节点，csv 里有100条数据，就会把 csv 里的数据均分成2份，然后节点1 使用 1-50 条数据，节点2 使用 51-100 条数据。
+    所选的测试资源池有多个节点，多个节点共用一套 CSV 导致取值重复，在性能测试的高级配置里，开启 CSV 分割，多准备点测试数据。CSV 分割是: 假设有2个节点，CSV 里有100条数据，就会把 CSV 里的数据均分成2份，然后节点1 使用 1-50 条数据，节点2 使用 51-100 条数据。
 
-## 30 性能测试配置里面上传 csv 文件，在高级配置里面看不到
+## 30 性能测试配置里面上传 CSV 文件，在高级配置里面看不到
 !!! ms-abstract ""
-    csv 文件没有被性能 jmx 脚本引用，jmx 引用了才能看见。修改 jmx 文件，引用上传的 csv 文件。或者在场景里添加 csv 文件后转性能测试。
+    csv 文件没有被性能 jmx 脚本引用，jmx 引用了才能看见。修改 jmx 文件，引用上传的 CSV 文件，或者在场景里添加 CSV 文件后转性能测试。
 
 ## 31 JMX 脚本在导入到性能测试后，性能测试执行完毕没有任何数据  
 !!! ms-abstract ""
-    jmx 脚本里有 csv 文件，上传 jmx 文件后有没有上传 csv 文件，同步上传 jmx 使用到的 csv 文件
+    jmx 脚本里有 CSV 文件，上传 jmx 文件后有没有上传 CSV 文件，同步上传 jmx 使用到的 CSV 文件
 
-## 32 性能测试模块，自定义监控不支持windows服务器
+## 32 性能测试模块，自定义监控项不支持 windows 服务器
 !!! ms-abstract ""
-    默认提供的 promQL 是 linux 的，windows 的需要自行查询来写。查询windows的cpu使用率语句: 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="%1$s"}[1m])) * 100)
-其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
-其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的exporter，只要是符合 exporter规范的都可以在自定义监控中配置
+    默认提供的 promQL 是与 linux 操作系统适配，windows 操作系统的监控项需要自行编写，例如：查询 windows 的 cpu 使用率: `100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="%1$s"}[1m])) * 100) `
 
-## 33 部署在K8S下的 MS 自定义监控配置方法，默认方法无法生效。监控详情没有数据 
+    其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
+    其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的 exporter，只要是符合 exporter规范的都可以在自定义监控中配置
+
+## 33 部署在 K8S 下的 MS 自定义监控配置方法，默认方法无法生效，并且监控详情没有数据 
 !!! ms-abstract ""
     在 prometheus.yml 中配置
     ```
@@ -257,7 +256,7 @@
 
 ![!kafka](../img/faq/k8s_监控.png){ width="900px" }
 
-## 34 接口自动化创建了的性能测试，脚本及文件内容更新后，性能测试的没有跟着更新 
+## 34 接口自动化创建了的性能测试，脚本及文件内容更新后，已转性能测试的用例没有同步更新 
 !!! ms-abstract ""
     转性能测试的时候生成的 jmx 文件就是当前的配置，之后再修改接口对性能测试无效，点击性能测试右上角“同步场景测试最新变更”按钮手动同步即可。
 
@@ -269,27 +268,24 @@
 !!! ms-abstract ""
     请求统计的显示的是接口的名称，不是场景的名称。
 
-## 37 MeterSphere 页面得到的性能测试数据，只有 jmeter 命令行得到的测试数据的 70%~75% 
-!!! ms-abstract ""
-    ms 服务是用 docker 部署的，docker 容器只能达到虚拟机的 70% 左右的性能。
+## 38 运行性能测试的时候报错`Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`
 
-## 38 运行性能测试的时候报错了 Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11
 !!! ms-abstract ""
-   服务器本地的 jmeter-master 镜像被删除了，需要手动执行命令手动拉取镜像 `docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`。
+    服务器本地的 jmeter-master 镜像被删除了，需要手动执行命令手动拉取镜像 `docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`。
 
 ## 39 如果采用 K8S 集群压测，如何获取 SA 和 Token？
 !!! ms-abstract ""
-   ```
-   // 创建 namespaces
-   kubectl create namespace metersphere
-   
-   // 创建 SA
-   kubectl create serviceaccount ms -n metersphere
-   
-   // 创建 namespace 授权 SA
-   kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
-   
-   // 查询 SA token
-   kubectl describe sa/ms -n metersphere
-   kubectl describe secrets -n metersphere ms-token-xxxx
-   ```
+    ```
+    // 创建 namespaces
+    kubectl create namespace metersphere
+    
+    // 创建 SA
+    kubectl create serviceaccount ms -n metersphere
+    
+    // 创建 namespace 授权 SA
+    kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+    
+    // 查询 SA token
+    kubectl describe sa/ms -n metersphere
+    kubectl describe secrets -n metersphere ms-token-xxxx
+    ```

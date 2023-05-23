@@ -1,10 +1,10 @@
-## 1 在接口自动化的一个场景里面，个别接口需要使用不同的环境去运行，该怎么实现？
+## 1 在接口自动化的一个场景里面，个别接口需要使用不同的环境去运行，该怎么处理？
 !!! ms-abstract ""
     可以通过添加自定义请求的方式实现。
 
-## 2 接口传参需要使用随机数，有内置的方法吗？
+## 2 接口传参需要使用随机数，有哪些内置方法？
 !!! ms-abstract ""
-    可以参考使用 JMeter 内置函数或者 Mock.js 函数生成随机值。
+    可以参考使用 JMeter 内置函数或者 Mock.js 函数生成随机值。请参考[内置函数](../user_manual/api_test/functions.md)
 
 ## 3 接口自动化多场景如何进行批量运行？
 !!! ms-abstract ""
@@ -14,7 +14,7 @@
 
 ## 4 接口自动化如何生成报告？
 !!! ms-abstract ""
-    手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[执行指定场景](/docs/v2.x/user_manual/api_test/api_automation/#_12)
+    手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考[批量执行场景](../user_manual/api_test/api_automation.md)
 
 ## 5 接口测试如何支持上传文件的接口吗？
 !!! ms-abstract ""
@@ -22,12 +22,9 @@
 
 ![!接口上传文件类型](../img/faq/接口上传文件类型.png){ width="900px" }
 
-## 6 接口自动化中模块之间是否支持共享cookie?
+## 6 接口自动化中模块之间是否支持共享 cookie?
 !!! ms-abstract ""
-    目前支持在同一模块下不同场景之间开启共享 cookie，不支持模块之间共享 cookie。
-不支持模块之间共享cookie，支持在同一模块下多个场景间共享，在不同场景之间开启共享cookie。
-
-
+     同一模块下不同场景可以开启共享 cookie，不支持模块之间共享 cookie。<br />
 
 ## 7 接口测试中，期望结果不为空，如何写断言？
 !!! ms-abstract ""
@@ -35,11 +32,12 @@
 
 ## 8 对SQL请求，如何断言？
 !!! ms-abstract ""
-    SQL请求的断言可通过如下步骤进行（** 待增加样例 **）：
+    SQL请求的断言可通过如下步骤进行：
 
     - 配置“存储结果”和“按列存储”，存储数据。
     - 配置SQL脚本，取出需要断言的参数。
     - 添加脚本断言，判断存储 SQL 结果数据的变量的变量值。
+    - 可参考[MeterSphere 数据库提取参数和断言](https://kb.fit2cloud.com/?p=364ab4d8-717a-4aee-bb90-0224d0f1dae0)
 
 ## 9 全局变量和场景变量里，包含相同变量名的变量，优先级如何判断？
 !!! ms-abstract ""
@@ -55,23 +53,23 @@
 
 ## 12 接口测试中，如何获取当前的时间来做为变量？
 !!! ms-abstract ""
-    可以使用 ${__time()} 内置函数。
+    可以使用 `${__time()}` 内置函数。
 
-## 14 如何创建SQL协议的接口测试？
+## 14 如何创建 SQL 协议的接口测试？
 !!! ms-abstract ""
     具体操作请参考：https://brucelong.blog.csdn.net/article/details/110133647 。
 
 ## 15 接口自动化测试，一个项目下的不同接口场景，是否可以引用同一个脚本？
 !!! ms-abstract ""
-    目前还不支持不同场景引用同一脚本。可以在“系统设置” - “项目管理”，给指定的项目上传jar包，然后在此项目下的不同场景就可以引用。
+    可以使用公共代码片段。可以在“系统设置” - “项目管理”，给指定的项目上传jar包，然后在项目设置-自定义代码片段下编写脚本，之后此项目下的不同场景就可以引用。
 
 ## 16 场景变量的类型为随机数，但执行过程中为什么没有实际生成？
 !!! ms-abstract ""
-    请检查配置的随机数长度，随机数长度需要在 MeterSphere 限定范围内。** 具体范围是？ **
+    请检查配置的随机数长度，随机数长度需要在 MeterSphere 限定范围内。
 
-## 17 如何通过变量引用 csv 数据？
+## 17 如何通过变量引用 CSV 数据？
 !!! ms-abstract ""
-    在场景编辑页面，点击场景变量添加csv类型的场景变量。具体操作参考 [场景变量配置](https://metersphere.io/docs/v2.x/user_manual/api_test/api_automation/#24) 。
+    在场景编辑页面，点击场景变量添加 CSV 类型的场景变量。具体操作参考 [场景变量配置](../user_manual/api_test/api_automation.md) 。
 
 ## 18 接口自动化里，同一场景下是否支持配置多个接口域名？
 !!! ms-abstract ""
@@ -82,7 +80,7 @@
 
 ## 19 请求里面涉及到了转发重定向，如何获取接口返回的code？
 !!! ms-abstract ""
-    在接口的 `请求参数` 区域的 `其他设置` 页面中，取消勾选 `跟随重定向` 选项。
+    在接口的【请求参数】区域的【其他设置】页面中，取消勾选 【跟随重定向】选项。
 
 ![! 跟随重定向](../img/faq/跟随重定向.png){ width="900px" }
 
@@ -102,20 +100,20 @@
 
 ## 22 接口自动化选择多场景同时运行时，可以把执行结果整合成一个测试报告吗？
 !!! ms-abstract ""
-    在 `运行配置` 弹窗的 `其他配置` 选项中选择生成 `集合报告`。
+    在【运行配置】弹窗的 【其他配置】选项中选择生成【集合报告】。
 
 ![! 多场景集成报告01](../img/faq/接口自动化-批量执行.png){ width="900px" }
 ![! 多场景集成报告02](../img/faq/多场景集成报告02.png){ width="900px" }
 
 ## 23 接口定义模块，编辑接口的页面，如何保存？
 !!! ms-abstract ""
-    在编辑接口页面“基础信息”区域，点击测试按钮后面的向下按钮，点击“更新接口”选项即可。
+    在编辑接口页面“基础信息”区域，点击测试按钮后面的向下按钮，点击【更新接口】选项即可。
 
 ![! 更新接口按钮](../img/faq/更新接口按钮.png){ width="900px" }
 
-## 24 执行接口报错“Non HTTP response code: java.net.SocketTimeoutException”
+## 24 执行接口报错:`Non HTTP response code: java.net.SocketTimeoutException`
 !!! ms-abstract ""
-    在接口 `其他设置` 中增加的连接超时时间。
+    在接口【其他设置】中增加的连接超时时间。
 
 ![! 修改连接超时](../img/faq/修改连接超时.png){ width="900px" }
 
@@ -130,9 +128,9 @@
 !!! ms-abstract ""
     1.13 版本已经通过插件的方式实现了对 MQTT 协议的支持，该插件是企业版的功能，在 MeterSphere 【系统设置-系统-插件管理】中上传。
 
-## 27 MeterSphere 可以直接连接开发工具传输 API 吗？
+## 27 MeterSphere 可以直接在 IDE 中同步 API 吗？
 !!! ms-abstract ""
-    MeterSphere 在 1.15 版本实现了与 IDEA 对接。通过在 IDEA 安装组件，完成 API 信息传送。可以到 GitHub 下载此组件。
+    MeterSphere 已支持 IDEA API同步插件，详细使用方法见[metersphere-idea插件](../user_manual/plugin_use/idea_plugin.md)。
 
 ## 28 接口自动化场景里可以跨项目引用接口/用例吗？
 !!! ms-abstract ""
@@ -142,24 +140,24 @@
 
 ## 29 快捷调试的时候，一直转圈等待是什么原因?
 !!! ms-abstract ""
-    安装 MeterSphere 的服务器到请求的地址网络不通,在 MeterSphere 上 telnet 被测服务端口检查。
+     MeterSphere 的服务器到被测服务的地址网络不通，可在 MeterSphere 上 telnet 被测服务端口检查网络。
 
-## 30 进行接口case调试时，调用不同控制台信息显示连接某地址超时；
+## 30 进行接口 case 调试时，调用不同控制台信息显示连接某地址超时，如何排查？
 !!! ms-abstract ""
     这种情况大概率是网络不通造成的，可以使用 curl 命令在 ms-node-controller 容器和服务器上进行测试；
 
-## 31 在接口调试时使用新的域名，在Linux的host文件中添加了域名解析，但依然调试不通
+## 31 在接口调试时使用新的域名，在Linux的host文件中添加了域名解析，但依然调试不通，如何排查？
 !!! ms-abstract ""
     因为 node-controller 容器中无法解析出域名，因此需要进入到 node-controller 容器中host文件中进行配置，然后重启 node-controller 容器。
 
-## 32 如何循环取出列表变量的每一个值
+## 32 如何循环取出列表变量的每一个值？
 !!! ms-abstract ""
-    结合循环控制器和计数器取值。
+    结合循环控制器和计数器取值。参考方法[接口测试如何使用多个List进入ForEach循环控制器](https://bbs.fit2cloud.com/t/topic/399/3) 
 
 ## 33 接口响应内容为 Unicode 字符是如何处理？
 !!! ms-abstract ""
 
-    - 在后置脚本中选择BeanShell，然后写入prev.setDataEncoding("UTF-8");  
+    - 在后置脚本中选择BeanShell语言处理编码，然后写入prev.setDataEncoding("UTF-8");  
     - 可以在后置脚本中选择BeanShell，然后写入如下代码：
     ```
     String response_value=new String(prev.getResponseData(),"UTF-8");
@@ -224,14 +222,14 @@
 !!! ms-abstract ""
     使用UTF编码，log.info(u"MeterSphere 一站式持续测试平台")。
 
-## 35 接口测试是否可以导出到 JMeter
+## 35 接口测试是否可以导出到 JMeter？
 !!! ms-abstract ""
     可以勾选对应的场景或接口，导出为 JMX 格式，然后再用 JMeter 打开 JMX 文件
 
 ## 36 MeterSphere 中 CSV 文件的主要应用场景有哪些？
 !!! ms-abstract ""
 
-    - 在接口自动化中可以将CSV文件作为场景变量使用，配合循环控制器使用。
+    - 在接口自动化中可以将 CSV 文件作为批量传参文件可以用作场景变量使用，配合循环控制器使用。
     - 在性能测试中作为参数被引用。
 
 ## 37 场景中如何使用 CSV 文件参数？
@@ -286,7 +284,7 @@
 
 ![! metersphere导入格式](../img/faq/DUBBO导入格式.png){ width="900px" }
 
-## 44 如何判断名称相同或URL相同的接口是否为同一接口？
+## 44 MeterSphere 根据什么规则判断名称相同或 URL 相同的接口是否为同一接口？
 !!! ms-abstract ""
 
     - TCP、SQL、DUBBO 请求，同项目同模块同版本下，接口名称相同就是同一接口
@@ -310,7 +308,7 @@
 
 ![! metersphere导入格式](../img/faq/导入&导出逻辑.png){ width="900px" }
 
-## 46 配置了定时任务,为什么不在钉钉群发消息呢？
+## 46 配置了定时任务,没有在钉钉群发消息呢？
 !!! ms-abstract ""
 
     - 确认消息通知是否正确填写。
@@ -322,7 +320,7 @@
 
 ## 48 接口测试断言成功，用例却为什么显示未通过？
 !!! ms-abstract ""
-    因为响应码不是200，只需要勾选"忽略状态"就行
+    如果响应码不是200，需要勾选"忽略状态"忽略状态码的判断。
 
 ## 49 在后置脚本中如何获取响应结果？
 !!! ms-abstract ""
@@ -332,7 +330,7 @@
 !!! ms-abstract ""
     使用 JMeter 打开 jmx 文件，确认接口是否被禁用, 如禁用手动开启保存后再导入。
 
-## 51 后台日志报错：ERROR StandardJMeterEngine JDBC data source already defined for: mysql
+## 51 后台日志报错：`ERROR StandardJMeterEngine JDBC data source already defined for: mysql`
 !!! ms-abstract ""
     查看数据库-数据源，修改最大连接数。
 
@@ -340,7 +338,7 @@
 !!! ms-abstract ""
     脚本中使用了 JMeter 第三方插件，需要将 JMeter 第三方插件包上传到 MS 服务器的 ms-server 容器 /app/lib 目录下，重启 ms-server 服务后，即可正常导入。
 
-## 53 接口响应内容过大（约4M）导致请求卡住不动
+## 53 接口响应内容过大（约4M）导致请求卡住不动，如何处理？
 !!! ms-abstract ""
     当响应内容过大时，在 gateway 日志中可以发现对应提示日志: `Max frame length of 10485760 has been exceeded`。 在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小，修改完后 msctl reload 重新加载在配置文件即可。
 
