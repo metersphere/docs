@@ -58,7 +58,7 @@
 
 ### 2.2 Broker 地址
 !!! ms-abstract ""
-    这个配置是 broker 对外暴露的地址，需要填写每个节点真实的 ip 和端口。这里我写死了，没有引用环境变量。<br>
+    这个配置是 broker 对外暴露的地址，需要填写每个节点真实的 ip 和端口。<br>
 ![配置](../img/installation/dis_pressure/kafka配置_2.png){ width="900px" }
 
 ### 2.3 Controller 列表

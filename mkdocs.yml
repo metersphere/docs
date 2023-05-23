@@ -57,13 +57,12 @@ nav:
                 - 离线升级: installation/offline_upgrade.md
           - Windows 单机部署: installation/offline_installation_windows.md
           - MacOS 单机部署: installation/offline_installation_mac.md
-          - Kubernetes 单机部署: installation/kubernetes_installation.md
+          - Kubernetes 部署: installation/kubernetes_installation.md
           - MeterSphere 分布式部署:
                 - 整体部署规划: installation/pre_work.md
                 - 部署Kafka集群: installation/build_kafka.md
                 - 部署Data-Streaming集群: installation/build_data_streaming.md
                 - 部署Node-Controller集群: installation/build_node_controller.md
-                - 压测工作: installation/pressure_work.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
     - 用户手册:

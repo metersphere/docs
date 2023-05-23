@@ -27,7 +27,7 @@
 
 	下载[适用于 x64 计算机的 WSL2 Linux 内核更新包](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
-	以管理员身份执行,设置 WSL2 为默认<br>
+	以管理员身份执行，设置 WSL2 为默认<br>
 	```
 	wsl --set-default-version 2
 	```
@@ -111,7 +111,7 @@
 	```
 
 !!! ms-abstract "注意"
-	**如果使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。<br>
+	**若使用外部数据库进行安装，推荐使用 MySQL 5.7 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。<br>
 	具体参数说明见：[数据库配置文件说明](../offline_installation/#43)**
 
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
@@ -151,7 +151,7 @@
     ```
 
 !!! ms-abstract ""
-	**安装成功后，通过浏览器访问如下页面登录 MeterSphere**
+	安装成功后，使用 msctl status 查看后台服务都为 healthy 状态，则通过浏览器访问如下地址访问 MeterSphere
 
 	```
 	地址: http://目标服务器IP地址:服务运行端口

@@ -32,5 +32,10 @@
 ![安装MeterSphere](../img/installation/mac-install-sh.png){ width="900px" }
 
 !!! ms-abstract ""
-    安装完成，查看服务状态 <br>
+    安装完成，使用 docker ps 查看后台服务都为 healthy 状态，则通过浏览器访问如下地址访问 MeterSphere <br>
+    ```
+    地址: http://目标服务器IP地址:服务运行端口
+    用户名: admin
+    密码: metersphere
+    ```
 ![安装MeterSphere](../img/installation/mac-install-server.png){ width="900px" }
