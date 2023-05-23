@@ -50,21 +50,21 @@ nav:
     - 系统架构: system_arch.md
     - 安装部署:
           - 网络端口要求: installation/network_port.md
-          - Linux 中部署:
+          - Linux 单机部署:
                 - 在线安装: installation/online_installation.md
                 - 在线升级: installation/online_upgrade.md
                 - 离线安装: installation/offline_installation.md                
                 - 离线升级: installation/offline_upgrade.md
-          - Kubernetes 中部署: installation/kubernetes_installation.md
-          - Windows 中部署: installation/offline_installation_windows.md
-          - Mac 中部署: installation/offline_installation_mac.md
+          - Windows 单机部署: installation/offline_installation_windows.md
+          - MacOS 单机部署: installation/offline_installation_mac.md
+          - Kubernetes 单机部署: installation/kubernetes_installation.md
           - MeterSphere 分布式部署:
                 - 整体部署规划: installation/pre_work.md
                 - 部署Kafka集群: installation/build_kafka.md
                 - 部署Data-Streaming集群: installation/build_data_streaming.md
                 - 部署Node-Controller集群: installation/build_node_controller.md
                 - 压测工作: installation/pressure_work.md
-          - MeterSphere 数据备份: installation/backup_data.md
+          - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md

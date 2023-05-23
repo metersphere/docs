@@ -2,7 +2,8 @@
     主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的目录备份。<br>
     数据库主要有 mysqldump 和 手动备份 /opt/metersphere/data/mysql 目录两种方式，可根据企业实际情况和已有备份工具制定备份策略和备份手段
 
-## 1 手动备份
+## 1 数据备份
+### 1.1 手动备份
 !!! ms-abstract ""
     ```
     #数据库备份：
@@ -16,7 +17,7 @@
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
     ```
 
-## 2 定时任务自动备份
+### 1.2 自动备份
 !!! ms-abstract ""
     ms_backup.sh
     ```
@@ -65,7 +66,7 @@
 
     执行 crontab -l 即可查看定时任务
 
-## 3 数据恢复
+## 2 数据还原
 !!! ms-abstract ""
     进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
     ```
