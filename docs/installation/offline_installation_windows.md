@@ -160,4 +160,8 @@
 	```
 ![安装MeterSphere](../img/installation/windows-install.png){ width="900px" }
 
+![安装MeterSphere](../img/installation/常见问题7.png){ width="900px" }
+
+
+
 
