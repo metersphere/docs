@@ -39,7 +39,6 @@
     - [玩转 MeterSphere 开源持续测试平台系列教程之企业版 X-Pack 增强功能](https://live.vhall.com/v3/lives/subscribe/419824723)
 
 ## 5 了解更多
-
 !!! ms-abstract ""
 
     - [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
@@ -47,4 +46,3 @@
     - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202303.pdf)
     - [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
     - [飞致云学堂](https://edu.fit2cloud.com/index)
-    - [JMeter 资源合集](./awesome-jmeter.md)

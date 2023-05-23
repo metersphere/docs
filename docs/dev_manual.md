@@ -1,5 +1,4 @@
 ## 1 项目结构
-
 ```
 .
 ├── Jenkinsfile                                     # 构建JAR包使用的 jenkinsfile
@@ -55,10 +54,7 @@
 ## 2 配置开发环境
 ### 2.1 拉取代码
 !!! ms-abstract ""
-    需要拉取以下三个服务，并切换到同一分支 <br>
-    （1）metersphere (https://github.com/metersphere/metersphere)<br>
-    （2）ms-jmeter-core (https://github.com/metersphere/ms-jmeter-core)<br>
-    （3）jmeter-plugins-webdriver (https://github.com/metersphere/jmeter-plugins-webdriver)<br>
+    需要拉取 [metersphere](https://github.com/metersphere/metersphere), [ms-jmeter-core](https://github.com/metersphere/ms-jmeter-core)、[jmeter-plugins-webdriver](https://github.com/metersphere/jmeter-plugins-webdriver)三个服务代码，并切换到同一分支。 <br>
 
 ### 2.2 后端
 !!! ms-abstract ""
@@ -194,12 +190,12 @@
     - **启动顺序**<br>
     先启动 eureka 服务，再启动 system-setting，到这一步可以启动成功，可以访问页面了。
 
-![server-start](./img/dev/eureka-gateway-start.png){ width="900px" }
+![server-start](./img/dev/eureka-gateway-start.png){ width="900px" }<br>
 ![server-start](./img/dev/eureka_gateway_success.png){ width="900px" } 
 
 !!! ms-abstract ""
     如果要进行多模块联调的话需要启动 gateway 和其他服务，可以通过 eureka 查看服务信息，注册成功，就可以多模块联调了。
-![server-start](./img/dev/gateway_success.png)
+![server-start](./img/dev/gateway_success.png){ width="900px" } 
 
 !!! ms-abstract ""
 

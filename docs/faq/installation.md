@@ -1,12 +1,11 @@
 ## 1 如何设置 MeterSphere 开机自启动？
 !!! ms-abstract "" 
-    MeterSphere 在安装脚本中没有配置 docker 服务及以及 MeterSphere 服务自启动，具体操作见：[MeterSphere之设置服务开机自启动](https://kb.fit2cloud.com/?p=bbe432ee-6b1c-4d9f-aa6f-16f4547840ee)
+    MeterSphere 在安装脚本中没有配置 docker 服务及以及 MeterSphere 服务自启动，可参考[MeterSphere之设置服务开机自启动](https://kb.fit2cloud.com/?p=bbe432ee-6b1c-4d9f-aa6f-16f4547840ee) 进行配置。
 
 ## 2 如何修改应用的默认端口？
 !!! ms-abstract ""
-    MeterSphere 默认的 HTTP 服务监听端口为8081，安装之前可以在配置文件 install.conf 中修改 MS_SERVER_PORT字段，然后再进行安装。<br>
-    安装完成后需要修改 /opt/metersphere/.env 文件中的对应配置后，然后再执行 `msctl reload` 命令重新加载应用。<br>
-    MeterSphere 更详细的配置文件说明请参考 [修改安装配置(可选)](../installation/offline_installation.md)。
+    MeterSphere 默认的 HTTP 服务监听端口为8081，安装之前可以在配置文件 install.conf 中修改 MS_SERVER_PORT 字段，然后再进行安装。<br>
+    安装完成后如果需要修改默认的应用端口，则需要修改 /opt/metersphere/.env 文件中的 MS_SERVER_PORT 字段，然后执行 `msctl reload` 命令重新加载应用。<br>
 
 ## 3 如何在 Kubernetes 中搭建 MeterSphere？
 !!! ms-abstract ""
@@ -14,7 +13,7 @@
 
 ## 4 docker-compose 版本与配置文件不兼容或配置文件存在问题，请重新安装最新版本的 docker-compose 或检查配置文件?
 !!! ms-abstract ""
-    如果服务器已经安装了docker, MeterSphere 安装脚本检测到 docker 已安装，就跳过了自动原本的安装步骤，而已安装的版本与 MeterSphere要求的版本不匹配导致。需要手动把安装包里的 docker目录下的所有文件拷贝到系统目录即可：
+    如果服务器已经安装了docker, MeterSphere 安装脚本检测到 docker 已安装，就跳过了自动原本的安装步骤，而已安装的版本与 MeterSphere要求的版本不匹配就会导致这个导致。需要手动把安装包里的 docker 目录下的所有文件拷贝到系统目录即可：
 
     ```
     cp docker/bin/* /usr/bin/
@@ -25,21 +24,21 @@
 
 ## 5 如何升级到指定版本？
 !!! ms-abstract ""
-    msctl upgrade 后边跟版本号，例如：msctl upgrade v1.10.6-lts 。
+    msctl upgrade 后边跟版本号，例如：`msctl upgrade v1.10.6-lts` 。
 
 ## 6 如何卸载？
 !!! ms-abstract ""
-    执行命令：msctl uninstall -v
+    执行命令：`msctl uninstall -v`
 
 ## 7 卸载会导致数据清空么？
 !!! ms-abstract ""
-    MerterSphere 应用数据进行了本地的持久化存储，所以 msctl uninstall 卸载不会影响数据。
+    MerterSphere 应用数据进行了本地的持久化存储，所以 `msctl uninstall` 卸载不会影响数据。
 
-## 9 升级过程中报错： `/usr/local/bin/msctl: line 115 ....`
+## 9 升级过程中报错：`/usr/local/bin/msctl: line 115 ....`
 !!! ms-abstract ""
     主要原因是 msctl 的 shell 兼容性导致，cat /usr/local/bin/msctl 查看这个文件对应行数的代码，并进行相关兼容性处理。
 
-## 10 升级报错：`Schema ` metersphere `contains a faied migration to version 86 !`
+## 10 升级报错：`Schema  metersphere contains a faied migration to version 86 !`
 !!! ms-abstract ""
     sql 初始化失败导致，需要连接 metersphere 数据库手动执行sql。
 
@@ -58,7 +57,7 @@
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
     ```
 
-## 13 性能测试时并发量加大的时候报错：Non HTTP response code: java.net.SocketTimeoutException
+## 13 性能测试时并发量加大的时候报错：`Non HTTP response code: java.net.SocketTimeoutException`
 !!! ms-abstract ""
     多是因为服务端有较多请求正在处理（且处理时间较长），导致 MeterSphere 在有效时间内无法连接上服务器而出现，可通过修改单个接口的连接超时时间解决。
 
@@ -90,7 +89,7 @@
     msctl reload   #重新创建目录和基础文件 
     ``` 
 
-## 16 执行机经常报内存溢出 Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded
+## 16 执行机经常报内存溢出：`Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded`
 !!! ms-abstract ""
     增大堆内存:
     ```
@@ -101,7 +100,7 @@
 !!! ms-abstract ""
     检查地址，如果地址里多了/login路径会出现这个现象
 
-## 18 升级或安装时后台报错:image not found : xxxxxx；
+## 18 升级或安装时后台报错:`image not found : xxxxxx`
 !!! ms-abstract ""
     需要在 MeterSphere 主机上docker pull该镜像，或下载完整离线安装包；
 
@@ -125,7 +124,7 @@
     # update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
     ```
 
-## 22 系统运行一段时间后磁盘可以清理哪些东西来释放磁盘
+## 22 系统运行一段时间后磁盘可以清理哪些无用的文件来释放磁盘
 !!! ms-abstract ""
     - 删除之前版本多余的镜像。<br/>
       docker rmi 'docker images -q' <br/>
@@ -162,7 +161,7 @@
     - 检查 6379端口是否开放。
     - 检查 .env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。
 
-## 26 docker 运行错误：docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……
+## 26 docker 运行错误：`docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……`
 !!! ms-abstract ""
 
     - 打开 daemon.json文件, 将 "exec-opts": ["native.cgroupdriver=systemd"] 删除。
@@ -170,7 +169,7 @@
     - 重启服务: msctl reload。
 
 
-## 27 后台日志提示数据库连接数异常：java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection
+## 27 后台日志提示数据库连接数异常：`java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection, message from server, too many connection`
 !!! ms-abstract ""
     可能是因为 my.cnf 文件权限不对导致配置文件没有生效，修改权限后删除之前的 mysql 容器并 reload。
     ```
@@ -180,11 +179,11 @@
     msctl reload
     ```
 
-## 28 后台日志提示数据库语法异常：SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’
+## 28 后台日志提示数据库语法异常：`SQLSyntaxErrorException：Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column “metersphere” _dev.api_definition_exec_result.start_time’`
 !!! ms-abstract ""
     修改数据库配置文件 my.cnf，增加配置语法校验规则：sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE
 
-## 29 前后置SQL脚本执行报错： javax.net.ssl.SSLHandshakeException: No appropriate protocol ；
+## 29 前后置SQL脚本执行报错：`javax.net.ssl.SSLHandshakeException: No appropriate protocol……`
 !!! ms-abstract ""
     在环境管理-数据库配置中的"数据库连接URL"后面添加 '?createDatabaseIfNotExist=true&useSSL=false'。
 
@@ -196,7 +195,7 @@
 !!! ms-abstract ""
     在 /opt/metersphere/conf/metersphere.properties 中添加字段 session.timeout，单位秒。
 
-## 32 K8S 部署 metersphere 在上传文件时提示：413 request entity too large
+## 32 K8S 部署 metersphere 在上传文件时提示：`413 request entity too large`
 !!! ms-abstract ""
     配置 ngnix 请求解除默认的 1M 限制：
     ```
@@ -210,7 +209,7 @@
     nginx.ingress.kubernetes.io/proxy-body-size: 50m
     ```
 
-## 33 主机部署 metersphere 在上传文件时提示： 413 request entity too large
+## 33 主机部署 metersphere 在上传文件时提示：`413 request entity too large`
 !!! ms-abstract ""
     在 nginx 服务的配置文件 nginx.conf 的 http 段中加入 client_max_body_size xxm, xx根据需求改动，保存后重启 nginx。
 
@@ -235,15 +234,14 @@
     }
     ```
 
-## 35 接口运行时，页面报错: The connection is abnormal, please check the environment configuration
+## 35 接口运行时，页面报错:`The connection is abnormal, please check the environment configuration`
 !!! ms-abstract ""
 
     - 如果使用了Nginx, 请参考 [配置反向代理](https://metersphere.io/docs/v2.x/installation/offline_installation/)。
     - 如果使用了fidder、charles等代理代工具，先关闭。 
     - 如果 https://ip:8081 被拦截了，请使用 http://ip:8081 。
 
-## 36 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed
-![! 安装部署-500错误](../img/faq/安装部署-500错误.png)
+## 36 升级后服务正常，但是访问页面报500：`HTTP ERROR500 javax.servlet.ServletException: Filtered request failed.`
 !!! ms-abstract ""
     1.清浏览器缓存，重新打开浏览器进行访问。 <br>
     2.清除下 redis 数据。<br>
@@ -255,7 +253,7 @@
     flushall
     ```
 
-## 37 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)
+## 37 日志中出现：`java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)`
 ![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
 !!! ms-abstract ""
     检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere。
@@ -269,12 +267,12 @@
     spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
     ```
 
-## 39 安装时出现：Encountered error while bringing up the project, msctl status 时看到 mysql容器一直在 Restarting，
+## 39 安装时出现：`Encountered error while bringing up the project`, msctl status 时看到 mysql容器一直 Restarting
 !!! ms-abstract ""
     在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg)
 
-## 40 安装部署时报错：Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space
+## 40 安装部署时报错：`Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space`
 !!! ms-abstract ""
     主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。
 

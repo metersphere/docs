@@ -1,6 +1,6 @@
 ## 1 背景介绍
 !!! ms-abstract ""
-    在 JMeter 中使用 [Dummy Sampler](https://jmeter-plugins.org/wiki/DummySampler/?utm_source=jmeter&utm_medium=helplink&utm_campaign=DummySampler) 可以构造出一个请求内容和响应内容完全自定义的请求，通过这种自定义的请求可以比较方便的对各种断言、参数提取等后置处理器进行调试。针对 JMeter 已有的功能或插件，只需要进行很少量的开发工作，就可以将其包装成一个 MeterSphere 上接口自动化插件的插件。对应的插件 Demo 见: [metersphere-plugin-DummySampler](https://github.com/metersphere/metersphere-plugin-DummySampler)。 <br>
+    在 JMeter 中使用 [Dummy Sampler](https://jmeter-plugins.org/wiki/DummySampler/?utm_source=jmeter&utm_medium=helplink&utm_campaign=DummySampler) 可以构造出一个请求内容和响应内容完全自定义的请求，通过这种自定义的请求可以比较方便地对各种断言、参数提取等后置处理器进行调试。针对 JMeter 已有的功能或插件，只需要进行很少量的开发工作，就可以将其包装成一个 MeterSphere 上接口自动化插件的插件。对应的插件 Demo 见: [metersphere-plugin-DummySampler](https://github.com/metersphere/metersphere-plugin-DummySampler)。 <br>
 
     本文将以 JMeter 中的 Dummy Sampler 为例，来介绍下如何开发 MeterSphere 接口自动化插件。
 
@@ -51,6 +51,7 @@
     创建与上一步对应的初始化 UiScript 对象时指定类名一致的 io.metersphere.plugin.dummy.sampler.MsDummySampler 类，在该类中完成前端表单数据到 JMeter HashTree 的转换。<br>
 
 ![表单生成器](./img/automation_plugin_dev/转换生成JMeter_HashTree.png){ width="900px" }
+
 ![表单生成器](./img/automation_plugin_dev/转换生成JMeter_HashTree_1.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -68,4 +69,5 @@
     打包后将 target\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies.jar 在 MeterSphere 的插件管理页面进行上传，上传成功后就可以在接口自动化中看到插件提供的步骤。<br>
 
 ![表单生成器](./img/automation_plugin_dev/上传测试.png){ width="900px" }
+
 ![表单生成器](./img/automation_plugin_dev/上传测试_1.png){ width="900px" }

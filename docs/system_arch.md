@@ -4,8 +4,8 @@
 
 !!! ms-abstract "组件说明"
 
-    - **[Chrome 浏览器插件](https://github.com/metersphere/chrome-extensions)**: Chrome 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。
-    - **[Jenkins 插件](https://github.com/metersphere/jenkins-plugin)**: Jenkins 插件,在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节,用户在该构建环节中配置 MeterSphere 平台的认证信息后,可选择指定项目下的接口/性能测试进行触发执行。
+    - **[Chrome 浏览器录制插件](https://github.com/metersphere/chrome-extensions)**: 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。
+    - **[Jenkins 插件](https://github.com/metersphere/jenkins-plugin)**: 在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节,用户在该构建环节中配置 MeterSphere 平台的认证信息后,可选择指定项目下的接口/性能测试进行触发执行。
     - **[IDEA 插件](https://github.com/metersphere/metersphere-idea-plugin)**: IDEA 插件,基于javadoc解析,能够自动识别类,同步接口定义到 MeterSphere。
     - **[GateWay](https://github.com/metersphere/metersphere)**: API 网关项目。
     - **[Eureka](https://github.com/metersphere/metersphere)**: 服务注册中心。
@@ -28,14 +28,12 @@
     - **Selenium Grid**: 为 UI自动化测试提供运行环境,支持分布式拓展。
 
 !!! ms-abstract ""
-	各个组件间的关系可参考下图<br>
+	各个组件间的关系可参考下图：<br>
+
 ![组件说明](./img/components.png)
 
 ## 2 管理模型
-
-![管理模型](./img/management-model.png)
-
-!!! ms-abstract "概念说明"
+!!! ms-abstract ""
 	MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在团队的实际情况进行灵活的租户体系映射。
 
     - **系统**: 每个独立部署的 MeterSphere 即称为一套系统。
@@ -46,11 +44,9 @@
     - **项目级角色**: 角色的权限范围限定在某个项目当中, 常见的角色如项目管理员、项目成员、只读用户等，可在项目中创建、修改、执行测试计划、功能测试用例、接口测试用例、性能测试用例、查看测试报告等。
     - **自定义角色**: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。
 
-!!! ms-abstract ""
-	不同的角色对应的具体权限，请到【系统设置-用户组与权限-设置权限】查看和设置。
+![管理模型](./img/management-model.png)
 
-![!查看权限](./img/system_management/查看权限.png){ width="900px" }
-![!查看权限](./img/system_management/查看权限2.png){ width="900px" }
+
 
 ## 3 技术栈
 !!! ms-abstract ""
