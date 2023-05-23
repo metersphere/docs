@@ -1,6 +1,6 @@
 !!! ms-abstract ""
 
-    [Apache JMeter](https://jmeter.apache.org/) 是一个 Java 语言编写的开源性能测试工具，是目前最主流的开源性能测试工具。本资源集源自 [awesome-jmeter](https://github.com/aliesbelik/awesome-jmeter)，MeterSphere 团队针对国内用户进行了汉化、优化和进一步整理。
+    [Apache JMeter](https://jmeter.apache.org/) 是一个 Java 语言编写的开源性能测试工具，是目前最主流的开源性能测试工具。本资源集源自 [awesome-jmeter](https://github.com/aliesbelik/awesome-jmeter)[（CC-BY-4.0 license）](https://creativecommons.org/licenses/by/4.0/)，MeterSphere 团队针对国内用户进行了汉化、优化和进一步整理。
 
 ## 1 官方资源
 
@@ -165,8 +165,3 @@
     - [Flood.io Blog](https://flood.io/blog) - Load testing thoughts, stories and ideas from Flood IO.
     - [JMeter Blog](https://shantonusarker.blogspot.com/p/jmeter.html) - Another blog for performance & automation testing using JMeter.
 
-## License
-
-https://github.com/aliesbelik/awesome-jmeter
-
-<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a>
