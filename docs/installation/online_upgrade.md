@@ -1,4 +1,4 @@
-!!! ms-abstract "注意"
+!!! ms-abstract ""
     升级前一定要进行数据库备份，请参考 [MeterSphere 数据备份](./backup_data.md)。<br>
     如果 MeterSphere 服务器可以访问互联网，可通过以下方式升级到最新或指定版本。
 
