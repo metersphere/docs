@@ -13,8 +13,10 @@
 !!! ms-abstract "说明"
      MeterSphere 部署成功后会自动创建一个系统管理员账户，用户名为 admin，默认密码为 metersphere。如将平台用于生产环境，请及时更改密码。
 
-- 创建用户
+
 !!! ms-abstract ""
+
+    - **创建用户**<br>
     点击【创建用户】按钮创建用户，在弹出页面中编辑用户信息。
 ![!创建用户](../../img/system_management/系统创建用户.png){ width="900px" }
 
@@ -22,18 +24,24 @@
     需要创建多个用户时，可点击【导入用户】按钮，下载模版并填写用户信息，通过 Excel 文件导入用户。
 ![!创建用户](../../img/system_management/系统导入用户.png){ width="900px" }
 
-- 为用户添加用户组
+
 !!! ms-abstract ""
+
+    - **为用户添加用户组**<br>
     点击【添加用户组】按钮为用户添加用户组信息。新用户至少所属一个用户组，每个用户可以属于多个用户组。
 ![!设置用户角色](../../img/system_management/系统下添加用户组.png){ width="900px" }
 
--  查询用户
+
 !!! ms-abstract ""
+
+    - **查询用户**<br>
     用户列表右上方，使用搜索框，根据 ID 或名称查询用户。
 ![针对用户的其他操作](../../img/system_management/查询用户.png){ width="900px" }
 
--  针对用户的其他操作
+
 !!! ms-abstract ""
+
+    - **针对用户的其他操作**<br>
     在用户列表右侧操作列，可以点击【Switch】开关切换选定用户启用状态，点击【编辑】按钮可修改用户信息，点击【修改密码】可修改用户的密码，点击【删除】按钮删除该用户。
 ![针对用户的其他操作](../../img/system_management/针对用户的其他操作.png){ width="900px" }
 
@@ -42,18 +50,23 @@
     点击左侧【系统】下拉菜单中的【工作空间】进入工作空间界面。右侧显示当前系统中的全部工作空间列表，可以对工作空间进行【新增】、【编辑】、【查询】、【删除】等操作。
 ![!工作空间管理](../../img/system_management/系统工作空间首页.png){ width="900px" }
 
-- 创建工作空间
+
 !!! ms-abstract ""
+
+    - **创建工作空间**<br>
     点击【创建工作空间】按钮创建工作空间，在弹出页面中填写名称和描述。
 ![!创建工作空间](../../img/system_management/创建工作空间.png){ width="900px" }
 
-- 编辑工作空间
 !!! ms-abstract ""
+
+    - **编辑工作空间**<br>
     点击【编辑】按钮编辑工作空间，在弹出页面中修改名称和描述。
 ![!编辑工作空间](../../img/system_management/编辑工作空间.png){ width="900px" }
 
-- 删除工作空间
+
 !!! ms-abstract ""
+
+    - **删除工作空间**<br>
     点击【删除】按钮删除工作空间。
 ![!删除工作空间](../../img/system_management/删除工作空间.png){ width="900px" }
 
@@ -62,28 +75,36 @@
     点击左侧【系统】下拉菜单中的【用户组与权限】进入用户组界面。用户可基于自身需求创建自定义用户组，并赋予用户组不同的权限设置。其中【超级管理员】用户组拥有系统全部工作空间与项目的操作权限，用户可以为 admin 用户添加【超级管理员】权限来管理系统全部数据。
 ![系统用户组首页](../../img/system_management/系统用户组首页3.png){ width="900px" }
 
-- 创建用户组
 !!! ms-abstract ""
+
+    - **创建用户组**<br>
     点击【创建用户组】按钮新建自定义用户组。在弹出的界面中编辑用户组名称及描述，选择用户组所属类型。使用【全局用户组】开关切换用户组适用状态。新建用户组类型为系统类型时自动切换为全局用户组，此开关为默认打开状态；新建用户组类型为其他类型时，全局状态可关闭，此时须为用户组选择所属工作空间。
 ![创建用户组](../../img/system_management/创建用户组.png){ width="900px" }
 
-- 为用户组配置权限
 !!! ms-abstract ""
+
+    - **为用户组配置权限**<br>
     回到用户组列表中，点击【设置权限】按钮进入用户组权限设置页面，在该页面中基于用户组需求勾选操作权限，一个用户组即为一个权限集，点击【确定】按钮完成配置。
 ![为用户组配置权限](../../img/system_management/为用户组配置权限4.png)
 
-- 编辑用户组信息
+
 !!! ms-abstract ""
+
+    - **编辑用户组信息**<br>
     点击【编辑】按钮编辑选定用户组信息，在弹出页面中可以更改用户组名称及描述。
 ![编辑用户组信息](../../img/system_management/编辑用户组信息.png)
 
-- 查询用户组
+
 !!! ms-abstract ""
+
+    - **查询用户组**<br>
     用户组列表右上方，使用搜索框，根据名称查询用户组。
 ![编辑用户组信息](../../img/system_management/查询用户组信息.png)
 
-- 删除用户组
+
 !!! ms-abstract ""
+    
+    - **删除用户组**<br>
     用户组列表中，点击【删除】按钮删除自定义的用户组，系统用户组不支持删除。
 ![编辑用户组信息](../../img/system_management/删除用户组信息.png)
 
@@ -93,18 +114,12 @@
 ![!测试资源池管理](../../img/system_management/系统测试资源池首页.png)
 
 ### 4.1 创建 Node 资源池
-!!! ms-abstract "注意"
-    在服务器上安装 node-controller 服务后，再来配置 Node 资源池。
-
 !!! ms-abstract ""
     点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Node】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!创建资源池](../../img/system_management/系统下创建资源池.png)
 
 
 ### 4.2 创建 Kubernetes 资源池 (X-Pack)
-!!! ms-abstract "注意"
-    在服务器上安装 k8s 服务后，再来配置 Kubernetes 资源池。
-
 !!! ms-abstract ""
     点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!创建K8S资源池](../../img/system_management/系统下创建K8S资源池.png)
@@ -112,30 +127,30 @@
 !!! ms-abstract ""
     获取 Master URL，输入 kubectl describe svc kubernetes 可获得 Endpoints 地址<br>
     获取 Token，需要有 k8s 集群环境，之后创建好 SA 和 token，命令如下
-```
-# 1 创建 namespaces
-kubectl create namespace metersphere
-# 2 创建 SA
-kubectl create serviceaccount ms -n metersphere
-# 3 创建 namespace 授权 SA
-kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
-# 4 查询 SA token
-kubectl describe sa/ms -n metersphere
-kubectl describe secrets -n metersphere ms-token-xxxx
-```
+    ```
+    # 1 创建 namespaces
+    kubectl create namespace metersphere
+    # 2 创建 SA
+    kubectl create serviceaccount ms -n metersphere
+    # 3 创建 namespace 授权 SA
+    kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
+    # 4 查询 SA token
+    kubectl describe sa/ms -n metersphere
+    kubectl describe secrets -n metersphere ms-token-xxxx
+    ```
 !!! ms-abstract ""
     Namespace 可以进行自定义，在 k8s 集群上创建自定义的 Namespace
-```
-kubectl create ns ms-pool
-```
+    ```
+    kubectl create ns ms-pool
+    ```
 !!! ms-abstract ""
     下载 deployment.yaml 上传到 k8s 集群服务器上，输入命令使其生效后，输入命令查询自定义 Namespace 下的 ms-node-controller 是否正常起来
-```
-# 使 deployment.yaml 生效
-kubectl apply -f deployment.yaml -n ms-pool
-# 查询 ms-node-controller 服务
-kubectl get all -n ms-pool
-```
+    ```
+    # 使 deployment.yaml 生效
+    kubectl apply -f deployment.yaml -n ms-pool
+    # 查询 ms-node-controller 服务
+    kubectl get all -n ms-pool
+    ```
 ![!创建K8S资源池](../../img/system_management/下载yaml文件.png)
 
 !!! ms-abstract ""
@@ -145,12 +160,15 @@ kubectl get all -n ms-pool
 
 ![!创建K8S资源池](../../img/system_management/k8s列表显示.png)
 
-- 查询资源池
+
 !!! ms-abstract ""
+    
+    - **查询资源池**<br>
     资源池列表右上方，使用搜索框，根据名称查询资源池。
 
-- 删除资源池
+
 !!! ms-abstract ""
+    - **删除资源池**<br>
     资源池列表中，点击【删除】按钮删除选定资源池。
 
 ## 5 系统参数设置

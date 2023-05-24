@@ -68,8 +68,8 @@
 ### 1.3 项目环境 
 !!! ms-abstract "" 
     选择【项目环境】设置环境参数，自动生成设置环境变量方法填写对应方法键值对即可试用。<br>
-    vars.put(${__metersphere_env_id}+"key","value"); // 将值存储为环境变量，可在【环境-通用设置】处看到值。当前环境下的所有接口使用。<br>
-    vars.put("key","value")。 // 将值存储为场景变量 <br>
+    `vars.put(${__metersphere_env_id}+"key","value");` // 将值存储为环境变量，可在【环境-通用设置】处看到值。当前环境下的所有接口使用。<br>
+    `vars.put("key","value")` // 将值存储为场景变量 <br>
 
 ![!项目环境](../../img/api/环境变量.png){ width="900px" }
 

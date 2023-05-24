@@ -6,17 +6,17 @@
 
 ## 2 元素定位
 !!! ms-abstract ""
-    元素定位支持多种方式，包括 id、name、class、tag、link、plink、css、xpath、lable、value、index，这里我们以 xpath 为例。输入必填信息后，点击确认即可保存元素。
+    元素定位支持多种方式，包括 id、name、class、tag、link、plink、css、xpath、lable、value、index，这里以 xpath 为例。输入必填信息后，点击确认即可保存元素。
 
 ![元素定位](../../img/ui_test/元素定位1.png){ width="900px" }
 
 !!! ms-abstract ""
-    在页面上点击你要定位的元素，然后右键选择【检查】
+    在页面上点击你要定位的元素，然后右键选择【检查】。
 
 ![元素定位](../../img/ui_test/元素定位2.png){ width="900px" }
 
 !!! ms-abstract ""
-    右键选择 Copy-Copy XPath 即可获得该元素的 xpath 路径
+    右键选择 Copy-Copy XPath 即可获得该元素的 xpath 路径。
 
 ![元素定位](../../img/ui_test/元素定位3.png){ width="900px" }
 

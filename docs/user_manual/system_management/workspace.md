@@ -3,23 +3,30 @@
     点击左侧【工作空间】下拉菜单中的【成员】进入成员界面，查看当前工作空间中的所有成员信息。可以对成员进行【新增】，【编辑】，【查询】，【删除】。
 ![工作空间](../../img/system_management/工作空间.png)
 
-- 添加成员
+
 !!! ms-abstract ""
+
+    - **添加成员**<br>
     点击【添加成员】按钮添加成员户，在弹出页面中选择要添加的用户。
 ![!添加成员](../../img/system_management/添加成员.png)
 
 !!! ms-abstract "参数说明"
+
     - 可根据用户 ID 和用户邮箱搜索需要添加的用户，系统支持可一次添加多个成员。
 	- 可选择用户组，此下拉信息的用户组，其【所属类型】属于【组织级别】的用户组，系统支持一次添加多个用户组。
 	- 点击【确认】完成组织成员添加。
 
-- 编辑成员
+
 !!! ms-abstract ""
+
+    - **编辑成员**<br>
     在成员信息中可点击【编辑】和【删除】进行成员修改和删除操作。
 ![!编辑成员](../../img/system_management/编辑成员.png)
 
--  查询用户
+
 !!! ms-abstract ""
+
+    -  **查询用户**<br>
     可按名称来模糊查询成员信息，输入查询信息，点击回车即可完成查询。
 ![查询成员用户](../../img/system_management/查询成员用户.png)
 
@@ -29,9 +36,9 @@
     点击【工作空间】菜单栏，点击【服务集成】，即可查看当前工作空间已集成的缺陷管理平台，同时可点击【编辑】集成 TAPD、JIRA 和禅道、Azure Devops等平台。
 
 !!! ms-abstract "Metersphere 平台与管理工具集成设置可分为三步骤来完成"
-    1.首先配置和项目管理工具集成设置。<br>
-    2. 其次配置项目相关信息。<br>
-    3. 然后为每个登录用户设置各自的个人账号，此配置也可以不设置。
+    (1)首先配置和项目管理工具集成设置。<br>
+    (2)其次配置项目相关信息。<br>
+    (3)然后为每个登录用户设置各自的个人账号，此配置也可以不设置。
 
 ![!服务集成](../../img/system_management/服务集成首页.png)
 
@@ -230,18 +237,23 @@
     【创建项目】，填写第三方集成平台为 Jira 后，勾选下面的【使用 Jira 缺陷模板】，填写好其他配置信息，点击【保存】即可
 ![!创建项目](../../img/system_management/创建项目JIRA平台.png)
 
-- 编辑项目
 !!! ms-abstract ""
+    
+    - **编辑项目**<br>
     点击【编辑】按钮，可编辑项目相关信息后，点击【确定】按钮即可
 ![!创建项目](../../img/system_management/项目管理编辑.png)
 
-- 删除项目
+
 !!! ms-abstract ""
+    
+    - **删除项目**<br>
     点击【删除】按钮，填写上方提示内容，点击【确定】按钮，该项目即可被删除
 ![!创建项目](../../img/system_management/项目管理删除.png)
 
-- 环境配置
+
 !!! ms-abstract ""
+
+    - **环境配置**<br>
     点击【环境配置】按钮，填写环境相关信息即可，具体情况可参考【工作空间-环境管理】
 ![!创建项目](../../img/system_management/项目管理环境.png)
 
@@ -266,8 +278,10 @@
     点击页面左侧【工作空间】，点击【环境配置】，即可查看当前工作空间中的所有项目的所有环境列表。
 
 ### 5.1 环境列表
-<font size="4">创建环境 </font>
+
 !!! ms-abstract ""
+
+    - **创建环境**<br> 
     点击页面列表信息左上角的【创建环境】，可新增此工作空间下任意项目的测试环境。
 ![!创建环境](../../img/system_management/创建环境.png)
 
@@ -287,8 +301,10 @@
     【全局认证配置】：可配置认证方式和加密等信息<br>
     【全局断言】：可启用误报设置和选择多种类型方式进行断言
 
-- 通用配置
+
 !!! ms-abstract ""
+
+    - **通用配置**<br>
     此处设置的变量是环境变量，类型可以为多种类型，可单个添加和批量添加
 ![!创建环境](../../img/system_management/环境设置_通用配置.png)
 
@@ -296,8 +312,10 @@
     IP 和域名进行映射配置，可设置链接超时、响应超时时间
 ![!创建环境](../../img/system_management/环境设置_通用配置_1.png)
 
-- HTTP配置
+
 !!! ms-abstract ""
+
+    - **HTTP配置**<br>
     设置 HTTP/HTTPS 请求地址，点击【添加】后，点击【确定】按钮即可
 ![!创建环境](../../img/system_management/环境设置_HTTP配置.png)
 
@@ -309,8 +327,10 @@
     可单个设置或者批量设置请求头信息
 ![!创建环境](../../img/system_management/环境设置_HTTP配置_2.png)
 
-- 数据库配置
+
 !!! ms-abstract ""
+
+    - **数据库配置**<br>
     配置数据库的数据驱动以及连接信息等，目前支持 MYSQL、Oracle、SQLServer、Postgre数据库
 ![!创建环境](../../img/system_management/环境设置_数据库配置.png)
 
@@ -318,18 +338,23 @@
     执行多条SQL语句需在数据库后面加上【?allowMultiQueries=true】，可设置最大连接数和超时时间，点击【校验】或【添加】
 ![!创建环境](../../img/system_management/环境设置_数据库配置_1.png)
 
-- TCP 配置
+
 !!! ms-abstract ""
+    
+    - **TCP 配置**<br>
     可配置连接 TCP 请求的相关信息，主要有 TCPClientImpl、BinaryTCPClientImpl、LengthPrefixedBinaryTCPClientImpl 三种方式
 ![!创建环境](../../img/system_management/环境设置_TCP配置.png)
 
-- 证书配置
+
 !!! ms-abstract ""
+
+    - **证书配置**<br>
     证书文件上传支持 p12，jks，pfx 格式
 ![!创建环境](../../img/system_management/环境设置_证书配置.png)
 
-- 全局前置脚本
 !!! ms-abstract ""
+
+    - **全局前置脚本**<br>
     可在单个请求步骤前执行和在所有场景步骤前执行，点击【i】可查看提示信息
 ![!创建环境](../../img/system_management/环境设置_全局前置脚本.png)
 
@@ -341,17 +366,23 @@
     【所有场景步骤前执行】可关联场景结果，场景执行成功但是此处前置脚本执行失败，执行结果是显示失败
 ![!创建环境](../../img/system_management/环境设置_全局前置脚本_2.png)
 
-- 全局后置脚本
+
 !!! ms-abstract ""
+
+    - **全局后置脚本**<br>
     可参考上面【全局前置脚本】
 
-- 全局认证配置
+
 !!! ms-abstract ""
+    
+    - **全局认证配置**<br>
     可配置认证方式和加密信息
 ![!创建环境](../../img/system_management/环境设置_全局认证配置.png)
 
-- 全局断言
+
 !!! ms-abstract ""
+    
+    - **全局断言**<br>
     可启用/关闭误报
 ![!创建环境](../../img/system_management/环境设置_全局断言.png)
 
@@ -359,59 +390,68 @@
     可选择多种类型进行断言设置，可勾选忽略状态码，点击【添加】按钮即可
 ![!创建环境](../../img/system_management/环境设置_全局断言_1.png)
 
-<font size="4"> 导入环境 </font>
-
 !!! ms-abstract ""
+
+    - **导入环境**<br>
     点击【导入】按钮导入环境，仅支持通过 metersphere 导出的 json 文件。
 ![!导入环境](../../img/system_management/导入环境.png)
 
 !!! ms-abstract ""
     导入支持为一个项目批量创建不同的环境。
 
-<font size="4"> 导出环境 </font>
 !!! ms-abstract ""
+
+    - **导出环境**<br>
     点击【导出环境】按钮导出环境，将环境导出的 json 文件。
 ![!导出环境](../../img/system_management/导出环境.png)
 
-<font size="4"> 编辑环境 </font>
 !!! ms-abstract ""
+
+    - **编辑环境**<br>
     点击【编辑】按钮编辑环境，可修改环境配置。
 ![!编辑环境](../../img/system_management/编辑环境.png)
 
-<font size="4"> 复制环境 </font>
 !!! ms-abstract ""
+
+    - **复制环境**<br>
     点击【复制】按钮进行复制环境，可复制当前环境配置。
 ![!复制环境](../../img/system_management/复制环境.png)
 
-<font size="4"> 删除环境 </font>
 !!! ms-abstract ""
+
+    - **删除环境**<br>
     点击【删除】按钮，点击【确定】，即可删除环境配置。
 ![!删除环境](../../img/system_management/删除环境.png)
 
 ### 5.2 环境组 
-<font size="4"> 创建环境组</font>
+
 !!! ms-abstract ""
+
+    - **创建环境组**<br>
     MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动化脚本引用，可以根据不同项目、已经不同环境组合成一个环境组，当自动化执行时，可以直接选择该环境组。<br>
     点击【创建环境组】，选择不同项目、不同环境信息。
 ![!创建环境组](../../img/system_management/创建环境组.png)
 
-<font size="4"> 编辑环境组</font>
 !!! ms-abstract ""
+
+    - **编辑环境组**<br>
     点击【编辑】按钮编辑环境组，可修改当前环境组。
 ![!编辑环境组](../../img/system_management/编辑环境组.png)
 
-<font size="4"> 复制环境组</font>
 !!! ms-abstract ""
+
+    - **复制环境组**<br>
     点击【复制】按钮，复制环境组。
 ![!复制环境组](../../img/system_management/复制环境组.png)
 
-<font size="4"> 删除环境组</font>
 !!! ms-abstract ""
+
+    - **删除环境组**<br>
     点击【删除】按钮，根据提示信息输入后，点击【确定】按钮，删除环境组。
 ![!删除环境组](../../img/system_management/删除环境组.png)
 
 ## 6 操作日志
-!!! ms-abstract "同系统下操作日志"
+!!! ms-abstract ""
     显示登录用户所处【工作空间】下的所有有权限【项目】的测试资源日志信息。
 ![操作日志](../../img/system_management/操作日志.png)
 

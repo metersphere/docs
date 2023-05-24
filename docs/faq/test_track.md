@@ -1,4 +1,4 @@
-## 1 MeterSphere 中测试计划具体的场景和优势是什么？
+## 1 MeterSphere 中测试计划具体的场景是什么？
 !!! ms-abstract ""
     参考文章： [产品解读丨MeterSphere中测试计划的场景设计与实现](https://mp.weixin.qq.com/s/hbhBEXMzphVjivmHXY3PjA)。
 

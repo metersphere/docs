@@ -66,7 +66,7 @@
 !!! ms-abstract ""
      可能是因为 my.cnf 文件权限不对导致，修改权限后重启数据库。
     ```
-    # chmod /opt/metersphere/conf/my.cnf 
+    # chmod 655 /opt/metersphere/conf/my.cnf 
     # docker restart mysql
     ```
 
@@ -134,7 +134,7 @@
     vi /opt/metersphere/conf/metersphere.properties 增加配置项设置日志保存天数，如： logger.max.history=3。<br/>
     - 停止定时任务，并停止 MeterSphere 服务，删除/opt/metersphere/data/kafka/kafka和/opt/metersphere/data/zookeeper/zookeeper（v2.3之前）目录，然后再重启 MeterSphere 服务。
 
-## 23 MS部署中遇到Prometheus启动不起来，一直处于Restarting的问题
+## 23 MeterSphere 部署中遇到 Prometheus 启动不起来，一直处于 Restarting 的问题
 !!! ms-abstract ""
     可能是因为文件权限不对导致，修改权限后删除之前的 prometheus 容器并 reload。
     ```
@@ -144,7 +144,7 @@
     msctl reload
     ```
 
-## 24 遇到redis启动不起来，一直处于Restarting的问题
+## 24 遇到 redis 启动不起来，一直处于 Restarting 的问题
 !!! ms-abstract ""
     可能是因为 redis.conf 文件权限不对导致，修改权限后删除之前的 redis 容器并 reload。
     ```
@@ -241,7 +241,7 @@
     - 如果使用了fidder、charles等代理代工具，先关闭。 
     - 如果 https://ip:8081 被拦截了，请使用 http://ip:8081 。
 
-## 36 升级后服务正常，但是访问页面报500：`HTTP ERROR500 javax.servlet.ServletException: Filtered request failed.`
+## 36 升级后服务正常，但是访问页面提示：`HTTP ERROR 500 javax.servlet.ServletException: Filtered request failed.`
 !!! ms-abstract ""
     1.清浏览器缓存，重新打开浏览器进行访问。 <br>
     2.清除下 redis 数据。<br>
@@ -253,15 +253,16 @@
     flushall
     ```
 
-## 37 日志中出现：`java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)`
+## 37 日志中提示：`java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)`
 ![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
 !!! ms-abstract ""
     检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere。
 
 ## 38 MeterSphere k8s部署后如何控制数据库的连接数
 !!! ms-abstract ""
-    1.可在名称为 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数 <br>
-    2.可在名称为 values.yml 文件里，DATABASE 处新增如下两行参数
+    
+    - 在 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数。 <br>
+    - 在 values.yml 文件里，DATABASE 处新增如下两行参数。
     ```
     spring.datasource.hikari.maximum-pool-size=你想要的数值
     spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值

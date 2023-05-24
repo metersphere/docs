@@ -151,7 +151,7 @@
 !!! ms-abstract ""
     在压力配置里，提供了3种分配策略，分别为“自动分配、固定节点、自定义”，可以为每个线程组指定一个节点，或者按比例分配多个节点。
 
-## 17 性能测试并发量加大的时候报错 `Non HTTP response code: java.net.SocketTimeoutException`
+## 17 性能测试并发量加大的时候报错：`Non HTTP response code: java.net.SocketTimeoutException`
 !!! ms-abstract ""
     在高级配置增加超时时间。
 
@@ -167,14 +167,16 @@
 
 ## 20 性能测试状态一直是 starting 且无数据，如何排查？
 !!! ms-abstract ""
-    1.检查【系统设置-系统-系统参数设置】，当前站点配置是不是正确的 <br>
-    2.到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log 和 info.log，看日志中是否有报错信息。<br>
 
-## 21 k8s资源池是否需要安装node-controller
+    - 检查【系统设置-系统-系统参数设置】，当前站点配置是不是正确的 <br>
+    - 到服务器或者压力机的查看 /opt/metersphere/logs/node-controler/ 下的 ms-jmeter-run-log.log 和 info.log，看日志中是否有报错信息。<br>
+
+## 21 k8s资源池是否需要安装 node-controller ？
 !!! ms-abstract ""
-    1.执行性能测试不需要<br>
+
+    - 执行性能测试不需要<br>
     性能测试只需要在仓库中配置好 JMeter 镜像的地址，执行性能测试的时候会自动创建 JMeter POD 进行压测，执行完之后自动销毁。<br>
-    2.执行接口测试需要<br>
+    - 执行接口测试需要<br>
     执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br>
 ![! 接口测试-K8S配置](../img/faq/接口测试-K8S配置.png){ width="900px" }
 
@@ -194,11 +196,7 @@
 !!! ms-abstract ""
     性能测试里动态设置变量可以用属性的方式，${__setProperty(var,value,)} 设置属性，${__property(var)} 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递
 
-## 25 性能测试报告刷新频率和右上角设置的不一样
-!!! ms-abstract ""
-    性能测试计算报告是后台自动计算的，页面上配置的这个值只是页面查询数据库的频率。也就是说如果后台计算比较慢，这里的时间间隔较小的话是不能看到图表的改动的
-
-## 26 性能测试无法正常执行，提示资源不够？
+## 25 性能测试无法正常执行，提示资源不够？
 !!! ms-abstract ""
     可能的原因有: 
 
@@ -210,7 +208,7 @@
     - 尽量不要使用前后置脚本，或者换用资源消耗小的脚本，如 groovy。
     - 换用单独的测试资源池，使用 node-controller 模式安装。
 
-## 27 性能测试报告中，并发用户数显示和设置不一致
+## 26 性能测试报告中，并发用户数显示和设置不一致
 !!! ms-abstract ""
     可能的原因有: 
     
@@ -219,32 +217,28 @@
 
     解决方法：减少ramp-up时间，可以看到并发用户数与设置一致。
 
-## 28 如何修改 kafka 的日志保留时间配置？
+## 27 如何修改 kafka 的日志保留时间？
 !!! ms-abstract ""
     修改 /opt/metersphere/docker-compose-kafka.yml 配置文档里的 KAFKA_CFG_LOG_RETENTION_HOURS 参数。
 
 ![!kafka](../img/faq/kafka_log.png){ width="900px" }
 
-## 29 性能测试时接口读取 csv 不能按顺序读取
+## 28 性能测试时接口读取 csv 不能按顺序读取
 !!! ms-abstract ""
     所选的测试资源池有多个节点，多个节点共用一套 CSV 导致取值重复，在性能测试的高级配置里，开启 CSV 分割，多准备点测试数据。CSV 分割是: 假设有2个节点，CSV 里有100条数据，就会把 CSV 里的数据均分成2份，然后节点1 使用 1-50 条数据，节点2 使用 51-100 条数据。
 
-## 30 性能测试配置里面上传 CSV 文件，在高级配置里面看不到
+## 29 性能测试配置里面上传 CSV 文件，在高级配置里面看不到
 !!! ms-abstract ""
     csv 文件没有被性能 jmx 脚本引用，jmx 引用了才能看见。修改 jmx 文件，引用上传的 CSV 文件，或者在场景里添加 CSV 文件后转性能测试。
 
-## 31 JMX 脚本在导入到性能测试后，性能测试执行完毕没有任何数据  
-!!! ms-abstract ""
-    jmx 脚本里有 CSV 文件，上传 jmx 文件后有没有上传 CSV 文件，同步上传 jmx 使用到的 CSV 文件
-
-## 32 性能测试模块，自定义监控项不支持 windows 服务器
+## 30 性能测试模块，自定义监控项不支持 windows 服务器
 !!! ms-abstract ""
     默认提供的 promQL 是与 linux 操作系统适配，windows 操作系统的监控项需要自行编写，例如：查询 windows 的 cpu 使用率: `100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="%1$s"}[1m])) * 100) `
 
     其中 %1$s 是被监控节点的ip和端口，上面这条语句在执行时会变成 100 - (avg by (instance) (irate(windows_cpu_time_total{mode="idle", instance="172.16.10.54:9182"}[1m])) * 100)
     其他监控项可以自行查询来写，内存、磁盘等，还可以自行监控不同的 exporter，只要是符合 exporter规范的都可以在自定义监控中配置
 
-## 33 部署在 K8S 下的 MS 自定义监控配置方法，默认方法无法生效，并且监控详情没有数据 
+## 31 部署在 K8S 下的 MS 自定义监控配置方法，默认方法无法生效，并且监控详情没有数据 
 !!! ms-abstract ""
     在 prometheus.yml 中配置
     ```
@@ -256,24 +250,16 @@
 
 ![!kafka](../img/faq/k8s_监控.png){ width="900px" }
 
-## 34 接口自动化创建了的性能测试，脚本及文件内容更新后，已转性能测试的用例没有同步更新 
+## 32 接口自动化创建的性能测试，脚本及文件内容更新后，已转性能测试的用例没有同步更新 
 !!! ms-abstract ""
     转性能测试的时候生成的 jmx 文件就是当前的配置，之后再修改接口对性能测试无效，点击性能测试右上角“同步场景测试最新变更”按钮手动同步即可。
 
-## 35 接口用例转换为性能测试，无http-domain，执行性能测试失败
-!!! ms-abstract ""
-    选择的环境中没有配置url信息，接口用例调试成功后再转性能测试
-
-## 36 性能测试引用场景用例，执行的文件不是加载的文件 
-!!! ms-abstract ""
-    请求统计的显示的是接口的名称，不是场景的名称。
-
-## 38 运行性能测试的时候报错`Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`
+## 33 运行性能测试的时候报错`Image Not Found: registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`
 
 !!! ms-abstract ""
     服务器本地的 jmeter-master 镜像被删除了，需要手动执行命令手动拉取镜像 `docker pull registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.4.3-ms5-jdk11`。
 
-## 39 如果采用 K8S 集群压测，如何获取 SA 和 Token？
+## 34 如果采用 K8S 集群压测，如何获取 SA 和 Token？
 !!! ms-abstract ""
     ```
     // 创建 namespaces

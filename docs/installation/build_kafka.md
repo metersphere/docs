@@ -3,10 +3,10 @@
 
 ## 1 kraft 架构
 !!! ms-abstract ""
-    - Kafka不再依赖外部框架，而是能够独立运行。 <br>
-    - controller管理集群时，不再需要从zookeeper中先读取数据，集群性能上升。 <br>
-    - 由于不依赖zookeeper，集群扩展时不再受到zookeeper读写能力限制controller 不再动态选举，而是由配置文件规定。 这样我们可以有针对性的加强controller 节点的配置。 <br>
-    - 后续版本升级方便，不用和zookeeper一起维护。
+    - Kafka 不再依赖外部框架，而是能够独立运行。 <br>
+    - controller 管理集群时，不再需要从 zookeeper 中先读取数据，集群性能上升。 <br>
+    - 由于不依赖 zookeeper，集群扩展时不再受到 zookeeper 读写能力限制 controller 不再动态选举，而是由配置文件规定，这样我们可以有针对性的加强 controller 节点的配置。 <br>
+    - 后续版本升级方便，不用和 zookeeper 一起维护。
 
 ## 2 docker-compose-kafka.yml
 !!! ms-abstract ""

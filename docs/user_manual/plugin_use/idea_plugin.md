@@ -1,8 +1,5 @@
 !!! ms-abstract ""
      该插件帮助开发人员在IntelliJ IDEA IDE 中，将编写的 HTTP 接口文档信息快捷推送到 MeterSphere 系统中。
-
-!!! info "安装注意"
-     * 不低于 2018.3 的 IDEA Ultimate，Community 版本（2019,2020版本支持 ???）
    
 ## 1 插件安装
 ### 1.1 在线安装
