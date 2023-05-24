@@ -1,40 +1,36 @@
 ## 1 环境要求
-
-!!! info "部署服务器要求"
+!!! ms-abstract "部署服务器要求"
     * 操作系统: CentOS 7.x / Redhat 7.x
-    * CPU/内存: 最低要求 4C8G，推荐 8C16G
+    * CPU/内存: 最低要求 4C8G，推荐 8C16G (2.3.0版本及其之后的版本，最低配置 8C16G)
     * 磁盘空间: 50G
 
 ## 2 下载安装包
-
-请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下。
-
-!!! tip ""
+!!! ms-abstract ""
+    请自行下载 MeterSphere 最新版本的离线安装包，并复制到目标机器的 /tmp 目录下。<br>
     安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
 
 ## 3 解压安装包
+!!! ms-abstract ""
+    以 root 用户 ssh 登录到目标机器, 并执行如下命令。
+    ```
+    cd /tmp
+    # 解压安装包
+    tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
+    ```
 
-以 root 用户 ssh 登录到目标机器, 并执行如下命令。
+## 4 修改安装配置
+### 4.1 修改配置
+!!! ms-abstract ""
+    在安装包解压后的目录，编辑修改安装参数。
+    ```
+    cd metersphere-offline-installer-v2.3.0
+    vi install.conf
+    ```
 
-```sh
-cd /tmp
-# 解压安装包
-tar zxvf metersphere-offline-installer-v2.3.0.tar.gz
-```
-
-## 4 修改安装配置(可选)
-### 4.1 解压
-
-在安装包解压后的目录，编辑修改安装参数。
-
-```sh
-cd metersphere-offline-installer-v2.3.0
-vim install.conf
-```
 ### 4.2 安装配置文件说明
-
-!!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即即可重新加载配置文件）"
-    ```vim
+!!! ms-abstract "安装配置文件说明"
+    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）
+    ```
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
     MS_BASE=/opt
@@ -117,10 +113,8 @@ vim install.conf
     ```
 
 ### 4.3 数据库配置文件说明
-
-!!! info "注意"
+!!! ms-abstract "注意"
     MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
-
     ```
     [mysqld]
     datadir=/var/lib/mysql
@@ -158,19 +152,17 @@ vim install.conf
     
     [mysql.server]
     default-character-set=utf8mb4
-
     ```
     
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-    ```mysql
+    ```
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
-安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
+    安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
 ### 4.4 安装目录结构说明
-
-!!! info "安装目录结构说明"
+!!! ms-abstract "安装目录结构说明"
     ```
     /opt/metersphere/
     ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
@@ -200,31 +192,32 @@ vim install.conf
     ```
 
 ## 5 执行安装脚本
+!!! ms-abstract ""
+    ```
+    # 进入安装包目录
+    cd metersphere-offline-installer-v2.3.0
+    # 运行安装脚本
+    /bin/bash install.sh
+    ```
 
-```sh
-# 进入安装包目录
-cd metersphere-offline-installer-v2.3.0
-# 运行安装脚本
-/bin/bash install.sh
-```
-
-执行完安装脚本后，会安装镜像，等提示安装完成后，可以用 msctl status 查看服务各个组件状态
+    执行完安装脚本后，会安装镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
 ![服务状态](../img/installation/ms-status.png)
 
-等待2分钟至各个组件都是 healthy 状态后，可通过浏览器访问如下页面登录 MeterSphere。
+!!! ms-abstract ""
+    等待几分钟后，使用命令 'msctl status' 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
+    ```
+    请通过以下方式访问:
 
-```
-请通过以下方式访问:
- URL: http://$LOCAL_IP:8081
- 用户名: admin
- 初始密码: metersphere
-企业用户升级后需手动设置 install.conf 中的 MS_UI_ENABLED=true 和 MS_WORKSTATION_ENABLED=true 并执行 'msctl reload' 来开启UI和工作台功能
-您可以使用命令 'msctl status' 检查服务运行情况.
-```
+     URL: http://服务器IP:8081
+     用户名: admin
+     初始密码: metersphere
+
+    ```
+    企业用户升级后需手动设置 ${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
 
 ## 6 配置反向代理
-!!! warning "注意"
-    如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
+!!! ms-abstract "注意"
+    如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```
     server {
         listen 80;

@@ -19,6 +19,12 @@
   margin-top: 3rem;
 }
 
+@media (max-width: 768px){
+  .md-header{
+    top: 129px;
+  }
+}
+
 .progress-label {
   position: absolute;
   text-align: center;
@@ -126,4 +132,23 @@
 
 .png-lable-span {
   margin-left: 30%;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 0;
+  border-left-width: 4px;
+}
+
+.md-typeset .admonition.ms-abstract,
+.md-typeset details.ms-abstract {
+  border-color: rgb(170, 80, 191);
+}
+.md-typeset .ms-abstract > .admonition-title,
+.md-typeset .ms-abstract > summary {
+  background-color: rgba(170, 80, 191, 0.1);
+}
+.md-typeset .ms-abstract > .admonition-title::before,
+.md-typeset .ms-abstract > summary::before {
+  background-color: rgb(170, 80, 191);
 }

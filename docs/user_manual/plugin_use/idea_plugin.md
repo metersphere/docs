@@ -1,26 +1,33 @@
-开发人员可通过该插件实时将编写的接口代码推送到 MeterSphere 系统
+!!! ms-abstract ""
+     该插件帮助开发人员在IntelliJ IDEA IDE 中，将编写的 HTTP 接口文档信息快捷推送到 MeterSphere 系统中。
 
 !!! info "安装注意"
-     * 不低于 2018.3 的 IDEA Ultimate，Community 版本
-     * 下载离线包: https://plugins.jetbrains.com/plugin/18097-metersphere/versions
+     * 不低于 2018.3 的 IDEA Ultimate，Community 版本（2019,2020版本支持 ???）
    
-## 1 安装步骤
+## 1 插件安装
 ### 1.1 在线安装
-【Settings】-【Plugins】,搜索【MeterSphere】，点击 install 即可进行安装
-![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_4.png)
+!!! ms-abstract ""
+     在 IDEA -> Settings -> plugins -> Marketplace 搜索并选择【MeterSphere】，点击 install 即可进行在线安装。
+
+![ideal_plugin](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_4.png)
 
 ### 1.2 离线安装
-【Settings】-【Plugins】-【Install Plugin from Disk】,导入下载的离线包
-![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_1.png)
+!!! ms-abstract ""
+     先在 [jetbrains plugin marketplace](https://plugins.jetbrains.com/plugin/18097-metersphere/versions) 中下载与 IDEA版本匹配的版本,
+     然后在 IDEA -> Settings -> plugins，点击【Install Plugin from Disk】并选择已下载的离线包进行安装。
 
-## 2 使用步骤
-进入【个人信息】-【API Keys】获取 AK/SK 信息 <br>
-![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_5.png)
+![ideal_plugin](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_1.png)
 
-打开【Settings】-【MeterSphere】配置好访问地址以及 AK/SK 等详细信息，点击【test】按钮即可看到连接成功
-![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_2.png)
+## 2 插件使用
+!!! ms-abstract ""
+     IDEA -> Settings -> MeterSphere 中配置好访问地址以及 AK/SK 等详细信息，点击【test】按钮即确认连接成功。
 
-配置导出是否覆盖、目录层级等信息后，点击【Apply】按钮即可
-![录制](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_3.png)
+![ideal_plugin](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_2.png)
 
-在要同步接口的 Controller 右键选择【Export MeterSphere】即可将代码中的接口推送到 MeterSphere 系统中
+!!! ms-abstract ""
+     配置导出是否覆盖、目录层级等信息后，点击【Apply】按钮。
+
+![ideal_plugin](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_3.png)
+
+!!! ms-abstract ""
+     在要同步接口的 Controller 页面中右键选择【Export MeterSphere】即可将代码中的 HTTP 接口推送到 MeterSphere 系统中。

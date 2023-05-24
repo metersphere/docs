@@ -50,21 +50,20 @@ nav:
     - 系统架构: system_arch.md
     - 安装部署:
           - 网络端口要求: installation/network_port.md
-          - Linux 中部署:
+          - Linux 单机部署:
                 - 在线安装: installation/online_installation.md
                 - 在线升级: installation/online_upgrade.md
                 - 离线安装: installation/offline_installation.md                
                 - 离线升级: installation/offline_upgrade.md
-          - Kubernetes 中部署: installation/kubernetes_installation.md
-          - Windows 中部署: installation/offline_installation_windows.md
-          - Mac 中部署: installation/offline_installation_mac.md
+          - Windows 单机部署: installation/offline_installation_windows.md
+          - MacOS 单机部署: installation/offline_installation_mac.md
+          - Kubernetes 部署: installation/kubernetes_installation.md
           - MeterSphere 分布式部署:
                 - 整体部署规划: installation/pre_work.md
                 - 部署Kafka集群: installation/build_kafka.md
                 - 部署Data-Streaming集群: installation/build_data_streaming.md
                 - 部署Node-Controller集群: installation/build_node_controller.md
-                - 压测工作: installation/pressure_work.md
-          - MeterSphere 数据备份: installation/backup_data.md
+          - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md
@@ -74,7 +73,7 @@ nav:
                 - 我的关注: user_manual/my_desk/attention.md
                 - 我创建的: user_manual/my_desk/created.md
           - 测试跟踪:
-                - 模块说明: user_manual/test_track/intro.md
+                - 概述: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
                 - 功能用例:
                   - 项目切换: user_manual/test_track/test_case/switch_project.md
@@ -82,25 +81,29 @@ nav:
                   - 用例管理: user_manual/test_track/test_case/test_case.md
                   - 公共用例库: user_manual/test_track/test_case/public_test_case.md
                 - 用例评审: user_manual/test_track/test_case_review.md
-                - 测试计划: user_manual/test_track/test_plan.md
+                - 测试计划:
+                    - 计划列表: user_manual/test_track/test_plan/test_plan_list.md
+                    - 管理计划: user_manual/test_track/test_plan/test_plan_manage.md
+                    - 批量操作: user_manual/test_track/test_plan/test_plan_batch.md
                 - 缺陷管理: user_manual/test_track/test_defect.md
                 - 报告: user_manual/test_track/test_report.md
           - 接口测试:
-                - 模块说明: user_manual/api_test/intro.md
+                - 概述: user_manual/api_test/intro.md
                 - 首页: user_manual/api_test/home.md
                 - 接口定义: user_manual/api_test/api_definition.md
                 - 接口自动化: user_manual/api_test/api_automation.md
-                - 接口测试报告中心: user_manual/api_test/test_report.md
-                - 用例步骤说明: user_manual/api_test/api_step.md
+                - 接口测试报告: user_manual/api_test/test_report.md
+                - 接口用例操作: user_manual/api_test/api_step.md
+                - 接口场景编排: user_manual/api_test/api_scenario.md
                 - 内置函数: user_manual/api_test/functions.md
           - UI 测试:
-                - 模块说明: user_manual/ui_test/intro.md
+                - 概述: user_manual/ui_test/intro.md
                 - 注意事项: user_manual/ui_test/info.md
                 - 元素库: user_manual/ui_test/ui_element_store.md
                 - UI 自动化: user_manual/ui_test/ui_automation.md
                 - 测试报告: user_manual/ui_test/ui_test_report.md  
           - 性能测试:
-                - 模块说明: user_manual/load_test/intro.md
+                - 概述: user_manual/load_test/intro.md
                 - 首页: user_manual/load_test/home.md
                 - 性能测试: user_manual/load_test/load_test.md
                 - 性能测试报告: user_manual/load_test/test_report.md
@@ -121,11 +124,11 @@ nav:
                 - 应用管理: user_manual/project_management/application_management.md
                 - 自定义代码片段: user_manual/project_management/customcode_snippets.md
           - 系统设置:
-              - 模块说明: user_manual/system_management/intro.md
+              - 概述: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
               - 工作空间: user_manual/system_management/workspace.md
           - 插件使用教程:
-              - MeterSphere 浏览器插件: user_manual/plugin_use/chrome_plugin.md
+              - 浏览器录制插件: user_manual/plugin_use/chrome_plugin.md
               - Jenkins 插件: user_manual/plugin_use/jenkins_plugin.md
               - IDEA 插件: user_manual/plugin_use/idea_plugin.md
               - Selenium IDE 插件: user_manual/plugin_use/selenium_ide_plugin.md
@@ -144,7 +147,7 @@ nav:
           - 服务集成相关: faq/service_integration.md
           - 企业版相关: faq/enterprise.md
     - 开发文档:
-          - 源码搭建 (前后端分离): dev_manual.md
+          - 开发环境搭建: dev_manual.md
           - 接口自动化插件开发示例: automation_plugin_dev.md
     - 用户案例: case_studies/user_cases.md
     - 更新日志: about/changelog.md

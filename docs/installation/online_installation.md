@@ -1,29 +1,27 @@
 ## 1 环境要求
-
-!!! info "部署服务器要求"
+!!! ms-abstract "部署服务器要求"
     * 操作系统: CentOS 7.x / Redhat 7.x
-    * CPU/内存: 最低要求 4C8G，推荐 8C16G
+    * CPU/内存: 最低要求 4C8G，推荐 8C16G (2.3.0版本及其之后的版本，最低配置 8C16G)
     * 磁盘空间: 50G
     * 网络要求：可访问互联网
 
-## 2 一键安装（采用默认安装参数）
+## 2 一键安装
+!!! ms-abstract ""
+    在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。<br>
+    ```
+    curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
+    ```
 
-在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。
-```
-curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
-```
+    安装成功后，通过浏览器访问如下页面登录 MeterSphere。<br>
+    ```
+    地址: http://目标服务器IP地址:8081
+    用户名: admin
+    密码: metersphere
+    ```
 
-安装成功后，通过浏览器访问如下页面登录 MeterSphere。
+    安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
-```
-地址: http://目标服务器IP地址:8081
-用户名: admin
-密码: metersphere
-```
-
-安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
-
-!!! info "安装目录目录结构说明"
+!!! ms-abstract "安装目录目录结构说明"
     ```
     /opt/metersphere/
     ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
@@ -52,45 +50,46 @@ curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest
     └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ```
 
-## 3 手动安装（可配置安装参数）
+## 3 手动安装
 ### 3.1 手动安装
-到 GitHub release 页面下载在线安装包，链接为: https://github.com/metersphere/metersphere/releases
+!!! ms-abstract ""
+    MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
+    ```
+    # 下载在线安装包
+    wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
+    
+    # 解压在线安装包
+    tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
+    
+    # 进入解压目录
+    cd metersphere-online-installer-v2.x.y
+    
+    # 配置安装参数，参数说明见下文
+    # vi install.conf
+    
+    # 执行install.sh安装脚本
+    /bin/bash install.sh
+    ```
 
-```sh
-# 下载在线安装包
-wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
-
-# 解压在线安装包
-tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
-
-# 进入解压目录
-cd metersphere-online-installer-v2.x.y
-
-# 配置安装参数，参数说明见下文
-# vi install.conf
-
-# 执行install.sh安装脚本
-/bin/bash install.sh
-```
-
-执行完安装脚本后，会在线拉取镜像，等提示安装完成后，可以用 msctl status 查看服务各个组件状态
+    执行完安装脚本后，会在线拉取镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
 ![服务状态](../img/installation/ms-status.png)
 
-等待2分钟至各个组件都是 healthy 状态后，可通过浏览器访问如下页面登录 MeterSphere。
+!!! ms-abstract ""
+    等待几分钟后，使用命令 'msctl status' 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
+    ```
+     请通过以下方式访问:
 
-```
-请通过以下方式访问:
- URL: http://$LOCAL_IP:8081
- 用户名: admin
- 初始密码: metersphere
-企业用户升级后需手动设置 install.conf 中的 MS_UI_ENABLED=true 和 MS_WORKSTATION_ENABLED=true 并执行 'msctl reload' 来开启UI和工作台功能
-您可以使用命令 'msctl status' 检查服务运行情况.
-```
+     URL: http://服务器IP:8081
+     用户名: admin
+     初始密码: metersphere
+
+    ```
+    企业用户安装后需手动设置，${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
 
 ### 3.2 安装配置文件说明
-
-!!! info "安装配置文件说明, 如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，可以直接到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即即可重新加载配置文件）"
-    ```vim
+!!! ms-abstract "安装配置文件说明"
+    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）
+    ```
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
     MS_BASE=/opt
@@ -173,8 +172,7 @@ cd metersphere-online-installer-v2.x.y
     ```
 
 ### 3.3 数据库配置文件说明
-
-!!! info "注意"
+!!! ms-abstract "注意"
     MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
     ```
@@ -217,13 +215,13 @@ cd metersphere-online-installer-v2.x.y
     ```
 
     请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
-    ```mysql
+    ```
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
 ## 4 配置反向代理
-!!! warning "注意"
-    如果需要使用 Nginx、Haproxy 等反向代理，需要配置反向代理对 websocket 的支持。以 Nginx 为例，参考的配置内容如下。
+!!! ms-abstract "注意"
+    如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```
     server {
         listen 80;

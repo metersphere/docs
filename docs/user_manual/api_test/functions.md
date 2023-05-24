@@ -1,12 +1,11 @@
-MeterSphere 接口测试基于 JMeter 实现，因此 JMeter 中的内置函数及变量在 MeterSphere 中都可以正常使用。内置函数及变量可以用在多个位置，包括QUERY参数、REST参数、请求体、前后置脚本等。
+##  1 内置函数概述
+   
+!!! ms-abstract "" 
+    MeterSphere 接口测试基于 JMeter 实现，因此 JMeter 中的内置函数及变量在 MeterSphere 中都可以正常使用。内置函数及变量可应用于QUERY 参数、REST 参数、请求体、前后置脚本等。<br>
+    内置函数一般以两个下划线开头，并使用类似 `${__functionName(var1,var2,var3)}` 的形式调用。其中 `__functionName` 代表函数名，`var1`，`var2` 和 `var3` 分别是传给该函数的三个参数。<br>
+    变量可以通过类似 `${varName}` 的形式引用，其中 `varName` 代表变量名。例如：生成1到100的随机数使用表达式：${__Random(1,100)}。
 
-内置函数一般以两个下划线开头，并使用类似 `${__functionName(var1,var2,var3)}` 的形式调用。
-
-其中 `__functionName` 代表函数名，`var1`，`var2` 和 `var3` 分别是传给该函数的三个参数。
-
-变量可以通过类似 `${varName}` 的形式引用，其中 `varName` 代表变量名。
-
-## 内置函数列表
+## 2 内置函数列表
 
 <table>
     <tbody>
