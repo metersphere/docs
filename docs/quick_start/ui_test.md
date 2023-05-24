@@ -1,24 +1,22 @@
 !!! ms-abstract ""
 
-    MeterSphere UI 测试提供了元素库、UI 自动化、测试报告等UI测试相关功能。 用户可以使用多级模块来组织管理项目下的 UI 自动化场景，执行场景，生成查看测试报告。 UI 测试模块是企业版 X-Pack 功能增强包功能，如需使用，请点击：[申请企业版试用](https://jinshuju.net/f/CzzAOe)。
+    MeterSphere UI 测试提供了元素库、UI 自动化、测试报告等UI测试相关功能。 用户可以使用多级模块来组织管理项目下的 UI 自动化场景，执行场景，生成查看测试报告。UI 测试模块是企业版 X-Pack 功能增强包功能，如需使用，请点击：[申请企业版试用](https://jinshuju.net/f/CzzAOe)。
 
-## 1 注意事项
-
-!!! ms-abstract "自动化测试工作前注意事项"
+!!! ms-abstract "注意事项"
 
     1. 修改 /opt/metersphere/.env 文件，MS_UI_ENABLED=true 修改配置后加载配置文件执行 msctl reload。<br>
-    2. docker ps 检查 local-selenium-grid 容器是否成功启动。<br>
-    3. 在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://local-selenium-grid:4444。<br>
+    2. docker ps 检查 selenium-hub 容器是否成功启动。<br>
+    3. 在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://selenium-hub:4444。<br>
     4. UI 测试用例，默认勾选 "性能模式" 没有截图展示，不勾选 "性能测试" 可以查看每个步骤的截图。<br>
     5. 如果导入 License 成功后，依然没有 UI 测试模块，请到【用户组与权限】处配置 UI 模块权限。
 
-## 2 创建模块
+## 1 创建模块
 !!! ms-abstract ""
     MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧查看到 UI 自动化场景的模块树。 点击左侧的模块树中的 【添加子模块】按钮，为该项目添加模块。
 
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试1.png){ width="900px" }
 
-## 3 创建元素
+## 2 创建元素
 !!! ms-abstract ""
     点击左侧的模块树中的【添加子模块】 按钮，添加模块，然后创建元素。元素库可用于场景步骤中元素的选择。
 
@@ -26,16 +24,16 @@
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试3.png){ width="900px" }
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试4.png){ width="900px" }
 
-## 4 创建场景
+## 3 创建场景
 !!! ms-abstract ""
     用户可在各个模块中添加场景，可以手动创建，也可以通过导入的方式创建 UI 自动化场景。
 
-### 4.1 导入 Selenium IDE 脚本
+### 3.1 导入 Selenium IDE 脚本
 
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试5.png){ width="900px" }
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试6.png){ width="900px" }
 
-### 4.2 手动创建场景
+### 3.2 手动创建场景
 !!! ms-abstract ""
     点击右侧场景列表中的【+】号按钮，创建场景。
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试7.png){ width="900px" }
@@ -76,21 +74,21 @@
 
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试13.png){ width="900px" }
 
-## 5 在场景步骤中添加高级设置
+## 4 在场景步骤中添加高级设置
 !!! ms-abstract ""
     在高级设置中，以后置操作为例，选择 后置操作 ，点击下拉框，选择需要的方式，点击添加。可以添加后置脚本，等待时间，断言和后置提取。
 
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试14.png){ width="900px" }
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试15.png){ width="900px" }
 
-## 6 调试 UI 自动化场景
+## 5 调试 UI 自动化场景
 !!! ms-abstract ""
     可在编辑场景页面调试 UI 场景，也可以在 UI 自动化场景列表页面执行UI场景。如图点击场景编辑页面的【生成报告】按钮，可生成并查看场景报告。<br>
     勾选性能模式，场景报告中无截图信息，不勾选性能模式，场景报告中有截图信息。 
 
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试16.png){ width="900px" }
 
-## 7 生成测试报告
+## 6 生成测试报告
 !!! ms-abstract ""
     点击场景列表中执行按钮，会弹出页面显示本次场景的执行结果。
 

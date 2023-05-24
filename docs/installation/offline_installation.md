@@ -29,7 +29,7 @@
 
 ### 4.2 安装配置文件说明
 !!! ms-abstract "安装配置文件说明"
-    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）
+    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 `msctl reload` 即可重新加载配置文件）。
     ```
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
@@ -200,11 +200,11 @@
     /bin/bash install.sh
     ```
 
-    执行完安装脚本后，会安装镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
+    执行完安装脚本后，会安装镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态。
 ![服务状态](../img/installation/ms-status.png)
 
 !!! ms-abstract ""
-    等待几分钟后，使用命令 'msctl status' 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
+    等待几分钟后，使用命令 `msctl status` 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
     ```
     请通过以下方式访问:
 
@@ -213,7 +213,7 @@
      初始密码: metersphere
 
     ```
-    企业用户升级后需手动设置 ${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
+    企业用户升级后需手动设置 ${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 `msctl reload` 来开启 UI 功能
 
 ## 6 配置反向代理
 !!! ms-abstract "注意"

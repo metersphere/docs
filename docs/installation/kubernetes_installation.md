@@ -36,15 +36,16 @@
 
 ## 4 Helm Charts 离线升级
 !!! ms-abstract ""
-    1.导入新版本镜像 <br>
+
+    - **导入新版本镜像**
     下载 MeterSphere 最新版本的离线安装包并且解压，将安装包里 `image` 目录下的镜像 tar 包上传到 kubernetes 的镜像库里或者手动 load 到 kubernetes 各个宿主机节点上。 <br>
     MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
     
-    2.下载最新离线 Chart 包 <br>
+    - **下载最新离线 Chart 包**
     helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases  <br>
     如：https://github.com/metersphere/helm-chart/releases/download/metersphere-1.1.0/metersphere-1.1.0.tgz
     
-    3.进行升级 <br>
+    - **进行升级**
     ```sh
     helm upgrade metersphere metersphere-1.0.10.tgz -n ms
 

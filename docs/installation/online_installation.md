@@ -75,7 +75,7 @@
 ![服务状态](../img/installation/ms-status.png)
 
 !!! ms-abstract ""
-    等待几分钟后，使用命令 'msctl status' 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
+    等待几分钟后，使用命令 `msctl status` 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
     ```
      请通过以下方式访问:
 
@@ -84,11 +84,10 @@
      初始密码: metersphere
 
     ```
-    企业用户安装后需手动设置，${MS_BASE}/metersphere/install.conf 中的 MS_UI_ENABLED=true 并执行 'msctl reload' 来开启 UI 功能
 
 ### 3.2 安装配置文件说明
 !!! ms-abstract "安装配置文件说明"
-    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 /bin/bash install.sh 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 msctl reload 即可重新加载配置文件）
+    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 `msctl reload` 即可重新加载配置文件）。
     ```
     # 基础配置
     ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
@@ -220,7 +219,7 @@
     ```
 
 ## 4 配置反向代理
-!!! ms-abstract "注意"
+!!! ms-abstract ""
     如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```
     server {
@@ -251,7 +250,7 @@
             client_max_body_size 1000m;
             #access_log off;
 
-            # 配置 websocket 支持
+            #配置 websocket 支持
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
