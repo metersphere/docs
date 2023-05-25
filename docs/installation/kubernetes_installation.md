@@ -55,7 +55,7 @@
 
 ## 5 values.yaml
 !!! ms-abstract ""
-    以下 values.yaml 内容对应版本为 v2.3.0，最新的 value.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 value.yaml，例如如：v2.9.1 版本 value.yaml 文件为 https://github.com/metersphere/helm-chart/blob/metersphere-2.9.1/charts/metersphere/values.yaml
+    以下 values.yaml 内容对应版本为 v2.3.0，最新的 values.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 values.yaml，例如：v2.9.1 版本 value.yaml 文件为 https://github.com/metersphere/helm-chart/blob/metersphere-2.9.1/charts/metersphere/values.yaml
 
 ```sh
 ingress: # 不使用 ingress 可以关闭
