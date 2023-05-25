@@ -254,7 +254,7 @@
     ```
 
 ## 37 日志中提示：`java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)`
-![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg)
+![! 安装部署-500错误](../img/faq/FileNotFoundException.jpg){ width="900px" }
 !!! ms-abstract ""
     检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere。
 
@@ -271,7 +271,7 @@
 ## 39 安装时出现：`Encountered error while bringing up the project`, msctl status 时看到 mysql容器一直 Restarting
 !!! ms-abstract ""
     在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
-![! metersphere导入格式](../img/faq/mysql_yml.jpg)
+![! metersphere导入格式](../img/faq/mysql_yml.jpg){ width="900px" }
 
 ## 40 安装部署时报错：`Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space`
 !!! ms-abstract ""

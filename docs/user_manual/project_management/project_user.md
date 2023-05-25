@@ -4,12 +4,12 @@
 ## 1 项目成员
 !!! ms-abstract ""
     点击【项目成员】菜单，即可查看当前有项目角色的成员。
-![!项目设置](../../img/project_management/项目成员.png)
+![!项目设置](../../img/project_management/项目成员.png){ width="900px" }
 
 !!! ms-abstract ""
     点击页面左上角【添加成员】，可根据用户 ID 和用户邮箱搜索需要添加的用户，可选择用户组，点击【确定】按钮完成项目成员添加。
-![!项目设置](../../img/project_management/添加成员.png)
+![!项目设置](../../img/project_management/添加成员.png){ width="900px" }
 
 !!! ms-abstract ""
     添加完成后可在成员列表中查看到添加的成员，在成员的操作列中可点击【编辑】和【删除】进行成员修改和成员删除操作。
-![!项目设置](../../img/project_management/编辑移除.png)
+![!项目设置](../../img/project_management/编辑移除.png){ width="900px" }

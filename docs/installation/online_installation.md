@@ -72,7 +72,7 @@
     ```
 
     执行完安装脚本后，会在线拉取镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
-![服务状态](../img/installation/ms-status.png)
+![服务状态](../img/installation/ms-status.png){ width="900px" }
 
 !!! ms-abstract ""
     等待几分钟后，使用命令 `msctl status` 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。

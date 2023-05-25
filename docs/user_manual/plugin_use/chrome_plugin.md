@@ -7,7 +7,7 @@
      在 [MeterSphere chrome-extensions](https://github.com/metersphere/chrome-extensions/releases/tag/v1.2.4) 项目中下载最新的发布版本，下载完成后进行解压，然后在谷歌浏览器输入 chrome://extensions/ 进入扩展程序安装界面，
      选择【加载已解压的扩展程序】，选择插件解压后的目录进行安装。
 
-![录制](../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_install.png)
+![录制](../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_install.png){ width="900px" }
 
 ## 2 使用说明
 !!! ms-abstract ""
@@ -31,4 +31,4 @@
 
 !!! ms-abstract ""
      在 MeterSphere 中创建性能测试任务， 上传刚刚录制的 JMX 脚本，然后设置并发参数，进行性能测试。
-![录制](../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_5.png)
+![录制](../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_5.png){ width="900px" }

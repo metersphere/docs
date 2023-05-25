@@ -70,7 +70,7 @@
 	```
 	sudo su -
 	```
-![启动Ubuntu](../img/installation/launch-ubuntu.png){ width="600px" }
+![启动Ubuntu](../img/installation/launch-ubuntu.png){ width="900px" }{ width="600px" }
 
 ### 2.7 检查 Docker 环境
 !!! ms-abstract ""
@@ -79,7 +79,7 @@
 	docker version
 	```
 	如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，请根据提示信息解决异常问题。
-![docker检测](../img/installation/check-docker.png){ width="600px" }
+![docker检测](../img/installation/check-docker.png){ width="900px" }{ width="600px" }
 
 ### 2.8 下载安装包
 !!! ms-abstract ""

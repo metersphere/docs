@@ -1,14 +1,14 @@
 ## 1 成员
 !!! ms-abstract ""
     点击左侧【工作空间】下拉菜单中的【成员】进入成员界面，查看当前工作空间中的所有成员信息。可以对成员进行【新增】，【编辑】，【查询】，【删除】。
-![工作空间](../../img/system_management/工作空间.png)
+![工作空间](../../img/system_management/工作空间.png){ width="900px" }
 
 
 !!! ms-abstract ""
 
     - **添加成员**<br>
     点击【添加成员】按钮添加成员户，在弹出页面中选择要添加的用户。
-![!添加成员](../../img/system_management/添加成员.png)
+![!添加成员](../../img/system_management/添加成员.png){ width="900px" }
 
 !!! ms-abstract "参数说明"
 
@@ -21,14 +21,14 @@
 
     - **编辑成员**<br>
     在成员信息中可点击【编辑】和【删除】进行成员修改和删除操作。
-![!编辑成员](../../img/system_management/编辑成员.png)
+![!编辑成员](../../img/system_management/编辑成员.png){ width="900px" }
 
 
 !!! ms-abstract ""
 
     -  **查询用户**<br>
     可按名称来模糊查询成员信息，输入查询信息，点击回车即可完成查询。
-![查询成员用户](../../img/system_management/查询成员用户.png)
+![查询成员用户](../../img/system_management/查询成员用户.png){ width="900px" }
 
 ## 2 服务集成
 !!! ms-abstract ""
@@ -40,13 +40,13 @@
     (2)其次配置项目相关信息。<br>
     (3)然后为每个登录用户设置各自的个人账号，此配置也可以不设置。
 
-![!服务集成](../../img/system_management/服务集成首页.png)
+![!服务集成](../../img/system_management/服务集成首页.png){ width="900px" }
 
 ### 2.1 与TAPD集成
 !!! ms-abstract ""
     第一步：服务集成配置。
 
-![!TAPD-配置](../../img/system_management/TAPD-配置.png)
+![!TAPD-配置](../../img/system_management/TAPD-配置.png){ width="900px" }
 
 !!! ms-abstract "参数说明"
     【API 账号和口令】是 Tapd Basic Auth 账号信息在【公司管理-安全与集成-开放平台】中查询。
@@ -54,41 +54,41 @@
 !!! ms-abstract ""
     第二步：关联项目配置。<br>
     配置完服务集成后，还需要配置项目中引用 TAPD 项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。
-![!TAPD-马上关联项目](../../img/system_management/TAPD-马上关联项目.png)
+![!TAPD-马上关联项目](../../img/system_management/TAPD-马上关联项目.png){ width="900px" }
 
 !!! ms-abstract ""
     跳转到项目管理页面，点击项目列表中的【编辑】按钮，编辑项目里【TAPD 项目 ID】，以及缺陷模板等相关信息。
-![!TAPD-编辑信息](../../img/system_management/TAPD-编辑信息.png)
+![!TAPD-编辑信息](../../img/system_management/TAPD-编辑信息.png){ width="900px" }
 
 !!! ms-abstract ""
     同时，还需要配置项目中的 TAPD 缺陷模板设置，【缺陷模板】需要选择【TAPD-默认模板】。
-![!TAPD-默认模板](../../img/system_management/TAPD-默认模板.png)
+![!TAPD-默认模板](../../img/system_management/TAPD-默认模板.png){ width="900px" }
 
 !!! ms-abstract ""
     第三步：添加个人平台账号。<br>
     点击服务集成页面右下角的【马上添加】进行设置。
-![!TAPD-马上添加](../../img/system_management/TAPD-马上添加.png)
+![!TAPD-马上添加](../../img/system_management/TAPD-马上添加.png){ width="900px" }
 
 !!! ms-abstract ""
     该信息为通过 TAPD 提交缺陷的用户认证信息，若未填写，则使用组织中配置的默认信息。<br>
     选择【第三方平台账号】设置【Tapd】信息，如果不设置个人平台账号，则所有使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。
-![!TAPD-第三方平台账号](../../img/system_management/TAPD-第三方平台账号.png)
+![!TAPD-第三方平台账号](../../img/system_management/TAPD-第三方平台账号.png){ width="900px" }
 
 !!! ms-abstract ""
     参数说明：【TAPD 昵称】是 TAPD 个人设置里查看。
-![!TAPD-昵称](../../img/system_management/TAPD-昵称.png)
+![!TAPD-昵称](../../img/system_management/TAPD-昵称.png){ width="900px" }
 
 !!! ms-abstract ""
     以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联 TAPD 的相关需求。
-![!TAPD-关联需求](../../img/system_management/关联需求.png)
+![!TAPD-关联需求](../../img/system_management/关联需求.png){ width="900px" }
 
 !!! ms-abstract ""
     在缺陷管理提交缺陷后，平台类型显示为 TAPD 的数据，点击【同步缺陷】按钮，会将数据同步到 TAPD 系统中。
-![!TAPD-同步需求](../../img/system_management/同步缺陷_TAPD.png)
+![!TAPD-同步需求](../../img/system_management/同步缺陷_TAPD.png){ width="900px" }
 
 !!! ms-abstract ""
     在 TAPD 缺陷中可以查询到同步过来的缺陷数据。
-![!TAPD-查询需求](../../img/system_management/TAPD-查询需求.png)
+![!TAPD-查询需求](../../img/system_management/TAPD-查询需求.png){ width="900px" }
 
 ### 2.2 与JIRA集成 
 !!! ms-abstract "注意"
@@ -98,11 +98,11 @@
 
 !!! ms-abstract ""
     第一步：填写对接 JIRA 的地址、认证信息和问题类型，如下。
-![!填写jira](../../img/system_management/填写jira.png)
+![!填写jira](../../img/system_management/填写jira.png){ width="900px" }
 
 !!! ms-abstract "注意"
     问题类型需要和 JIRA 的事务类型保持一致，必须在 JIRA 中存在此类型，如下：
-![!备注](../../img/system_management/备注.png)
+![!备注](../../img/system_management/备注.png){ width="900px" }
 
 !!! ms-abstract ""
     如果右上角切换组织，需要重复上述对接 JIRA 操作
@@ -110,11 +110,11 @@
 !!! ms-abstract ""
     第二步： 关联项目配置<br>
     配置完服务集成后，还需要配置项目中引用 JIRA 项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。
-![!jira关联](../../img/system_management/jira关联.png)
+![!jira关联](../../img/system_management/jira关联.png){ width="900px" }
 
 !!! ms-abstract ""
     跳转到项目管理页面，点击项目列表中的【编辑】按钮，设置项目里项目相关配置。 
-![!jira关联项目](../../img/system_management/jira关联项目.png)
+![!jira关联项目](../../img/system_management/jira关联项目.png){ width="900px" }
 
 !!! ms-abstract "参数说明"
     【集成第三方平台】：选择【JIRA】。<br>
@@ -122,27 +122,27 @@
     【使用 Jira 缺陷模板】：选中，则表示系统会自动同步 JIRA 系统中的缺陷模板；不选择，则需要进入第四步，手动配置 MS 缺陷模板和 Jira 系统中的缺陷模板的字段对应关系。<br>
     【JIRA 项目 Key】：项目的关键字的需要在 JIRA 平台上进行查询，如下。
 
-![!jira项目](../../img/system_management/jira项目.png)
+![!jira项目](../../img/system_management/jira项目.png){ width="900px" }
 
 !!! ms-abstract ""
     第三步：添加个人平台账号。<br>
     点击服务集成页面右下角的【马上添加】进行设置。
-![!jira关联第三方帐号](../../img/system_management/jira关联第三方帐号.png)
+![!jira关联第三方帐号](../../img/system_management/jira关联第三方帐号.png){ width="900px" }
 
 !!! ms-abstract ""
     该信息为通过 Jira 提交缺陷的用户认证信息，若未填写，则使用组织中配置的默认信息.点击【第三方平台账号】设置【Jira 信息】，如果不设置个人平台账号，则所有使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。
-![!设置第三方信息](../../img/system_management/设置第三方信息.png)
+![!设置第三方信息](../../img/system_management/设置第三方信息.png){ width="900px" }
 
 !!! ms-abstract ""
     以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联JIRA 的相关需求，或同步相关缺陷。  
-![!关联需求](../../img/system_management/关联需求.png)
+![!关联需求](../../img/system_management/关联需求.png){ width="900px" }
 
-![!同步缺陷](../../img/system_management/同步缺陷_Jira.png)
+![!同步缺陷](../../img/system_management/同步缺陷_Jira.png){ width="900px" }
 
 ### 2.3 与禅道集成
 !!! ms-abstract ""
     第一步：服务集成配置。
-![!禅道-服务集成配置](../../img/system_management/禅道-服务集成配置.png)
+![!禅道-服务集成配置](../../img/system_management/禅道-服务集成配置.png){ width="900px" }
 
 !!! ms-abstract ""
     禅道目前存在 GET 和 PATH_INFO 两种接口调用方式（即其requestType 参数）对于禅道接口的调用使用的是 PATH_INFO 方式和 GET 请求方式的支持，用户可以根据自己使用的禅道系统的配置情况自主选择请求方式。
@@ -155,11 +155,11 @@
 !!! ms-abstract ""
     第二步： 关联项目配置<br>
     配置完服务集成后，还需要配置项目中引用禅道项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。
-![!禅道-马上关联项目](../../img/system_management/禅道-马上关联项目.png)
+![!禅道-马上关联项目](../../img/system_management/禅道-马上关联项目.png){ width="900px" }
 
 !!! ms-abstract ""
     跳转到【项目管理】，点击【编辑】，编辑项目里【禅道项目ID】，以及缺陷模板等相关信息。
-![!禅道-禅道项目ID](../../img/system_management/禅道-禅道项目ID.png)
+![!禅道-禅道项目ID](../../img/system_management/禅道-禅道项目ID.png){ width="900px" }
 
 !!! ms-abstract "参数说明"
     【Zentao（禅道）项目 ID】：如果 禅道 bug 是附属在项目上，则关联的Zentao ID 为项目 ID；如果 禅道 Bug 是附属在产品上，则关联的 ZentaoID 为产品 ID。
@@ -167,52 +167,52 @@
 !!! ms-abstract ""
     第三步：添加个人平台账号<br>
     点击服务集成页面右下角的【马上添加】进行设置。
-![!禅道-马上添加](../../img/system_management/禅道-马上添加.png)
+![!禅道-马上添加](../../img/system_management/禅道-马上添加.png){ width="900px" }
 
 !!! ms-abstract ""
     该信息为通过禅道提交缺陷的用户名、密码，若未填写，则使用组织中配置的默认信息。<br>
     选择【第三方平台账号】设置【禅道信息】，如果不设置个人平台账号，则所有使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。
-![!禅道-第三方平台账号](../../img/system_management/禅道-第三方平台账号.png)
+![!禅道-第三方平台账号](../../img/system_management/禅道-第三方平台账号.png){ width="900px" }
 
 !!! ms-abstract ""
     以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联禅道的相关需求。
-![!禅道-相关需求](../../img/system_management/关联需求.png)
+![!禅道-相关需求](../../img/system_management/关联需求.png){ width="900px" }
 
 !!! ms-abstract ""
     在缺陷管理提交缺陷后，数据会同步到禅道系统中。
-![!禅道-同步需求](../../img/system_management/同步缺陷_禅道.png)
+![!禅道-同步需求](../../img/system_management/同步缺陷_禅道.png){ width="900px" }
 
 ### 2.4 与Azure Devops集成
 !!! ms-abstract ""
     第一步：服务集成配置。<br>
     填写【Basic Auth 账号信息】后，点击【测试连接】即可 
-![!禅道-马上关联项目](../../img/system_management/Azure配置项目.png)
+![!禅道-马上关联项目](../../img/system_management/Azure配置项目.png){ width="900px" }
 
 !!! ms-abstract ""
     第二步： 关联项目配置
     配置完服务集成后，还需要配置项目中引用禅道项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。 <br>
-![!禅道-马上关联项目](../../img/system_management/Azure-马上关联项目.png)
+![!禅道-马上关联项目](../../img/system_management/Azure-马上关联项目.png){ width="900px" }
 
 !!! ms-abstract ""
     跳转到【项目管理】，点击【编辑】，编辑项目里【集成第三方平台】、【AzureDevops项目ID】、【AzureDevops过滤ID】，以及缺陷模板等相关信息。 <br>
-![!禅道-禅道项目ID](../../img/system_management/Azure-Azure项目ID.png)
+![!禅道-禅道项目ID](../../img/system_management/Azure-Azure项目ID.png){ width="900px" }
 
 !!! ms-abstract ""
     第三步：添加个人平台账号<br>
     点击服务集成页面右下角的【马上添加】进行设置。
-![!禅道-马上添加](../../img/system_management/Azure-马上添加.png)
+![!禅道-马上添加](../../img/system_management/Azure-马上添加.png){ width="900px" }
 
 !!! ms-abstract ""
     选择【第三方平台账号】设置【AzureDevops 信息】，如果不设置个人平台账号，则使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。 <br>
-![!禅道-第三方平台账号](../../img/system_management/Azure-第三方平台账号.png)
+![!禅道-第三方平台账号](../../img/system_management/Azure-第三方平台账号.png){ width="900px" }
 
 !!! ms-abstract ""
     以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联 AzureDevops 的相关需求。 <br>
-![!禅道-相关需求](../../img/system_management/Azure-关联需求.png)
+![!禅道-相关需求](../../img/system_management/Azure-关联需求.png){ width="900px" }
 
 !!! ms-abstract ""
     在缺陷管理提交缺陷后，点击【同步按钮】，数据会同步到 AzureDevops 系统中。 <br>
-![!禅道-同步需求](../../img/system_management/同步缺陷_Azure.png)
+![!禅道-同步需求](../../img/system_management/同步缺陷_Azure.png){ width="900px" }
 
 ## 3 项目管理
 !!! ms-abstract ""
@@ -221,11 +221,11 @@
 - 创建项目
 !!! ms-abstract ""
     点击页面左侧【项目管理】，点击【创建项目】，填写相关项目基本信息
-![!创建项目](../../img/system_management/项目管理创建环境.png)
+![!创建项目](../../img/system_management/项目管理创建环境.png){ width="900px" }
 
 !!! ms-abstract ""
     根据项目实际情况，选择对应的第三方集成平台以及用例模板和缺陷模板，点击保存即可。
-![!创建项目](../../img/system_management/项目管理填写项目内容.png)
+![!创建项目](../../img/system_management/项目管理填写项目内容.png){ width="900px" }
 
 !!! ms-abstract "参数说明"
     【第三方集成平台】：目前只支持以上几种集成平台，可参考上面【工作空间-服务集成】进行配置。<br>
@@ -235,42 +235,42 @@
 !!! ms-abstract ""
     自动生成 Jira 缺陷模版 (X-Pack) <br>
     【创建项目】，填写第三方集成平台为 Jira 后，勾选下面的【使用 Jira 缺陷模板】，填写好其他配置信息，点击【保存】即可
-![!创建项目](../../img/system_management/创建项目JIRA平台.png)
+![!创建项目](../../img/system_management/创建项目JIRA平台.png){ width="900px" }
 
 !!! ms-abstract ""
     
     - **编辑项目**<br>
     点击【编辑】按钮，可编辑项目相关信息后，点击【确定】按钮即可
-![!创建项目](../../img/system_management/项目管理编辑.png)
+![!创建项目](../../img/system_management/项目管理编辑.png){ width="900px" }
 
 
 !!! ms-abstract ""
     
     - **删除项目**<br>
     点击【删除】按钮，填写上方提示内容，点击【确定】按钮，该项目即可被删除
-![!创建项目](../../img/system_management/项目管理删除.png)
+![!创建项目](../../img/system_management/项目管理删除.png){ width="900px" }
 
 
 !!! ms-abstract ""
 
     - **环境配置**<br>
     点击【环境配置】按钮，填写环境相关信息即可，具体情况可参考【工作空间-环境管理】
-![!创建项目](../../img/system_management/项目管理环境.png)
+![!创建项目](../../img/system_management/项目管理环境.png){ width="900px" }
 
 ## 4 配额管理 (X-Pack)
 !!! ms-abstract ""
     进入【配额管理】页面，可【编辑】上方的项目默认配额，编辑完成后，在配额列表中使用默认配置的，将同步更新编辑的数据。
-![!配额管理](../../img/system_management/配额管理编辑.png)
+![!配额管理](../../img/system_management/配额管理编辑.png){ width="900px" }
 
-![!配额管理](../../img/system_management/配额管理默认配额.png)
+![!配额管理](../../img/system_management/配额管理默认配额.png){ width="900px" }
 
 !!! ms-abstract ""
     点击项目的【编辑】按钮，可对单个项目进行配额管理设置
-![!配额管理](../../img/system_management/单个项目配额管理.png)
+![!配额管理](../../img/system_management/单个项目配额管理.png){ width="900px" }
 
 !!! ms-abstract ""
     点击【删除】按钮，即可删除已配置好的内容，恢复到最初状态，使用默认配额的状态也由【是】变成【否】
-![!配额管理](../../img/system_management/配额管理删除.png)
+![!配额管理](../../img/system_management/配额管理删除.png){ width="900px" }
 
 ## 5 环境管理
 !!! ms-abstract ""
@@ -283,7 +283,7 @@
 
     - **创建环境**<br> 
     点击页面列表信息左上角的【创建环境】，可新增此工作空间下任意项目的测试环境。
-![!创建环境](../../img/system_management/创建环境.png)
+![!创建环境](../../img/system_management/创建环境.png){ width="900px" }
 
 !!! ms-abstract ""
     在工作空间下创建环境，需要指定此环境是用于哪个项目，其他环境设置信息同项目管理里的新增环境。
@@ -306,65 +306,65 @@
 
     - **通用配置**<br>
     此处设置的变量是环境变量，类型可以为多种类型，可单个添加和批量添加
-![!创建环境](../../img/system_management/环境设置_通用配置.png)
+![!创建环境](../../img/system_management/环境设置_通用配置.png){ width="900px" }
 
 !!! ms-abstract ""
     IP 和域名进行映射配置，可设置链接超时、响应超时时间
-![!创建环境](../../img/system_management/环境设置_通用配置_1.png)
+![!创建环境](../../img/system_management/环境设置_通用配置_1.png){ width="900px" }
 
 
 !!! ms-abstract ""
 
     - **HTTP配置**<br>
     设置 HTTP/HTTPS 请求地址，点击【添加】后，点击【确定】按钮即可
-![!创建环境](../../img/system_management/环境设置_HTTP配置.png)
+![!创建环境](../../img/system_management/环境设置_HTTP配置.png){ width="900px" }
 
 !!! ms-abstract ""
     可设置模块、路径等条件来启用该环境
-![!创建环境](../../img/system_management/环境设置_HTTP配置_1.png)
+![!创建环境](../../img/system_management/环境设置_HTTP配置_1.png){ width="900px" }
 
 !!! ms-abstract ""
     可单个设置或者批量设置请求头信息
-![!创建环境](../../img/system_management/环境设置_HTTP配置_2.png)
+![!创建环境](../../img/system_management/环境设置_HTTP配置_2.png){ width="900px" }
 
 
 !!! ms-abstract ""
 
     - **数据库配置**<br>
     配置数据库的数据驱动以及连接信息等，目前支持 MYSQL、Oracle、SQLServer、Postgre数据库
-![!创建环境](../../img/system_management/环境设置_数据库配置.png)
+![!创建环境](../../img/system_management/环境设置_数据库配置.png){ width="900px" }
 
 !!! ms-abstract ""
     执行多条SQL语句需在数据库后面加上【?allowMultiQueries=true】，可设置最大连接数和超时时间，点击【校验】或【添加】
-![!创建环境](../../img/system_management/环境设置_数据库配置_1.png)
+![!创建环境](../../img/system_management/环境设置_数据库配置_1.png){ width="900px" }
 
 
 !!! ms-abstract ""
     
     - **TCP 配置**<br>
     可配置连接 TCP 请求的相关信息，主要有 TCPClientImpl、BinaryTCPClientImpl、LengthPrefixedBinaryTCPClientImpl 三种方式
-![!创建环境](../../img/system_management/环境设置_TCP配置.png)
+![!创建环境](../../img/system_management/环境设置_TCP配置.png){ width="900px" }
 
 
 !!! ms-abstract ""
 
     - **证书配置**<br>
     证书文件上传支持 p12，jks，pfx 格式
-![!创建环境](../../img/system_management/环境设置_证书配置.png)
+![!创建环境](../../img/system_management/环境设置_证书配置.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **全局前置脚本**<br>
     可在单个请求步骤前执行和在所有场景步骤前执行，点击【i】可查看提示信息
-![!创建环境](../../img/system_management/环境设置_全局前置脚本.png)
+![!创建环境](../../img/system_management/环境设置_全局前置脚本.png){ width="900px" }
 
 !!! ms-abstract ""
     【单个请求步骤前执行】可设置【全局前置脚本】执行的协议以及顺序
-![!创建环境](../../img/system_management/环境设置_全局前置脚本_1.png)
+![!创建环境](../../img/system_management/环境设置_全局前置脚本_1.png){ width="900px" }
 
 !!! ms-abstract ""
     【所有场景步骤前执行】可关联场景结果，场景执行成功但是此处前置脚本执行失败，执行结果是显示失败
-![!创建环境](../../img/system_management/环境设置_全局前置脚本_2.png)
+![!创建环境](../../img/system_management/环境设置_全局前置脚本_2.png){ width="900px" }
 
 
 !!! ms-abstract ""
@@ -377,24 +377,24 @@
     
     - **全局认证配置**<br>
     可配置认证方式和加密信息
-![!创建环境](../../img/system_management/环境设置_全局认证配置.png)
+![!创建环境](../../img/system_management/环境设置_全局认证配置.png){ width="900px" }
 
 
 !!! ms-abstract ""
     
     - **全局断言**<br>
     可启用/关闭误报
-![!创建环境](../../img/system_management/环境设置_全局断言.png)
+![!创建环境](../../img/system_management/环境设置_全局断言.png){ width="900px" }
 
 !!! ms-abstract ""
     可选择多种类型进行断言设置，可勾选忽略状态码，点击【添加】按钮即可
-![!创建环境](../../img/system_management/环境设置_全局断言_1.png)
+![!创建环境](../../img/system_management/环境设置_全局断言_1.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **导入环境**<br>
     点击【导入】按钮导入环境，仅支持通过 metersphere 导出的 json 文件。
-![!导入环境](../../img/system_management/导入环境.png)
+![!导入环境](../../img/system_management/导入环境.png){ width="900px" }
 
 !!! ms-abstract ""
     导入支持为一个项目批量创建不同的环境。
@@ -403,25 +403,25 @@
 
     - **导出环境**<br>
     点击【导出环境】按钮导出环境，将环境导出的 json 文件。
-![!导出环境](../../img/system_management/导出环境.png)
+![!导出环境](../../img/system_management/导出环境.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **编辑环境**<br>
     点击【编辑】按钮编辑环境，可修改环境配置。
-![!编辑环境](../../img/system_management/编辑环境.png)
+![!编辑环境](../../img/system_management/编辑环境.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **复制环境**<br>
     点击【复制】按钮进行复制环境，可复制当前环境配置。
-![!复制环境](../../img/system_management/复制环境.png)
+![!复制环境](../../img/system_management/复制环境.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **删除环境**<br>
     点击【删除】按钮，点击【确定】，即可删除环境配置。
-![!删除环境](../../img/system_management/删除环境.png)
+![!删除环境](../../img/system_management/删除环境.png){ width="900px" }
 
 ### 5.2 环境组 
 
@@ -430,30 +430,30 @@
     - **创建环境组**<br>
     MeterSphere 支持跨项目进行接口、接口用例、场景用例等自动化脚本引用，可以根据不同项目、已经不同环境组合成一个环境组，当自动化执行时，可以直接选择该环境组。<br>
     点击【创建环境组】，选择不同项目、不同环境信息。
-![!创建环境组](../../img/system_management/创建环境组.png)
+![!创建环境组](../../img/system_management/创建环境组.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **编辑环境组**<br>
     点击【编辑】按钮编辑环境组，可修改当前环境组。
-![!编辑环境组](../../img/system_management/编辑环境组.png)
+![!编辑环境组](../../img/system_management/编辑环境组.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **复制环境组**<br>
     点击【复制】按钮，复制环境组。
-![!复制环境组](../../img/system_management/复制环境组.png)
+![!复制环境组](../../img/system_management/复制环境组.png){ width="900px" }
 
 !!! ms-abstract ""
 
     - **删除环境组**<br>
     点击【删除】按钮，根据提示信息输入后，点击【确定】按钮，删除环境组。
-![!删除环境组](../../img/system_management/删除环境组.png)
+![!删除环境组](../../img/system_management/删除环境组.png){ width="900px" }
 
 ## 6 操作日志
 !!! ms-abstract ""
     显示登录用户所处【工作空间】下的所有有权限【项目】的测试资源日志信息。
-![操作日志](../../img/system_management/操作日志.png)
+![操作日志](../../img/system_management/操作日志.png){ width="900px" }
 
 
 

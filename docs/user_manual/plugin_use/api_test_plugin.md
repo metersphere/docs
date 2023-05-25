@@ -7,12 +7,12 @@
 !!! ms-abstract ""
     在【系统设置】-【系统】-【插件管理】界面下，上传 WebSocket 插件。
 
-![jenkins-plugin](../../img/system_management/插件管理1.png)
+![jenkins-plugin](../../img/system_management/插件管理1.png){ width="900px" }
 
 ## 2 插件使用
 
 !!! ms-abstract ""
     在【接口测试】-【接口自动化】界面下，新建场景，点击场景右下角【+】号，即可添加 WebSocket 相关请求。
 
-![jenkins-plugin](../../img/system_management/插件管理2.png)
-![jenkins-plugin](../../img/system_management/插件管理3.png)
+![jenkins-plugin](../../img/system_management/插件管理2.png){ width="900px" }
+![jenkins-plugin](../../img/system_management/插件管理3.png){ width="900px" }

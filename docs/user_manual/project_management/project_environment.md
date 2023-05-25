@@ -2,7 +2,7 @@
     显示当前项目的所有环境信息，同时可以维护项目环境信息、导入和导出环境信息。
 
 ## 1 项目环境
-![!项目设置](../../img/project_management/项目环境.png)
+![!项目设置](../../img/project_management/项目环境.png){ width="900px" }
 
 !!! ms-abstract ""
     【创建环境】、【导入】、【导出】、【编辑】、【复制】、【删除】等详细功能操作及说明参考 [系统设置->工作空间->环境管理](../../system_management/workspace/#15)。

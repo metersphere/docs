@@ -1,6 +1,6 @@
 ## 1 整体架构
 
-![整体架构](./img/system-arch.png)
+![整体架构](./img/system-arch.png){ width="900px" }
 
 !!! ms-abstract "组件说明"
 
@@ -30,7 +30,7 @@
 !!! ms-abstract ""
 	各个组件间的关系可参考下图：<br>
 
-![组件说明](./img/components.png)
+![组件说明](./img/components.png){ width="900px" }
 
 ## 2 管理模型
 !!! ms-abstract ""
@@ -44,7 +44,7 @@
     - **项目级角色**: 角色的权限范围限定在某个项目当中, 常见的角色如项目管理员、项目成员、只读用户等，可在项目中创建、修改、执行测试计划、功能测试用例、接口测试用例、性能测试用例、查看测试报告等。
     - **自定义角色**: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。
 
-![管理模型](./img/management-model.png)
+![管理模型](./img/management-model.png){ width="900px" }
 
 
 

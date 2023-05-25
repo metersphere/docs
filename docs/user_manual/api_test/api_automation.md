@@ -269,24 +269,24 @@
 ### 2.21 MQTT协议 (X-Pack)
 !!! ms-abstract "" 
     点击【系统设置-系统-插件管理】，点击【点击上传】，将 MQTT 协议的 Jar 包上传上去。
-![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_上传插件.png)
+![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_上传插件.png){ width="900px" }
 
 !!! ms-abstract "" 
     点击【接口自动化-创建场景】，右侧会出现 MQTT 请求相关内容。
-![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_1.png)
+![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_1.png){ width="900px" }
 
 !!! ms-abstract "" 
     根据需要，选择 MQTT 请求的组件
-![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_2.png)
+![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_2.png){ width="900px" }
 
 ### 2.22 Websocket协议 (X-Pack)
 !!! ms-abstract "" 
     点击【系统设置-系统-插件管理】，点击【点击上传】，将 Websocket 协议的 Jar 包上传上去。
-![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_上传插件.png)
+![!MQTT创建场景](../../img/api/接口自动化模块/MQTT_上传插件.png){ width="900px" }
 
 !!! ms-abstract "" 
     点击【接口自动化-创建场景】，右侧会出现 Websocket 请求相关内容，根据需要，选择 Websocket 请求的组件。
-![!Websocket创建场景](../../img/api/接口自动化模块/webSocket.png)
+![!Websocket创建场景](../../img/api/接口自动化模块/webSocket.png){ width="900px" }
 
 ### 2.23 Thrift协议 (X-Pack)
 !!! ms-abstract "" 

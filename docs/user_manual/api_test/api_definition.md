@@ -159,7 +159,7 @@
 !!! ms-abstract ""
 	 **Args**<br />
 	可在【Args】中添加请求相关参数。
-![!Args](../../img/api/Args.png)
+![!Args](../../img/api/Args.png){ width="900px" }
 
 
 !!! ms-abstract ""

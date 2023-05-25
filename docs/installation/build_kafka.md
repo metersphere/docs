@@ -54,7 +54,7 @@
 ### 2.1 Broker ID 配置
 !!! ms-abstract ""
     三个节点的 docker-compose-kafka.yml 文件中，KAFKA_BROKER_ID 值分别为1、2、3。<br>
-![配置](../img/installation/dis_pressure/kafka配置_1.png){ width="600px" height:"80%"}
+![配置](../img/installation/dis_pressure/kafka配置_1.png){ width="900px" }{ width="600px" height:"80%"}
 
 ### 2.2 Broker 地址
 !!! ms-abstract ""

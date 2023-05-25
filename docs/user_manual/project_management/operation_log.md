@@ -2,7 +2,7 @@
     显示登录用户当前所处的【项目】的测试资源日志信息，并且可以使用高级查询来快速查找相关日志系统。
 
 ## 1 操作日志
-![!项目设置](../../img/project_management/操作日志.png)
+![!项目设置](../../img/project_management/操作日志.png){ width="900px" }
 
 !!! ms-abstract ""
     详细功能操作及说明参考 [系统->工作空间->操作日志](../../system_management/workspace/#16)。
