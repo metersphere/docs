@@ -32,16 +32,16 @@
 ## 4 精品课程
 !!! ms-abstract ""
 
-    - [玩转 MeterSphere 开源持续测试平台系列教程之测试跟踪](https://live.vhall.com/v3/lives/subscribe/107566953)
-    - [玩转 MeterSphere 开源持续测试平台系列教程之接口测试](https://live.vhall.com/v3/lives/subscribe/657846498)
-    - [玩转 MeterSphere 开源持续测试平台系列教程之性能测试](https://live.vhall.com/v3/lives/subscribe/703013378)
-    - [玩转 MeterSphere 开源持续测试平台系列教程之企业版 X-Pack 增强功能](https://live.vhall.com/v3/lives/subscribe/419824723)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之测试跟踪](https://live.vhall.com/v3/lives/watch/727027100)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之接口测试](https://live.vhall.com/v3/lives/watch/736453878)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之性能测试](https://live.vhall.com/v3/lives/watch/594330873)
+-   [玩转 MeterSphere 开源持续测试平台系列教程之 UI 测试](https://live.vhall.com/v3/lives/watch/696811890)
 
 ## 5 了解更多
 !!! ms-abstract ""
 
-    - [MeterSphere 的初心和使命](https://mp.weixin.qq.com/s/DpCt3BNgBTlV3sJ5qtPmZw)
-    - [下载《持续测试白皮书 v1.0》](https://jinshuju.net/f/KqFUhq)
-    - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202303.pdf)
-    - [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
-    - [飞致云学堂](https://edu.fit2cloud.com/index)
+-   [获取《持续测试白皮书》](https://jinshuju.net/f/KqFUhq)
+-   [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202303.pdf)
+-   [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
+-   [MeterSphere 社区论坛](https://bbs.fit2cloud.com/c/ms/8)
+-   [MeterSphere 培训和认证](https://edu.fit2cloud.com/index)

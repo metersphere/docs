@@ -17,14 +17,14 @@
 ## 3 开源社区论坛
 !!! ms-abstract ""
 
-    - **飞致云官方开源社区论坛**：[开源社区论坛](https://bbs.fit2cloud.com/) 。
+    - **飞致云官方开源社区论坛**：[开源社区论坛](https://bbs.fit2cloud.com/c/ms/8) 。
 
 ## 4 其他方式
 !!! ms-abstract ""
 
     - 技术咨询：https://jinshuju.net/f/qQOZj1
     - 企业版试用：https://jinshuju.net/f/CzzAOe
-     - 官网：http://www.metersphere.io
+    - 官网：http://www.metersphere.io
     - 邮箱：support@fit2cloud.com
     - 电话：400-052-0755
 

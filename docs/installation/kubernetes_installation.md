@@ -54,7 +54,12 @@
     helm upgrade metersphere metersphere-1.0.10.tgz -f metersphere/values.yml -n ms
     ```
 
-## 5 values.yaml
+### values.yaml
+!!! ms-abstract ""
+    以下 values.yaml 内容对应版本为 v2.3.0，最新的 value.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 value.yaml
+!!! ms-abstract ""
+    如：v2.9.1 版本 value.yaml 文件为 https://github.com/metersphere/helm-chart/blob/metersphere-2.9.1/charts/metersphere/values.yaml
+
 !!! ms-abstract ""
     ```sh
     ingress: # 不使用 ingress 可以关闭
@@ -278,12 +283,6 @@
       enabled: true
     ```
 
-    若想控制数据库的连接数，请在 values.yml 的 DATABASE 处，新增如下两行参数
-    ```
-    spring.datasource.hikari.maximum-pool-size=你想要的数值
-    spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
-    ```
-
 ## 6 引用外部 Kafka
 !!! ms-abstract ""
     ```sh
@@ -308,7 +307,13 @@
     common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
     ```
 
-## 9 创建一个 Node Port 的访问方式
+### 使用修改后的 value.yaml 部署 
+!!! ms-abstract ""
+    ```sh
+    helm -n ms install metersphere ./metersphere-2.3.0.tgz -f values_ext.yaml
+    ```
+
+### 创建一个 Node Port 的访问方式
 !!! ms-abstract "注意"
     使用命令 kubectl get svc -n ms 可查看 metersphere-gateway 所占用的端口号。
 

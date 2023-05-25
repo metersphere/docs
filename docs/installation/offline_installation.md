@@ -42,7 +42,7 @@
     MS_IMAGE_TAG=v2.3.0
     ## 性能测试使用的 JMeter 镜像
     MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.5-ms2-jdk11
-    ## 安装模式
+    ## 安装模式 allinone | server | node-controller | selenium-hub, 其中 selenium-hub 和 node-controller 可以单独在服务器上部署作为执行机使用
     MS_INSTALL_MODE=allinone
     ## MeterSphere 主程序的 HTTP 服务监听端口
     MS_SERVER_PORT=8081
@@ -110,6 +110,9 @@
     MS_MINIO_ACCESS_KEY=admin
     ## minio 密码
     MS_MINIO_SECRET_KEY=Password123@minio
+
+    # 修改组件最大内存限制（v2.7以上可以在 /opt/metersphere/.env 里修改某容器服务的最大内存限制，在/opt/metersphere/ 目录下的docker-compose分别定义各自服务的最大属性值，如 api-test 的属性在 docker-compose-api-test.yml 中定义，为 MS_API_MEM_LIMIT）
+    MS_API_MEM_LIMIT=1073741824（默认为 1g）
     ```
 
 ### 4.3 数据库配置文件说明
