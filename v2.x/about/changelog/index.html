@@ -2547,6 +2547,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2100-lts" class="md-nav__link">
+    v2.10.0-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v291" class="md-nav__link">
     v2.9.1
   </a>
@@ -2751,6 +2758,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2100-lts" class="md-nav__link">
+    v2.10.0-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v291" class="md-nav__link">
     v2.9.1
   </a>
@@ -2914,6 +2928,74 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 <li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护；</li>
 <li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复；</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每两周发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+<h2 id="v2100-lts">v2.10.0-lts<a class="headerlink" href="#v2100-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年5月25日</p>
+<p>💥💥 重要提醒 💥💥
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+<div class="admonition info">
+<p class="admonition-title">测试能力升级</p>
+</div>
+<p><strong>一站式测试能力增强：</strong><br>
+MeterSphere v2.10 LTS版本在测试管理与测试执行上采用一站式平台设计，提供功能测试、接口测试、UI测试、性能测试的同时，规避了测试人员执行测试任务时因工具繁多、种类差异化导致的无法沉淀和无法追溯的问题。全面承载不同类型的测试用例、API、测试数据、测试环境等关键资产的集中管理。</p>
+<p><strong>测试管理能力增强：</strong><br>
+MeterSphere v2.10 LTS版本中，测试计划功能进行了增强，覆盖功能用例、接口用例、UI用例、性能用例。</p>
+<p><strong>接口测试能力增强：</strong><br>
+MeterSphere v2.10 LTS版本中，接口测试重点解决了API发生变更一键更新接口用例的问题。</p>
+<p><strong>UI 测试能力增强【X-Pack】：</strong><br>
+在MeterSphere v2.10 LTS版本中，UI测试模块针对Selenium原生指令进行了进一步的扩展，以覆盖特殊测试场景。</p>
+<p><strong>性能测试能力增强：</strong><br>
+在MeterSphere v2.10 LTS版本中，性能测试实时报告计算能力增强。将性能测试生成的jtl文件分成小段，分段计算结果，节省了磁盘空间和IO性能。</p>
+<div class="admonition info">
+<p class="admonition-title">用户体验升级</p>
+</div>
+<p><strong>测试跟踪首页、接口测试首页UX交互升级：</strong><br>
+MeterSphere v2.10 LTS版本中，接口测试模块首页示例图。将核心指标与明细指标分层展示，视觉上避免了因数据过多产生的视觉疲劳。</p>
+<p><strong>测试跟踪模块功能用例UX交互升级：</strong><br>
+MeterSphere v2.10 LTS版本中，功能用例进行了全新交互升级，整个页面采用轻量化设计进行整体降噪，页面信息更加清晰易懂，操作流程更顺畅，用户体验得到整体提升。</p>
+<p><strong>除此之外，MeterSphere v2.10 LTS版本还进行了以下高频使用功能的体验优化：</strong></p>
+<ul>
+<li>测试跟踪：高级搜索支持输入多个标签搜索；</li>
+<li>测试跟踪：脑图用例删除时增加二次确认；</li>
+<li>接口测试：接口测试批量添加请求参数自动去空格处理；</li>
+<li>接口测试：支持通过路径搜索；</li>
+<li>接口测试：接口测试列表展示定时任务列；</li>
+<li>接口测试：固定单接口用例执行按钮位置；</li>
+<li>接口测试：运行环境列表支持模糊搜索；</li>
+<li>接口测试：单步调试用例或场景步骤时响应内容自动展开；</li>
+<li>接口测试：接口TEST支持保留最近一次的执行记录；</li>
+<li>性能测试：测试报告增加图表单位展示；</li>
+<li>通用功能：标签字数过多时的展示优化；</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">系统架构升级</p>
+</div>
+<p><strong>系统架构升级为微服务架构：</strong><br>
+MeterSphere v2.10 LTS版本采用了微服务架构，既能满足用户按需配置、水平扩展的需求，又能规避单个服务故障导致整体服务不可用的现象。</p>
+<p><strong>平台扩展能力增强：</strong><br>
+MeterSphere作为一站式持续测试平台，既需要与各种周边系统进行集成对接，也需要支持各种不同协议的接口测试，灵活的插件体系便可以很好地解决平台扩展性的问题。用户可以按需安装、开发各种形式地插件来覆盖各种不同的测试及对接需求。</p>
+<p><strong>性能优化：</strong>
+- UI测试批量执行性能优化
+- 测试计划执行效率优化
+- 接口测试执行过程附件加载优化
+- 加载机制从实时获取优化为本地缓存加文件服务（MinIO）中按需获取。
+- 左侧模块树效率优化
+- 登录系统加载耗时性能优化
+- 批量导出大数据量用例性能优化
+- 测试计划批量关联大数据量用例性能优化</p>
+<p><strong>运行稳定性提升：</strong><br>
+用户对于 MeterSphere 平台的使用规模很多时候总会超乎我们的想象。在 MeterSphere v2.10 LTS 版本的迭代过程中，我们接触了很多大规模、高频次使用 MeterSphere 开展日常测试工作的案例，包括脑图模式下编辑大量功能用例，大批量的接口测试、UI 测试执行，高并发高TPS的性能测试等众多使用场景，这些场景给 MeterSphere 带来了很大的挑战，但经过我们的不懈优化最终都达到了让用户满意的效果。</p>
+<p>MeterSphere v2.10 LTS版本不仅包含了以上所有真实使用案例中的稳定性优化改进，还经过了我们长达3个月的内部测试和部分用户的灰度测试。</p>
+<p><strong>系统安全升级：</strong><br></p>
+<ul>
+<li><strong>接口测试禁用本地执行：</strong><br>
+  在之前的版本中，接口测试提供了本地执行（即在接口测试服务中直接执行）和资源池执行两种方式。MeterSphere v2.10 LTS版本禁用了接口本地执行，和性能测试一样，当接口调试或运行时会在指定的资源池上运行，同时资源池节点上的 node-controller 服务默认以容器方式运行，这样即便存在上述用例设计不当的问题也只会影响到对应资源池节点上的 node-controller 容器，接口测试主体服务还可以正常使用，node-controller 所在服务器也不会受到影响。</li>
+</ul>
+<p>注意：当存在多个可用的测试资源池时，可以在【项目设置-&gt;应用管-&gt;接口测试】菜单中配置接口执行的默认资源池。</p>
+<ul>
+<li><strong>测试用例脚本预警通知：</strong><br>
+  除了禁用本地执行，为接口测试提供沙箱执行环境外，MeterSphere v2.10 LTS 版本中还增加了主动预警机制，当用户保存或修改的用例中包含脚本内容时可以配置指定用户审核，当系统检测到包含脚本的用例时会触发系统消息通知指定审核人对该脚本进行审核。</li>
 </ul>
 <h2 id="v291">v2.9.1<a class="headerlink" href="#v291" title="Permanent link">&para;</a></h2>
 <hr />
