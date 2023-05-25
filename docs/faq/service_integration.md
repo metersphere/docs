@@ -1,10 +1,10 @@
 
 ## 1 MeterSphere 如何对接第三方平台？
 !!! ms-abstract ""
-    TAPD: 请参考[MeterSphere 服务集成之 TAPD 对接](https://kb.fit2cloud.com/?p=259)<br />
-    JIRA: 请参考 [MeterSphere 服务集成之 JIRA 对接](https://kb.fit2cloud.com/?p=258)<br />
-    禅道:  请参考[MeterSphere 服务集成之 禅道 对接](https://kb.fit2cloud.com/?p=257)<br />
-    Azure Devops: 请参考[MeterSphere 服务集成之 Azure Devops 对接](https://kb.fit2cloud.com/?p=260)<br />
+    TAPD： 请参考[MeterSphere 服务集成之 TAPD 对接](https://kb.fit2cloud.com/?p=259)<br />
+    JIRA： 请参考 [MeterSphere 服务集成之 JIRA 对接](https://kb.fit2cloud.com/?p=258)<br />
+    禅道：  请参考[MeterSphere 服务集成之 禅道 对接](https://kb.fit2cloud.com/?p=257)<br />
+    Azure Devops： 请参考[MeterSphere 服务集成之 Azure Devops 对接](https://kb.fit2cloud.com/?p=260)<br />
 
 ## 2 在禅道上已创建的缺陷，MS 上点击【同步缺陷】，为什么未成功同步？
 !!! ms-abstract ""
@@ -29,7 +29,7 @@
     - 缺少配置 $config->features->apiGetModel。
     - 襌道里 api 超级调用模式有没有授权。
 
-    解决方法:<br />
+    解决方法：<br />
 
     - 在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
     - 在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 

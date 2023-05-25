@@ -101,7 +101,7 @@
     - 缺少配置 $config->features->apiGetModel。
     - 襌道里 api 超级调用模式有没有授权。
 
-    解决方法:<br />
+    解决方法：<br />
 
     - 在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
     - 在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 

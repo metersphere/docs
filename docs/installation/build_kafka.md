@@ -54,7 +54,7 @@
 ### 2.1 Broker ID 配置
 !!! ms-abstract ""
     三个节点的 docker-compose-kafka.yml 文件中，KAFKA_BROKER_ID 值分别为1、2、3。<br>
-![配置](../img/installation/dis_pressure/kafka配置_1.png){ width="900px" }{ width="600px" height:"80%"}
+![配置](../img/installation/dis_pressure/kafka配置_1.png){ width="600px" height:"80%"}
 
 ### 2.2 Broker 地址
 !!! ms-abstract ""
@@ -86,7 +86,7 @@
 
 ## 4 .env 文件配置
 !!! ms-abstract ""
-    保持默认配置,依然使用内置 Kafka，保持 MS_EXTERNAL_KAFKA=false，只是在 docker-compose-kafka.yml 和 docker-compose-server.yml 中 Kafka 相关参数都写死了，没有引用 .env 中的环境变量。<br>
+    保持默认配置，依然使用内置 Kafka，保持 MS_EXTERNAL_KAFKA=false，只是在 docker-compose-kafka.yml 和 docker-compose-server.yml 中 Kafka 相关参数都写死了，没有引用 .env 中的环境变量。<br>
 ![配置](../img/installation/dis_pressure/kafka配置_8.png){ width="900px" }
 
 !!! ms-abstract ""

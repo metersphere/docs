@@ -13,7 +13,7 @@
 
 ## 4 docker-compose 版本与配置文件不兼容或配置文件存在问题，请重新安装最新版本的 docker-compose 或检查配置文件?
 !!! ms-abstract ""
-    如果服务器已经安装了docker, MeterSphere 安装脚本检测到 docker 已安装，就跳过了自动原本的安装步骤，而已安装的版本与 MeterSphere要求的版本不匹配就会导致这个导致。需要手动把安装包里的 docker 目录下的所有文件拷贝到系统目录即可：
+    如果服务器已经安装了docker， MeterSphere 安装脚本检测到 docker 已安装，就跳过了自动原本的安装步骤，而已安装的版本与 MeterSphere要求的版本不匹配就会导致这个导致。需要手动把安装包里的 docker 目录下的所有文件拷贝到系统目录即可：
 
     ```
     cp docker/bin/* /usr/bin/
@@ -50,7 +50,7 @@
 !!! ms-abstract ""
     具体操作详细见 [MeterSphere 数据备份](https://kb.fit2cloud.com/?p=98)。
 
-## 11 mysqldump 导出数据库时报错: `Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94`
+## 11 mysqldump 导出数据库时报错： `Error 2020: Got packet bigger than 'max_allowed_packet' bytes when dumping table `api_scenario_report_detail` at row: 94`
 !!! ms-abstract ""
     mysqldump 执行时添加 max_allowed_packet 参数：<br>
     ```
@@ -91,7 +91,7 @@
 
 ## 15 执行机经常报内存溢出：`Terminating due to java.lang.OutOfMemoryError: GC overhead limit exceeded`
 !!! ms-abstract ""
-    增大堆内存:
+    增大堆内存：
     ```
     set JAVA_OPTS=-server -Xms512m -Xmx1024m -XX:MaxNewSize=1024m -XX:MaxPermSize=1024m;
     ```
@@ -120,7 +120,7 @@
     # docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
      使用数据库
     # use metersphere;
-     更新密码为metersphere: 
+     更新密码为metersphere： 
     # update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
     ```
 
@@ -164,7 +164,7 @@
 ## 25 docker 运行错误：`docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……`
 !!! ms-abstract ""
 
-    - 打开 daemon.json文件, 将 "exec-opts": ["native.cgroupdriver=systemd"] 删除。
+    - 打开 daemon.json 文件， 将 "exec-opts": ["native.cgroupdriver=systemd"] 删除。
     - 重启 docker：service docker restart。
     - 重启服务: msctl reload。
 
@@ -211,7 +211,7 @@
 
 ## 32 主机部署 metersphere 在上传文件时提示：`413 request entity too large`
 !!! ms-abstract ""
-    在 nginx 服务的配置文件 nginx.conf 的 http 段中加入 client_max_body_size xxm, xx根据需求改动，保存后重启 nginx。
+    在 nginx 服务的配置文件 nginx.conf 的 http 段中加入 client_max_body_size xxm， xx根据需求改动，保存后重启 nginx。
 
 ## 33 使用Nginx配置反向代理后，在进行接口测试时，页面卡在加载状态，按 F12 可以看到 websocket 连接失败
 !!! ms-abstract ""
@@ -234,10 +234,10 @@
     }
     ```
 
-## 34 接口运行时，页面报错:`The connection is abnormal, please check the environment configuration`
+## 34 接口运行时，页面报错:`The connection is abnormal， please check the environment configuration`
 !!! ms-abstract ""
 
-    - 如果使用了Nginx, 请参考 [配置反向代理](https://metersphere.io/docs/v2.x/installation/offline_installation/)。
+    - 如果使用了Nginx， 请参考 [配置反向代理](https://metersphere.io/docs/v2.x/installation/offline_installation/)。
     - 如果使用了fidder、charles等代理代工具，先关闭。 
     - 如果 https://ip:8081 被拦截了，请使用 http://ip:8081 。
 
@@ -268,7 +268,7 @@
     spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
     ```
 
-## 38 安装时出现：`Encountered error while bringing up the project`, msctl status 时看到 mysql容器一直 Restarting
+## 38 安装时出现：`Encountered error while bringing up the project`， msctl status 时看到 mysql 容器一直 Restarting
 !!! ms-abstract ""
     在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg){ width="900px" }

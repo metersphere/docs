@@ -11,7 +11,7 @@
      - 网络要求：可访问互联网
 
 
-    以 root 用户 ssh 登录部署目标服务器, 执行以下脚本进行一键安装:<br>
+    以 root 用户 ssh 登录部署目标服务器， 执行以下脚本进行一键安装:<br>
     ```sh
     curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
     ```

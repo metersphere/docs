@@ -3,7 +3,7 @@
 
 ## 1 插件安装
 !!! ms-abstract ""
-    在 Chrome 应用商店中搜索 selenium 关键字, 选择Selenium IDE,点击【添加至 Chrome】完成插件安装。
+    在 Chrome 应用商店中搜索 selenium 关键字， 选择Selenium IDE，点击【添加至 Chrome】完成插件安装。
 
 ![selenium_ide](../../img/user_manual/plugin_use/selenium_ide_plugin/selenium_ide_install.png){ width="900px" }
 

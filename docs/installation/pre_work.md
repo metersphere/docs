@@ -1,7 +1,7 @@
 !!! ms-abstract ""
     MeterSphere 大规模的性能压测主要取决于三个组件
 
-    ■ Node Controller: 为性能测试提供独立节点类型的测试资源池, 接收来自系统的性能测试任务, 动态的启动 JMeter 容器完成性能测试<br>
+    ■ Node Controller: 为性能测试提供独立节点类型的测试资源池， 接收来自系统的性能测试任务， 动态的启动 JMeter 容器完成性能测试<br>
     ■ Data Streaming: 从 Kafka 中获取性能测试结果数据进行处理后存入 MySQL 数据库<br>
     ■ Kafka: 接收 JMeter 产生的性能测试结果数据
     

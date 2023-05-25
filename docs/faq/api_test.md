@@ -107,7 +107,7 @@
 
 ![! 更新接口按钮](../img/faq/更新接口按钮.png){ width="900px" }
 
-## 22 执行接口报错:`Non HTTP response code: java.net.SocketTimeoutException`
+## 22 执行接口报错：`Non HTTP response code: java.net.SocketTimeoutException`
 !!! ms-abstract ""
     在接口【其他设置】中增加的连接超时时间。
 
@@ -238,7 +238,7 @@
 
 ## 37 后置脚本中如何引用 js 文件？
 !!! ms-abstract ""
-    将 js 文件上传到服务器 /opt/ms/data/目录下，在后置脚本中选择 JavaScript，通过 load 引用 js文件:`load(“/opt/ms/data/xx.js”)`。
+    将 js 文件上传到服务器 /opt/ms/data/目录下，在后置脚本中选择 JavaScript，通过 load 引用 js文件：`load(“/opt/ms/data/xx.js”)`。
 
 ## 38 HTTP 协议接口支持哪些文件格式导入？
 !!! ms-abstract ""
@@ -304,13 +304,13 @@
 
 ![! metersphere导入格式](../img/faq/导入&导出逻辑.png){ width="900px" }
 
-## 44 配置了定时任务,没有在钉钉群发消息？
+## 44 配置了定时任务，没有在钉钉群发消息？
 !!! ms-abstract ""
 
     - 确认消息通知是否正确填写。
     - 定时任务是手动执行，不会发送消息。
 
-## 45 选择环境名称后，请求内容里只有http://接口，没有使用到在环境配置的ip和端口,应该如何进行？
+## 45 选择环境名称后，请求内容里只有http://接口，没有使用到在环境配置的ip和端口，应该如何进行？
 !!! ms-abstract ""
     在环境配置处，不选择“模块”或者“路径”，选择“无”即可
 
@@ -324,7 +324,7 @@
 
 ## 48 接口测试中导入 JMeter 脚本后，没有任何请求内容？
 !!! ms-abstract ""
-    使用 JMeter 打开 jmx 文件，确认接口是否被禁用, 如禁用手动开启保存后再导入。
+    使用 JMeter 打开 jmx 文件，确认接口是否被禁用， 如禁用手动开启保存后再导入。
 
 ## 49 后台日志报错：`ERROR StandardJMeterEngine JDBC data source already defined for: mysql`
 !!! ms-abstract ""
@@ -332,5 +332,5 @@
 
 ## 50 接口响应内容过大（约4M）导致请求卡住不动，如何处理？
 !!! ms-abstract ""
-    当响应内容过大时，在 gateway 日志中可以发现对应提示日志: `Max frame length of 10485760 has been exceeded`。 在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小，修改完后 msctl reload 重新加载在配置文件即可。
+    当响应内容过大时，在 gateway 日志中可以发现对应提示日志： `Max frame length of 10485760 has been exceeded`。 在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小，修改完后 msctl reload 重新加载在配置文件即可。
 

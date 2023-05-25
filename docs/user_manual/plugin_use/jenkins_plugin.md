@@ -3,7 +3,7 @@
 
 ## 1 插件安装
 !!! ms-abstract ""
-    根据 MeterSphere 版本，在 [MeterSphere Jenkins-plugin](https://github.com/metersphere/jenkins-plugin/releases)  下载对应版本的 hpi 包, 并在 Jenkins 的插件管理-高级中的Deploy Plugin段中，选择上传已下载好的 hpi 插件包。
+    根据 MeterSphere 版本，在 [MeterSphere Jenkins-plugin](https://github.com/metersphere/jenkins-plugin/releases)  下载对应版本的 hpi 包， 并在 Jenkins 的插件管理-高级中的Deploy Plugin段中，选择上传已下载好的 hpi 插件包。
 
 ![Jenkins_plugin](../../img/user_manual/plugin_use/jenkins_plugin/jenkins_plugin_install.png){ width="900px" }
 

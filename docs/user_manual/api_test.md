@@ -80,7 +80,7 @@
 ![api-Environment-config2](../img/api/api-Environment-config2.png){ width="900px" }
 
 ##### 自定义变量
-> 在场景配置中自定义变量的名称和值, 接口运行或者测试集合里面可以通过 ${BASE} 来访问当前场景下定义的全局变量
+> 在场景配置中自定义变量的名称和值， 接口运行或者测试集合里面可以通过 ${BASE} 来访问当前场景下定义的全局变量
 
 ![api-custom-var](../img/api/api-custom-var.png){ width="900px" }
 
@@ -123,7 +123,7 @@
 
 ###### 请求内容
 
-> http 请求的 body 部分，如果http请求方式是 post, put 等请求方式时会有 请求内容 部分，形式有2种，分别是 键值对（form）、文本（json）
+> http 请求的 body 部分，如果 http 请求方式是 post， put 等请求方式时会有 请求内容 部分，形式有2种，分别是 键值对（form）、文本（json）
 
 ![api-request-content](../img/api/api-request-content.png){ width="900px" }
 
@@ -240,7 +240,7 @@
 
 #### 导入
 
-> 支持快速导入MeterSphere Record ,postman, swagger数据
+> 支持快速导入MeterSphere Record ，postman， swagger数据
 
 ![api-import](../img/api/api-import.png){ width="900px" }
 

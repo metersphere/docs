@@ -3,7 +3,7 @@
 
 ## 1 下载并解压安装包
 !!! ms-abstract ""
-    按照本文档 [离线安装](./offline_installation.md) 步骤, 下载新版本安装包并上传解压后, 重新执行安装命令进行升级。
+    按照本文档 [离线安装](./offline_installation.md) 步骤， 下载新版本安装包并上传解压后, 重新执行安装命令进行升级。
 
 ## 2 执行安装命令
 !!! ms-abstract ""

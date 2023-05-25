@@ -10,7 +10,7 @@
 
 ### 1.2 离线安装
 !!! ms-abstract ""
-     先在 [jetbrains plugin marketplace](https://plugins.jetbrains.com/plugin/18097-metersphere/versions) 中下载与 IDEA版本匹配的版本,
+     先在 [jetbrains plugin marketplace](https://plugins.jetbrains.com/plugin/18097-metersphere/versions) 中下载与 IDEA版本匹配的版本，
      然后在 IDEA -> Settings -> plugins，点击【Install Plugin from Disk】并选择已下载的离线包进行安装。
 
 ![ideal_plugin](../../img/user_manual/plugin_use/idea_plugin/idea_plugin_1.png){ width="900px" }

@@ -28,9 +28,9 @@
 
 ## 5 邮件服务器连接不成功如何处理？
 !!! ms-abstract ""
-     导致邮箱链接不成功的原因可能是 465 端口未开放, 可在【系统设置-系统参数设置-邮件设置设置】将邮件设置中的 465 端口改成 25 端口并去掉 ssl 选项.
+     导致邮箱链接不成功的原因可能是 465 端口未开放， 可在【系统设置-系统参数设置-邮件设置设置】将邮件设置中的 465 端口改成 25 端口并去掉 ssl 选项.
 
-## 6 环境配置数据库连接不通， 提示:`WARN: Establishing SSL connection without server's identity verification is not recommended.`
+## 6 环境配置数据库连接不通， 提示：`WARN: Establishing SSL connection without server's identity verification is not recommended.`
 !!! ms-abstract ""
     数据库默认开启了 SSL 验证相应的配置导致，可在【系统设置-环境管理】数据库的 URL 增加`？useSSL=false` 来解决。
 

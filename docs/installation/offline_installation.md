@@ -11,7 +11,7 @@
 
 ## 3 解压安装包
 !!! ms-abstract ""
-    以 root 用户 ssh 登录到目标机器, 并执行如下命令。
+    以 root 用户 ssh 登录到目标机器， 并执行如下命令。
     ```
     cd /tmp
     # 解压安装包
@@ -32,17 +32,17 @@
     如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 `msctl reload` 即可重新加载配置文件）。
     ```
     # 基础配置
-    ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
+    ## 安装路径， MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
     MS_BASE=/opt
     ## MeterSphere 使用的 docker 网络网段信息
     MS_DOCKER_SUBNET=172.30.10.0/24
-    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere
+    ## 镜像前缀， MeterSphere 相关组件使用的 Docker 镜像前缀， 例如 registry.cn-qingdao.aliyuncs.com/metersphere
     MS_IMAGE_PREFIX=registry.cn-qingdao.aliyuncs.com/metersphere
-    ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
+    ## 镜像标签， MeterSphere 相关组件使用的 Docker 镜像标签
     MS_IMAGE_TAG=v2.3.0
     ## 性能测试使用的 JMeter 镜像
     MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.5-ms2-jdk11
-    ## 安装模式 allinone | server | node-controller | selenium-hub, 其中 selenium-hub 和 node-controller 可以单独在服务器上部署作为执行机使用
+    ## 安装模式 allinone | server | node-controller | selenium-hub， 其中 selenium-hub 和 node-controller 可以单独在服务器上部署作为执行机使用
     MS_INSTALL_MODE=allinone
     ## MeterSphere 主程序的 HTTP 服务监听端口
     MS_SERVER_PORT=8081

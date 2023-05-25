@@ -92,7 +92,7 @@
 
 !!! ms-abstract ""
 
-    - **下载JTL文件**：点击【下载JTL】，可下载测试结果文件,支持导出 JTL 文件用以生成 JMeter 自定义报表。
+    - **下载JTL文件**：点击【下载JTL】，可下载测试结果文件，支持导出 JTL 文件用以生成 JMeter 自定义报表。
 
 ![!性能_下载JTL文件](../../img/performance/性能_下载JTL文件.png){ width="900px" }
 
