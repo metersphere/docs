@@ -5,11 +5,11 @@
     前置脚本可以添加为请求的子步骤，在请求发送前执行，可以用在修改请求内容、初始化请求需要的参数值等场景。<br>
     目前 MeterSphere 支持以下几种语言的前置脚本：<br>
 
-- BeanShell
-- Python2
-- Groovy
-- NashornScript
-- RhinoScript
+    - BeanShell
+    - Python2
+    - Groovy
+    - NashornScript
+    - RhinoScript
 
     在前置脚本中可以直接引用JMeter 预定义对象，例如：<br>
     - `log`：用于在脚本执行过程中打印日志

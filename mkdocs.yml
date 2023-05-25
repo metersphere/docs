@@ -58,7 +58,7 @@ nav:
           - Windows 单机部署: installation/offline_installation_windows.md
           - MacOS 单机部署: installation/offline_installation_mac.md
           - Kubernetes 部署: installation/kubernetes_installation.md
-          - MeterSphere 分布式部署:
+          - 分布式部署:
                 - 整体部署规划: installation/pre_work.md
                 - 部署Kafka集群: installation/build_kafka.md
                 - 部署Data-Streaming集群: installation/build_data_streaming.md
