@@ -21,7 +21,7 @@
         <link rel="next" href="../security_bulletins/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -2429,6 +2429,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12023-lts" class="md-nav__link">
+    v1.20.23-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12022-lts" class="md-nav__link">
     v1.20.22-lts
   </a>
@@ -3123,6 +3130,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v12023-lts" class="md-nav__link">
+    v1.20.23-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v12022-lts" class="md-nav__link">
     v1.20.22-lts
   </a>
@@ -3776,6 +3790,52 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
 <li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护；</li>
 <li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复；</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每两周发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+<h2 id="v12023-lts">v1.20.23-lts<a class="headerlink" href="#v12023-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年5月25日</p>
+<div class="admonition info">
+<p class="admonition-title">新增功能</p>
+</div>
+<ul>
+<li>feat(性能测试): 性能测试增加脚本审核机制</li>
+<li>feat(接口测试): 接口包含时脚本增加系统通知</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">功能优化</p>
+</div>
+<ul>
+<li>refactor(测试计划): lock超时时间优化</li>
+<li>refactor(测试计划): 测试计划单条case执行解锁</li>
+<li>refactor(测试计划): 定时清理无效队列数据</li>
+<li>refactor(测试计划): 计划关联关系更新方法事务调整</li>
+<li>refactor(测试计划): 优化网络波动或资源池重启造成测试计划执行时间过长问题</li>
+<li>refactor(接口测试): 资源池反显优化</li>
+<li>refactor(接口测试): 场景步骤过多时添加提示</li>
+<li>refactor(接口测试): 去除本地执行，统一放到资源池执行</li>
+<li>refactor: 处理分享报告查询资源池的返回信息</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">问题修复</p>
+</div>
+<ul>
+<li>fix(接口测试): 修复禁用local资源池，执行case还是显示local资源池的缺陷</li>
+<li>fix(接口测试): 修复前端精度问题</li>
+<li>fix(接口测试): 修复导入同一接口报错格式错误的缺陷</li>
+<li>fix(接口测试): 修复jsonpath精度提取问题</li>
+<li>fix(接口测试): 修复swagger导入失败的缺陷</li>
+<li>fix(测试跟踪): 用例自定义字段筛选</li>
+<li>fix(测试跟踪): 修复测试计划批量执行case未提示选择资源池的缺陷</li>
+<li>fix(测试跟踪): 修复选择资源池执行后仍选择LOCAL资源池执行的缺陷</li>
+<li>fix(测试跟踪): 修改测试计划报告的完成率为执行完成率</li>
+<li>fix(测试跟踪): 修复测试计划分享报告无法加载场景步骤内容的问题</li>
+<li>fix(测试跟踪): 评审状态为已完成，再次关联用例后取消关联，评审状态变成了进行中</li>
+<li>fix(项目设置): 更改性能测试脚本预警的方式</li>
+<li>fix(项目管理): 修复应用设置资源池根据配额过滤反显问题</li>
+<li>fix(测试计划): 修复测试计划包含失败停止的场景大规模执行，偶发有未执行场景问题</li>
+<li>fix: 修复工作空间服务集成权限的问题</li>
+<li>fix: 修复工作空间移除成员权限的问题</li>
+<li>fix: 修复首次添加邮箱信息未保存不能执行测试连接的问题</li>
 </ul>
 <h2 id="v12022-lts">v1.20.22-lts<a class="headerlink" href="#v12022-lts" title="Permanent link">&para;</a></h2>
 <hr />
@@ -8951,7 +9011,7 @@ v1.1.0 是 v1.0.0 之后的功能版本</p>
     
     
 
-      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
 <script>
