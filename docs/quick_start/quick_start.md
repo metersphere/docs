@@ -1,17 +1,16 @@
 ## 1 一键部署
 !!! ms-abstract ""
-    按部署服务器要求准备好部署环境后，可通过 MeterSphere 快速安装脚本一键快速部署。<br>
-    一键安装采用默认安装参数，更多有关离线部署、容器部署等方式可查看【**安装部署**】章节内容。<br>
+    准备好部署服务器后，可通过 MeterSphere 快速安装脚本一键快速部署。一键安装采用默认安装参数，更多有关离线部署、容器部署、分布式部署等方式可查看【**安装部署**】章节内容。<br>
 
     **部署服务器要求**：<br>
 
-     - 操作系统要求：任何支持 Docker 的 Linux x64
+     - 操作系统要求：CentOS 7.x
      - CPU内存要求：最低要求 4C8G，推荐 8C16G
-     - 部署目录空间（默认/opt目录）要求： 50G
+     - 部署目录空间（默认/opt目录）要求：50G
      - 网络要求：可访问互联网
 
 
-    以 root 用户 ssh 登录部署目标服务器， 执行以下脚本进行一键安装:<br>
+    以 root 用户 ssh 登录部署目标服务器，执行以下脚本进行一键安装:<br>
     ```sh
     curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
     ```
