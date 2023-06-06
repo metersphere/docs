@@ -3064,7 +3064,7 @@ vars.remove(&quot;VAR3&quot;);
 <li>存储结果：返回结果的所有字段存储到一个变量中。可配合脚本处理获返回结果中的某一部分值。<br></li>
 <li>按列存储：直接指定取出返回结果字段的值，列名要和SQL语句中查询返回结果列名对应。可以用逗号作为占位符代替列名，只写出要提取的列名即可。<br></li>
 </ul>
-<p>如图所示查询，用户 user 通过<code>${user_n}</code>进行引用，n为行数，<code>${user_1}</code> 为 user 列的第一行值。</p>
+<p>如图所示查询，用户【按列存储】查询 <code>id</code> 和 <code>name</code>，通过<code>${name_n}</code>进行引用，n为行数，<code>${name_1}</code> 为 name 列的第一行值。</p>
 </div>
 <p><div class="lightgallery"><a data-sub-html="前置SQL" href="../../../img/api/%E5%89%8D%E7%BD%AEsql%E7%BC%96%E8%BE%91.png"><img alt="前置SQL" src="../../../img/api/%E5%89%8D%E7%BD%AEsql%E7%BC%96%E8%BE%91.png" width="900px" />
 </a></div><div class="lightgallery"><a data-sub-html="SQL请求参数" href="../../../img/api/%E5%89%8D%E7%BD%AESQL1.png"><img alt="SQL请求参数" src="../../../img/api/%E5%89%8D%E7%BD%AESQL1.png" width="900px" /></a></div></p>
