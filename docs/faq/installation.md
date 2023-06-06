@@ -13,13 +13,11 @@
 
 ## 4 docker-compose 版本与配置文件不兼容或配置文件存在问题，请重新安装最新版本的 docker-compose 或检查配置文件?
 !!! ms-abstract ""
-    如果服务器已经安装了docker， MeterSphere 安装脚本检测到 docker 已安装，就跳过了自动原本的安装步骤，而已安装的版本与 MeterSphere要求的版本不匹配就会导致这个导致。需要手动把安装包里的 docker 目录下的所有文件拷贝到系统目录即可：
+    如果服务器已经安装了 docker-compose， MeterSphere 安装脚本检测到 docker-compose 已安装，就会跳过自动安装 docker-compose 的步骤，而已安装的版本与 MeterSphere 要求的版本不匹配就会导致这个问题。需要手动升级服务器上的 docker-compose 版本为 /opt/metersphere/docker-compose_*.yml 中指定的版本，或者把离线安装包里的 docker-compose 文件拷贝到系统目录并修改权限即可：
 
     ```
-    cp docker/bin/* /usr/bin/
-    cp docker/service/docker.service /etc/systemd/system/
-    chmod +x /usr/bin/docker*
-    chmod 754 /etc/systemd/system/docker.service
+    cp docker/bin/docker-compose /usr/bin/
+    chmod +x /usr/bin/docker-compose
     ```
 
 ## 5 如何升级到指定版本？
