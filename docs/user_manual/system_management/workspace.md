@@ -33,7 +33,8 @@
 ## 2 服务集成
 !!! ms-abstract ""
     可查看当前工作空间里集成的缺陷管理平台，并设置和修改当前工作空间需要将测试用例缺陷数据同步的缺陷管理平台。<br>
-    点击【工作空间】菜单栏，点击【服务集成】，即可查看当前工作空间已集成的缺陷管理平台，同时可点击【编辑】集成 TAPD、JIRA 和禅道、Azure Devops等平台。
+    点击【工作空间】菜单栏，点击【服务集成】，即可查看当前工作空间已集成的缺陷管理平台，同时可点击【编辑】集成 TAPD、JIRA 和禅道、Azure Devops等平台。<br/>
+    v2.4 版本缺陷对接实现了插件化，可根据自身需求开发对应插件。具体参考插件项目：https://github.com/metersphere/metersphere-platform-plugin
 
 !!! ms-abstract "Metersphere 平台与管理工具集成设置可分为三步骤来完成"
     (1)首先配置和项目管理工具集成设置。<br>
@@ -150,7 +151,7 @@
 !!! ms-abstract "说明"
 	1. 账号密码为具有相应权限的 Zentao 账号，账号需要具有超级 model 调用接口权限。
     2. 请求方式：在禅道里具体查看：参考禅道配置文件中$config->requestType 的值；配置文件参考路径：/opt/zbox/app/zentao/config/my.php 。
-	3. 如果提示因为安全问题 api 禁用，需要修改禅道服务器配置文件，加上 '$config->features->apiGetModel = true;' 这个配置。
+	3. 如果提示因为安全问题 api 禁用，需要修改禅道服务器配置文件/opt/zbox/app/zentao/config/my.php，加上 '$config->features->apiGetModel = true;' 这个配置。
 
 !!! ms-abstract ""
     第二步： 关联项目配置<br>
