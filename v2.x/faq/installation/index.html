@@ -3202,11 +3202,9 @@
 </div>
 <h2 id="4-docker-compose-docker-compose">4 docker-compose 版本与配置文件不兼容或配置文件存在问题，请重新安装最新版本的 docker-compose 或检查配置文件?<a class="headerlink" href="#4-docker-compose-docker-compose" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>如果服务器已经安装了docker， MeterSphere 安装脚本检测到 docker 已安装，就跳过了自动原本的安装步骤，而已安装的版本与 MeterSphere要求的版本不匹配就会导致这个导致。需要手动把安装包里的 docker 目录下的所有文件拷贝到系统目录即可：</p>
-<div class="highlight"><pre><span></span><code>cp docker/bin/* /usr/bin/
-cp docker/service/docker.service /etc/systemd/system/
-chmod +x /usr/bin/docker*
-chmod 754 /etc/systemd/system/docker.service
+<p>如果服务器已经安装了 docker-compose， MeterSphere 安装脚本检测到 docker-compose 已安装，就会跳过自动安装 docker-compose 的步骤，而已安装的版本与 MeterSphere 要求的版本不匹配就会导致这个问题。需要手动升级服务器上的 docker-compose 版本为 /opt/metersphere/docker-compose_*.yml 中指定的版本，或者把离线安装包里的 docker-compose 文件拷贝到系统目录并修改权限即可：</p>
+<div class="highlight"><pre><span></span><code>cp docker/bin/docker-compose /usr/bin/
+chmod +x /usr/bin/docker-compose
 </code></pre></div>
 </div>
 <h2 id="5">5 如何升级到指定版本？<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
