@@ -1,5 +1,5 @@
 !!! ms-abstract "注意"
-    升级前一定要进行数据库备份，请参考 [MeterSphere 数据备份](./backup_data.md)。
+    升级前一定要进行数据库备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。
 
 ## 1 下载并解压安装包
 !!! ms-abstract ""
