@@ -2719,6 +2719,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#51-geturlnon-http-response-code-iavaneturisyntaxexception" class="md-nav__link">
+    51 接口测试get请求在URL后面传中文、特殊字符参数，接口返回Non HTTP response code: iava.net.URISyntaxException报错
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-finishconnect-failed-connection-refused-1723010148003" class="md-nav__link">
+    52 接口测试页面弹出红色报错finishConnect(.) failed: Connection refused: /172.30.10.14:8003
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3321,6 +3335,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#51-geturlnon-http-response-code-iavaneturisyntaxexception" class="md-nav__link">
+    51 接口测试get请求在URL后面传中文、特殊字符参数，接口返回Non HTTP response code: iava.net.URISyntaxException报错
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-finishconnect-failed-connection-refused-1723010148003" class="md-nav__link">
+    52 接口测试页面弹出红色报错finishConnect(.) failed: Connection refused: /172.30.10.14:8003
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3361,7 +3389,7 @@
 <p><div class="lightgallery"><a data-sub-html="接口上传文件类型" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.png"><img alt="接口上传文件类型" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.png" width="900px" /></a></div></p>
 <h2 id="5-cookie">5 接口自动化中模块之间是否支持共享 cookie?<a class="headerlink" href="#5-cookie" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>同一模块下不同场景可以开启共享 cookie，不支持模块之间共享 cookie。<br /></p>
+<p>环境配置-http 配置，支持按模块不同环境。同一模块下不同场景可以开启共享 cookie，不同模块不支持共享 cookie。<br /></p>
 </div>
 <h2 id="6">6 接口测试中，期望结果不为空，如何写断言？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
@@ -3668,6 +3696,26 @@ prev.setResponseData(outBuffer.toString());
 <div class="admonition ms-abstract">
 <p>当响应内容过大时，在 gateway 日志中可以发现对应提示日志： <code>Max frame length of 10485760 has been exceeded</code>。 在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小，修改完后 msctl reload 重新加载在配置文件即可。</p>
 </div>
+<h2 id="51-geturlnon-http-response-code-iavaneturisyntaxexception">51 接口测试get请求在URL后面传中文、特殊字符参数，接口返回Non HTTP response code: iava.net.URISyntaxException报错<a class="headerlink" href="#51-geturlnon-http-response-code-iavaneturisyntaxexception" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p>处理方法：在接口前置脚本通过代码将参数进行 URLEncoder 编码，然后存储为变量再传参处引用。前置脚本如下：
+<div class="highlight"><pre><span></span><code>import java.net.URLDecoder;
+import java.net.URLEncoder;
+String strTest = &quot;?=abc?中%1&amp;2&lt;3,4&gt;&quot;;
+strTest = URLEncoder.encode(strTest, &quot;UTF-8&quot;);//转码
+vars.put(&quot;str&quot;,strTest );
+</code></pre></div>
+处理后在接口传参处使用${str}引用即可。</p>
+</div>
+<h2 id="52-finishconnect-failed-connection-refused-1723010148003">52 接口测试页面弹出红色报错finishConnect(.) failed: Connection refused: /172.30.10.14:8003<a class="headerlink" href="#52-finishconnect-failed-connection-refused-1723010148003" title="Permanent link">&para;</a></h2>
+<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E9%93%BE%E6%8E%A5%E5%A4%B1%E8%B4%A5.png"><img alt=" metersphere导入格式" src="../../img/faq/%E9%93%BE%E6%8E%A5%E5%A4%B1%E8%B4%A5.png" width="900px" /></a></div></p>
+<div class="admonition ms-abstract">
+<p>出现原因：常见为接口测试 api-test 容器内存溢出导致微服务连接失败。<br/>
+处理方法：可以增大 api-test 容器内存并重启该容器。
+vi /opt/metersphere/docker-compose-api-test.yml
+调大mem_limit: 可以为2g，修改保存后 msctl reload 生效。</p>
+</div>
+<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E9%97%AE%E9%A2%98%E4%BF%AE%E6%94%B9%E5%86%85%E5%AD%98.png"><img alt=" metersphere导入格式" src="../../img/faq/%E9%97%AE%E9%A2%98%E4%BF%AE%E6%94%B9%E5%86%85%E5%AD%98.png" width="900px" /></a></div></p>
 
 
   

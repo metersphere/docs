@@ -2773,16 +2773,16 @@
 <ol>
 <li>修改 /opt/metersphere/.env 文件，MS_UI_ENABLED=true 修改配置后加载配置文件执行 msctl reload。<br></li>
 <li>docker ps 检查 selenium-hub 容器是否成功启动。<br></li>
-<li>在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://selenium-hub:4444。<br></li>
+<li>v2.8.1之后版本在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://selenium-hub:4444。详情参考https://bbs.fit2cloud.com/t/topic/127<br></li>
 <li>UI 测试用例，默认勾选 "性能模式" 没有截图展示，不勾选 "性能测试" 可以查看每个步骤的截图。<br></li>
 <li>如果导入 License 成功后，依然没有 UI 测试模块，请到【用户组与权限】处配置 UI 模块权限。</li>
 </ol>
 </div>
 <h2 id="1">1 创建模块<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧查看到 UI 自动化场景的模块树。 点击左侧的模块树中的 【添加子模块】按钮，为该项目添加模块。</p>
+<p>MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧创建并管理模块树。元素库、UI自动化模块均支持创建模块树， 点击左侧的模块树中的【添加子模块】按钮，为该项目添加模块。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="使用UI测试" href="../../img/quick_start/ui_test/%E4%BD%BF%E7%94%A8UI%E6%B5%8B%E8%AF%951.png"><img alt="使用UI测试" src="../../img/quick_start/ui_test/%E4%BD%BF%E7%94%A8UI%E6%B5%8B%E8%AF%951.png" width="900px" /></a></div></p>
+<p><div class="lightgallery"><a data-sub-html="使用UI测试" href="../../img/quick_start/ui_test/%E5%BF%AB%E9%80%9Fui%E6%A8%A1%E5%9D%97.png"><img alt="使用UI测试" src="../../img/quick_start/ui_test/%E5%BF%AB%E9%80%9Fui%E6%A8%A1%E5%9D%97.png" width="900px" /></a></div></p>
 <h2 id="2">2 创建元素<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧的模块树中的【添加子模块】 按钮，添加模块，然后创建元素。元素库可用于场景步骤中元素的选择。</p>

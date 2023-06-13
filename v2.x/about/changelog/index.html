@@ -2569,6 +2569,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2101-lts" class="md-nav__link">
+    v2.10.1-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2100-lts" class="md-nav__link">
     v2.10.0-lts
   </a>
@@ -2766,6 +2773,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2101-lts" class="md-nav__link">
+    v2.10.1-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2100-lts" class="md-nav__link">
     v2.10.0-lts
   </a>
@@ -2912,16 +2926,57 @@
 <h1 id="_1">更新日志<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">版本说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p><strong>MeterSphere 版本号命名规则为：</strong>  v大版本.功能版本.Bug修复版本<br></p>
-<div class="codehilite"><pre><span></span><code>v1.0.1 是 v1.0.0 之后的Bug修复版本
-v1.1.0 是 v1.0.0 之后的功能版本
-</code></pre></div>
-
-<p><strong>MeterSphere 按年发布 LTS（Long Term Support）版本。</strong></p>
+<p><strong>MeterSphere 版本号命名规则为：</strong>  v <em>大版本号</em>.<em>功能版本号</em>.<em>修复版本号</em>，MeterSphere 按月迭代发布功能版本，并按年发布 LTS（Long Term Support）版本，目前以及发布了三个 LTS 版本：</p>
 <ul>
-<li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护；</li>
-<li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复；</li>
+<li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护。</li>
+<li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每两周发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+</div>
+<h2 id="v2101-lts">v2.10.1-lts<a class="headerlink" href="#v2101-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年6月8日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor(接口测试): 优化场景环境校验逻辑</li>
+<li>refactor(接口测试): 优化选择资源池执行逻辑</li>
+<li>refactor(测试跟踪): 新增测试计划报告编辑的权限</li>
+<li>refactor(测试跟踪): 用例评审关联用例新增排序</li>
+<li>refactor(系统设置): 操作日志的操作对象增加清空</li>
+<li>refactor(项目设置): 优化系统自带的环境中带脚本时的通知逻辑</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(工作台): 功能用例仪表盘数目与列表不一致</li>
+<li>fix(工作台)：工作台查看jira平台缺陷,缺陷字段显示不全</li>
+<li>fix(项目设置): TCP配置名称展示问题</li>
+<li>fix(项目设置): 添加git文件失败时不会再刷新表格内容</li>
+<li>fix(接口测试): 修复jenkins触发接口用例，一直不执行的缺陷</li>
+<li>fix(接口测试): 场景步骤跨工作空间跳转问题</li>
+<li>fix(接口测试): 修复集合报告停止不生效的缺陷</li>
+<li>fix(接口测试): 场景批量生成依赖关系报错问题</li>
+<li>fix(接口测试): 自定义请求接口覆盖率计算问题</li>
+<li>fix(测试跟踪): 只关联UI执行时资源池提示问题</li>
+<li>fix(测试跟踪): 当前项目责任人删除时展示问题</li>
+<li>fix(测试跟踪): 用例脑图修改一级模块，重名校验不准确</li>
+<li>fix(测试跟踪): 修复删除测试计划报告时后台会出现消息通知相关的报错</li>
+<li>fix(性能测试): 性能测试场景CSV变更后进行同步时表格内的CSV文件也同步更改</li>
+<li>fix(性能测试): 修复性能测试变更记录相关问题</li>
+<li>fix(性能测试): 修复创建性能测试偶发的保存后资源池被置空的问题</li>
+<li>fix(系统设置): 修复工作空间配额限制资源池后任然可以选择被禁用的资源池执行的缺陷</li>
+<li>fix(系统设置): 修复低版本升级上来的默认配额显示错误问题</li>
+<li>fix(项目设置): 修复通知跳转环境提示资源被删的缺陷</li>
+<li>fix(项目设置): 修复项目设置和系统设置中添加成员搜索结果不符问题</li>
+<li>fix(通知中心): 通知中心跳转删除的资源时进行报错提示</li>
+<li>fix(新手引导): 新手引导，步骤为初始值时，增加记录操作</li>
+<li>fix(文件管理): 文件详情中挪动所属模块时不再提供清空按钮</li>
 </ul>
 </div>
 <h2 id="v2100-lts">v2.10.0-lts<a class="headerlink" href="#v2100-lts" title="Permanent link">&para;</a></h2>

@@ -140,14 +140,21 @@
   border-left-width: 4px;
 }
 
+.md-typeset p,.md-typeset ul,.md-typeset ol,.md-typeset dl,.md-typeset blockquote {
+    display: flow-root;
+    margin: 1em 0
+}
+
 .md-typeset .admonition.ms-abstract,
 .md-typeset details.ms-abstract {
   border-color: rgb(170, 80, 191);
 }
+
 .md-typeset .ms-abstract > .admonition-title,
 .md-typeset .ms-abstract > summary {
   background-color: rgba(170, 80, 191, 0.1);
 }
+
 .md-typeset .ms-abstract > .admonition-title::before,
 .md-typeset .ms-abstract > summary::before {
   background-color: rgb(170, 80, 191);
