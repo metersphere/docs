@@ -157,7 +157,7 @@
 
     - 检查防火墙是否开启。
     - 检查 6379端口是否开放。
-    - 检查 .env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。
+    - 检查 opt/metersphere/.env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。如地址正确任无法连接可修改 opt/metersphere/.env 文件把MS_REDIS_HOST=redis
 
 ## 25 docker 运行错误：`docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……`
 !!! ms-abstract ""
