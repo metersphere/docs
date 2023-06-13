@@ -12,9 +12,9 @@
 
 ## 1 创建模块
 !!! ms-abstract ""
-    MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧查看到 UI 自动化场景的模块树。 点击左侧的模块树中的 【添加子模块】按钮，为该项目添加模块。
+    MeterSphere 通过模块树的方式组织管理场景，用户可以在左侧创建并管理模块树。元素库、UI自动化模块均支持创建模块树， 点击左侧的模块树中的【添加子模块】按钮，为该项目添加模块。
 
-![!使用UI测试](../img/quick_start/ui_test/使用UI测试1.png){ width="900px" }
+![!使用UI测试](../img/quick_start/ui_test/快速ui模块.png){ width="900px" }
 
 ## 2 创建元素
 !!! ms-abstract ""

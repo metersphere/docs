@@ -22,7 +22,7 @@
 
 ### 1.2 查看接口定义
 !!! ms-abstract ""
-    导入 Swagger 文件之后，在接口列表中找到登录接口 `login_1` ，点击操作列中的【编辑】按钮，查看接口详情。
+    导入 Swagger 文件之后，在接口列表中找需要编辑的目标接口 ，点击操作列中的【编辑】按钮，查看接口详情。
 ![!编辑接口详情](../img/quick_start/api/编辑接口详情1.png){ width="900px" }
 
 ![!编辑接口详情](../img/quick_start/api/编辑接口详情2.png){ width="900px" }
@@ -37,7 +37,7 @@
 
 ### 1.4 调试单个接口
 !!! ms-abstract ""
-    在接口列表中找到 `login_1` 接口，点击操作列中的 【编辑】 按钮，进入接口详情页面。
+    如 `/signin` 登录接口调试，点击操作列中的 【编辑】 按钮，进入接口详情页面。
 
     点击界面上方的【TEST】按钮，进入接口测试页面。在接口测试页面选择接口执行环境，并填写接口所需的参数后，点击【测试】按钮发送该接口请求。
 ![!调试单个接口](../img/quick_start/api/调试单个接口2.png){ width="900px" }
@@ -53,7 +53,7 @@
 
 ### 2.1 新建单接口用例
 !!! ms-abstract ""
-    在接口列表中找到 `login_1` 接口，点击操作列中的【CASE】按钮，打开该接口的用例列表页面，点击【添加】按钮，添加用例。
+    如给 `/signin` 登录接口添加用例，点击操作列中的【CASE】按钮，打开该接口的用例列表页面，点击【添加】按钮，添加用例。
 ![!新建单接口用例](../img/quick_start/api/新建单接口用例1.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -87,15 +87,15 @@
 ![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤1.png){ width="900px" }
 
 !!! ms-abstract ""
-    选择【接口列表导入】步骤，在弹出的接口列表中找到 `login_1` 接口进行添加。
+    选择【接口列表导入】步骤，在弹出的接口列表中找到 登录 接口进行添加。
 ![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤2.png){ width="900px" }
 
 !!! ms-abstract ""
-    修改该接口请求中的 `login_1` 中的登录相关参数。
+    在接口自动化场景可以直接修改复制过来的接口做参数修改。如此处的 `/signin` 相关参数可直接编辑。
 ![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤3.png){ width="900px" }
 
 !!! ms-abstract ""
-    展开 `login_1` 接口的请求参数，切换到【后置操作】，在该页面添加一个名称为 `获取CSRF-TOKEN`的提取步骤，采用【推荐 JSONPath 提取】方式添加一个提取，在弹出的响应结果 Json 页面中，下拉到最底层，勾选名称为`csrfToken`和`sessionId`的属性，JSONPath 表达式分别为 `$.data.csrfToken`和`$.data.sessionId`。
+    展开 `/signin` 登录接口的请求参数，切换到【后置操作】，在该页面添加一个名称为 `获取CSRF-TOKEN`的提取步骤，采用【推荐 JSONPath 提取】方式添加一个提取，在弹出的响应结果 Json 页面中，下拉到最底层，勾选名称为`csrfToken`和`sessionId`的属性，JSONPath 表达式分别为 `$.data.csrfToken`和`$.data.sessionId`。
 ![!在场景用例中添加步骤](../img/quick_start/api/在场景用例中添加步骤4.png){ width="900px" }
 
 !!! ms-abstract "注意"

@@ -334,3 +334,24 @@
 !!! ms-abstract ""
     当响应内容过大时，在 gateway 日志中可以发现对应提示日志： `Max frame length of 10485760 has been exceeded`。 在 /opt/metersphere/conf/metersphere.properties 添加属性：spring.cloud.gateway.httpclient.websocket.max-frame-payload-length=自定义大小，修改完后 msctl reload 重新加载在配置文件即可。
 
+## 51 接口测试get请求在URL后面传中文、特殊字符参数，接口返回Non HTTP response code: iava.net.URISyntaxException报错
+!!! ms-abstract ""
+    处理方法：在接口前置脚本通过代码将参数进行 URLEncoder 编码，然后存储为变量再传参处引用。前置脚本如下：
+    ```
+    import java.net.URLDecoder;
+    import java.net.URLEncoder;
+    String strTest = "?=abc?中%1&2<3,4>";
+    strTest = URLEncoder.encode(strTest, "UTF-8");//转码
+    vars.put("str",strTest );
+    ```
+    处理后在接口传参处使用${str}引用即可。
+
+## 52 接口测试页面弹出红色报错finishConnect(.) failed: Connection refused: /172.30.10.14:8003
+![! metersphere导入格式](../img/faq/链接失败.png){ width="900px" }
+
+!!! ms-abstract ""
+    出现原因：常见为接口测试 api-test 容器内存溢出导致微服务连接失败。<br/>
+    处理方法：可以增大 api-test 容器内存并重启该容器。
+    vi /opt/metersphere/docker-compose-api-test.yml
+    调大mem_limit: 可以为2g，修改保存后 msctl reload 生效。
+![! metersphere导入格式](../img/faq/问题修改内存.png){ width="900px" }

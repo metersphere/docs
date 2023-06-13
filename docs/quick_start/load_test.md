@@ -6,12 +6,12 @@
     通过安装包安装 MeterSphere 后，系统默认使用当前节点创建了名为【LOCAL】测试资源池。关于测试资源池的作用请参考 [FAQ](../faq/load_test.md#_1)。
 
     如果需要创建新的测试资源池，或向已有资源池中添加节点，请参考 [如何向测试资源池中添加节点？](../faq/load_test.md#_2)
-![!测试资源池](../img/quick_start/performance/测试资源池.png){ width="900px" }
+![!测试资源池](../img/quick_start/performance/快速测试资源池1.png){ width="900px" }
 
 ## 2 修改当前站点 URL
 !!! ms-abstract ""
     性能测试执行过程中 node-controller 节点需要通过配置的【当前站点URL】 下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。
-![!当前站点URL](../img/quick_start/performance/当前站点URL.png){ width="900px" }
+![!当前站点URL](../img/quick_start/performance/快速修改站点.png){ width="900px" }
 
 ## 3 创建性能测试
 !!! ms-abstract ""
