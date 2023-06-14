@@ -70,7 +70,7 @@
 
 ### 2.7 下载安装包
 !!! ms-abstract ""
-	在 [飞致云开源社区](https://community.fit2cloud.com/#/products/metersphere/downloads) 或 [MeterSphere Github Releaes](https://github.com/metersphere/metersphere/releases) 下载 MeterSphere 最新版本的离线安装包。
+	在 [飞致云开源社区](https://community.fit2cloud.com/#/products/metersphere/downloads) 或 [MeterSphere Github Release](https://github.com/metersphere/metersphere/releases) 下载 MeterSphere 最新版本的离线安装包。
 
 ### 2.8 解压安装包
 !!! ms-abstract ""
