@@ -2621,6 +2621,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3181,6 +3188,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3491,6 +3505,12 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 <li>手动创建容器网络：docker network create metersphere_ms-network </li>
 <li>重启服务器：msctl reload</li>
 </ul>
+</div>
+<h2 id="41">41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？<a class="headerlink" href="#41" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p>检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。
+- 修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。
+- 执行 <code>msctl uninstall -v</code> 先进行卸载，再执行 msctl reload 重新创建容器。</p>
 </div>
 
 
