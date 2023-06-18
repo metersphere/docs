@@ -26,7 +26,7 @@
 
 ## 6 如何卸载？
 !!! ms-abstract ""
-    先停止正在运行的 MeterSphere 容器，然后再删除容器，最后删除应用数据目录以及容器环境等，具体操作见如下命令：
+    先停止正在运行的 MeterSphere 容器，然后再删除容器，最后删除应用数据目录以及 docker 环境等，具体操作见如下命令：
 
     ```
     #1、先停止正在运行的 MeterSphere 容器，然后再删除容器
@@ -283,7 +283,7 @@
 ## 38 MeterSphere k8s部署后如何控制数据库的连接数
 !!! ms-abstract ""
     
-    - 在 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数。 <br>
+    - 在 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数。 
     - 在 values.yml 文件里，DATABASE 处新增如下两行参数。
     ```
     spring.datasource.hikari.maximum-pool-size=你想要的数值
@@ -292,7 +292,7 @@
 
 ## 39 安装时出现：`Encountered error while bringing up the project`， msctl status 时看到 mysql 容器一直 Restarting
 !!! ms-abstract ""
-    在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，然后再执行 `msctl reload` 即可 <br>
+    在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，然后再执行 `msctl reload` 即可。 <br>
 ![! metersphere导入格式](../img/faq/mysql_yml.jpg){ width="900px" }
 
 ## 40 安装部署时报错：`Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space`
@@ -300,12 +300,13 @@
     主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。
 
     - 清除子网网段：docker network prune
-    - 将 opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 <br>
+    - 将 opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 
     - 手动创建容器网络：docker network create metersphere_ms-network 
     - 重启服务器：msctl reload
 
 ## 41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？
 !!! ms-abstract ""
     检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。
+
     - 修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。
     - 执行 `msctl uninstall -v` 先进行卸载，再执行 msctl reload 重新创建容器。
