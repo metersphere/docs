@@ -336,15 +336,16 @@
 
 ## 51 接口测试get请求在URL后面传中文、特殊字符参数，接口返回Non HTTP response code: iava.net.URISyntaxException报错
 !!! ms-abstract ""
-    处理方法：在接口前置脚本通过代码将参数进行 URLEncoder 编码，然后存储为变量再传参处引用。前置脚本如下：
+    需要先在前置脚本中，对中文、特殊字符等先进行编码并存储为变量，然后在传参处引用对应的变量即可，对应的前置脚本样例如下：
+
     ```
     import java.net.URLDecoder;
     import java.net.URLEncoder;
+
     String strTest = "?=abc?中%1&2<3,4>";
     strTest = URLEncoder.encode(strTest, "UTF-8");//转码
     vars.put("str",strTest );
     ```
-    处理后在接口传参处使用${str}引用即可。
 
 ## 52 接口测试页面弹出红色报错finishConnect(.) failed: Connection refused: /172.30.10.14:8003
 ![! metersphere导入格式](../img/faq/链接失败.png){ width="900px" }
