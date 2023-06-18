@@ -3698,14 +3698,14 @@ prev.setResponseData(outBuffer.toString());
 </div>
 <h2 id="51-geturlnon-http-response-code-iavaneturisyntaxexception">51 接口测试get请求在URL后面传中文、特殊字符参数，接口返回Non HTTP response code: iava.net.URISyntaxException报错<a class="headerlink" href="#51-geturlnon-http-response-code-iavaneturisyntaxexception" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>处理方法：在接口前置脚本通过代码将参数进行 URLEncoder 编码，然后存储为变量再传参处引用。前置脚本如下：
+<p>需要先在前置脚本中，对中文、特殊字符等先进行编码并存储为变量，然后在传参处引用对应的变量即可，对应的前置脚本样例如下：</p>
 <div class="highlight"><pre><span></span><code>import java.net.URLDecoder;
 import java.net.URLEncoder;
+
 String strTest = &quot;?=abc?中%1&amp;2&lt;3,4&gt;&quot;;
 strTest = URLEncoder.encode(strTest, &quot;UTF-8&quot;);//转码
 vars.put(&quot;str&quot;,strTest );
 </code></pre></div>
-处理后在接口传参处使用${str}引用即可。</p>
 </div>
 <h2 id="52-finishconnect-failed-connection-refused-1723010148003">52 接口测试页面弹出红色报错finishConnect(.) failed: Connection refused: /172.30.10.14:8003<a class="headerlink" href="#52-finishconnect-failed-connection-refused-1723010148003" title="Permanent link">&para;</a></h2>
 <p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E9%93%BE%E6%8E%A5%E5%A4%B1%E8%B4%A5.png"><img alt=" metersphere导入格式" src="../../img/faq/%E9%93%BE%E6%8E%A5%E5%A4%B1%E8%B4%A5.png" width="900px" /></a></div></p>
