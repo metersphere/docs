@@ -21,11 +21,11 @@
         <link rel="next" href="../case_studies/user_cases/">
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
-        <title>接口自动化插件开发示例 - MeterSphere 文档</title>
+        <title>接口自动化插件开发 - MeterSphere 文档</title>
       
     
     
@@ -272,7 +272,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              接口自动化插件开发示例
+              接口自动化插件开发
             
           </span>
         </div>
@@ -2501,12 +2501,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          接口自动化插件开发示例
+          接口自动化插件开发
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        接口自动化插件开发示例
+        接口自动化插件开发
       </a>
       
         
@@ -2567,7 +2567,7 @@
         
           <li class="md-nav__item">
   <a href="#25" class="md-nav__link">
-    2.5 收尾打包
+    2.5 打包
   </a>
   
 </li>
@@ -2728,7 +2728,7 @@
         
           <li class="md-nav__item">
   <a href="#25" class="md-nav__link">
-    2.5 收尾打包
+    2.5 打包
   </a>
   
 </li>
@@ -2763,12 +2763,11 @@
   
 
 
-  <h1>接口自动化插件开发示例</h1>
+  <h1>接口自动化插件开发</h1>
 
 <h2 id="1">1 背景介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>在 JMeter 中使用 <a href="https://jmeter-plugins.org/wiki/DummySampler/?utm_source=jmeter&amp;utm_medium=helplink&amp;utm_campaign=DummySampler">Dummy Sampler</a> 可以构造出一个请求内容和响应内容完全自定义的请求，通过这种自定义的请求可以比较方便地对各种断言、参数提取等后置处理器进行调试。针对 JMeter 已有的功能或插件，只需要进行很少量的开发工作，就可以将其包装成一个 MeterSphere 上接口自动化插件的插件。对应的插件 Demo 见: <a href="https://github.com/metersphere/metersphere-plugin-DummySampler">metersphere-plugin-DummySampler</a>。 <br></p>
-<p>本文将以 JMeter 中的 Dummy Sampler 为例，来介绍下如何开发 MeterSphere 接口自动化插件。</p>
+<p>在 JMeter 中使用 <a href="https://jmeter-plugins.org/wiki/DummySampler/?utm_source=jmeter&amp;utm_medium=helplink&amp;utm_campaign=DummySampler">Dummy Sampler</a> 可以构造出一个请求和响应完全自定义的请求取样器，并且这种方式可以方便地对断言、参数提取等各种后置处理器进行调试。针对 JMeter 已有的功能或插件，只需要进行很少量的开发工作，就可以将其封装成 MeterSphere 的接口自动化插件，对应的插件 Demo 示例见: <a href="https://github.com/metersphere/metersphere-plugin-DummySampler">metersphere-plugin-DummySampler</a>。 <br></p>
 </div>
 <h2 id="2">2 开发流程<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="21">2.1 项目初始化<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
@@ -2796,21 +2795,21 @@
 </div>
 <h3 id="22">2.2 生成前端表单<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照这 JMeter 中该步骤的配置页面，使用 <a href="http://www.form-create.com/designer/?fr=home">表单生成器</a> 生成前端表单的 json 文件。<br></p>
+<p>在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照 JMeter 中该步骤的配置页面，使用 <a href="http://www.form-create.com/designer/?fr=home">表单生成器</a> 生成前端表单的 json 文件。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" width="900px" /></p>
 <div class="admonition ms-abstract">
-<p>点击表单生成器右上角的【生成JSON】按钮，将内容保存到 src\main\resources\json\ui_dummy.json 文件中；点击右上角的【生成Options】按钮，将内容保存到 src\main\resources\json\ui_form.json 文件中。对于没有默认值的字段，可以手动编辑下 json 文件增加一个空的默认值，避免出现空指针异常。<br></p>
+<p>点击表单生成器右上角的【生成JSON】按钮，将内容保存到<code>src\main\resources\json\ui_dummy.json</code>文件中；点击右上角的【生成Options】按钮，将内容保存到<code>src\main\resources\json\ui_form.json</code>文件中。对于没有默认值的字段，手动编辑 json 文件，增加空默认值，避免出现空指针异常。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" width="900px" /></p>
 <h3 id="23">2.3 初始化插件资源<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>在 src\main\java\io\metersphere\plugin\dummy\UiScriptApiImpl.java 中使用上面生成的表单 json，对插件内容进行初始化。<br></p>
+<p>在<code>src\main\java\io\metersphere\plugin\dummy\UiScriptApiImpl.java</code>中使用上面生成的表单 json，对插件内容进行初始化。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" width="900px" /></p>
 <h3 id="24-jmeter-hashtree">2.4 转换生成 JMeter HashTree<a class="headerlink" href="#24-jmeter-hashtree" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>创建与上一步对应的初始化 UiScript 对象时指定类名一致的 io.metersphere.plugin.dummy.sampler.MsDummySampler 类，在该类中完成前端表单数据到 JMeter HashTree 的转换。<br></p>
+<p>创建与上一步对应的初始化 UiScript 对象时指定类名一致的<code>io.metersphere.plugin.dummy.sampler.MsDummySampler</code>类，在该类中完成前端表单数据到 JMeter HashTree 的转换。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" width="900px" /></p>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" width="900px" /></p>
@@ -2818,14 +2817,14 @@
 <p>生成 DummySampler 对象时，guiclass、testclass 及各个属性对应的字段，可以通过创建一个包含 DummySampler 步骤的 jmx 脚本，以文本模式打开脚本快速获取。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" width="900px" /></p>
-<h3 id="25">2.5 收尾打包<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<h3 id="25">2.5 打包<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>增加一个与打包后的 jar 包同名的文件 src\main\resources\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies 指定插件入口。再补充一些其他的必要内容后就可以打包了。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" width="900px" /></p>
 <h3 id="26">2.6 上传测试<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>打包后将 target\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies.jar 在 MeterSphere 的插件管理页面进行上传，上传成功后就可以在接口自动化中看到插件提供的步骤。<br></p>
+<p>打包后将生成的 metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies.jar 在 MeterSphere 的插件管理页面进行上传，上传成功后就可以在接口自动化场景编辑时查看、使用和调试插件提供的请求。<br></p>
 </div>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" width="900px" /></p>
 <p><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" width="900px" /></p>
@@ -2922,7 +2921,7 @@
     
     
 
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
       
     
 <script>
