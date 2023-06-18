@@ -304,3 +304,8 @@
     - 手动创建容器网络：docker network create metersphere_ms-network 
     - 重启服务器：msctl reload
 
+## 41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？
+!!! ms-abstract ""
+    检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。
+    - 修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。
+    - 执行 `msctl uninstall -v` 先进行卸载，再执行 msctl reload 重新创建容器。
