@@ -3241,7 +3241,7 @@ chmod +x /usr/bin/docker-compose
 </div>
 <h2 id="6">6 如何卸载？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>先停止正在运行的 MeterSphere 容器，然后再删除容器，最后删除应用数据目录以及容器环境等，具体操作见如下命令：</p>
+<p>先停止正在运行的 MeterSphere 容器，然后再删除容器，最后删除应用数据目录以及 docker 环境等，具体操作见如下命令：</p>
 <div class="highlight"><pre><span></span><code>#1、先停止正在运行的 MeterSphere 容器，然后再删除容器
 msctl uninstall
 
@@ -3484,7 +3484,7 @@ flushall
 <h2 id="38-metersphere-k8s">38 MeterSphere k8s部署后如何控制数据库的连接数<a class="headerlink" href="#38-metersphere-k8s" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <ul>
-<li>在 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数。 <br></li>
+<li>在 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数。 </li>
 <li>在 values.yml 文件里，DATABASE 处新增如下两行参数。
 <div class="highlight"><pre><span></span><code>spring.datasource.hikari.maximum-pool-size=你想要的数值
 spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
@@ -3493,7 +3493,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 </div>
 <h2 id="39-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting">39 安装时出现：<code>Encountered error while bringing up the project</code>， msctl status 时看到 mysql 容器一直 Restarting<a class="headerlink" href="#39-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，然后再执行 <code>msctl reload</code> 即可 <br></p>
+<p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，然后再执行 <code>msctl reload</code> 即可。 <br></p>
 </div>
 <p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/mysql_yml.jpg"><img alt=" metersphere导入格式" src="../../img/faq/mysql_yml.jpg" width="900px" /></a></div></p>
 <h2 id="40-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space">40 安装部署时报错：<code>Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space</code><a class="headerlink" href="#40-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" title="Permanent link">&para;</a></h2>
@@ -3501,16 +3501,18 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 <p>主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。</p>
 <ul>
 <li>清除子网网段：docker network prune</li>
-<li>将 opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 <br></li>
+<li>将 opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 </li>
 <li>手动创建容器网络：docker network create metersphere_ms-network </li>
 <li>重启服务器：msctl reload</li>
 </ul>
 </div>
 <h2 id="41">41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？<a class="headerlink" href="#41" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。
-- 修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。
-- 执行 <code>msctl uninstall -v</code> 先进行卸载，再执行 msctl reload 重新创建容器。</p>
+<p>检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。</p>
+<ul>
+<li>修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。</li>
+<li>执行 <code>msctl uninstall -v</code> 先进行卸载，再执行 msctl reload 重新创建容器。</li>
+</ul>
 </div>
 
 
