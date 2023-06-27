@@ -35,7 +35,10 @@
 !!! ms-abstract ""
 
     - [MeterSphere 和 Jenkins 实现流水线集成](https://kb.fit2cloud.com/?p=251)
-
+    -  [MeterSphere之浏览器录制插件：chrome-extensions](https://kb.fit2cloud.com/?p=267)
+    -  [MeterSphere 接口自动化插件基础开发教程](https://kb.fit2cloud.com/?p=272)
+    -  [MeterSphere 之 IDEA 接口同步插件](https://kb.fit2cloud.com/?p=269)
+    -  [Metersphere Selenium IDE插件录制UI脚本](https://kb.fit2cloud.com/?p=153)
 ## 5 脚本引用
 !!! ms-abstract ""
 
