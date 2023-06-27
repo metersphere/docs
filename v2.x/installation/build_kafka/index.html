@@ -21,7 +21,7 @@
         <link rel="next" href="../build_data_streaming/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -864,69 +864,35 @@
       
         <li class="md-nav__item">
   <a href="#1-kraft" class="md-nav__link">
-    1 kraft 架构
+    1 kraft 架构的好处
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-docker-compose-kafkayml" class="md-nav__link">
-    2 docker-compose-kafka.yml
-  </a>
-  
-    <nav class="md-nav" aria-label="2 docker-compose-kafka.yml">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-broker-id" class="md-nav__link">
-    2.1 Broker ID 配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-broker" class="md-nav__link">
-    2.2 Broker 地址
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-controller" class="md-nav__link">
-    2.3 Controller 列表
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-ports" class="md-nav__link">
-    2.4 Ports 配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-id" class="md-nav__link">
-    2.5 集群 ID
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-docker-compose-serveryml" class="md-nav__link">
-    3 docker-compose-server.yml
+  <a href="#2-metersphere" class="md-nav__link">
+    2 部署 MeterSphere 服务
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-env" class="md-nav__link">
-    4 .env 文件配置
+  <a href="#3-docker-compose-kafkayml" class="md-nav__link">
+    3 服务安装完成后，三台服务分别修改docker-compose-kafka.yml 配置文件为集群模式。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-metersphere-docker-kafka-kafka_bootstrap-serversip19092ip29092ip39092" class="md-nav__link">
+    4 分别修改三台 MeterSphere 服务docker配置文件，将使用到 kafka 集群的配置项改为 KAFKA_BOOTSTRAP-SERVERS：ip1:9092,ip2:9092,ip3:9092。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-msctl-reload-kraft" class="md-nav__link">
+    5 所有配置修改完成，msctl reload 生效即可创建 kraft 集群。
   </a>
   
 </li>
@@ -1025,8 +991,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
-        
-          
         
           
         
@@ -2190,138 +2154,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
-          插件使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_10">
-          <span class="md-nav__icon md-icon"></span>
-          插件使用教程
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/chrome_plugin/" class="md-nav__link">
-        浏览器录制插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/jenkins_plugin/" class="md-nav__link">
-        Jenkins 插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/idea_plugin/" class="md-nav__link">
-        IDEA 插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/selenium_ide_plugin/" class="md-nav__link">
-        Selenium IDE 插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/api_test_plugin/" class="md-nav__link">
-        接口测试插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/service_integration_plugin/" class="md-nav__link">
-        服务集成插件
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -2694,69 +2526,35 @@
       
         <li class="md-nav__item">
   <a href="#1-kraft" class="md-nav__link">
-    1 kraft 架构
+    1 kraft 架构的好处
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-docker-compose-kafkayml" class="md-nav__link">
-    2 docker-compose-kafka.yml
-  </a>
-  
-    <nav class="md-nav" aria-label="2 docker-compose-kafka.yml">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-broker-id" class="md-nav__link">
-    2.1 Broker ID 配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-broker" class="md-nav__link">
-    2.2 Broker 地址
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-controller" class="md-nav__link">
-    2.3 Controller 列表
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-ports" class="md-nav__link">
-    2.4 Ports 配置
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-id" class="md-nav__link">
-    2.5 集群 ID
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-docker-compose-serveryml" class="md-nav__link">
-    3 docker-compose-server.yml
+  <a href="#2-metersphere" class="md-nav__link">
+    2 部署 MeterSphere 服务
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-env" class="md-nav__link">
-    4 .env 文件配置
+  <a href="#3-docker-compose-kafkayml" class="md-nav__link">
+    3 服务安装完成后，三台服务分别修改docker-compose-kafka.yml 配置文件为集群模式。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-metersphere-docker-kafka-kafka_bootstrap-serversip19092ip29092ip39092" class="md-nav__link">
+    4 分别修改三台 MeterSphere 服务docker配置文件，将使用到 kafka 集群的配置项改为 KAFKA_BOOTSTRAP-SERVERS：ip1:9092,ip2:9092,ip3:9092。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-msctl-reload-kraft" class="md-nav__link">
+    5 所有配置修改完成，msctl reload 生效即可创建 kraft 集群。
   </a>
   
 </li>
@@ -2782,9 +2580,11 @@
   <h1>部署Kafka集群</h1>
 
 <div class="admonition ms-abstract">
-<p>Kafka 3.0 之前的架构: 元数据在 zookeeper 中，运行时动态选举 controller，由 controller 进行 Kafka 集群管理。kraft 模式架构: 不再依赖 zookeeper 集群，而是用三台 controller 节点代替 zookeeper，元数据保存在 controller 中，由 controller 直接进行 Kafka 集群管理。</p>
+<p>MeterSphere 配置 kafka 集群方案采用安装包自带的 kafka3.4 配置集群。本方案分别部署了三个独立的 MeterSphere 服务，然后把这三个独立的 MeterSphere 的 kafka 关联成集群。如需做流量转发可以将三个服务配置到 NGINX 做流量转发。<br/>
+Kafka 3.0 之前的架构: 元数据在 zookeeper 中，运行时动态选举 controller，由 controller 进行 Kafka 集群管理。kraft 模式架构: 不再依赖 zookeeper 集群，而是用三台 controller 节点代替 zookeeper，元数据保存在 controller 中，由 controller 直接进行 Kafka 集群管理。<br />
+Kafka 集群提供了高可靠性、高吞吐量、水平扩展性、容错性、实时处理和持久性存储等优势，使其成为卓越的分布式消息队列和数据流平台，在大规模数据处理、实时数据管道和流式处理等方面发挥着关键作用。</p>
 </div>
-<h2 id="1-kraft">1 kraft 架构<a class="headerlink" href="#1-kraft" title="Permanent link">&para;</a></h2>
+<h2 id="1-kraft">1 kraft 架构的好处<a class="headerlink" href="#1-kraft" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <ul>
 <li>Kafka 不再依赖外部框架，而是能够独立运行。 <br></li>
@@ -2793,91 +2593,84 @@
 <li>后续版本升级方便，不用和 zookeeper 一起维护。</li>
 </ul>
 </div>
-<h2 id="2-docker-compose-kafkayml">2 docker-compose-kafka.yml<a class="headerlink" href="#2-docker-compose-kafkayml" title="Permanent link">&para;</a></h2>
+<h2 id="2-metersphere">2 部署 MeterSphere 服务<a class="headerlink" href="#2-metersphere" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>docker-compose-kafka.yml 配置
-<div class="highlight"><pre><span></span><code>version: &quot;2.1&quot;
-services:
-  kafka:
-    image: &#39;${MS_IMAGE_PREFIX}/kafka:3.2.0&#39;
-    container_name: kafka
-    ports:
-      - &#39;${MS_KAFKA_PORT}:${MS_KAFKA_PORT}&#39;
-    healthcheck:
-      test: [&quot;CMD&quot;, &quot;bash&quot;, &quot;-c&quot;, &quot;&lt; /dev/tcp/localhost/9093&quot;]
-      interval: 6s
-      timeout: 10s
-      retries: 20
-    restart: always
-    environment:
-      KAFKA_ENABLE_KRAFT: &#39;yes&#39;
-      KAFKA_BROKER_ID: 1
-      ALLOW_PLAINTEXT_LISTENER: &#39;yes&#39;
-      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://${MS_KAFKA_HOST}:${MS_KAFKA_PORT}
-      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@127.0.0.1:9093
-      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
-      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
-      KAFKA_CFG_PROCESS_ROLES: broker,controller
-      KAFKA_CFG_LOG_RETENTION_HOURS: 64
-      KAFKA_CFG_MAX_REQUEST_SIZE: 52428800
-      KAFKA_CFG_MESSAGE_MAX_BYTES: 52428800
-      KAFKA_CFG_REPLICA_FETCH_MAX_BYTES: 52428800
-      KAFKA_CFG_FETCH_MESSAGE_MAX_BYTES: 52428800
-      KAFKA_CFG_PARTITION_FETCH_BYTES: 52428800
-      FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS: &#39;true&#39;
-    networks:
-      - ms-network
-  ms-data-streaming:
-    depends_on:
-      kafka:
-        condition: service_healthy
+<p>申请三台服务器分别部署 MeterSphere 服务，部署步骤请参考 <a href="../offline_installation/">Linux单机部署离线安装</a>。</p>
+</div>
+<h2 id="3-docker-compose-kafkayml">3 服务安装完成后，三台服务分别修改docker-compose-kafka.yml 配置文件为集群模式。<a class="headerlink" href="#3-docker-compose-kafkayml" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p>vi /opt/metersphere/docker-compose-kafka.yml 配置
+<div class="highlight"><pre><span></span><code>    version: &quot;2.1&quot;
+  services:
+    kafka:
+      image: &#39;${MS_IMAGE_PREFIX}/kafka:3.4.0&#39;
+      container_name: kafka
+      ports:
+        - &#39;${MS_KAFKA_PORT}:9092&#39;
+        - &#39;9093:9093&#39;     #开放9093端口
+      healthcheck:
+        test: [&quot;CMD&quot;, &quot;bash&quot;, &quot;-c&quot;, &quot;&lt; /dev/tcp/localhost/9093&quot;]
+        interval: 6s
+        timeout: 10s
+        retries: 50
+      restart: always
+      environment:
+        KAFKA_ENABLE_KRAFT: &#39;yes&#39;
+        KAFKA_BROKER_ID: 3        #标识 Kafka 集群中的每个 Broker（代理）的唯一ID三个服务器上配置分别为 1 2 3 
+        KAFKA_KRAFT_CLUSTER_ID: LelM2dIFQkiUFVXCECqRWA  #集群配置一个集群ID
+        ALLOW_PLAINTEXT_LISTENER: &#39;yes&#39;
+        KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://10.1.11.58:9092  #roker 对外暴露的地址，需要填写每个节点真实的 ip 和端口
+        KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@10.1.11.53:9093,2@10.1.11.54:9093,3@10.1.11.58:9093  #所有的 controller 列表，三个配置文件都填一样。格式：1@ip1:9093，2@ip2:9093，3@ip3:9093
+        KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+        KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
+        KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+        KAFKA_CFG_PROCESS_ROLES: broker,controller
+        KAFKA_CFG_LOG_RETENTION_HOURS: 64
+        KAFKA_CFG_MAX_REQUEST_SIZE: 52428800
+        KAFKA_CFG_MESSAGE_MAX_BYTES: 52428800
+        KAFKA_CFG_REPLICA_FETCH_MAX_BYTES: 52428800
+        KAFKA_CFG_FETCH_MESSAGE_MAX_BYTES: 52428800
+        KAFKA_CFG_PARTITION_FETCH_BYTES: 52428800
+        KAFKA_HEAP_OPTS: &#39;-Xmx512m -Xms256m&#39;
+        FORMAT_MESSAGES_PATTERN_DISABLE_LOOKUPS: &#39;true&#39;
+      networks:
+        - ms-network
+    data-streaming:
+      depends_on:
+        kafka:
+          condition: service_healthy
 </code></pre></div>
-以 v2.1.0 版本为例，KAFKA_ENABLE_KRAFT: 'yes'，默认允许 kraft 集群模式，我们只需要把其他节点加入到集群中即可。需要修改的配置项包括 KAFKA_CFG_ADVERTISED_LISTENERS、KAFKA_CFG_CONTROLLER_QUORUM_VOTERS、KAFKA_BROKER_ID、ports。需要添加的配置项包括 KAFKA_KRAFT_CLUSTER_ID。</p>
+以 v2.10.0 版本为例，KAFKA_ENABLE_KRAFT: 'yes'，默认允许 kraft 集群模式，我们只需要把其他节点加入到集群中即可。需要修改的配置项包括 KAFKA_CFG_ADVERTISED_LISTENERS、KAFKA_CFG_CONTROLLER_QUORUM_VOTERS、KAFKA_BROKER_ID需要添加的配置项包括 KAFKA_KRAFT_CLUSTER_ID、ports 9093端口；具体内容见上述配置文件注释说明。</p>
 </div>
-<h3 id="21-broker-id">2.1 Broker ID 配置<a class="headerlink" href="#21-broker-id" title="Permanent link">&para;</a></h3>
+<p><img alt="配置主机1" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA1.png" width="900px" />
+<img alt="配置主机2" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA2.png" width="900px" />
+<img alt="配置主机3" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA3.png" width="900px" /></p>
+<h2 id="4-metersphere-docker-kafka-kafka_bootstrap-serversip19092ip29092ip39092">4 分别修改三台 MeterSphere 服务docker配置文件，将使用到 kafka 集群的配置项改为 KAFKA_BOOTSTRAP-SERVERS：ip1:9092,ip2:9092,ip3:9092。<a class="headerlink" href="#4-metersphere-docker-kafka-kafka_bootstrap-serversip19092ip29092ip39092" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>三个节点的 docker-compose-kafka.yml 文件中，KAFKA_BROKER_ID 值分别为1、2、3。<br></p>
+<p>cd /opt/metersphere 需修改文件:</p>
+<ul>
+<li>vi docker-compose-project-management.yml </li>
+<li>vi docker-compose-ui-test.yml</li>
+<li>vi docker-compose-gateway.yml</li>
+<li>vi docker-compose-workstation.yml</li>
+<li>vi docker-compose-report-stat.yml</li>
+<li>vi docker-compose-api-test.yml</li>
+<li>vi docker-compose-seleniarm.yml </li>
+<li>vi docker-compose-system-setting.yml</li>
+<li>vi docker-compose-data-streaming.yml</li>
+<li>vi docker-compose-performance-test.yml</li>
+<li>vi docker-compose-test-track.yml</li>
+</ul>
 </div>
-<p><img alt="配置" height:_80_="height:&quot;80%&quot;" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_1.png" width="600px" /></p>
-<h3 id="22-broker">2.2 Broker 地址<a class="headerlink" href="#22-broker" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<p>这个配置是 broker 对外暴露的地址，需要填写每个节点真实的 ip 和端口。<br></p>
-</div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_2.png" width="900px" /></p>
-<h3 id="23-controller">2.3 Controller 列表<a class="headerlink" href="#23-controller" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<p>这个是所有的 controller 列表，三个配置文件都填一样。格式：1@ip1:9093，2@ip2:9093，3@ip3:9093</p>
-</div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_3.png" width="900px" /></p>
-<h3 id="24-ports">2.4 Ports 配置<a class="headerlink" href="#24-ports" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<p>docker-compose-kafka.yml 文件中，默认没有对外暴露 9093 端口，所以需要手动修改，暴露出来。</p>
-</div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_4.png" width="900px" /></p>
-<h3 id="25-id">2.5 集群 ID<a class="headerlink" href="#25-id" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<p>必须给集群配置一个集群ID，否则会报错：Unexpected error INCONSISTENT_CLUSTER_ID in VOTE response: InboundResponse。<br>
-默认没有该配置，所以需要手动添加，三个节点的配置保持一致。</p>
-</div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_5.png" width="900px" /></p>
-<h2 id="3-docker-compose-serveryml">3 docker-compose-server.yml<a class="headerlink" href="#3-docker-compose-serveryml" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p>这里要配置多个 kafka 地址，service:ms-server 和 service:ms-data-streaming 中都要修改该配置，格式：ip1:9092，ip2:9092，ip3:9092。</p>
-</div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_6.png" width="900px" /></p>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_7.png" width="900px" /></p>
-<h2 id="4-env">4 .env 文件配置<a class="headerlink" href="#4-env" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p>保持默认配置，依然使用内置 Kafka，保持 MS_EXTERNAL_KAFKA=false，只是在 docker-compose-kafka.yml 和 docker-compose-server.yml 中 Kafka 相关参数都写死了，没有引用 .env 中的环境变量。<br></p>
-</div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_8.png" width="900px" /></p>
+<p><img alt="配置" src="../../img/installation/dis_pressure/%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE.png" width="900px" /></p>
+<h2 id="5-msctl-reload-kraft">5 所有配置修改完成，msctl reload 生效即可创建 kraft 集群。<a class="headerlink" href="#5-msctl-reload-kraft" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>以上内容配置好之后，使用 msctl reload 命令重新加载配置文件，即可创建 kraft 集群。</p>
 </div>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_9.png" width="900px" /></p>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_10.png" width="900px" /></p>
-<p><img alt="配置" src="../../img/installation/dis_pressure/kafka%E9%85%8D%E7%BD%AE_11.png" width="900px" /></p>
+<p><img alt="配置" src="../../img/installation/dis_pressure/reload.png" width="900px" />
+<img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A41.png" width="900px" /></p>
+<p><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A42.png" width="900px" /></p>
+<p><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A4.png" width="900px" /></p>
 
 
   
@@ -2971,7 +2764,7 @@ services:
     
     
 
-      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
 <script>

@@ -21,7 +21,7 @@
         <link rel="next" href="../test_track/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -922,8 +922,6 @@
       <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
-        
-          
         
           
         
@@ -2087,138 +2085,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
-          插件使用教程
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_10">
-          <span class="md-nav__icon md-icon"></span>
-          插件使用教程
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/chrome_plugin/" class="md-nav__link">
-        浏览器录制插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/jenkins_plugin/" class="md-nav__link">
-        Jenkins 插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/idea_plugin/" class="md-nav__link">
-        IDEA 插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/selenium_ide_plugin/" class="md-nav__link">
-        Selenium IDE 插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/api_test_plugin/" class="md-nav__link">
-        接口测试插件
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_manual/plugin_use/service_integration_plugin/" class="md-nav__link">
-        服务集成插件
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -3272,9 +3138,22 @@ systemctl daemon-reload
 <div class="admonition ms-abstract">
 <p>sql 初始化失败导致，需要连接 metersphere 数据库手动执行sql。</p>
 <ul>
-<li>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration">https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration</a> 下载对应文件名带 86 的 flyway sql</li>
-<li>使用navicat 数据库连接工具，默认账号 root/Password123@mysql 选择数据库名为 metersphere手动一条条执行下sql</li>
-<li>全部执行成功后修改 metersphere_version 表对应版本的 success 值为1，然后 msctl reload 重启服务即可</li>
+<li>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration">https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration</a> 下载对应文件名带 86 的 flyway sql。此处链接v2.3.1为安装的版本号，如果不是改版本可切换到目标版本再下载sql文件.
+<div class="lightgallery"><a data-sub-html=" 安装部署-500错误" href="../../img/faq/sql1.png"><img alt=" 安装部署-500错误" src="../../img/faq/sql1.png" width="900px" /></a></div></li>
+<li>将文件上传到 MeterSphere 服务器，并将sql文件 copy 到容器中
+<div class="highlight"><pre><span></span><code>    #将备份的sql数据复制至mysql容器
+    docker cp V86__v1.10.1_release.sql mysql:/
+    #使用 metersphere 并执行sql
+    docker exec -it mysql bash
+    mysql -uroot -pPassword123@mysql
+    use metersphere;
+    #导入数据库文件
+    source /V86__v1.10.1_release.sql
+</code></pre></div>
+ <div class="lightgallery"><a data-sub-html=" 安装部署-500错误" href="../../img/faq/sql12.png"><img alt=" 安装部署-500错误" src="../../img/faq/sql12.png" width="900px" /></a></div></li>
+<li>全部执行成功后修改 metersphere_version 表对应版本的 success 值为1，退出mysql容器然后 msctl reload 重启服务即可。
+ <code>update metersphere_version set success=1  where version=86;</code>
+ <div class="lightgallery"><a data-sub-html=" 安装部署-500错误" href="../../img/faq/sql3.png"><img alt=" 安装部署-500错误" src="../../img/faq/sql3.png" width="900px" /></a></div></li>
 </ul>
 </div>
 <h2 id="10">10 如何备份数据库?<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
@@ -3607,7 +3486,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
     
     
 
-      <script src="../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
 <script>
