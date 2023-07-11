@@ -149,17 +149,9 @@
 !!! ms-abstract ""
     在被测服务器上安装 node-exporter 服务，然后在 性能测试-高级配置 里添加监控，填写被测服务器上 node-exporter 服务的 ip 和端口以及监控项。详细操作见[性能测试-监控](../user_manual/load_test/load_test.md)
 
-## 21 忘记 admin 密码如何处理？
+## 21 忘记  密码如何处理？
 !!! ms-abstract ""
-    MeterSphere 普通用户忘记密码，管理员可以在系统设置-用户页面中进行重置。如果 admin 忘记密码，则需要通过数据库操作进行重置。
-    ```
-     进入数据库容器（如果使用外部数据库，则使用外部数据库的密码进行连接）
-    # docker exec -it mysql bash，再登录mysql -uroot -pPassword123@mysql
-     使用数据库
-    # use metersphere;
-     更新密码为metersphere： 
-    # update user set password='3259a9d7f208ef9690025d1432558c5b' where id='admin';
-    ```
+    MeterSphere 普通用户忘记密码，管理员可以在系统设置-用户页面中进行修改面膜。
 
 ## 22 系统运行一段时间后磁盘可以清理哪些无用的文件来释放磁盘
 !!! ms-abstract ""
