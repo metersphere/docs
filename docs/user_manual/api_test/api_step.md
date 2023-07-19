@@ -202,7 +202,7 @@
 
     **断言配置**：
     
-        - XPath 表达式：//foo:company[@id=10]='IBM'
+        - XPath 表达式：//foo:company[@id=10]/text()='IBM'
 
 ### 5.5 响应时间断言 
 !!! ms-abstract "" 

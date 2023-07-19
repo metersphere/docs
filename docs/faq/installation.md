@@ -59,7 +59,7 @@
 !!! ms-abstract ""
     sql 初始化失败导致，需要连接 metersphere 数据库手动执行sql。
 
-    * 到 github 源码上 https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration 下载对应文件名带 86 的 flyway sql。此处链接v2.3.1为安装的版本号，如果不是改版本可切换到目标版本再下载sql文件.
+    * 到 github 源码上 https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration 下载对应文件名带 86 的 flyway sql。此处链接v2.3.1为安装的版本号，如果不是该版本，可切换到目标版本再下载sql文件.
     ![! 安装部署-500错误](../img/faq/sql1.png){ width="900px" }
     *  将文件上传到 MeterSphere 服务器，并将sql文件 copy 到容器中
     ```
@@ -73,7 +73,7 @@
         source /V86__v1.10.1_release.sql
     ```
      ![! 安装部署-500错误](../img/faq/sql12.png){ width="900px" }
-    * 全部执行成功后修改 metersphere_version 表对应版本的 success 值为1，退出mysql容器然后 msctl reload 重启服务即可。
+    * 全部执行成功后，修改 metersphere_version 表对应版本 86 的 success 值为1，退出mysql容器然后 msctl reload 重启服务即可。
      ```
      update metersphere_version set success=1  where version=86;
     ```
