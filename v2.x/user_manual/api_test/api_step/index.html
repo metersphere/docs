@@ -3026,7 +3026,7 @@ vars.remove(&quot;VAR3&quot;);
 </code></pre></div>
 <strong>断言需求</strong>：判断响应体中的 id 为 10 的公司名称为 <code>IBM</code></p>
 <p><strong>断言配置</strong>：</p>
-<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">XPath</span><span class="w"> </span><span class="n">表达式</span><span class="err">：</span><span class="o">//</span><span class="nl">foo</span><span class="p">:</span><span class="n">company</span><span class="o">[</span><span class="n">@id=10</span><span class="o">]/</span><span class="nc">text</span><span class="p">()</span><span class="o">=</span><span class="s1">&#39;IBM&#39;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">XPath</span><span class="w"> </span><span class="n">表达式</span><span class="err">：</span><span class="o">/</span><span class="cm">/*[local-name()=&#39;company&#39; and @id=&quot;10&quot;]/text()=&quot;IBM&quot;</span>
 </code></pre></div>
 
 </div>
