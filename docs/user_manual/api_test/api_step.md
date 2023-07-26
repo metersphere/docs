@@ -202,7 +202,7 @@
 
     **断言配置**：
     
-        - XPath 表达式：//*[local-name()='company' and @id="10"]/text()
+        - XPath 表达式：//*[local-name()='company' and @id="10"]/text()="IBM"  
 
 ### 5.5 响应时间断言 
 !!! ms-abstract "" 
