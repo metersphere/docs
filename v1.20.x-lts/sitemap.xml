@@ -2,482 +2,482 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/automation_plugin_dev/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/awesome-jmeter/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/dev_manual/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/enterprise/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/system_arch/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/about/changelog/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/about/contact/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/about/security_bulletins/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/case_studies/user_cases/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/api_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/enterprise/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/installation/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/load_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/report_statistics/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/service_integration/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/system_management/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/faq/test_track/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/backup_data/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/build_data_streaming/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/build_kafka/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/build_node_controller/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/cli/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/kubernetes_installation/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/network_port/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/offline_installation/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/offline_installation_mac/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/offline_installation_windows/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/offline_upgrade/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/online_installation/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/online_upgrade/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/pre_work/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/installation/pressure_work/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/quick_start/api_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/quick_start/create_project/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/quick_start/load_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/quick_start/quick_start/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/quick_start/test_track/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/quick_start/ui_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/teach_video/video_index/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/tutorial/use_tutorial/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/access_matrix/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/general/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/api_automation/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/api_definition/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/api_detail/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/api_step/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/functions/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/home/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/intro/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/api_test/test_report/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/load_test/home/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/load_test/intro/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/load_test/load_test/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/load_test/test_report/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/my_desk/attention/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/my_desk/created/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/my_desk/dashboard/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/my_desk/todo/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/plugin_use/api_test_plugin/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/plugin_use/chrome_plugin/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/plugin_use/idea_plugin/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/plugin_use/jenkins_plugin/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/plugin_use/selenium_ide_plugin/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/application_management/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/customcode_snippets/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/false_library/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/file_management/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/notice_management/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/operation_log/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/project_environment/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/project_info/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/project_user/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/template_management/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/usergroup_permission/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/project_management/version%20management/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/report_statistics/project_report/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/report_statistics/project_statistics/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/report_statistics/report/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/system_management/intro/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/system_management/system/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/system_management/workspace/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/home/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/intro/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/test_case/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/test_case_review/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/test_defect/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/test_plan/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/test_report/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/test_track/test_case/test_case/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/ui_test/info/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/ui_test/intro/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/ui_test/ui_automation/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/ui_test/ui_element_store/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://metersphere.io/v1.20.x-lts/user_manual/ui_test/ui_test_report/</loc>
-         <lastmod>2023-05-26</lastmod>
+         <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

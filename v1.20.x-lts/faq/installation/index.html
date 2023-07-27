@@ -21,7 +21,7 @@
         <link rel="next" href="../test_track/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3362,7 +3373,7 @@ nginx.ingress.kubernetes.io/proxy-body-size: 50m
 3. 保存后重启nginx，问题解决
 </code></pre></div>
 <h2 id="41-ui-f12-websocket-websocket-connection-to-wssxxxfit2cloudcomws4445ba22-failed">41 调试单接口、接口自动化场景、UI 场景时，页面报 “连接异常，请检查环境配置”，或者 “一直加载” ，按 F12，打开浏览器控制台可以看到 “WebSocket 连接失败，失败信息为 “WebSocket connection to 'wss://xxx.fit2cloud.com/ws/4445ba22' failed:”<a class="headerlink" href="#41-ui-f12-websocket-websocket-connection-to-wssxxxfit2cloudcomws4445ba22-failed" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html=" WebSocket连接异常" href="../../img/faq/websocket%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8.png"><img alt=" WebSocket连接异常" src="../../img/faq/websocket%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/websocket%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! WebSocket连接异常" src="../../img/faq/websocket%E8%BF%9E%E6%8E%A5%E5%BC%82%E5%B8%B8.png" /></a></p>
 <div class="highlight"><pre><span></span><code>解决方案：metersphere 的内部接口和 UI 请求默认使用 websocket 协议，如果 metersphere 访问使用 nginx 做反向代理的话，需要在 nginx 加上 websocket 配置
 
 server{
@@ -3388,7 +3399,7 @@ server{
 2.是不是打开了代理，如 fidder、charles 等工具 <br>
 3.是不是使用 <a href="https://ip:8081">https://ip:8081</a> 被拦截了,使用 <a href="http://ip:8081">http://ip:8081</a> 就行 <br></p>
 <h2 id="44-500-javaxservletservletexception-filtered-request-failed">44 升级后服务正常，但是访问页面报500 javax.servlet.ServletException: Filtered request failed<a class="headerlink" href="#44-500-javaxservletservletexception-filtered-request-failed" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html=" 安装部署-500错误" href="../../img/faq/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-500%E9%94%99%E8%AF%AF.png"><img alt=" 安装部署-500错误" src="../../img/faq/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-500%E9%94%99%E8%AF%AF.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-500%E9%94%99%E8%AF%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-500%E9%94%99%E8%AF%AF.png" /></a></p>
 <p>1.清浏览器缓存，重新打开浏览器进行访问 <br>
 2.清除下 redis 数据<br>
 <div class="highlight"><pre><span></span><code>docker exec -it redis sh
@@ -3397,7 +3408,7 @@ auth Password123@redis
 flushall
 </code></pre></div></p>
 <h2 id="45-javaiofilenotfoundexceptionoptmeterspherelogsmeterspherems-jmeter-run-loglogno-such-file-or-directory">45 日志中出现 java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)<a class="headerlink" href="#45-javaiofilenotfoundexceptionoptmeterspherelogsmeterspherems-jmeter-run-loglogno-such-file-or-directory" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html=" 安装部署-500错误" href="../../img/faq/FileNotFoundException.jpg"><img alt=" 安装部署-500错误" src="../../img/faq/FileNotFoundException.jpg" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/FileNotFoundException.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/FileNotFoundException.jpg" /></a></p>
 <p>检查下 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere</p>
 <h2 id="46-k8s">46 k8s 中如何控制数据库的连接数<a class="headerlink" href="#46-k8s" title="Permanent link">&para;</a></h2>
 <p>1.可在名称为 metersphere-config 的 ConfigMap 文件里，DATABASE 处新增如下两行参数 <br>
@@ -3407,7 +3418,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 </code></pre></div></p>
 <h2 id="47-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting">47 安装时出现 Encountered error while bringing up the project, msctl status 时看到 mysql一直在 Restarting<a class="headerlink" href="#47-encountered-error-while-bringing-up-the-project-msctl-status-mysql-restarting" title="Permanent link">&para;</a></h2>
 <p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，msctl reload 即可 <br>
-<div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/mysql_yml.jpg"><img alt=" metersphere导入格式" src="../../img/faq/mysql_yml.jpg" /></a></div></p>
+<a class="glightbox" href="../../img/faq/mysql_yml.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/mysql_yml.jpg" /></a></p>
 <h2 id="48-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space">48 Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space<a class="headerlink" href="#48-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" title="Permanent link">&para;</a></h2>
 <p>1.docker network prune 清除子网网段; <br>
 2.docker network create metersphere_ms-network ;<br>
@@ -3417,7 +3428,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 <p>安装包放的目录位置不对，将 metersphere-offcial-XX.tar.gz 包放到外面(如 /tmp 目录下)，解压执行 /bin/bash install.sh 即可。</p>
 <h2 id="50-javalangoutofmemoryerrorjava-heap-space">50 在安装部署时，后台报 java.lang.OutOfMemoryError:Java heap space<a class="headerlink" href="#50-javalangoutofmemoryerrorjava-heap-space" title="Permanent link">&para;</a></h2>
 <p>在 docker-compose-server.yml 文件中，增加 JAVA_OPTIONS: -Xms256m -Xmx4096m -Xmn256m 的参数
-<div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/java_heap_space.jpg"><img alt=" metersphere导入格式" src="../../img/faq/java_heap_space.jpg" /></a></div></p>
+<a class="glightbox" href="../../img/faq/java_heap_space.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/java_heap_space.jpg" /></a></p>
 <h2 id="51-error-unable-to-write-to-kafka-in-appender-kafka">51 ERROR Unable to write to Kafka in appender [Kafka]<a class="headerlink" href="#51-error-unable-to-write-to-kafka-in-appender-kafka" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>docker stop kafka 
 docker stop zookeeper 
@@ -3516,11 +3527,11 @@ msctl reload
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -3530,5 +3541,5 @@ msctl reload
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

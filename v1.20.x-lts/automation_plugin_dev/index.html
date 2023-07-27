@@ -21,7 +21,7 @@
         <link rel="next" href="../case_studies/user_cases/">
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2628,7 +2639,7 @@
 <h2 id="1">1 背景介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>从 MeterSphere v1.13 版本开始，接口自动化支持了通过添加插件的方式进行扩展。针对 JMeter 已有的功能或插件，只需要进行很少量的开发工作，就可以将其包装成一个 MeterSphere 上可用的插件。<br></p>
 <p>在 JMeter 中使用 <a href="https://jmeter-plugins.org/wiki/DummySampler/?utm_source=jmeter&amp;utm_medium=helplink&amp;utm_campaign=DummySampler">Dummy Sampler</a> 可以构造出一个请求内容和响应内容完全自定义的请求，通过这种自定义的请求可以比较方便的对各种断言、参数提取等后置处理器进行调试。<br>
-<img alt="Dummy Sampler" src="../img/automation_plugin_dev/Dummy_Sampler.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/Dummy_Sampler.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Dummy Sampler" src="../img/automation_plugin_dev/Dummy_Sampler.png" width="1000px" /></a></p>
 <p>本文将以 JMeter 中的 Dummy Sampler 为例，来介绍下如何开发 MeterSphere 接口自动化插件。</p>
 <h2 id="2">2 开发流程<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="21">2.1 项目初始化<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
@@ -2654,25 +2665,25 @@
 </code></pre></div></p>
 <h3 id="22">2.2 生成前端表单<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
 <p>在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照这 JMeter 中该步骤的配置页面，使用 <a href="http://www.form-create.com/designer/?fr=home">表单生成器</a> 生成前端表单的 json 文件。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" width="1000px" /></a></p>
 <p>点击表单生成器右上角的【生成JSON】按钮，将内容保存到 src\main\resources\json\ui_dummy.json 文件中；点击右上角的【生成Options】按钮，将内容保存到 src\main\resources\json\ui_form.json 文件中。对于没有默认值的字段，可以手动编辑下 json 文件增加一个空的默认值，避免出现空指针异常。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" width="1000px" /></a></p>
 <h3 id="23">2.3 初始化插件资源<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
 <p>在 src\main\java\io\metersphere\plugin\dummy\UiScriptApiImpl.java 中使用上面生成的表单 json，对插件内容进行初始化。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" width="1000px" /></a></p>
 <h3 id="24-jmeter-hashtree">2.4 转换生成 JMeter HashTree<a class="headerlink" href="#24-jmeter-hashtree" title="Permanent link">&para;</a></h3>
 <p>创建与上一步对应的初始化 UiScript 对象时指定类名一致的 io.metersphere.plugin.dummy.sampler.MsDummySampler 类，在该类中完成前端表单数据到 JMeter HashTree 的转换。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" width="1000px" /></p>
-<p><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" width="1000px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" width="1000px" /></a></p>
 <p>生成 DummySampler 对象时，guiclass、testclass 及各个属性对应的字段，可以通过创建一个包含 DummySampler 步骤的 jmx 脚本，以文本模式打开脚本快速获取。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" width="1000px" /></a></p>
 <h3 id="25">2.5 收尾打包<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
 <p>增加一个与打包后的 jar 包同名的文件 src\main\resources\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies 指定插件入口。再补充一些其他的必要内容后就可以打包了。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" width="1000px" /></a></p>
 <h3 id="26">2.6 上传测试<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
 <p>打包后将 target\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies.jar 在 MeterSphere 的插件管理页面进行上传，上传成功后就可以在接口自动化中看到插件提供的步骤。<br>
-<img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" width="1000px" /></p>
-<p><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" width="1000px" /></p>
+<a class="glightbox" href="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" width="1000px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" width="1000px" /></a></p>
 <p>该插件已提交到了 <a href="https://github.com/metersphere/metersphere-plugin-DummySampler">MeterSphere</a> 仓库</p>
 
 
@@ -2763,11 +2774,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2777,5 +2788,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -21,7 +21,7 @@
         <link rel="next" href="../pre_work/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2761,21 +2772,21 @@
 <p>在应用商店下载 Docker 进行安装，安装后并启动 Docker</p>
 <h3 id="22-docker">2.2 Docker 设置<a class="headerlink" href="#22-docker" title="Permanent link">&para;</a></h3>
 <p>进行 Docker 设置，需要添加 /opt/metersphere 路径 <br>
-<img alt="安装docker" src="../../img/installation/mac-install-docker.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-docker.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装docker" src="../../img/installation/mac-install-docker.png" width="900px" /></a></p>
 <h3 id="23-metersphere">2.3 安装 MeterSphere<a class="headerlink" href="#23-metersphere" title="Permanent link">&para;</a></h3>
 <p>下载安装包，安装包下载链接: <a href="https://community.fit2cloud.com/#/products/metersphere/downloads">https://community.fit2cloud.com/#/products/metersphere/downloads</a> <br>
-<img alt="安装MeterSphere" src="../../img/installation/mac-install-metersphere.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-metersphere.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/mac-install-metersphere.png" width="900px" /></a></p>
 <p>解压安装包 <br>
-<img alt="安装MeterSphere" src="../../img/installation/mac-install-tar.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-tar.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/mac-install-tar.png" width="900px" /></a></p>
 <p>进入解压好的安装包目录 <br>
-<img alt="安装MeterSphere" src="../../img/installation/cd-mac-install.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/cd-mac-install.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/cd-mac-install.png" width="900px" /></a></p>
 <p>执行安装命令 sh install.sh，安装过程中的提示，输入 y  <br>
-<img alt="安装MeterSphere" src="../../img/installation/mac-install-sh.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-sh.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/mac-install-sh.png" width="900px" /></a></p>
 <p>安装完成，查看服务状态 <br>
-<img alt="安装MeterSphere" src="../../img/installation/mac-install-server.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-server.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/mac-install-server.png" width="900px" /></a></p>
 <h2 id="3">3 常见问题<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h3 id="31">3.1 安装过程中发现有如下几种报错情况，具体报错如下<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题1" src="../../img/installation/mac-install-Q1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/mac-install-Q1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题1" src="../../img/installation/mac-install-Q1.png" width="900px" /></a></p>
 <h4 id="311-mac-ip"><font size=4> 3.1.1 由于 mac 系统命令问题，获取本地 ip 失败 </font><a class="headerlink" href="#311-mac-ip" title="Permanent link">&para;</a></h4>
 <p>解决方案：<br>
 该报错可以忽略，安装完成后修改 /opt/metersphere/.env 即可，可参考问题 3.5</p>
@@ -2785,27 +2796,27 @@
 <h4 id="313-no-such-file-or-directory-copy"><font size=4> 3.1.3 提示 No such file or directory，该类错误，都是 copy 文件失败了，需要手动复制一下 </font><a class="headerlink" href="#313-no-such-file-or-directory-copy" title="Permanent link">&para;</a></h4>
 <p>解决方案：<br>
 将安装包路径下 metersphere 文件夹下的全部文件复制到 /opt/metersphere/ 文件下 <br>
-<img alt="解决方法" src="../../img/installation/mac-install-cp.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-cp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="解决方法" src="../../img/installation/mac-install-cp.png" width="900px" /></a></p>
 <p>查看是否复制成功 <br>
-<img alt="解决方法1" src="../../img/installation/mac-install-cp1.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-cp1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="解决方法1" src="../../img/installation/mac-install-cp1.png" width="900px" /></a></p>
 <p>重新执行安装包下的安装命令<br>
-<img alt="解决方法1" src="../../img/installation/mac-install-cp2.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-cp2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="解决方法1" src="../../img/installation/mac-install-cp2.png" width="900px" /></a></p>
 <h3 id="32">3.2 安装过程中的报错日志，创建容器失败，找不到文件或目录<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p><img alt="解决方法1" src="../../img/installation/mac-install-notfound.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/mac-install-notfound.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="解决方法1" src="../../img/installation/mac-install-notfound.png" width="900px" /></a></p>
 <p>解决方案：<br>
 将 /opt/metersphere 目录下的 docker-compose-*.yml 里找【volumes】，将下面定义的路径替换到上面的位置，按照下面要求进行修改。(Mac 下的 docker 不要用单独的 volumes 定义，将下面路径写到上面，下面 volumes 部分可删) <br>
-<img alt="解决方法1" src="../../img/installation/mac-install-volumes.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-volumes.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="解决方法1" src="../../img/installation/mac-install-volumes.png" width="900px" /></a></p>
 <p>之后执行 msctl reload 命令即可 <br></p>
 <h3 id="33-msctl-reload">3.3 执行 msctl reload 命令后，发现有部分容器没有起来<a class="headerlink" href="#33-msctl-reload" title="Permanent link">&para;</a></h3>
 <p>解决方案：<br>
 执行命令 docker logs -f zookeeper (图中使用的是容器 ID)查看该容器日志，发现没有权限 <br>
-<img alt="解决方法1" src="../../img/installation/mac-install-zk.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-zk.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="解决方法1" src="../../img/installation/mac-install-zk.png" width="900px" /></a></p>
 <p>将docker-compose-kafka.yml 文件中的挂载目录为由原来的 /bitnami 改为 /data （注意有两个），然后执行 msctl reload <br>
-<img alt="docker设置" src="../../img/installation/mac-install-zk1.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-zk1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="docker设置" src="../../img/installation/mac-install-zk1.png" width="900px" /></a></p>
 <h3 id="34-ms-prometheus-restarting">3.4、执行完成后发现 ms-prometheus 服务是 Restarting 状态<a class="headerlink" href="#34-ms-prometheus-restarting" title="Permanent link">&para;</a></h3>
 <p>解决方案：<br>
 输入docker logs ms-prometheus，发现没有权限 <br>
-<img alt="docker设置" src="../../img/installation/mac-install-promethus.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-promethus.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="docker设置" src="../../img/installation/mac-install-promethus.png" width="900px" /></a></p>
 <p>手动给 prometheus 目录赋权 <br>
 <div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/prometheus
 chmod +777 /opt/metersphere/data/prometheus
@@ -2814,14 +2825,14 @@ chmod +777 /opt/metersphere/data/prometheus
 <h3 id="35-msctl-status-ms-server">3.5 msctl status 发现 ms-server 服务没有起来<a class="headerlink" href="#35-msctl-status-ms-server" title="Permanent link">&para;</a></h3>
 <p>解决方案：<br>
 输入 docker logs ms-server 发现没成功连接 redis 和 kafka <br>
-<img alt="查看日志" src="../../img/installation/mac-install-redis.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-redis.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="查看日志" src="../../img/installation/mac-install-redis.png" width="900px" /></a></p>
 <p>修改 /opt/metersphere/.env 文件（如图），之后执行 msctl reload <br>
-<img alt="启动Ubuntu" src="../../img/installation/mac-install-env.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-env.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="启动Ubuntu" src="../../img/installation/mac-install-env.png" width="900px" /></a></p>
 <h2 id="4-metersphere">4 访问 MeterSphere<a class="headerlink" href="#4-metersphere" title="Permanent link">&para;</a></h2>
 <p>docker ps 或者 msctl status 查看服务状态，全部都是 Up(healthy) 正常 <br>
-<img alt="status" src="../../img/installation/mac-install-ps.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-ps.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="status" src="../../img/installation/mac-install-ps.png" width="900px" /></a></p>
 <p>浏览器输入 <a href="http://localhost:8081/">http://localhost:8081/</a>，发现可以正常访问 <br>
-<img alt="status" src="../../img/installation/mac-install-localhost.png" width="900px" /></p>
+<a class="glightbox" href="../../img/installation/mac-install-localhost.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="status" src="../../img/installation/mac-install-localhost.png" width="900px" /></a></p>
 
 
   
@@ -2911,11 +2922,11 @@ chmod +777 /opt/metersphere/data/prometheus
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2925,5 +2936,5 @@ chmod +777 /opt/metersphere/data/prometheus
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

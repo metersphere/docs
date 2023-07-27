@@ -21,7 +21,7 @@
         <link rel="next" href="../test_report/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2605,56 +2616,56 @@
 <h2 id="1">1 创建测试资源池<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>通过安装包安装 MeterSphere 后，系统默认使用当前节点创建了名为 <code>LOCAL</code> 测试资源池。关于测试资源池的作用请参考 <a href="../../../faq/load_test/#_1">FAQ</a>。</p>
 <p>如果需要创建新的测试资源池，或向已有资源池中添加节点，请参考 <a href="../../../faq/load_test/#_2">如何向测试资源池中添加节点？</a>
-<div class="lightgallery"><a data-sub-html="测试资源池" href="../../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png"><img alt="测试资源池" src="../../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></div></p>
+<a class="glightbox" href="../../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!测试资源池" src="../../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></p>
 <h2 id="2-url">2 修改当前站点 URL<a class="headerlink" href="#2-url" title="Permanent link">&para;</a></h2>
 <p>性能测试执行过程中 node-controller 节点需要通过配置的 <code>当前站点URL</code> 下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。
-<div class="lightgallery"><a data-sub-html="当前站点URL" href="../../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png"><img alt="当前站点URL" src="../../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" /></a></div></p>
+<a class="glightbox" href="../../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!当前站点URL" src="../../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" /></a></p>
 <h2 id="3">3 创建性能测试<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>进入 <code>性能测试</code>--<code>测试</code> 页面，可选择版本管理 (X-Pack)
-<div class="lightgallery"><a data-sub-html="性能测试版本管理" href="../../../img/system_management/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png"><img alt="性能测试版本管理" src="../../../img/system_management/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png" /></a></div></p>
+<a class="glightbox" href="../../../img/system_management/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试版本管理" src="../../../img/system_management/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png" /></a></p>
 <p>点击<code>创建测试</code>进入性能测试用例创建页面，或点击“编辑”进入性能测试详情页，其界面包含多个页签：<code>场景配置</code>、<code>压力配置</code>、<code>高级配置</code>等。
-<div class="lightgallery"><a data-sub-html="创建性能测试" href="../../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png"><img alt="创建性能测试" src="../../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" /></a></p>
 <h2 id="4">4 场景配置<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p><code>场景配置</code>性能测试基本信息管理，需要填写内容包括测试名称、上传测试脚本或引用接口自动化场景、上传其他性能测试辅助文件（jar 包、cvs、excel、word、pdf 等文件）。</p>
 <p>性能测试脚本支持导入 JMeter JMX测试计划，还支持基于接口测试用例脚本和接口自动化场景一键转性能测试。
-<div class="lightgallery"><a data-sub-html="场景配置" href="../../../img/performance/%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE.png"><img alt="场景配置" src="../../../img/performance/%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!场景配置" src="../../../img/performance/%E5%9C%BA%E6%99%AF%E9%85%8D%E7%BD%AE.png" /></a></p>
 <ul>
 <li>加载性能测试脚本</li>
 </ul>
 <p>在<code>场景列表</code>中点击 <code>引用接口自动化场景</code>，将已有的接口自动化场景添加到性能测试中，或者点击<code>加载JMX文件</code>将JMeter脚本直接导入到性能中。</p>
-<p><div class="lightgallery"><a data-sub-html="加载性能测试脚本" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC.png"><img alt="加载性能测试脚本" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC.png" /></a></div></p>
+<p><a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!加载性能测试脚本" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC.png" /></a></p>
 <ul>
 <li>线程组</li>
 </ul>
 <p>支持两种模式。ThreadGroup 和 ConcurrencyThreadGroup。
-<div class="lightgallery"><a data-sub-html="线程组" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%BA%BF%E7%A8%8B%E7%BB%84.png"><img alt="线程组" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%BA%BF%E7%A8%8B%E7%BB%84.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%BA%BF%E7%A8%8B%E7%BB%84.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!线程组" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%BA%BF%E7%A8%8B%E7%BB%84.png" /></a></p>
 <p>从发压模式来讲ConcurrencyThreadGroup是阶梯加压，ThreadGroup直线指线性加压。
-<div class="lightgallery"><a data-sub-html="加压方式" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E5%8E%8B%E6%96%B9%E5%BC%8F.png"><img alt="加压方式" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E5%8E%8B%E6%96%B9%E5%BC%8F.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E5%8E%8B%E6%96%B9%E5%BC%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!加压方式" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E5%8E%8B%E6%96%B9%E5%BC%8F.png" /></a></p>
 <ul>
 <li>加载资源文件</li>
 </ul>
 <p>如果测试中有使用CSV参数化或者自定义jar包，可点击<code>加载文件</code>将csv文件或者jar添加到平台。
-<div class="lightgallery"><a data-sub-html="加载文件" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6.png"><img alt="加载文件" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!加载文件" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6.png" /></a></p>
 <h2 id="5">5 压力配置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>每一个性能测试场景脚本都可以各自分别进行性能测试压力设置：并发数量、压测时长、RPS 上限（指的是同一时刻最高的并发数量）等配置，同时右侧统计图会根据左侧的设置实时显示每个场景配置走势图。
-<div class="lightgallery"><a data-sub-html="压力配置" href="../../../img/performance/%E5%8E%8B%E5%8A%9B%E9%85%8D%E7%BD%AE.png"><img alt="压力配置" src="../../../img/performance/%E5%8E%8B%E5%8A%9B%E9%85%8D%E7%BD%AE.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E5%8E%8B%E5%8A%9B%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!压力配置" src="../../../img/performance/%E5%8E%8B%E5%8A%9B%E9%85%8D%E7%BD%AE.png" /></a></p>
 <p>点击<code>压力配置</code>设置压测基本的测试数据。资源、组合场景发压策略设定等信息。</p>
 <ul>
 <li>资源池</li>
 </ul>
 <p>资源池：指定测试的测试资源池，系统支持独立主机和 K8s 资源池配置，其可用资源池依据系统的资源池配置。
-<div class="lightgallery"><a data-sub-html="资源池" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B5%84%E6%BA%90%E6%B1%A0.png"><img alt="资源池" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!资源池" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></p>
 <p>参数说明：</p>
 <ul>
 <li>执行顺序</li>
 </ul>
 <p>场景是否顺序执行：因为系统支持多场景组合压测，对于有些场景是有顺序要求的，此需要把开关打开，可以避免脚本 1 没跑完，脚本 2 就启动了。
-<div class="lightgallery"><a data-sub-html="执行顺序" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png"><img alt="执行顺序" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!执行顺序" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.png" /></a></p>
 <ul>
 <li>自动停止开关</li>
 </ul>
 <p><code>自动停止开启</code>：设置此开关开启时，需要指定压测多久后，强制停止测试
-<div class="lightgallery"><a data-sub-html="自动停止开关" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%BC%80%E5%85%B3.png"><img alt="自动停止开关" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%BC%80%E5%85%B3.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%BC%80%E5%85%B3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!自动停止开关" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%81%9C%E6%AD%A2%E5%BC%80%E5%85%B3.png" /></a></p>
 <ul>
 <li>并发数</li>
 </ul>
@@ -2675,12 +2686,12 @@
 
 </li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html="取样器错误后续执行动作" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%96%E6%A0%B7%E5%99%A8%E9%94%99%E8%AF%AF%E5%90%8E%E7%BB%AD%E6%89%A7%E8%A1%8C%E5%8A%A8%E4%BD%9C.png"><img alt="取样器错误后续执行动作" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%96%E6%A0%B7%E5%99%A8%E9%94%99%E8%AF%AF%E5%90%8E%E7%BB%AD%E6%89%A7%E8%A1%8C%E5%8A%A8%E4%BD%9C.png" /></a></div></p>
+<p><a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%96%E6%A0%B7%E5%99%A8%E9%94%99%E8%AF%AF%E5%90%8E%E7%BB%AD%E6%89%A7%E8%A1%8C%E5%8A%A8%E4%BD%9C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!取样器错误后续执行动作" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%96%E6%A0%B7%E5%99%A8%E9%94%99%E8%AF%AF%E5%90%8E%E7%BB%AD%E6%89%A7%E8%A1%8C%E5%8A%A8%E4%BD%9C.png" /></a></p>
 <ul>
 <li>执行方式</li>
 </ul>
 <p>如果设置本次压测需要持续执行多长时间，压测运行时长达到设定的时间就停止压力测试。目前系统提供按小时、分钟、秒来设置。设置本次压测执行的次数，压测运行次数达到设定的次数时，就停止压力测试。
-<div class="lightgallery"><a data-sub-html="执行方式" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F.png"><img alt="执行方式" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!执行方式" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F.png" /></a></p>
 <div class="codehilite"><pre><span></span><code><span class="err">按持续时间</span><span class="o">:</span><span class="err">设置本次压测需要持续执行多长时间，压测运行时长达到设定的时间就停止压力测试。目前系统提供按小时、分钟、秒来设置。</span>
 <span class="err">按迭代次数</span><span class="o">:</span><span class="err">设置本次压测执行的次数，压测运行次数达到设定的次数时，就停止压力测试。</span>
 </code></pre></div>
@@ -2689,32 +2700,32 @@
 <li>RPS设置</li>
 </ul>
 <p>设置 RPS 时，需要先打开 RPS 开关才可以，RPS（Requests per second）：每秒请求数。 如果设置了 RPS 上限，则发压达到这个值后，就不会再继续加压。
-<div class="lightgallery"><a data-sub-html="RPS设置" href="../../../img/performance/%E6%80%A7%E8%83%BD_RPS%E8%AE%BE%E7%BD%AE.png"><img alt="RPS设置" src="../../../img/performance/%E6%80%A7%E8%83%BD_RPS%E8%AE%BE%E7%BD%AE.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_RPS%E8%AE%BE%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!RPS设置" src="../../../img/performance/%E6%80%A7%E8%83%BD_RPS%E8%AE%BE%E7%BD%AE.png" /></a></p>
 <ul>
 <li>Ramp-Up设置</li>
 </ul>
 <p>Ramp-Up 会根据场景配置里的线程组而不同。
-<div class="lightgallery"><a data-sub-html="Ramp-Up" href="../../../img/performance/%E6%80%A7%E8%83%BD_Ramp-Up.png"><img alt="Ramp-Up" src="../../../img/performance/%E6%80%A7%E8%83%BD_Ramp-Up.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_Ramp-Up.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!Ramp-Up" src="../../../img/performance/%E6%80%A7%E8%83%BD_Ramp-Up.png" /></a></p>
 <ul>
 <li>分配策略</li>
 </ul>
 <p>针对有多个节点的资源池，MeterSphere 支持用户自定义设置不同的分配策略。目前分配策略支持自动分配、固定节点、以及自定义。
-<div class="lightgallery"><a data-sub-html="分配策略" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5.png"><img alt="分配策略" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!分配策略" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5.png" /></a></p>
 <ul>
 <li>自动分配</li>
 </ul>
 <p>系统默认为“自动分配”，其核心逻辑是按资源池节点最大并发数占比比例分配,比如“测试资源池”设置如下。
-<div class="lightgallery"><a data-sub-html="自动分配" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D.png"><img alt="自动分配" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!自动分配" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D.png" /></a></p>
 <ul>
 <li>固定节点</li>
 </ul>
 <p>允许用户指定压测仅仅在某一个节点上执行。
-<div class="lightgallery"><a data-sub-html="固定节点" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9B%BA%E5%AE%9A%E8%8A%82%E7%82%B9.png"><img alt="固定节点" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9B%BA%E5%AE%9A%E8%8A%82%E7%82%B9.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9B%BA%E5%AE%9A%E8%8A%82%E7%82%B9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!固定节点" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9B%BA%E5%AE%9A%E8%8A%82%E7%82%B9.png" /></a></p>
 <ul>
 <li>自定义</li>
 </ul>
 <p>支持用户根据需要自定义每个节点执行的情况。
-<div class="lightgallery"><a data-sub-html="自定义" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89.png"><img alt="自定义" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!自定义" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89.png" /></a></p>
 <h2 id="6">6 高级配置<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <p>进入性能测试脚本编辑页面，选择<code>高级配置</code>，进入性能测试高级配置页面。高级设置分为多部分：常规、域名绑定、CSVDataSet、自定义变量、JMeter Properties、System Properties、监控等。</p>
 <p>参数说明</p>
@@ -2722,98 +2733,98 @@
 <li>常规</li>
 </ul>
 <p>进入<code>高级配置</code>页面，最上面的设置可理解为常规信息设置部分, 此包含设置测试脚本的连接超时时间和 HTTP 响应码等信息。下面介绍部分参数信息。
-<div class="lightgallery"><a data-sub-html="常规" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%B8%B8%E8%A7%84.png"><img alt="常规" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%B8%B8%E8%A7%84.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%B8%B8%E8%A7%84.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!常规" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%B8%B8%E8%A7%84.png" /></a></p>
 <ul>
 <li>超时配置</li>
 </ul>
 <p>超时的设置是为了保证数据可以正常地发送到客户端。
-<div class="lightgallery"><a data-sub-html="超时配置" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B6%85%E6%97%B6%E9%85%8D%E7%BD%AE.png"><img alt="超时配置" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B6%85%E6%97%B6%E9%85%8D%E7%BD%AE.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B6%85%E6%97%B6%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!超时配置" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%B6%85%E6%97%B6%E9%85%8D%E7%BD%AE.png" /></a></p>
 <ul>
 <li>聚合时间</li>
 </ul>
 <p>表示报告采集时间也叫打点时间。把鼠标放在“聚合时间”后的“i”按钮上，可以看到系统默认提供信息说明。
-<div class="lightgallery"><a data-sub-html="聚合时间" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%81%9A%E5%90%88%E6%97%B6%E9%97%B4.png"><img alt="聚合时间" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%81%9A%E5%90%88%E6%97%B6%E9%97%B4.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%81%9A%E5%90%88%E6%97%B6%E9%97%B4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!聚合时间" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%81%9A%E5%90%88%E6%97%B6%E9%97%B4.png" /></a></p>
 <ul>
 <li>自定义响应</li>
 </ul>
 <p>表示指在这里设置的响应码，就不统计为失败的接口。系统支持添加多个响应码，按逗号分割。
-<div class="lightgallery"><a data-sub-html="聚合时间" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%93%8D%E5%BA%94.png"><img alt="聚合时间" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%93%8D%E5%BA%94.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%93%8D%E5%BA%94.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!聚合时间" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%93%8D%E5%BA%94.png" /></a></p>
 <ul>
 <li>域名绑定</li>
 </ul>
 <p>使用 JMeter 的时候会涉及到使用域名的情况，为了使脚本更具有通用性，以及发送给其他人时，脚本一样可以直接运行，故需要在运行脚本中添加 hosts 内容，直接从 JMeter 中获取。
-<div class="lightgallery"><a data-sub-html="域名绑定" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A.png"><img alt="域名绑定" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!域名绑定" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A.png" /></a></p>
 <ul>
 <li>CSVDataSet</li>
 </ul>
 <p>性能测试时所需要的参数数据文件，如果所有场景使用一个统一的参数文件，为了避免相同的参数被不同的场景引用造成流程异常。系统会根据压测策略自动来分割 CSV 数据文件里的参数，把不同的参数分配给不同的业务场景。
-<div class="lightgallery"><a data-sub-html="CSVDataSet" href="../../../img/performance/CSVDataSet.png"><img alt="CSVDataSet" src="../../../img/performance/CSVDataSet.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/CSVDataSet.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!CSVDataSet" src="../../../img/performance/CSVDataSet.png" /></a></p>
 <ul>
 <li>自定义变量</li>
 </ul>
 <p>系统支持用户自定义性能测试脚本里所需的变量。不使用时，可以关闭启用开关。
-<div class="lightgallery"><a data-sub-html="自定义变量" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F.png"><img alt="自定义变量" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!自定义变量" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F.png" /></a></p>
 <ul>
 <li>JMeter Properties</li>
 </ul>
 <p>系统支持用户自定义需要关注或使用的任何 JMeter Properties 信息。
-<div class="lightgallery"><a data-sub-html="JMeter_Properties" href="../../../img/performance/JMeter_Properties.png"><img alt="JMeter_Properties" src="../../../img/performance/JMeter_Properties.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/JMeter_Properties.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!JMeter_Properties" src="../../../img/performance/JMeter_Properties.png" /></a></p>
 <ul>
 <li>System Properties</li>
 </ul>
 <p>如果性能测试有用到证书，除了要在资源文件里添加外，还要在System_Properties里进行配置。
-<div class="lightgallery"><a data-sub-html="System_Properties" href="../../../img/performance/System_Properties.png"><img alt="System_Properties" src="../../../img/performance/System_Properties.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/System_Properties.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!System_Properties" src="../../../img/performance/System_Properties.png" /></a></p>
 <ul>
 <li>监控</li>
 </ul>
 <p>系统支持用户自定义配置需要关注任何发压端和被测服务的测试实时监控,目前对于被监控系统需要安装 Prometheus 的监控插件 exporter。
-<div class="lightgallery"><a data-sub-html="监控" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7.png"><img alt="监控" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!监控" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7.png" /></a></p>
 <ul>
 <li>监控配置</li>
 </ul>
 <p>点击“高级配置&gt;&gt;监控&gt;&gt;添加”，可以指定要监控的服务器或压测节点,设置要监控系统的相关信息。点击<code>确认</code>完成设置。
-<div class="lightgallery"><a data-sub-html="监控配置" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7%E9%85%8D%E7%BD%AE.png"><img alt="监控配置" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7%E9%85%8D%E7%BD%AE.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!监控配置" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%9B%91%E6%8E%A7%E9%85%8D%E7%BD%AE.png" /></a></p>
 <h2 id="7">7 性能测试维护管理<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>保存&amp; 执行</li>
 </ul>
 <p>完成性能测试以上的相关配置，点击<code>保存</code>完成性能测试用例的创建,点击<code>保存并执行</code>系统会在保存后，直接运行该性能测试。
-<div class="lightgallery"><a data-sub-html="保存" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98.png"><img alt="保存" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!保存" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98.png" /></a></p>
 <ul>
 <li>性能列表功能</li>
 </ul>
 <p>在性能测试用例列表中可查看到创建的性能测试用例，点击<code>执行</code>、<code>编辑</code>、<code>复制</code>和<code>删除</code>可对性能测试用例进行相应的操作。
-<div class="lightgallery"><a data-sub-html="性能测试编辑" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%BC%96%E8%BE%91.png"><img alt="性能测试编辑" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%BC%96%E8%BE%91.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%BC%96%E8%BE%91.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试编辑" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%BC%96%E8%BE%91.png" /></a></p>
 <ul>
 <li>编辑</li>
 </ul>
 <p>点击<code>编辑</code>性能测试，可进行性能测试的信息修改及执行。同时也可设置执行性能测试的定时任务，设置任务通知可通过钉钉、邮箱和企业微信将性能测试通知到相关人员。
-<div class="lightgallery"><a data-sub-html="性能编辑1" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E7%BC%96%E8%BE%911.png"><img alt="性能编辑1" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E7%BC%96%E8%BE%911.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E7%BC%96%E8%BE%911.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能编辑1" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E7%BC%96%E8%BE%911.png" /></a></p>
 <ul>
 <li>定时任务</li>
 </ul>
 <p>点击<code>定时任务</code>可设置执行性能测试的定时任务。
-<div class="lightgallery"><a data-sub-html="定时任务1" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A11.png"><img alt="定时任务1" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A11.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!定时任务1" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A11.png" /></a></p>
 <p>配置定时任务
-<div class="lightgallery"><a data-sub-html="定时任务2" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A12.png"><img alt="定时任务2" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A12.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!定时任务2" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A12.png" /></a></p>
 <p>配置定时任务通知
-<div class="lightgallery"><a data-sub-html="定时任务3" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A13.png"><img alt="定时任务3" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A13.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!定时任务3" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A13.png" /></a></p>
 <ul>
 <li>性能测试执行</li>
 </ul>
 <p>点击<code>保存并执行</code>进行性能测试的执行，执行完成后可实时查看测试报告,在测试报告中可点击<code>立即停止</code>终止性能测试，可点击<code>再次执行</code>、<code>导出报告</code>和<code>下载JTL</code>等操作功能，对性能测试用例和报告进行相应的操作。
-<div class="lightgallery"><a data-sub-html="性能_保存执行" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98%E6%89%A7%E8%A1%8C.png"><img alt="性能_保存执行" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98%E6%89%A7%E8%A1%8C.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="性能_查看性能测试报告" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%9F%A5%E7%9C%8B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png"><img alt="性能_查看性能测试报告" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%9F%A5%E7%9C%8B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98%E6%89%A7%E8%A1%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能_保存执行" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E4%BF%9D%E5%AD%98%E6%89%A7%E8%A1%8C.png" /></a></p>
+<p><a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%9F%A5%E7%9C%8B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能_查看性能测试报告" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E6%9F%A5%E7%9C%8B%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" /></a></p>
 <ul>
 <li>变更记录</li>
 </ul>
 <p>在性能测试脚本中也可以查看 <code>变更记录</code>。
-<div class="lightgallery"><a data-sub-html="性能_变更记录" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95.png"><img alt="性能_变更记录" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能_变更记录" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E5%8F%98%E6%9B%B4%E8%AE%B0%E5%BD%95.png" /></a></p>
 <ul>
 <li>版本管理 (X-Pack)</li>
 </ul>
 <p>性能测试脚本中也可以进行 <code>版本管理</code>。
-<div class="lightgallery"><a data-sub-html="性能_变更记录" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png"><img alt="性能_变更记录" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png" /></a></div></p>
+<a class="glightbox" href="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能_变更记录" src="../../../img/performance/%E6%80%A7%E8%83%BD_%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86.png" /></a></p>
 
 
   
@@ -2903,11 +2914,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2917,5 +2928,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

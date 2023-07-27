@@ -21,7 +21,7 @@
         <link rel="next" href="../installation/network_port/">
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2594,7 +2605,7 @@
   <h1>系统架构</h1>
 
 <h2 id="_1">整体架构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><img alt="整体架构" src="../img/system-arch.png" /></p>
+<p><a class="glightbox" href="../img/system-arch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="整体架构" src="../img/system-arch.png" /></a></p>
 <h3 id="_2">组件说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong><a href="https://github.com/metersphere/metersphere">Frontend</a></strong>: MeterSphere 的前端工程, 基于 Vue.js 进行开发。</li>
@@ -2612,9 +2623,9 @@
 <li><strong>Selenium Grid</strong>: 为 UI自动化测试提供运行环境，支持分布式拓展。</li>
 </ul>
 <p>各个组件间的关系可参考下图<br>
-<img alt="组件说明" src="../img/components.png" /></p>
+<a class="glightbox" href="../img/components.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="组件说明" src="../img/components.png" /></a></p>
 <h2 id="_3">管理模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><img alt="管理模型" src="../img/management-model.png" /></p>
+<p><a class="glightbox" href="../img/management-model.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="管理模型" src="../img/management-model.png" /></a></p>
 <h3 id="_4">概念说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在团队的实际情况进行灵活的租户体系映射。</p>
 <ul>
@@ -2627,8 +2638,8 @@
 <li><strong>自定义角色</strong>: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。</li>
 </ul>
 <p>不同的角色对应的具体权限，请到【系统设置-&gt;用户组与权限-&gt;设置权限】查看和设置。
-<div class="lightgallery"><a data-sub-html="查看权限" href="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%90.png"><img alt="查看权限" src="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%90.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="查看权限" href="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%902.png"><img alt="查看权限" src="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%902.png" /> </a></div></p>
+<a class="glightbox" href="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%90.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!查看权限" src="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%90.png" /></a></p>
+<p><a class="glightbox" href="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%902.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!查看权限" src="../img/system_management/%E6%9F%A5%E7%9C%8B%E6%9D%83%E9%99%902.png" /></a> </p>
 <h2 id="_5">技术栈<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>后端: <a href="https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm">Spring Boot</a></li>
@@ -2726,11 +2737,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2740,5 +2751,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

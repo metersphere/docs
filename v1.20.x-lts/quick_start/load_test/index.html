@@ -21,7 +21,7 @@
         <link rel="next" href="../../system_arch/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2575,14 +2586,14 @@
 <h2 id="1">1 创建测试资源池<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>通过安装包安装 MeterSphere 后，系统默认使用当前节点创建了名为 <code>LOCAL</code> 测试资源池。关于测试资源池的作用请参考 <a href="../../faq/load_test/#_1">FAQ</a>。</p>
 <p>如果需要创建新的测试资源池，或向已有资源池中添加节点，请参考 <a href="../../faq/load_test/#_2">如何向测试资源池中添加节点？</a>
-<div class="lightgallery"><a data-sub-html="测试资源池" href="../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png"><img alt="测试资源池" src="../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></div></p>
+<a class="glightbox" href="../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!测试资源池" src="../../img/system_management/%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></p>
 <h2 id="2-url">2 修改当前站点 URL<a class="headerlink" href="#2-url" title="Permanent link">&para;</a></h2>
 <p>性能测试执行过程中 node-controller 节点需要通过配置的 <code>当前站点URL</code> 下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。
-<div class="lightgallery"><a data-sub-html="当前站点URL" href="../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png"><img alt="当前站点URL" src="../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" /></a></div></p>
+<a class="glightbox" href="../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!当前站点URL" src="../../img/system_management/%E5%BD%93%E5%89%8D%E7%AB%99%E7%82%B9URL.png" /></a></p>
 <h2 id="3">3 创建性能测试<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>进入 <code>性能测试</code>--<code>测试</code> 页面。</p>
 <p>在性能测试列表中点击 <code>创建性能测试</code>，在 <code>场景配置</code> 点击 <code>引用接口自动化场景</code>，将已有的接口自动化场景添加到性能测试中。
-<div class="lightgallery"><a data-sub-html="创建性能测试" href="../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png"><img alt="创建性能测试" src="../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" /></a></div></p>
+<a class="glightbox" href="../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../img/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" /></a></p>
 <h2 id="4">4 调整压力配置<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>在压力配置页面选择系统自带的 <code>NODE-LOCAL</code> 测试资源池。</p>
 <p>点击展开第一个线程组的配置页面，填入并发参数。</p>
@@ -2604,10 +2615,10 @@
 <p>在 10秒内分 5步增加并发用户</p>
 </li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html="创建性能测试" href="../../img/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png"><img alt="创建性能测试" src="../../img/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../img/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" /></a></p>
 <h2 id="5">5 执行并查看报告<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>点击性能测试配置页面的 <code>保存并执行</code> 按钮，系统自动进入性能测试测试报告页面。当收到测试结果数据后，报告页面将自动更新。
-<div class="lightgallery"><a data-sub-html="性能测试报告" href="../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png"><img alt="性能测试报告" src="../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" /></a></div></p>
+<a class="glightbox" href="../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A.png" /></a></p>
 
 
   
@@ -2697,11 +2708,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2711,5 +2722,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

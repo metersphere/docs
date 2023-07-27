@@ -21,7 +21,7 @@
         <link rel="next" href="../build_data_streaming/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2683,11 +2694,11 @@ echo 1 &gt; myid
 <div class="highlight"><pre><span></span><code>cd /usr/local/zookeeper-cluster/zk/bin
 ./zkServer.sh start
 </code></pre></div>
-<img alt="配置zk启动地址" height="100%" src="../../img/installation/dis_pressure/zk%E5%90%AF%E5%8A%A8.png" width="70%" /> <br>
+<a class="glightbox" href="../../img/installation/dis_pressure/zk%E5%90%AF%E5%8A%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置zk启动地址" height="100%" src="../../img/installation/dis_pressure/zk%E5%90%AF%E5%8A%A8.png" width="70%" /></a> <br>
 查看集群状态
 <div class="highlight"><pre><span></span><code>./zkServer.sh status
 </code></pre></div>
-<img alt="配置zk状态地址" height="100%" src="../../img/installation/dis_pressure/zk%E7%8A%B6%E6%80%81.png" width="70%" /> <br>
+<a class="glightbox" href="../../img/installation/dis_pressure/zk%E7%8A%B6%E6%80%81.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置zk状态地址" height="100%" src="../../img/installation/dis_pressure/zk%E7%8A%B6%E6%80%81.png" width="70%" /></a> <br>
 可以看到，一台作为leader，两台作为follower，zookeeper集群搭建成功。</p>
 <h3 id="14-kafka">1.4 Kafka集群安装<a class="headerlink" href="#14-kafka" title="Permanent link">&para;</a></h3>
 <p>1.4.1 下载安装包 <br></p>
@@ -2725,7 +2736,7 @@ listeners=PLAINTEXT://172.16.150.154:9092  #修改为本机地址
 <p><div class="highlight"><pre><span></span><code>vim /usr/local/kafka-cluster/kafka/bin/kafka-server-start.sh
 在这个字段加入export JMX_PORT=&quot;9999&quot;
 </code></pre></div>
-<img alt="配置监控kafka地址" height="100%" src="../../img/installation/dis_pressure/%E7%9B%91%E6%8E%A7kafka.png" width="70%" /> <br></p>
+<a class="glightbox" href="../../img/installation/dis_pressure/%E7%9B%91%E6%8E%A7kafka.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置监控kafka地址" height="100%" src="../../img/installation/dis_pressure/%E7%9B%91%E6%8E%A7kafka.png" width="70%" /></a> <br></p>
 <p>1.4.8 服务设置开机自启，使用systemctl工具管理（在配置时，请先把原本服务关闭）</p>
 <p><div class="highlight"><pre><span></span><code>先设置zookeeper开机启动
 cd /lib/systemd/system/
@@ -2744,11 +2755,11 @@ WantedBy=multi-user.target
 </code></pre></div>
 然后保存退出</p>
 <p>echo $PATH 找到我们的jdk安装路径</p>
-<p><img alt="配置jdk路径地址" height="100%" src="../../img/installation/dis_pressure/jdk%E8%B7%AF%E5%BE%84.png" width="70%" /> <br>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/jdk%E8%B7%AF%E5%BE%84.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置jdk路径地址" height="100%" src="../../img/installation/dis_pressure/jdk%E8%B7%AF%E5%BE%84.png" width="70%" /></a> <br>
 <div class="highlight"><pre><span></span><code>cd /usr/local/zookeeper-cluster/zk/bin
 vim zkEnv.sh
 </code></pre></div>
-<img alt="配置zk环境地址" height="100%" src="../../img/installation/dis_pressure/zk%E7%8E%AF%E5%A2%83.png" width="70%" /> <br></p>
+<a class="glightbox" href="../../img/installation/dis_pressure/zk%E7%8E%AF%E5%A2%83.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置zk环境地址" height="100%" src="../../img/installation/dis_pressure/zk%E7%8E%AF%E5%A2%83.png" width="70%" /></a> <br></p>
 <p>找到我们第一行的变量，把我们之前部署的java环境添加刷新一下进去在后面插入<br>
 export JAVA_HOME=/usr/local/jdk1.8.0_251，保存退出，然后刷新一下命令<br>
 <div class="highlight"><pre><span></span><code>systemctl daemon-reload 
@@ -2757,7 +2768,7 @@ systemctl enable zookeeper #加入开机自启
 systemctl status zookeeper #检查服务状态
 </code></pre></div></p>
 <p>状态如下就是正确</p>
-<p><img alt="配置zk状态正确地址" height="100%" src="../../img/installation/dis_pressure/zk%E7%8A%B6%E6%80%81%E6%AD%A3%E7%A1%AE.png" width="70%" /> <br></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/zk%E7%8A%B6%E6%80%81%E6%AD%A3%E7%A1%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置zk状态正确地址" height="100%" src="../../img/installation/dis_pressure/zk%E7%8A%B6%E6%80%81%E6%AD%A3%E7%A1%AE.png" width="70%" /></a> <br></p>
 <p>1.4.9 Kafka自启动设置</p>
 <p><div class="highlight"><pre><span></span><code>cd /lib/systemd/system/
 vim kafka.service
@@ -2783,7 +2794,7 @@ systemctl start kafka
 systemctl enable kafka
 systemctl status kafka
 </code></pre></div>
-<img alt="配置kafka状态地址" height="100%" src="../../img/installation/dis_pressure/kafka%E7%8A%B6%E6%80%81.png" width="70%" /> <br></p>
+<a class="glightbox" href="../../img/installation/dis_pressure/kafka%E7%8A%B6%E6%80%81.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置kafka状态地址" height="100%" src="../../img/installation/dis_pressure/kafka%E7%8A%B6%E6%80%81.png" width="70%" /></a> <br></p>
 <p>1.4.10 建议启动Kafka时先重新启动一下Zookeeper，有时间可能会起不来。启动Kafka前必须先要启动Zookeeper。</p>
 <h2 id="2-kafka-manager">2 部署kafka-manager<a class="headerlink" href="#2-kafka-manager" title="Permanent link">&para;</a></h2>
 <p>可以在任意一台Kafka设备部署，Kafka可视化，yaml如下（需要提前安装好Docker环境和docker-compose环境，并下载好images）
@@ -2896,11 +2907,11 @@ kafka-manager:
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2910,5 +2921,5 @@ kafka-manager:
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

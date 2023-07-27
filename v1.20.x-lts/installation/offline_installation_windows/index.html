@@ -21,7 +21,7 @@
         <link rel="next" href="../offline_installation_mac/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2833,21 +2844,21 @@
 <div class="admonition info">
 <p><strong>在 Windows 10 的应用商店里搜索"Ubuntu"并安装：</strong></p>
 </div>
-<p><img alt="安装Ubuntu" src="../../img/installation/windows-install-ubuntu.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/windows-install-ubuntu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装Ubuntu" src="../../img/installation/windows-install-ubuntu.png" width="900px" /></a></p>
 <h3 id="24-ubuntu-wsl">2.4 检测 Ubuntu WSL 版本<a class="headerlink" href="#24-ubuntu-wsl" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">以管理员身份执行：</p>
 <div class="highlight"><pre><span></span><code><span class="n">wsl</span><span class="p">.</span><span class="n">exe</span> <span class="n">-l</span> <span class="n">-v</span>
 </code></pre></div>
 </div>
-<p><img alt="WSL版本1" src="../../img/installation/check-version-1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/check-version-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="WSL版本1" src="../../img/installation/check-version-1.png" width="900px" /></a></p>
 <div class="admonition info">
 <p><strong>示例中安装的 Ubuntu Name 为 "Ubuntu"， 如像上图出现 Ubuntu 版本为 1， 则继续执行命令：</strong>
 <div class="highlight"><pre><span></span><code><span class="n">wsl</span><span class="p">.</span><span class="n">exe</span> <span class="p">-</span><span class="n">-set-version</span> <span class="n">Ubuntu</span> <span class="n">2</span>
 </code></pre></div></p>
 <p><strong>出现下图结果即为成功：</strong></p>
 </div>
-<p><img alt="WSL版本2" src="../../img/installation/check-version-2.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/check-version-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="WSL版本2" src="../../img/installation/check-version-2.png" width="900px" /></a></p>
 <h3 id="25-docker">2.5 安装 Docker<a class="headerlink" href="#25-docker" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>下载<a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe">Docker Desktop for Windows</a>，如果使用的是 macOS，<a href="https://docs.docker.com/desktop/mac/install/">Install Docker Desktop on Mac | Docker Documentation</a> 。</strong> </p>
@@ -2857,7 +2868,7 @@
 <div class="admonition info">
 <p><strong>Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜单下的 WSL INTEGRATION，按下图设置后，点击右下角的 Apply &amp; Restart 即可。</strong></p>
 </div>
-<p><img alt="docker设置" src="../../img/installation/docker-settings.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/docker-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="docker设置" src="../../img/installation/docker-settings.png" width="900px" /></a></p>
 <h3 id="27">2.7 下载安装包<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>请自行下载 MeterSphere 最新版本的离线安装包：</strong> </p>
@@ -2869,7 +2880,7 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su<span class="w"> </span>-
 </code></pre></div>
 </div>
-<p><img alt="启动Ubuntu" src="../../img/installation/launch-ubuntu.png" width="600px" /></p>
+<p><a class="glightbox" href="../../img/installation/launch-ubuntu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="启动Ubuntu" src="../../img/installation/launch-ubuntu.png" width="600px" /></a></p>
 <h3 id="29-docker">2.9 检查 Docker 环境<a class="headerlink" href="#29-docker" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>在 Ubuntu 命令行中执行命令：</strong>
@@ -2877,7 +2888,7 @@
 </code></pre></div></p>
 <p>如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，请根据提示信息解决异常问题。</p>
 </div>
-<p><img alt="docker检测" src="../../img/installation/check-docker.png" width="600px" /></p>
+<p><a class="glightbox" href="../../img/installation/check-docker.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="docker检测" src="../../img/installation/check-docker.png" width="600px" /></a></p>
 <h3 id="210">2.10 解压安装包<a class="headerlink" href="#210" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p><strong>在 Ubuntu 中，以 root 用户执行如下命令：</strong></p>
@@ -2935,42 +2946,42 @@ tar<span class="w"> </span>zxvf<span class="w"> </span>metersphere-offline-insta
 密码: metersphere
 </code></pre></div>
 </div>
-<p><img alt="安装MeterSphere" src="../../img/installation/windows-install.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/windows-install.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/windows-install.png" width="900px" /></a></p>
 <h2 id="3">3 常见问题及解决方式<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h3 id="31">3.1 创建容器失败，找不到文件或目录<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%981.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%981.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%981.png" width="900px" /></a></p>
 <p>解决方法:<br>
 将metersphere目录下的docker-compose-*.yml里的volumes都按照下面要求进行修改。(windows下的docker不要用单独的volumes定义，将下面路径写到上面，下面volumes部分可删)</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%982.png" width="900px" /></p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%983.png" width="600px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%982.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%982.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%983.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%983.png" width="600px" /></a></p>
 <h3 id="32-container-is-unhealthy">3.2 执行安装脚本时，出现Container is unhealthy<a class="headerlink" href="#32-container-is-unhealthy" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%984.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%984.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%984.png" width="900px" /></a></p>
 <p>解决方法:<br>
 1.执行命令 docker logs “23c9a9217da8”，如下图查看发现是没有权限</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%985.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%985.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%985.png" width="900px" /></a></p>
 <p>2.将挂载目录为由原来的/bitnami改为/data，重新执行/bin/bash install.sh</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%986.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%986.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%986.png" width="900px" /></a></p>
 <h3 id="33-msctl-statushealthstartingdocker-ps-aprometheusrestarting">3.3 执行安装脚本，安装启动都没有报错，msctl status出现health:starting，之后docker ps -a发现prometheus容器是Restarting状态<a class="headerlink" href="#33-msctl-statushealthstartingdocker-ps-aprometheusrestarting" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></a></p>
 <p>解决方法:<br>
 1.查看日志(docker logs containsId)，如下图发现是prometheus目录下的文件没有权限</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%988.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%988.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%988.png" width="900px" /></a></p>
 <p>2.手动给prometheus目录赋权</p>
 <div class="highlight"><pre><span></span><code>chmod +777 /opt/metersphere/conf/prometheus
 chmod +777 /opt/metersphere/data/prometheus
 </code></pre></div>
 <p>之后重新执行安装脚本的命令。</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%989.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%989.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%989.png" width="900px" /></a></p>
 <h3 id="34-msctl-statusms-serverhealthstaring">3.4 执行msctl status，发现ms-server状态是health:staring状态，访问前端也访问不了<a class="headerlink" href="#34-msctl-statusms-serverhealthstaring" title="Permanent link">&para;</a></h3>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9810.png" width="900px" /></p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9811.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9810.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9810.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9811.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9811.png" width="900px" /></a></p>
 <p>解决方法:<br>
 1.查看/opt/metersphere/logs/info.log日志，如下图发现是redis连接有问题</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9812.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9812.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9812.png" width="900px" /></a></p>
 <p>2.修改/opt/metersphere/.env文件,将redis/kafka的ip换成本机ip，执行msctl reload后再执行msctl status，发现容器都正常启动。</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9813.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9813.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9813.png" width="900px" /></a></p>
 <p>输入 本机IP:端口 可以正常访问网站。</p>
-<p><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9814.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9814.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="常见问题" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%9814.png" width="900px" /></a></p>
 
 
   
@@ -3060,11 +3071,11 @@ chmod +777 /opt/metersphere/data/prometheus
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -3074,5 +3085,5 @@ chmod +777 /opt/metersphere/data/prometheus
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

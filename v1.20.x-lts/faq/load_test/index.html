@@ -21,7 +21,7 @@
         <link rel="next" href="../report_statistics/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3199,7 +3210,7 @@
 <h2 id="2">2 是否支持/如何支持分布式的性能测试？<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。</p>
 <p>例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。</p>
-<p><img alt="测试资源池" src="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></p>
+<p><a class="glightbox" href="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="测试资源池" src="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" /></a></p>
 <h2 id="3">3 如何向测试资源池中添加节点？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档<a href="../../installation/online_installation/">「在线安装」</a>或<a href="../../installation/offline_installation/">「离线安装」</a>章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。</p>
 <p>安装完成通过查看组件状态是否正常。</p>
@@ -3222,7 +3233,7 @@
 <ol>
 <li>排查思路</li>
 </ol>
-<p><img alt="Kafka 不可用排查" src="../../img/kafka_invalid.png" /></p>
+<p><a class="glightbox" href="../../img/kafka_invalid.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Kafka 不可用排查" src="../../img/kafka_invalid.png" /></a></p>
 <ol>
 <li>检查 Kafka 是否正常运行
    如果在安装时使用的外部的 Kafka，请联系相关人员进行排查，检查 Kafka 服务是否正常；如果安装时使用 MeterSphere 默认配置进行安装，使用了自带的 Kafka 服务，请通过如下命令进行排查。
@@ -3296,7 +3307,7 @@ nginx.novalocal
 </code></pre></div>
 <h2 id="16">16 同一脚本执行多次，可以将多次的报告结果进行对比吗？<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
 <p>在报告列表，同个任务下，已完成状态的报告可以进行对比。</p>
-<p><div class="lightgallery"><a data-sub-html=" 报告对比" href="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png"><img alt=" 报告对比" src="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 报告对比" src="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" /></a></p>
 <h2 id="17">17 执行压测时，多台发压机的情况下，可以设置变量不重复执行吗？<a class="headerlink" href="#17" title="Permanent link">&para;</a></h2>
 <p>可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。</p>
 <h2 id="18-metersphere">18 MeterSphere可以监控被测系统服务器指标吗？<a class="headerlink" href="#18-metersphere" title="Permanent link">&para;</a></h2>
@@ -3320,7 +3331,7 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 <p>在压力配置里，提供了3种分配策略，分别为“自动分配、固定节点、自定义”，可以为每个线程组指定一个节点，或者按比例分配多个节点。</p>
 <h2 id="21-non-http-response-code-javanetsockettimeoutexception">21 性能测试并发量加大的时候报错 <code>Non HTTP response code: java.net.SocketTimeoutException</code><a class="headerlink" href="#21-non-http-response-code-javanetsockettimeoutexception" title="Permanent link">&para;</a></h2>
 <p>高级配置增加超时时间。</p>
-<p><div class="lightgallery"><a data-sub-html=" 性能测试-设置超时时间" href="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png"><img alt=" 性能测试-设置超时时间" src="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 性能测试-设置超时时间" src="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" /></a></p>
 <h2 id="22-50100">22 进行压测时，最大用户加到 50/100 就不能继续加吗？<a class="headerlink" href="#22-50100" title="Permanent link">&para;</a></h2>
 <p>可在 系统设置-测试资源池-修改资源池里“最大并发数”中配置</p>
 <h2 id="23-jmeter">23 性能测试相关文件在 JMeter 容器中的哪个目录？<a class="headerlink" href="#23-jmeter" title="Permanent link">&para;</a></h2>
@@ -3377,14 +3388,14 @@ cd /opt/bitnami/kafka/bin
 性能测试只需要在仓库中配置好 JMeter 镜像的地址，执行性能测试的时候会自动创建 JMeter POD 进行压测，执行完之后自动销毁。<br></p>
 <p>2.执行接口测试需要<br>
 执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br>
-<div class="lightgallery"><a data-sub-html=" 接口测试-K8S配置" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png"><img alt=" 接口测试-K8S配置" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" /></a></div></p>
+<a class="glightbox" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 接口测试-K8S配置" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" /></a></p>
 <h2 id="27-check-node-controller-status">27 check node-controller status<a class="headerlink" href="#27-check-node-controller-status" title="Permanent link">&para;</a></h2>
 <p>1.检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
 2.docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
 3.检查 JMeter 的镜像版本是不是对的，检查 JMeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传JMeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的JMeter镜像，重新加载项目msctl reload。<br></p>
 <h2 id="28-error">28 Error:没有足够的资源启动测试<a class="headerlink" href="#28-error" title="Permanent link">&para;</a></h2>
 <p>将【系统设置-测试资源池-JMeter HEAP】调大点
-<div class="lightgallery"><a data-sub-html=" 接口测试-K8S配置" href="../../img/faq/Jmeter_Heap.jpg"><img alt=" 接口测试-K8S配置" src="../../img/faq/Jmeter_Heap.jpg" /></a></div></p>
+<a class="glightbox" href="../../img/faq/Jmeter_Heap.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 接口测试-K8S配置" src="../../img/faq/Jmeter_Heap.jpg" /></a></p>
 <h2 id="29">29 性能测试中怎么跨线程传递变量<a class="headerlink" href="#29" title="Permanent link">&para;</a></h2>
 <p>性能测试里动态设置变量可以用属性的方式，<span __property_var_="__property(var)" class="arithmatex"><span class="MathJax_Preview">{__setProperty(var,value,)} 设置属性，</span><script type="math/tex">{__setProperty(var,value,)} 设置属性，</script></span> 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递</p>
 <h2 id="30">30 性能测试报告刷新频率和右上角设置的不一样<a class="headerlink" href="#30" title="Permanent link">&para;</a></h2>
@@ -3400,7 +3411,7 @@ cd /opt/bitnami/kafka/bin
 解决方法：减少ramp-up时间，可以看到并发用户数与设置一致 <br></p>
 <h2 id="33-kafka">33 kafka 的日志保留时间配置<a class="headerlink" href="#33-kafka" title="Permanent link">&para;</a></h2>
 <p>修改 /opt/metersphere/docker-compose-kafka.yml 配置文档里的 KAFKA_CFG_LOG_RETENTION_HOURS 参数<br>
-<div class="lightgallery"><a data-sub-html="kafka" href="../../img/faq/kafka_log.png"><img alt="kafka" src="../../img/faq/kafka_log.png" /></a></div></p>
+<a class="glightbox" href="../../img/faq/kafka_log.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!kafka" src="../../img/faq/kafka_log.png" /></a></p>
 <h2 id="34-csv">34 性能测试时接口读取 csv 不能按顺序读取<a class="headerlink" href="#34-csv" title="Permanent link">&para;</a></h2>
 <p>所选的测试资源池有多个节点，多个节点共用一套 csv 导致取值重复，在性能测试的高级配置里，开启 csv 分割，多准备点测试数据。csv 分割是: 假设有2个节点，csv 里有100条数据，就会把 csv 里的数据均分成2份，然后节点1 使用 1-50 条数据，节点2 使用 51-100 条数据。</p>
 <h2 id="35-csv">35 性能测试配置里面上传 csv 文件，在高级配置里面看不到<a class="headerlink" href="#35-csv" title="Permanent link">&para;</a></h2>
@@ -3419,7 +3430,7 @@ cd /opt/bitnami/kafka/bin
 services: []
 </code></pre></div>
 自定义监控中加上需要的节点，系统参数测试中设置 prometheus 的实际地址，执行测试可以显示监控
-<div class="lightgallery"><a data-sub-html="kafka" href="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png"><img alt="kafka" src="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" /></a></div></p>
+<a class="glightbox" href="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!kafka" src="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" /></a></p>
 <h2 id="39">39 接口自动化创建了的性能测试，脚本及文件内容更新后，性能测试的没有跟着更新<a class="headerlink" href="#39" title="Permanent link">&para;</a></h2>
 <p>转性能测试的时候生成的 jmx 文件就是当前的配置，之后再修改接口对性能测试无效，点击性能测试右上角“同步场景测试最新变更”按钮手动同步即可。</p>
 <h2 id="40-http-domain">40 接口用例转换为性能测试，无http-domain，执行性能测试失败<a class="headerlink" href="#40-http-domain" title="Permanent link">&para;</a></h2>
@@ -3535,11 +3546,11 @@ kubectl describe secrets -n metersphere ms-token-xxxx
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -3549,5 +3560,5 @@ kubectl describe secrets -n metersphere ms-token-xxxx
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

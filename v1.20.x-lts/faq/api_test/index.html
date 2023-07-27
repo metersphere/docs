@@ -21,7 +21,7 @@
         <link rel="next" href="../load_test/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -3249,12 +3260,12 @@
 <p>参数值可以使用 JMeter 的内置函数或者 Mock.js 的函数生成随机值。</p>
 <h2 id="3">3 接口自动化多场景，是否支持批量运行？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>在场景列表选中场景，点击 <code>···</code> 弹出下拉框，选择 <code>批量运行</code>。</p>
-<p><div class="lightgallery"><a data-sub-html="场景批量运行" href="../../img/faq/%E5%9C%BA%E6%99%AF%E6%89%B9%E9%87%8F%E8%BF%90%E8%A1%8C.jpg"><img alt="场景批量运行" src="../../img/faq/%E5%9C%BA%E6%99%AF%E6%89%B9%E9%87%8F%E8%BF%90%E8%A1%8C.jpg" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%9C%BA%E6%99%AF%E6%89%B9%E9%87%8F%E8%BF%90%E8%A1%8C.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!场景批量运行" src="../../img/faq/%E5%9C%BA%E6%99%AF%E6%89%B9%E9%87%8F%E8%BF%90%E8%A1%8C.jpg" /></a></p>
 <h2 id="4">4 接口自动化如何生成报告？<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>手动执行的接口自动化场景不会自动生成测试报告，用户需要点击该场景的最后执行结果手动保存测试报告。请参考<a href="/docs/v1.20.x-lts/user_manual/api_test/api_automation/#_12">执行指定场景</a></p>
 <h2 id="5">5 接口自动化支持上传文件的接口吗？<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>支持。根据接口要求的请求体类型，选择 <code>form-data</code>、<code>x-www-form-urlencoded</code> 格式的请求体，参数类型选择 file，选择要添加的文件。也可以使用 <code>binary</code> 格式的请求体，直接选择要添加的文件。</p>
-<p><div class="lightgallery"><a data-sub-html="接口上传文件类型" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.jpg"><img alt="接口上传文件类型" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.jpg" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!接口上传文件类型" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B.jpg" /></a></p>
 <h2 id="6-cookie">6 接口自动化中模块之间是否支持共享cookie?<a class="headerlink" href="#6-cookie" title="Permanent link">&para;</a></h2>
 <p>不支持模块之间共享cookie，支持在同一模块下多个场景间共享，在不同场景之间开启共享cookie。</p>
 <h2 id="7">7 接口测试中，断言期望结果不为空，该如何判断？<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
@@ -3287,40 +3298,40 @@
 具体操作可参考 <a href="https://metersphere.io/docs/v1.20.x-lts/user_manual/api_test/api_automation/#_6">https://metersphere.io/docs/v1.20.x-lts/user_manual/api_test/api_automation/#_6</a> 。</p>
 <h2 id="18">18 接口自动化里，同一场景下是否支持配置多个接口域名？<a class="headerlink" href="#18" title="Permanent link">&para;</a></h2>
 <p>在环境配置里面，可以分别按接口所属模块，或者接口路径这两种方式，来配置不同接口的不同域名。</p>
-<p><div class="lightgallery"><a data-sub-html=" 配置多环境域名1" href="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D1.png"><img alt=" 配置多环境域名1" src="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D1.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html=" 配置多环境域名2" href="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D2.png"><img alt=" 配置多环境域名2" src="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D2.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 配置多环境域名1" src="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D1.png" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 配置多环境域名2" src="../../img/faq/%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%9F%9F%E5%90%8D2.png" /></a></p>
 <h2 id="19-code">19 请求里面涉及到了转发重定向，如何获取接口返回的code？<a class="headerlink" href="#19-code" title="Permanent link">&para;</a></h2>
 <p>在接口的 <code>请求参数</code> 区域的 <code>其他设置</code> 页面中，取消勾选 <code>跟随重定向</code> 选项。</p>
-<p><div class="lightgallery"><a data-sub-html=" 跟随重定向" href="../../img/faq/%E8%B7%9F%E9%9A%8F%E9%87%8D%E5%AE%9A%E5%90%91.png"><img alt=" 跟随重定向" src="../../img/faq/%E8%B7%9F%E9%9A%8F%E9%87%8D%E5%AE%9A%E5%90%91.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E8%B7%9F%E9%9A%8F%E9%87%8D%E5%AE%9A%E5%90%91.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 跟随重定向" src="../../img/faq/%E8%B7%9F%E9%9A%8F%E9%87%8D%E5%AE%9A%E5%90%91.png" /></a></p>
 <h2 id="20">20 接口自动化批量执行，是并行还是串行？<a class="headerlink" href="#20" title="Permanent link">&para;</a></h2>
 <p>MeterSphere的批量执行操作，同时支持串行和并行两种方式，可以在选择运行场景后，在 <code>运行配置</code> 弹窗进行选择。</p>
-<p><div class="lightgallery"><a data-sub-html=" 接口自动化-批量执行" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png"><img alt=" 接口自动化-批量执行" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html=" 串行&amp;并行" href="../../img/faq/%E4%B8%B2%E8%A1%8C%26%E5%B9%B6%E8%A1%8C.png"><img alt=" 串行&amp;并行" src="../../img/faq/%E4%B8%B2%E8%A1%8C%26%E5%B9%B6%E8%A1%8C.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 接口自动化-批量执行" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E4%B8%B2%E8%A1%8C%26%E5%B9%B6%E8%A1%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 串行&amp;并行" src="../../img/faq/%E4%B8%B2%E8%A1%8C%26%E5%B9%B6%E8%A1%8C.png" /></a></p>
 <h2 id="21">21 批量执行接口自动化，是否可以按场景单独显示测试报告？<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
 <p>可以在 <code>运行配置</code> 弹窗的其他配置选项中选择生成独立报告或者集合报告。</p>
-<p><div class="lightgallery"><a data-sub-html=" 接口自动化-批量执行" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png"><img alt=" 接口自动化-批量执行" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html=" 独立报告&amp;集合报告" href="../../img/faq/%E7%8B%AC%E7%AB%8B%E6%8A%A5%E5%91%8A%26%E9%9B%86%E5%90%88%E6%8A%A5%E5%91%8A.png"><img alt=" 独立报告&amp;集合报告" src="../../img/faq/%E7%8B%AC%E7%AB%8B%E6%8A%A5%E5%91%8A%26%E9%9B%86%E5%90%88%E6%8A%A5%E5%91%8A.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 接口自动化-批量执行" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96-%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C.png" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E7%8B%AC%E7%AB%8B%E6%8A%A5%E5%91%8A%26%E9%9B%86%E5%90%88%E6%8A%A5%E5%91%8A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 独立报告&amp;集合报告" src="../../img/faq/%E7%8B%AC%E7%AB%8B%E6%8A%A5%E5%91%8A%26%E9%9B%86%E5%90%88%E6%8A%A5%E5%91%8A.png" /></a></p>
 <h2 id="22">22 接口定义模块，编辑接口的页面，如何保存？<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
 <p>在编辑接口页面“基础信息”区域，点击测试按钮后面的向下按钮，点击“更新接口”选项即可。</p>
-<p><div class="lightgallery"><a data-sub-html=" 更新接口按钮" href="../../img/faq/%E6%9B%B4%E6%96%B0%E6%8E%A5%E5%8F%A3%E6%8C%89%E9%92%AE.png"><img alt=" 更新接口按钮" src="../../img/faq/%E6%9B%B4%E6%96%B0%E6%8E%A5%E5%8F%A3%E6%8C%89%E9%92%AE.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%9B%B4%E6%96%B0%E6%8E%A5%E5%8F%A3%E6%8C%89%E9%92%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 更新接口按钮" src="../../img/faq/%E6%9B%B4%E6%96%B0%E6%8E%A5%E5%8F%A3%E6%8C%89%E9%92%AE.png" /></a></p>
 <h2 id="23-non-http-response-code-javanetsockettimeoutexception">23 执行接口报错“Non HTTP response code: java.net.SocketTimeoutException”<a class="headerlink" href="#23-non-http-response-code-javanetsockettimeoutexception" title="Permanent link">&para;</a></h2>
 <p>修改其他设置里接口的连接超时时间。</p>
-<p><div class="lightgallery"><a data-sub-html=" 修改连接超时" href="../../img/faq/%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6.jpg"><img alt=" 修改连接超时" src="../../img/faq/%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6.jpg" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 修改连接超时" src="../../img/faq/%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6.jpg" /></a></p>
 <h2 id="24">24 接口自动化选择多场景同时运行时，可以把执行结果整合成一个测试报告吗？<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
 <p>可以在接口自动化列表，勾选多场景批量执行，选择“集合报告”。</p>
-<p><div class="lightgallery"><a data-sub-html=" 多场景集成报告01" href="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A01.png"><img alt=" 多场景集成报告01" src="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A01.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html=" 多场景集成报告02" href="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A02.png"><img alt=" 多场景集成报告02" src="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A02.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 多场景集成报告01" src="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A01.png" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 多场景集成报告02" src="../../img/faq/%E5%A4%9A%E5%9C%BA%E6%99%AF%E9%9B%86%E6%88%90%E6%8A%A5%E5%91%8A02.png" /></a></p>
 <h2 id="25">25 接口定义里的单接口，可以批量执行吗？<a class="headerlink" href="#25" title="Permanent link">&para;</a></h2>
 <p>目前可以通过接口定义模块的CASE列表来批量执行用例。</p>
-<p><div class="lightgallery"><a data-sub-html=" 单接口批量执行01" href="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C01.png"><img alt=" 单接口批量执行01" src="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C01.png" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html=" 单接口批量执行02" href="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C02.png"><img alt=" 单接口批量执行02" src="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C02.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 单接口批量执行01" src="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C01.png" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 单接口批量执行02" src="../../img/faq/%E5%8D%95%E6%8E%A5%E5%8F%A3%E6%89%B9%E9%87%8F%E6%89%A7%E8%A1%8C02.png" /></a></p>
 <h2 id="26-httptcpsqldubbo">26 接口测试模块里，目前除了现有的HTTP、TCP、SQL、DUBBO，还支持其他协议吗？<a class="headerlink" href="#26-httptcpsqldubbo" title="Permanent link">&para;</a></h2>
 <p>1.13版本已经通过插件的方式实现了对MQTT协议的支持，可以到github上下载该插件，然后在MeterSphere系统设置-系统-插件管理中上传。</p>
 <h2 id="27-metersphereapi">27 MeterSphere可以直接连接开发工具传输API吗？<a class="headerlink" href="#27-metersphereapi" title="Permanent link">&para;</a></h2>
 <p>MeterSphere在1.15版本实现了与IDEA对接。通过在IDEA安装组件，完成API信息传送。可以到GitHub下载此组件。</p>
 <h2 id="28">28 接口自动化场景里可以跨项目引用接口/用例吗？<a class="headerlink" href="#28" title="Permanent link">&para;</a></h2>
 <p>支持跨项目引用接口、用例、场景。
-<div class="lightgallery"><a data-sub-html=" 场景跨项目添加接口" href="../../img/faq/%E5%9C%BA%E6%99%AF%E8%B7%A8%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E6%8E%A5%E5%8F%A3.png"><img alt=" 场景跨项目添加接口" src="../../img/faq/%E5%9C%BA%E6%99%AF%E8%B7%A8%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E6%8E%A5%E5%8F%A3.png" /></a></div></p>
+<a class="glightbox" href="../../img/faq/%E5%9C%BA%E6%99%AF%E8%B7%A8%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E6%8E%A5%E5%8F%A3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 场景跨项目添加接口" src="../../img/faq/%E5%9C%BA%E6%99%AF%E8%B7%A8%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E6%8E%A5%E5%8F%A3.png" /></a></p>
 <h2 id="29">29 快捷调试的时候，一直转圈等待是什么原因<a class="headerlink" href="#29" title="Permanent link">&para;</a></h2>
 <p>安装ms的服务器到请求的地址网络不通,在ms上telnet 被测服务端口检查</p>
 <h2 id="30-case">30 进行接口case调试时，调用不同控制台信息显示连接某地址超时；<a class="headerlink" href="#30-case" title="Permanent link">&para;</a></h2>
@@ -3411,7 +3422,7 @@ prev.setResponseData(outBuffer.toString());
 <li>HAR 格式：通过浏览器的开发者工具导出 HAR 格式文件 <br></li>
 <li>JMeter 格式：支持 JMeter5.2-5.4 版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br></li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/metersphere%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png"><img alt=" metersphere导入格式" src="../../img/faq/metersphere%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/metersphere%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/metersphere%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></p>
 <h2 id="41-tcp">41 TCP 协议接口支持哪些文件格式导入<a class="headerlink" href="#41-tcp" title="Permanent link">&para;</a></h2>
 <p>支持三种： MeterSphere格式、JMeter格式、ESB格式</p>
 <ul>
@@ -3419,37 +3430,37 @@ prev.setResponseData(outBuffer.toString());
 <li>Jmeter 格式：支持 JMeter5.2-5.4版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br></li>
 <li>ESB 格式：支持 ESB 模版的 xlsx 文件（支持模版下载/上传）<br></li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/TCP%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png"><img alt=" metersphere导入格式" src="../../img/faq/TCP%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/TCP%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/TCP%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></p>
 <h2 id="42-sql">42 SQL 协议接口支持哪些文件格式导入<a class="headerlink" href="#42-sql" title="Permanent link">&para;</a></h2>
 <p>支持两种：MeterSphere格式、JMeter格式</p>
 <ul>
 <li>MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br></li>
 <li>JMeter 格式：支持 JMeter5.2-5.4 版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br></li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/SQL%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png"><img alt=" metersphere导入格式" src="../../img/faq/SQL%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/SQL%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/SQL%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></p>
 <h2 id="43-dubbo">43 DUBBO 协议接口支持哪些文件格式导入<a class="headerlink" href="#43-dubbo" title="Permanent link">&para;</a></h2>
 <p>支持两种：MeterSphere格式、JMeter格式</p>
 <ul>
 <li>MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br></li>
 <li>JMeter 格式：支持 JMeter5.2-5.4 版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br></li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/DUBBO%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png"><img alt=" metersphere导入格式" src="../../img/faq/DUBBO%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/DUBBO%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/DUBBO%E5%AF%BC%E5%85%A5%E6%A0%BC%E5%BC%8F.png" /></a></p>
 <h2 id="44">44 如何判断是否为同一接口<a class="headerlink" href="#44" title="Permanent link">&para;</a></h2>
 <ul>
 <li>TCP、SQL、DUBBO 请求，同项目同模块同版本下，接口名称相同就是同一接口</li>
 <li>针对HTTP请求，同项目同模块同版本下，分为接口定义未开启 url 可重复和已开启 url 可重复两种情况</li>
 </ul>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/URL%E5%8F%AF%E9%87%8D%E5%A4%8D.png"><img alt=" metersphere导入格式" src="../../img/faq/URL%E5%8F%AF%E9%87%8D%E5%A4%8D.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/URL%E5%8F%AF%E9%87%8D%E5%A4%8D.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/URL%E5%8F%AF%E9%87%8D%E5%A4%8D.png" /></a></p>
 <p>■ 未开启 URL 重复：请求类型+路径相同则为同一接口，如：</p>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E6%9C%AA%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png"><img alt=" metersphere导入格式" src="../../img/faq/%E6%9C%AA%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%9C%AA%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/%E6%9C%AA%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png" /></a></p>
 <p>■ 开启 URL 重复：接口名称+请求类型+路径相同则为同一接口，如：</p>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png"><img alt=" metersphere导入格式" src="../../img/faq/%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/%E5%BC%80%E5%90%AFURL%E9%87%8D%E5%A4%8D.png" /></a></p>
 <h2 id="45">45 导入模块&amp;导入模式逻辑<a class="headerlink" href="#45" title="Permanent link">&para;</a></h2>
 <p>■ 注意：v2.0导入模式会增加选项：同步覆盖API模块（即上图中的开启模块覆盖），用户可自己选择是否将数据导入到指定的最新模块下。</p>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E5%AF%BC%E5%85%A5%26%E5%AF%BC%E5%87%BA%E9%80%BB%E8%BE%91.png"><img alt=" metersphere导入格式" src="../../img/faq/%E5%AF%BC%E5%85%A5%26%E5%AF%BC%E5%87%BA%E9%80%BB%E8%BE%91.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%AF%BC%E5%85%A5%26%E5%AF%BC%E5%87%BA%E9%80%BB%E8%BE%91.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/%E5%AF%BC%E5%85%A5%26%E5%AF%BC%E5%87%BA%E9%80%BB%E8%BE%91.png" /></a></p>
 <h2 id="46">46 接口依赖是有什么用，是在这个接口执行前后执行的接口吗？<a class="headerlink" href="#46" title="Permanent link">&para;</a></h2>
 <p>可以生成依赖图，社区版看不到，只有企业版才能看到</p>
-<p><div class="lightgallery"><a data-sub-html=" metersphere导入格式" href="../../img/faq/%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.png"><img alt=" metersphere导入格式" src="../../img/faq/%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.png" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.png" /></a></p>
 <h2 id="47">47 配置了定时任务,为什么不在钉钉群发消息呢？<a class="headerlink" href="#47" title="Permanent link">&para;</a></h2>
 <p>1.确认消息通知是否正确填写 <br>
 2.开了定时任务，是不是手动执行的，如果手动执行的话不会发送消息，到了时间，任务配置里面配置会生效 <br></p>
@@ -3554,11 +3565,11 @@ prev.setResponseData(outBuffer.toString());
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -3568,5 +3579,5 @@ prev.setResponseData(outBuffer.toString());
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

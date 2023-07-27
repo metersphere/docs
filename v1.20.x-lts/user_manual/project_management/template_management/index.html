@@ -21,7 +21,7 @@
         <link rel="next" href="../notice_management/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -34,10 +34,10 @@
 <link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2546,15 +2557,15 @@
   <h1>模版管理</h1>
 
 <p>系统支持用户自定义<code>项目级别</code>的用例模板、缺陷模板。
-<img alt="测试报告模板" src="../../../img/system_management/%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%E6%A8%A1%E6%9D%BF.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%E6%A8%A1%E6%9D%BF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="测试报告模板" src="../../../img/system_management/%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%E6%A8%A1%E6%9D%BF.png" /></a></p>
 <h4 id="1">1 <font size=4> 自定义字段 </font><a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <p>在自定义模板前（用例&amp;缺陷），需要先自定义模板中字段的基本属性。点击页面<code>项目设置</code>，点击<code>模板管理</code>&gt;&gt;<code>自定义字段</code>，即可查看当前工作空间中的所有自定义字段列表。
-<img alt="自定义字段" src="../../../img/project_management/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%88%97%E8%A1%A8.png" /></p>
+<a class="glightbox" href="../../../img/project_management/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%88%97%E8%A1%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="自定义字段" src="../../../img/project_management/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%88%97%E8%A1%A8.png" /></a></p>
 <ul>
 <li>创建字段</li>
 </ul>
 <p>点击页面左上角<code>创建字段</code>，设置字段的基本信息：名称、备注、使用场景、字段类型等基本信息，点击<code>确定</code>完成工作空间自定义字段添加。
-<img alt="自定义字段" src="../../../img/system_management/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="自定义字段" src="../../../img/system_management/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" /></a></p>
 <div class="codehilite"><pre><span></span><code> 个别字段说明：
    1） 使用场景：设置定义的字段使用于具体的模板中。
    2） 字段类型：系统提供多种字段类型可供选择，根据不同字段类型，系统自动控制字段的显示、设置和属性等。字段支持的类型有输入框、文本框、下来选择框（单选&amp;多选）、日期时间器、数值等等类型。
@@ -2564,34 +2575,34 @@
 <li>维护字段</li>
 </ul>
 <p>创建完成后可在自定义字段列表中查看到添加的自定义字段，在自定义字段信息中可点击<code>编辑</code>、<code>复制</code>和<code>移除</code>按钮进行自定义字段修改、复制和移除操作。
-<img alt="维护字段" src="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E5%AD%97%E6%AE%B5.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E5%AD%97%E6%AE%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="维护字段" src="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E5%AD%97%E6%AE%B5.png" /></a></p>
 <h4 id="2">2 <font size=4> 用例模版 </font><a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
 <p>用例模板即当前工作空间下的所有项目都可使用的测试用例模板，并且可对用例模板添加、修改、复制及移除的操作。点击页面<code>项目设置</code>&gt;&gt;<code>模版管理</code>&gt;&gt;<code>用例模版</code>，即可查看当前工作空间中的所有用例模板列表。
-<img alt="用例模版" src="../../../img/system_management/%E7%94%A8%E4%BE%8B%E6%A8%A1%E7%89%88.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E7%94%A8%E4%BE%8B%E6%A8%A1%E7%89%88.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="用例模版" src="../../../img/system_management/%E7%94%A8%E4%BE%8B%E6%A8%A1%E7%89%88.png" /></a></p>
 <ul>
 <li>创建模板</li>
 </ul>
 <p>点击页面左上角<code>创建模板</code>，创建新的用例模板，设置用例基本信息、模板设置明细信息等，点击<code>确定</code>完成用例模板添加。如果模板添加的字段信息不存在，可以在<code>模板管理</code>&gt;&gt;<code>自定义字段</code>中进行创建，然后在此引用即可。
-<img alt="创建模板" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF.png" /></p>
-<p><img alt="填写模板" src="../../../img/system_management/%E5%A1%AB%E5%86%99%E6%A8%A1%E6%9D%BF.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="创建模板" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF.png" /></a></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%A1%AB%E5%86%99%E6%A8%A1%E6%9D%BF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="填写模板" src="../../../img/system_management/%E5%A1%AB%E5%86%99%E6%A8%A1%E6%9D%BF.png" /></a></p>
 <ul>
 <li>维护模板</li>
 </ul>
 <p>创建完成后可在用例模板列表中查看到添加的用例模板，在用例模板信息中可点击<code>编辑</code>、<code>复制</code>和<code>移除</code>按钮进行用例模板修改、复制和移除操作。
-<img alt="维护模板" src="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E6%A8%A1%E6%9D%BF.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E6%A8%A1%E6%9D%BF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="维护模板" src="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E6%A8%A1%E6%9D%BF.png" /></a></p>
 <h4 id="3">3 <font size=4> 缺陷模版 </font><a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
 <p>在<code>模版管理</code>&gt;&gt;<code>缺陷模版</code>，会显示当前工作空间下的缺陷模版列表，支持查询、编辑、复制、删除等操作。
-<img alt="用例模版" src="../../../img/system_management/%E7%BC%BA%E9%99%B7%E6%A8%A1%E7%89%88.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E7%BC%BA%E9%99%B7%E6%A8%A1%E7%89%88.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="用例模版" src="../../../img/system_management/%E7%BC%BA%E9%99%B7%E6%A8%A1%E7%89%88.png" /></a></p>
 <ul>
 <li>创建缺陷模板</li>
 </ul>
 <p>点击页面左上角 <code>创建缺陷模板</code> 新建缺陷模板，设置用例基本信息、模板设置明细信息等，点击 <code>确定</code> 完成工作空间缺陷模板添加。如果模板添加字段信息不存在，可以在 <code>模板管理-&gt;自定义字段</code> 中进行创建，然后在此引用即可。
-<img alt="创建缺陷模板" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E5%88%9B%E5%BB%BA%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="创建缺陷模板" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /></a></p>
 <ul>
 <li>维护字段</li>
 </ul>
 <p>创建完成后可在缺陷模板列表中查看到添加的模板，在缺陷模板信息中可点击<code>编辑</code>、<code>复制</code>和<code>移除</code>按钮进行缺陷模板修改、复制和移除。
-<img alt="维护缺陷模板" src="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /></p>
+<a class="glightbox" href="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="维护缺陷模板" src="../../../img/system_management/%E7%BB%B4%E6%8A%A4%E7%BC%BA%E9%99%B7%E6%A8%A1%E6%9D%BF.png" /></a></p>
 
 
   
@@ -2681,11 +2692,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
 <script>
@@ -2695,5 +2706,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
