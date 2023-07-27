@@ -26,6 +26,7 @@ jobs:
       - name: modify index.html
         run: |
           sed -i "/<body>/a\  <h1>Redirecting</h1>" index.html
+          sed -i "/<title>/a\  <meta name='description' content='MeterSphere 一站式开源持续测试平台文档站点，自动跳转到最新版本文档。'>" index.html
 
       - name: ssh deploy
         uses: easingthemes/ssh-deploy@v2.2.11
