@@ -23,6 +23,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
+      - name: modify index.html
+        run: |
+          sed -i "/<body>/a\  <h1>Redirecting</h1>" index.html
+
       - name: ssh deploy
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
