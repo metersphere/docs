@@ -4,7 +4,7 @@
 
 !!! ms-abstract ""
 
-    **MeterSphere 版本号命名规则为：**  v *大版本号*.*功能版本号*.*修复版本号*，MeterSphere 按月迭代发布功能版本，并按年发布 LTS（Long Term Support）版本，目前以及发布了三个 LTS 版本：
+    **MeterSphere 版本号命名规则为：**  v *大版本号*.*功能版本号*.*修复版本号*，MeterSphere 按月迭代发布功能版本，并按年发布 LTS（Long Term Support）版本，目前已经发布了三个 LTS 版本：
 
     - v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护。
     - v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。
