@@ -176,7 +176,6 @@ markdown_extensions:
     - pymdownx.betterem
     - pymdownx.superfences
     - pymdownx.progressbar
-    - lightgallery
 
 extra_css:
     - css/extra.css
@@ -189,6 +188,7 @@ plugins:
           - en
           - ja
         separator: '[\s\-\.]+'
+    - glightbox        
 
 extra:
     version:
