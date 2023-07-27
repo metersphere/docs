@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 该插件为 MeterSphere 配套的浏览器插件，该插件可将用户在浏览器操作时的 HTTP 请求记录下来并 生成 JMX 文件（JMeter 脚本文件），用于在 MeterSphere 中进行接口测试或性能测试。
 
 ## 1 开发者模式安装

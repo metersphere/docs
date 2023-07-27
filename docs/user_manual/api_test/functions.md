@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 MeterSphere 接口测试基于 JMeter 实现，因此 JMeter 中的内置函数及变量在 MeterSphere 中都可以正常使用。内置函数及变量可以用在多个位置，包括QUERY参数、REST参数、请求体、前后置脚本等。
 
 内置函数一般以两个下划线开头，并使用类似 `${__functionName(var1,var2,var3)}` 的形式调用。

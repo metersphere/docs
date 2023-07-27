@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 - [中国移动上研院基于 MeterSphere 构建规范化测试体系](https://blog.fit2cloud.com/?p=3465)
 - [88 完美邮箱全面提升产品质量的落地指南](https://blog.fit2cloud.com/?p=1573)
 - [蔚澜环保基于 MeterSphere 的自动化测试实践](https://blog.fit2cloud.com/?p=1591)
