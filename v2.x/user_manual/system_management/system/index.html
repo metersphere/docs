@@ -21,7 +21,7 @@
         <link rel="next" href="../workspace/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2808,7 +2819,7 @@
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【用户】进入用户界面。右侧显示当前系统中的全部用户列表，可以对用户进行【新增】、【编辑】、【查询】、【删除】、【更改状态】、【设置密码】等操作。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="用户管理" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E9%A6%96%E9%A1%B5.png"><img alt="用户管理" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E9%A6%96%E9%A1%B5.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!用户管理" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">说明</p>
 <p>MeterSphere 部署成功后会自动创建一个系统管理员账户，用户名为 admin，默认密码为 metersphere。如将平台用于生产环境，请及时更改密码。</p>
@@ -2819,113 +2830,113 @@
 点击【创建用户】按钮创建用户，在弹出页面中编辑用户信息。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建用户" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png"><img alt="创建用户" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建用户" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>需要创建多个用户时，可点击【导入用户】按钮，下载模版并填写用户信息，通过 Excel 文件导入用户。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建用户" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%AF%BC%E5%85%A5%E7%94%A8%E6%88%B7.png"><img alt="创建用户" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%AF%BC%E5%85%A5%E7%94%A8%E6%88%B7.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%AF%BC%E5%85%A5%E7%94%A8%E6%88%B7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建用户" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%AF%BC%E5%85%A5%E7%94%A8%E6%88%B7.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>为用户添加用户组</strong><br>
 点击【添加用户组】按钮为用户添加用户组信息。新用户至少所属一个用户组，每个用户可以属于多个用户组。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="设置用户角色" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E7%BB%84.png"><img alt="设置用户角色" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E7%BB%84.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E7%BB%84.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!设置用户角色" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7%E7%BB%84.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>查询用户</strong><br>
 用户列表右上方，使用搜索框，根据 ID 或名称查询用户。</li>
 </ul>
 </div>
-<p><img alt="针对用户的其他操作" src="../../../img/system_management/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="针对用户的其他操作" src="../../../img/system_management/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>针对用户的其他操作</strong><br>
 在用户列表右侧操作列，可以点击【Switch】开关切换选定用户启用状态，点击【编辑】按钮可修改用户信息，点击【修改密码】可修改用户的密码，点击【删除】按钮删除该用户。</li>
 </ul>
 </div>
-<p><img alt="针对用户的其他操作" src="../../../img/system_management/%E9%92%88%E5%AF%B9%E7%94%A8%E6%88%B7%E7%9A%84%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E9%92%88%E5%AF%B9%E7%94%A8%E6%88%B7%E7%9A%84%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="针对用户的其他操作" src="../../../img/system_management/%E9%92%88%E5%AF%B9%E7%94%A8%E6%88%B7%E7%9A%84%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C.png" width="900px" /></a></p>
 <h2 id="2">2 工作空间<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【工作空间】进入工作空间界面。右侧显示当前系统中的全部工作空间列表，可以对工作空间进行【新增】、【编辑】、【查询】、【删除】等操作。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="工作空间管理" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%A6%96%E9%A1%B5.png"><img alt="工作空间管理" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%A6%96%E9%A1%B5.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!工作空间管理" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>创建工作空间</strong><br>
 点击【创建工作空间】按钮创建工作空间，在弹出页面中填写名称和描述。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建工作空间" href="../../../img/system_management/%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png"><img alt="创建工作空间" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建工作空间" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>编辑工作空间</strong><br>
 点击【编辑】按钮编辑工作空间，在弹出页面中修改名称和描述。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="编辑工作空间" href="../../../img/system_management/%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png"><img alt="编辑工作空间" src="../../../img/system_management/%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!编辑工作空间" src="../../../img/system_management/%E7%BC%96%E8%BE%91%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>删除工作空间</strong><br>
 点击【删除】按钮删除工作空间。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="删除工作空间" href="../../../img/system_management/%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png"><img alt="删除工作空间" src="../../../img/system_management/%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!删除工作空间" src="../../../img/system_management/%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" width="900px" /></a></p>
 <h2 id="3">3 用户组与权限<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【用户组与权限】进入用户组界面。用户可基于自身需求创建自定义用户组，并赋予用户组不同的权限设置。其中【超级管理员】用户组拥有系统全部工作空间与项目的操作权限，用户可以为 admin 用户添加【超级管理员】权限来管理系统全部数据。</p>
 </div>
-<p><img alt="系统用户组首页" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%BB%84%E9%A6%96%E9%A1%B53.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%BB%84%E9%A6%96%E9%A1%B53.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="系统用户组首页" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%BB%84%E9%A6%96%E9%A1%B53.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>创建用户组</strong><br>
 点击【创建用户组】按钮新建自定义用户组。在弹出的界面中编辑用户组名称及描述，选择用户组所属类型。使用【全局用户组】开关切换用户组适用状态。新建用户组类型为系统类型时自动切换为全局用户组，此开关为默认打开状态；新建用户组类型为其他类型时，全局状态可关闭，此时须为用户组选择所属工作空间。</li>
 </ul>
 </div>
-<p><img alt="创建用户组" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="创建用户组" src="../../../img/system_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>为用户组配置权限</strong><br>
 回到用户组列表中，点击【设置权限】按钮进入用户组权限设置页面，在该页面中基于用户组需求勾选操作权限，一个用户组即为一个权限集，点击【确定】按钮完成配置。</li>
 </ul>
 </div>
-<p><img alt="为用户组配置权限" src="../../../img/system_management/%E4%B8%BA%E7%94%A8%E6%88%B7%E7%BB%84%E9%85%8D%E7%BD%AE%E6%9D%83%E9%99%904.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E4%B8%BA%E7%94%A8%E6%88%B7%E7%BB%84%E9%85%8D%E7%BD%AE%E6%9D%83%E9%99%904.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="为用户组配置权限" src="../../../img/system_management/%E4%B8%BA%E7%94%A8%E6%88%B7%E7%BB%84%E9%85%8D%E7%BD%AE%E6%9D%83%E9%99%904.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>编辑用户组信息</strong><br>
 点击【编辑】按钮编辑选定用户组信息，在弹出页面中可以更改用户组名称及描述。</li>
 </ul>
 </div>
-<p><img alt="编辑用户组信息" src="../../../img/system_management/%E7%BC%96%E8%BE%91%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%BC%96%E8%BE%91%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="编辑用户组信息" src="../../../img/system_management/%E7%BC%96%E8%BE%91%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>查询用户组</strong><br>
 用户组列表右上方，使用搜索框，根据名称查询用户组。</li>
 </ul>
 </div>
-<p><img alt="编辑用户组信息" src="../../../img/system_management/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="编辑用户组信息" src="../../../img/system_management/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>删除用户组</strong><br>
 用户组列表中，点击【删除】按钮删除自定义的用户组，系统用户组不支持删除。</li>
 </ul>
 </div>
-<p><img alt="编辑用户组信息" src="../../../img/system_management/%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="编辑用户组信息" src="../../../img/system_management/%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7%E7%BB%84%E4%BF%A1%E6%81%AF.png" width="900px" /></a></p>
 <h2 id="4">4 测试资源池管理<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【测试资源池】进入资源池界面。测试资源池主要用于接口测试及性能等测试。右侧资源池列表中，可以通过【Switch】开关切换资源池启用状态，点击【编辑】按钮更改资源池信息，点击【删除】按钮删除选定资源池。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="测试资源池管理" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0%E9%A6%96%E9%A1%B5.png"><img alt="测试资源池管理" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0%E9%A6%96%E9%A1%B5.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!测试资源池管理" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <h3 id="41-node">4.1 创建 Node 资源池<a class="headerlink" href="#41-node" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Node】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建资源池" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BA%E8%B5%84%E6%BA%90%E6%B1%A0.png"><img alt="创建资源池" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BA%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BA%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建资源池" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BA%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></p>
 <h3 id="42-kubernetes-x-pack">4.2 创建 Kubernetes 资源池 (X-Pack)<a class="headerlink" href="#42-kubernetes-x-pack" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建K8S资源池" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BAK8S%E8%B5%84%E6%BA%90%E6%B1%A0.png"><img alt="创建K8S资源池" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BAK8S%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BAK8S%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建K8S资源池" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%88%9B%E5%BB%BAK8S%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>获取 Master URL，输入 kubectl describe svc kubernetes 可获得 Endpoints 地址<br>
 获取 Token，需要有 k8s 集群环境，之后创建好 SA 和 token，命令如下
@@ -2953,13 +2964,13 @@ kubectl apply -f deployment.yaml -n ms-pool
 kubectl get all -n ms-pool
 </code></pre></div></p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建K8S资源池" href="../../../img/system_management/%E4%B8%8B%E8%BD%BDyaml%E6%96%87%E4%BB%B6.png"><img alt="创建K8S资源池" src="../../../img/system_management/%E4%B8%8B%E8%BD%BDyaml%E6%96%87%E4%BB%B6.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E4%B8%8B%E8%BD%BDyaml%E6%96%87%E4%BB%B6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建K8S资源池" src="../../../img/system_management/%E4%B8%8B%E8%BD%BDyaml%E6%96%87%E4%BB%B6.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br>
 配置完成后，点击确定即可。在资源池列表中有该资源池，在性能测试页面-压力配置处也可以看到该资源池。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="创建K8S资源池" href="../../../img/system_management/k8s%E8%B5%84%E6%BA%90%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90.png"><img alt="创建K8S资源池" src="../../../img/system_management/k8s%E8%B5%84%E6%BA%90%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90.png" width="900px" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="创建K8S资源池" href="../../../img/system_management/k8s%E5%88%97%E8%A1%A8%E6%98%BE%E7%A4%BA.png"><img alt="创建K8S资源池" src="../../../img/system_management/k8s%E5%88%97%E8%A1%A8%E6%98%BE%E7%A4%BA.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/k8s%E8%B5%84%E6%BA%90%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建K8S资源池" src="../../../img/system_management/k8s%E8%B5%84%E6%BA%90%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/system_management/k8s%E5%88%97%E8%A1%A8%E6%98%BE%E7%A4%BA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建K8S资源池" src="../../../img/system_management/k8s%E5%88%97%E8%A1%A8%E6%98%BE%E7%A4%BA.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>查询资源池</strong><br>
@@ -2976,12 +2987,12 @@ kubectl get all -n ms-pool
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【系统参数设置】进入参数设置界面，用于平台【基本配置】、【邮件设置】、【LDAP设置】、【显示设置】、【认证设置】、【模块管理】等参数的设置。</p>
 </div>
-<p><img alt="系统参数设置首页" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="系统参数设置首页" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <h3 id="51">5.1 基本配置<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>性能测试执行过程中 node-controller 节点需要通过配置的【当前站点URL】下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="当前站点URL" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5_1.png"><img alt="当前站点URL" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5_1.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!当前站点URL" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5_1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">选项</p>
 <ul>
@@ -2996,12 +3007,12 @@ kubectl get all -n ms-pool
 <div class="admonition ms-abstract">
 <p>切换至【邮件设置】标签，点击【编辑】按钮可以对 SMTP 信息进行修改、保存。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="编辑SMTP信息" href="../../../img/system_management/%E7%BC%96%E8%BE%91smtp%E4%BF%A1%E6%81%AF.png"><img alt="编辑SMTP信息" src="../../../img/system_management/%E7%BC%96%E8%BE%91smtp%E4%BF%A1%E6%81%AF.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E7%BC%96%E8%BE%91smtp%E4%BF%A1%E6%81%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!编辑SMTP信息" src="../../../img/system_management/%E7%BC%96%E8%BE%91smtp%E4%BF%A1%E6%81%AF.png" width="900px" /></a></p>
 <h3 id="53-ldap">5.3 LDAP 设置<a class="headerlink" href="#53-ldap" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>切换至【LDAP设置】标签，点击【编辑】按钮配置 LDAP 登录相关参数。</p>
 </div>
-<p><img alt="配置ldap" src="../../../img/system_management/%E9%85%8D%E7%BD%AEldap.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E9%85%8D%E7%BD%AEldap.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置ldap" src="../../../img/system_management/%E9%85%8D%E7%BD%AEldap.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">选项</p>
 <ul>
@@ -3028,62 +3039,62 @@ kubectl get all -n ms-pool
 <div class="admonition ms-abstract">
 <p>启用 LDAP 认证后，登录页会新增 LDAP 登录选项。</p>
 </div>
-<p><img alt="ldap登录" src="../../../img/system_management/ldap%E7%99%BB%E5%BD%95.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/ldap%E7%99%BB%E5%BD%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ldap登录" src="../../../img/system_management/ldap%E7%99%BB%E5%BD%95.png" width="900px" /></a></p>
 <h3 id="54-x-pack">5.4 显示设置 (X-Pack)<a class="headerlink" href="#54-x-pack" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>切换至【显示设置】标签，点击【编辑】按钮配置系统的 logo 以及显示的文字和图片，填写完成后，点击【保存】即可。</p>
 </div>
-<p><img alt="显示设置" src="../../../img/system_management/%E6%98%BE%E7%A4%BA%E8%AE%BE%E7%BD%AE.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%98%BE%E7%A4%BA%E8%AE%BE%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="显示设置" src="../../../img/system_management/%E6%98%BE%E7%A4%BA%E8%AE%BE%E7%BD%AE.png" width="900px" /></a></p>
 <h3 id="55-x-pack">5.5 认证设置 (X-Pack)<a class="headerlink" href="#55-x-pack" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>切换至【认证设置】标签，点击【添加】按钮，填写 CAS、OIDC、OAuth2 等方式的单点登录协议认证信息。<br></p>
 </div>
-<p><img alt="认证配置" src="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE_2.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="认证配置" src="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE_2.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>可以点击【启用/禁用】按钮或者【删除】按钮，若启用 CAS、OIDC 认证后，登录页会新增 CAS、OIDC 登录选项。<br></p>
 </div>
-<p><img alt="认证配置" src="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE.png" width="900px" /></p>
-<p><img alt="认证配置" src="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="认证配置" src="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="认证配置" src="../../../img/system_management/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE_1.png" width="900px" /></a></p>
 <h3 id="56-x-pack">5.6 模块管理 (X-Pack)<a class="headerlink" href="#56-x-pack" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>切换至【模块管理】标签，点击【启用/禁用】按钮，系统只显示【启用】的模块，【禁用】的模块不会在系统中出现。</p>
 </div>
-<p><img alt="模块管理" src="../../../img/system_management/%E6%A8%A1%E5%9D%97%E7%AE%A1%E7%90%86.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%A8%A1%E5%9D%97%E7%AE%A1%E7%90%86.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="模块管理" src="../../../img/system_management/%E6%A8%A1%E5%9D%97%E7%AE%A1%E7%90%86.png" width="900px" /></a></p>
 <h2 id="6-x-pack">6 配额管理 (X-Pack)<a class="headerlink" href="#6-x-pack" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>进入【配额管理】页面，可【编辑】上方的工作空间默认配额，编辑完成后，在配额列表中使用默认配置的，将同步更新编辑的数据。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="配额管理" href="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E7%BC%96%E8%BE%91.png"><img alt="配额管理" src="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E7%BC%96%E8%BE%91.png" width="900px" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html="配额管理" href="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E9%BB%98%E8%AE%A4%E9%85%8D%E9%A2%9D.png"><img alt="配额管理" src="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E9%BB%98%E8%AE%A4%E9%85%8D%E9%A2%9D.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E7%BC%96%E8%BE%91.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!配额管理" src="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E7%BC%96%E8%BE%91.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E9%BB%98%E8%AE%A4%E9%85%8D%E9%A2%9D.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!配额管理" src="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E9%BB%98%E8%AE%A4%E9%85%8D%E9%A2%9D.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>点击工作空间的【编辑】按钮，可对单个工作空间进行配额管理设置</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="配额管理" href="../../../img/system_management/%E5%8D%95%E4%B8%AA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86.png"><img alt="配额管理" src="../../../img/system_management/%E5%8D%95%E4%B8%AA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%8D%95%E4%B8%AA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!配额管理" src="../../../img/system_management/%E5%8D%95%E4%B8%AA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>点击【删除】按钮，即可删除已配置好的内容，恢复到最初状态，使用默认配额的状态也由【是】变成【否】</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="配额管理" href="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E5%88%A0%E9%99%A4.png"><img alt="配额管理" src="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E5%88%A0%E9%99%A4.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E5%88%A0%E9%99%A4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!配额管理" src="../../../img/system_management/%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E7%AE%A1%E7%90%86%E5%88%A0%E9%99%A4.png" width="900px" /></a></p>
 <h2 id="7">7 授权管理<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【授权管理】进入授权管理界面，点击【授权验证】导入企业版证书，开启 X-Pack 功能。</p>
 </div>
-<p><img alt="授权管理首页" src="../../../img/system_management/%E6%8E%88%E6%9D%83%E7%AE%A1%E7%90%86%E9%A6%96%E9%A1%B5.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%8E%88%E6%9D%83%E7%AE%A1%E7%90%86%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="授权管理首页" src="../../../img/system_management/%E6%8E%88%E6%9D%83%E7%AE%A1%E7%90%86%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <h2 id="8">8 操作日志<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧【系统】下拉菜单中的【操作日志】进入日志界面，显示登录用户权限范围内的全部测试资源日志信息，并支持使用高级查询来快速查找相关日志。</p>
 </div>
-<p><img alt="操作日志首页" src="../../../img/system_management/%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97%E9%A6%96%E9%A1%B5.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="操作日志首页" src="../../../img/system_management/%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <h2 id="9">9 插件管理<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
 <h3 id="91-websocket-x-pack">9.1 WebSocket 插件 (X-Pack)<a class="headerlink" href="#91-websocket-x-pack" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>在【系统设置】-【系统】-【插件管理】界面下，上传 WebSocket 插件</p>
 </div>
-<p><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%861.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%861.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%861.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>在【接口测试】-【接口自动化】界面下，新建一个场景，点击场景右下角【+】号，添加 WebSocket 相关请求。</p>
 </div>
-<p><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%862.png" width="900px" /></p>
-<p><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%863.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%862.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%862.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%863.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="jenkins-plugin" src="../../../img/system_management/%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%863.png" width="900px" /></a></p>
 
 
   
@@ -3187,5 +3198,5 @@ kubectl get all -n ms-pool
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -21,7 +21,7 @@
         <link rel="next" href="../create_project/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2558,7 +2569,7 @@
 <div class="admonition ms-abstract">
 <p>进入 MeterSphere 主界面后可以看到界面左边是导航栏，包括【工作台】【测试跟踪】【接口测试】【UI 测试】【性能测试】【报表统计】【项目设置】【系统设置】八个模块，其中 UI 测试是企业版本 X-Pack的功能，界面上方以 Tab 页方式展示当前模块的具体功能。</p>
 </div>
-<p><img alt="界面说明" src="../../img/%E7%95%8C%E9%9D%A2%E8%AF%B4%E6%98%8E.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/%E7%95%8C%E9%9D%A2%E8%AF%B4%E6%98%8E.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="界面说明" src="../../img/%E7%95%8C%E9%9D%A2%E8%AF%B4%E6%98%8E.png" width="900px" /></a></p>
 
 
   
@@ -2662,5 +2673,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

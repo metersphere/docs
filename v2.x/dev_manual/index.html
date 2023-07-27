@@ -21,7 +21,7 @@
         <link rel="next" href="../automation_plugin_dev/">
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2763,19 +2774,19 @@ minio.secretKey=minioadmin
 ./mvnw clean package
 </code></pre></div></p>
 </div>
-<p><img alt="server-start" src="../img/dev/project_package.png" width="900px" /> </p>
+<p><a class="glightbox" href="../img/dev/project_package.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="server-start" src="../img/dev/project_package.png" width="900px" /></a> </p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>启动顺序</strong><br>
 先启动 eureka 服务，再启动 system-setting，到这一步可以启动成功，可以访问页面了。</li>
 </ul>
 </div>
-<p><img alt="server-start" src="../img/dev/eureka-gateway-start.png" width="900px" /><br>
-<img alt="server-start" src="../img/dev/eureka_gateway_success.png" width="900px" /> </p>
+<p><a class="glightbox" href="../img/dev/eureka-gateway-start.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="server-start" src="../img/dev/eureka-gateway-start.png" width="900px" /></a><br>
+<a class="glightbox" href="../img/dev/eureka_gateway_success.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="server-start" src="../img/dev/eureka_gateway_success.png" width="900px" /></a> </p>
 <div class="admonition ms-abstract">
 <p>如果要进行多模块联调的话需要启动 gateway 和其他服务，可以通过 eureka 查看服务信息，注册成功，就可以多模块联调了。</p>
 </div>
-<p><img alt="server-start" src="../img/dev/gateway_success.png" width="900px" /> </p>
+<p><a class="glightbox" href="../img/dev/gateway_success.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="server-start" src="../img/dev/gateway_success.png" width="900px" /></a> </p>
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>启动</strong><br>
@@ -2895,5 +2906,5 @@ minio.secretKey=minioadmin
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

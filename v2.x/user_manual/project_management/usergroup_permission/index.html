@@ -21,7 +21,7 @@
         <link rel="next" href="../project_environment/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2555,17 +2566,17 @@
 <p>维护当前项目用户及权限。</p>
 </div>
 <h2 id="1">1 新增用户组<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="项目设置" href="../../../img/project_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png"><img alt="项目设置" src="../../../img/project_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/project_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!项目设置" src="../../../img/project_management/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%BB%84.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>点击【创建用户组】，新增当前项目的用户组信息。详细功能操作及说明参考 <a href="../../system_management/system/#1">系统设置-&gt;系统-&gt;用户组与权限-&gt;创建用户组</a>。</p>
 </div>
 <h2 id="2">2 设置用户组权限<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="项目设置" href="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%9D%83%E9%99%90.png"><img alt="项目设置" src="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%9D%83%E9%99%90.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%9D%83%E9%99%90.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!项目设置" src="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%9D%83%E9%99%90.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>点击【设置权限】为用户组进行权限设置。详细功能操作及说明参考 <a href="../../system_management/system/#3">系统设置-&gt;系统-&gt;用户组与权限-&gt;设置权限</a>。</p>
 </div>
 <h2 id="3">3 设置用户组成员<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html="项目设置" href="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%88%90%E5%91%98.png"><img alt="项目设置" src="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%88%90%E5%91%98.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%88%90%E5%91%98.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!项目设置" src="../../../img/project_management/%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E7%BB%84%E6%88%90%E5%91%98.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>在用户组列表信息成员处，点击信息列里的【数字】为用户组进行成员设置。详细功能操作及说明参考 <a href="../../system_management/system/#3">系统设置-&gt;系统-&gt;用户组与权限-&gt;成员设置</a>。</p>
 </div>
@@ -2672,5 +2683,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

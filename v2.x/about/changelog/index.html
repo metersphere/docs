@@ -21,7 +21,7 @@
         <link rel="next" href="../security_bulletins/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2435,6 +2446,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2104-lts" class="md-nav__link">
+    v2.10.4-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2103-lts" class="md-nav__link">
+    v2.10.3-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2102-lts" class="md-nav__link">
+    v2.10.2-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2101-lts" class="md-nav__link">
     v2.10.1-lts
   </a>
@@ -2639,6 +2671,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2104-lts" class="md-nav__link">
+    v2.10.4-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2103-lts" class="md-nav__link">
+    v2.10.3-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v2102-lts" class="md-nav__link">
+    v2.10.2-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2101-lts" class="md-nav__link">
     v2.10.1-lts
   </a>
@@ -2792,11 +2845,144 @@
 <h1 id="_1">更新日志<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">版本说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p><strong>MeterSphere 版本号命名规则为：</strong>  v <em>大版本号</em>.<em>功能版本号</em>.<em>修复版本号</em>，MeterSphere 按月迭代发布功能版本，并按年发布 LTS（Long Term Support）版本，目前以及发布了三个 LTS 版本：</p>
+<p><strong>MeterSphere 版本号命名规则为：</strong>  v <em>大版本号</em>.<em>功能版本号</em>.<em>修复版本号</em>，MeterSphere 按月迭代发布功能版本，并按年发布 LTS（Long Term Support）版本，目前已经发布了三个 LTS 版本：</p>
 <ul>
 <li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护。</li>
 <li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每两周发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+</div>
+<h2 id="v2104-lts">v2.10.4-lts<a class="headerlink" href="#v2104-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年7月20日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor(接口测试): XPath断言支持html响应内容断言</li>
+<li>refactor(接口测试): 优化本地附件csv的清理逻辑</li>
+<li>refactor(测试跟踪): 报告导出场景case处理size调整</li>
+<li>refactor(测试跟踪): 测试计划关联用例确认弹窗优化</li>
+<li>refactor(测试跟踪): 测试计划执行新增"保存下一条"按钮操作</li>
+<li>refactor: Swagger可以配置是否开启</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(接口测试): 修复SQL协议导入覆盖运行环境变更问题</li>
+<li>fix(接口测试): 修复接口变更记录相关问题</li>
+<li>fix(接口测试): 修复Chrome插件录制脚本导入后步骤顺序错乱问题</li>
+<li>fix(接口测试): 修复TCP接口被删除后，仍然可以调用该接口Mock的缺陷</li>
+<li>fix(接口测试): 修复在使用平台做测试时Chrome经常出现崩溃问题</li>
+<li>fix(项目设置): 修复提示相关问题</li>
+<li>fix(项目设置): 修复通用配置筛选问题</li>
+<li>fix(项目设置): 修复项目环境创建失败的缺陷</li>
+<li>fix(项目设置): 修复导航栏工作空间搜索输入时自动失焦问题</li>
+<li>fix(测试跟踪): 修复jira使用自定义模板创建缺陷失败问题</li>
+<li>fix(测试跟踪): 修复功能用例创建版本分支, 报功能用例已存在问题</li>
+<li>fix(测试跟踪): 修复用例评审列表表头显示名称问题</li>
+<li>fix(测试跟踪): 修复脑图编辑用户会清空关联的需求问题</li>
+<li>fix(测试跟踪): 修复测试计划功能用例编辑页，用例状态显示有误</li>
+<li>fix(新手引导): 修复新建超级管理员用户-首次加载会出现两次新手引导弹窗</li>
+<li>fix(系统设置): 用户导入ID和名称添加校验</li>
+<li>fix(系统设置): 系统设置创建用户，下拉框option样式跟随select样式</li>
+<li>fix(系统设置): 修复插件删除后再次上传插件id错误的缺陷</li>
+<li>fix(系统设置): 修复工作空间名称超长，创建用户选则工作空间时样式问题</li>
+<li>fix(性能测试): 修复性能测试自定义执行的时候数字转化的问题</li>
+<li>fix: 修复Jenkins执行测试时由于权限不够导致不能正常执行的问题</li>
+<li>fix: 资源池镜像长度进行限制</li>
+</ul>
+</div>
+<h2 id="v2103-lts">v2.10.3-lts<a class="headerlink" href="#v2103-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年7月6日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor(接口测试): 去除JMeter不兼容的Mock函数</li>
+<li>refactor(接口测试): 场景调试去掉通知</li>
+<li>refactor(个人信息): 第三方平台账号配置label宽度调整</li>
+<li>refactor(个人信息): 第三方平台账号字段显示优化</li>
+<li>refactor(测试计划): 重写测试计划加载场景报告的方式</li>
+<li>refactor(测试跟踪): 第三方平台缺陷删除提示优化</li>
+<li>refactor(测试跟踪): 测试计划创建缺陷弹框添加全屏按钮</li>
+<li>refactor(测试跟踪): 列表排序后，脑图点击上下移动，提示优化</li>
+<li>refactor(测试跟踪): 测试计划功能用例关联缺陷，添加排序字段</li>
+<li>refactor(测试跟踪): 用例列表不展示文本框和富文本框类型的自定义字段</li>
+<li>refactor(测试跟踪): 功能用例列表不展示文本框类型的自定义字段，优化效率</li>
+<li>refactor(通用功能): 个人信息的第三方平台账号信息改为非必填</li>
+<li>refactor(通用功能): Jackson默认序列化字符串长度调整</li>
+<li>style(测试计划): 更改测试计划报告中接口测试报告的展示高度</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(接口测试): 修复特殊数据的swagger3.0数据导出失败的缺陷</li>
+<li>fix(接口测试): 修复场景导入非标准JMX文件失败问题</li>
+<li>fix(接口测试): 修复参数和类型不符合的json-schema数据转json错误问题</li>
+<li>fix(接口测试): 修复同步接收报告结果有时间差问题</li>
+<li>fix(接口测试): 修复请求体含特殊字符转换错误问题</li>
+<li>fix(接口测试): 修复多层嵌套引用场景禁用状态不生效问题</li>
+<li>fix(测试跟踪): Tapd 编辑缺陷处理人显示异常</li>
+<li>fix(测试跟踪): 功能评审高级搜索弹窗出现空的滚动条</li>
+<li>fix(测试跟踪): 日期自定义字段列表显示带了准确时间</li>
+<li>fix(测试跟踪): 公共用例库复制和编辑根据权限启用禁用</li>
+<li>fix(测试跟踪): 测试计划功能用例列表自定义字段筛选问题</li>
+<li>fix(测试跟踪): 访问测试跟踪默认跳转到第一个有权限的菜单</li>
+<li>fix(测试跟踪): 整型自定义字段不修改默认值，会保存为字符串</li>
+<li>fix(测试跟踪): 选中用例数量过多生成依赖关系图页面加载异常</li>
+<li>fix(性能测试): 性能测试时执行时检查jmx文件</li>
+<li>fix(项目管理): 模板设置查询权限控制问题</li>
+<li>fix(项目设置): 创建缺陷模板不校验模板字段权限</li>
+<li>fix(项目设置): 优化自定义代码片段的权限判断方式</li>
+<li>fix(系统设置): ldap用户第一次登录工作台权限问题</li>
+<li>fix(系统设置): 工作空间成员与环境管理列表选中数量展示错误</li>
+</ul>
+</div>
+<h2 id="v2102-lts">v2.10.2-lts<a class="headerlink" href="#v2102-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年6月20日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor: 部分接口权限补全</li>
+<li>refactor: 前端拆包优化</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(UI测试): 修复追加输入提示信息带特殊字符问题</li>
+<li>fix(工作台): 修复仪表盘过滤当前用户问题</li>
+<li>fix(接口测试): 修复引用的case无法添加断言的缺陷</li>
+<li>fix(接口测试): 修复场景导入接口列表频繁调接口的缺陷</li>
+<li>fix(接口测试): 修复断言响应时间开启关闭不生效的缺陷</li>
+<li>fix(测试跟踪): 修复qiankun组件加载报告切换错乱问题</li>
+<li>fix(测试跟踪): 修复功能用例编辑责任人ID为纯数字显示异常问题</li>
+<li>fix(测试跟踪): 修复用例列表自定义列选择后刷新失效问题</li>
+<li>fix(测试跟踪): 修复使用第三方缺陷模板，存在同名字段，无法保存问题</li>
+<li>fix(测试跟踪): 修复测试计划执行队列不再记录执行失败的性能用例问题</li>
+<li>fix(测试跟踪): 修复缺陷自定义字段下拉选项远程检索，输入关键字后失去焦点，选项没有重置</li>
+<li>fix(测试跟踪): 修复导入缺陷文件内容错误后，修改原始文件并保存，报network_error</li>
+<li>fix(系统设置): 修复配置邮件Port参数校验问题</li>
+<li>fix(性能测试): 修复性能测试场景CSV变更后进行同步时表格内的CSV文件也同步更改</li>
+<li>fix(文件管理): 修复文件管理增加对模块id不存在的旧数据处理</li>
+<li>fix(项目设置): 修复TCP配置字段名称显示问题</li>
+<li>fix(项目设置): 删除消息通知模板中的无效变量</li>
+<li>fix(项目设置): 修复自定义待更新规则配置提示问题</li>
 </ul>
 </div>
 <h2 id="v2101-lts">v2.10.1-lts<a class="headerlink" href="#v2101-lts" title="Permanent link">&para;</a></h2>
@@ -3732,5 +3918,5 @@ MeterSphere作为一站式持续测试平台，既需要与各种周边系统进
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

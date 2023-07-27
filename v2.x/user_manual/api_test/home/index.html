@@ -21,7 +21,7 @@
         <link rel="next" href="../api_definition/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2477,7 +2488,7 @@
 <div class="admonition ms-abstract">
 <p>接口测试【首页】用于展示现有项目的接口数量、接口用例数量、场景用例数量、场景定时任务数量、过去7天有更新接口、运行中的定时任务信息，帮助用户快速了解当前项目接口测试情况。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="接口测试首页" href="../../../img/api/%E9%A6%96%E9%A1%B51.png"><img alt="接口测试首页" src="../../../img/api/%E9%A6%96%E9%A1%B51.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E9%A6%96%E9%A1%B51.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!接口测试首页" src="../../../img/api/%E9%A6%96%E9%A1%B51.png" width="900px" /></a></p>
 
 
   
@@ -2581,5 +2592,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

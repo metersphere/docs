@@ -21,7 +21,7 @@
         <link rel="next" href="../offline_installation_mac/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2722,38 +2733,38 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 <div class="admonition ms-abstract">
 <p>在 Windows 10 的应用商店里搜索"Ubuntu"并安装：</p>
 </div>
-<p><img alt="安装Ubuntu" src="../../img/installation/windows-install-ubuntu.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/windows-install-ubuntu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装Ubuntu" src="../../img/installation/windows-install-ubuntu.png" width="900px" /></a></p>
 <h3 id="23-ubuntu-wsl">2.3 检测 Ubuntu WSL 版本<a class="headerlink" href="#23-ubuntu-wsl" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p class="admonition-title">以管理员身份执行：</p>
 <div class="highlight"><pre><span></span><code>wsl.exe -l -v
 </code></pre></div>
 </div>
-<p><img alt="WSL版本1" src="../../img/installation/check-version-1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/check-version-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="WSL版本1" src="../../img/installation/check-version-1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>示例中安装的 Ubuntu Name 为 "Ubuntu"， 如像上图出现 Ubuntu 版本为 1， 则继续执行命令：
 <div class="highlight"><pre><span></span><code>wsl.exe --set-version Ubuntu 2
 </code></pre></div></p>
 <p><strong>出现下图结果即为成功：</strong></p>
 </div>
-<p><img alt="WSL版本2" src="../../img/installation/check-version-2.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/check-version-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="WSL版本2" src="../../img/installation/check-version-2.png" width="900px" /></a></p>
 <h3 id="24-docker">2.4 Docker 安装与配置<a class="headerlink" href="#24-docker" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>下载<a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe">Docker Desktop for Windows</a>，双击 Docker Desktop Installer.exe 完成docker 的安装。</p>
 <p>Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜单下的 WSL INTEGRATION，按下图设置后，点击右下角的<code>Apply &amp; Restart</code>。</p>
 </div>
-<p><img alt="docker设置" src="../../img/installation/docker-settings.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/docker-settings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="docker设置" src="../../img/installation/docker-settings.png" width="900px" /></a></p>
 <h3 id="25-ubuntu">2.5 启动 Ubuntu<a class="headerlink" href="#25-ubuntu" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>在应用商店里，选择 Ubuntu，点击"启动"按钮启动 Ubuntu，并执行 <code>sudo su</code> 命令切换到 root 用户：</p>
 </div>
 <p>`
-<img alt="启动Ubuntu" src="../../img/installation/launch-ubuntu.png" width="600px" /></p>
+<a class="glightbox" href="../../img/installation/launch-ubuntu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="启动Ubuntu" src="../../img/installation/launch-ubuntu.png" width="600px" /></a></p>
 <h3 id="26-docker">2.6 检查 Docker 环境<a class="headerlink" href="#26-docker" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>在 Ubuntu 命令行中执行命令<code>docker version</code>，如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，则需要根据提示信息解决。</p>
 </div>
-<p><img alt="docker检测" src="../../img/installation/check-docker.png" width="600px" /></p>
+<p><a class="glightbox" href="../../img/installation/check-docker.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="docker检测" src="../../img/installation/check-docker.png" width="600px" /></a></p>
 <h3 id="27">2.7 下载安装包<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>在 <a href="https://community.fit2cloud.com/#/products/metersphere/downloads">飞致云开源社区</a> 或 <a href="https://github.com/metersphere/metersphere/releases">MeterSphere Github Release</a> 下载 MeterSphere 最新版本的离线安装包。</p>
@@ -2784,8 +2795,8 @@ cd metersphere-offline-installer-v2.10.0
 密码: metersphere
 </code></pre></div>
 </div>
-<p><img alt="安装MeterSphere" src="../../img/installation/windows-install.png" width="900px" /></p>
-<p><img alt="安装MeterSphere" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></p>
+<p><a class="glightbox" href="../../img/installation/windows-install.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/windows-install.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="安装MeterSphere" src="../../img/installation/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%987.png" width="900px" /></a></p>
 
 
   
@@ -2889,5 +2900,5 @@ cd metersphere-offline-installer-v2.10.0
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

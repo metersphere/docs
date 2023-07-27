@@ -21,7 +21,7 @@
         <link rel="next" href="../todo/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2568,27 +2579,27 @@
 <div class="admonition ms-abstract">
 <p>页面主要展示【我的待办】、【我的关注】、【我创建的用例】、【我创建的缺陷】模块的统计数据。</p>
 </div>
-<p><img alt="显示用例个数" src="../../../img/user_manual/my_desk/dashboard/all_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/dashboard/all_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="显示用例个数" src="../../../img/user_manual/my_desk/dashboard/all_1.png" width="900px" /></a></p>
 <h2 id="1">1 我的待办<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>展示不同类别的待办数据，如功能用例、测试计划、用例评审、缺陷管理、接口定义、接口用例、接口自动化、性能测试等，点击待办列表中的不同类别，会跳至相应的页面。</p>
 </div>
-<p><img alt="显示我的待办" src="../../../img/user_manual/my_desk/dashboard/todo_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/dashboard/todo_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="显示我的待办" src="../../../img/user_manual/my_desk/dashboard/todo_1.png" width="900px" /></a></p>
 <h2 id="2">2 我的关注<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>展示不同类别的关注，如功能用例、测试计划、用例评审、缺陷管理、接口定义、接口用例、接口自动化、性能测试等，点击关注列表中的不同类别，会跳至相应的页面。</p>
 </div>
-<p><img alt="显示我的关注" src="../../../img/user_manual/my_desk/dashboard/attention_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/dashboard/attention_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="显示我的关注" src="../../../img/user_manual/my_desk/dashboard/attention_1.png" width="900px" /></a></p>
 <h2 id="3">3 我创建的用例<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>饼图展示各类用例的数量，鼠标悬浮在各类用例上，会显示该类用例的个数。</p>
 </div>
-<p><img alt="显示用例个数" src="../../../img/user_manual/my_desk/dashboard/case_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/dashboard/case_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="显示用例个数" src="../../../img/user_manual/my_desk/dashboard/case_1.png" width="900px" /></a></p>
 <h2 id="4">4 我创建的缺陷<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>饼图展示各类缺陷的个数，鼠标悬浮在各类缺陷上，会显示该类缺陷的个数。</p>
 </div>
-<p><img alt="显示缺陷个数" src="../../../img/user_manual/my_desk/dashboard/bug_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/dashboard/bug_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="显示缺陷个数" src="../../../img/user_manual/my_desk/dashboard/bug_1.png" width="900px" /></a></p>
 
 
   
@@ -2692,5 +2703,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

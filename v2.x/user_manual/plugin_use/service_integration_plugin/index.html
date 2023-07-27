@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -81,7 +81,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2461,15 +2472,15 @@
 <div class="admonition ms-abstract">
 <p>MeterSphere v2.4 版本实现了服务集成的插件化，目前已经支持禅道、Jira、TAPD等平台的对接，也可根据自身需求开发对应插件。系统设置-插件管理上传插件 使用方式跟原来一致，具体参考 <a href="https://github.com/metersphere/metersphere-platform-plugin">metersphere-platform-plugin</a> 。以 Jira 平台为例，在【系统设置】-【系统】-【插件管理】界面下，上传 Jira 插件包。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_1.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>【系统设置】-【系统】-【服务集成】处可看到 Jira 平台，选中 Jira 平台可出现相关账号信息。点击【编辑】填写Jira 平台相关账号信息后进行保存，并通过【测试连接】进行验证。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_3.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_3.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>验证通过后，在【系统设置】-【系统】-【项目管理】处，进行项目编辑时，可看到【集成第三方平台】的下拉框有 Jira 平台选项以及 Jira 平台的相关信息。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_4.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/service_integration_plugin/service_integration_plugin_4.png" width="900px" /></a></p>
 
 
   
@@ -2573,5 +2584,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

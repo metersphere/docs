@@ -21,7 +21,7 @@
         <link rel="next" href="../service_integration/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2642,7 +2653,7 @@
 <div class="admonition ms-abstract">
 <p>数据库默认开启了 SSL 验证相应的配置导致，可在【系统设置-环境管理】数据库的 URL 增加<code>？useSSL=false</code> 来解决。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html=" 数据库配置" href="../../img/faq/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE1.png"><img alt=" 数据库配置" src="../../img/faq/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE1.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 数据库配置" src="../../img/faq/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE1.png" width="900px" /></a></p>
 <h2 id="6-sqlsql">6 在一个SQL请求下如何执行多条SQL？<a class="headerlink" href="#6-sqlsql" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>在【系统设置-环境管理】编辑环境数据源配置的 URL 后面加上 <code>allowMultiQueries=true</code>。</p>
@@ -2754,5 +2765,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

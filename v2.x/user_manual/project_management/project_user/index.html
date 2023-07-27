@@ -21,7 +21,7 @@
         <link rel="next" href="../usergroup_permission/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2530,15 +2541,15 @@
 <div class="admonition ms-abstract">
 <p>点击【项目成员】菜单，即可查看当前有项目角色的成员。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="项目设置" href="../../../img/project_management/%E9%A1%B9%E7%9B%AE%E6%88%90%E5%91%98.png"><img alt="项目设置" src="../../../img/project_management/%E9%A1%B9%E7%9B%AE%E6%88%90%E5%91%98.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/project_management/%E9%A1%B9%E7%9B%AE%E6%88%90%E5%91%98.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!项目设置" src="../../../img/project_management/%E9%A1%B9%E7%9B%AE%E6%88%90%E5%91%98.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>点击页面左上角【添加成员】，可根据用户 ID 和用户邮箱搜索需要添加的用户，可选择用户组，点击【确定】按钮完成项目成员添加。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="项目设置" href="../../../img/project_management/%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98.png"><img alt="项目设置" src="../../../img/project_management/%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/project_management/%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!项目设置" src="../../../img/project_management/%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>添加完成后可在成员列表中查看到添加的成员，在成员的操作列中可点击【编辑】和【删除】进行成员修改和成员删除操作。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="项目设置" href="../../../img/project_management/%E7%BC%96%E8%BE%91%E7%A7%BB%E9%99%A4.png"><img alt="项目设置" src="../../../img/project_management/%E7%BC%96%E8%BE%91%E7%A7%BB%E9%99%A4.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/project_management/%E7%BC%96%E8%BE%91%E7%A7%BB%E9%99%A4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!项目设置" src="../../../img/project_management/%E7%BC%96%E8%BE%91%E7%A7%BB%E9%99%A4.png" width="900px" /></a></p>
 
 
   
@@ -2642,5 +2653,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

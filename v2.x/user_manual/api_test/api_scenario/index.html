@@ -21,7 +21,7 @@
         <link rel="next" href="../functions/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2808,8 +2819,8 @@
 <p>接口自动化场景右下角菜单【+】选择 【接口列表导入】，从接口列表可以选择 API 里面的数据，使用方式支持 【复制】模式。 <br />
 【复制】方式导入的用例，当原用例发生变化时，场景中导入的用例不会改变。<br /></p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="导入接口" href="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5lb.png"><img alt="导入接口" src="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5lb.png" width="900px" />
-</a></div><div class="lightgallery"><a data-sub-html="导入接口" href="../../../img/api/%E5%AF%BC%E5%85%A5%E9%80%89%E6%8B%A9api.png"><img alt="导入接口" src="../../../img/api/%E5%AF%BC%E5%85%A5%E9%80%89%E6%8B%A9api.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5lb.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!导入接口" src="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5lb.png" width="900px" /></a>
+<a class="glightbox" href="../../../img/api/%E5%AF%BC%E5%85%A5%E9%80%89%E6%8B%A9api.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!导入接口" src="../../../img/api/%E5%AF%BC%E5%85%A5%E9%80%89%E6%8B%A9api.png" width="900px" /></a></p>
 <h3 id="12">1.2 导入用例<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>接口自动化场景右下角菜单【+】选择【接口列表导入】，从接口列表可以选择 CASE 里面的数据，使用方式支持 【复制】、【引用】两种模式。 <br /></p>
@@ -2818,19 +2829,19 @@
 <li>【引用】方式导入的用例，当原用例发生变化时，场景中导入的用例也会随之改变。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="导入用例" href="../../../img/api/%E5%AF%BC%E5%85%A5%E5%A4%8D%E5%88%B6%E5%BC%95%E7%94%A8.png"><img alt="导入用例" src="../../../img/api/%E5%AF%BC%E5%85%A5%E5%A4%8D%E5%88%B6%E5%BC%95%E7%94%A8.png" width="900px" />
-</a></div><div class="lightgallery"><a data-sub-html="导入接口" href="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5%E5%B1%95%E7%A4%BA.png"><img alt="导入接口" src="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5%E5%B1%95%E7%A4%BA.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E5%AF%BC%E5%85%A5%E5%A4%8D%E5%88%B6%E5%BC%95%E7%94%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!导入用例" src="../../../img/api/%E5%AF%BC%E5%85%A5%E5%A4%8D%E5%88%B6%E5%BC%95%E7%94%A8.png" width="900px" /></a>
+<a class="glightbox" href="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5%E5%B1%95%E7%A4%BA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!导入接口" src="../../../img/api/%E6%8E%A5%E5%8F%A3%E5%AF%BC%E5%85%A5%E5%B1%95%E7%A4%BA.png" width="900px" /></a></p>
 <h2 id="2">2 自定义请求<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>除了导入已有定义的接口或用例，还可以通过自定义请求的方式增加请求，目前支持 HTTP、TCP、DUBBO、SQL 等不同类型。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="添加自定义请求" href="../../../img/api/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png"><img alt="添加自定义请求" src="../../../img/api/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png" width="900px" />
-</a></div><div class="lightgallery"><a data-sub-html="添加自定义请求" href="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png"><img alt="添加自定义请求" src="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!添加自定义请求" src="../../../img/api/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png" width="900px" /></a>
+<a class="glightbox" href="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!添加自定义请求" src="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82.png" width="900px" /></a></p>
 <h2 id="3">3 自定义脚本<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>自定义脚本与前后置脚本使用方式类似，但是可以独立添加，不需要依赖于某个已有请求作为其子步骤。目前支持的脚本语言及内置变量请参考  <a href="../api_step##-1-前置脚本">前置脚本</a>。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="添加自定义脚本" href="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC.png"><img alt="添加自定义脚本" src="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!添加自定义脚本" src="../../../img/api/%E5%9C%BA%E6%99%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC.png" width="900px" /></a></p>
 <h2 id="4">4 场景导入<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>用户可以维护一些基础、通用场景，通过场景导入功能，可以直接将已有的场景添加到当前场景中，减少重复工作，提高场景的复用性。 <br /></p>
@@ -2839,18 +2850,18 @@
 <li>【引用】方式导入的场景，当原场景发生变化时，场景中导入的场景也会随之改变。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="场景导入" href="../../../img/api/%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png"><img alt="场景导入" src="../../../img/api/%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png" width="900px" />
-</a></div><div class="lightgallery"><a data-sub-html="场景导入" href="../../../img/api/%E5%88%97%E8%A1%A8%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png"><img alt="场景导入" src="../../../img/api/%E5%88%97%E8%A1%A8%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!场景导入" src="../../../img/api/%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png" width="900px" /></a>
+<a class="glightbox" href="../../../img/api/%E5%88%97%E8%A1%A8%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!场景导入" src="../../../img/api/%E5%88%97%E8%A1%A8%E5%9C%BA%E6%99%AF%E5%AF%BC%E5%85%A5.png" width="900px" /></a></p>
 <h2 id="5">5 条件控制器<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>当条件控制器中配置的条件满足时，条件控制器下的子步骤才会执行，否则子步骤会被跳过。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="添加条件控制器" href="../../../img/api/%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E5%99%A8%E4%BD%BF%E7%94%A8.png"><img alt="添加条件控制器" src="../../../img/api/%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E5%99%A8%E4%BD%BF%E7%94%A8.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E5%99%A8%E4%BD%BF%E7%94%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!添加条件控制器" src="../../../img/api/%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E5%99%A8%E4%BD%BF%E7%94%A8.png" width="900px" /></a></p>
 <h2 id="6">6 循环控制器<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>通过使用循环控制器，可以重复执行循环控制器下的子步骤。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="添加循环控制器" href="../../../img/api/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E5%99%A8.png"><img alt="添加循环控制器" src="../../../img/api/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E5%99%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!添加循环控制器" src="../../../img/api/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="900px" /></a></p>
 <h3 id="61">6.1 次数循环<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>次数循环支持自定义设置次数、间隔等方式进行循环控制。</p>
@@ -2860,13 +2871,13 @@
 <li>【成功后是否继续循环】：仅循环控制器下存在一个请求时可以关闭。当关闭时，若循环控制器下的请求是成功状态，则立即终止循环，无论有没有达到循环次数。可以用在异步请求后轮询查询执行结果的场景，当查询结果符合预期时终止循环，避免多余的查询操作。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="次数循环" href="../../../img/api/%E6%AC%A1%E6%95%B0%E5%BE%AA%E7%8E%AF1.png"><img alt="次数循环" src="../../../img/api/%E6%AC%A1%E6%95%B0%E5%BE%AA%E7%8E%AF1.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E6%AC%A1%E6%95%B0%E5%BE%AA%E7%8E%AF1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!次数循环" src="../../../img/api/%E6%AC%A1%E6%95%B0%E5%BE%AA%E7%8E%AF1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">示例</p>
 <p>开启【成功后继续循环】，循环总共执行了 5 次。
-<div class="lightgallery"><a data-sub-html="开启成功后继续循环" href="../../../img/api/%E5%BC%80%E5%90%AF%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png"><img alt="开启成功后继续循环" src="../../../img/api/%E5%BC%80%E5%90%AF%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png" width="900px" /></a></div></p>
+<a class="glightbox" href="../../../img/api/%E5%BC%80%E5%90%AF%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!开启成功后继续循环" src="../../../img/api/%E5%BC%80%E5%90%AF%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png" width="900px" /></a></p>
 <p>关闭【成功后继续循环】，由于循环下的请求第一次便执行成功，循环仅执行了 1 次。
-<div class="lightgallery"><a data-sub-html="关闭成功后继续循环" href="../../../img/api/%E5%85%B3%E9%97%AD%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png"><img alt="关闭成功后继续循环" src="../../../img/api/%E5%85%B3%E9%97%AD%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png" width="900px" /></a></div></p>
+<a class="glightbox" href="../../../img/api/%E5%85%B3%E9%97%AD%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!关闭成功后继续循环" src="../../../img/api/%E5%85%B3%E9%97%AD%E6%88%90%E5%8A%9F%E5%BE%AA%E7%8E%AF.png" width="900px" /></a></p>
 </div>
 <h3 id="62-foreach">6.2 ForEach 循环<a class="headerlink" href="#62-foreach" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
@@ -2877,15 +2888,15 @@
 <li>【循环间隔】：每次执行间的时间间隔，以毫秒为单位。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="ForEach循环" href="../../../img/api/foreach.png"><img alt="ForEach循环" src="../../../img/api/foreach.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/foreach.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!ForEach循环" src="../../../img/api/foreach.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">示例</p>
 <p>在场景变量中设置列表变量 id，列表值为<code>1</code>，<code>2</code>，<code>3</code>。
-<div class="lightgallery"><a data-sub-html="ForEach循环" href="../../../img/api/%E6%B7%BB%E5%8A%A0%E5%8F%98%E9%87%8F.png"><img alt="ForEach循环" src="../../../img/api/%E6%B7%BB%E5%8A%A0%E5%8F%98%E9%87%8F.png" width="900px" /></a></div></p>
+<a class="glightbox" href="../../../img/api/%E6%B7%BB%E5%8A%A0%E5%8F%98%E9%87%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!ForEach循环" src="../../../img/api/%E6%B7%BB%E5%8A%A0%E5%8F%98%E9%87%8F.png" width="900px" /></a></p>
 <p>遍历场景变量中的列表变量，在【前置脚本】中打印列表变量中的每个值。
-<div class="lightgallery"><a data-sub-html="ForEach循环" href="../../../img/api/%E8%AE%BE%E7%BD%AEfe%E5%BE%AA%E7%8E%AF%E6%9D%A1%E4%BB%B6.png"><img alt="ForEach循环" src="../../../img/api/%E8%AE%BE%E7%BD%AEfe%E5%BE%AA%E7%8E%AF%E6%9D%A1%E4%BB%B6.png" width="900px" /></a></div></p>
+<a class="glightbox" href="../../../img/api/%E8%AE%BE%E7%BD%AEfe%E5%BE%AA%E7%8E%AF%E6%9D%A1%E4%BB%B6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!ForEach循环" src="../../../img/api/%E8%AE%BE%E7%BD%AEfe%E5%BE%AA%E7%8E%AF%E6%9D%A1%E4%BB%B6.png" width="900px" /></a></p>
 <p>循环次数与列表长度相同，且输出列表变量中的每个值。
-<div class="lightgallery"><a data-sub-html="ForEach循环" href="../../../img/api/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%9C.png"><img alt="ForEach循环" src="../../../img/api/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%9C.png" width="900px" /></a></div></p>
+<a class="glightbox" href="../../../img/api/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%9C.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!ForEach循环" src="../../../img/api/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%9C.png" width="900px" /></a></p>
 </div>
 <h3 id="63-while">6.3 While 循环<a class="headerlink" href="#63-while" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
@@ -2897,26 +2908,26 @@
 <li>【循环超时时间】：由于 while 循环的特殊性，当条件满足时将会一直循环，为了避免死循环的情况出现，用户可以配置循环超时时间，到超过该时间后，不管循环条件是否满足，循环都将被终止。</li>
 </ul>
 </div>
-<p><div class="lightgallery"><a data-sub-html="While循环" href="../../../img/api/While%E5%BE%AA%E7%8E%AF.png"><img alt="While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/While%E5%BE%AA%E7%8E%AF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">示例</p>
 <p>在场景变量中设置常量变量 NUM，值为5。
- <div class="lightgallery"><a data-sub-html="While循环" href="../../../img/api/While%E5%BE%AA%E7%8E%AF%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F.png"><img alt="While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F.png" width="900px" /></a></div></p>
+ <a class="glightbox" href="../../../img/api/While%E5%BE%AA%E7%8E%AF%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F.png" width="900px" /></a></p>
 <p>设置 While循环的条件，在前置脚本获取变量值并更改变量值
- <div class="lightgallery"><a data-sub-html="While循环" href="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F.png"><img alt="While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F.png" width="900px" /></a></div></p>
+ <a class="glightbox" href="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F.png" width="900px" /></a></p>
 <p>每次循环修改的值在控制台进行打印
- <div class="lightgallery"><a data-sub-html="While循环" href="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%89%93%E5%8D%B0%E5%8F%98%E9%87%8F.png"><img alt="While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%89%93%E5%8D%B0%E5%8F%98%E9%87%8F.png" width="900px" /></a></div></p>
+ <a class="glightbox" href="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%89%93%E5%8D%B0%E5%8F%98%E9%87%8F.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!While循环" src="../../../img/api/While%E5%BE%AA%E7%8E%AF%E6%89%93%E5%8D%B0%E5%8F%98%E9%87%8F.png" width="900px" /></a></p>
 </div>
 <h2 id="7">7 等待控制器<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>当某个步骤执行后需要等待一段时间时，可使用等待控制器进行控制。当作为步骤添加时，与之同级的所有步骤均会等待若干时间；作为某个步骤的子步骤添加时，该步骤将等待若干时间后再执行。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="添加等待控制器" href="../../../img/api/%E6%B7%BB%E5%8A%A0%E7%AD%89%E5%BE%85%E6%8E%A7%E5%88%B6%E5%99%A8.png"><img alt="添加等待控制器" src="../../../img/api/%E6%B7%BB%E5%8A%A0%E7%AD%89%E5%BE%85%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E6%B7%BB%E5%8A%A0%E7%AD%89%E5%BE%85%E6%8E%A7%E5%88%B6%E5%99%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!添加等待控制器" src="../../../img/api/%E6%B7%BB%E5%8A%A0%E7%AD%89%E5%BE%85%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="900px" /></a></p>
 <h2 id="8">8 事务控制器<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>事务控制器将一组请求当成一个事务进行处理，比如用户一个动作包含很多个请求，这部分请求就都可以放在一个事务控制器下，当成一个事务，常用于性能测试。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html="事务控制器" href="../../../img/api/%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6%E5%99%A8.png"><img alt="事务控制器" src="../../../img/api/%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../../img/api/%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6%E5%99%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!事务控制器" src="../../../img/api/%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6%E5%99%A8.png" width="900px" /></a></p>
 <h2 id="9">9 前置脚本<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>与接口用例操作中的前置脚本类似，请参考 <a href="../api_step##-1-前置脚本">前置脚本</a>。</p>
@@ -3044,5 +3055,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

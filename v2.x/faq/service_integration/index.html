@@ -21,7 +21,7 @@
         <link rel="next" href="../enterprise/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2661,13 +2672,13 @@ Azure Devops： 请参考<a href="https://kb.fit2cloud.com/?p=260">MeterSphere �
 <div class="admonition ms-abstract">
 <p>一般为用户没有权限访问此项目，检查 JIRA 对应项目的管理员用户是否和 MS 系统【系统设置-服务集成-JIRA】处配置的账号一致，可配合后台日志/opt/metersphere/logs/system-setting/info.log查看报错原因。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html=" JIRA" href="../../img/faq/%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90JIRA.png"><img alt=" JIRA" src="../../img/faq/%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90JIRA.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90JIRA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! JIRA" src="../../img/faq/%E6%9C%8D%E5%8A%A1%E9%9B%86%E6%88%90JIRA.png" width="900px" /></a></p>
 <h2 id="7-jira">7 同步缺陷到JIRA，如何实现自定义字段？<a class="headerlink" href="#7-jira" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>可以在【项目设置-更多选项-模版管理】，创建模板字段；然后打开缺陷模板-JIRA默认模版，添加创建好的自定义字段，在 MeterSphere 上提交缺陷时就会出现该字段。</p>
 </div>
-<p><div class="lightgallery"><a data-sub-html=" JIRA自定义字段01" href="../../img/faq/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png"><img alt=" JIRA自定义字段01" src="../../img/faq/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" width="900px" /></a></div></p>
-<p><div class="lightgallery"><a data-sub-html=" JIRA自定义字段02" href="../../img/faq/%E7%94%A8%E4%BE%8B%E6%A8%A1%E6%9D%BF%E6%B7%BB%E5%8A%A0.png"><img alt=" JIRA自定义字段02" src="../../img/faq/%E7%94%A8%E4%BE%8B%E6%A8%A1%E6%9D%BF%E6%B7%BB%E5%8A%A0.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! JIRA自定义字段01" src="../../img/faq/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E7%94%A8%E4%BE%8B%E6%A8%A1%E6%9D%BF%E6%B7%BB%E5%8A%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! JIRA自定义字段02" src="../../img/faq/%E7%94%A8%E4%BE%8B%E6%A8%A1%E6%9D%BF%E6%B7%BB%E5%8A%A0.png" width="900px" /></a></p>
 <h2 id="8-jira">8 集成JIRA时，如何实现绑定指定账号？<a class="headerlink" href="#8-jira" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>可以在【个人账号-个人信息-第三方平台账号】弹窗，配置 JIRA 账号和密码，就可以绑定账号关联需求以及同步缺陷了。</p>
@@ -2775,5 +2786,5 @@ Azure Devops： 请参考<a href="https://kb.fit2cloud.com/?p=260">MeterSphere �
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

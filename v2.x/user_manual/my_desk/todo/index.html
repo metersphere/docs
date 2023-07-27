@@ -21,7 +21,7 @@
         <link rel="next" href="../attention/">
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2540,12 +2551,12 @@
 <div class="admonition ms-abstract">
 <p>可切换到任意菜单，下方列表就显示对应内容。默认【功能用例】，选择当前版本号，点击列表任一数据，会跳转到对应的页面查看详细情况。<br></p>
 </div>
-<p><img alt="切换" src="../../../img/user_manual/my_desk/todo/todo_2.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/todo/todo_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="切换" src="../../../img/user_manual/my_desk/todo/todo_2.png" width="900px" /></a></p>
 <h2 id="1">1 待完成<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>在【接口定义】、【接口用例】、【接口自动化】Tab 下可以展示所有【待完成】的接口或者用例列表。</p>
 </div>
-<p><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_7.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/todo/todo_7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_7.png" width="900px" /></a></p>
 <h2 id="2">2 待更新<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>已存在的接口，修改地址、请求头、请求体等信息，点击保存后，未进行【同步设置】操作。</p>
@@ -2554,12 +2565,12 @@
 <p class="admonition-title">同步设置</p>
 <p>即在 API 接口发生变更并点击保存后，可勾选同步设置 Header、QUERY参数、REST参数等选项，勾选后，会同步更新该 API 对应的 CASE 和引用该 API 的场景。</p>
 </div>
-<p><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_4.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/todo/todo_4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_4.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>可在【待更新】页面列表中进行【同步】或【忽略】操作。</p>
 </div>
-<p><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_5.png" width="900px" /></p>
-<p><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_6.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/todo/todo_5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_5.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/user_manual/my_desk/todo/todo_6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="跳转" src="../../../img/user_manual/my_desk/todo/todo_6.png" width="900px" /></a></p>
 
 
   
@@ -2663,5 +2674,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

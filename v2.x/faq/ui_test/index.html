@@ -21,7 +21,7 @@
         <link rel="next" href="../load_test/">
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2550,17 +2561,17 @@
   <h1>UI 测试相关</h1>
 
 <h2 id="1-chromedriver">1.本地调试时，启动日志中出现两个 ChromeDriver 版本号，原因是？<a class="headerlink" href="#1-chromedriver" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html=" UI测试-版本" href="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%89%88%E6%9C%AC%E4%B8%8D%E5%AF%B9.png"><img alt=" UI测试-版本" src="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%89%88%E6%9C%AC%E4%B8%8D%E5%AF%B9.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%89%88%E6%9C%AC%E4%B8%8D%E5%AF%B9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! UI测试-版本" src="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%89%88%E6%9C%AC%E4%B8%8D%E5%AF%B9.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>本地浏览器的版本号与下载的驱动版本不匹配，可查看浏览器版本后，重新下载对应版本的驱动。</p>
 </div>
 <h2 id="2cannot-find-chrome-binary">2.本地调试，启动日志中报错：<code>cannot find Chrome binary</code>，如何解决？<a class="headerlink" href="#2cannot-find-chrome-binary" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html=" UI测试-版本" href="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8.jpg"><img alt=" UI测试-版本" src="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8.jpg" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! UI测试-版本" src="../../img/faq/UI%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E6%89%BE%E4%B8%8D%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8.jpg" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>将 chrome.exe 的路径配置到环境变量 PATH 里。</p>
 </div>
 <h2 id="3">3.本地调试，日志没有任何报错情况，但是页面浏览器没有被调用起来，如何处理？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p><div class="lightgallery"><a data-sub-html=" UI测试-版本" href="../../img/faq/UI%E6%B5%8B%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png"><img alt=" UI测试-版本" src="../../img/faq/UI%E6%B5%8B%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" width="900px" /></a></div></p>
+<p><a class="glightbox" href="../../img/faq/UI%E6%B5%8B%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! UI测试-版本" src="../../img/faq/UI%E6%B5%8B%E8%AF%95%E4%B8%8D%E5%8B%BE%E9%80%89%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>在UI场景中，不勾选【性能模式】，即可看到浏览器被调用的过程。</p>
 </div>
@@ -2667,5 +2678,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

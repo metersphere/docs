@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -81,7 +81,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2494,29 +2505,29 @@
 <p>在 <a href="https://github.com/metersphere/chrome-extensions/releases/tag/v1.2.4">MeterSphere chrome-extensions</a> 项目中下载最新的发布版本，下载完成后进行解压，然后在谷歌浏览器输入 chrome://extensions/ 进入扩展程序安装界面，
  选择【加载已解压的扩展程序】，选择插件解压后的目录进行安装。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_install.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_install.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_install.png" width="900px" /></a></p>
 <h2 id="2">2 使用说明<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>在 Chrome 浏览器中点击扩展程序按钮，并选择MeterSphere 录制插件图标，点击开始录制按钮。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_display.png" />
-<img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_1.png" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_display.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome-plugin_display.png" /></a>
+<a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_1.png" /></a></p>
 <div class="admonition ms-abstract">
 <p>访问需要进行录制的站点，进行正常使用操作，浏览器中的所有网络请求均会被记录下来。当操作完成后，点击停止按钮停止录制。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_2.png" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_2.png" /></a></p>
 <div class="admonition ms-abstract">
 <p>录制结束后，点击保存按钮进行保存。 </p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_3.png" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_3.png" /></a></p>
 <div class="admonition ms-abstract">
 <p>插件弹出所有记录到请求的站点列表，勾选需要保留的站点请求点击下载按钮，下载 JMX 脚本至本地。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_4.png" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_4.png" /></a></p>
 <div class="admonition ms-abstract">
 <p>在 MeterSphere 中创建性能测试任务， 上传刚刚录制的 JMX 脚本，然后设置并发参数，进行性能测试。</p>
 </div>
-<p><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_5.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="录制" src="../../../img/user_manual/plugin_use/chrome_plugin/chrome_plugin_5.png" width="900px" /></a></p>
 
 
   
@@ -2620,5 +2631,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

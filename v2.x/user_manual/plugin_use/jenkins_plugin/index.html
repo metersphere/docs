@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -81,7 +81,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2492,17 +2503,17 @@
 <div class="admonition ms-abstract">
 <p>根据 MeterSphere 版本，在 <a href="https://github.com/metersphere/jenkins-plugin/releases">MeterSphere Jenkins-plugin</a>  下载对应版本的 hpi 包， 并在 Jenkins 的插件管理-高级中的Deploy Plugin段中，选择上传已下载好的 hpi 插件包。</p>
 </div>
-<p><img alt="Jenkins_plugin" src="../../../img/user_manual/plugin_use/jenkins_plugin/jenkins_plugin_install.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/jenkins_plugin/jenkins_plugin_install.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Jenkins_plugin" src="../../../img/user_manual/plugin_use/jenkins_plugin/jenkins_plugin_install.png" width="900px" /></a></p>
 <h2 id="2">2 插件使用<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>插件安装后，在指定的 Jenkins 构建任务的构建步骤中，增加并配置【MeterSphere】类型的构建步骤。<br>
 配置 MeterSphere 认证信息，并指定需要触发执行的接口测试、性能测试或测试计划，配置完成后即可运行 Jenkins Job。</p>
 </div>
-<p><img alt="Jenkins_plugin" src="../../../img/user_manual/plugin_use/jenkins_plugin/MeterSphere-Jenkins-config.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/jenkins_plugin/MeterSphere-Jenkins-config.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Jenkins_plugin" src="../../../img/user_manual/plugin_use/jenkins_plugin/MeterSphere-Jenkins-config.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>v2版本将 Jenkins Job 的运行结果变更为当前运行的测试计划或用例的实际运行结果状态，即当用例运行失败时，Jenkins Job 的状态也为失败。</p>
 </div>
-<p><img alt="Jenkins_plugin" src="../../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_3.png" width="900px" /></p>
+<p><a class="glightbox" href="../../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Jenkins_plugin" src="../../../img/user_manual/plugin_use/jenkins_plugin/add_jenkins_3.png" width="900px" /></a></p>
 
 
   
@@ -2606,5 +2617,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

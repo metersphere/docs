@@ -21,7 +21,7 @@
         <link rel="next" href="../installation/network_port/">
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
     
     
       
@@ -85,7 +85,18 @@
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -2548,7 +2559,7 @@
   <h1>系统架构</h1>
 
 <h2 id="1">1 整体架构<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><img alt="整体架构" src="../img/system-arch.png" width="900px" /></p>
+<p><a class="glightbox" href="../img/system-arch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="整体架构" src="../img/system-arch.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">组件说明</p>
 <ul>
@@ -2579,7 +2590,7 @@
 <div class="admonition ms-abstract">
 <p>各个组件间的关系可参考下图：<br></p>
 </div>
-<p><img alt="组件说明" src="../img/components.png" width="900px" /></p>
+<p><a class="glightbox" href="../img/components.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="组件说明" src="../img/components.png" width="900px" /></a></p>
 <h2 id="2">2 管理模型<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在团队的实际情况进行灵活的租户体系映射。</p>
@@ -2593,7 +2604,7 @@
 <li><strong>自定义角色</strong>: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。</li>
 </ul>
 </div>
-<p><img alt="管理模型" src="../img/management-model.png" width="900px" /></p>
+<p><a class="glightbox" href="../img/management-model.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="管理模型" src="../img/management-model.png" width="900px" /></a></p>
 <h2 id="3">3 技术栈<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <ul>
@@ -2707,5 +2718,5 @@
   }
 </script>
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
