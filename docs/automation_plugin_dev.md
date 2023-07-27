@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 ## 1 背景介绍
 !!! ms-abstract ""
     在 JMeter 中使用 [Dummy Sampler](https://jmeter-plugins.org/wiki/DummySampler/?utm_source=jmeter&utm_medium=helplink&utm_campaign=DummySampler) 可以构造出一个请求和响应完全自定义的请求取样器，并且这种方式可以方便地对断言、参数提取等各种后置处理器进行调试。针对 JMeter 已有的功能或插件，只需要进行很少量的开发工作，就可以将其封装成 MeterSphere 的接口自动化插件，对应的插件 Demo 示例见: [metersphere-plugin-DummySampler](https://github.com/metersphere/metersphere-plugin-DummySampler)。 <br>

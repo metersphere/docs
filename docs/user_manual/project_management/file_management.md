@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 !!! ms-abstract ""
     可上传测试所需的 JAR 包、脚本、相关文件，在项目级别统一管理。
 ![!项目设置](../../img/project_management/上传jar包.png){ width="900px" }

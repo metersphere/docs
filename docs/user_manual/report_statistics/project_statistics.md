@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 !!! ms-abstract ""
     报表统计页面主要展示报表类型，用户可根据不同报表类型创建报表。
 ![!报表统计_首页](../../img/report_statistics/报表统计_首页.png){ width="900px" }

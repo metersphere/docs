@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 !!! ms-abstract ""
 
     [Apache JMeter](https://jmeter.apache.org/) 是一个 Java 语言编写的开源性能测试工具，是目前最主流的开源性能测试工具。本资源集源自 [awesome-jmeter](https://github.com/aliesbelik/awesome-jmeter)[（CC-BY-4.0 license）](https://creativecommons.org/licenses/by/4.0/)，MeterSphere 团队针对国内用户进行了汉化、优化和进一步整理。
