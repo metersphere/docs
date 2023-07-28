@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 !!! ms-abstract ""
 
     MeterSphere UI 测试提供了元素库、UI 自动化、测试报告等UI测试相关功能。 用户可以使用多级模块来组织管理项目下的 UI 自动化场景，执行场景，生成查看测试报告。UI 测试模块是企业版 X-Pack 功能增强包功能，如需使用，请点击：[申请企业版试用](https://jinshuju.net/f/CzzAOe)。

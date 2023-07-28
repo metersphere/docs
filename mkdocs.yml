@@ -1,5 +1,5 @@
 site_name: "MeterSphere 文档"
-site_url: "https://metersphere.io"
+site_url: "https://metersphere.io/docs"
 site_description: "Document"
 site_author: "MeterSphere 项目组"
 google_analytics: ['UA-147297392-7', 'metersphere.io']
@@ -176,7 +176,6 @@ markdown_extensions:
     - pymdownx.betterem
     - pymdownx.superfences
     - pymdownx.progressbar
-    - lightgallery
 
 extra_css:
     - css/extra.css
@@ -189,6 +188,7 @@ plugins:
           - en
           - ja
         separator: '[\s\-\.]+'
+    - glightbox        
 
 extra:
     version:

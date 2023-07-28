@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 ## 1 如何设置 MeterSphere 开机后自动启动？
 !!! ms-abstract "" 
     MeterSphere 在安装脚本中没有配置 docker 服务及以及 MeterSphere 服务自启动，可参考[MeterSphere之设置服务开机自启动](https://kb.fit2cloud.com/?p=bbe432ee-6b1c-4d9f-aa6f-16f4547840ee) 进行配置。

@@ -1,3 +1,7 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
 !!! ms-abstract ""
     MeterSphere 配置 kafka 集群方案采用安装包自带的 kafka3.4 配置集群。本方案分别部署了三个独立的 MeterSphere 服务，然后把这三个独立的 MeterSphere 的 kafka 关联成集群。如需做流量转发可以将三个服务配置到 NGINX 做流量转发。<br/>
     Kafka 3.0 之前的架构: 元数据在 zookeeper 中，运行时动态选举 controller，由 controller 进行 Kafka 集群管理。kraft 模式架构: 不再依赖 zookeeper 集群，而是用三台 controller 节点代替 zookeeper，元数据保存在 controller 中，由 controller 直接进行 Kafka 集群管理。<br />
