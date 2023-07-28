@@ -12,7 +12,7 @@
     - 详细的问题描述。
     - 问题的截图说明。
 
-![wechat-group](../img/wechat-group.png)
+![wechat-group](../img/入群.png)
 
 ## 3 开源社区论坛
 !!! ms-abstract ""
