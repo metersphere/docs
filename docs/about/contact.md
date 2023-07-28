@@ -16,7 +16,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 详细的问题描述。
     - 问题的截图说明。
 
-![wechat-group](../img/入群.png)
+![wechat-group](../img/入群.png){ width="170px" }
 
 ## 3 开源社区论坛
 !!! ms-abstract ""
