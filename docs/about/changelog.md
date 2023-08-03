@@ -14,6 +14,33 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。
     - v2.10-lts：发布时间为 2023 年 5 月 25 日，每两周发布小版本，持续进行 Bug 修复和部分功能的有限优化。
 
+## v2.10.5-lts
+
+!!! ms-abstract ""
+    💥💥 重要提醒 💥💥<br>
+    2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
+
+!!! ms-abstract "功能优化 :sunflower:"
+	
+    - refactor(接口测试): 优化JSONPath断言匹配机制，支持正则忽略数字精度匹配
+    - refactor(性能测试): 大幅优化性能测试的吞吐量和稳定性(企业版)
+    - refactor(性能测试): 报告列表页减少测试列显示
+    - refactor(测试跟踪): 取消左侧模块树8层限制
+    - refactor(测试跟踪): 功能用例列表和脑图切换时，携带版本筛选条件
+    - refactor(项目设置): 添加项目成员选项过滤掉已经添加的成员
+    - refactor: 调整BufferMemory默认大小并支持自定义配置
+
+!!! ms-abstract "问题修复 :palm_tree:"
+	
+    - fix(测试跟踪): 修复测试计划关联的case更新后未同步更新的问题（GitHub #25703）
+    - fix(测试跟踪): 修复功能用例使用版本筛选条件后切换至脑图查看未生效的问题（GitHub #25848）
+    - fix(接口测试): 修复“推荐JSONPATH断言”中当响应内容为数字被处理成字符串的问题（GitHub #25109）
+    - fix(接口测试): 修复通过“JSON-SCHEMA”查看复杂JSON请求体导致浏览器崩溃的问题（GitHub #25825）
+    - fix(接口测试): 修复Jmeter 5.4.1版本导出带有循环控制器的文件导入到MeterSphere平台报错的问题（GitHub #25882）
+    - fix(UI测试): 修复UI并发执行线程数修改后不生效的问题（GitHub #25755）
+    - fix(UI测试): 修复v2版本对v1版本UI自动化场景变量不兼容的的问题（GitHub #25607）
+    - fix(性能测试): 修复性能测试加载关联jmx文件时会重复提示的问题（GitHub #25351）
+
 ## v2.10.4-lts
 
 ------
