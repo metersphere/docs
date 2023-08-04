@@ -51,10 +51,10 @@ nav:
     - 安装部署:
           - 网络端口要求: installation/network_port.md
           - Linux 中部署:
-                - 在线安装: installation/online_installation.md
-                - 在线升级: installation/online_upgrade.md
                 - 离线安装: installation/offline_installation.md                
                 - 离线升级: installation/offline_upgrade.md
+                - 在线安装: installation/online_installation.md
+                - 在线升级: installation/online_upgrade.md
           - Kubernetes 中部署: installation/kubernetes_installation.md
           - Windows 中部署: installation/offline_installation_windows.md
           - Mac 中部署: installation/offline_installation_mac.md
