@@ -31,7 +31,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MS 版本不一致。
     - 没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID。
     - 缺少配置 $config->features->apiGetModel。
-    - 襌道里 api 超级调用模式有没有授权。
+    - 对接的禅道用户没有赋予"超级model调用接口"权限。
 
     解决方法：<br />
 
