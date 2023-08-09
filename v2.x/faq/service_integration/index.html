@@ -2345,8 +2345,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-ms-ms-id-id" class="md-nav__link">
-    5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示ID不存在或者其他错误如何处理？
+  <a href="#5-ms-metersphere-id-id" class="md-nav__link">
+    5 MS 集成禅道，在 MeterSphere 平台上项目 ID 填写正确，检查时提示ID不存在或者其他错误如何处理？
   </a>
   
 </li>
@@ -2583,8 +2583,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-ms-ms-id-id" class="md-nav__link">
-    5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示ID不存在或者其他错误如何处理？
+  <a href="#5-ms-metersphere-id-id" class="md-nav__link">
+    5 MS 集成禅道，在 MeterSphere 平台上项目 ID 填写正确，检查时提示ID不存在或者其他错误如何处理？
   </a>
   
 </li>
@@ -2651,21 +2651,21 @@ Azure Devops： 请参考<a href="https://kb.fit2cloud.com/?p=260">MeterSphere �
 <div class="admonition ms-abstract">
 <p>浏览器的默认安全策略导致，需要在MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】中配置为 https 的地址。</p>
 </div>
-<h2 id="5-ms-ms-id-id">5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示<code>ID不存在或者其他错误</code>如何处理？<a class="headerlink" href="#5-ms-ms-id-id" title="Permanent link">&para;</a></h2>
+<h2 id="5-ms-metersphere-id-id">5 MS 集成禅道，在 MeterSphere 平台上项目 ID 填写正确，检查时提示<code>ID不存在或者其他错误</code>如何处理？<a class="headerlink" href="#5-ms-metersphere-id-id" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>可能原因包括：</p>
 <ul>
-<li>v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MS 版本不一致。</li>
+<li>v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MeterSphere 版本不一致。</li>
 <li>没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID。</li>
-<li>缺少配置 $config-&gt;features-&gt;apiGetModel。</li>
-<li>对接的禅道用户没有赋予"超级model调用接口"权限。</li>
+<li>禅道服务没有启用api调用权限：缺少配置 $config-&gt;features-&gt;apiGetModel。</li>
+<li>服务集成处对接的禅道用户，没有勾选赋予"超级model调用接口"权限。</li>
 </ul>
 <p>解决方法：<br /></p>
 <ul>
-<li>在 github上下载和 MS 版本一致的插件<a href="https://github.com/metersphere/metersphere-platform-plugin">metersphere-platform-plugin</a> 并上传到【系统设置-插件管理】，用法参考<a href="../../user_manual/plugin_use/service_integration_plugin/">服务集成插件</a>。</li>
-<li>在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 </li>
+<li>在 github上下载和 MeterSphere 版本一致的插件<a href="https://github.com/metersphere/metersphere-platform-plugin">metersphere-platform-plugin</a> 并上传到【系统设置-插件管理】，用法参考<a href="../../user_manual/plugin_use/service_integration_plugin/">服务集成插件</a>。</li>
+<li>在 MeterSphere 项目编辑框-项目ID 处有“i”提示说明，按照配置说明填写对应 产品ID 或者 项目ID。 </li>
 <li>在禅道安装路径中：${安装路径}/zentao/config/ 目录下 my.php (如果没有，新建 my.php 文件)中添加如下内容：<code>$config-&gt;features-&gt;apiGetModel = true;</code>然后重启禅道服务器：<code>/opt/zbox/zbox restart</code>。 </li>
-<li>在禅道 web 端的【组织-权限-权限维护-API 接口】中，勾选“超级model调用接口”。</li>
+<li>用于对接的禅道用户，确认在禅道 web 端【组织-权限-权限维护-API 接口】勾选了“超级model调用接口”。</li>
 </ul>
 </div>
 <h2 id="6-ms-jira-jirakey-id">6 MS 集成 JIRA 平台，填写【JIRA项目key】后进行保存时，页面提示 "ID不存在或其他错误"如何处理？<a class="headerlink" href="#6-ms-jira-jirakey-id" title="Permanent link">&para;</a></h2>
