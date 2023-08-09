@@ -24,21 +24,21 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     浏览器的默认安全策略导致，需要在MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】中配置为 https 的地址。
 
-## 5 MS 集成禅道，在 MS 平台上项目 ID 填写正确，检查时提示`ID不存在或者其他错误`如何处理？
+## 5 MS 集成禅道，在 MeterSphere 平台上项目 ID 填写正确，检查时提示`ID不存在或者其他错误`如何处理？
 !!! ms-abstract ""
     可能原因包括：
 
-    - v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MS 版本不一致。
+    - v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MeterSphere 版本不一致。
     - 没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID。
-    - 缺少配置 $config->features->apiGetModel。
-    - 对接的禅道用户没有赋予"超级model调用接口"权限。
+    - 禅道服务没有启用api调用权限：缺少配置 $config->features->apiGetModel。
+    - 服务集成处对接的禅道用户，没有勾选赋予"超级model调用接口"权限。
 
     解决方法：<br />
 
-    - 在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
-    - 在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 
+    - 在 github上下载和 MeterSphere 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
+    - 在 MeterSphere 项目编辑框-项目ID 处有“i”提示说明，按照配置说明填写对应 产品ID 或者 项目ID。 
     - 在禅道安装路径中：${安装路径}/zentao/config/ 目录下 my.php (如果没有，新建 my.php 文件)中添加如下内容：`$config->features->apiGetModel = true;`然后重启禅道服务器：`/opt/zbox/zbox restart`。 
-    - 在禅道 web 端的【组织-权限-权限维护-API 接口】中，勾选“超级model调用接口”。
+    - 用于对接的禅道用户，确认在禅道 web 端【组织-权限-权限维护-API 接口】勾选了“超级model调用接口”。
 
 
 ## 6 MS 集成 JIRA 平台，填写【JIRA项目key】后进行保存时，页面提示 "ID不存在或其他错误"如何处理？
