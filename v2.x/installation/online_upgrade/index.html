@@ -2555,7 +2555,10 @@
 </div>
 <h2 id="1">1 一键升级至最新版本<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<div class="highlight"><pre><span></span><code># 升级至最新版本
+<div class="highlight"><pre><span></span><code>#升级前停止服务
+msctl stop
+
+# 升级至最新版本
 msctl upgrade
 
 # 查看 MeterSphere 状态
@@ -2564,7 +2567,10 @@ msctl status
 </div>
 <h2 id="2">2 一键升级至指定版本<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<div class="highlight"><pre><span></span><code># 升级至指定版本
+<div class="highlight"><pre><span></span><code>#升级前停止服务
+msctl stop
+
+# 升级至指定版本
 msctl upgrade v2.x.y
 
 # 查看 MeterSphere 状态
