@@ -10,6 +10,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 一键升级至最新版本
 !!! ms-abstract ""
     ```
+    #升级前停止服务
+    msctl stop
+
     # 升级至最新版本
     msctl upgrade
     
@@ -20,6 +23,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 2 一键升级至指定版本
 !!! ms-abstract ""
     ```
+    #升级前停止服务
+    msctl stop
+    
     # 升级至指定版本
     msctl upgrade v2.x.y
     
