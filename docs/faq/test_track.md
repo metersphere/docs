@@ -59,34 +59,34 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![! 用例模版列表页面](../img/faq/添加用例模版字段-用例模版编辑页面.png){ width="900px" }
 ![! 添加字段对话框](../img/faq/添加用例模版字段-添加字段对话框.png){ width="900px" }
 
-## 12 提交缺陷页面的字段如何进行自定义配置？
+## 11 提交缺陷页面的字段如何进行自定义配置？
 !!! ms-abstract ""
     采用用例模版实现自定义字段。
 
     - 在【项目设置-模版管理-缺陷模版】页面中，选择要添加字段的缺陷模版，打开【编辑缺陷模版】页面。
     - 在【编辑缺陷模版】页面，点击【设置自定义字段】按钮打开【创建字段】对话框，在对话框中填写字段名称、备注，选择【字段类型】，点击【确定】保存。
 
-## 13 在 JIRA、TAPD、禅道上已创建的缺陷，MS上点击“同步缺陷”，未成功同步
+## 12 在 JIRA、TAPD、禅道上已创建的缺陷，MS上点击“同步缺陷”，未成功同步
 !!! ms-abstract ""
     项目与这些工具设置了集成后，开源版仅支持单向同步，即 MeterSphere 缺陷同步到第三方平台。企业版支持双向同步，即 MeterSphere 缺陷同步到第三方平台，同时也支持第三方平台上的缺陷同步到 MeterSphere。
 
-## 14 测试用例模版添加的自定义字段如何在列表展示？
+## 13 测试用例模版添加的自定义字段如何在列表展示？
 !!! ms-abstract ""
     在测试用例列表中，点击【操作】列中的齿轮按钮进行配置。
 
 ![批量分配执行人](../img/faq/测试用例自定义显示字段.png){ width="900px" }
 
-## 15 同一个测试计划，既包含接口测试用例，也包含场景用例时，执行顺序是怎样的？
+## 14 同一个测试计划，既包含接口测试用例，也包含场景用例时，执行顺序是怎样的？
 !!! ms-abstract ""
     
     - 不同类型的用例之间（接口用例、场景用例和性能用例等）没有先后关系，是并行执行。
     - 同类型的多个测试根据运行时配置执行（串行或者并行）。
 
-## 16 从本地 xmind 复制数据粘贴到 MeterSphere 用例脑图直接保存后没有数据
+## 15 从本地 xmind 复制数据粘贴到 MeterSphere 用例脑图直接保存后没有数据
 !!! ms-abstract ""
     需要将相应的数据标记为模块或者用例才能保存。
 
-## 17 MS 集成 TAPD，在 MS 平台提交缺陷时上传图片文件，但 TAPD 中无法正确显示图片
+## 16 MS 集成 TAPD，在 MS 平台提交缺陷时上传图片文件，但 TAPD 中无法正确显示图片
 !!! ms-abstract ""
     
     问题原因：
@@ -96,19 +96,19 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MS平台【系统设置-系统-系统参数设置-基本配置-当前站点URL】，需要配置成 https 的地址
     
 
-## 18 MS集成禅道，在 MS平台上 项目ID 填写正确，检查时提示`ID不存在或者其他错误`，如何解决？
+## 17 MS集成禅道，在 MS平台上 项目ID 填写正确，检查时提示`ID不存在或者其他错误`，如何解决？
 !!! ms-abstract ""
     可能原因包括：
 
-    - v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MS 版本不一致。
+    - v2.4 版本之后，服务集成修改为插件方式，禅道插件版本和当前 MeterSphere 版本不一致。
     - 没有对应产品或者项目的权限，或者有权限但是需要填产品 ID，实际填了项目 ID。
-    - 缺少配置 $config->features->apiGetModel。
-    - 襌道里 api 超级调用模式有没有授权。
+    - 禅道服务没有启用api调用权限：缺少配置 $config->features->apiGetModel。
+    - 服务集成处对接的禅道用户，没有勾选赋予"超级model调用接口"权限。
 
     解决方法：<br />
 
-    - 在 github上下载和 MS 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
-    - 在项目编辑弹框-项目ID 后有提示说明，按照配置说明填写对应 ID。 
+    - 在 github上下载和 MeterSphere 版本一致的插件[metersphere-platform-plugin](https://github.com/metersphere/metersphere-platform-plugin) 并上传到【系统设置-插件管理】，用法参考[服务集成插件](../user_manual/plugin_use/service_integration_plugin.md)。
+    - 在 MeterSphere 项目编辑框-项目ID 处有“i”提示说明，按照配置说明填写对应 产品ID 或者 项目ID。 
     - 在禅道安装路径中：${安装路径}/zentao/config/ 目录下 my.php (如果没有，新建 my.php 文件)中添加如下内容：`$config->features->apiGetModel = true;`然后重启禅道服务器：`/opt/zbox/zbox restart`。 
-    - 在禅道 web 端的【组织-权限-权限维护-API 接口】中，勾选“超级model调用接口”。
+    - 用于对接的禅道用户，确认在禅道 web 端【组织-权限-权限维护-API 接口】勾选了“超级model调用接口”。
 
