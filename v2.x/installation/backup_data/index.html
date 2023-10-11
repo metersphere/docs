@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
@@ -35,7 +35,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -3279,7 +3279,7 @@
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere &gt; metersphere.sql
 
 #data 目录备份
-zip -r XXX.zip /opt/metersphere/data
+tar -cvf data_backup.tar /opt/metersphere/data
 </code></pre></div>
 若备份数据库时出现<code>mysqldump: Error 2020: Got packet bigger than ‘max_allowed_packet’ bytes when dumping tableapi_scenario_report_detailat row: 94</code>，则添加max_allowed_packet参数，如下:
 <div class="highlight"><pre><span></span><code>docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G &gt; metersphere.sql
@@ -3439,7 +3439,7 @@ source /var/lib/mysql/metersphere.sql
     
     
 
-      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
     
 <script>
