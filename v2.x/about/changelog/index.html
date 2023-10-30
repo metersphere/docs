@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -35,7 +35,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -3119,6 +3119,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2108-lts" class="md-nav__link">
+    v2.10.8-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2107-lts" class="md-nav__link">
     v2.10.7-lts
   </a>
@@ -3373,6 +3380,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v2108-lts" class="md-nav__link">
+    v2.10.8-lts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v2107-lts" class="md-nav__link">
     v2.10.7-lts
   </a>
@@ -3573,6 +3587,47 @@
 <li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护。</li>
 <li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每两周发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+</div>
+<h2 id="v2108-lts">v2.10.8-lts<a class="headerlink" href="#v2108-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2023年10月19日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">新增功能 <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:" /></p>
+<ul>
+<li>feat(性能测试): 性能测试支持结果抽样分析（X-Pack增强包）</li>
+<li>feat(测试计划): 测试执行机新增运行状态和CPU监控</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor(性能测试): 调整性能测试资源文件上限数为50个文件</li>
+<li>refactor(接口测试): JSONPath正则提取支持自定义匹配模版</li>
+<li>refactor(测试跟踪): 测试计划报告详情支持通过用例ID快捷跳转</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(接口测试): 修复jsonSchema数据转json顺序发生改变的缺陷</li>
+<li>fix(接口测试): 修复首页在偶发情况下接口覆盖率显示为0的问题</li>
+<li>fix(接口测试): 修复编辑环境信息未更新的缺陷</li>
+<li>fix(接口测试): 修复场景列表不显示创建性能测试按钮的缺陷</li>
+<li>fix(接口测试): 修复测试计划执行本身无环境且关联时也不指定环境的场景会报错的问题</li>
+<li>fix(测试跟踪): 修复测试计划报告导出html时的部分错误</li>
+<li>fix(测试跟踪): 用例步骤为文本描述，导出xmind为步骤描述的内容</li>
+<li>fix(测试跟踪): 用例富文本编辑器支持一些特殊标签</li>
+<li>fix(测试跟踪): 测试计划关联功能用例添加评审结果列</li>
+<li>fix(测试跟踪): 富文本框删除图片后，服务器上的图片未删除</li>
+<li>fix(测试跟踪): 批量和编辑单个用例的标签时，统一长度限制</li>
+<li>fix(缺陷管理): 缺陷关联用例列表展示有误</li>
+<li>fix(项目设置): 环境通用配置筛选后保存有误</li>
+<li>fix(项目设置): 项目消息设置，任务通知切换事件类型模板未同步更新</li>
 </ul>
 </div>
 <h2 id="v2107-lts">v2.10.7-lts<a class="headerlink" href="#v2107-lts" title="Permanent link">&para;</a></h2>
