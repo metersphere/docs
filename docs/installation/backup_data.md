@@ -14,7 +14,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     
     #data 目录备份
-    zip -r XXX.zip /opt/metersphere/data
+    tar -cvf data_backup.tar /opt/metersphere/data
     ```
     若备份数据库时出现`mysqldump: Error 2020: Got packet bigger than ‘max_allowed_packet’ bytes when dumping tableapi_scenario_report_detailat row: 94`，则添加max_allowed_packet参数，如下:
     ```
