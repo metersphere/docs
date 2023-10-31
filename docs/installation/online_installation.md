@@ -9,6 +9,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     * CPU/内存: 最低要求 4C8G，推荐 8C16G
     * 磁盘空间: 50G
     * 网络要求：可访问互联网
+    * 注：如用于生产环境，推荐使用 [离线安装包](https://community.fit2cloud.com/#/products/metersphere/downloads) 进行部署
+
 
 ## 2 一键安装（采用默认安装参数）
 
