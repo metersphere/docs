@@ -19,7 +19,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
 
-    # 下载在线安装包
+    # 下载离线安装包
     wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
     
     # 解压安装包
