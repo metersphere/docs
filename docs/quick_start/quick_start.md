@@ -23,7 +23,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
     地址: http://目标服务器IP地址:8081
     默认用户名: admin
-    默认密码: metersphere
+    默认密码: metersphere1
     ```
 
 ## 2 界面说明
