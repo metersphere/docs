@@ -58,7 +58,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 2 配置开发环境
 ### 2.1 拉取代码
 !!! ms-abstract ""
-    需要拉取 [metersphere](https://github.com/metersphere/metersphere), [ms-jmeter-core](https://github.com/metersphere/ms-jmeter-core)、[jmeter-plugins-webdriver](https://github.com/metersphere/jmeter-plugins-webdriver)三个服务代码，并切换到同一分支。 <br>
+    需要拉取 [metersphere](https://github.com/metersphere/metersphere) 服务代码，并切换到 v2.10 分支。 <br>
 
 ### 2.2 后端
 !!! ms-abstract ""
@@ -126,7 +126,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 数据库配置
     spring.datasource.url=jdbc:mysql://localhost:3306/metersphere_dev?autoReconnect=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
     spring.datasource.username=root
-    spring.datasource.password=Calong@2015
+    spring.datasource.password=Password123@mysql
     
     
     # kafka 配置，node-controller 以及 data-streaming 服务需要使用 kafka 进行测试结果的收集和处理
@@ -139,7 +139,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     kafka.report.topic=JMETER_REPORT
     
     # node-controller 所使用的 jmeter 镜像版本
-    jmeter.image=registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.5-ms2-jdk11
+    jmeter.image=registry.cn-qingdao.aliyuncs.com/metersphere/jmeter-master:5.5-ms7-jdk17
     
     # TCP Mock 端口范围
     tcp.mock.port=10000-10010
@@ -156,8 +156,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     
     # minio 配置
     minio.endpoint=http://localhost:9000
-    minio.accessKey=minioadmin
-    minio.secretKey=minioadmin
+    minio.accessKey=admin
+    minio.secretKey=Password123@minio
     
     ## CAS
     #cas.client.name=MS_SERVER
@@ -170,10 +170,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
 
     （3）项目打包<br>
-    启动 MeterSphere 需要 jmeter 依赖，因此在启动之前需要将 ms-jmeter-core 和 jmeter-plugins-webdriver 打包
-    ```
-    mvn clean install 
-    ```
 
     在项目根目录下执行以下命令 <br>
     ```
