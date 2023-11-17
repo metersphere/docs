@@ -63,7 +63,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ### 2.2 后端
 !!! ms-abstract ""
     在启动 MeterSphere 服务之前要先启动 Mysql、Redis、Kafka、Minio 等服务。<br>
-    MeterSphere 后端使用了 Java 语言的 Spring Cloud 框架，并使用 Maven 作为项目管理工具。开发者需要先在开发环境中安装 JDK 1.11 及 Maven。<br>
+    MeterSphere 后端使用了 Java 语言的 Spring Cloud 框架，并使用 Maven 作为项目管理工具。开发者需要先在开发环境中安装 JDK 17 及 Maven。<br>
 
     - **初始化配置**<br>
     （1）数据库初始化<br>
