@@ -209,4 +209,4 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - **初始化配置**<br>
     进入 metersphere-server/test-track/frontend/ 目录，执行命令`npm install`安装相关前端组件。<br>
     - **运行前端服务**<br>
-    进入到 metersphere-server/test-track/frontend/ 目录，执行命令`npm run serve`启动前端服务。
+    进入到 metersphere-server/test-track/frontend/ 目录，执行命令`npm run track`启动前端服务。
