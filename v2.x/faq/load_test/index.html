@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -3920,7 +3920,7 @@
 <p>MeterSphere 通过在测试资源池中添加多个测试执行节点的方式来支持分布式的性能测试。在我们向一个测试资源池中添加节点时，除了节点的 IP、端口信息外，还需要根据该节点的机器规格，配置该节点可以支持的最大并发数。当我们在执行性能测试的过程中选择了某个测试资源池时，MeterSphere 会将本次性能测试定义的并发用户数，按照所选测试资源池的节点支持的最大并发数进行按比例拆分，在测试开始执行后，每个测试执行节点会将测试结果、测试日志等信息输送到执行的 Kafka 队列中，MeterSphere 中的 data-streaming 组件会从 Kafka 中收集这些信息并进行汇总处理。</p>
 <p>例如当我们在系统中存在一个如下配置的测试资源池，并选择该测试资源池执行一个 10000 并发用户的性能测试时，node1 及 node2 将各分配 4000 个并发用户，node3 将分配 2000 个并发用户。</p>
 </div>
-<p><a class="glightbox" href="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="测试资源池" src="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="测试资源池" src="../../img/system_management/%E7%BC%96%E8%BE%91%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></p>
 <h2 id="2">2 如何向测试资源池中添加节点？<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>首先需要在要添加的节点上部署 MeterSphere 的 node-controller 组件，安装方式参考本文档<a href="../../installation/online_installation/">「在线安装」</a>或<a href="../../installation/offline_installation/">「离线安装」</a>章节内容，在执行安装脚本前，修改 install.conf 文件中的 MS_INSTALL_MODE 字段的值为 node-controller 后执行安装脚本。安装完成通过 <code>msctl status</code> 查看组件状态是否正常。<br> 
@@ -4024,7 +4024,7 @@ nginx.novalocal
 <div class="admonition ms-abstract">
 <p>在报告列表，同个任务下，已完成状态的报告可以进行对比。</p>
 </div>
-<p><a class="glightbox" href="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 报告对比" src="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 报告对比" src="../../img/faq/%E6%8A%A5%E5%91%8A%E5%AF%B9%E6%AF%94.png" width="900px" /></a></p>
 <h2 id="13">13 执行压测时，多台发压机的情况下，可以设置变量不重复执行吗？<a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>可以在性能测试的高级配置页面，使用CSV分割功能，系统会把变量平均分配给压力机，保证数值的唯一性。</p>
@@ -4064,7 +4064,7 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 <div class="admonition ms-abstract">
 <p>在高级配置增加超时时间。</p>
 </div>
-<p><a class="glightbox" href="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 性能测试-设置超时时间" src="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 性能测试-设置超时时间" src="../../img/faq/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95-%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" width="900px" /></a></p>
 <h2 id="18-50100">18 进行压测时，最大用户加到 50/100 就不能继续加吗？<a class="headerlink" href="#18-50100" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>可在系统设置-测试资源池-修改资源池里“最大并发数”中配置。</p>
@@ -4089,7 +4089,7 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 执行接口测试需要部署 DaemonSet 或 Deployment，可下载示例 yaml 文件进行部署，部署好之后可以设置弹性伸缩参数，从而实现资源池的弹性伸缩。<br></li>
 </ul>
 </div>
-<p><a class="glightbox" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 接口测试-K8S配置" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 接口测试-K8S配置" src="../../img/faq/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95-K8S%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
 <h2 id="22-check-node-controller-status">22 操作时提示：<code>check node-controller status</code><a class="headerlink" href="#22-check-node-controller-status" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <ul>
@@ -4102,7 +4102,7 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 <div class="admonition ms-abstract">
 <p>将【系统设置-测试资源池-JMeter HEAP】调大。</p>
 </div>
-<p><a class="glightbox" href="../../img/faq/Jmeter_Heap.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 接口测试-K8S配置" src="../../img/faq/Jmeter_Heap.jpg" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/Jmeter_Heap.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 接口测试-K8S配置" src="../../img/faq/Jmeter_Heap.jpg" width="900px" /></a></p>
 <h2 id="24">24 性能测试中怎么跨线程传递变量？<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>性能测试里动态设置变量可以用属性的方式，<span __property_var_="__property(var)" class="arithmatex"><span class="MathJax_Preview">{__setProperty(var,value,)} 设置属性，</span><script type="math/tex">{__setProperty(var,value,)} 设置属性，</script></span> 引用属性。用属性方法在性能测试中可以动态传递并且可以跨线程传递</p>
@@ -4133,7 +4133,7 @@ http://服务器IP:9100/metrics # 访问查看 node_export 是否正常启动
 <div class="admonition ms-abstract">
 <p>修改 /opt/metersphere/docker-compose-kafka.yml 配置文档里的 KAFKA_CFG_LOG_RETENTION_HOURS 参数。</p>
 </div>
-<p><a class="glightbox" href="../../img/faq/kafka_log.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!kafka" src="../../img/faq/kafka_log.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/kafka_log.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!kafka" src="../../img/faq/kafka_log.png" width="900px" /></a></p>
 <h2 id="28-csv">28 性能测试时接口读取 csv 不能按顺序读取<a class="headerlink" href="#28-csv" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>所选的测试资源池有多个节点，多个节点共用一套 CSV 导致取值重复，在性能测试的高级配置里，开启 CSV 分割，多准备点测试数据。CSV 分割是: 假设有2个节点，CSV 里有100条数据，就会把 CSV 里的数据均分成2份，然后节点1 使用 1-50 条数据，节点2 使用 51-100 条数据。</p>
@@ -4157,7 +4157,7 @@ services: []
 </code></pre></div>
 自定义监控中加上需要的节点，系统参数测试中设置 prometheus 的实际地址，执行测试可以显示监控。</p>
 </div>
-<p><a class="glightbox" href="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!kafka" src="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!kafka" src="../../img/faq/k8s_%E7%9B%91%E6%8E%A7.png" width="900px" /></a></p>
 <h2 id="32">32 接口自动化创建的性能测试，脚本及文件内容更新后，已转性能测试的用例没有同步更新<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>转性能测试的时候生成的 jmx 文件就是当前的配置，之后再修改接口对性能测试无效，点击性能测试右上角“同步场景测试最新变更”按钮手动同步即可。</p>
@@ -4284,11 +4284,11 @@ kubectl describe secrets -n metersphere ms-token-xxxx
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
 <script>

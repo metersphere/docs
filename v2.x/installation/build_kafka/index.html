@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -3458,9 +3458,9 @@ Kafka 集群提供了高可靠性、高吞吐量、水平扩展性、容错性�
 </code></pre></div>
 以 v2.10.0 版本为例，KAFKA_ENABLE_KRAFT: 'yes'，默认允许 kraft 集群模式，我们只需要把其他节点加入到集群中即可。需要修改的配置项包括 KAFKA_CFG_ADVERTISED_LISTENERS、KAFKA_CFG_CONTROLLER_QUORUM_VOTERS、KAFKA_BROKER_ID需要添加的配置项包括 KAFKA_KRAFT_CLUSTER_ID、ports 9093端口；具体内容见上述配置文件注释说明。</p>
 </div>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置主机1" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA1.png" width="900px" /></a>
-<a class="glightbox" href="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置主机2" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA2.png" width="900px" /></a>
-<a class="glightbox" href="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置主机3" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA3.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机1" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA1.png" width="900px" /></a>
+<a class="glightbox" href="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机2" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA2.png" width="900px" /></a>
+<a class="glightbox" href="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机3" src="../../img/installation/dis_pressure/kafka%E4%B8%BB%E6%9C%BA3.png" width="900px" /></a></p>
 <h2 id="4-metersphere-docker-kafka-kafka_bootstrap-serversip19092ip29092ip39092">4 分别修改三台 MeterSphere 服务docker配置文件，将使用到 kafka 集群的配置项改为 KAFKA_BOOTSTRAP-SERVERS：ip1:9092,ip2:9092,ip3:9092。<a class="headerlink" href="#4-metersphere-docker-kafka-kafka_bootstrap-serversip19092ip29092ip39092" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>cd /opt/metersphere 需修改文件:</p>
@@ -3478,15 +3478,15 @@ Kafka 集群提供了高可靠性、高吞吐量、水平扩展性、容错性�
 <li>vi docker-compose-test-track.yml</li>
 </ul>
 </div>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
 <h2 id="5-msctl-reload-kraft">5 所有配置修改完成，msctl reload 生效即可创建 kraft 集群。<a class="headerlink" href="#5-msctl-reload-kraft" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>以上内容配置好之后，使用 msctl reload 命令重新加载配置文件，即可创建 kraft 集群。</p>
 </div>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/reload.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/reload.png" width="900px" /></a>
-<a class="glightbox" href="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A41.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A41.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A42.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A42.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A4.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/reload.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/reload.png" width="900px" /></a>
+<a class="glightbox" href="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A41.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A42.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置" src="../../img/installation/dis_pressure/%E9%9B%86%E7%BE%A4.png" width="900px" /></a></p>
 
 
 
@@ -3589,11 +3589,11 @@ Kafka 集群提供了高可靠性、高吞吐量、水平扩展性、容错性�
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
 <script>

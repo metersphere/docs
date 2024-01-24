@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -3491,37 +3491,37 @@
 <div class="admonition ms-abstract">
 <p>在 JMeter 中创建一个包含 DummySampler 步骤的脚本，对照 JMeter 中该步骤的配置页面，使用 <a href="http://www.form-create.com/designer/?fr=home">表单生成器</a> 生成前端表单的 json 文件。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>点击表单生成器右上角的【生成JSON】按钮，将内容保存到<code>src\main\resources\json\ui_dummy.json</code>文件中；点击右上角的【生成Options】按钮，将内容保存到<code>src\main\resources\json\ui_form.json</code>文件中。对于没有默认值的字段，手动编辑 json 文件，增加空默认值，避免出现空指针异常。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%A1%A8%E5%8D%95%E7%94%9F%E6%88%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92.png" width="900px" /></a></p>
 <h3 id="23">2.3 初始化插件资源<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>在<code>src\main\java\io\metersphere\plugin\dummy\UiScriptApiImpl.java</code>中使用上面生成的表单 json，对插件内容进行初始化。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E5%88%9D%E5%A7%8B%E5%8C%96%E6%8F%92%E4%BB%B6%E8%B5%84%E6%BA%90.png" width="900px" /></a></p>
 <h3 id="24-jmeter-hashtree">2.4 转换生成 JMeter HashTree<a class="headerlink" href="#24-jmeter-hashtree" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>创建与上一步对应的初始化 UiScript 对象时指定类名一致的<code>io.metersphere.plugin.dummy.sampler.MsDummySampler</code>类，在该类中完成前端表单数据到 JMeter HashTree 的转换。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>生成 DummySampler 对象时，guiclass、testclass 及各个属性对应的字段，可以通过创建一个包含 DummySampler 步骤的 jmx 脚本，以文本模式打开脚本快速获取。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E8%BD%AC%E6%8D%A2%E7%94%9F%E6%88%90JMeter_HashTree_2.png" width="900px" /></a></p>
 <h3 id="25">2.5 打包<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>增加一个与打包后的 jar 包同名的文件 src\main\resources\metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies 指定插件入口。再补充一些其他的必要内容后就可以打包了。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E6%94%B6%E5%B0%BE%E6%89%93%E5%8C%85.png" width="900px" /></a></p>
 <h3 id="26">2.6 上传测试<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>打包后将生成的 metersphere-plugin-DummySampler-1.0.0-jar-with-all-dependencies.jar 在 MeterSphere 的插件管理页面进行上传，上传成功后就可以在接口自动化场景编辑时查看、使用和调试插件提供的请求。<br></p>
 </div>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="表单生成器" src="../img/automation_plugin_dev/%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95_1.png" width="900px" /></a></p>
 
 
 
@@ -3624,11 +3624,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
 <script>

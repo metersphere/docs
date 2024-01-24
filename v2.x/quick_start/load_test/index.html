@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -3401,18 +3401,18 @@
 <p>通过安装包安装 MeterSphere 后，系统默认使用当前节点创建了名为【LOCAL】测试资源池。关于测试资源池的作用请参考 <a href="../../faq/load_test/#_1">FAQ</a>。</p>
 <p>如果需要创建新的测试资源池，或向已有资源池中添加节点，请参考 <a href="../../faq/load_test/#_2">如何向测试资源池中添加节点？</a></p>
 </div>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A01.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!测试资源池" src="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A01.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!测试资源池" src="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E6%B5%8B%E8%AF%95%E8%B5%84%E6%BA%90%E6%B1%A01.png" width="900px" /></a></p>
 <h2 id="2-url">2 修改当前站点 URL<a class="headerlink" href="#2-url" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>性能测试执行过程中 node-controller 节点需要通过配置的【当前站点URL】 下载 JMX 等测试资源文件。在执行性能测试前需要配置并检查测试资源池中的节点可以正常访问到该 URL，URL 值一般为通过浏览器访问 MeterSphere 的地址。</p>
 </div>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!当前站点URL" src="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!当前站点URL" src="../../img/quick_start/performance/%E5%BF%AB%E9%80%9F%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9.png" width="900px" /></a></p>
 <h2 id="3">3 创建性能测试<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>进入【性能测试】-【测试】页面。</p>
 <p>在性能测试列表中点击【创建性能测试】，在【场景配置】点击【引用接口自动化场景】，将已有的接口自动化场景添加到性能测试中。</p>
 </div>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../img/quick_start/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../img/quick_start/performance/%E5%88%9B%E5%BB%BA%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.png" width="900px" /></a></p>
 <h2 id="4">4 调整压力配置<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>在压力配置页面选择系统配置的测试资源池。<br>
@@ -3426,16 +3426,16 @@
 <li>在场景配置中选择【ConcurrencyThreadGroup】加压模型，设置10秒内分5步增加并发用户</li>
 </ul>
 </div>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!创建性能测试" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%B5%8B%E8%AF%95%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
 <h2 id="5">5 执行并查看报告<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击性能测试配置页面的【保存并执行】按钮，系统自动进入性能测试测试报告页面。当收到测试结果数据后，报告页面将自动更新。</p>
 </div>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A1.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A2.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A3.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A4.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A5.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A1.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A2.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A3.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A4.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!性能测试报告" src="../../img/quick_start/performance/%E6%80%A7%E8%83%BD_%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A5.png" width="900px" /></a></p>
 
 
 
@@ -3538,11 +3538,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
 <script>

@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -3223,6 +3223,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v21011-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.10.11-lts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v21010-lts" class="md-nav__link">
     <span class="md-ellipsis">
       v2.10.10-lts
@@ -3558,6 +3567,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v21011-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.10.11-lts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v21010-lts" class="md-nav__link">
     <span class="md-ellipsis">
       v2.10.10-lts
@@ -3835,6 +3853,47 @@
 <li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护。</li>
 <li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每月发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+</div>
+<h2 id="v21011-lts">v2.10.11-lts<a class="headerlink" href="#v21011-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2024年1月24日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">新增功能 <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:" /></p>
+<ul>
+<li>feat(性能测试): 性能测试高级配置增加选项</li>
+<li>feat(性能测试): 报告采样支持显示接口返回数据类型为图片</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor(性能测试): 性能测试下载zip使用流下载</li>
+<li>refactor(测试跟踪): 修改场景转性能时部分csv文件无法解析的问题</li>
+<li>refactor(测试跟踪): 测试跟踪的自动清理报告数据采用批量处理，同时增加服务启动项，针对之前没有删除成功的资源报告进行删除处理</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(接口测试): 修复v1到v2场景步骤中断言问题</li>
+<li>fix(接口测试): 修复特殊格式的swagger3导入，rest参数不显示的缺陷</li>
+<li>fix(接口测试): 单步骤调试获取不到host的缺陷</li>
+<li>fix(接口测试): 合并历史遗留断言数据</li>
+<li>fix(接口测试): 修复接口导入，原接口下的case不见的缺陷</li>
+<li>fix(接口测试): 修复历史数据造成的引用的case的断言显示不正确的缺陷</li>
+<li>fix(接口测试): 修复场景点击保存偶尔报错的缺陷</li>
+<li>fix(测试跟踪): 测试计划，关联了1.6w条用例，查看测试报告页面卡死 #28250</li>
+<li>fix(系统设置): 修复环境过滤不生效的缺陷</li>
+<li>fix(性能测试): 修复性能测试不显示文本内容的缺陷</li>
+<li>fix(项目设置): 修复环境变量过滤后的添加有问题的缺陷</li>
+<li>fix(项目管理): 修复环境变量按应用场景筛选点击无响应的缺陷</li>
+<li>fix(测试计划): 修复多个测试计划关联同一个场景并发执行证书偶尔获取不到问题</li>
+<li>fix：修复接口导入required参数缺失问题</li>
 </ul>
 </div>
 <h2 id="v21010-lts">v2.10.10-lts<a class="headerlink" href="#v21010-lts" title="Permanent link">&para;</a></h2>
@@ -5164,11 +5223,11 @@ MeterSphere作为一站式持续测试平台，既需要与各种周边系统进
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
 <script>

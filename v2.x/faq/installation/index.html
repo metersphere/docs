@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -4099,7 +4099,7 @@ systemctl daemon-reload
 <p>sql 初始化失败导致，需要连接 metersphere 数据库手动执行sql。</p>
 <ul>
 <li>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration">https://github.com/metersphere/metersphere/tree/v2.3.1/system-setting/backend/src/main/resources/db/migration</a> 下载对应文件名带 86 的 flyway sql。此处链接v2.3.1为安装的版本号，如果不是该版本，可切换到目标版本再下载sql文件.
-<a class="glightbox" href="../../img/faq/sql1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/sql1.png" width="900px" /></a></li>
+<a class="glightbox" href="../../img/faq/sql1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/sql1.png" width="900px" /></a></li>
 <li>将文件上传到 MeterSphere 服务器，并将sql文件 copy 到容器中
 <div class="highlight"><pre><span></span><code>    #将备份的sql数据复制至mysql容器
     docker cp V86__v1.10.1_release.sql mysql:/
@@ -4110,10 +4110,10 @@ systemctl daemon-reload
     #导入数据库文件
     source /V86__v1.10.1_release.sql
 </code></pre></div>
- <a class="glightbox" href="../../img/faq/sql12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/sql12.png" width="900px" /></a></li>
+ <a class="glightbox" href="../../img/faq/sql12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/sql12.png" width="900px" /></a></li>
 <li>全部执行成功后，修改 metersphere_version 表对应版本 86 的 success 值为1，退出mysql容器然后 msctl reload 重启服务即可。
  <code>update metersphere_version set success=1  where version=86;</code>
- <a class="glightbox" href="../../img/faq/sql3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/sql3.png" width="900px" /></a></li>
+ <a class="glightbox" href="../../img/faq/sql3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/sql3.png" width="900px" /></a></li>
 </ul>
 </div>
 <h2 id="10">10 如何备份数据库?<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
@@ -4309,7 +4309,7 @@ flushall
 </code></pre></div>
 </div>
 <h2 id="37-javaiofilenotfoundexceptionoptmeterspherelogsmeterspherems-jmeter-run-loglogno-such-file-or-directory">37 日志中提示：<code>java.io.FileNotFoundException：/opt/metersphere/logs/metersphere/ms-jmeter-run-log.log(no such file or directory)</code><a class="headerlink" href="#37-javaiofilenotfoundexceptionoptmeterspherelogsmeterspherems-jmeter-run-loglogno-such-file-or-directory" title="Permanent link">&para;</a></h2>
-<p><a class="glightbox" href="../../img/faq/FileNotFoundException.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/FileNotFoundException.jpg" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/FileNotFoundException.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! 安装部署-500错误" src="../../img/faq/FileNotFoundException.jpg" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>检查 selinux 状态，如果是开启状态，尝试关闭后再重启 docker，重新加载 MeterSphere。</p>
 </div>
@@ -4327,7 +4327,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 <div class="admonition ms-abstract">
 <p>在 /opt/metersphere/docker-compose-mysql.yml 文件 restart: always 后面一行加 privileged: true 这个参数，然后再执行 <code>msctl reload</code> 即可。 <br></p>
 </div>
-<p><a class="glightbox" href="../../img/faq/mysql_yml.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/mysql_yml.jpg" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/faq/mysql_yml.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="! metersphere导入格式" src="../../img/faq/mysql_yml.jpg" width="900px" /></a></p>
 <h2 id="40-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space">40 安装部署时报错：<code>Creating network "metersphere_ms-network" with driver "brige" Pool overlaps with other one on this address space</code><a class="headerlink" href="#40-creating-network-metersphere_ms-network-with-driver-brige-pool-overlaps-with-other-one-on-this-address-space" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。</p>
@@ -4448,11 +4448,11 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
 <script>
