@@ -20,10 +20,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
 
     # 下载离线安装包
-    wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
+    wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-offline-installer-v2.x.y.tar.gz
     
     # 解压安装包
-    tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
+    tar -zxvf metersphere-offline-installer-v2.x.y.tar.gz
 
     # 进入离线部署包解压缩目录
     cd metersphere-offline-installer-v2.x.y
