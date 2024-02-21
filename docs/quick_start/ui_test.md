@@ -11,7 +11,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     1. 修改 /opt/metersphere/.env 文件，MS_UI_ENABLED=true 修改配置后加载配置文件执行 msctl reload。<br>
     2. docker ps 检查 selenium-hub 容器是否成功启动。<br>
     3. v2.8.1之后版本在 MeterSphere 系统参数设置中修改 selenium-docker 地址为http://selenium-hub:4444。详情参考https://bbs.fit2cloud.com/t/topic/127<br>
-    4. UI 测试用例，默认勾选 "性能模式" 没有截图展示，不勾选 "性能测试" 可以查看每个步骤的截图。<br>
+    4. 在UI自动化中，使用本地调试时，注意取消勾选“性能模式”，才可正常拉起本地浏览器执行。<br>
     5. 如果导入 License 成功后，依然没有 UI 测试模块，请到【用户组与权限】处配置 UI 模块权限。
 
 ## 1 创建模块
@@ -87,8 +87,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 5 调试 UI 自动化场景
 !!! ms-abstract ""
-    可在编辑场景页面调试 UI 场景，也可以在 UI 自动化场景列表页面执行UI场景。如图点击场景编辑页面的【生成报告】按钮，可生成并查看场景报告。<br>
-    勾选性能模式，场景报告中无截图信息，不勾选性能模式，场景报告中有截图信息。 
+    可在编辑场景页面调试 UI 场景，也可以在 UI 自动化场景列表页面执行UI场景。如图点击场景编辑页面的【生成报告】按钮，可生成并查看测试报告。<br>
+    勾选性能模式，测试报告中默认无截图信息；不勾选性能模式，测试报告出错步骤中有截图信息。 如果需要测试报告可以查看脚本中每个步骤的截图，可以批量多选脚本步骤配置“当前步骤截图”策略。
 
 ![!使用UI测试](../img/quick_start/ui_test/使用UI测试16.png){ width="900px" }
 
