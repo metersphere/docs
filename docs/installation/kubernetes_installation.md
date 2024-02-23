@@ -21,7 +21,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads<br>
     
     - **下载离线 Chart 包**<br>
-    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases,如：https://github.com/metersphere/helm-chart/releases/download/metersphere-2.3.0/metersphere-2.3.0.tgz
+    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases<br>如：https://github.com/metersphere/helm-chart/releases/download/metersphere-2.3.0/metersphere-2.3.0.tgz
     
     - **进行安装**<br>
     ```sh
