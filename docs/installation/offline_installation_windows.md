@@ -9,7 +9,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "部署服务器要求："
     * 操作系统: 可运行 Docker 的 Windows 操作系统
-    * CPU/内存: 最低要求 4C8G，推荐 8C16G (2.3.0版本及其之后的版本，最低配置 8C16G)
+    * CPU/内存: 最低要求 4C8G，推荐 8C16G (企业版最低配置 8C16G)
     * 磁盘空间: 200G
 
 !!! ms-abstract "注意："

@@ -9,7 +9,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     **部署服务器要求**：<br>
 
      - 操作系统要求：CentOS 7.x
-     - CPU内存要求：最低要求 4C8G (企业版最低配置 8C16G)
+     - CPU内存要求：最低要求 4C8G，推荐 8C16G (企业版最低配置 8C16G)
      - 部署目录空间（默认/opt目录）要求：50G
      - 网络要求：可访问互联网
      - 如用于生产环境，推荐使用 [离线安装包](https://community.fit2cloud.com/#/products/metersphere/downloads) 进行部署

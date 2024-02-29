@@ -5,7 +5,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
     * 操作系统: CentOS 7.x / Redhat 7.x
-    * CPU/内存: 最低要求 4C8G (企业版最低配置 8C16G)
+    * CPU/内存: 最低要求 4C8G ，推荐 8C16G(企业版最低配置 8C16G)
     * 磁盘空间: 50G
 
 ## 2 下载安装包
