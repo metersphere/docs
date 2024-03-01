@@ -192,7 +192,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     - 检查防火墙是否开启。
     - 检查 6379端口是否开放。
-    - 检查 opt/metersphere/.env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。如地址正确任无法连接可修改 opt/metersphere/.env 文件把MS_REDIS_HOST=redis
+    - 检查 /opt/metersphere/.env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。如地址正确任无法连接可修改 /opt/metersphere/.env 文件把MS_REDIS_HOST=redis
 
 ## 26 docker 运行错误：`docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……`
 !!! ms-abstract ""
@@ -312,13 +312,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。
 
     - 清除子网网段：docker network prune
-    - 将 opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 
+    - 将 /opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 
     - 手动创建容器网络：docker network create metersphere_ms-network 
     - 重启服务器：msctl reload
 
 ## 41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？
 !!! ms-abstract ""
-    检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。
+    检查 /opt/metersphere/.env 中的 MS_DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。
 
-    - 修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。
+    - 修改env文件中的 MS_DOCKER_SUBNET 的网段配置，与主机不在同一网段。
     - 执行 `msctl uninstall -v` 先进行卸载，再执行 msctl reload 重新创建容器。

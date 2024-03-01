@@ -242,7 +242,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 37 后置脚本中如何引用 js 文件？
 !!! ms-abstract ""
-    将 js 文件上传到服务器 /opt/ms/data/目录下，在后置脚本中选择 JavaScript，通过 load 引用 js文件：`load(“/opt/ms/data/xx.js”)`。
+    将 js 文件上传到服务器 /opt/metersphere/data/目录下，在后置脚本中选择 JavaScript，通过 load 引用 js文件：`load(“/opt/metersphere/data/xx.js”)`。
 
 ## 38 HTTP 协议接口支持哪些文件格式导入？
 !!! ms-abstract ""
