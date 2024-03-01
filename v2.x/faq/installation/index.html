@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -4180,7 +4180,7 @@ msctl reload
 <ul>
 <li>检查防火墙是否开启。</li>
 <li>检查 6379端口是否开放。</li>
-<li>检查 opt/metersphere/.env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。如地址正确任无法连接可修改 opt/metersphere/.env 文件把MS_REDIS_HOST=redis</li>
+<li>检查 /opt/metersphere/.env 文件中配置的 Redis 地址是否是对于的服务器的IP地址。如地址正确任无法连接可修改 /opt/metersphere/.env 文件把MS_REDIS_HOST=redis</li>
 </ul>
 </div>
 <h2 id="26-docker-docker-error-response-from-daemon-oci-runtime-create-failed-systemd-cgroup-flag-passed-but-systemd-support-for-managing-cgroups-is-not-available">26 docker 运行错误：<code>docker: Error response from daemon: OCI runtime create failed: systemd cgroup flag passed, but systemd support for managing cgroups is not available:……</code><a class="headerlink" href="#26-docker-docker-error-response-from-daemon-oci-runtime-create-failed-systemd-cgroup-flag-passed-but-systemd-support-for-managing-cgroups-is-not-available" title="Permanent link">&para;</a></h2>
@@ -4297,16 +4297,16 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
 <p>主要原因是 MeterSphere 默认的容器网络地址空间其它地址冲突，需要重新手动修改并重新创建。</p>
 <ul>
 <li>清除子网网段：docker network prune</li>
-<li>将 opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 </li>
+<li>将 /opt/metersphere/.env 里 MS_DOCKER_SUBNET 改成其它网络段 </li>
 <li>手动创建容器网络：docker network create metersphere_ms-network </li>
 <li>重启服务器：msctl reload</li>
 </ul>
 </div>
 <h2 id="41">41 数据库采用安装包内置数据，未开启器防火墙的情况下，为何服务连不上数据库？<a class="headerlink" href="#41" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>检查 /opt/metersphere/.env 中的 DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。</p>
+<p>检查 /opt/metersphere/.env 中的 MS_DOCKER_SUBNET 与服务器网卡是否在同一网段，如果是同一网段将影响路由转发，导致服务连不上数据库。</p>
 <ul>
-<li>修改env文件中的 DOCKER_SUBNET 的网段配置，与主机不在同一网段。</li>
+<li>修改env文件中的 MS_DOCKER_SUBNET 的网段配置，与主机不在同一网段。</li>
 <li>执行 <code>msctl uninstall -v</code> 先进行卸载，再执行 msctl reload 重新创建容器。</li>
 </ul>
 </div>
@@ -4416,7 +4416,7 @@ spring.datasource.quartz.hikari.maximum-pool-size=你想要的数值
     
     
 
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
 <script>
