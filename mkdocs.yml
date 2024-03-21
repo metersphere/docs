@@ -123,7 +123,7 @@ nav:
           - 系统设置:
               - 概述: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
-              - 工作空间: user_manual/system_management/workspace.md
+              - 组织: user_manual/system_management/organization.md
     - 使用教程: tutorial/use_tutorial.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
