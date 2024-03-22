@@ -3,22 +3,30 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    维护当前项目用户及权限。
+    维护当前项目接口测试里使用的【传递参数】【前后置脚本】
 
-## 1 新增用户组
-![!项目设置](../../img/project_management/创建用户组.png){ width="900px" }
+## 1 添加公共脚本
+!!! ms-abstract ""
+    点击【项目管理】-【公共脚本】-【添加公共脚本】，进入添加公共脚本页面
+![!公共脚本页面](../../img/project_management/public_script/公共脚本页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【创建用户组】，新增当前项目的用户组信息。详细功能操作及说明参考 [系统设置->系统->用户组与权限->创建用户组](../../system_management/system/#1)。
-
-## 2 设置用户组权限
-![!项目设置](../../img/project_management/设置用户组权限.png){ width="900px" }
+    设置【传递参数】时，参数值支持使用内置 MOCK 函数和 JMeter 函数，以 MOCK 为例
+![!公共脚本使用内置函数](../../img/project_management/public_script/公共脚本使用内置函数.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【设置权限】为用户组进行权限设置。详细功能操作及说明参考 [系统设置->系统->用户组与权限->设置权限](../../system_management/system/#3)。
-
-## 3 设置用户组成员
-![!项目设置](../../img/project_management/设置用户组成员.png){ width="900px" }
+    设置【公共脚本】时，需选择脚本语言类型，然后自定义脚本。此处以导入 API 定义的登录接口获取 Token 为例
+![!公共脚本新增脚本](../../img/project_management/public_script/公共脚本新增脚本.png){ width="900px" }
 
 !!! ms-abstract ""
-    在用户组列表信息成员处，点击信息列里的【数字】为用户组进行成员设置。详细功能操作及说明参考 [系统设置->系统->用户组与权限->成员设置](../../system_management/system/#3)。
+    编写【公共脚本】完成后，点击【调试】，在【执行结果】控制台看到打印了需要的 Token，点击【保存】即可
+![!项目设置](../../img/project_management/public_script/脚本调试通过.png){ width="900px" }
+
+!!! ms-abstract ""
+    【公共脚本】保存后，在【接口测试】-【接口】-【前置】-【引用公共脚本】处，点击【引用公共脚本】即可进行引用
+![!引用公共脚本](../../img/project_management/public_script/引用公共脚本.png){ width="900px" }
+![!选择公共脚本进行引用](../../img/project_management/public_script/选择公共脚本进行引用.png){ width="900px" }
+
+!!! ms-abstract ""
+    支持对【公共脚本】进行【编辑】【删除】操作
+![!公共脚本的功能操作](../../img/project_management/public_script/公共脚本的功能操作.png){ width="900px" }
