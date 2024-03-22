@@ -3,110 +3,75 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    系统支持用户自定义【项目级别】的【模板字段】、【用例模板】、【缺陷模板】、【接口模板】。
-![测试报告模板](../../img/system_management/测试报告模板.png){ width="900px" }
-
-## 1 模板字段
-!!! ms-abstract ""
-    在自定义模板前（用例&缺陷），需要先自定义模板中字段的基本属性。点击【项目设置】-【更多选项】-【模板管理】-【模板字段】，即可查看当前工作空间中的所有模板字段列表。
-![自定义字段](../../img/project_management/自定义字段列表.png){ width="900px" }
+    需要先点击【系统设置】-【组织】-【模板】启用项目用例模板。启用后，项目可自定义模版，将不存在组织模版。此操作不可逆，请谨慎操作！
+![组织模板](../../img/project_management/template_management/组织模板.png){ width="900px" }
 
 !!! ms-abstract ""
+    系统支持用户自定义【用例模板】、【缺陷模板】及字段设置。
+![模板管理](../../img/project_management/template_management/模板管理.png){ width="900px" }
 
-    - 创建字段<br>
-    点击页面左上角【创建字段】，设置字段的基本信息：名称、备注、使用场景、字段类型等基本信息，点击【确定】完成模板字段添加。
-![自定义字段](../../img/system_management/自定义字段.png){ width="900px" }
-
-!!! ms-abstract "个别字段说明"
-    【使用场景】：设置定义的字段使用于具体的模板中。<br>
-    【字段类型】：系统提供多种字段类型可供选择，根据不同字段类型，系统自动控制字段的显示、设置和属性等。字段支持的类型有输入框、文本框、下来选择框（单选&多选）、日期时间器、数值等等类型。
+## 1 用例模版
+### 1.1 字段设置
+!!! ms-abstract ""
+    点击【字段设置】进入字段设置页面，点击【新增字段】，填写相应内容进行保存。【用例模板】里可关联新增字段。
+![新增字段设置](../../img/project_management/template_management/新增字段设置.png){ width="900px" }
 
 !!! ms-abstract ""
+    支持对自定义字段进行【查看】【编辑】【删除】操作
+![字段设置功能](../../img/project_management/template_management/字段设置功能.png){ width="900px" }
 
-    - 维护字段<br>
-    创建完成后可在模板字段列表中查看到添加的模板字段，在自定义字段信息中可点击【编辑】、【复制】和【删除】按钮进行模板字段修改、复制和删除操作。
-![维护字段](../../img/system_management/维护字段.png){ width="900px" }
-
-## 2 用例模版 
+### 1.2 模板设置
 !!! ms-abstract ""
-    用例模板即当前项目下都可使用的测试用例模板，并且可对用例模板添加、修改、复制及移除的操作。点击页面【项目设置】-【更多选项】-【模版管理】-【用例模版】，即可查看当前项目中的所有用例模板列表。
-![用例模版](../../img/system_management/用例模版.png){ width="900px" }
+    点击【模板】进入模板设置页面，支持【编辑】【查看】模板内容。
+![新增字段设置](../../img/project_management/template_management/编辑模板.png){ width="900px" }
 
 !!! ms-abstract ""
-
-    - 创建模板<br>
-    点击页面左上角【创建模板】，创建新的用例模板，设置用例基本信息、模板设置明细信息等，点击【保存】完成用例模板添加。如果模板添加的字段信息不存在，可以在【项目设置】-【更多选项】-【模版管理】-【模版字段】中进行创建，然后在此引用即可。
-![创建模板](../../img/system_management/创建模板.png){ width="900px" }
-
-![填写模板](../../img/system_management/填写模板.png){ width="900px" }
-
+    点击【编辑】，进入编辑模板页面，自定义模板内容进行更新
+![新增字段设置](../../img/project_management/template_management/用例模板编辑页面.png){ width="900px" }
 
 !!! ms-abstract ""
+    点击【默认模板】，即可查看模板内容。
+![新增字段设置](../../img/project_management/template_management/查看用例默认模板.png){ width="900px" }
 
-    - 维护模板<br>
-    创建完成后可在用例模板列表中查看到添加的用例模板，在用例模板信息中可点击【编辑】、【复制】和【删除】按钮进行用例模板修改、复制和删除操作。
-![维护模板](../../img/system_management/维护模板.png){ width="900px" }
-
+## 2 缺陷模版
+!!! ms-abstract ""
+    需要先点击【系统设置】-【组织】-【模板】启用项目缺陷模板。启用后，项目可自定义缺陷模版，将不存在组织模版。此操作不可逆，请谨慎操作！
+![组织模板](../../img/project_management/template_management/组织缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
+    支持【缺陷模板】进行自定义【字段设置】【模板】【工作流设置】操作
+![组织模板](../../img/project_management/template_management/缺陷模板功能.png){ width="900px" }
 
-    - 引用模板<br>
-    创建用例模板后，需要在项目中使用创建的模板，可在【系统设置】-【项目管理】-【编辑】页面，选择要使用的用例模板
-![维护模板](../../img/system_management/引用用例模板.png){ width="900px" }
-
-## 3 缺陷模版
+### 2.1 字段设置
 !!! ms-abstract ""
-    在【模版管理】-【缺陷模版】，会显示当前项目下的缺陷模版列表，支持查询、编辑、复制、删除等操作。
-![用例模版](../../img/system_management/缺陷模版.png){ width="900px" }
-
+    点击【字段设置】进入字段设置页面，点击【新增字段】，填写相应内容进行保存。【缺陷模板】里可关联新增字段。
+![组织模板](../../img/project_management/template_management/新增缺陷字段.png){ width="900px" }
 
 !!! ms-abstract ""
-    
-    - 创建缺陷模板<br>
-    点击页面左上角【创建缺陷模板】新建缺陷模板，设置用例基本信息、模板设置明细信息等，点击【保存】完成项目缺陷模板添加。如果模板添加字段信息不存在，可以在【项目设置】-【更多选项】-【模版管理】-【模版字段】中进行创建，然后在此引用即可。
-![创建缺陷模板](../../img/system_management/创建缺陷模板.png){ width="900px" }
+    支持对自定义字段进行【查看】【编辑】【删除】操作
+![字段设置功能](../../img/project_management/template_management/新增字段的功能.png){ width="900px" }
 
+### 2.2 模板设置
+!!! ms-abstract ""
+    点击【模板】进入模板设置页面，支持【新增】【编辑】【查看】【复制】【删除】以及设置为【默认模板】等操作。
+![新增字段设置](../../img/project_management/template_management/缺陷模板所有操作功能.png){ width="900px" }
 
 !!! ms-abstract ""
-
-    - 维护字段<br>
-    创建完成后可在缺陷模板列表中查看到添加的模板，在缺陷模板信息中可点击【编辑】、【复制】和【删除】按钮进行缺陷模板修改、复制和删除等操作。
-![维护缺陷模板](../../img/system_management/维护缺陷模板.png){ width="900px" }
-
+    点击【创建缺陷模板】，进入模板创建页面，自定义模板内容进行创建
+![新增字段设置](../../img/project_management/template_management/新增缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
-
-    - 引用模板<br>
-    创建缺陷模板后，需要在项目中使用创建的模板，可在【系统设置】-【项目管理】-【编辑】页面，选择要使用的缺陷模板
-![维护模板](../../img/system_management/引用缺陷模板.png){ width="900px" }
-
-## 4 接口模板
-!!! ms-abstract ""
-    接口测试支持自定义接口模板，支持查询、编辑、复制、删除等操作。
-![用例模版](../../img/system_management/接口模版.png){ width="900px" }
-
+    点击【默认模板】，即可查看模板内容。
+![新增字段设置](../../img/project_management/template_management/查缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
-
-    - 创建接口模板<br>
-    点击页面左上角【创建模板】新建接口陷模板，填写基本信息、模板设置等信息，添加字段或设置自定义字段后，点击【保存】即可。
-![创建缺陷模板](../../img/system_management/创建接口模版.png){ width="900px" }
-
+    点击新增的【缺陷模板】，即可查看模板内容。
+![新增字段设置](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
+    点击开启【默认模板】，在【缺陷管理】-【缺陷】-【创建缺陷】时，会使用刚设置的缺陷模板
+![新增字段设置](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
 
-    - 维护模板<br>
-    创建完成后可在接口模板列表中查看到添加的接口模板，在接口模板信息中可对模板进行【编辑】、【复制】和【删除】等操作。
-![维护模板](../../img/system_management/维护接口模板.png){ width="900px" }
-
-
+### 2.3 工作流设置
 !!! ms-abstract ""
-
-    - 引用模板<br>
-    创建接口模板后，需要在项目中使用创建的模板，可在【系统设置】-【项目管理】-【编辑】页面，选择要使用的接口模板
-![维护模板](../../img/system_management/引用接口模板.png){ width="900px" }
-
-!!! ms-abstract ""
-
-    在创建接口定义时，接口基础信息中会展示自定义的模板字段。
-![维护模板](../../img/system_management/引用接口模板1.png){ width="900px" }
+    点击【工作流设置】进入工作流设置页面，

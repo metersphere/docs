@@ -1,0 +1,96 @@
+---
+description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
+---
+
+## 1 基本信息
+!!! ms-abstract ""
+    点击【项目管理】-【项目与权限】-【基本信息】，查看项目的基本信息
+![!基本信息](../../img/project_management/project_permissions/基本信息.png){ width="900px" }
+
+!!! ms-abstract ""
+    在【基本信息】页面，点击【编辑】，即可对项目名称和描述内容进行修改
+![!编辑项目](../../img/project_management/project_permissions/编辑项目.png){ width="900px" }
+
+## 2 应用设置
+!!! ms-abstract ""
+    点击【应用设置】，进入应用设置页面
+![!应用设置](../../img/project_management/project_permissions/应用设置.png){ width="900px" }
+
+### 2.1 缺陷管理
+!!! ms-abstract ""
+    需要先在【系统设置】-【组织】-【服务集成】处配置 JIRA / 禅道 等第三方平台 <br>
+    点击【缺陷管理】-【同步缺陷】，配置同步缺陷信息，以 JIRA 为例
+![!同步缺陷](../../img/project_management/project_permissions/同步缺陷.png){ width="900px" }
+
+![!配置同步缺陷](../../img/project_management/project_permissions/配置同步缺陷.png){ width="900px" }
+
+!!! ms-abstract ""
+
+    - **增量同步**：仅同步在 MeterSphere 创建的缺陷内容变更 <br>
+    - **开启/关闭**：平台创建的缺陷同步或不同步至第三方项目管理平台
+
+![!配置同步缺陷](../../img/project_management/project_permissions/配置同步缺陷1.png){ width="900px" }
+
+### 2.2 用例管理
+!!! ms-abstract ""
+    点击【用例管理】，可开启/关闭【重新评审】【关联需求】功能
+![!用例管理](../../img/project_management/project_permissions/用例管理.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【关联需求】，配置关联需求信息，以 JIRA 为例   
+![!关联需求](../../img/project_management/project_permissions/关联需求.png){ width="900px" }
+
+![!配置需求同步](../../img/project_management/project_permissions/配置需求同步.png){ width="900px" }
+
+### 2.3 接口测试
+!!! ms-abstract ""
+    点击【接口测试】，测试报告保留的时间范围、报告链接有效期、执行资源池、误报规则等都进行设置
+![!接口测试](../../img/project_management/project_permissions/接口测试.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【误报规则】，进入新增规则页面
+![!接口测试](../../img/project_management/project_permissions/误报规则.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【新增误报规则】，配置相应的误报规则
+![!误报设置页面](../../img/project_management/project_permissions/误报设置页面.png){ width="900px" }
+
+!!! ms-abstract ""
+    支持对误报进行【启用】【禁用】【编辑】【删除】等操作。误报设置为启用，当接口返回结果匹配上误报规则后，会将接口结果处理为误报。
+![!误报规则功能](../../img/project_management/project_permissions/误报规则功能.png){ width="900px" }
+
+## 3 成员
+!!! ms-abstract ""
+    点击【成员】，进入成员操作页面
+![!成员](../../img/project_management/project_permissions/成员.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【添加成员】进入添加成员页面，选择成员和对应用户组，点击【保存】即可
+![!新增成员](../../img/project_management/project_permissions/新增成员.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【设置】进入表格设置页面，可对列表模式、每页显示数量、表头等内容进行设置
+![!表格设置](../../img/project_management/project_permissions/表格设置.png){ width="900px" }
+![!表格设置](../../img/project_management/project_permissions/表格设置页面.png){ width="900px" }
+
+!!! ms-abstract ""
+    成员【启用】【禁用】状态需要在【系统设置】-【组织】-【成员】进行设置
+![!启用禁用状态](../../img/project_management/project_permissions/启用禁用状态.png){ width="900px" }
+
+!!! ms-abstract ""
+    支持批量将项目成员添加到用户组、从项目移除、清空等功能
+![!成员功能](../../img/project_management/project_permissions/成员功能.png){ width="900px" }
+
+## 4 用户组
+!!! ms-abstract ""
+    点击【用户组】，进入用户组操作页面
+![!用户组](../../img/project_management/project_permissions/用户组.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【添加用户组】，输入用户组名称
+![!用户组](../../img/project_management/project_permissions/创建用户组.png){ width="900px" }
+
+!!! ms-abstract ""
+    对用户组可进行【查看权限】【删除】操作，其中【查看权限】可对用户组进行赋权操作
+![!用户组](../../img/project_management/project_permissions/用户组功能.png){ width="900px" }
+![!用户组](../../img/project_management/project_permissions/查看权限.png){ width="900px" }
