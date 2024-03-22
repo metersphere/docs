@@ -2,57 +2,39 @@
 description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
 ---
 
-## 1 消息设置
+## 1 机器人列表
 !!! ms-abstract ""
-    针对系统的每个功能都支持用户根据需要进行【项目级别】的任务通知设置。点击【项目管理】-【更多选项】-【消息设置】即可进入消息设置页面，并且系统支持接收人员按角色或指定具体人员；同时支持站内通知和站外通知多种通知方式等功能。
-![!消息通知](../../img/system_management/消息通知首页.png){ width="900px" }
-
-!!! ms-abstract ""
-
-    - **测试跟踪任务通知**<br>
-    测试跟踪的每个页面：首页、测试用例、用例评审、测试计划、测试报告、缺陷管理等页面都支持自定义任务通知。
-![!消息设置-设置](../../img/system_management/消息设置-设置.png){ width="900px" }
+    点击【消息管理】-【机器人列表】，进入机器人列表页面
+![!机器人列表](../../img/project_management/message_management/机器人列表.png){ width="900px" }
 
 !!! ms-abstract ""
-    同时测试跟踪页面上的每个关键操作，都可以支持用户自定义任务通知。比如测试计划的新建、更新、删除、执行完成等，都可以设置相应的任务通知。
-![!测试计划-新建](../../img/system_management/测试计划-新建.png){ width="900px" } 
-
-
-!!! ms-abstract ""
-
-    - **接口测试任务通知**<br>
-    接口测试的每个页面：首页、接口定义、接口自动化、测试报告等页面都支持自定义任务通知。
-![!接口-首页](../../img/system_management/接口-首页.png){ width="900px" } 
+    支持【站内信】【邮件】【企业微信】【钉钉】【飞书】等多种方式发送消息通知<br>
+    其中【邮件】通知需要在【系统设置-邮件设置】中配置 SMTP 服务，【企业微信】【钉钉】【飞书】需要配置机器人
+![!创建webhook机器人](../../img/project_management/message_management/创建webhook机器人.png){ width="900px" }
 
 !!! ms-abstract ""
-    同时接口测试页面上的每个关键操作，都可以支持用户自定义任务通知。比如接口定义中 API 相关的增删改、CASE 相关的增删改等操作，都可以设置相应的任务通知。
-![!接口-新建](../../img/system_management/接口-新建.png){ width="900px" } 
-
-
-!!! ms-abstract ""
-
-    - **性能测试任务通知**<br>
-    性能测试的每个页面：测试、测试报告等页面都支持自定义任务通知。
-![!性能测试任务通知-首页](../../img/system_management/性能测试任务通知-首页.png){ width="900px" } 
+    以【企业微信】配置机器人为例。创建企业微信群，选择【...】-【添加群机器人】后，可获取【webhook】地址
+![!创建webhook机器人](../../img/project_management/message_management/群创建机器人.png){ width="900px" }
 
 !!! ms-abstract ""
-    同时性能测试页面上的每个关键操作，都可以支持用户自定义任务通知。比如测试的新建、更新、删除、执行完成等操作，都可以设置相应的任务通知。
-![!性能测试任务通知-新建](../../img/system_management/性能测试任务通知-新建.png){ width="900px" } 
-
-
-!!! ms-abstract ""
-
-    - **Jenkins任务通知**<br>
-    自动化通过 Jenkins 持续部署来启动 MeterSphere 自动化脚本时，可以在这里设置此类型的任务通知。
-![!Jenkins任务通知-首页](../../img/system_management/Jenkins任务通知-首页.png){ width="900px" } 
+    填写【webhook】地址进行保存
+![!创建webhook机器人](../../img/project_management/message_management/填写企业微信具体信息.png){ width="900px" }
 
 !!! ms-abstract ""
-    Jenkins 任务通知自动化通过 Jenkins 持续部署来启动 MeterSphere 自动化脚本时，可以在这里设置此类型的任务通知。
-![!Jenkins任务通知-新建](../../img/system_management/Jenkins任务通知-新建.png){ width="900px" } 
+    支持对已添加的机器人进行【编辑】【删除】【开启/关闭】操作。【开启】则会显示在消息设置列表中，手动选择通知类型。
+![!创建webhook机器人](../../img/project_management/message_management/企业微信机器人功能.png){ width="900px" }
 
-## 2 自定义消息模板 (X-Pack)
+## 2 消息设置 
 !!! ms-abstract ""
-    点击【模板】按钮，来到自定义模板页面，可以点击【模板】后的【i】，会有一些变量说明及其引用方式，可以用于自定义内容中。
-![!自定义模板](../../img/system_management/自定义消息模板.png){ width="900px" } 
+    点击【消息设置】进入消息设置页面，支持对【缺陷管理】【用例管理】【接口测试】【定时任务】设置消息通知
+![!自定义模板](../../img/project_management/message_management/消息设置页面.png){ width="900px" } 
 
-![!自定义模板](../../img/system_management/自定义模板页面.png){ width="900px" } 
+!!! ms-abstract ""
+    以【缺陷管理】中【创建】功能为例，开启企业微信并设置消息通知接收人
+![!自定义模板](../../img/project_management/message_management/缺陷创建通知.png){ width="900px" } 
+
+!!! ms-abstract ""
+    点击【缺陷管理】-【创建缺陷】，填写缺陷内容后进行创建，企业微信群可接收到消息通知
+
+
+    
