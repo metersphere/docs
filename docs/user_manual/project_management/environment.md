@@ -27,7 +27,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!添加环境内容](../../img/project_management/enviroment/添加环境内容.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持【复制】【编辑】【删除】【导入】【导出】环境。
+    支持设置【连接超时】【响应超时】，默认值为60秒
+![!设置超时时间](../../img/project_management/enviroment/设置超时时间.png){ width="900px" }
+
+!!! ms-abstract ""
+    支持环境进行【复制】【编辑】【删除】【导入】【导出】操作。
 ![!环境进行复制删除操作](../../img/project_management/enviroment/环境进行复制删除操作.png){ width="900px" }
 ![!导入导出环境](../../img/project_management/enviroment/导入导出环境.png){ width="900px" }
 
