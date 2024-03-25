@@ -3,10 +3,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    显示登录用户当前所处的【项目】的测试资源日志信息，并且可以使用高级查询来快速查找相关日志系统。
-
-## 1 操作日志
-![!项目设置](../../img/project_management/操作日志.png){ width="900px" }
+    点击【项目管理】-【日志】显示登录用户当前所处的项目日志信息
+![!操作日志页面](../../img/project_management/log/操作日志页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    详细功能操作及说明参考 [系统->工作空间->操作日志](../../system_management/workspace/#16)。
+    支持根据【操作人】【操作时间】【操作对象】【名称】【操作类型】筛选或组合进行筛选相关日志信息，以【操作人】和【操作类型】组合筛选为例。
+![!查询功能](../../img/project_management/log/查询功能.png){ width="900px" }
+
+!!! ms-abstract ""
+    支持对筛选条件进行【重置】操作
+![!重置操作](../../img/project_management/log/重置操作.png){ width="900px" }
