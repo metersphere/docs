@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+
+# Editor directories and files
+.idea/*
+!.idea/icon.png
+**/*.iml
+.github/*
+.site/*
+.vscode
