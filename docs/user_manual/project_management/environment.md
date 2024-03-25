@@ -82,6 +82,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 环境组
 !!! ms-abstract ""
+    场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组。
     点击【项目管理】-【环境管理】-【环境组】进入环境组页面进行【新增】【删除】操作
 ![!显示设置](../../img/project_management/enviroment/环境组功能.png){ width="900px" }
+
 
