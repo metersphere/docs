@@ -67,7 +67,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     支持添加【HOST】操作，将环境中使用的域名和 IP 进行映射
-![!数据源链接成功](../../img/project_management/enviroment/数据源链接成功.png){ width="900px" }
+![!数据源链接成功](../../img/project_management/enviroment/host域名解析.png){ width="900px" }
 
 !!! ms-abstract ""
     支持添加【场景】和【请求】的全局【前置】操作，可进行【脚本操作】和【SQL操作】，以【场景-SQL操作】为例
@@ -77,12 +77,16 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     【后置】操作可参考【前置】操作
 
 !!! ms-abstract ""
+    【断言】支持多种断言方式，详细断言可参考【接口 CASE】处的断言。本处以【响应体-JSONPath】为例
+![!显示设置](../../img/project_management/enviroment/断言.png){ width="900px" }
+
+!!! ms-abstract ""
     支持【显示设置】进行【启用/关闭】操作
 ![!显示设置](../../img/project_management/enviroment/显示设置.png){ width="900px" }
 
 ## 2 环境组
 !!! ms-abstract ""
-    场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组。
+    场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组<br>
     点击【项目管理】-【环境管理】-【环境组】进入环境组页面进行【新增】【删除】操作
 ![!显示设置](../../img/project_management/enviroment/环境组功能.png){ width="900px" }
 
