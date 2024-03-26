@@ -67,11 +67,9 @@ nav:
           - 命令行工具: installation/cli.md
     - 用户手册:
           - 通用功能: user_manual/general.md
-          - 我的工作台:
-                - 我的仪表盘: user_manual/my_desk/dashboard.md
-                - 我的待办: user_manual/my_desk/todo.md
-                - 我的关注: user_manual/my_desk/attention.md
-                - 我创建的: user_manual/my_desk/created.md
+          - 缺陷管理:
+              - 概述: user_manual/defect_management/overview.md
+              - 缺陷管理: user_manual/defect_management/defect_management.md
           - 测试跟踪:
                 - 概述: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
