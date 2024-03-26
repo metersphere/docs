@@ -101,7 +101,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     Metersphere 平台与管理工具集成设置可分为三步骤来完成：<br>
     (1)下载需要使用的插件，并在【系统设置-系统-插件】上传。<br>
     (2)在【服务集成】列表配置第三方平台验证相关信息。<br>
-    (3)在【个人信息-个人设置-三方平台账号】配置当前个人的三方平台账号信息。
+    (3)在【项目设置-应用设置-缺陷管理】配置同步缺陷项目信息及同步策略。
 
 ![!服务集成](../../img/system_management/组织服务集成.png){ width="900px" }
 
@@ -161,38 +161,30 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     注意：认证信息区分私有化部署选择 Basic Auth 填写账号密码, 选择 Bearer Token 填写 Token, SaaS 版本只能选择 Basic Auth, 填写(账号+令牌)(账户设置-安全-创建API令牌)</br>
 ![!jira集成](../../img/system_management/jira服务集成.png){ width="900px" }
 
-<!-- 
-!!! ms-abstract ""
-    第二步： 关联项目配置<br>
-    配置完服务集成后，还需要配置项目中引用 JIRA 项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。
-![!jira关联](../../img/system_management/jira关联.png){ width="900px" }
 
 !!! ms-abstract ""
-    跳转到项目管理页面，点击项目列表中的【编辑】按钮，设置项目里项目相关配置。 
-![!jira关联项目](../../img/system_management/jira关联项目.png){ width="900px" }
-
-!!! ms-abstract "参数说明"
-    【集成第三方平台】：选择【JIRA】。<br>
-    【缺陷模板】：选择【JIRA-默认模板】<br>
-    【使用 Jira 缺陷模板】：选中，则表示系统会自动同步 JIRA 系统中的缺陷模板；不选择，则需要进入第四步，手动配置 MS 缺陷模板和 Jira 系统中的缺陷模板的字段对应关系。<br>
-    【JIRA 项目 Key】：项目的关键字的需要在 JIRA 平台上进行查询，如下。
-
+    第二步： 配置关联项目<br>
+    在【项目设置-应用设置-缺陷管理】页面配置同步缺陷项目，填写正确的项目及缺陷类型。<br>【JIRA 项目 Key】：项目的关键字的需要在 JIRA 平台上进行查询。
+![!jira关联](../../img/system_management/jira关联项目.png){ width="900px" }
 ![!jira项目](../../img/system_management/jira项目.png){ width="900px" }
+
+
+!!! ms-abstract ""
+    切换到【项目管理-模板管理】，勾选使用jira默认模板。在缺陷创建页面即可使用到 jira 的缺陷模板。
+![!jira关联项目](../../img/system_management/项目管理使用jira模板.png){ width="900px" }
+
 
 !!! ms-abstract ""
     第三步：添加个人平台账号。<br>
-    点击服务集成页面右下角的【马上添加】进行设置。
-![!jira关联第三方帐号](../../img/system_management/jira关联第三方帐号.png){ width="900px" }
+    点击【个人信息-第三方平台账号】配置jira账号，创建缺陷同步可使用该账户信息。
+![!jira关联第三方帐号](../../img/system_management/个人信息绑定.png){ width="900px" }
+
 
 !!! ms-abstract ""
-    该信息为通过 Jira 提交缺陷的用户认证信息，若未填写，则使用组织中配置的默认信息.点击【第三方平台账号】设置【Jira 信息】，如果不设置个人平台账号，则所有使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。
-![!设置第三方信息](../../img/system_management/设置第三方信息.png){ width="900px" }
+    以上配置完成后，在 Metersphere 【缺陷管理】模块，可以创建并同步jira 平台的缺陷。
 
-!!! ms-abstract ""
-    以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联JIRA 的相关需求，或同步相关缺陷。  
-![!关联需求](../../img/system_management/关联需求.png){ width="900px" }
+![!同步缺陷](../../img/system_management/%E5%88%9B%E5%BB%BA%E7%BC%BA%E9%99%B7%E4%BD%BF%E7%94%A8jira%E6%A8%A1%E6%9D%BF.png){ width="900px" } 
 
-![!同步缺陷](../../img/system_management/同步缺陷_Jira.png){ width="900px" }  -->
 
 ### 4.2 与禅道集成
 !!! ms-abstract ""
@@ -209,37 +201,32 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     2. 请求方式：在禅道里具体查看：参考禅道配置文件中$config->requestType 的值；配置文件参考路径：/opt/zbox/app/zentao/config/my.php 。
 	3. 如果提示因为安全问题 api 禁用，需要修改禅道服务器配置文件/opt/zbox/app/zentao/config/my.php，加上 '$config->features->apiGetModel = true;' 这个配置。
 
-<!--
+
 !!! ms-abstract ""
     第二步： 关联项目配置<br>
-    配置完服务集成后，还需要配置项目中引用禅道项目的设置，即关联项目。点击页面右下角的【马上关联项目】进行设置。
-![!禅道-马上关联项目](../../img/system_management/禅道-马上关联项目.png){ width="900px" }
+    在【项目设置-应用设置-缺陷管理】页面配置同步缺陷项目，填写正确的禅道项目。<br>
+    【Zentao（禅道）项目 ID】：如果 禅道 bug 是附属在项目上，则关联的Zentao ID 为项目 ID；如果 禅道 Bug 是附属在产品上，则关联的 ZentaoID 为产品 ID。
+![!禅道-马上关联项目](../../img/system_management/配置禅道缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
-    跳转到【项目管理】，点击【编辑】，编辑项目里【禅道项目ID】，以及缺陷模板等相关信息。
-![!禅道-禅道项目ID](../../img/system_management/禅道-禅道项目ID.png){ width="900px" }
+    切换到【项目管理-模板管理】，勾选使用 禅道 默认模板。在缺陷创建页面即可使用到 禅道 的缺陷模板。
+![!jira关联项目](../../img/system_management/禅道缺陷模板.png){ width="900px" }
 
-!!! ms-abstract "参数说明"
-    【Zentao（禅道）项目 ID】：如果 禅道 bug 是附属在项目上，则关联的Zentao ID 为项目 ID；如果 禅道 Bug 是附属在产品上，则关联的 ZentaoID 为产品 ID。
+
+    
 
 !!! ms-abstract ""
     第三步：添加个人平台账号<br>
-    点击服务集成页面右下角的【马上添加】进行设置。
-![!禅道-马上添加](../../img/system_management/禅道-马上添加.png){ width="900px" }
+    点击【个人信息-第三方平台账号】配置 禅道 账号，创建缺陷同步可使用该账户信息。<br>
+    【注意】该信息为通过禅道提交缺陷的用户名、密码，若未填写，则使用组织中配置的默认信息。<br>
+  
+![!jira关联第三方帐号](../../img/system_management/禅道账号绑定.png){ width="900px" }
 
 !!! ms-abstract ""
-    该信息为通过禅道提交缺陷的用户名、密码，若未填写，则使用组织中配置的默认信息。<br>
-    选择【第三方平台账号】设置【禅道信息】，如果不设置个人平台账号，则所有使用 MeterSphere 提交缺陷的用户，此缺陷推送到配置的服务平台上账号都是服务配置中设定的账号信息。
-![!禅道-第三方平台账号](../../img/system_management/禅道-第三方平台账号.png){ width="900px" }
+    以上配置完成后，在 Metersphere 【缺陷管理】模块，可以创建并同步禅道平台的缺陷。
+ ![!禅道-相关需求](../../img/system_management/使用禅道缺模板创建缺陷.png){ width="900px" }
 
-!!! ms-abstract ""
-    以上配置完成后，在 Metersphere 系统中测试用例里，就可以关联禅道的相关需求。
-![!禅道-相关需求](../../img/system_management/关联需求.png){ width="900px" }
-
-!!! ms-abstract ""
-    在缺陷管理提交缺陷后，数据会同步到禅道系统中。
-![!禅道-同步需求](../../img/system_management/同步缺陷_禅道.png){ width="900px" }  
-
+<!--
 ### 2.4 与Azure Devops集成
 !!! ms-abstract ""
     第一步：服务集成配置。<br>
