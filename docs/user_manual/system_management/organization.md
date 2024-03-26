@@ -183,7 +183,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     以上配置完成后，在 Metersphere 【缺陷管理】模块，可以创建并同步jira 平台的缺陷。
 
-![!同步缺陷](../../img/system_management/创建缺陷使用Jira模板.png){ width="900px" } 
+![!同步缺陷](../../img/system_management/%E5%88%9B%E5%BB%BA%E7%BC%BA%E9%99%B7%E4%BD%BF%E7%94%A8jira%E6%A8%A1%E6%9D%BF.png){ width="900px" } 
 
 ### 4.2 与禅道集成
 !!! ms-abstract ""
