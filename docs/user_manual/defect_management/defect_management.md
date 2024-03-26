@@ -27,7 +27,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     开启【JIRA 默认模板】为项目默认模板，在【缺陷管理】创建页面，默认展示【JIRA 默认模板】内容
 ![!项目设置jira模板](../../img/defect_management/项目设置jira模板.png){ width="900px" }
 
-### 2.1 缺陷管理
+### 1.2 缺陷管理
 !!! ms-abstract ""
     点击【缺陷管理】-【缺陷】进入缺陷页面，点击【创建缺陷】进行缺陷创建
 ![!缺陷创建](../../img/defect_management/缺陷创建.png){ width="900px" }
