@@ -122,6 +122,8 @@ nav:
               - 组织: user_manual/system_management/organization.md
           - 个人中心:
               - 个人信息: user_manual/personal_center/information.md
+          - X-Pack:
+              - 概述: user_manual/x-pack/intro.md
     - 使用教程: tutorial/use_tutorial.md
     - 教学视频: teach_video/video_index.md
     - 常见问题:
