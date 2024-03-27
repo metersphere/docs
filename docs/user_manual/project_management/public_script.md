@@ -3,12 +3,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    维护当前项目接口测试里使用的【传递参数】【前后置脚本】<br>
+    维护当前项目接口测试里使用的参数、前后置脚本<br>
     点击【项目管理】-【公共脚本】-【添加公共脚本】，进入添加公共脚本页面
 ![!公共脚本页面](../../img/project_management/public_script/公共脚本页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    设置【传递参数】时，参数值支持使用内置 MOCK 函数和 JMeter 函数，以 MOCK 为例
+    设置【传递参数】时，参数值使用内置 MOCK 函数和 JMeter 函数。以 MOCK 函数为例
 ![!公共脚本使用内置函数](../../img/project_management/public_script/公共脚本使用内置函数.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -16,7 +16,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!公共脚本新增脚本](../../img/project_management/public_script/公共脚本新增脚本.png){ width="900px" }
 
 !!! ms-abstract ""
-    编写【公共脚本】完成后，点击【调试】，在【执行结果】控制台看到打印了需要的 Token，点击【保存】即可
+    编写【公共脚本】完成后，点击【调试】，【执行结果】控制台打印了需要的 Token，点击【保存】即可
 ![!项目设置](../../img/project_management/public_script/脚本调试通过.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -25,5 +25,5 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!选择公共脚本进行引用](../../img/project_management/public_script/选择公共脚本进行引用.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持对【公共脚本】进行【编辑】【删除】操作
+    【公共脚本】进行【编辑】、【删除】操作
 ![!公共脚本的功能操作](../../img/project_management/public_script/公共脚本的功能操作.png){ width="900px" }

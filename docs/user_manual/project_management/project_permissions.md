@@ -8,7 +8,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!基本信息](../../img/project_management/project_permissions/基本信息.png){ width="900px" }
 
 !!! ms-abstract ""
-    在【基本信息】页面，点击【编辑】，即可对项目名称和描述内容进行修改
+    在【基本信息】页面，点击【编辑】，编辑项目名称和描述内容
 ![!编辑项目](../../img/project_management/project_permissions/编辑项目.png){ width="900px" }
 
 ## 2 应用设置
@@ -18,7 +18,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 2.1 缺陷管理
 !!! ms-abstract ""
-    需要先在【系统设置】-【组织】-【服务集成】处配置 JIRA / 禅道 等第三方平台 <br>
+    需要先在【系统设置】-【组织】-【服务集成】处配置 JIRA、禅道、TAPD 等第三方平台 <br>
     点击【缺陷管理】-【同步缺陷】，配置同步缺陷信息，以 JIRA 为例
 ![!同步缺陷](../../img/project_management/project_permissions/同步缺陷.png){ width="900px" }
 
@@ -33,7 +33,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 2.2 用例管理
 !!! ms-abstract ""
-    点击【用例管理】，可开启/关闭【重新评审】【关联需求】功能
+    点击【用例管理】，可开启/关闭【重新评审】、【关联需求】功能
 ![!用例管理](../../img/project_management/project_permissions/用例管理.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -44,7 +44,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 2.3 接口测试
 !!! ms-abstract ""
-    点击【接口测试】，测试报告保留的时间范围、报告链接有效期、执行资源池、误报规则等都进行设置
+    点击【接口测试】，设置测试报告保留的时间范围、报告链接有效期、接口执行的资源池、误报规则等内容
 ![!接口测试](../../img/project_management/project_permissions/接口测试.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -56,7 +56,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!误报设置页面](../../img/project_management/project_permissions/误报设置页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持对误报进行【启用】【禁用】【编辑】【删除】等操作。误报设置为启用，当接口返回结果匹配上误报规则后，会将接口结果处理为误报。
+    对误报进行【启用】、【禁用】、【编辑】、【删除】等操作。误报设置为启用状态时，接口返回结果匹配上误报规则后，将接口结果处理为误报。
 ![!误报规则功能](../../img/project_management/project_permissions/误报规则功能.png){ width="900px" }
 
 ## 3 成员
@@ -71,14 +71,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     点击【设置】进入表格设置页面，可对列表模式、每页显示数量、表头等内容进行设置
 ![!表格设置](../../img/project_management/project_permissions/表格设置.png){ width="900px" }
-![!表格设置](../../img/project_management/project_permissions/表格设置页面.png){ width="900px" }
+
+![!表格设置页面](../../img/project_management/project_permissions/表格设置页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    成员【启用】【禁用】状态需要在【系统设置】-【组织】-【成员】进行设置
+    成员【启用】、【禁用】状态需要在【系统设置】-【组织】-【成员】进行设置
 ![!启用禁用状态](../../img/project_management/project_permissions/启用禁用状态.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持批量将项目成员添加到用户组、从项目移除、清空等功能
+    批量将项目成员添加到用户组、从项目移除
 ![!成员功能](../../img/project_management/project_permissions/成员功能.png){ width="900px" }
 
 ## 4 用户组
@@ -91,6 +92,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!用户组](../../img/project_management/project_permissions/创建用户组.png){ width="900px" }
 
 !!! ms-abstract ""
-    对用户组可进行【查看权限】【删除】操作，其中【查看权限】可对用户组进行赋权操作
+    用户组进行【查看权限】、【删除】操作，其中【查看权限】对用户组进行赋权操作
 ![!用户组](../../img/project_management/project_permissions/用户组功能.png){ width="900px" }
+
 ![!用户组](../../img/project_management/project_permissions/查看权限.png){ width="900px" }

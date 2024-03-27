@@ -50,3 +50,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!缺陷功能操作情况](../../img/defect_management/缺陷功能操作情况.png){ width="900px" }
 
 ## 2 回收站
+!!! ms-abstract ""
+    支持对缺陷进行单个或批量【恢复】和【彻底删除】操作
+![!缺陷功能操作情况](../../img/defect_management/批量恢复和删除操作.png){ width="900px" }

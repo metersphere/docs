@@ -7,7 +7,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![组织模板](../../img/project_management/template_management/组织模板.png){ width="900px" }
 
 !!! ms-abstract ""
-    系统支持用户自定义【用例模板】、【缺陷模板】及字段设置。
+    用户自定义【用例模板】、【缺陷模板】及字段。
 ![模板管理](../../img/project_management/template_management/模板管理.png){ width="900px" }
 
 ## 1 用例模版
@@ -17,12 +17,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![新增字段设置](../../img/project_management/template_management/新增字段设置.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持对自定义字段进行【查看】【编辑】【删除】操作
+    自定义字段进行【查看】、【编辑】、【删除】操作
 ![字段设置功能](../../img/project_management/template_management/字段设置功能.png){ width="900px" }
 
 ### 1.2 模板设置
 !!! ms-abstract ""
-    点击【模板】进入模板设置页面，支持【编辑】【查看】模板内容。
+    点击【模板】进入模板设置页面，【编辑】、【查看】模板内容。
 ![编辑模板](../../img/project_management/template_management/编辑模板.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -30,7 +30,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![用例模板编辑页面](../../img/project_management/template_management/用例模板编辑页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【默认模板】，即可查看模板内容。
+    点击【默认模板】，查看模板内容。
 ![查看用例默认模板](../../img/project_management/template_management/查看用例默认模板.png){ width="900px" }
 
 ## 2 缺陷模版
@@ -39,7 +39,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![组织缺陷模板](../../img/project_management/template_management/组织缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持【缺陷模板】进行自定义【字段设置】【模板】【工作流设置】操作
+    【缺陷模板】进行自定义【字段设置】、【模板】、【工作流设置】操作
 ![缺陷模板功能](../../img/project_management/template_management/缺陷模板功能.png){ width="900px" }
 
 ### 2.1 字段设置
@@ -48,12 +48,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![新增缺陷字段](../../img/project_management/template_management/新增缺陷字段.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持对自定义字段进行【查看】【编辑】【删除】操作
+    自定义字段进行【查看】、【编辑】、【删除】操作
 ![新增字段的功能](../../img/project_management/template_management/新增字段的功能.png){ width="900px" }
 
 ### 2.2 模板设置
 !!! ms-abstract ""
-    点击【模板】进入模板设置页面，支持【新增】【编辑】【查看】【复制】【删除】以及设置为【默认模板】等操作。
+    点击【模板】进入模板设置页面，进行【新增】、【编辑】、【查看】、【复制】、【删除】以及设置为【默认模板】等操作。
 ![缺陷模板所有操作功能](../../img/project_management/template_management/缺陷模板所有操作功能.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -71,14 +71,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ### 2.3 工作流设置
 !!! ms-abstract ""
     点击【工作流设置】进入工作流设置页面，更改事项的属性或工作流配置，会在相关项目立即生效，请谨慎操作！！！
-    支持自定义工作流，点击【添加状态】，填写相应内容，新增工作流状态
+    自定义工作流，点击【添加状态】，填写相应内容，新增工作流状态
 ![新增字段设置](../../img/project_management/template_management/创建工作流.png){ width="900px" }
 
 !!! ms-abstract ""
-    第一列为缺陷所在状态，在状态列点击【创建流转步骤】打勾，则表示该行状态可流转到列的状态，设置完成后，在【缺陷管理】选择缺陷，其【状态】选项，可看到当前状态可流转到设置后状态。
+    第一列为缺陷所在状态，在状态列点击【创建流转步骤】打勾，表示该行状态可流转到列的状态。设置后，在【缺陷管理】页面更新缺陷时，【状态】字段下拉框中显示刚设置的状态。
 ![工作流阻塞状态](../../img/project_management/template_management/工作流阻塞状态.png){ width="900px" }
+
 ![缺陷里的状态流转](../../img/project_management/template_management/缺陷里的状态流转.png){ width="900px" }
 
 !!! ms-abstract ""
-    工作流可进行【编辑】，查看【详情】，将其设置【设为初始态】，设置【结束状态】，【删除】等操作
+    工作流进行【编辑】、【详情】、【设为初始态】、【结束状态】、【删除】等操作
 ![工作流状态功能操作](../../img/project_management/template_management/工作流状态功能操作.png){ width="900px" }
