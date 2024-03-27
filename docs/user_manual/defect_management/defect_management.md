@@ -8,11 +8,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     缺陷模板设置：<br>
 
     - **非第三方平台模板**：进入【系统设置】-【模板管理】-【缺陷模板】-【模板】进入模板页面，开启要使用的模板
-    - **使用第三方平台模板**：先在【系统设置】-【组织】-【服务集成】处配置第三方平台（如 JIRA、禅道、TAPD 等），然后在【模板】处开启项目模板。此操作不可逆，请谨慎操作！！！<br>
+    - **第三方平台模板**：先在【系统设置】-【组织】-【服务集成】处配置第三方平台（如 JIRA、禅道、TAPD 等），然后在【模板】处开启项目模板。此操作不可逆，请谨慎操作！！！<br>
 
 !!! ms-abstract ""
     在【项目管理】-【项目权限】-【应用设置】-【缺陷管理】处配置【同步缺陷】的项目平台、项目 Key、缺陷类型、同步机制、同步频率等内容。以 JIRA 平台为例。
 ![!缺陷平台设置](../../img/defect_management/缺陷平台设置.png){ width="900px" }
+
 ![!开启缺陷模板](../../img/defect_management/开启缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -33,12 +34,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!缺陷创建](../../img/defect_management/缺陷创建.png){ width="900px" }
 
 !!! ms-abstract ""
-    进入缺陷页面，默认展示【JIRA 默认模板】内容，填写相应内容进行创建。也可以切换到系统【默认模板】内容，填写相应内容进行创建即可
+    进入缺陷页面，默认展示【JIRA 默认模板】内容，填写相应内容进行创建。也可以切换到系统【默认模板】内容，填写相应内容进行创建
 ![!jira默认模板填写内容](../../img/defect_management/jira默认模板填写内容.png){ width="900px" }
+
 ![!系统默认模板](../../img/defect_management/系统默认模板.png){ width="900px" }
 
 !!! ms-abstract ""
-    缺陷列表页面，可看到缺陷的所属平台为 JIRA 
+    缺陷列表页面，缺陷的所属平台为 JIRA 
 ![!展示jira平台](../../img/defect_management/展示jira平台.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -46,7 +48,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!缺陷平台设置](../../img/defect_management/缺陷平台设置.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持手动【同步缺陷】【复制】【编辑】【删除】【导出】缺陷操作和【清空】多选框等操作
+    进行【同步缺陷】、【复制】、【编辑】、【删除】、【导出】缺陷操作和【清空】多选框操作
 ![!缺陷功能操作情况](../../img/defect_management/缺陷功能操作情况.png){ width="900px" }
 
 ## 2 回收站
+!!! ms-abstract ""
+    缺陷进行单个或批量【恢复】和【彻底删除】操作
+![!缺陷功能操作情况](../../img/defect_management/批量恢复和删除操作.png){ width="900px" }

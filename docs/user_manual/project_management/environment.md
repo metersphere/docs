@@ -13,25 +13,25 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!全局请求头](../../img/project_management/enviroment/全局请求头.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持参数值使用【Mock】和【JMeter】函数，以【Mock】函数为例。
+    参数值使用【Mock】和【JMeter】函数，以【Mock】函数为例。
 ![!请求头自动生成](../../img/project_management/enviroment/请求头自动生成.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持【批量添加】请求头。
+    【批量添加】请求头。
 ![!批量添加](../../img/project_management/enviroment/批量添加.png){ width="900px" }
 ![!批量添加请求头内容](../../img/project_management/enviroment/批量添加请求头内容.png){ width="900px" }
 
 ### 1.2 环境配置
 !!! ms-abstract ""
-    支持添加测试环境，点击【+】填写环境名称，点击【HTTP】填写相应内容进行保存。
+    添加测试环境，点击【+】填写环境名称，点击【HTTP】填写相应内容进行保存。
 ![!添加环境内容](../../img/project_management/enviroment/添加环境内容.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持设置【连接超时】【响应超时】，默认值为60秒
+    设置【连接超时】时间、【响应超时】时间，默认值为60秒
 ![!设置超时时间](../../img/project_management/enviroment/设置超时时间.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持环境进行【复制】【编辑】【删除】【导入】【导出】操作。
+    环境进行【复制】、【编辑】、【删除】、【导入】、【导出】操作。
 ![!环境进行复制删除操作](../../img/project_management/enviroment/环境进行复制删除操作.png){ width="900px" }
 ![!导入导出环境](../../img/project_management/enviroment/导入导出环境.png){ width="900px" }
 
@@ -48,15 +48,26 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - **显示设置**：显示环境配置内容，可进行【启用/关闭】
 
 !!! ms-abstract ""
-    支持单个添加和批量添加【环境变量】
+    【环境变量】进行单个添加和批量添加
 ![!环境变量](../../img/project_management/enviroment/环境变量.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持添加【数据库】数据源操作
+    添加【数据库】数据源操作
 ![!数据源链接成功](../../img/project_management/enviroment/数据源链接成功.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持添加【HTTP】和【HTTPS】请求，环境启用条件有【无】【模块】【路径】
+    数据源字段说明：<br>
+
+    - **数据源名称**：自定义名称
+    - **驱动**：默认内置 Mysql 驱动，其他驱动需要在【项目】-【文件管理】上传驱动包，下拉选项中自动显示
+    - **数据库连接 URL**：Mysql 数据库执行多条 SQL ，需要在数据库后面加【?allowMultiQueries=true】进行拼接
+    - **用户名**：数据库登录的用户名
+    - **密码**：数据库登录的密码
+    - **最大连接数**：数据库的最大连接数，默认显示 1
+    - **超时时间**：默认显示 1000
+
+!!! ms-abstract ""
+    添加【HTTP】和【HTTPS】请求，环境启用条件有【无】、【模块】、【路径】
 ![!环境变量](../../img/project_management/enviroment/http设置.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -66,28 +77,28 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 有配置【无】的环境，当【路径】和【模块】都没有匹配上时，使用【无】的环境；没有配置【无】的环境，则环境为空，执行失败
 
 !!! ms-abstract ""
-    支持添加【HOST】操作，将环境中使用的域名和 IP 进行映射
+    添加【HOST】，将环境中使用的域名和 IP 进行映射
 ![!数据源链接成功](../../img/project_management/enviroment/host域名解析.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持添加【场景】和【请求】的全局【前置】操作，可进行【脚本操作】和【SQL操作】，以【场景-SQL操作】为例
+    添加【场景】和【请求】的全局【前置】，进行【脚本操作】和【SQL操作】。以【场景-SQL操作】为例
 ![!前置操作sql操作](../../img/project_management/enviroment/前置操作sql操作.png){ width="900px" }
 
 !!! ms-abstract ""
     【后置】操作可参考【前置】操作
 
 !!! ms-abstract ""
-    【断言】支持多种断言方式，详细断言可参考【接口 CASE】处的断言。本处以【响应体-JSONPath】为例
+    【断言】设置有多种断言方式，详细断言可参考【接口 CASE】处的断言。本处以【响应体-JSONPath】为例
 ![!显示设置](../../img/project_management/enviroment/断言.png){ width="900px" }
 
 !!! ms-abstract ""
-    支持【显示设置】进行【启用/关闭】操作
+    【显示设置】进行【启用/关闭】操作
 ![!显示设置](../../img/project_management/enviroment/显示设置.png){ width="900px" }
 
 ## 2 环境组
 !!! ms-abstract ""
     场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组<br>
-    点击【项目管理】-【环境管理】-【环境组】进入环境组页面进行【新增】【删除】操作
+    点击【项目管理】-【环境管理】-【环境组】进入环境组页面，进行【新增】、【删除】操作
 ![!显示设置](../../img/project_management/enviroment/环境组功能.png){ width="900px" }
 
 
