@@ -119,7 +119,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "操作说明"
 
     【项目管理员】：默认为当前创建人，项目管理员自动加入当前项目。当项目管理员不在当前创建的项目所属组织时，自动将项目管理员加入到项目所属组织，赋予组织成员用户组。</br>
-    【开启模块】：默认权限，可以自定义选择。存在取消的选择模块时，已产生数据保留，但是无入口进入对应模块。</br>
+    【开启模块】：默认全选，可以自定义选择。若编辑项目取消模块，已产生数据保留，但是无入口进入对应模块。</br>
     【资源池】：用于接口测试执行任务，默认可用 Local 资源池。资源池配置在[系统-资源池](./system.md#5)配置。</br>
     【状态】：默认启用，有启用，关闭两种状态。</br>
 
@@ -174,9 +174,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "操作说明"
  
-     【站点URL】: MeterSphere 访问真实 ip 地址。 http：//ip：8081 </br>
+     【站点URL】: MeterSphere 服务器真实 ip 地址。 http：//ip：8081 ，站点URL地址和 Node 资源池地址要求网络互通。</br>
     【最大并发数】：单机部署 JMeter 最大支持 2000 并发 。</br>
-    【IP、端口】task_runner部署后的真实 ip ，默认 8000 端口， Monitor 为监控 node_exporter 端口 9100。点击跳转
+    【IP、端口】Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控 node_exporter 端口 9100。点击跳转
      [部署 node资源池](/docs/installation/build_node_controller)。
 
 ## 6 授权
