@@ -136,12 +136,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 5.5 三方平台账号
 !!! ms-abstract ""
-    在个人信息处可以绑定第三方平台的个人账号，可以以【个人】创建和修改缺陷信息。
+    在个人信息处可以绑定第三方平台的个人账号，可以在【个人】创建和修改缺陷信息。
 ![!三方平台账号](../img/general/三方平台账号.png){ width="900px" }
 
 !!! ms-abstract "注意"
-    - 禅道账号：禅道账号具有 API 相应的权限，请按照参考页面勾选上对应权限 `参考页面: 组织-权限-分组-权限维护-API开发}` ；还需开启超级 Model 配置项，禅道配置文件中 `$config->features-apiGetModel = true ` 配置文件参考路径：`/opt/zbox/app/zentao/config/my.php`。
-    - Jira 认证方式：私有化部署选择 Basic Auth 填写账号密码, 选择 Bearer Token 填写 Token；SaaS 版本只能选择 Basic Auth，填写【账号+令牌】【账户设置-安全-创建 API 令牌】。
+
+    - **禅道账号**：禅道账号具有 API 相应的权限，请按照参考页面勾选上对应权限 `参考页面: 【组织】-【权限】-【分组】-【权限维护】-【API开发】`；还需开启超级 Model 配置项，禅道配置文件中 `$config->features-apiGetModel = true ` 配置文件参考路径：`/opt/zbox/app/zentao/config/my.php`。
+    - **JIRA 认证方式**：私有化部署选择 Basic Auth 填写账号密码, 选择 Bearer Token 填写 Token；SaaS 版本只能选择 Basic Auth，填写【账号+令牌】【账户设置-安全-创建 API 令牌】。
 
 ## 6 消息通知
 !!! ms-abstract ""
@@ -172,5 +173,5 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 10 退出系统
 !!! ms-abstract "" 
-    点击系统左下角【用户】选项，继续点击【个人信息】弹出【个人中心】页面进行个人信息的更新。
+    点击系统左下角的【用户】处，点击【退出系统】即可退出。
 ![!退出系统](../img/general/退出系统.png){ width="900px" }
