@@ -3,112 +3,87 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 ## 1 环境要求
-!!! ms-abstract ""
-	得益于 Docker 跨平台应用，MeterSphere 理论上可以部署在任何可以运行 Docker 的宿主机，包括 Windows 操作系统的主机。将以 Windows 10 为例，介绍如何在 Windows 操作系统通过 WSL 上安装 MeterSphere。
-
-
 !!! ms-abstract "部署服务器要求："
-    * 操作系统: 可运行 Docker 的 Windows 操作系统
-    * CPU/内存: 最低要求 4C8G，推荐 8C16G (企业版最低配置 8C16G)
+
+    * 操作系统: 可运行 VirtualBox 的 Windows 操作系统
+    * CPU/内存: 4核8G
     * 磁盘空间: 200G
 
-!!! ms-abstract "注意："
-	* WSL 需要支持嵌套虚拟化，云虚拟机(Windows)可能不支持而导致无法安装 MeterSphere
 ## 2 安装部署
-### 2.1 安装 WSL
+### 2.1 在 Windows 系统中安装虚拟机
 !!! ms-abstract ""
-	参考[在 Windows 10 上安装 WSL | Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/wsl/install)进行 Windows 宿主机 WSL 的安装和配置。  
-
-	使用管理员身份运行以下命令，然后重启操作系统。
-	```
-	dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-	dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-	```
-
-	下载并安装 [适用于 x64 计算机的 WSL2 Linux 内核更新包](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
-
-	以管理员身份执行以下命令，设置 WSL 默认版本：<br>
-	```
-	wsl --set-default-version 2
-	```
-
-### 2.2 安装 Ubuntu
-!!! ms-abstract ""
-	在 Windows 10 的应用商店里搜索"Ubuntu"并安装：
-![安装Ubuntu](../img/installation/windows-install-ubuntu.png){ width="900px" }
-
-### 2.3 检测 Ubuntu WSL 版本
-!!! ms-abstract "以管理员身份执行："
-	```
-	wsl.exe -l -v
-	```
-![WSL版本1](../img/installation/check-version-1.png){ width="900px" }
+	电脑上没有安装虚拟化软件，需要先安装虚拟化软件。市面上主流的桌面虚拟化软件有 VMware Workstation 和 VirtualBox。如果电脑上已经安装了其中一款软件，可以直接跳过这一部分。  
+	示例选择了 VirtualBox。因为 VirtualBox 是免费的，有需求的用户可以自行选择安装收费的 VMware Workstation。  
+	VirtualBox 下载链接：https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe。
 
 !!! ms-abstract ""
-	示例中安装的 Ubuntu Name 为 "Ubuntu"， 如像上图出现 Ubuntu 版本为 1， 则继续执行命令：
-	```
-	wsl.exe --set-version Ubuntu 2
-	```
+	下载 VirtualBox 后，双击安装包进行安装，安装完成后默认打开 VirtualBox。
+![VirtualBox](../img/installation/windows/ova部署安装VirtualBox1.png){ width="900px" }
 
-	**出现下图结果即为成功：**
-![WSL版本2](../img/installation/check-version-2.png){ width="900px" }
+![VirtualBox](../img/installation/windows/ova部署安装VirtualBox2.png){ width="900px" }
 
-### 2.4 Docker 安装与配置
 !!! ms-abstract ""
-	下载[Docker Desktop for Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)，双击 Docker Desktop Installer.exe 完成docker 的安装。
 
+	虚拟化软件 VirtualBox 已经安装完成，点击 “完成” 会自动打开 VirtualBox 虚拟机。
 
-	Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜单下的 WSL INTEGRATION，按下图设置后，点击右下角的`Apply & Restart`。
-![docker设置](../img/installation/docker-settings.png){ width="900px" }
-
-### 2.5 启动 Ubuntu
+### 2.2  虚拟机导入 Ubuntu 系统 OVA 包
 !!! ms-abstract ""
-	在应用商店里，选择 Ubuntu，点击"启动"按钮启动 Ubuntu，并执行 `sudo su` 命令切换到 root 用户：
-`
-![启动Ubuntu](../img/installation/launch-ubuntu.png){ width="600px" }
+	在虚拟机中安装 Ubuntu 系统，可以下载 DataEase 提供的 Ubuntu OVA 文件，直接导入到 VirtualBox 就可以使用，省去安装系统的过程。  
+	通过网盘链接下载 Ubuntu OVA 文件: https://pan.baidu.com/s/1lIV8QXQcwiPlYjMxlifdyQ?pwd=DeUb  提取码：DeUb
 
-### 2.6 检查 Docker 环境
 !!! ms-abstract ""
-	在 Ubuntu 命令行中执行命令`docker version`，如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，则需要根据提示信息解决。
-![docker检测](../img/installation/check-docker.png){ width="600px" }
+	在 VirtualBox 界面上，点击 ”导入” ，选择下载好的 Ubuntu OVA 文件，点击 “下一步”。
+![导入 OVA](../img/installation/windows/导入Ubuntu镜像.png){ width="900px" }
 
-### 2.7 下载安装包
 !!! ms-abstract ""
-	在 [飞致云开源社区](https://community.fit2cloud.com/#/products/metersphere/downloads) 或 [MeterSphere Github Release](https://github.com/metersphere/metersphere/releases) 下载 MeterSphere 最新版本的离线安装包。
+	选择一个可用空间在 50G 以上的磁盘位置，点击 “完成”。
+![导入 OVA](../img/installation/windows/选择磁盘空间.png){ width="900px" }
 
-### 2.8 解压安装包
 !!! ms-abstract ""
-	在 Ubuntu 中，以 root 用户执行如下命令：
-	```
-	# 假设安装包存放路径为 c:\metersphere-offline-installer-v2.10.0.tar.gz
-	cd /mnt/c
-	# 解压安装包
-	tar zxvf metersphere-offline-installer-v2.10.0.tar.gz
-	```
+	等待 MeterSphere 虚拟机完成导入。
+![导入 OVA](../img/installation/windows/等待完成OVA导入.png){ width="900px" }
 
-### 2.9 配置安装参数（可选）
 !!! ms-abstract ""
-	MeterSphere 支持以配置文件的形式来设置安装参数，如安装目录、服务运行端口、数据库配置参数等，安装前修改安装包中的 install.conf 文件可完成配置。具体说明见：[安装配置文件说明](../offline_installation/#42)。
+	导入完成后，选择导入的虚拟机，点击“启动”按钮。
+![启动](../img/installation/windows/虚拟机导入完成.png){ width="900px" }
 
-### 2.10 执行安装脚本
 !!! ms-abstract ""
-	```
-	# 进入安装包目录
-	cd metersphere-offline-installer-v2.10.0
-	# 运行安装脚本
-	/bin/bash install.sh
-	```
+	启动后，输入用户名和密码进入系统。注意：此处密码不显示，输入完成按回车。
 
-	安装成功后，使用 `msctl status` 查看后台服务状态，待所有服务运行状态都为 `healthy` 后，则通过浏览器访问 MeterSphere。
+	* 用户名：root
+    * 密码：passwd
 
-	```
-	地址: http://目标服务器IP地址:服务运行端口
-	用户名: admin
-	密码: metersphere
-	```
-![安装MeterSphere](../img/installation/windows-install.png){ width="900px" }
+![启动](../img/installation/windows/启动虚拟机输入密码.png){ width="900px" }
 
-![安装MeterSphere](../img/installation/常见问题7.png){ width="900px" }
+!!! ms-abstract ""
+	查看虚拟机的 IP，输入命令 ip a，每个环境的 IP 地址都不一样，本次演示环境的虚拟机 IP 地址为 192.168.11.33
+![启动](../img/installation/windows/查看虚拟机IP.png){ width="900px" }
+
+### 2.3  Ubuntu 系统中安装 MeterSphere (需等 V3 版本发了 再替换截图)
+!!! ms-abstract ""
+	成功在虚拟机中安装并启动 Ubuntu 系统，右键 Windows 图标，选择“Windows PowerShell”或“终端”(Windows 版本不同，选项不同)。      
+	在 PowerShell 界面输入：ssh root@192.168.11.33 登录到 Ubuntu 系统。
+
+![启动](../img/installation/windows/powershell.png){ width="900px" }
+
+!!! ms-abstract ""
+	可以将 MeterSphere 的安装包下载到 Ubuntu 系统中，访问地址：https://community.fit2cloud.com/#/products/metersphere/downloads 下载安装包；
+![启动](../img/installation/windows/下载安装包.png){ width="900px" }
+
+!!! ms-abstract ""
+	浏览器开始下载后，打开浏览器的 “下载内容”
+![启动](../img/installation/windows/下载内容.png){ width="900px" }
+
+!!! ms-abstract ""
+	右击下载任务，选择 “复制链接地址”
+![启动](../img/installation/windows/复制地址.png){ width="900px" }
+
+!!! ms-abstract ""
+	回到 PowerShell 界面，输入：wget -O metersphere.tar.gz 粘贴"复制的链接"<br>
+	按回车键开始下载安装包；
+![启动](../img/installation/windows/粘贴复制链接.png){ width="900px" }
+
+
 
 
 
