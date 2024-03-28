@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
@@ -3187,6 +3187,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v21013-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.10.13-lts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v21012-lts" class="md-nav__link">
     <span class="md-ellipsis">
       v2.10.12-lts
@@ -3540,6 +3549,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v21013-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.10.13-lts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v21012-lts" class="md-nav__link">
     <span class="md-ellipsis">
       v2.10.12-lts
@@ -3835,6 +3853,34 @@
 <li>v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护。</li>
 <li>v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。</li>
 <li>v2.10-lts：发布时间为 2023 年 5 月 25 日，每月发布小版本，持续进行 Bug 修复和部分功能的有限优化。</li>
+</ul>
+</div>
+<h2 id="v21013-lts">v2.10.13-lts<a class="headerlink" href="#v21013-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2024年3月28日</p>
+<div class="admonition ms-abstract">
+<p>💥💥 重要提醒 💥💥<br>
+2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：<a href="https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697">1.20 lts至2.10 lts升级指南</a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>feat(接口测试): case页面增加接口id展示并支持跳转</li>
+<li>feat(系统设置): 超级管理员的项目列表进行排序处理</li>
+<li>feat(系统设置): 项目选择器中的备选项目更换排序方法：当前使用项目排第一，其余按照名称排序</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(测试计划): 修复测试计划中Jenkins执行无法读取已保存过的测试计划中部分信息的缺陷</li>
+<li>fix(测试跟踪): 模块树交互样式问题</li>
+<li>fix(测试跟踪): 计划左侧模块树交互问题</li>
+<li>fix(测试跟踪): 列表暂无数据展示样式问题</li>
+<li>fix(测试跟踪): 评审跨项目关联用例模块为空</li>
+<li>fix(用例评审): 关联跨项目用例模块展示问题</li>
+<li>fix(性能测试): 修复压力配置时固定节点和自定义配置报错前端卡住的问题</li>
+<li>fix(接口测试): 修复场景中的自定义请求步骤在某些条件下修改地址，不会覆盖到接口，也不会影响接口覆盖率的问题</li>
 </ul>
 </div>
 <h2 id="v21012-lts">v2.10.12-lts<a class="headerlink" href="#v21012-lts" title="Permanent link">&para;</a></h2>
@@ -5234,7 +5280,7 @@ MeterSphere作为一站式持续测试平台，既需要与各种周边系统进
     
     
 
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
 <script>
