@@ -65,12 +65,12 @@ nav:
                 - 部署Node-Controller集群: installation/build_node_controller.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
-    - 用户手册:
+    - 功能手册:
           - 通用功能: user_manual/general.md
           - 缺陷管理:
               - 概述: user_manual/defect_management/overview.md
               - 缺陷管理: user_manual/defect_management/defect_management.md
-          - 测试跟踪:
+          - 用例管理:
                 - 概述: user_manual/test_track/intro.md
                 - 首页: user_manual/test_track/home.md
                 - 功能用例:
@@ -86,7 +86,6 @@ nav:
                 - 报告: user_manual/test_track/test_report.md
           - 接口测试:
                 - 概述: user_manual/api_test/intro.md
-                - 首页: user_manual/api_test/home.md
                 - 接口定义: user_manual/api_test/api_definition.md
                 - 接口自动化: user_manual/api_test/api_automation.md
                 - 接口测试报告: user_manual/api_test/test_report.md
