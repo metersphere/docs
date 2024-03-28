@@ -43,7 +43,7 @@ nav:
     - 快速开始:
           - 一键部署: quick_start/quick_start.md
           - 创建项目: quick_start/create_project.md
-          - 使用测试跟踪: quick_start/test_track.md
+          - 使用用例管理: quick_start/test_case.md
           - 使用接口测试: quick_start/api_test.md
           - 使用 UI 测试: quick_start/ui_test.md
           - 使用性能测试: quick_start/load_test.md
@@ -72,18 +72,11 @@ nav:
               - 缺陷管理: user_manual/defect_management/defect_management.md
           - 测试跟踪:
                 - 概述: user_manual/test_track/intro.md
-                - 首页: user_manual/test_track/home.md
                 - 功能用例:
                   - 模块树管理: user_manual/test_track/test_case/test_case_module.md
                   - 用例管理: user_manual/test_track/test_case/test_case.md
                   - 公共用例库: user_manual/test_track/test_case/public_test_case.md
                 - 用例评审: user_manual/test_track/test_case_review.md
-                - 测试计划:
-                    - 计划列表: user_manual/test_track/test_plan/test_plan_list.md
-                    - 管理计划: user_manual/test_track/test_plan/test_plan_manage.md
-                    - 批量操作: user_manual/test_track/test_plan/test_plan_batch.md
-                - 缺陷管理: user_manual/test_track/test_defect.md
-                - 报告: user_manual/test_track/test_report.md
           - 接口测试:
                 - 概述: user_manual/api_test/intro.md
                 - 首页: user_manual/api_test/home.md
