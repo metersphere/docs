@@ -83,6 +83,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 	按回车键开始下载安装包；
 ![启动](../img/installation/windows/粘贴复制链接.png){ width="900px" }
 
+!!! ms-abstract ""
+	安装包下载完成就可以开始部署 MeterSphere，按照 [MeterSphere 离线部署]( https://metersphere.io/.io/docs/installation/offline_installation/) 步骤进行操作。
+
 
 
 
