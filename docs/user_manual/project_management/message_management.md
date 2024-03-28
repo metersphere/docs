@@ -20,14 +20,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     填写【webhook】地址进行保存
 ![!创建webhook机器人](../../img/project_management/message_management/填写企业微信具体信息.png){ width="900px" }
 
-!!! ms-abstract ""
-    已添加的机器人进行【编辑】、【删除】、【开启/关闭】操作。【开启】则会显示在消息设置列表中，手动选择通知类型。
+!!! ms-abstract "操作说明"
+    - 【编辑】编辑机器人名称、Webhook 地址
+    - 【删除】删除机器人后将不再推送绑定的消息事件！！！
+    - 【启用/禁用】启用则会显示在消息设置列表中，禁用不会显示
+
 ![!创建webhook机器人](../../img/project_management/message_management/企业微信机器人功能.png){ width="900px" }
 
 ## 2 消息设置 
 !!! ms-abstract ""
     点击【消息设置】进入消息设置页面，设置【缺陷管理】、【用例管理】、【接口测试】、【定时任务】的消息通知
 ![!自定义模板](../../img/project_management/message_management/消息设置页面.png){ width="900px" } 
+
+!!! ms-abstract "说明"
+    - 【缺陷管理】缺陷的创建、更新、删除、评论、执行完成均可设置消息通知
+    - 【用例管理】用例的创建、更新、删除、评论、评审通过/不通过、评论以及用例评审的创建、更新、删除、评审完成均可设置消息通知
+    - 【接口测试】API / CASE / MOCK /场景等创建、更新、删除、执行成功与失败、误报等均可设置消息通知
+    - 【定时任务】定时任务的开启、关闭均可设置消息通知
 
 !!! ms-abstract ""
     以【缺陷管理】中【创建】功能为例，开启企业微信并设置消息通知接收人
