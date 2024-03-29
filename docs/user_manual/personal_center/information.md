@@ -21,13 +21,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 3 APIKEY
 !!! ms-abstract ""
-    进入【个人信息-APIKEY】管理界面，创建 MeterSphere 平台的 Access Key、Secret Key 用于第三方接口调用身份验证使用。限制秘钥最多只能添加5条
+    进入【个人信息-APIKEY】管理界面，创建 MeterSphere 平台的 Access Key、Secret Key 用于第三方调用接口做身份验证使用。限制秘钥最多只能添加 5 条
 ![个人中心](../../img/personal_center/apikey.png){ width="900px" }
 
 
 ## 4 本地执行
 !!! ms-abstract ""
-    配置接口测试本地执行策略，支持做【检测】【优先本地执行】。
+    配置接口测试本地执行策略，支持做【检测】、【优先本地执行】。
 ![个人中心](../../img/personal_center/个人中心本地执行.png){ width="900px" }
 
 !!! ms-abstract "说明"
@@ -36,6 +36,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     实时反馈：在本地调试时，你可以立即看到代码的执行结果，这让你能够快速发现和解决问题。</br>
     快速迭代：本地调试允许你快速进行代码修改和测试，从而加快开发迭代的速度。</br>
     隔离环境：本地调试让你在一个受控的环境中进行开发和测试，不受外部环境的影响，有助于排除外部因素导致的问题。</br>
+
 
 
 ## 5  三方平台账号
