@@ -86,12 +86,14 @@ nav:
                 - 报告: user_manual/test_track/test_report.md
           - 接口测试:
                 - 概述: user_manual/api_test/intro.md
+                - 接口调试: user_manual/api_test/debug.md
                 - 接口定义: user_manual/api_test/api_definition.md
-                - 接口自动化: user_manual/api_test/api_automation.md
-                - 接口测试报告: user_manual/api_test/test_report.md
-                - 接口用例操作: user_manual/api_test/api_step.md
-                - 接口场景编排: user_manual/api_test/api_scenario.md
+                - 请求参数介绍: user_manual/api_test/request_params.md
+                - 接口拓展功能: user_manual/api_test/extend_features.md
+                - 场景管理: user_manual/api_test/api_automation.md
+                - 场景编排: user_manual/api_test/api_scenario.md
                 - 内置函数: user_manual/api_test/functions.md
+                - 报告: user_manual/api_test/test_report.md
           - UI 测试:
                 - 概述: user_manual/ui_test/intro.md
                 - 元素库: user_manual/ui_test/ui_element_store.md
