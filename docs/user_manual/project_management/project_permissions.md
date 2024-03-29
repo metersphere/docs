@@ -24,10 +24,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!配置同步缺陷](../../img/project_management/project_permissions/配置同步缺陷.png){ width="900px" }
 
-!!! ms-abstract ""
-
-    - **增量同步**：仅同步在 MeterSphere 创建的缺陷内容变更 <br>
-    - **开启/关闭**：平台创建的缺陷同步或不同步至第三方项目管理平台
+!!! ms-abstract "字段说明"
+    - **第三方项目管理平台**：下拉选项显示【系统设置】-【组织】-【服务集成】处测试连接通过的平台 <br>
+    - **项目 Key**：第三方平台项目 Key <br>
+    - **缺陷类型**：拉取第三方平台的缺陷类型 <br>
+    - **同步机制**：增量同步，仅同步在 MeterSphere 创建的缺陷内容变更 <br>
+    - **同步频率**：设置自动同步的时间点 <br>
+    - **状态**：开启/关闭，平台创建的缺陷同步或不同步至第三方项目管理平台
 
 ![!配置同步缺陷](../../img/project_management/project_permissions/配置同步缺陷1.png){ width="900px" }
 
@@ -35,6 +38,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     点击【用例管理】，可开启/关闭【重新评审】、【关联需求】功能
 ![!用例管理](../../img/project_management/project_permissions/用例管理.png){ width="900px" }
+
+!!! ms-abstract "说明"
+    - 【重新评审】评审活动中用例发生变更，用例状态自动切换为重新提审
+    - 【关联需求】将用例与第三方项目管理平台（如 JIRA、TAPD、禅道）的需求信息进行关联
 
 !!! ms-abstract ""
     点击【关联需求】，配置关联需求信息，以 JIRA 为例   
@@ -55,8 +62,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【新增误报规则】，配置相应的误报规则
 ![!误报设置页面](../../img/project_management/project_permissions/误报设置页面.png){ width="900px" }
 
-!!! ms-abstract ""
-    对误报进行【启用】、【禁用】、【编辑】、【删除】等操作。误报设置为启用状态时，接口返回结果匹配上误报规则后，将接口结果处理为误报。
+!!! ms-abstract "操作说明"
+    - 【编辑】编辑误报名称、标签、规则等内容
+    - 【启用/禁用】设置启用状态时，接口返回结果匹配上误报规则后，将接口执行结果标记为误报。
+    - 【删除】误报删除，仅对新执行的测试报告生效，请谨慎操作！！！
+
 ![!误报规则功能](../../img/project_management/project_permissions/误报规则功能.png){ width="900px" }
 
 ## 3 成员
@@ -75,7 +85,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!表格设置页面](../../img/project_management/project_permissions/表格设置页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    成员【启用】、【禁用】状态需要在【系统设置】-【组织】-【成员】进行设置
+    成员【启用/禁用】状态需要在【系统设置】-【组织】-【成员】进行设置
 ![!启用禁用状态](../../img/project_management/project_permissions/启用禁用状态.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -91,8 +101,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【添加用户组】，输入用户组名称
 ![!用户组](../../img/project_management/project_permissions/创建用户组.png){ width="900px" }
 
-!!! ms-abstract ""
-    用户组进行【查看权限】、【删除】操作，其中【查看权限】对用户组进行赋权操作
+!!! ms-abstract "操作说明"
+    - 【查看权限】可对用户组进行赋权操作
+    - 【删除】仅能删除自定义的用户组，删除用户组后，项目下用户组数据将一起删除，请谨慎操作！！！
+
 ![!用户组](../../img/project_management/project_permissions/用户组功能.png){ width="900px" }
 
 ![!用户组](../../img/project_management/project_permissions/查看权限.png){ width="900px" }

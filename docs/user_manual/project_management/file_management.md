@@ -11,8 +11,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【添加子模块】，添加模块节点
 ![!添加子节点](../../img/project_management/file_management/添加子节点.png){ width="900px" }
 
-!!! ms-abstract ""
-    左侧节点进行【新增子节点】、【展开/收缩】、【重命名】、【删除】等操作
+!!! ms-abstract "操作说明" 
+    - 【展开/收缩】展开或收起左侧模块树全部节点
+    - 【添加子模块】输入模块名称回车键进行保存
+    - 【重命名】重命名节点
+    - 【删除】删除操作会删除模块及其下所有资源，请谨慎操作！！！
+
 ![!左侧节点功能](../../img/project_management/file_management/左侧节点功能.png){ width="900px" }
 
 ## 2.上传文件
@@ -24,9 +28,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     JAR 文件上传后，默认是【禁用】状态，需要点击【启用】，否则在接口前后置脚本中引用不到 JAR 包内容
 ![!启用jar包](../../img/project_management/file_management/启用jar包.png){ width="900px" }
 
-!!! ms-abstract ""
-    上传的文件进行【下载】、【删除】、【移动】、【切换显示】等操作，其中 JAR 包还有【开启/禁用】功能
+!!! ms-abstract "操作说明"
+    - 【下载】下载文件到本地
+    - 【删除】删除文件，会导致关联该文件的用例执行失败，请谨慎操作！！！
+    - 【移动】移动文件到其他模块
+    - 【开启/禁用】JAR 包需要开启，否则在接口前后置脚本中引用不到 JAR 包内容
+    - 【切换显示】文件列表形式切换到图形样式
+
 ![!上传文件功能操作](../../img/project_management/file_management/上传文件功能操作.png){ width="900px" }
+
 ![!上传文件展示形式](../../img/project_management/file_management/上传文件展示形式.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -38,6 +48,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     点击【添加存储库】，对接第三方仓库，如 Gitea、GitHub、GitLab、Gitee 和其他仓库等。
 ![!第三方仓库](../../img/project_management/file_management/第三方仓库.png){ width="900px" }
+
 ![!第三方具体仓库](../../img/project_management/file_management/第三方具体仓库.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -48,6 +59,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【储存库】-【添加文件】，填写分支和文件路径
 ![!配置存储库拉取文件](../../img/project_management/file_management/配置存储库拉取文件.png){ width="900px" }
 
-!!! ms-abstract ""
-    拉取的文件进行【下载】、【删除】操作
+!!! ms-abstract "操作说明"
+    - 【下载】下载文件到本地
+    - 【删除】删除文件，会导致关联该文件的用例执行失败，请谨慎操作！！！
+
 ![!拉取文件下来的功能](../../img/project_management/file_management/拉取文件下来的功能.png){ width="900px" }

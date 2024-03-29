@@ -30,13 +30,18 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     设置【连接超时】时间、【响应超时】时间，默认值为60秒
 ![!设置超时时间](../../img/project_management/enviroment/设置超时时间.png){ width="900px" }
 
-!!! ms-abstract ""
-    环境进行【复制】、【编辑】、【删除】、【导入】、【导出】操作。
+!!! ms-abstract "操作说明"
+    - 【复制】复制环境
+    - 【编辑】编辑环境域名、启用条件、请求头等内容
+    - 【删除】删除环境
+    - 【导入】导入环境，开启【覆盖】，环境名称重复则覆盖，不重复则新增；关闭【覆盖】，环境名称重复则不导入
+    - 【导出】勾选或全选环境导出
+
 ![!环境进行复制删除操作](../../img/project_management/enviroment/环境进行复制删除操作.png){ width="900px" }
+
 ![!导入导出环境](../../img/project_management/enviroment/导入导出环境.png){ width="900px" }
 
-!!! ms-abstract ""
-    环境模块提供以下主要功能：<br>
+!!! ms-abstract "功能说明:"
 
     - **环境变量**：此处设置的变量是环境变量，可单个添加和批量添加
     - **HTTP配置**：此处可配置环境地址以及启用条件，也可设置请求头
@@ -55,8 +60,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     添加【数据库】数据源操作
 ![!数据源链接成功](../../img/project_management/enviroment/数据源链接成功.png){ width="900px" }
 
-!!! ms-abstract ""
-    数据源字段说明：<br>
+!!! ms-abstract "数据源字段说明:"
 
     - **数据源名称**：自定义名称
     - **驱动**：默认内置 Mysql 驱动，其他驱动需要在【项目】-【文件管理】上传驱动包，下拉选项中自动显示
@@ -70,8 +74,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     添加【HTTP】和【HTTPS】请求，环境启用条件有【无】、【模块】、【路径】
 ![!环境变量](../../img/project_management/enviroment/http设置.png){ width="900px" }
 
-!!! ms-abstract ""
-    环境启用条件规则：<br>
+!!! ms-abstract "环境启用条件规则:"
 
     - 匹配顺序按【路径】>【模块】>【无】，相同匹配按从上到下的顺序匹配
     - 有配置【无】的环境，当【路径】和【模块】都没有匹配上时，使用【无】的环境；没有配置【无】的环境，则环境为空，执行失败

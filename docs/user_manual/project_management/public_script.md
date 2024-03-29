@@ -8,7 +8,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!公共脚本页面](../../img/project_management/public_script/公共脚本页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    设置【传递参数】时，参数值使用内置 MOCK 函数和 JMeter 函数。以 MOCK 函数为例
+    设置【传递参数】时，参数值使用内置 Mock 函数和 JMeter 函数。以 Mock 函数为例
 ![!公共脚本使用内置函数](../../img/project_management/public_script/公共脚本使用内置函数.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -22,8 +22,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     【公共脚本】保存后，在【接口测试】-【接口】-【前置】-【引用公共脚本】处，点击【引用公共脚本】即可进行引用
 ![!引用公共脚本](../../img/project_management/public_script/引用公共脚本.png){ width="900px" }
+
 ![!选择公共脚本进行引用](../../img/project_management/public_script/选择公共脚本进行引用.png){ width="900px" }
 
-!!! ms-abstract ""
-    【公共脚本】进行【编辑】、【删除】操作
+!!! ms-abstract "操作说明"
+    - 【编辑】编辑公共脚本名称、状态、标签、参数、脚本等内容
+    - 【删除】删除脚本可能会导致引用该脚本的测试用例执行失败，请谨慎操作！！！
+
 ![!公共脚本的功能操作](../../img/project_management/public_script/公共脚本的功能操作.png){ width="900px" }
