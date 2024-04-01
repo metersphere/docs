@@ -56,7 +56,6 @@ nav:
                 - 在线安装: installation/online_installation.md
                 - 在线升级: installation/online_upgrade.md
           - Windows 单机部署: installation/offline_installation_windows.md
-          - MacOS 单机部署: installation/offline_installation_mac.md
           - Kubernetes 部署: installation/kubernetes_installation.md
           - 分布式部署:
                 - 整体部署规划: installation/pre_work.md
@@ -72,10 +71,7 @@ nav:
               - 缺陷管理: user_manual/defect_management/defect_management.md
           - 用例管理:
                 - 概述: user_manual/test_case/intro.md
-                - 功能用例:
-                  - 模块树管理: user_manual/test_case/test_case/test_case_module.md
-                  - 用例管理: user_manual/test_case/test_case/test_case.md
-                  - 公共用例库: user_manual/test_case/test_case/public_test_case.md
+                - 功能用例: user_manual/test_case/test_case.md   
                 - 用例评审: user_manual/test_case/test_case_review.md
           - 接口测试:
                 - 概述: user_manual/api_test/intro.md
