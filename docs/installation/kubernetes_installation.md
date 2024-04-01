@@ -4,16 +4,32 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 Helm Charts 在线部署
 !!! ms-abstract ""
+
+    - **添加 MeterSphere 的 Helm 源地址**<br>
     ```sh
-    kubectl create ns ms
     helm repo add bitnami https://charts.bitnami.com/bitnami
     helm repo add metersphere https://metersphere.github.io/helm-chart/
-    # 从 chart 仓库中更新本地可用chart的信息
-    helm repo update  
-    helm install metersphere metersphere/metersphere -n ms
+    ```
+    
+    - **默认安装 MeterSphere**<br>
+    ```sh
+    helm install metersphere metersphere/metersphere -n default 
+    ```
+    
+    - **修改 values.yml 文件配置后安装**<br>
+    values.yml 下载地址: https://github.com/metersphere/helm-chart/tree/main/charts/metersphere
+    ```sh
+    helm install metersphere metersphere/metersphere -f values.yaml -n default
     ```
 
-## 2 Helm Charts 离线部署
+## 2 Helm Charts 在线升级
+!!! ms-abstract ""
+    ```sh
+    helm repo update
+    helm upgrade metersphere metersphere/metersphere -n default
+    ```
+
+## 3 Helm Charts 离线部署
 !!! ms-abstract ""
     
     - **导入镜像**<br>
@@ -21,21 +37,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads<br>
     
     - **下载离线 Chart 包**<br>
-    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases<br>如：https://github.com/metersphere/helm-chart/releases/download/metersphere-2.3.0/metersphere-2.3.0.tgz
+    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases<br> 如：https://github.com/metersphere/helm-chart/releases/download/metersphere-2.3.0/metersphere-2.3.0.tgz
     
     - **进行安装**<br>
     ```sh
-    helm install metersphere metersphere-2.3.0.tgz -n ms
+    helm install metersphere metersphere-2.3.0.tgz -n default
 
     # 根据需要修改 values.yml 文件配置后安装
-    helm install metersphere metersphere-2.3.0.tgz -f metersphere/values.yml -n ms
-    ```
-
-## 3 Helm Charts 在线升级
-!!! ms-abstract ""
-    ```sh
-    helm repo update  # 从 chart 仓库中更新本地可用chart的信息
-    helm upgrade metersphere metersphere/metersphere -n ms
+    helm install metersphere metersphere-2.3.0.tgz -f values.yml -n default
     ```
 
 ## 4 Helm Charts 离线升级
@@ -46,18 +55,18 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MeterSphere 离线安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
     
     - **下载最新离线 Chart 包**<br>
-    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases  <br>
+    helm-chart 安装包下载链接: https://github.com/metersphere/helm-chart/releases <br>
     如：https://github.com/metersphere/helm-chart/releases/download/metersphere-2.3.0/metersphere-2.3.0.tgz
     
     - **进行升级**<br>
     ```sh
-    helm upgrade metersphere metersphere-2.3.0.tgz -n ms
+    helm upgrade metersphere metersphere-2.3.0.tgz -n default
 
     # 根据需要修改 values.yml 文件配置后升级
-    helm upgrade metersphere metersphere-1.0.10.tgz -f metersphere/values.yml -n ms
+    helm upgrade metersphere metersphere-1.0.10.tgz -f values.yml -n default
     ```
 
-## 5 values.yaml
+## 5 values.yaml 配置信息
 !!! ms-abstract ""
     以下 values.yaml 内容对应版本为 v2.3.0，最新的 values.yaml 可到 github 上 metersphere helm-chart 仓库中查找对应版本的 values.yaml，例如：v2.9.1 版本 value.yaml 文件为 https://github.com/metersphere/helm-chart/blob/metersphere-2.9.1/charts/metersphere/values.yaml
 
@@ -283,48 +292,22 @@ zookeeper:
   enabled: true
 ```
 
-### 5.1 引用外部 Kafka
-!!! ms-abstract ""
-    ```sh
-    vim values.yaml
-    将 values.yaml 中 zookeeper.enabled 和 kafka.enabled 改为 false
-    common.kafka.host、common.kafka.port 改为外部 kafka 的地址和端口
-    ```
+!!! ms-abstract "注意"
+    引用外部中间件(如 MySQL、Redis、Kafka、Minio 等)，只用改 values.yaml 文件中相关信息，以 MySQL 为例 <br>
+    mysql.enabled 改为 false  <br>
+    mysql 的 host、port、username、password 改为外部 mysql 的地址、端口及用户名、密码
 
-### 5.2 引用外部 MySQL
+## 6 创建 Node Port 访问方式
 !!! ms-abstract ""
-    ```sh
-    vim values.yaml
-    将 values.yaml 中 mysql.enabled 改为 false
-    common.host.host、common.host.port、common.host.username、common.host.password 改为外部 mysql 的地址、端口及用户名、密码
-    ```
-
-### 5.3 引用外部 Redis
-!!! ms-abstract ""
-    ```sh
-    vim values.yaml
-    将 values.yaml 中 redis.enabled 改为 false
-    common.redis.host、common.redis.port、common.redis.password 改为外部 redis 的地址、端口和密码
-    ```
-
-### 5.4 使用修改后的 value.yaml 部署 
-!!! ms-abstract ""
-    ```sh
-    helm -n ms install metersphere ./metersphere-2.3.0.tgz -f values.yaml
-    ```
-
-### 5.5 创建 Node Port 访问方式
-!!! ms-abstract ""
-    使用命令 kubectl get svc -n ms 可查看 metersphere-gateway 所占用的端口号。如果不使用 ingress 的访问方式，可以创建一个 nodeport。
-
-    ```sh
-    vi ms-gateway-nodeport.yaml
+    使用命令 kubectl get svc -n default 可查看 metersphere-gateway 所占用的端口号。如果不使用 ingress 的访问方式，可以创建一个 nodeport。
     
+    vi ms-gateway-nodeport.yaml
+    ```sh
     apiVersion: v1
     kind: Service
     metadata:
       name: metersphere-gateway-nodeport
-      namespace: ms
+      namespace: default
     spec:
       ports:
         - name: metersphere-gateway
@@ -335,8 +318,7 @@ zookeeper:
       type: NodePort
       selector:
         app: metersphere-gateway
-    
-    kubectl create -f ms-gateway-nodeport.yaml 
     ```
+    kubectl create -f ms-gateway-nodeport.yaml 
 
     访问 MeterSphere 页面: http://nodeIP:30801
