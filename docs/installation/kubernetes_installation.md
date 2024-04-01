@@ -23,6 +23,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
 ## 2 Helm Charts 在线升级
+!!! ms-abstract "注意"
+    MeterSphere 升级或迁移前，请先手动备份好数据库，然后再进行操作。
+
 !!! ms-abstract ""
     ```sh
     helm repo update
@@ -48,6 +51,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
 ## 4 Helm Charts 离线升级
+!!! ms-abstract "注意"
+    MeterSphere 升级或迁移前，请先手动备份好数据库，然后再进行操作。
+
 !!! ms-abstract ""
 
     - **导入新版本镜像**<br>
