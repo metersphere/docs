@@ -10,16 +10,21 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     helm repo add bitnami https://charts.bitnami.com/bitnami
     helm repo add metersphere https://metersphere.github.io/helm-chart/
     ```
+ 
+    - **创建 namespace**<br>
+    ```sh
+    kubectl create ns ms 
+    ```
     
     - **默认安装 MeterSphere**<br>
     ```sh
-    helm install metersphere metersphere/metersphere -n default 
+    helm install metersphere metersphere/metersphere -n ms 
     ```
     
     - **修改 values.yml 文件配置后安装**<br>
     values.yml 下载地址: https://github.com/metersphere/helm-chart/tree/main/charts/metersphere
     ```sh
-    helm install metersphere metersphere/metersphere -f values.yaml -n default
+    helm install metersphere metersphere/metersphere -f values.yaml -n ms
     ```
 
 ## 2 Helm Charts 在线升级
@@ -29,7 +34,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     ```sh
     helm repo update
-    helm upgrade metersphere metersphere/metersphere -n default
+    helm upgrade metersphere metersphere/metersphere -n ms
     ```
 
 ## 3 Helm Charts 离线部署
@@ -44,10 +49,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     
     - **进行安装**<br>
     ```sh
-    helm install metersphere metersphere-2.3.0.tgz -n default
+    helm install metersphere metersphere-2.3.0.tgz -n ms
 
     # 根据需要修改 values.yml 文件配置后安装
-    helm install metersphere metersphere-2.3.0.tgz -f values.yml -n default
+    helm install metersphere metersphere-2.3.0.tgz -f values.yml -n ms
     ```
 
 ## 4 Helm Charts 离线升级
@@ -66,10 +71,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     
     - **进行升级**<br>
     ```sh
-    helm upgrade metersphere metersphere-2.3.0.tgz -n default
+    helm upgrade metersphere metersphere-2.3.0.tgz -n ms
 
     # 根据需要修改 values.yml 文件配置后升级
-    helm upgrade metersphere metersphere-1.0.10.tgz -f values.yml -n default
+    helm upgrade metersphere metersphere-1.0.10.tgz -f values.yml -n ms
     ```
 
 ## 5 values.yaml 配置信息
@@ -305,7 +310,7 @@ zookeeper:
 
 ## 6 创建 Node Port 访问方式
 !!! ms-abstract ""
-    使用命令 kubectl get svc -n default 可查看 metersphere-gateway 所占用的端口号。如果不使用 ingress 的访问方式，可以创建一个 nodeport。
+    使用命令 kubectl get svc -n ms 可查看 metersphere-gateway 所占用的端口号。如果不使用 ingress 的访问方式，可以创建一个 nodeport。
     
     vi ms-gateway-nodeport.yaml
     ```sh
@@ -313,7 +318,7 @@ zookeeper:
     kind: Service
     metadata:
       name: metersphere-gateway-nodeport
-      namespace: default
+      namespace: ms
     spec:
       ports:
         - name: metersphere-gateway
