@@ -3,7 +3,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    需要先点击【系统设置】-【组织】-【模板】启用项目用例模板。启用后，项目可自定义模版，将不存在组织模版。此操作不可逆，请谨慎操作！
+    需要先点击【系统设置-组织-模板】启用项目用例模板。启用后，项目可自定义模版，将不存在组织模版。此操作不可逆，请谨慎操作！！！
 ![组织模板](../../img/project_management/template_management/组织模板.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -42,7 +42,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 缺陷模版
 !!! ms-abstract ""
-    需要先点击【系统设置】-【组织】-【模板】启用项目缺陷模板。启用后，项目可自定义缺陷模版，将不存在组织模版。此操作不可逆，请谨慎操作！
+    需要先点击【系统设置-组织-模板】启用项目缺陷模板。启用后，项目可自定义缺陷模版，将不存在组织模版。此操作不可逆，请谨慎操作！
 ![组织缺陷模板](../../img/project_management/template_management/组织缺陷模板.png){ width="900px" }
 
 !!! ms-abstract "说明"
@@ -83,7 +83,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![查看缺陷模板](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击开启【默认模板】，在【缺陷管理】-【缺陷】-【创建缺陷】时，会使用刚设置的缺陷模板
+    点击开启【默认模板】，在【缺陷管理-缺陷-创建缺陷】时，会使用刚设置的缺陷模板
 ![查看缺陷模板](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
 
 ### 2.3 工作流设置

@@ -3,7 +3,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    点击【项目管理】-【环境管理】进入项目环境管理页面
+    点击【项目管理-环境管理】进入项目环境管理页面
 ![!项目环境页面](../../img/project_management/enviroment/项目环境页面.png){ width="900px" }
 
 ## 1 环境
@@ -57,14 +57,18 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!环境变量](../../img/project_management/enviroment/环境变量.png){ width="900px" }
 
 !!! ms-abstract ""
-    添加【数据库】数据源操作
+    添加【数据库】数据源操作，以 MySQL 数据库为例
 ![!数据源链接成功](../../img/project_management/enviroment/数据源链接成功.png){ width="900px" }
 
 !!! ms-abstract "数据源字段说明:"
 
     - **数据源名称**：自定义名称
-    - **驱动**：默认内置 Mysql 驱动，其他驱动需要在【项目】-【文件管理】上传驱动包，下拉选项中自动显示
-    - **数据库连接 URL**：Mysql 数据库执行多条 SQL ，需要在数据库后面加【?allowMultiQueries=true】进行拼接
+    - **驱动**：默认内置 MySQL 驱动，其他驱动需要在【项目-文件管理】上传驱动包，下拉选项中自动显示
+    - **数据库连接 URL**：常用数据库连接 URL 如下<br>
+        - **MySQL**：jdbc:mysql://127.0.0.1:3306/database，若执行多条 SQL ，则连接地址为 jdbc:mysql://127.0.0.1:3306/database?allowMultiQueries=true
+        - **Oracle**：jdbc:oracle:thin:@192.168.2.1:1521:database，12C 版本数据库连接地址为 jdbc:oracle:thin:@192.168.2.1:1521/database
+        - **SQLServer**：jdbc:sqlserver://127.0.0.1:1433;DatabaseName=database;encrypt=true;trustServerCertificate=true;
+        - **Postgresql**：jdbc:postgresql://127.0.0.1:5432/database
     - **用户名**：数据库登录的用户名
     - **密码**：数据库登录的密码
     - **最大连接数**：数据库的最大连接数，默认显示 1
@@ -101,7 +105,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 2 环境组
 !!! ms-abstract ""
     场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组<br>
-    点击【项目管理】-【环境管理】-【环境组】进入环境组页面，进行【新增】、【删除】操作
+    点击【项目管理-环境管理-环境组】进入环境组页面，进行【新增】、【删除】操作
 ![!显示设置](../../img/project_management/enviroment/环境组功能.png){ width="900px" }
 
 
