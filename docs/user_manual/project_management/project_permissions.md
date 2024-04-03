@@ -20,7 +20,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     需要先在【系统设置-组织-服务集成】处配置 JIRA、禅道、TAPD 等第三方平台，然后在【系统设置-组织-模板】处开启项目模板。<br>
     启用项目模板后，将不存在组织模版。此操作不可逆，请谨慎操作！！！
-![组织模板](../../img/project_management/template_management/组织缺陷模板.png)
+![组织模板](../../img/project_management/template_management/组织缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""    
     点击【项目管理-项目与权限-应用设置-缺陷管理-同步缺陷】，配置同步缺陷信息，以 JIRA 为例
@@ -40,7 +40,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     需要先在【系统设置-组织-服务集成】处配置 JIRA、禅道、TAPD 等第三方平台，然后在【系统设置-组织-模板】处开启项目模板。<br>
     启用项目模板后，将不存在组织模版。此操作不可逆，请谨慎操作！！！
-![组织模板](../../img/project_management/template_management/组织模板.png)
+![组织模板](../../img/project_management/template_management/组织模板.png){ width="900px" }
 
 !!! ms-abstract ""
     点击【项目管理-项目与权限-应用设置-用例管理】，可开启/关闭【重新评审】、【关联需求】功能
