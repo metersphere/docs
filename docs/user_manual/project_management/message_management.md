@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 机器人列表
 !!! ms-abstract ""
-    点击【消息管理】-【机器人列表】，进入机器人列表页面
+    点击【消息管理-机器人列表】，进入机器人列表页面
 ![!机器人列表](../../img/project_management/message_management/机器人列表.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -13,7 +13,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!创建webhook机器人](../../img/project_management/message_management/创建webhook机器人.png){ width="900px" }
 
 !!! ms-abstract ""
-    以配置【企业微信】机器人为例。创建企业微信群，选择【...】-【添加群机器人】后，获取【webhook】地址
+    以配置【企业微信】机器人为例。创建企业微信群，选择【... -添加群机器人】后，获取【webhook】地址
 ![!创建webhook机器人](../../img/project_management/message_management/群创建机器人.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -43,7 +43,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!自定义模板](../../img/project_management/message_management/缺陷创建通知.png){ width="900px" } 
 
 !!! ms-abstract ""
-    点击【缺陷管理】-【创建缺陷】，填写缺陷内容后进行创建，企业微信群接收到消息通知
+    点击【缺陷管理-创建缺陷】，填写缺陷内容后进行创建，企业微信群接收到消息通知
 
 
     

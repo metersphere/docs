@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 基本信息
 !!! ms-abstract ""
-    点击【项目管理】-【项目与权限】-【基本信息】，查看项目的基本信息
+    点击【项目管理-项目与权限-基本信息】，查看项目的基本信息
 ![!基本信息](../../img/project_management/project_permissions/基本信息.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -18,25 +18,32 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 2.1 缺陷管理
 !!! ms-abstract ""
-    需要先在【系统设置】-【组织】-【服务集成】处配置 JIRA、禅道、TAPD 等第三方平台 <br>
-    点击【缺陷管理】-【同步缺陷】，配置同步缺陷信息，以 JIRA 为例
+    需要先在【系统设置-组织-服务集成】处配置 JIRA、禅道、TAPD 等第三方平台，然后在【系统设置-组织-模板】处开启项目模板。<br>
+    启用项目模板后，将不存在组织模版。此操作不可逆，请谨慎操作！！！
+![组织模板](../../img/project_management/template_management/组织缺陷模板.png){ width="900px" }
+
+!!! ms-abstract ""    
+    点击【项目管理-项目与权限-应用设置-缺陷管理-同步缺陷】，配置同步缺陷信息，以 JIRA 为例
 ![!同步缺陷](../../img/project_management/project_permissions/同步缺陷.png){ width="900px" }
 
 ![!配置同步缺陷](../../img/project_management/project_permissions/配置同步缺陷.png){ width="900px" }
 
 !!! ms-abstract "字段说明"
-    - **第三方项目管理平台**：下拉选项显示【系统设置】-【组织】-【服务集成】处测试连接通过的平台 <br>
+    - **第三方项目管理平台**：下拉选项显示【系统设置-组织-服务集成】处测试连接通过的平台 <br>
     - **项目 Key**：第三方平台项目 Key <br>
     - **缺陷类型**：拉取第三方平台的缺陷类型 <br>
     - **同步机制**：增量同步，仅同步在 MeterSphere 创建的缺陷内容变更 <br>
     - **同步频率**：设置自动同步的时间点 <br>
     - **状态**：开启/关闭，平台创建的缺陷同步或不同步至第三方项目管理平台
 
-![!配置同步缺陷](../../img/project_management/project_permissions/配置同步缺陷1.png){ width="900px" }
-
 ### 2.2 用例管理
 !!! ms-abstract ""
-    点击【用例管理】，可开启/关闭【重新评审】、【关联需求】功能
+    需要先在【系统设置-组织-服务集成】处配置 JIRA、禅道、TAPD 等第三方平台，然后在【系统设置-组织-模板】处开启项目模板。<br>
+    启用项目模板后，将不存在组织模版。此操作不可逆，请谨慎操作！！！
+![组织模板](../../img/project_management/template_management/组织模板.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【项目管理-项目与权限-应用设置-用例管理】，可开启/关闭【重新评审】、【关联需求】功能
 ![!用例管理](../../img/project_management/project_permissions/用例管理.png){ width="900px" }
 
 !!! ms-abstract "说明"
@@ -85,7 +92,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!表格设置页面](../../img/project_management/project_permissions/表格设置页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    成员【启用/禁用】状态需要在【系统设置】-【组织】-【成员】进行设置
+    成员【启用/禁用】状态需要在【系统设置-组织-成员】进行设置
 ![!启用禁用状态](../../img/project_management/project_permissions/启用禁用状态.png){ width="900px" }
 
 !!! ms-abstract ""

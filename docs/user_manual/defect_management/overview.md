@@ -4,6 +4,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
 
-    - **缺陷管理**：管理该项目下所有的缺陷信息，若缺陷使用了其他第三方集成平台（如 JIRA、TAPD、禅道等），则缺陷会自动同步或手动同步到第三方平台
+    管理项目下的缺陷信息，若系统对接了其它第三方平台（如 JIRA、TAPD、禅道等），可进行手动或自动同步。
 
 ![!项目设置](../../img/defect_management/缺陷页面.png){ width="900px" }

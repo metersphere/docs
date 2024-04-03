@@ -3,7 +3,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    点击【项目管理】-【文件管理】，进入文件管理页面
+    点击【项目管理-文件管理】，进入文件管理页面
 ![!文件管理](../../img/project_management/file_management/文件管理.png){ width="900px" }
 
 ## 1 模块管理
@@ -56,7 +56,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!gitea仓库为例](../../img/project_management/file_management/gitea仓库为例.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【储存库】-【添加文件】，填写分支和文件路径
+    点击【储存库-添加文件】，填写分支和文件路径
 ![!配置存储库拉取文件](../../img/project_management/file_management/配置存储库拉取文件.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
