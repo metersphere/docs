@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     维护当前项目接口测试里使用的参数、前后置脚本<br>
-    点击【项目管理】-【公共脚本】-【添加公共脚本】，进入添加公共脚本页面
+    点击【项目管理-公共脚本-添加公共脚本】，进入添加公共脚本页面
 ![!公共脚本页面](../../img/project_management/public_script/公共脚本页面.png){ width="900px" }
 
 !!! ms-abstract ""
