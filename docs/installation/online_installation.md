@@ -4,11 +4,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
-    * 操作系统: CentOS 7.x / Redhat 7.x
+    * 操作系统: Ubuntu
     * CPU/内存: 最低要求 4C8G，推荐 8C16G (企业版最低配置 8C16G)
     * 磁盘空间: 50G
     * 网络要求：可访问互联网
-    * 注：如用于生产环境，推荐使用 [离线安装包](https://community.fit2cloud.com/#/products/metersphere/downloads) 进行部署
+    * 注：如用于生产环境，推荐下载 [离线安装包](https://community.fit2cloud.com/#/products/metersphere/downloads) 进行 [离线部署](../installation/offline_installation.md)。
 
 ## 2 一键安装
 !!! ms-abstract ""
@@ -26,33 +26,29 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
-!!! ms-abstract "安装目录目录结构说明"
+ 
+!!! ms-abstract "安装目录结构说明"
     ```
     /opt/metersphere/
-    ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
     ├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
     ├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
-    ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
-    ├── docker-compose-gateway.yml                  #-- MeterSphere 的 API 网关
-    ├── docker-compose-eureka.yml                   #-- MeterSphere 的服务注册中心
+    ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录 
+    ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
+    └── version                                     #-- 安装包对应的 MeterSphere 版本信息
     ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
-    ├── docker-compose-workstation.yml              #-- MeterSphere 工作台模块的 Docker Compose 文件 
-    ├── docker-compose-test-track.yml               #-- MeterSphere 测试跟踪模块的 Docker Compose 文件 
-    ├── docker-compose-api-test.yml                 #-- MeterSphere 接口测试模块的 Docker Compose 文件 
-    ├── docker-compose-ui-test.yml                  #-- MeterSphere UI 测试模块的 Docker Compose 文件 
-    ├── docker-compose-performance-test.yml         #-- MeterSphere 性能测试模块的 Docker Compose 文件  
-    ├── docker-compose-report-stat.yml              #-- MeterSphere 报表统计模块的 Docker Compose 文件  
-    ├── docker-compose-project-management.yml       #-- MeterSphere 项目管理模块的 Docker Compose 文件  
-    ├── docker-compose-system-setting.yml           #-- MeterSphere 系统设置模块的 Docker Compose 文件  
+    ├── docker-compose-metersphere.yml              #-- MeterSphere 的 各功能模块 主服务
+    ├── docker-compose-result-hub.yml               #-- MeterSphere 报告统计模块的 Docker Compose 文件     
     ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
     ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
-    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
+    ├── docker-compose-task-runner.yml              #-- MeterSphere Task-Runner 组件所需的 Docker Compose文件
     ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
     ├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
     ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
+    ├── docker-compose-selenium.yml                 #-- MeterSphere UI 测试所需的Docker Compose 文件
     ├── install.conf -> /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
-    ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
-    └── version                                     #-- 安装包对应的 MeterSphere 版本信息
+    ├── install.conf.example                        #-- MeterSphere 安装部署初始配置文件
+    
+    
     ```
 
 ## 3 手动安装
@@ -61,13 +57,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
     ```
     # 下载在线安装包
-    wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
+    wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
     
     # 解压在线安装包
-    tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
+    tar -zxvf metersphere-online-installer-v3.x.y.tar.gz
     
     # 进入解压目录
-    cd metersphere-online-installer-v2.x.y
+    cd metersphere-online-installer-v3.x.y
     
     # 配置安装参数，参数说明见下文
     # vi install.conf
@@ -77,7 +73,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
     执行完安装脚本后，会在线拉取镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
-![服务状态](../img/installation/ms-status.png){ width="900px" }
+![服务状态](../img/installation/msctlstatus.png){ width="900px" }
 
 !!! ms-abstract ""
     等待几分钟后，使用命令 `msctl status` 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
@@ -91,33 +87,34 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
 ### 3.2 安装配置文件说明
+
 !!! ms-abstract "安装配置文件说明"
-    如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 `msctl reload` 即可重新加载配置文件）。
+    如果无特殊需求可以不修改，采用默认参数安装。如需修改配置参数，则修改配置文件 install.conf 相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装。已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 修改，修改完后执行 `msctl reload` 重新加载配置参数生效。
     ```
     # 基础配置
-    ## 安装路径， MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
+    ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
     MS_BASE=/opt
     ## MeterSphere 使用的 docker 网络网段信息
     MS_DOCKER_SUBNET=172.30.10.0/24
-    ## 镜像前缀， MeterSphere 相关组件使用的 Docker 镜像前缀， 例如 registry.cn-qingdao.aliyuncs.com/metersphere
+    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere
     MS_IMAGE_PREFIX=registry.cn-qingdao.aliyuncs.com/metersphere
-    ## 镜像标签， MeterSphere 相关组件使用的 Docker 镜像标签
-    MS_IMAGE_TAG=v2.3.0
+    ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
+    MS_IMAGE_TAG=v3.0.0-rc12
     ## 性能测试使用的 JMeter 镜像
-    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter-master:5.5-ms2-jdk11
-    ## 安装模式 allinone | server | node-controller | selenium-hub， 其中 selenium-hub 和 node-controller 可以单独在服务器上部署作为执行机使用
+    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter:5.6.3-release1
+    ## 安装模式 allinone | server | task-runner | selenium-hub | middleware
     MS_INSTALL_MODE=allinone
     ## MeterSphere 主程序的 HTTP 服务监听端口
     MS_SERVER_PORT=8081
-    ## MeterSphere Node-Controller 组件的 HTTP 服务监听端口
-    MS_NODE_CONTROLLER_PORT=8082
-    MS_NODEEXPORTER_PORT=9100
+    ## MeterSphere Task-Runner 组件的 HTTP 服务监听端口
+    MS_TASK_RUNNER_PORT=8000
+    MS_NODE_EXPORTER_PORT=9100
 
     # 数据库配置
     ## 是否使用外部数据库
     MS_EXTERNAL_MYSQL=false
     ## 数据库地址
-    MS_MYSQL_HOST=mysql
+    MS_MYSQL_HOST=$(hostname -I|cut -d" " -f 1)
     ## 数据库端口
     MS_MYSQL_PORT=3306
     ## 数据库库名
@@ -146,23 +143,16 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ## 是否使用外部 Kafka
     MS_EXTERNAL_KAFKA=false
     ## Kafka 地址
-    MS_KAFKA_HOST=10.1.*.*
-    ## Kafka 端口
+    MS_KAFKA_HOST=10.1.11.29
     MS_KAFKA_PORT=9092
-    ## 性能测试结果数据使用的 Kafka Topic
-    MS_KAFKA_TOPIC=JMETER_METRICS
-    ## 性能测试日志数据使用的 Kafka Topic
-    MS_KAFKA_LOG_TOPIC=JMETER_LOGS
-    ## 性能测试定时任务通知使用的 Kafka Topic
-    MS_KAFKA_TEST_TOPIC=LOAD_TESTS
-    ## 重构后性能测试结果数据使用的 Kafka Topic
-    MS_KAFKA_REPORT_TOPIC=JMETER_REPORTS
+
+    # 企业版配置
+    ## 是否使用企业版
+    MS_ENTERPRISE_ENABLE=false
 
     # UI容器配置
-    ## 是否启动UI模块
-    MS_UI_ENABLED=false
-    ## 是否启动工作台容器
-    MS_WORKSTATION_ENABLED=false
+    ## 是否使用外部grid
+    MS_EXTERNAL_SELENIUM=false
 
     # minio 配置
     ## 是否使用外部minio
@@ -174,18 +164,28 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ## minio 密码
     MS_MINIO_SECRET_KEY=Password123@minio
 
-    # 修改组件最大内存限制（v2.7以上可以在 /opt/metersphere/.env 里修改某容器服务的最大内存限制，在/opt/metersphere/ 目录下的docker-compose分别定义各自服务的最大属性值，如 api-test 的属性在 docker-compose-api-test.yml 中定义，为 MS_API_MEM_LIMIT）
-    MS_API_MEM_LIMIT=1073741824（默认为 1g）
-    ```
+    ## docker gid
+    MS_DOCKER_GID=$(getent group docker | cut -f3 -d:)
 
+    ## memory limit 修改组件最大内存限制
+    MS_MEM_LIMIT=1g
+    MS_RUNNER_MEM_LIMIT=1g
+    MS_RESULT_MEM_LIMIT=1g
+    MS_KAFKA_MEM_LIMIT=1g
+
+    ## TOTP
+    MS_TOTP_ENABLED=false
+
+    ```
 ### 3.3 数据库配置文件说明
 !!! ms-abstract "注意"
-    MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
+    MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，如果部署采用外置数据库请参考下附的数据库配置，修改对应数据库配置文件。
 
     ```
+  
     [mysqld]
     datadir=/var/lib/mysql
-    
+
     default-storage-engine=INNODB
     character_set_server=utf8mb4
     lower_case_table_names=1
@@ -199,31 +199,32 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     innodb_buffer_pool_size=512M
     innodb_flush_method=O_DIRECT
     innodb_lock_wait_timeout=1800
-    
+
     server-id=1
     log-bin=mysql-bin
     expire_logs_days = 2
     binlog_format=mixed
-    
+
     character-set-client-handshake = FALSE
     character-set-server=utf8mb4
     collation-server=utf8mb4_general_ci
     init_connect='SET default_collation_for_utf8mb4=utf8mb4_general_ci'
-    
+
     sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
-    
+
     skip-name-resolve
-    
+
     [mysql]
     default-character-set=utf8mb4
-    
+
     [mysql.server]
     default-character-set=utf8mb4
-    ```
 
-    请参考文档中的建库语句创建 MeterSphere 使用的数据库，metersphere-server 服务启动时会自动在配置的库中创建所需的表结构及初始化数据。
     ```
-    CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
+    
+    参考建库语句创建 MeterSphere 使用的数据库，MeterSphere 服务启动时会初始化表结构和数据。
+    ```
+    CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
     ```
 
 ## 4 配置反向代理
