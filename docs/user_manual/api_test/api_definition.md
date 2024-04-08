@@ -3,60 +3,141 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 ## 1 新建接口
-![!新建接口](../../img/api_test/新建请求.png){ width="900px" }
+!!! ms-abstract "" 
+    如下图，点击【新建请求】或者【＋】新建接口请求。
+![!新建接口](../../img/api_test/definition/新建请求1.png){ width="900px" }
+
+!!! ms-abstract "" 
+    如下图，依次输入接口请求方法类型、URl地址，接口名称、所属模块、状态等基础信息，响应体、响应头、响应码等响应内容信息。
+![!新建接口](../../img/api_test/definition/新建请求2.png){ width="900px" }
 
 !!! ms-abstract "说明" 
     - 参数介绍：请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md)。
-    - 拓展功能：前置、后置、断言、认证、设置；详情请参考 [拓展功能](../api_test/extend_features.md)。
+    - 拓展功能：认证、设置；详情请参考 [拓展功能](../api_test/extend_features.md#4-认证)。
+	- 内置函数：请求体参数可选择 Mock 函数 [内置函数](../api_test/functions.md)。
+
+!!! ms-abstract "" 
+    如下图，点击【+】号新建响应内容，点击【...】复制、重命名、设置默认、删除响应信息。
+![!新建接口](../../img/api_test/definition/新建请求3.png){ width="900px" }
+
 
 ## 2 导入接口
 ### 2.1 文件导入
-![!文件导入](../../img/api_test/文件导入.png){ width="900px" }	
+!!! ms-abstract "" 
+    如下图，按照序号顺序，点击【导入接口】，选择导入模块、导入模式、更多设置、上传文件后，点击导入。
+![!文件导入](../../img/api_test/definition/文件导入.png){ width="900px" }	
 
 !!! ms-abstract "导入模式说明" 
     - 覆盖：
+		- 1.系统已存在的同一接口（请求类型+路径一致），请求参数内容不一致则覆盖系统原接口。
+		- 2.系统已存在的同一接口（请求类型+路径一致），请求参数内容一致则不做变更。
+		- 3.系统不存在的接口，则新增。
 	- 不覆盖：
+		- 1.系统已存在的同一接口（请求类型+路径一致），则不做变更。
+		- 2.系统不存在的接口，则新增。
 
 !!! ms-abstract "更多设置" 
-    - 同步导入接口用例：
-	- 同步更新接口所在目录：
+	- 同步更新接口所在目录：在【覆盖模式】下，可选是否更新接口所在的目录。
 
 ### 2.2 SwaggerURL 导入
-![!SwaggerURL导入](../../img/api_test/SwaggerURL导入.png){ width="900px" }	
+!!! ms-abstract "" 
+    如下图，按照序号顺序，点击【导入接口】，选择导入模块、导入模式、更多设置、Swagger 的 JSON URL 地址、Basic Auth 认证，点击导入。
+![!SwaggerURL导入](../../img/api_test/definition/SwaggerURL导入.png){ width="900px" }	
 
 ### 2.2 定时导入
-![!定时导入](../../img/api_test/定时导入.png){ width="900px" }	
+!!! ms-abstract "" 
+    如下图，按照序号顺序，点击【定时导入】，输入任务名称、Swagger 的 JSON URL 地址、所属模块、导入模式、同步频率，点击导入。
+![!定时导入](../../img/api_test/definition/定时导入.png){ width="900px" }	
 
-!!! ms-abstract "说明" 
-	xxx
-## 3 接口列表
+!!! ms-abstract "" 
+    定时导入 API 的任务列表在 [任务中心](../general.md#62-定时任务) 处查看。
 
-## 3 预览
+## 3 API 预览
 ### 3.1 详情
-![!详情](../../img/api_test/详情.png){ width="900px" }	
+!!! ms-abstract "" 
+    如下图，点击【接口定义 ID】查看接口详细信息。
+![!详情](../../img/api_test/definition/详情1.png){ width="900px" }	
+
+![!详情](../../img/api_test/definition/详情2.png){ width="900px" }	
 
 ### 3.2 引用关系
-![!引用关系](../../img/api_test/引用关系.png){ width="900px" }	
+!!! ms-abstract "" 
+    如下图，查看引用该接口的场景。
+![!引用关系](../../img/api_test/definition/引用关系.png){ width="900px" }
 
 ### 3.3 变更历史
-![!引用关系](../../img/api_test/引用关系.png){ width="900px" }	
+![!引用关系](../../img/api_test/definition/变更历史.png){ width="900px" }	
 
-## 4 执行
-![!执行](../../img/api_test/执行.png){ width="900px" }	
-
-### 4.1 服务端执行
-![!服务端执行](../../img/api_test/服务端执行.png){ width="900px" }	
-
-### 4.2 本地执行
-![!服务端执行](../../img/api_test/服务端执行.png){ width="900px" }	
-
-## 5 创建用例
-
-## 6 用例列表
-
-## 7 切换协议
-![!切换协议](../../img/api_test/切换协议.png){ width="900px" }	
+## 4 调试
+!!! ms-abstract "" 
+    如下图，切换到【调试】页面，输入参数信息、前后置操作、内置函数或者认证信息，选择环境，选择【服务端执行】或者【本地执行】，执行成功后在执行结果处查看响应体、响应头、实际请求、控制台、提取、断言等信息。
+![!执行](../../img/api_test/definition/调试.png){ width="900px" }	
 
 !!! ms-abstract "说明" 
-	- 协议 类型的插件，具体支持插件请 查看表格更多开源插件，请在此下载 去下载。
+    - 参数介绍：请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md)。
+    - 拓展功能：包含前置、后置、认证、设置；详情请参考 [拓展功能](../api_test/extend_features.md#4-认证)。
+	- 内置函数：请求体参数可选择 Mock 函数 [内置函数](../api_test/functions.md)。
+
+!!! ms-abstract "" 
+    如下图，调试成功后，点击【保存为新用例】直接保存成用例。
+![!保存为新用例](../../img/api_test/definition/保存为新用例.png){ width="900px" }	
+
+## 5 创建用例
+!!! ms-abstract "" 
+    如下图，切换到【用例】页面，点击【创建用例】。
+![!创建用例](../../img/api_test/definition/创建用例1.png){ width="900px" }		
+
+!!! ms-abstract "" 
+    如下图，依次输入用例名称，用例等级、状态、标签、请求参数信息，选择环境。点击执行，执行成功后，点击【创建】或【保存并继续创建】。
+![!创建用例](../../img/api_test/definition/创建用例2.png){ width="900px" }	
+
+## 6 CASE 预览
+### 6.1 详情
+!!! ms-abstract "" 
+    如下图，点击【接口用例 ID】查看用例详细信息。
+![!详情](../../img/api_test/definition/用例详情1.png){ width="900px" }	
+
+![!详情](../../img/api_test/definition/用例详情2.png){ width="900px" }	
+
+### 6.2 引用关系
+!!! ms-abstract "" 
+    如下图，查看引用该用例的场景。
+![!引用关系](../../img/api_test/definition/用例引用关系.png){ width="900px" }
+
+### 6.3 执行历史
+!!! ms-abstract "" 
+    如下图，查看该用例的执行历史，在执行历史列表操作列点击【执行结果】查看执行结果详情。
+![!执行历史](../../img/api_test/definition/用例执行历史1.png){ width="900px" }
+
+!!! ms-abstract "" 
+    如下图，点击【报告名称】查看具体响应内容。
+![!执行历史](../../img/api_test/definition/用例执行历史2.png){ width="900px" }
+
+![!执行历史](../../img/api_test/definition/用例执行历史3.png){ width="900px" }
+
+!!! ms-abstract "" 
+    如下图，选择过滤条件快捷搜索执行历史报告。
+![!执行历史](../../img/api_test/definition/用例执行历史4.png){ width="900px" }
+
+### 6.4 变更历史
+!!! ms-abstract "" 
+    如下图，查看该用例的变更历史。
+![!变更历史](../../img/api_test/definition/用例变更历史.png){ width="900px" }	
+
+## 7 API/CASE 列表
+!!! ms-abstract "" 
+    如下图，切换【API】或者点击【全部接口】查看 API 列表。
+![!API/CASE 列表](../../img/api_test/definition/API列表.png){ width="900px" }	
+
+!!! ms-abstract "" 
+    如下图，切换【CASE】或者点击【全部 CASE 】查看 API 列表。
+![!API/CASE 列表](../../img/api_test/definition/CASE列表.png){ width="900px" }	
+
+## 8 切换协议
+!!! ms-abstract "" 
+    如下图，点击具体协议名称，如 HTTP，切换到对应协议的 API/CASE 列表页面，进行相关接口定义、调试、创建用例等操作。
+![!切换协议](../../img/api_test/definition/切换协议.png){ width="900px" }	
+
+!!! ms-abstract "说明" 
+	- 协议类型的插件：具体支持插件请查看表格更多开源插件，请在此下载 去下载。
 	- 协议类型插件开发文档，请查看xxx。

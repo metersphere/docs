@@ -112,7 +112,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     XXX
 ![!消息通知](../img/general/消息通知.png){ width="900px" }
 
-### 6.2 实时任务
+### 6.2 定时任务
 !!! ms-abstract ""
     XXX
 ![!消息通知](../img/general/消息通知.png){ width="900px" }

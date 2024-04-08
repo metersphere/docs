@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 新建请求
 !!! ms-abstract "" 
-    如下图，点击【序号1】或者【序号2】新建接口请求。
+    如下图，点击【新建请求】或者【＋】新建接口请求。
 ![!新建请求1](../../img/api_test/debug/新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
@@ -33,7 +33,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!导入请求1](../../img/api_test/debug/导入请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
-    打开浏览器，按 F12 快捷键打开 NetWork ，页面操作后，如下图复制 cURL 请求。
+    打开浏览器，按 F12 快捷键打开 NetWork ，根据下图示意复制 cURL 请求。
 ![!导入请求2](../../img/api_test/debug/导入请求2.png){ width="900px" }
 
 !!! ms-abstract "" 
@@ -54,7 +54,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 4 响应内容
 !!! ms-abstract "" 
-    执行在页面下方查看响应体、响应头、实际请求和控制台信息。
+    执行后在页面下方查看响应体、响应头、实际请求和控制台信息。
 ![!响应内容1](../../img/api_test/debug/响应内容1.png){ width="900px" }      
 
 !!! ms-abstract "" 
@@ -82,4 +82,4 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!删除](../../img/api_test/debug/删除.png){ width="900px" }    
 
 !!! ms-abstract "注意" 
-    调试请求删除后无法恢复，请谨慎操作！。
+    调试请求删除后无法恢复，请谨慎操作！

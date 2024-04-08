@@ -257,7 +257,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 3.2 响应头
 !!! ms-abstract ""
-    如图，设置响应头的匹配条件和匹配值。
+    如图，下拉选择响应头的参数名称、匹配条件和匹配值。
 ![!响应头](../../img/api_test/extend_features/响应头.png){ width="900px" }    
 
 ### 3.3 响应体

@@ -4,13 +4,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     升级前一定要进行数据库备份，请参考 [MeterSphere 数据备份](./backup_data.md)。<br>
-    -   如果 MeterSphere 服务器可以访问互联网，且在线升级版本跨度不大，可在线升级到最新或指定版本。<br>
-    -   如果升级版本跨度较大，如 V1.x 升级至 V2.x 版本，由于版本新增变更功能较多，且 v2.8.1 之后docker 使用版本升级，避免网络因素影响建议采用离线升级方式。详细步骤可参考： [MeterSphere 1.20 LTS 至2.10 LTS 升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
 
 ## 1 一键升级至最新版本
 !!! ms-abstract ""
     ```
-    #升级前停止服务
+    #完成数据备份后，停止服务
     msctl stop
 
     # 升级至最新版本
@@ -23,32 +21,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 2 一键升级至指定版本
 !!! ms-abstract ""
     ```
-    #升级前停止服务
+    #完成数据备份后，停止服务
     msctl stop
 
     # 升级至指定版本
-    msctl upgrade v2.x.y
+    msctl upgrade v3.x.y
     
     # 查看 MeterSphere 状态
     msctl status
     ```
- <!-- 
-## 3 离线升级
-!!! ms-abstract ""
-   ，如果升级版本跨度不大，则按照下面说明升级即可。
-    ```
-    MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
-
-    # 下载在线安装包
-    wget https://github.com/metersphere/metersphere/releases/download/v2.x.y/metersphere-online-installer-v2.x.y.tar.gz
-    
-    # 解压在线安装包
-    tar -zxvf metersphere-online-installer-v2.x.y.tar.gz
-    
-    # 进入解压缩目录
-    cd metersphere-online-installer-v2.x.y
-    
-    # 执行 install.sh 安装脚本
-    /bin/bash install.sh
-    ```
---> 
