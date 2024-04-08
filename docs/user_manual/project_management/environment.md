@@ -23,7 +23,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 1.2 环境配置
 !!! ms-abstract ""
-    添加测试环境，点击【+】填写环境名称，点击【HTTP】填写相应内容进行保存。
+    如下图，点击【+】填写环境名称，点击【添加 HTTP 】填写域名等信息后保存。
 ![!添加环境内容](../../img/project_management/enviroment/添加环境内容.png){ width="900px" }
 
 !!! ms-abstract ""
