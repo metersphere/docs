@@ -5,23 +5,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 调试
 !!! ms-abstract ""
     如下图，点击【新建请求】或者【＋】新建接口请求。
-![!新建请求1](../img/quick_start/api/新建请求1.png){ width="900px" }
+![!新建请求](../img/quick_start/api/新建请求1.png){ width="900px" }
 
 !!! ms-abstract ""
-    接下来按下图序号顺序，依次选择接口协议、接口方法，输入 请求 URL 和 请求参数，点击调试后保存或直接保存。
-![!新建请求1](../img/quick_start/api/新建请求2.png){ width="900px" }
-
-!!! ms-abstract "说明" 
-    - 序号1：接口协议类型，默认 http 协议。（接口协议插件拓展后支持多选，接口插件可以参考：xxxx）
-    - 序号2：接口方法类型（支持 GET、POST、PUT、DELETE、PATCH、OPTIONS、HEAD、CONNECT）
-    - 序号3：输入包含 http 或 https 的完整 URL。（如：`https://demo.halo.run/apis/api.console.halo.run/v1alpha1/posts`）
-    - 序号4：输入请求头、请求体、前后置操作、认证方式等。
-    - 序号5：选择服务端执行或者本地执行。
-    - 序号6：保存。
+    接下来按下图序号顺序，选择 HTTP 协议、GET 方法，输入 `https://demo.halo.run/apis/api.console.halo.run/v1alpha1/posts` URL 地址，选择 Query 参数，输入 `page 等于 1，size 等于 5`。
+![!新建请求](../img/quick_start/api/新建请求2.png){ width="900px" }
 
 !!! ms-abstract "" 
-    如下图，输入接口的认证信息，可根据具体接口的登录认证类型，选择认证方式、请求头输入 cookie、前置脚本获取 token 等认证方式。如下图 Halo 接口采用 Basic Auth 登录认证。<br>
-![!执行](../img/quick_start/api/执行.png){ width="900px" }  
+    接下来输入接口认证信息，如下图 Halo 接口采用 Basic Auth 登录认证，选择 `Basic Auth`,`用户名：demo，密码：P@ssw0rd123..`，点击【服务端执行】，执行成功后保存。
+![!新建请求](../img/quick_start/api/执行.png){ width="900px" }  
 
 !!! ms-abstract "注意" 
     本地执行需在本地安装 task_runner 和 在个人信息处配置 本地 task_runner 的地址。
