@@ -27,7 +27,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     在安装包解压后的目录，编辑修改安装参数。
     ```
-    cd metersphere-offline-installer-v3.0.0.tar.gz
+    cd metersphere-offline-installer-v3.0.0
     vi install.conf
     ```
 
