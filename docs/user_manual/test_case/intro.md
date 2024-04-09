@@ -3,7 +3,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract ""
-    Meterphere 用例管理模块围绕测试用例提供以下功能：<br>
+    MeterSphere 用例管理模块围绕测试用例提供以下功能：<br>
 
     
     - **功能用例**：支持在线表单、脑图方式创建测试用例，可以关联接口用例、场景用例；支持导入、导出 Excel、Xmind 两种文件格式。
