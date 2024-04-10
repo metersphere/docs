@@ -40,11 +40,6 @@ theme:
     custom_dir: "theme"
 nav:
     - 项目介绍: index.md
-    - 快速开始:
-          - 使用用例管理: quick_start/test_case.md
-          - 使用接口测试: quick_start/api_test.md
-          - 使用 UI 测试: quick_start/ui_test.md
-          - 使用性能测试: quick_start/load_test.md
     - 系统架构: system_arch.md
     - 安装部署:
           - 网络端口要求: installation/network_port.md
@@ -58,6 +53,9 @@ nav:
           - 部署Node-Controller: installation/build_node_controller.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
+    - 快速开始:
+          - 使用用例管理: quick_start/test_case.md
+          - 使用接口测试: quick_start/api_test.md
     - 功能手册:
           - 通用功能: user_manual/general.md
           - 缺陷管理:
