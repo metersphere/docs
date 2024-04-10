@@ -4,9 +4,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
-    * 操作系统: Ubuntu
+    * 操作系统: Ubuntu 22.04 / CentOS 7 64 位系统
     * CPU/内存: 最低要求 4C8G ，推荐 8C16G(企业版最低配置 8C16G)
-    * 磁盘空间: 50G
+    * 磁盘空间: 200 G
 
 ## 2 下载安装包
 !!! ms-abstract ""
@@ -124,7 +124,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 4.3 数据库配置文件说明
 !!! ms-abstract "注意"
-    MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，如果部署采用外置数据库请参考下附的数据库配置，修改对应数据库配置文件。
+    MeterSphere 采用 MySQL 8.0 存储系统数据，并对数据库部分配置项有指定要求，如果采用外置数据库请参考如下数据库配置进行修改。
     ```
   
     [mysqld]
@@ -171,7 +171,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
     ```
 
-    安装完成后， /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
+    安装完成后， /opt/metersphere 为MeterSphere应用目录， 配置文件、数据及日志等均存放在该目录下。
 
 ### 4.4 安装目录结构说明
 !!! ms-abstract "安装目录结构说明"
@@ -207,14 +207,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     /bin/bash install.sh
     ```
 
-    执行完安装脚本后，会安装镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态。
+    执行完安装脚本后，会自动加载镜像并运行容器，等提示安装完成后，可使用 watch -n 5 msctl status 查看各个组件运行状态。
 ![服务状态](../img/installation/msctlstatus.png){ width="900px" }
 
 !!! ms-abstract ""
-    等待几分钟后，使用命令 `msctl status` 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
+   待所有组件都是 healthy 状态，通过浏览器登录 MeterSphere 平台。
     ```
-    请通过以下方式访问:
-
      URL: http://服务器IP:8081
      用户名: admin
      初始密码: metersphere

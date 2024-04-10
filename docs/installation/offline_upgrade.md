@@ -3,23 +3,21 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract "注意"
-    升级前一定要进行数据库备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。
+    升级前务必检查磁盘容量并对数据库进行备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。
 
 ## 1 下载并解压安装包
 !!! ms-abstract ""
-    按照本文档 [离线安装](./offline_installation.md) 步骤， 下载新版本安装包并上传解压后, 重新执行安装命令进行升级。<br>
+    按照本文档 [离线安装](./offline_installation.md) 步骤， 下载新版本安装包解压，执行安装命令进行升级。<br>
   
 ## 2 执行安装命令
 !!! ms-abstract ""
 
     ```
-    #升级前停止服务
+    #完成数据备份并停止服务
     msctl stop
 
-    # 下载离线安装包
-    MeterSphere 安装包在线下载链接: https://github.com/metersphere/metersphere/releases
-
-    wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-offline-installer-v3.x.y.tar.gz
+    # 下载离线安装包并上传到服务器
+    安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
     
     # 解压安装包
     tar -zxvf metersphere-offline-installer-v3.x.y.tar.gz

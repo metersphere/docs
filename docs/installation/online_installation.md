@@ -4,11 +4,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
-    * 操作系统: Ubuntu
-    * CPU/内存: 最低要求 4C8G，推荐 8C16G (企业版最低配置 8C16G)
-    * 磁盘空间: 50G
-    * 网络要求：可访问互联网
-    * 注：如用于生产环境，推荐下载 [离线安装包](https://community.fit2cloud.com/#/products/metersphere/downloads) 进行 [离线部署](../installation/offline_installation.md)。
+    * 操作系统: Ubuntu 22.04 / CentOS 7 64 位系统
+    * CPU/内存: 最低要求 4C8G ，推荐 8C16G(企业版最低配置 8C16G)
+    * 磁盘空间: 200 G
+    * 网络要求：可稳定访问互联网
 
 ## 2 一键安装
 !!! ms-abstract ""
@@ -72,14 +71,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     /bin/bash install.sh
     ```
 
-    执行完安装脚本后，会在线拉取镜像，等提示安装完成后，使用 msctl status 查看服务各个组件状态
+    执行完安装脚本后，会自动加载镜像并运行容器，等提示安装完成后，可使用 watch -n 5 msctl status 查看各个组件运行状态。
 ![服务状态](../img/installation/msctlstatus.png){ width="900px" }
 
 !!! ms-abstract ""
-    等待几分钟后，使用命令 `msctl status` 检查服务运行情况，若各个组件都是 healthy 状态，通过浏览器访问如下页面登录 MeterSphere。
+    待所有组件都是 healthy 状态，通过浏览器访问登录 MeterSphere 平台
     ```
-     请通过以下方式访问:
-
      URL: http://服务器IP:8081
      用户名: admin
      初始密码: metersphere
