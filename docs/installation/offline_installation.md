@@ -211,7 +211,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![服务状态](../img/installation/msctlstatus.png){ width="900px" }
 
 !!! ms-abstract ""
-   待所有组件都是 healthy 状态，通过浏览器登录 MeterSphere 平台。
+     待所有组件都是 healthy 状态，通过浏览器登录 MeterSphere 平台。
     ```
      URL: http://服务器IP:8081
      用户名: admin
