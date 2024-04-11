@@ -160,7 +160,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击左侧【系统设置-系统-资源池】资源池界面。测试资源池主要用于接口测试。
 
 !!! ms-abstract "注意"
-    社区版限制一个资源池，编辑页面可添加资源池节点。不可删除默认资源池。
+    社区版限制一个资源池，不可删除默认资源池。
 
     
 ![!测试资源池管理](../../img/system_management/资源池页面.png){ width="900px" }
@@ -172,19 +172,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【删除】：删除资源池。</br>
 
 
-    
-!!! ms-abstract ""
-     - **编辑 Node 资源池**<br>
 
-    点击【编辑】按钮，在弹出的界面中为资源池名称、描述、站点URL、应用组织、用途、类型、添加资源池方式等信息。
-![!创建资源池](../../img/system_management/资源池编辑.png){ width="900px" }
-
-!!! ms-abstract "操作说明"
- 
-     - 【站点URL】: MeterSphere 服务真实 ip 地址。 如：http：//ip：8081 ，站点 URL 地址和 Node 资源池服务器要求网络互通。</br>
-    - 【最大并发数】：单机部署 JMeter 最大支持 2000 并发 。</br>
-    - 【IP、端口】Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控 node_exporter 端口 9100。点击跳转
-     [部署 node资源池](/docs/installation/build_node_controller)。
 
 ## 6 授权
 !!! ms-abstract ""

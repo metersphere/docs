@@ -31,8 +31,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![个人中心](../../img/personal_center/个人中心本地执行.png){ width="900px" }
 
 !!! ms-abstract "说明"
-    本地执行作用：用于本地调试执行，需要本地电脑安装 node 资源池，点击跳转
-     [部署 node ](/docs/installation/build_node_controller)。本地调试具有多个优势：</br>
+    本地执行作用：用于本地调试执行，需要本地电脑安装 task-runner 资源池，点击跳转
+     [部署  task-runner ](../../installation/task_runner.md)。本地调试具有多个优势：</br>
     实时反馈：在本地调试时，你可以立即看到代码的执行结果，这让你能够快速发现和解决问题。</br>
     快速迭代：本地调试允许你快速进行代码修改和测试，从而加快开发迭代的速度。</br>
     隔离环境：本地调试让你在一个受控的环境中进行开发和测试，不受外部环境的影响，有助于排除外部因素导致的问题。</br>
