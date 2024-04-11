@@ -56,7 +56,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【最大并发数】：单机部署 JMeter 最大支持 2000 并发 。</br>
     - 【IP、端口】Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控 node_exporter 端口 9100。
   
-## 3 配置本地执行
+## 3 配置本地执行的 Task_Runner
 
 !!! ms-abstract ""
     本地执行具有多个优势：</br>
