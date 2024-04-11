@@ -11,7 +11,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     
 
-## 1 下载并解压安装包
+## 1 安装 Task_Runner
 !!! ms-abstract ""
 
     ```
