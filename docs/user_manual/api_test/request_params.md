@@ -7,14 +7,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 请求头
 !!! ms-abstract "" 
-    如下图，在【参数名称】处输入或者下拉选择请求头参数，在参数值处输入参数值或 [内置函数](../api_test/request_params.md)。
+    在【参数名称】处输入或者下拉选择请求头参数，在参数值处输入参数值或 [内置函数](../api_test/request_params.md)。
 ![!请求头1](../../img/api_test/request_params/请求头1.png){ width="900px" }
 
 !!! ms-abstract "批量添加" 
-    如下图，点击【批量添加】，按如下格式要求输入批量导入文本，点击【应用】完成批量导入。<br>
+    点击【批量添加】，按如下格式要求输入批量导入文本，点击【应用】完成批量导入。<br>
     **书写格式**：<br>
 
-        参数名:参数值，如 nama:natural，多条记录以换行分隔。
+        参数名:参数值，如 name:natural，多条记录以换行分隔。
         批量添加里的参数名重复，默认以最后一条数据为最新数据。
 ![!请求头2](../../img/api_test/request_params/请求头2.png){ width="900px" }    
 
@@ -26,13 +26,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 3.2 form-data
 !!! ms-abstract "" 
-    如下图输入参数名称、类型、参数值、描述、更多（Content-Type）等信息。
+    输入参数名称、类型、参数值、描述、更多（Content-Type）等信息。
 ![!请求体2](../../img/api_test/request_params/请求体2.png){ width="900px" }    
 
 !!! ms-abstract "说明" 
     - 参数名：参数名。
     - 类型：默认 string，可选 integer、number、array、json、file。
-    - 参数值：参数值或者 [内置函数](../api_test/request_params.md#2-请求头)。
+    - 参数值：参数值或者 [内置函数](../api_test/request_params.md#2)。
     - 长度区间：字符串长度限制，接口定义处使用，这里无需填写。
     - 描述：描述信息。
     - 更多（Content-Type）：手动输入或者选择以下 Content-Type 类型。
@@ -54,26 +54,26 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!请求体3](../../img/api_test/request_params/请求体3.png){ width="900px" }       
 
 !!! ms-abstract "" 
-    如下图，选择本地上传。
+    选择本地上传。
 ![!请求体4](../../img/api_test/request_params/请求体4.png){ width="900px" }       
 
 !!! ms-abstract "" 
-    如下图，选择关联文件。关联文件即关联【项目管理-文件管理】中的文件。详情参考[文件管理](../project_management/file_management.md)。
+    选择关联文件。关联文件即关联【项目管理-文件管理】中的文件。详情参考：[文件管理](../project_management/file_management.md)。
 ![!请求体5](../../img/api_test/request_params/请求体5.png){ width="900px" }     
 
 ### 3.3 x-www-form-urlencoded
 !!! ms-abstract "" 
-    如下图输入参数名称、类型、参数值、描述、编码、描述等信息。
+    输入参数名称、类型、参数值、描述、编码、描述等信息。
 ![!请求体7](../../img/api_test/request_params/请求体7.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
     - 参数名：参数名。
     - 类型：默认 string，可选 integer、number、array。
-    - 参数值：参数值或者 [内置函数](../api_test/request_params.md#2-请求头)。
+    - 参数值：参数值或者 [内置函数](../api_test/request_params.md#2)。
     - 长度区间：字符串长度限制，接口定义处使用，这里无需填写。
     - 编码：用于是否将表单数据转换为 URL 可传输的格式。**注意：关闭编码只对 GET 请求生效，POST 默认强制开启编码。**
 
-        例如，如果您有以下表单数据：
+        例如，有以下表单数据：
 
             name : Kaibo Shen
             age : 18
@@ -86,17 +86,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 3.4 json
 !!! ms-abstract "" 
-    如下图在【序号1】处输入 json 文本信息，在【序号2】处格式化 json 文本，在【序号3】处展开 json 子节点。
+    在【序号1】处输入 json 文本信息，在【序号2】处格式化 json 文本，在【序号3】处展开 json 子节点。
 ![!请求体8](../../img/api_test/request_params/请求体8.png){ width="900px" }  
 
 ### 3.5 xml
 !!! ms-abstract "" 
-    如下图在【序号1】处输入 xml 文本信息，在【序号2】处格式化 xml 文本。
+    在【序号1】处输入 xml 文本信息，在【序号2】处格式化 xml 文本。
 ![!请求体9](../../img/api_test/request_params/请求体9.png){ width="900px" }  
 
-### 3.6 row
+### 3.6 raw
 !!! ms-abstract "" 
-    如下图在文本框中输入 row 格式参数信息。
+    在文本框中输入 raw 格式参数信息。
 ![!请求体10](../../img/api_test/request_params/请求体10.png){ width="900px" }  
 
 ### 3.7 binary

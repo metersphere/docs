@@ -4,11 +4,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 新建请求
 !!! ms-abstract "" 
-    如下图，点击【新建请求】或者【＋】新建接口请求。
+    点击【新建请求】或者【＋】新建接口请求。
 ![!新建请求1](../../img/api_test/debug/新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
-    接下来按下图序号顺序，依次选择接口协议、接口方法，输入 请求 URL 和 请求参数，点击调试后保存或直接保存。
+    按下图序号顺序，依次选择接口协议、接口方法，输入 请求 URL 和 请求参数，点击调试后保存或直接保存。
 ![!新建请求2](../../img/api_test/debug/新建请求2.png){ width="900px" }
 
 !!! ms-abstract "" 
@@ -18,6 +18,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 序号4：输入请求头、请求体、前后置操作、认证方式等。
     - 序号5：选择服务端执行或者本地执行。（`本地执行需在【个人信息-本地执行】页面配置本地 task_runner 地址。详情参考xxx`）
     - 序号6：保存。
+
 !!! ms-abstract "说明" 
     - 参数介绍：包含请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md)。
     - 拓展功能：包含前置、后置、认证、设置；详情请参考 [拓展功能](../api_test/extend_features.md)。
@@ -29,7 +30,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 导入 cURL 请求
 !!! ms-abstract "" 
-    如下图点击【新建请求】，下拉点击【导入请求】按钮。
+    点击【新建请求】，下拉点击【导入请求】按钮。
 ![!导入请求1](../../img/api_test/debug/导入请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
@@ -37,7 +38,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!导入请求2](../../img/api_test/debug/导入请求2.png){ width="900px" }
 
 !!! ms-abstract "" 
-    如下图录入上图复制的 cURL 请求信息，点击确认。
+    录入上图复制的 cURL 请求信息，点击确认。
 ![!导入请求3](../../img/api_test/debug/导入请求3.png){ width="900px" }    
 
 !!! ms-abstract "说明" 
@@ -45,7 +46,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 3 执行
 !!! ms-abstract "" 
-    输入接口的认证信息，可根据具体接口的登录认证类型，选择认证方式、请求头输入 cookie、前置脚本获取 token 等认证方式。如下图 Halo 接口采用 Basic Auth 登录认证。<br>
+    输入接口的认证信息，可根据具体接口的登录认证类型，选择认证方式、请求头输入 cookie、前置脚本获取 token 等认证方式。Halo 接口采用 Basic Auth 登录认证。<br>
     **选择【服务端执行】或者【本地执行】**
 ![!执行](../../img/api_test/debug/执行.png){ width="900px" }  
 
@@ -58,27 +59,27 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!响应内容1](../../img/api_test/debug/响应内容1.png){ width="900px" }      
 
 !!! ms-abstract "" 
-    如下图点击【上下/左右】切换响应内容布局。
+    点击【上下/左右】切换响应内容布局。
 ![!响应内容2](../../img/api_test/debug/响应内容2.png){ width="900px" }    
 
-## 6 重命名
+## 5 重命名
 !!! ms-abstract "" 
-    如下图点击【重命名】修改请求名称。
+    点击【重命名】修改请求名称。
 ![!重命名](../../img/api_test/debug/重命名.png){ width="900px" }      
 
-## 7 收起/展开全部请求
+## 6 收起/展开全部请求
 !!! ms-abstract "" 
-    如下图点击【收起/展开】图标收起/展开全部请求。
+    点击【收起/展开】图标收起/展开全部请求。
 ![!收起/展开全部请求](../../img/api_test/debug/全部请求.png){ width="900px" }    
 
-## 8 搜索
+## 7 搜索
 !!! ms-abstract "" 
-    如下图输入模块名或请求名称快速搜索请求。
+    输入模块名或请求名称快速搜索请求。
 ![!搜索](../../img/api_test/debug/搜索.png){ width="900px" }    
 
-## 9 删除
+## 8 删除
 !!! ms-abstract "" 
-    如下图点击【删除】操作删除请求。
+    点击【删除】操作删除请求。
 ![!删除](../../img/api_test/debug/删除.png){ width="900px" }    
 
 !!! ms-abstract "注意" 

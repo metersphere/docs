@@ -49,7 +49,7 @@ nav:
                 - 在线安装: installation/online_installation.md
                 - 在线升级: installation/online_upgrade.md
           - Windows 单机部署: installation/offline_installation_windows.md
-          - Kubernetes 部署: installation/kubernetes_installation.md
+#          - Kubernetes 部署: installation/kubernetes_installation.md
           - 部署 Task_Runner: installation/task_runner.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
@@ -74,13 +74,13 @@ nav:
                 - 场景管理: user_manual/api_test/api_automation.md
                 - 内置函数: user_manual/api_test/functions.md
                 - 报告: user_manual/api_test/test_report.md
-          - 性能测试:
-                - 概述: user_manual/load_test/intro.md
-                - 性能测试: user_manual/load_test/load_test.md
-                - 性能测试报告: user_manual/load_test/test_report.md
-          - 报表统计:
-                - 项目报表: user_manual/report_statistics/project_statistics.md
-                - 项目报告: user_manual/report_statistics/report.md
+#          - 性能测试:
+#                - 概述: user_manual/load_test/intro.md
+#                - 性能测试: user_manual/load_test/load_test.md
+#                - 性能测试报告: user_manual/load_test/test_report.md
+#          - 报表统计:
+#                - 项目报表: user_manual/report_statistics/project_statistics.md
+#                - 项目报告: user_manual/report_statistics/report.md
           - 项目管理:
                 - 概述: user_manual/project_management/overview.md
                 - 项目与权限: user_manual/project_management/project_permissions.md
