@@ -155,7 +155,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     以上配置完成后，在 Metersphere 【缺陷管理】模块，可以创建并同步 jira 平台的缺陷。
 
-![!同步缺陷](../../img/system_management/%E5%88%9B%E5%BB%BA%E7%BC%BA%E9%99%B7%E4%BD%BF%E7%94%A8jira%E6%A8%A1%E6%9D%BF.png){ width="900px" } 
+![!同步缺陷](../../img/system_management/jira模板创建用例.png){ width="900px" } 
 
 
 ### 4.2 与禅道集成
@@ -190,11 +190,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
      添加个人平台账号：点击【个人信息-第三方平台账号】配置 禅道 账号，创建缺陷同步可使用该账户信息。这里配置的账号也需要 超级 Model 调用接口权限。点击跳转[个人中心](../personal_center/information.md#5)。<br>
   
-![!jira关联第三方帐号](../../img/system_management/禅道账号绑定.png){ width="900px" }
+![!jira关联第三方帐号](../../img/system_management/禅道个人账号.png){ width="900px" }
 
 !!! ms-abstract ""
     以上配置完成后，在 MeterSphere 【缺陷管理】模块，可以创建并同步禅道平台的缺陷。
- ![!禅道-相关需求](../../img/system_management/使用禅道缺模板创建缺陷.png){ width="900px" }
+ ![!禅道-相关需求](../../img/system_management/禅道缺陷模板创建用例.png){ width="900px" }
 
 <!--
 ### 2.4 与Azure Devops集成
@@ -281,21 +281,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 
 
-## 6  日志
+
+
+## 6 任务中心
+!!! ms-abstract ""
+    点击左侧【系统设置-组织-任务中心】进入任务中心管理界面。<br>
+    实时任务：支持查看当前组织接口用例、接口场景报告。<br>
+    定时任务：可创建测试定时执行任务。
+   ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
+   ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
+
+
+
+## 7  日志
 
 !!! ms-abstract ""
     点击左侧【系统设置-组织-日志】进入日志界面，显示登录用户权限范围内的全部测试资源日志信息，使用高级查询快速查找日志。
 ![!配额管理](../../img/system_management/组织日志.png){ width="900px" }
-
-
-## 7 任务中心
-!!! ms-abstract ""
-    点击左侧【系统设置-组织-任务中心】进入任务中心管理界面。<br>
-    实时任务：支持查看当前组织接口用例、接口场景运行过的任务状态。<br>
-    定时任务：可创建测试定时执行任务。包含接口同步任务和
-   ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
-
-
 
 
 
