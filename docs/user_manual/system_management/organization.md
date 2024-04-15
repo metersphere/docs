@@ -245,7 +245,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     用例模板可添加自定义的用例字段绑定到模板中。点击【字段设置】可以新增用例模板使用的字段。支持输入框、文本、单选、多选、复选、成员等字段。字段支持编辑、删除操作</br>
 
 ![!创建项目](../../img/system_management/组织模板新增字段.png){ width="900px" }
-
+![!创建项目](../../img/system_management/组织模板新增字段1.png){ width="900px" }
 
 
 !!! ms-abstract ""
@@ -258,7 +258,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     - **编辑缺陷模板字段**<br>
     缺陷模板可添加自定义的用例字段绑定到模板中。点击【字段设置】可以新增缺陷模板使用的字段。支持输入框、文本、单选、多选、复选、成员等字段。字段支持【编辑】【删除】操作</br>
-![!创建项目](../../img/system_management/组织模板新增字段.png){ width="900px" }
+![!创建项目](../../img/system_management/组织模板新增字段2.png){ width="900px" }
 
 
 !!! ms-abstract ""

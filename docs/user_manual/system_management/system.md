@@ -226,14 +226,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     点击左侧【系统设置-系统-任务中心】进入任务中心管理界面。<br>
     实时任务：支持查看当前接口用例、接口场景正在运行的任务状态。<br>
-    定时任务：可创建测试定时执行任务
+    定时任务：可创建测试定时执行任务。
   
   ![任务中心](../../img/system_management/任务中心1.png){ width="900px" } ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
 
 ## 8 插件
 !!! ms-abstract ""
     点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 LTS 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
-![插件](../../img/system_management/插件.png){ width="900px" }
+![插件](../../img/system_management/插件管理.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
     - 【编辑】：修改插件 jar 配置，更新插件使用组织范围、描述。</br>
