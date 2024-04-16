@@ -8,7 +8,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!新建接口](../../img/api_test/definition/新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
-    依次输入接口请求方法类型、URl地址，接口名称、所属模块、状态等基础信息，响应体、响应头、响应码等响应内容信息。
+    依次输入接口请求方法类型、URL 地址，接口名称、所属模块、状态等基础信息，响应体、响应头、响应码等响应内容信息。
 ![!新建接口](../../img/api_test/definition/新建请求2.png){ width="900px" }
 
 !!! ms-abstract "说明" 
@@ -43,18 +43,25 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     按照序号顺序，点击【导入接口】，选择导入模块、导入模式、更多设置、Swagger 的 JSON URL 地址、Basic Auth 认证，点击导入。
 ![!SwaggerURL导入](../../img/api_test/definition/SwaggerURL导入.png){ width="900px" }	
 
+!!! ms-abstract "注意" 
+    支持 Swagger 3.0 版本的 json 文件，2.0 的文件建议自行在 [Swagger 官网](https://converter.swagger.io/) 转换成 3.0 再进行导入，大小不超过 50M。
+
 ### 2.2 定时导入
 !!! ms-abstract "" 
     按照序号顺序，点击【定时导入】，输入任务名称、Swagger 的 JSON URL 地址、所属模块、导入模式、同步频率，点击导入。
 ![!定时导入](../../img/api_test/definition/定时导入.png){ width="900px" }	
 
 !!! ms-abstract "" 
-    定时导入 API 的任务列表在 [任务中心](../general.md#62) 处查看。
+    点击上图【定时任务列表】可快速查看定时导入 API 的任务列表。
+![!定时导入](../../img/api_test/definition/定时导入1.png){ width="900px" }	
+
+!!! ms-abstract "" 
+    在 [任务中心](../general.md#62) 处也可以查看定时导入 API 的任务列表。
 
 ## 3 API 预览
 ### 3.1 详情
 !!! ms-abstract "" 
-    点击【ID】查看接口详细信息。
+    点击【ID】查看接口详细信息，可关注、分享接口详情。
 ![!详情](../../img/api_test/definition/详情1.png){ width="900px" }	
 
 ![!详情](../../img/api_test/definition/详情2.png){ width="900px" }	

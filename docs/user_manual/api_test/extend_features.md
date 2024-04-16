@@ -178,7 +178,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!SQL 操作](../../img/api_test/extend_features/SQL操作4.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
-    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1)。
+    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#12-环境配置)。
 
 ### 2.3 提取参数
 !!! ms-abstract "" 
@@ -232,9 +232,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     在提取参数列表处，点击【...】可快捷设置【匹配结果规则】和【响应内容格式】。
 ![!提取参数](../../img/api_test/extend_features/提取参数8.png){ width="900px" }     
 
-!!! ms-abstract "参数类型" 
-    - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
-    - 临时参数：提取的参数仅当前测试步骤或者场景可用。   
+!!! ms-abstract "" 
+    **参数类型**：
+        - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
+        - 临时参数：提取的参数仅当前测试步骤或者场景可用。   
+![!参数类型](../../img/api_test/extend_features/参数类型.png){ width="900px" } 
+
 
 ### 2.4 启用全局后置
 !!! ms-abstract "" 
@@ -275,7 +278,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     输入要断言的变量名、匹配条件和匹配值。
 ![!变量](../../img/api_test/extend_features/变量.png){ width="900px" }    
 
-### 3.6 脚本名称
+### 3.6 脚本
 !!! ms-abstract ""
     选择【手动录入/引用公共脚本】，输入断言脚本。
 ![!断言脚本](../../img/api_test/extend_features/断言脚本.png){ width="900px" }  
