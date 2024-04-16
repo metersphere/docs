@@ -21,7 +21,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "说明" 
     - 参数介绍：包含请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md)。
     - 拓展功能：包含前置、后置、认证、设置；详情请参考 [拓展功能](../api_test/extend_features.md)。
-    - 内置函数：请求体参数可选择 Mock 函数 [内置函数](../api_test/functions.md)。
+    - 内置函数：请求体参数可选择 **内置函数** [内置函数](../api_test/functions.md)。
 
 !!! ms-abstract "" 
     点击保存后输入请求名称、模块信息，点击【确定】。
@@ -45,12 +45,16 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 3 执行
 !!! ms-abstract "" 
-    输入接口的认证信息，可根据具体接口的登录认证类型，选择认证方式、请求头输入 cookie、前置脚本获取 token 等认证方式。如下图 Halo 接口采用 Basic Auth 登录认证。<br>
+    输入接口的认证信息，可根据具体接口的认证类型，通过认证方式、请求头输入 cookie、前置脚本获取 token 等方式进行认证。如下图 Halo 接口采用 Basic Auth 登录认证方式。<br>
     **选择【服务端执行】或者【本地执行】**
 ![!执行](../../img/api_test/debug/执行.png){ width="900px" }  
 
 !!! ms-abstract "注意" 
     本地执行需在本地安装 task_runner 和 在个人信息处配置 本地 task_runner 的地址。
+
+!!! ms-abstract "注意" 
+    - 本地执行：。
+    - 服务端执行：。
 
 ## 4 响应内容
 !!! ms-abstract "" 
