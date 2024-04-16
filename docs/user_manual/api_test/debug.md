@@ -51,11 +51,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!执行](../../img/api_test/debug/执行.png){ width="900px" }  
 
 !!! ms-abstract "注意" 
-    本地执行需在本地安装 task_runner 和 在个人信息处配置 本地 task_runner 的地址。
-
-!!! ms-abstract "注意" 
-    - 本地执行：。
-    - 服务端执行：。
+    - 本地执行：进行本地接口调试，调用本地部署的 `task-runner` 执行机。`task-runner` 部署和配置教程请参考：[task_runner 部署配置教程](../api_test/functions.md)。
+    - 服务端执行：进行线上接口调试，调用部署在服务器端的 `task-runner`，默认使用【系统初始化资源池】。
 
 ## 4 响应内容
 !!! ms-abstract "" 
