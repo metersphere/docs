@@ -18,7 +18,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     【批量添加】请求头。
-![!批量添加](../../img/project_management/enviroment/批量添加.png){ width="900px" }
 ![!批量添加请求头内容](../../img/project_management/enviroment/批量添加请求头内容.png){ width="900px" }
 
 ### 1.2 环境配置
