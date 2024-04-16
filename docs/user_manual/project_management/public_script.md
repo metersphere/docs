@@ -20,10 +20,16 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!项目设置](../../img/project_management/public_script/脚本调试通过.png){ width="900px" }
 
 !!! ms-abstract ""
+    将参数进行参数化，并在脚本里进行引用
+![!项目设置](../../img/project_management/public_script/传递参数.png){ width="900px" }
+
+!!! ms-abstract ""
     【公共脚本】保存后，在【接口测试-接口-前置-引用公共脚本】处，点击【引用公共脚本】即可进行引用
 ![!引用公共脚本](../../img/project_management/public_script/引用公共脚本.png){ width="900px" }
 
 ![!选择公共脚本进行引用](../../img/project_management/public_script/选择公共脚本进行引用.png){ width="900px" }
+
+![!选择公共脚本进行引用](../../img/project_management/public_script/接口执行公共脚本.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
     - 【编辑】编辑公共脚本名称、状态、标签、参数、脚本等内容

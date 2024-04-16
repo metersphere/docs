@@ -88,8 +88,8 @@ nav:
                 - 文件管理: user_manual/project_management/file_management.md
                 - 消息管理: user_manual/project_management/message_management.md
                 - 公共脚本: user_manual/project_management/public_script.md
-                - 日志: user_manual/project_management/log.md
                 - 环境管理: user_manual/project_management/environment.md
+                - 日志: user_manual/project_management/log.md
           - 系统设置:
               - 概述: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
