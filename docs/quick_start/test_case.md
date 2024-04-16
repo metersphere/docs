@@ -5,7 +5,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 创建模块
 !!! ms-abstract ""
     以 Halo 建站平台测试为例，创建 Halo 被测业务测试用例模块 `Halo` 。 
-![!测试用例](../img/track/添加用例模块.png){ width="900px" }
+![!测试用例](../img/track/添加模块.png){ width="900px" }
 
 
 ## 2 创建测试用例

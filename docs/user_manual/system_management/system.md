@@ -56,15 +56,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
      - 【组织用户组】：组织管理员、组织成员。<br>
      - 【项目用户组】：项目管理员、项目成员。<br>
     
-![系统用户组首页](../../img/system_management/预置管理员.png){ width="900px" }
-
 !!! ms-abstract ""
 
     - **创建用户组**<br>
     系统、组织、项目模块点击【+】按钮添加自定义用户组，配置勾选平台用户访问菜单权限，点击【保存】按钮保存勾选的权限配置。
     
-![系统用户组首页](../../img/system_management/添加用户组.png){ width="900px" }
-![系统用户组首页](../../img/system_management/添加自定义用户组.png){ width="900px" }
+![系统用户组首页](../../img/system_management/预置管理员.png){ width="900px" }
+
 
 !!! ms-abstract "操作说明"
 
@@ -74,7 +72,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     -  【选中用户组 +】：快捷添加用户组成员。</br>
     - 【查询】:列表左上方输入框搜索用户组。</br>
 
+    
+!!! ms-abstract ""
 
+    - **添加成员**<br>
+    选中用户组点切换到【成员】页签，可快速添加成员。
+![系统用户组首页](../../img/system_management/系统用户组成员.png){ width="900px" }
 
 ## 3 组织与项目
 ### 3.1 组织
@@ -84,18 +87,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "操作说明"
 
+    -  【编辑】:修改名称、组织管理员、描述。
     -  【添加成员】: 给当前组织添加成员用户。</br>
     -  【结束】:结束组织不展示在组织切换列表。</br>
     -  【删除】:点击【...】按钮，删除用户组。社区版只可使用一个组织，且不可删除默认- 组织。</br>
     - 【查询】:列表右上方书输入框使用 ID 、名称查询组织。</br>
-
-
-
-
-!!! ms-abstract ""
-    - **编辑组织**<br>
-    点击【编辑】按钮编辑组织，在弹出页面中修改名称、组织管理员、描述。
-![!编辑工作空间](../../img/system_management/编辑组织.png){ width="900px" }
 
 
 
@@ -127,15 +123,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     【资源池】：用于接口测试执行任务，默认可用 Local 资源池。资源池配置在[系统-资源池](./system.md#5)配置。</br>
     【状态】：默认启用，有启用，关闭两种状态。</br>
 
-!!! ms-abstract ""
-
-    - **编辑项目**<br>
-    点击【编辑】按钮编辑项目，在弹出页面中修改项目名称、项目管理员、开启模块、描述、启用停用状态等信息。
-![!编辑工作空间](../../img/system_management/编辑项目.png){ width="900px" }
-
-
-
-
 
 ## 4 系统参数
 !!! ms-abstract ""
@@ -166,13 +153,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     
 ![!测试资源池管理](../../img/system_management/资源池页面.png){ width="900px" }
 
+
 !!! ms-abstract "操作说明"
 
     - 【查询】：左上角通用名称查询。</br>
     - 【编辑】：修改资源池信息。</br>
     - 【删除】：删除资源池。</br>
+  
 
+!!! ms-abstract ""
+ 
+    - **编辑资源池**<br>
 
+     - 【站点URL】: MeterSphere 服务真实 ip 地址。 如：http：//ip：8081 ，站点 URL 地址和 Node 资源池服务器要求网络互通。</br>
+    - 【最大并发数】：单机部署 JMeter 最大支持 2000 并发 。</br>
+    - 【IP、端口】Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控 node_exporter 端口 9100。
+
+![!测试资源池管理](../../img/system_management/编辑资源池.png){ width="900px" }
 
 
 ## 6 授权
@@ -225,8 +222,37 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 -->
 
+## 7 任务中心
+!!! ms-abstract ""
+    点击左侧【系统设置-系统-任务中心】进入任务中心管理界面。<br>
+    实时任务：支持查看当前接口用例、接口场景正在运行的任务状态。<br>
+    定时任务：可创建测试定时执行任务。
+  
+  ![任务中心](../../img/system_management/任务中心1.png){ width="900px" } ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
 
-## 7 日志
+## 8 插件
+!!! ms-abstract ""
+    点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 LTS 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
+![插件](../../img/system_management/插件管理.png){ width="900px" }
+
+!!! ms-abstract "操作说明"
+    - 【编辑】：修改插件 jar 配置，更新插件使用组织范围、描述。</br>
+    - 【禁用】：禁用当前使用插件。</br>
+    - 【删除】：钮删除当前使用插件。</br>
+
+
+
+!!! ms-abstract ""
+    - **上传插件**<br>
+    进入下载地址：https://github.com/metersphere 下载需要使用的且和当前MeterSphere版本对应的插件 jar 包。
+    点击【上传插件】按钮，上传插件 jar 包，配置插件使用组织范围、描述。
+![插件](../../img/system_management/上传插件.png){ width="900px" }
+
+
+
+
+
+## 9 日志
 !!! ms-abstract ""
     点击左侧【系统设置-系统-日志】进入日志界面，显示登录用户权限范围内的全部测试资源日志信息，使用高级查询来快速查找相关日志。
 ![系统参数设置首页](../../img/system_management/系统设置日志.png){ width="900px" }
@@ -258,26 +284,5 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![ldap登录](../../img/system_management/ldap登录.png){ width="900px" }-->
 
 
-## 8 任务中心
-!!! ms-abstract ""
-    点击左侧【系统设置-系统-任务中心】进入任务中心管理界面。<br>
-    实时任务：支持查看当前接口用例、接口场景正在运行的任务状态。<br>
-    定时任务：可创建测试定时执行任务
-   ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
-
-## 9 插件
-!!! ms-abstract ""
-    点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 LTS 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
-![插件](../../img/system_management/插件.png){ width="900px" }
-
-!!! ms-abstract ""
-    - **上传插件**<br>
-    进入下载地址：https://github.com/metersphere 下载需要使用的且和当前MeterSphere版本对应的插件 jar 包。
-    点击【上传插件】按钮，上传插件 jar 包，配置插件使用组织范围、描述。
-![插件](../../img/system_management/上传插件.png){ width="900px" }
 
 
-!!! ms-abstract "操作说明"
-    - 【编辑】：修改插件 jar 配置，更新插件使用组织范围、描述。</br>
-    - 【禁用】：禁用当前使用插件。</br>
-    - 【删除】：钮删除当前使用插件。</br>

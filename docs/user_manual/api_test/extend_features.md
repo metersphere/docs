@@ -46,12 +46,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "" 
     - **手动录入** <br>
-    如下图，按照【序号1-6】完成【手动录入】脚本并调试。
+    按照【序号1-6】完成【手动录入】脚本并调试。
 ![!手动录入1](../../img/api_test/extend_features/手动录入1.png){ width="900px" }   
 
 !!! ms-abstract "" 
      - **引用公共脚本** <br>
-    如下图，选择【引用公共脚本】，点击【引用公共脚本】，在弹出的公共脚本列表页面中选择项目管理中的公共脚本。
+    选择【引用公共脚本】，点击【引用公共脚本】，在弹出的公共脚本列表页面中选择项目管理中的公共脚本。
 !!! ms-abstract "注意" 
     引入的公共脚本仅参数值可修改。
     通过引入公共脚本方式添加的为引用关系，会跟随原始脚本的变化，当原始脚本更新时，有高亮 new 图标显示。
@@ -67,41 +67,41 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "" 
     【前置 SQL】在请求发送前执行，用于接口请求前的数据准备工作。
 !!! ms-abstract "" 
-    如下图，按照【序号】顺序，添加【SQL 操作】并【引入数据源】。    
+    按照【序号】顺序，添加【SQL 操作】并【引入数据源】。    
 ![!SQL 操作](../../img/api_test/extend_features/SQL操作1.png){ width="900px" }  
 
 ![!SQL 操作](../../img/api_test/extend_features/SQL操作2.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
-    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1-环境)。
+    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1)。
 
 ### 1.3 等待时间
 !!! ms-abstract "" 
-    如下图，按照【序号】顺序，添加【等待时间】并修改等待时间。  
+    按照【序号】顺序，添加【等待时间】并修改等待时间。  
 ![!等待时间](../../img/api_test/extend_features/等待时间.png){ width="900px" }  
 
 ### 1.4 启用全局前置
 !!! ms-abstract "" 
-    如下图，点击 启用或关闭【全局前置】。<br>
+    点击 启用或关闭【全局前置】。<br>
     默认开启，关闭则运行该接口时不执行全局前置。
 ![!启用全局前置](../../img/api_test/extend_features/启用全局前置.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
-    【全局前置】相关配置请参考： [全局前置](../project_management/environment.md#12-环境配置)。
+    【全局前置】相关配置请参考： [全局前置](../project_management/environment.md#12)。
 
 ### 1.5 代码片段快捷功能
 !!! ms-abstract "" 
-    如下图，在代码片段右侧可使用快捷操作生成代码片段。
+    在代码片段右侧可使用快捷操作生成代码片段。
 ![!代码片段快捷功能](../../img/api_test/extend_features/代码片段快捷功能.png){ width="900px" }  
 
 !!! ms-abstract "说明"
     - 从 API 定义导入： 可根据接口定义自动生成该接口请求的代码片段。
-    - 新 API 测试（JSON）： 自动生成 Httpclient 请求接口的代买片段。
+    - 新 API 测试（JSON）： 自动生成 Httpclient 请求接口的代码片段。
     - 获取变量：获取变量，如：`vars.get("variable_name")`。
     - 设置变量：设置变量，如：`vars.put("variable_name", "variable_value")`。
-    - 获取响应头：获取当期请求的响应头，如：`prev.getResponseHeaders()`。   
-    - 获取响应状态码：获取当期请求的获取响应状态码，如：`prev.getResponseCode()`。   
-    - 获取响应结果：获取当期请求的响应结果，如：`prev.getResponseDataAsString()`。  
+    - 获取响应头：获取当前请求的响应头，如：`prev.getResponseHeaders()`。   
+    - 获取响应状态码：获取当前请求的获取响应状态码，如：`prev.getResponseCode()`。   
+    - 获取响应结果：获取当前请求的响应结果，如：`prev.getResponseDataAsString()`。  
     - 设置环境参数：设置当前执行环境的环境参数，如：`vars.put(${__metersphere_env_id}+"key","value")`。   
     - 插入公共脚本：插入项目管理中的公共脚本。
     - 终止测试：停止当前测试执行，如：`ctx.getEngine().stopTest()`。
@@ -151,12 +151,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "" 
     - **手动录入** <br>
-    如下图，按照【序号1-6】完成【手动录入】脚本并调试。
+    按照【序号1-6】完成【手动录入】脚本并调试。
 ![!手动录入2](../../img/api_test/extend_features/手动录入2.png){ width="900px" }   
 
 !!! ms-abstract "" 
      - **引用公共脚本** <br>
-    如下图，选择【引用公共脚本】，点击【引用公共脚本】，在弹出的公共脚本列表页面中选择项目管理中的公共脚本。
+    选择【引用公共脚本】，点击【引用公共脚本】，在弹出的公共脚本列表页面中选择项目管理中的公共脚本。
 !!! ms-abstract "注意" 
     引入的公共脚本仅参数值可修改。
     通过引入公共脚本方式添加的为引用关系，会跟随原始脚本的变化，当原始脚本更新时，有高亮 new 图标显示。
@@ -178,20 +178,20 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!SQL 操作](../../img/api_test/extend_features/SQL操作4.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
-    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1-环境)。
+    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1)。
 
 ### 2.3 提取参数
 !!! ms-abstract "" 
     - 正则提取。<br>
-    如图，输入【参数名称】，选择【参数类型】，选择【正则】提取方式，选择提取对象的【范围】。
+    输入【参数名称】，选择【参数类型】，选择【正则】提取方式，选择提取对象的【范围】。
 ![!提取参数](../../img/api_test/extend_features/提取参数1.png){ width="900px" }      
 
 !!! ms-abstract "" 
-    如图，在表达式处输入正则表达式或者点击【快捷提取】图标打开表达式【测试】页面。
+    在表达式处输入正则表达式或者点击【快捷提取】图标打开表达式【测试】页面。
 ![!提取参数](../../img/api_test/extend_features/提取参数2.png){ width="900px" }         
 
 !!! ms-abstract "" 
-    如图，在【快捷提取】页面，输入正则表达式，选择【匹配表达式/匹配组】点击【测试】，测试通过后设置【结果匹配规则】后点击【确认】。
+    在【快捷提取】页面，输入正则表达式，选择【匹配表达式/匹配组】点击【测试】，测试通过后设置【结果匹配规则】后点击【确认】。
 ![!提取参数](../../img/api_test/extend_features/提取参数3.png){ width="900px" }  
 
 !!! ms-abstract "" 
@@ -200,15 +200,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "" 
     - JSONPath 提取。<br>
-    如图，输入【参数名称】，选择【参数类型】，选择【JSONPath】提取方式，选择提取对象的【范围】。
+    输入【参数名称】，选择【参数类型】，选择【JSONPath】提取方式，选择提取对象的【范围】。
 ![!提取参数](../../img/api_test/extend_features/提取参数5.png){ width="900px" }      
 
 !!! ms-abstract "" 
-    如图，在表达式处输入 JSONPath 提取表达式或者点击【快捷提取】图标打开快捷提取页面。
+    在表达式处输入 JSONPath 提取表达式或者点击【快捷提取】图标打开快捷提取页面。
 ![!提取参数](../../img/api_test/extend_features/提取参数6.png){ width="900px" }         
 
 !!! ms-abstract "" 
-    如图，在【快捷提取】页面，点击预期提取的字段快速生成 JSONPath 表达式，测试通过后设置【结果匹配规则】后点击【确认】。
+    在【快捷提取】页面，点击预期提取的字段快速生成 JSONPath 表达式，测试通过后设置【结果匹配规则】后点击【确认】。
 ![!提取参数](../../img/api_test/extend_features/提取参数7.png){ width="900px" }  
 
 !!! ms-abstract "" 
@@ -217,15 +217,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "" 
     - XPath 提取。
-    如图，输入【参数名称】，选择【参数类型】，选择【XPath】提取方式，选择提取对象的【范围】。
+    输入【参数名称】，选择【参数类型】，选择【XPath】提取方式，选择提取对象的【范围】。
 ![!提取参数](../../img/api_test/extend_features/提取参数9.png){ width="900px" }      
 
 !!! ms-abstract "" 
-    如图，在表达式处输入 XPath 提取表达式或者点击【快捷提取】图标打开快捷提取页面。
+    在表达式处输入 XPath 提取表达式或者点击【快捷提取】图标打开快捷提取页面。
 ![!提取参数](../../img/api_test/extend_features/提取参数10.png){ width="900px" }         
 
 !!! ms-abstract "" 
-    如图，在【快捷提取】页面，输入 XPath 表达式，测试通过后设置【结果匹配规则】和【响应内容格式】，然后点击【确认】。
+    在【快捷提取】页面，输入 XPath 表达式，测试通过后设置【结果匹配规则】和【响应内容格式】，然后点击【确认】。
 ![!提取参数](../../img/api_test/extend_features/提取参数11.png){ width="900px" }  
 
 !!! ms-abstract "" 
@@ -234,55 +234,55 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "参数类型" 
     - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
-    - 临时参数：提取的参数紧当前测试步骤或者场景可用。   
+    - 临时参数：提取的参数仅当前测试步骤或者场景可用。   
 
 ### 2.4 启用全局后置
 !!! ms-abstract "" 
-    如下图，点击 启用或关闭【全局后置】。<br>
+    点击 启用或关闭【全局后置】。<br>
     默认开启，关闭则运行该接口时不执行全局后置。
 ![!启用全局后置](../../img/api_test/extend_features/启用全局后置.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
-    【全局后置】相关配置请参考： [全局后置](../project_management/environment.md#12-环境配置)。
+    【全局后置】相关配置请参考： [全局后置](../project_management/environment.md#12)。
 
 ### 2.5 代码片段快捷功能
 !!! ms-abstract "说明"
-    - 同上 [代码片段快捷功能](#15-代码片段快捷功能)。
+    - 同上 [代码片段快捷功能](#15)。
 
 ## 3 断言
 ### 3.1 状态码
 !!! ms-abstract ""
-    如图，设置状态码匹配条件和要断言的状态码。
+    设置要断言的状态码及其匹配条件。
 ![!状态码](../../img/api_test/extend_features/状态码.png){ width="900px" }      
 
 ### 3.2 响应头
 !!! ms-abstract ""
-    如图，下拉选择响应头的参数名称、匹配条件和匹配值。
+    下拉选择响应头的参数名称、匹配条件和匹配值。
 ![!响应头](../../img/api_test/extend_features/响应头.png){ width="900px" }    
 
 ### 3.3 响应体
 !!! ms-abstract ""
-    如图，选择表达式类型，输入表达式和匹配值，选择匹配条件；具体不同表达式的生成方式同上 [提取参数](#23-提取参数)。
+    选择表达式类型，输入表达式和匹配值，选择匹配条件；具体不同表达式的生成方式同上 [提取参数](#23)。
 ![!响应体](../../img/api_test/extend_features/响应体.png){ width="900px" }    
 
 ### 3.4 响应时间
 !!! ms-abstract ""
-    如图，输入要断言的响应时间（单位 ms ）。
+    输入要断言的响应时间（单位 ms ）。
 ![!响应时间](../../img/api_test/extend_features/响应时间.png){ width="900px" }    
 
 ### 3.5 变量
 !!! ms-abstract ""
-    如图，输入要断言的变量名、匹配条件和匹配值。
+    输入要断言的变量名、匹配条件和匹配值。
 ![!变量](../../img/api_test/extend_features/变量.png){ width="900px" }    
 
 ### 3.6 脚本名称
 !!! ms-abstract ""
-    如图，选择【手动录入/引用公共脚本】，输入断言脚本。
+    选择【手动录入/引用公共脚本】，输入断言脚本。
 ![!断言脚本](../../img/api_test/extend_features/断言脚本.png){ width="900px" }  
 
 ## 4 认证
 !!! ms-abstract ""
-    如图，选择接口 Auth 认证方式，并输入用户名、密码。
+    选择接口 Auth 认证方式，并输入用户名、密码。
 ![!认证](../../img/api_test/extend_features/认证.png){ width="900px" } 
 
 !!! ms-abstract "说明"
@@ -292,7 +292,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 5 设置
 !!! ms-abstract ""
-    如图，设置接口的 【连接超时】、【响应超时】时间，设置【重定向】方式。
+    设置接口的 【连接超时】、【响应超时】时间，设置【重定向】方式。
 ![!设置](../../img/api_test/extend_features/设置.png){ width="900px" } 
 
 !!! ms-abstract "说明"

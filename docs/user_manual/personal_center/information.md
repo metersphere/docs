@@ -3,16 +3,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 
-!!! ms-abstract ""
-     **个人信息**：对当前登录账号信息进行管理，包含基本信息、密码、APIKEY、本地执行、三方平台账号信息等配置内容 。
-![个人中心](../../img/personal_center/个人中心入口.png){ width="900px" }
-
-
 ## 1 基本信息
 !!! ms-abstract ""
     进入【个人信息-基本信息】管理界面，更新头像、修改用户名称、邮箱、手机号码。
 ![个人中心](../../img/personal_center/基础信息操作.png){ width="900px" }
-![个人中心](../../img/personal_center/个人中心修改用户信息.png){ width="900px" }
+
 
 ## 2 密码设置
 !!! ms-abstract ""

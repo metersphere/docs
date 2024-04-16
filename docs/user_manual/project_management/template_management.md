@@ -97,8 +97,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![查看缺陷模板](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击开启【默认模板】，在【缺陷管理-缺陷-创建缺陷】时，会使用刚设置的缺陷模板
-![查看缺陷模板](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
+    点击开启，在【缺陷管理-缺陷-创建缺陷】时，会使用刚设置的缺陷模板
+![查看缺陷模板](../../img/project_management/template_management/缺陷创建使用模板.png){ width="900px" }
 
 ### 2.3 工作流设置
 !!! ms-abstract ""
