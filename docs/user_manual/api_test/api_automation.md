@@ -33,12 +33,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 1.3 前/后置
 !!! ms-abstract ""
-    场景前后置可以进行脚本操作和设置等待时间。详情参考：[前后置操作](../extend_features#1)
+    场景前后置可以进行脚本操作和设置等待时间。详情参考：[前后置操作](../api_test/request_params.md/#6)
 ![!场景前后置](../../img/api_test/api_automation/场景前后置.png){ width="900px" }
 
 ### 1.4 断言
 !!! ms-abstract ""
-    场景有多种断言方式，如状态码、响应头、响应体、响应时间、脚本等。详情参考：[断言](../extend_features#3)
+    场景有多种断言方式，如状态码、响应头、响应体、响应时间、脚本等。详情参考：[断言](../api_test/request_params.md/#8)
 ![!场景断言](../../img/api_test/api_automation/场景断言.png){ width="900px" }
 
 ### 1.5 设置
@@ -142,7 +142,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 2.6 脚本操作
 !!! ms-abstract ""
-    【脚本操作】不再需要依赖于请求作为其子步骤，可以独立为场景步骤运行，使用方式与前后置脚本使用方式类似。详情参考：[前后置操作](../extend_features#11)
+    【脚本操作】不再需要依赖于请求作为其子步骤，可以独立为场景步骤运行，使用方式与前后置脚本使用方式类似。详情参考：[前后置操作](../api_test/request_params.md/#61)
 
 ### 2.7 等待时间
 !!! ms-abstract ""
