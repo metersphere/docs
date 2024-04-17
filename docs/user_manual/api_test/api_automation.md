@@ -167,7 +167,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     本地执行需在本地安装 task_runner 服务。 <br>
     需要在【个人信息】处配置本地 task_runner 的地址。详情参考：[配置本地执行](../personal_center/information#4)
 
-## 4 场景功能
+## 4 场景控制
 !!! ms-abstract ""
     单步骤可以进行【启用/禁用】、【执行】、【复制】、【删除】、【添加子步骤】、【在之前插入步骤】、【在之后插入步骤】操作。
 ![!功能操作](../../img/api_test/api_automation/功能操作.png){ width="900px" }
