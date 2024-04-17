@@ -55,9 +55,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "操作说明"
  
-     - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http：//ip：8081 ，站点 URL 地址和部署 task_runner 资源池服务器要求网络互通。</br>
+     - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http://服务器IP:8081  ，站点 URL 地址和部署 task_runner 资源池服务器要求网络互通。</br>
     - 【最大并发数】：单机部署 task_runner 最大支持 2000 并发 。</br>
-    - 【IP、端口】：Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控 node_exporter 端口 9100。
+    - 【IP、端口】：Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控端口 9100。
   
 ## 2 本地执行部署 Task_Runner
 
