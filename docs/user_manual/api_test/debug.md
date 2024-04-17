@@ -21,7 +21,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "说明" 
     - 参数介绍：包含请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md)。
-    - 拓展功能：包含前置、后置、认证、设置；详情请参考 [拓展功能](../api_test/extend_features.md)。
     - 内置函数：请求体参数可选择 **内置函数** [内置函数](../api_test/functions.md)。
 
 !!! ms-abstract "" 
