@@ -13,16 +13,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     # 升级至最新版本
     msctl upgrade
-    
-    # 查看 MeterSphere 状态
-    msctl status
-    ```
-
-## 2 一键升级至指定版本
-!!! ms-abstract ""
-    ```
-    #完成数据备份后，停止服务
-    msctl stop
 
     # 升级至指定版本
     msctl upgrade v3.x.y
@@ -30,3 +20,4 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 查看 MeterSphere 状态
     msctl status
     ```
+

@@ -8,10 +8,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 | 组件     | 默认端口     | 说明     |
 | -------- | -------- | -------- |
 | MeterSphere | 8081 | MeterSphere 主服务项目，浏览器访问端口 |
-| Task-Runner | 8000 | 为接口测试提供独立节点类型的测试资源池 |
-| Task-Runner  | 9100 | 用于采集 Task-Runner 的运行指标 |
-| MySQL | 3306 | MeterSphere 默认安装的数据库对外提供的端口  |
-| Redis | 6379 | MeterSphere 默认安装的 Redis 对外提供的端口  |
-| Minio | 9000 | MeterSphere 默认安装的分布式对象存储对外提供的端口  |
-| Minio | 9001 | MeterSphere 默认安装的分布式对象存储控制台端口  |
-| Kafka | 9092 | MeterSphere 默认安装的消息中间件对外提供的端口  |
+| Task-Runner | 8000  9100  | 为接口测试提供独立节点类型的测试资源池、采集 Task-Runner 的运行指标 |
+| MySQL | 3306 |  默认安装的数据库对外提供的端口  |
+| Redis | 6379 |  默认安装的 Redis 对外提供的端口  |
+| Minio | 9000 9001 |  默认安装的分布式对象存储对外提供的端口、分布式对象存储控制台端口  |
+| Kafka | 9092 |  默认安装的消息中间件对外提供的端口  |

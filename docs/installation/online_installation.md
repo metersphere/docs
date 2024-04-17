@@ -2,9 +2,11 @@
 description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
 ---
 
+
+
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
-    * 操作系统: Ubuntu 22.04 / CentOS 7 64 位系统
+    * 操作系统: Ubuntu 18 / CentOS 7 64 位系统
     * CPU/内存: 最低要求 4C8G ，推荐 8C16G(企业版最低配置 8C16G)
     * 磁盘空间: 200 G
     * 网络要求：可稳定访问互联网
@@ -51,9 +53,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
 ## 3 手动安装
-### 3.1 手动安装
+
 !!! ms-abstract ""
-    MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
+    MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases </br>
+    安装前如需修改组件配置，可参考： [参数说明](./offline_installation.md#41)。如果需要使用外置数据库，可参考：[数据库说明](./offline_installation.md#42)。
     ```
     # 下载在线安装包
     wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
@@ -64,7 +67,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 进入解压目录
     cd metersphere-online-installer-v3.x.y
     
-    # 配置安装参数，参数说明见下文
+    # 修改安装参数，如果使用默认默认安装可跳过此步
     # vi install.conf
     
     # 执行install.sh安装脚本
@@ -80,151 +83,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
      URL: http://服务器IP:8081
      用户名: admin
      初始密码: metersphere
-
-    ```
-
-### 3.2 安装配置文件说明
-
-!!! ms-abstract "安装配置文件说明"
-    如果无特殊需求可以不修改，采用默认参数安装。如需修改配置参数，则修改配置文件 install.conf 相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装。已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 修改，修改完后执行 `msctl reload` 重新加载配置参数生效。
-    ```
-    # 基础配置
-    ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
-    MS_BASE=/opt
-    ## MeterSphere 使用的 docker 网络网段信息
-    MS_DOCKER_SUBNET=172.30.10.0/24
-    ## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere
-    MS_IMAGE_PREFIX=registry.cn-qingdao.aliyuncs.com/metersphere
-    ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
-    MS_IMAGE_TAG=v3.0.0-rc12
-    ## 性能测试使用的 JMeter 镜像
-    MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter:5.6.3-release1
-    ## 安装模式 allinone | server | task-runner | selenium-hub | middleware
-    MS_INSTALL_MODE=allinone
-    ## MeterSphere 主程序的 HTTP 服务监听端口
-    MS_SERVER_PORT=8081
-    ## MeterSphere Task-Runner 组件的 HTTP 服务监听端口
-    MS_TASK_RUNNER_PORT=8000
-    MS_NODE_EXPORTER_PORT=9100
-
-    # 数据库配置
-    ## 是否使用外部数据库
-    MS_EXTERNAL_MYSQL=false
-    ## 数据库地址
-    MS_MYSQL_HOST=$(hostname -I|cut -d" " -f 1)
-    ## 数据库端口
-    MS_MYSQL_PORT=3306
-    ## 数据库库名
-    MS_MYSQL_DB=metersphere
-    ## 数据库用户名
-    MS_MYSQL_USER=root
-    ## 数据库密码
-    MS_MYSQL_PASSWORD=Password123@mysql
-
-    # Prometheus 配置
-    ## 是否使用外部Prometheus
-    MS_EXTERNAL_PROM=false
-    MS_PROMETHEUS_PORT=9090
-
-    # Redis 配置
-    ## 是否使用外部Redis
-    MS_EXTERNAL_REDIS=false
-    ## Redis 端口
-    MS_REDIS_PORT=6379
-    ## Redis 密码
-    MS_REDIS_PASSWORD=Password123@redis
-    ## Redis地址
-    MS_REDIS_HOST=$(hostname -I|cut -d" " -f 1)
-
-    # Kafka 配置
-    ## 是否使用外部 Kafka
-    MS_EXTERNAL_KAFKA=false
-    ## Kafka 地址
-    MS_KAFKA_HOST=10.1.11.29
-    MS_KAFKA_PORT=9092
-
-    # 企业版配置
-    ## 是否使用企业版
-    MS_ENTERPRISE_ENABLE=false
-
-    # UI容器配置
-    ## 是否使用外部grid
-    MS_EXTERNAL_SELENIUM=false
-
-    # minio 配置
-    ## 是否使用外部minio
-    MS_EXTERNAL_MINIO=false
-    ## minio 地址
-    MS_MINIO_ENDPOINT=http://minio:9000
-    ## minio access
-    MS_MINIO_ACCESS_KEY=admin
-    ## minio 密码
-    MS_MINIO_SECRET_KEY=Password123@minio
-
-    ## docker gid
-    MS_DOCKER_GID=$(getent group docker | cut -f3 -d:)
-
-    ## memory limit 修改组件最大内存限制
-    MS_MEM_LIMIT=1g
-    MS_RUNNER_MEM_LIMIT=1g
-    MS_RESULT_MEM_LIMIT=1g
-    MS_KAFKA_MEM_LIMIT=1g
-
-    ## TOTP
-    MS_TOTP_ENABLED=false
-
-    ```
-### 3.3 数据库配置文件说明
-!!! ms-abstract "注意"
-    MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，如果部署采用外置数据库请参考下附的数据库配置，修改对应数据库配置文件。
-
-    ```
-  
-    [mysqld]
-    datadir=/var/lib/mysql
-
-    default-storage-engine=INNODB
-    character_set_server=utf8mb4
-    lower_case_table_names=1
-    performance_schema=off
-    table_open_cache=128
-    transaction_isolation=READ-COMMITTED
-    max_connections=1000
-    max_connect_errors=6000
-    max_allowed_packet=64M
-    innodb_file_per_table=1
-    innodb_buffer_pool_size=512M
-    innodb_flush_method=O_DIRECT
-    innodb_lock_wait_timeout=1800
-
-    server-id=1
-    log-bin=mysql-bin
-    expire_logs_days = 2
-    binlog_format=mixed
-
-    character-set-client-handshake = FALSE
-    character-set-server=utf8mb4
-    collation-server=utf8mb4_general_ci
-    init_connect='SET default_collation_for_utf8mb4=utf8mb4_general_ci'
-
-    sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
-
-    skip-name-resolve
-
-    [mysql]
-    default-character-set=utf8mb4
-
-    [mysql.server]
-    default-character-set=utf8mb4
-
-    ```
-    
-    参考建库语句创建 MeterSphere 使用的数据库，MeterSphere 服务启动时会初始化表结构和数据。
-    ```
-    CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
     ```
 
 ## 4 配置反向代理
+
 !!! ms-abstract ""
     如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```
@@ -263,3 +125,28 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         }
     }
     ```
+
+
+##  5 在线升级
+
+!!! ms-abstract "注意"
+    升级前务必检查磁盘容量并对数据库进行备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。
+
+###  5.1 在线升级步骤
+
+!!! ms-abstract ""
+
+    ```
+    #完成数据备份后，停止服务
+    msctl stop
+
+    # 升级至最新版本
+    msctl upgrade
+
+    # 升级至指定版本
+    msctl upgrade v3.x.y
+    
+    # 查看 MeterSphere 状态
+    msctl status
+    ```
+
