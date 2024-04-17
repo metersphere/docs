@@ -13,7 +13,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "说明" 
     - 参数介绍：请求头、请求体、Query、REST。详情参考：[参数介绍](../api_test/request_params.md)。
-    - 拓展功能：认证、设置。详情参考： [拓展功能](../api_test/extend_features.md#4)。
 	- 内置函数：请求体参数可选择内置 Mock 函数。详情参考：[内置函数](../api_test/functions.md)。
 
 !!! ms-abstract "" 
@@ -80,9 +79,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!执行](../../img/api_test/definition/调试.png){ width="900px" }	
 
 !!! ms-abstract "说明" 
-    - 参数介绍：请求头、请求体、Query、REST。详情参考：[参数介绍](../api_test/request_params.md)。
-    - 拓展功能：包含前置、后置、认证、设置。详情参考：[拓展功能](../api_test/extend_features.md#4)。
-	- 内置函数：请求体参数可选择内置 Mock 函数。详情参考：[内置函数](../api_test/functions.md)。
+    - 参数介绍：请求头、请求体、Query、REST。详情参考：[参数介绍](../api_test/request_params.md)。	
+    - 内置函数：请求体参数可选择内置 Mock 函数。详情参考：[内置函数](../api_test/functions.md)。
 
 !!! ms-abstract "" 
     调试成功后，点击【保存为新用例】直接保存成用例。

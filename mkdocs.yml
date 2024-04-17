@@ -70,7 +70,6 @@ nav:
                 - 接口调试: user_manual/api_test/debug.md
                 - 接口定义: user_manual/api_test/api_definition.md
                 - 请求参数介绍: user_manual/api_test/request_params.md
-                - 接口拓展功能: user_manual/api_test/extend_features.md
                 - 场景管理: user_manual/api_test/api_automation.md
                 - 内置函数: user_manual/api_test/functions.md
                 - 报告: user_manual/api_test/test_report.md
