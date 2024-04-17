@@ -20,7 +20,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 序号6：保存。
 
 !!! ms-abstract "说明" 
-    - 参数介绍：包含请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md#)。
+    - 参数介绍：包含请求头、请求体、Query、REST；详情请参考 [参数介绍](../api_test/request_params.md)。
     - 内置函数：请求体参数可选择 **内置函数** [内置函数](../api_test/functions.md)。
 
 !!! ms-abstract "" 
