@@ -11,7 +11,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     部署 Task-Runner，需要采用服务器独立部署。 部署服务器要求：
 
 
-        * 操作系统: Ubuntu 18 / CentOS 7 64 位系统
+        * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
         * CPU/内存: 4C8G 
         * 磁盘空间: 50 G
 
@@ -66,7 +66,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
      Windows 部署 task_runner 可使用 WSL 安装。 虚拟机配置如下：</br>
        
 
-        * 操作系统: Ubuntu 18 / CentOS 7 64 位系统
+        * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
         * CPU/内存: 4C8G 
         * 磁盘空间: 50 G
 
