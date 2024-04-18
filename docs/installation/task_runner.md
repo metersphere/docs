@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 
 
-## 1 服务端部署 Task_Runner
+## 1 服务端部署 Task-Runner
 
 
 !!! ms-abstract ""
@@ -55,14 +55,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "操作说明"
  
-     - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http://服务器IP:8081  ，站点 URL 地址和部署 task_runner 资源池服务器要求网络互通。</br>
-    - 【最大并发数】：单机部署 task_runner 最大支持 2000 并发 。</br>
+     - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http://服务器IP:8081  ，站点 URL 地址和部署 task-runner 资源池服务器要求网络互通。</br>
+    - 【最大并发数】：单机部署 task-runner 最大支持 2000 并发 。</br>
     - 【IP、端口】：Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控端口 9100。
   
-## 2 本地执行部署 Task_Runner
+## 2 本地执行部署 Task-Runner
 ### 2.1 Windows 系统部署
 !!! ms-abstract ""
-     Windows 部署 task_runner 可使用 WSL 安装。 虚拟机配置如下：</br>
+     Windows 部署 task-runner 可使用 WSL 安装。 虚拟机配置如下：</br>
        
 
         * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
@@ -173,7 +173,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![mac 部署](../img/installation/dis_pressure/mac部署2.png){ width="900px" }
 
 !!! ms-abstract ""
-    Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task-Runner ，具体步骤参考：[服务端部署 Task_Runner](#1)。
+    Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task-Runner ，具体步骤参考：[服务端部署 Task-Runner](#1)。
         
         
         ```
