@@ -32,15 +32,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!界面说明2](./img/api/接口测试首页.png){ width="900px" }
 
-## 4 精品课程
-!!! ms-abstract ""
-
-    - [玩转 MeterSphere 开源持续测试平台系列教程之测试跟踪](https://live.vhall.com/v3/lives/watch/727027100)
-    - [玩转 MeterSphere 开源持续测试平台系列教程之接口测试](https://live.vhall.com/v3/lives/watch/736453878)
-    - [玩转 MeterSphere 开源持续测试平台系列教程之性能测试](https://live.vhall.com/v3/lives/watch/594330873)
-    - [玩转 MeterSphere 开源持续测试平台系列教程之 UI 测试](https://live.vhall.com/v3/lives/watch/696811890)
-
-## 5 了解更多
+## 4 了解更多
 !!! ms-abstract ""
 
     - [获取《持续测试白皮书》](https://fit2cloud.com/whitepaper/metersphere-whitepaper_202309.pdf)
