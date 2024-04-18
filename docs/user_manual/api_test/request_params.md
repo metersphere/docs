@@ -33,7 +33,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "说明"
     - 参数名：参数名。
     - 类型：默认 string，可选 integer、number、array、json、file。
-    - 参数值：参数值或者 [内置函数](../api_test/request_params#2)。
+    - 参数值：参数值或者 [内置函数](../api_test/functions.md)。
     - 长度区间：字符串长度限制，接口定义处使用，这里无需填写。
     - 描述：描述信息。
     - 更多（Content-Type）：手动输入或者选择以下 Content-Type 类型。
@@ -188,10 +188,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     按照【序号】顺序，添加【SQL 操作】并【引入数据源】。    
 ![!SQL 操作](../../img/api_test/extend_features/SQL操作1.png){ width="900px" }  
 
-![!SQL 操作](../../img/api_test/extend_features/SQL操作2.png){ width="900px" }  
+![!SQL 操作](../../img/api_test/extend_features/SQL操作2.png){ width="900px" }
 
 !!! ms-abstract "说明" 
     【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1)。
+
+!!! ms-abstract ""
+    如下图，下拉滚动条，选择【按列存储】或【按结果存储】，从 sql 执行结果集中提取信息。
+![!SQL 操作](../../img/api_test/extend_features/SQL操作3.png){ width="900px" }
+
+!!! ms-abstract "说明"
+    - 按列存储：指定从数据库结果集中提取的列的名称；多个列可以使用“,”分隔。
+    - 按列提取值：输入按列存储中的列名和对应的数值，如提取 `name` 列的第一个值则输入 `name_1`。
+    - 按结果存储：把整个结果集保存为一个变量，而不是将每个列的值保存为单独的变量。
+
+!!! ms-abstract ""
+    在【SQL 操作】下一步添加一个【脚本操作】的步骤，把上图 sql 执行结果集中提取的信息打印到控制台。
+![!SQL 操作](../../img/api_test/extend_features/SQL操作4.png){ width="900px" }
 
 ### 6.3 等待时间
 !!! ms-abstract "" 
@@ -267,36 +280,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
             //移除变量 VAR3
             vars.remove("VAR3");
 
-!!! ms-abstract "" 
-    - **手动录入** <br>
-    按照【序号1-6】完成【手动录入】脚本并调试。
+!!! ms-abstract ""
+    后置脚本操作同 [前置脚本操作](#61)。
 ![!手动录入2](../../img/api_test/extend_features/手动录入2.png){ width="900px" }   
 
-!!! ms-abstract "" 
-     - **引用公共脚本** <br>
-    选择【引用公共脚本】，点击【引用公共脚本】，在弹出的公共脚本列表页面中选择项目管理中的公共脚本。
-!!! ms-abstract "注意" 
-    引入的公共脚本仅参数值可修改。
-    通过引入公共脚本方式添加的为引用关系，会跟随原始脚本的变化，当原始脚本更新时，有高亮 new 图标显示。
-
-![!引用公共脚本3](../../img/api_test/extend_features/引用公共脚本3.png){ width="900px" }   
-
-![!引用公共脚本4](../../img/api_test/extend_features/引用公共脚本4.png){ width="900px" }   
-
-!!! ms-abstract "说明" 
-    【公共脚本】相关配置请参考： [公共脚本](../project_management/public_script.md)。
 
 ### 7.2 SQL 操作
 !!! ms-abstract "" 
     【后置 SQL】在请求发送后执行，用于接口请求后的数据验证工作。
 !!! ms-abstract "" 
-    如下图，按照【序号】顺序，添加【SQL 操作】并【引入数据源】。    
-![!SQL 操作](../../img/api_test/extend_features/SQL操作3.png){ width="900px" }  
-
-![!SQL 操作](../../img/api_test/extend_features/SQL操作4.png){ width="900px" }  
-
-!!! ms-abstract "说明" 
-    【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#12-环境配置)。
+    后置 SQL 操作同 [前置SQL操作](#62-sql)。    
+![!SQL 操作](../../img/api_test/extend_features/SQL操作5.png){ width="900px" }
 
 ### 7.3 提取参数
 !!! ms-abstract "" 
@@ -329,12 +323,18 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     在【快捷提取】页面，点击预期提取的字段快速生成 JSONPath 表达式，测试通过后设置【结果匹配规则】后点击【确认】。
 ![!提取参数](../../img/api_test/extend_features/提取参数7.png){ width="900px" }  
 
+!!! ms-abstract "结果匹配规则说明"
+    - 随机匹配：获取任意一条匹配结果。
+    - 指定匹配：需要指定匹配的第N条结果，如果超出指定则返回为空。
+    - 全部匹配：返回的是一个匹配结果数组。<br>
+    **以上匹配规则均基于表达式提取结果集进行再匹配**。
+
 !!! ms-abstract "" 
     在提取参数列表处，点击【...】可快捷设置【匹配结果规则】。
 ![!提取参数](../../img/api_test/extend_features/提取参数8.png){ width="900px" }     
 
 !!! ms-abstract "" 
-    - XPath 提取。
+    - XPath 提取。<br>
     输入【参数名称】，选择【参数类型】，选择【XPath】提取方式，选择提取对象的【范围】。
 ![!提取参数](../../img/api_test/extend_features/提取参数9.png){ width="900px" }      
 
@@ -348,12 +348,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "" 
     在提取参数列表处，点击【...】可快捷设置【匹配结果规则】和【响应内容格式】。
-![!提取参数](../../img/api_test/extend_features/提取参数8.png){ width="900px" }     
+![!提取参数](../../img/api_test/extend_features/提取参数12.png){ width="900px" }     
 
-!!! ms-abstract "" 
-    **参数类型**：
-        - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
-        - 临时参数：提取的参数仅当前测试步骤或者场景可用。   
+
+
+
+!!! ms-abstract "参数类型" 
+    - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
+    - 临时参数：提取的参数仅当前测试步骤或者场景可用。   
 ![!参数类型](../../img/api_test/extend_features/参数类型.png){ width="900px" } 
 
 
@@ -368,7 +370,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 7.5 代码片段快捷功能
 !!! ms-abstract "说明"
-    - 同上 [代码片段快捷功能](#15)。
+    - 同上 [代码片段快捷功能](#65)。
 
 ## 8 断言
 ### 8.1 状态码

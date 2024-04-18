@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
-    * 操作系统: Ubuntu 22.04 / CentOS 7 64 位系统
+    * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
     * CPU/内存: 最低要求 4C8G ，推荐 8C16G(企业版最低配置 8C16G)
     * 磁盘空间: 200 G
 
@@ -16,22 +16,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 3 解压安装包 
 !!! ms-abstract ""
     以 root 用户 ssh 登录到目标机器， 并执行如下命令。
+
     ```
     cd /tmp
     # 解压安装包
-    tar zxvf metersphere-offline-installer-v3.0.0.tar.gz [名称待确认]
+    tar zxvf metersphere-offline-installer-v3.x.y.tar.gz 
     ```
+
 
 ## 4 修改安装配置
-### 4.1 修改配置
-!!! ms-abstract ""
-    在安装包解压后的目录，编辑修改安装参数。
-    ```
-    cd metersphere-offline-installer-v3.0.0
-    vi install.conf
-    ```
 
-### 4.2 安装配置文件说明
+### 4.1 安装配置文件说明
 !!! ms-abstract "安装配置文件说明"
     如果无特殊需求可以不修改，采用默认参数安装。如需修改配置参数，则修改配置文件 install.conf 相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装。已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 修改，修改完后执行 `msctl reload` 重新加载配置参数生效。
     ```
@@ -122,7 +117,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     ```
 
-### 4.3 数据库配置文件说明
+### 4.2  数据库配置文件说明
 !!! ms-abstract "注意"
     MeterSphere 采用 MySQL 8.0 存储系统数据，并对数据库部分配置项有指定要求，如果采用外置数据库请参考如下数据库配置进行修改。
     ```
@@ -171,9 +166,40 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */
     ```
 
-    安装完成后， /opt/metersphere 为MeterSphere应用目录， 配置文件、数据及日志等均存放在该目录下。
+    安装完成后， /opt/metersphere 为 MeterSphere 应用目录， 配置文件、数据及日志等均存放在该目录下。
 
-### 4.4 安装目录结构说明
+### 4.3 修改配置
+!!! ms-abstract ""
+    在安装包解压后的目录，编辑修改安装参数。
+    ```
+    cd metersphere-offline-installer-v3.x.y
+    vi install.conf
+    ```
+
+
+### 4.4 执行安装脚本
+!!! ms-abstract ""
+    ```
+    # 进入安装包目录
+    cd metersphere-offline-installer-v3.x.y
+    # 运行安装脚本
+    /bin/bash install.sh
+    ```
+
+    执行完安装脚本后，会自动加载镜像并运行容器，等提示安装完成后，可使用 watch -n 5 msctl status 查看各个组件运行状态。
+![服务状态](../img/installation/msctlstatus.png){ width="900px" }
+
+!!! ms-abstract ""
+     待所有组件都是 healthy 状态，通过浏览器登录 MeterSphere 平台。
+     ```
+     URL: http://服务器IP:8081
+     用户名: admin
+     初始密码: metersphere
+     ```
+
+
+### 4.5 安装目录结构说明
+
 !!! ms-abstract "安装目录结构说明"
     ```
     /opt/metersphere/
@@ -198,30 +224,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     
     ```
 
-## 5 执行安装脚本
-!!! ms-abstract ""
-    ```
-    # 进入安装包目录
-    cd metersphere-offline-installer-v3.0.0
-    # 运行安装脚本
-    /bin/bash install.sh
-    ```
 
-    执行完安装脚本后，会自动加载镜像并运行容器，等提示安装完成后，可使用 watch -n 5 msctl status 查看各个组件运行状态。
-![服务状态](../img/installation/msctlstatus.png){ width="900px" }
-
-!!! ms-abstract ""
-     待所有组件都是 healthy 状态，通过浏览器登录 MeterSphere 平台。
-    ```
-     URL: http://服务器IP:8081
-     用户名: admin
-     初始密码: metersphere
-
-    ```
-    企业用户安装后需手动设置 ${MS_BASE}/metersphere/.env 中的 MS_ENTERPRISE_ENABLE=true
-    并执行 `msctl reload` 来开启企业版功能。
-
-## 6 配置反向代理
+## 5 配置反向代理
 !!! ms-abstract "注意"
     如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```
@@ -260,3 +264,62 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         }
     }
     ```
+
+
+
+
+  
+## 6 离线升级
+
+!!! ms-abstract "注意"
+    升级前务必检查磁盘容量并对数据库进行备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。</br>
+    升级过程避免数据库执行定时任务造成数据损坏数据，请关闭正在运行的定时任务：
+     ```
+        #进入数据库
+        docker exec -it mysql sh
+        mysql -uroot -pPassword123@mysql
+        #关闭定时任务。
+        use metersphere;
+        update schedule set enable=0;
+        #退出
+        exit;
+     ```
+
+### 6.1 离线升级步骤
+  
+!!! ms-abstract ""
+
+    ```
+    #完成数据备份并停止服务
+    msctl stop
+
+    # 下载离线安装包并上传到服务器
+    安装包下载链接: https://community.fit2cloud.com/#/products/metersphere/downloads
+    
+    # 解压安装包
+    tar -zxvf metersphere-offline-installer-v3.x.y.tar.gz
+
+    # 进入离线部署包解压缩目录
+    cd metersphere-offline-installer-v3.x.y
+    
+    # 运行安装脚本
+    /bin/bash install.sh
+    
+    # 查看 MeterSphere 状态，各个组件都是 healthy 状态升级完成。
+     msctl status
+
+    ```
+
+!!! ms-abstract ""
+
+     升级完成后，批量启用定时任务。
+     ```
+        #进入数据库
+        docker exec -it mysql sh
+        mysql -uroot -pPassword123@mysql
+        #开启定时任务。
+        use metersphere;
+        update schedule set enable=1;
+        #退出
+        exit;
+     ```

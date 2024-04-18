@@ -44,10 +44,10 @@ nav:
     - 安装部署:
           - 网络端口要求: installation/network_port.md
           - Linux 单机部署:
-                - 离线安装: installation/offline_installation.md                
-                - 离线升级: installation/offline_upgrade.md
-                - 在线安装: installation/online_installation.md
-                - 在线升级: installation/online_upgrade.md
+                - 离线安装及升级: installation/offline_installation.md                
+#                - 离线升级: installation/offline_upgrade.md
+                - 在线安装及升级: installation/online_installation.md
+#                - 在线升级: installation/online_upgrade.md
           - Windows 单机部署: installation/offline_installation_windows.md
 #          - Kubernetes 部署: installation/kubernetes_installation.md
           - 部署 Task_Runner: installation/task_runner.md
@@ -97,28 +97,25 @@ nav:
               - 个人信息: user_manual/personal_center/information.md
           - X-Pack:
               - 概述: user_manual/x-pack/intro.md
-              - 组织: user_manual/x-pack/organization.md
-              - 自定义主题: user_manual/x-pack/custom_theme.md
-              - 消息模板: user_manual/x-pack/message.md
-              - 资源池: user_manual/x-pack/controller.md
-    - 使用教程: tutorial/use_tutorial.md
-    - 教学视频: teach_video/video_index.md
-    - 常见问题:
-          - 安装部署相关: faq/installation.md
-          - 测试跟踪相关: faq/test_track.md
-          - 接口测试相关: faq/api_test.md
-          - UI 测试相关: faq/ui_test.md
-          - 性能测试相关: faq/load_test.md
-          - 报表统计相关: faq/report_statistics.md
-          - 系统设置相关: faq/system_management.md
-          - 服务集成相关: faq/service_integration.md
-          - 企业版相关: faq/enterprise.md
+#    - 使用教程: tutorial/use_tutorial.md
+#    - 教学视频: teach_video/video_index.md
+#    - 常见问题:
+#          - 安装部署相关: faq/installation.md
+#          - 测试跟踪相关: faq/test_track.md
+#          - 接口测试相关: faq/api_test.md
+#          - UI 测试相关: faq/ui_test.md
+#          - 性能测试相关: faq/load_test.md
+#          - 报表统计相关: faq/report_statistics.md
+#          - 系统设置相关: faq/system_management.md
+#          - 服务集成相关: faq/service_integration.md
+#          - 企业版相关: faq/enterprise.md
+    - 插件列表: plugin.md
     - 开发文档:
           - 开发环境搭建: dev_manual.md
           - 接口自动化插件开发: automation_plugin_dev.md
-    - 用户案例: case_studies/user_cases.md
-    - 更新日志: about/changelog.md
-    - 安全公告: about/security_bulletins.md
+#    - 用户案例: case_studies/user_cases.md
+#    - 更新日志: about/changelog.md
+#    - 安全公告: about/security_bulletins.md
     - 联系我们: about/contact.md
 
 markdown_extensions:

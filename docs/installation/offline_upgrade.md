@@ -1,15 +1,19 @@
----
-description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
----
-
 !!! ms-abstract "注意"
     升级前务必检查磁盘容量并对数据库进行备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。
+    升级过程避免数据库执行定时任务造成数据操作损坏数据，请关闭正在运行的定时任务：
+     ```
+        #进入数据库
+        docker exec -it mysql sh
+        mysql -uroot -pPassword123@mysql
+        #关闭定时任务。
+        use metersphere;
+        update schedule set enable=0;
+        #退出
+        exit;
+     ```
 
-## 1 下载并解压安装包
-!!! ms-abstract ""
-    按照本文档 [离线安装](./offline_installation.md) 步骤， 下载新版本安装包解压，执行安装命令进行升级。<br>
   
-## 2 执行安装命令
+## 1 执行安装命令
 !!! ms-abstract ""
 
     ```
@@ -29,5 +33,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     /bin/bash install.sh
     
     # 查看 MeterSphere 状态，各个组件都是 healthy 状态升级完成。
-    msctl status
-    ```
+     msctl status
+
+!!! ms-abstract ""
+     升级完成后，批量启用定时任务。
+     ```
+        #进入数据库
+        docker exec -it mysql sh
+        mysql -uroot -pPassword123@mysql
+        #开启定时任务。
+        use metersphere;
+        update schedule set enable=1;
+        #退出
+        exit;
+     ```
