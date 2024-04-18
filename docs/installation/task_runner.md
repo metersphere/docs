@@ -60,10 +60,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【IP、端口】：Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控端口 9100。
   
 ## 2 本地执行部署 Task_Runner
-
-### 2.1 windows 部署
-
-
+### 2.1 Windows 系统部署
 !!! ms-abstract ""
      Windows 部署 task_runner 可使用 WSL 安装。 虚拟机配置如下：</br>
        
@@ -102,7 +99,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         ```
  ![WSL版本1](../img/installation/dis_pressure/check-version-1.png){ width="900px" }
 
-!!! ms-abstract "检查 Ubunt 是否安装完成"
+!!! ms-abstract "检查 Ubuntu 是否安装完成"
 
         示例中安装的 Ubuntu Name 为 "Ubuntu"， 如像上图出现 Ubuntu 版本为 1， 则继续执行命令：
         ```
@@ -116,7 +113,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "Docker 安装与配置"
         下载[Docker Desktop for Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)，双击 Docker Desktop Installer.exe 完成docker 的安装。
 
-        Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜单下的 WSL INTEGRATION，按下图设置后，点击右下角的`Apply & Restart`。
+        Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜单下的 WSL INTEGRATION，按下图设置后，点击右下角的 `Apply & Restart`。
 ![docker设置](../img/installation/dis_pressure/docker-settings.png){ width="900px" }
 
 
@@ -140,12 +137,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MS_INSTALL_MODE=task-runner
 
     
-    # 切换到 Ubunt 终端运行安装脚本
+    # 切换到 Ubuntu 终端运行安装脚本
     cd /mnt/d/metersphere-ce-online-installer-v3.X.y/metersphere-ce-online-installer-v3.x.y
     
     ./install.sh
     
-    # 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
+    # 查看 MeterSphere 状态，task-runner 状态为 healthy 安装完成。
     msctl status
 
     #查看 Ubuntu 映射 ip 地址
@@ -159,12 +156,53 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 
 !!! ms-abstract ""
-    
-    安装完成后，在【个人中心-本地执行】填写完整的访问 url：http://部署 task-runner 服务器 ip:8000 。例如：此处 ip 为192.168.144.105，因此本地运行地址为： http://192.168.144.105:8000。
-!!! ms-abstract "注意"
-    此处配置的本地调试地址，需要和 MeterSphere 主服务网络互通。
+    安装完成后，在【个人中心-本地执行】填写完整的访问 url：`http://localhost:8000` 。
 ![配置主机3](../img/installation/dis_pressure/本地.png){ width="900px" }
 
-### 2.2 mac 部署
+### 2.2 Mac 系统部署
 !!! ms-abstract ""
-    打开终端，按照以下步骤执行安装：
+    安装 OrbStack ，下载地址：https://orbstack.dev/download ,选择对应芯片架构的安装包下载、安装。
+
+!!! ms-abstract "说明"
+    如果是 Apple 芯片，需要开启 `Use Rosetta to run Intel code` ,开启后重启 OrbStack。<br>
+    Intel 芯片无需开启 `Use Rosetta to run Intel code` 。
+![mac 部署](../img/installation/dis_pressure/mac部署1.png){ width="900px" }
+
+!!! ms-abstract ""
+    在 OrbStack 创建 Ubuntu 虚拟机，操作系统建议选择 `Ubuntu 22.05 LTS`，CPU 架构选择 `Intel` 。
+![mac 部署](../img/installation/dis_pressure/mac部署2.png){ width="900px" }
+
+!!! ms-abstract ""
+    Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task-Runner ，具体步骤参考：[服务端部署 Task_Runner](#1)。
+        
+        
+        ```
+        # 切换 root 用户
+        sudo -i
+
+        # 安装 wget ，如果已经忽略此步
+        sudo apt-get update
+        sudo apt-get install wget
+        wget --version
+        # 下载在线安装包
+        wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
+        # 解压安装包
+        tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
+        
+        # 进入离线部署包解压缩目录
+        cd metersphere-ce-online-installer-v3.x.y
+        
+        # 修改部署模式为 task-runner
+        vi install.conf
+        
+        # 运行安装脚本
+        /bin/bash install.sh
+        
+        # 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
+        msctl status
+        ```
+![mac 部署](../img/installation/dis_pressure/mac部署2.png){ width="900px" }
+
+!!! ms-abstract ""
+    安装完成后，在【个人中心-本地执行】填写完整的访问 url：`http://localhost:8000` 。
+![配置主机3](../img/installation/dis_pressure/本地.png){ width="900px" }
