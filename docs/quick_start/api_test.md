@@ -71,12 +71,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【服务端执行】，执行成功后在执行结果处点击【断言】查看断言结果。
 ![!执行](../img/quick_start/api/添加断言2.png){ width="900px" }	
 
-## 5 保存为用例
+## 7 保存为用例
 !!! ms-abstract "" 
     如下图，接口调试成功后，点击【保存为新用例】快速创建用例。
 ![!创建用例](../img/quick_start/api/创建用例1.png){ width="900px" }		
 
-## 6 创建场景
+## 8 创建场景
 !!! ms-abstract ""
     如下图，点击【序号1】或者【序号2】创建场景。
 ![!创建场景](../img/quick_start/api/创建场景1.png){ width="900px" }
@@ -93,7 +93,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【服务端执行】生成报告。
 ![!创建场景](../img/quick_start/api/创建场景4.png){ width="900px" }
 
-## 7 查看报告
+## 9 查看报告
 !!! ms-abstract "" 
     如下图，在【报告】页面查看场景 `文章管理流程` 的【场景报告】。
 ![!查看测试报告](../img/quick_start/api/查看报告1.png){ width="900px" }

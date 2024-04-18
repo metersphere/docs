@@ -33,7 +33,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "说明"
     - 参数名：参数名。
     - 类型：默认 string，可选 integer、number、array、json、file。
-    - 参数值：参数值或者 [内置函数](../api_test/request_params#2)。
+    - 参数值：参数值或者 [内置函数](../api_test/functions.md)。
     - 长度区间：字符串长度限制，接口定义处使用，这里无需填写。
     - 描述：描述信息。
     - 更多（Content-Type）：手动输入或者选择以下 Content-Type 类型。
@@ -334,7 +334,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!提取参数](../../img/api_test/extend_features/提取参数8.png){ width="900px" }     
 
 !!! ms-abstract "" 
-    - XPath 提取。
+    - XPath 提取。<br>
     输入【参数名称】，选择【参数类型】，选择【XPath】提取方式，选择提取对象的【范围】。
 ![!提取参数](../../img/api_test/extend_features/提取参数9.png){ width="900px" }      
 
@@ -349,6 +349,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "" 
     在提取参数列表处，点击【...】可快捷设置【匹配结果规则】和【响应内容格式】。
 ![!提取参数](../../img/api_test/extend_features/提取参数12.png){ width="900px" }     
+
+
+
 
 !!! ms-abstract "参数类型" 
     - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
@@ -367,7 +370,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 7.5 代码片段快捷功能
 !!! ms-abstract "说明"
-    - 同上 [代码片段快捷功能](#15)。
+    - 同上 [代码片段快捷功能](#65)。
 
 ## 8 断言
 ### 8.1 状态码
