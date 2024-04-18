@@ -67,7 +67,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 进入解压目录
     cd metersphere-online-installer-v3.x.y
     
-    # 修改安装参数，如果使用默认默认安装可跳过此步
+    # 修改安装参数，如果使用默认安装可跳过此步
     # vi install.conf
     
     # 执行install.sh安装脚本
@@ -131,7 +131,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "注意"
     升级前务必检查磁盘容量并对数据库进行备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。</br>
-        升级过程避免数据库执行定时任务造成数据操作损坏数据，请关闭正在运行的定时任务：
+        升级过程避免数据库执行定时任务造成数据损坏数据，请关闭正在运行的定时任务：
      ```
         #进入数据库
         docker exec -it mysql sh
