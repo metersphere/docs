@@ -528,20 +528,250 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
             <td>使用 HTML 编码对字符串进行编码</td>
         </tr>
         <tr>
-            <td><b>${__split}</b></td>
-            <td>将字符串拆分为变量</td>
+            <td><b>${__escapeXml}</b></td>
+            <td>使用 XML 编码对字符串进行编码</td>
         </tr>
         <tr>
-            <td><b>${__eval}</b></td>
-            <td>计算变量表达式</td>
+            <td><b>${__unescape}</b></td>
+            <td>处理包含 Java 转义符的字符串（例如 \n 和 \t）</td>
         </tr>
         <tr>
-            <td><b>${__evalVar}</b></td>
-            <td>计算存储在变量中的表达式</td>
+            <td><b>${__unescapeHtml}</b></td>
+            <td>解码 HTML 编码的字符串</td>
         </tr>
         <tr>
-            <td><b>${__V}</b></td>
-            <td>评估变量名</td>
+            <td><b>${__urldecode}</b></td>
+            <td>解码 application/x-www-form-urlencoded 字符串</td>
+        </tr>
+        <tr>
+            <td><b>${__urlencode}</b></td>
+            <td>将字符串编码为 application/x-www-form-urlencoded 字符串</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.3 脚本
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__groovy}</b></td>
+            <td>运行 Apache Groovy 脚本</td>
+        </tr>
+        <tr>
+            <td><b>${__BeanShell}</b></td>
+            <td>运行 BeanShell 脚本</td>
+        </tr>
+        <tr>
+            <td><b>${__unescape}</b></td>
+            <td>处理包含 Java 转义符的字符串（例如 \n 和 \t）</td>
+        </tr>
+        <tr>
+            <td><b>${__javaScript}</b></td>
+            <td>处理 JavaScript (Nashorn)</td>
+        </tr>
+        <tr>
+            <td><b>${__jexl2}</b></td>
+            <td>评估 Commons Jexl2 表达式</td>
+        </tr>
+        <tr>
+            <td><b>${__jexl3}</b></td>
+            <td>评估 Commons Jexl3 表达式</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.4 时间
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__time}</b></td>
+            <td>以各种格式返回当前时间</td>
+        </tr>
+        <tr>
+            <td><b>${__timeShift}</b></td>
+            <td>返回各种格式的日期，并添加指定的秒/分钟/小时/天量</td>
+        </tr>
+        <tr>
+            <td><b>${__dateTimeConvert}</b></td>
+            <td>将日期或时间从源格式转换为目标格式</td>
+        </tr>
+        <tr>
+            <td><b>${__RandomDate}</b></td>
+            <td>生成特定日期范围内的随机日期</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.5 属性
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__isPropDefined}</b></td>
+            <td>测试属性是否存在</td>
+        </tr>
+        <tr>
+            <td><b>${__property}</b></td>
+            <td>读取属性</td>
+        </tr>
+        <tr>
+            <td><b>${__P}</b></td>
+            <td>读取属性（简写方法）</td>
+        </tr>
+        <tr>
+            <td><b>${__setProperty}</b></td>
+            <td>设置 JMeter 属性</td>
+        </tr>
+        <tr>
+            <td><b>${__isVarDefined}</b></td>
+            <td>测试变量是否存在</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.6 数字
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__counter}</b></td>
+            <td>生成一个递增的数字</td>
+        </tr>
+        <tr>
+            <td><b>${__intSum}</b></td>
+            <td>添加 int 数字</td>
+        </tr>
+        <tr>
+            <td><b>${__longSum}</b></td>
+            <td>添加长数字</td>
+        </tr>
+        <tr>
+            <td><b>${__Random}</b></td>
+            <td>生成一个随机数</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.7 文件
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__StringFromFile}</b></td>
+            <td>从文件中读取一行</td>
+        </tr>
+        <tr>
+            <td><b>${__FileToString}</b></td>
+            <td>读取整个文件</td>
+        </tr>
+        <tr>
+            <td><b>${__CSVRead}</b></td>
+            <td>从 CSV 分隔文件中读取</td>
+        </tr>
+        <tr>
+            <td><b>${__XPath}</b></td>
+            <td>使用 XPath 表达式从文件中读取</td>
+        </tr>
+        <tr>
+            <td><b>${__StringToFile}</b></td>
+            <td>将字符串写入文件</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.8 信息
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__digest}</b></td>
+            <td>生成摘要（SHA-1、SHA-256、MD5...）</td>
+        </tr>
+        <tr>
+            <td><b>${__threadNum}</b></td>
+            <td>获取线程组号</td>
+        </tr>
+        <tr>
+            <td><b>${__threadGroupName}</b></td>
+            <td>获取线程组名称</td>
+        </tr>
+        <tr>
+            <td><b>${__samplerName}</b></td>
+            <td>获取采样器名称（标签）</td>
+        </tr>
+        <tr>
+            <td><b>${__machineIP}</b></td>
+            <td>获取本机IP地址</td>
+        </tr>
+        <tr>
+            <td><b>${__machineName}</b></td>
+            <td>获取本地机器名</td>
+        </tr>
+        <tr>
+            <td><b>${__TestPlanName}</b></td>
+            <td>返回当前测试计划的名称</td>
+        </tr>
+    </tbody>
+</table>
+
+### 2.9 字符串
+<table>
+    <tbody>
+        <tr>
+            <th width="300px">变量</th>
+            <th width="600px">说明</th>
+        </tr>
+        <tr>
+            <td><b>${__log}</b></td>
+            <td>记录（或显示）一条消息（并返回值）</td>
+        </tr>
+        <tr>
+            <td><b>${__logn}</b></td>
+            <td>记录（或显示）一条消息（空返回值）</td>
+        </tr>
+        <tr>
+            <td><b>${__threadGroupName}</b></td>
+            <td>获取线程组名称</td>
+        </tr>
+        <tr>
+            <td><b>${__RandomString}</b></td>
+            <td>生成一个随机字符串</td>
+        </tr>
+        <tr>
+            <td><b>${__UUID}</b></td>
+            <td>随机生成一个 UUID</td>
+        </tr>
+        <tr>
+            <td><b>${__char}</b></td>
+            <td>从数字列表生成 Unicode 字符值</td>
+        </tr>
+        <tr>
+            <td><b>${__changeCase}</b></td>
+            <td>根据不同模式更改大小写</td>
+        </tr>
+        <tr>
+            <td><b>${__regexFunction}</b></td>
+            <td>使用正则表达式解析先前的响应</td>
         </tr>
     </tbody>
 </table>
