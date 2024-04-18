@@ -50,7 +50,7 @@ nav:
 #                - 在线升级: installation/online_upgrade.md
           - Windows 单机部署: installation/offline_installation_windows.md
 #          - Kubernetes 部署: installation/kubernetes_installation.md
-          - 部署 Task_Runner: installation/task_runner.md
+          - Task_Runner 部署: installation/task_runner.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
     - 快速开始:
