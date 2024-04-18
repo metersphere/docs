@@ -155,8 +155,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!服务端执行](../../img/api_test/api_automation/服务端执行.png){ width="900px" }
 
 !!! ms-abstract "注意"
-    - **新增资源池**：除了默认资源池，可新增其他资源池。详情参考：[新增资源池](../system_management/system.md#5)
-    - **切换资源池**：可以切换其他资源池进行使用。详情参考：[切换资源池](../project_management/project_permissions.md#23)
+    社区版只有一个默认资源池，无法新增和切换资源池。企业版可新增和切换资源池。详情参考：[资源池](../x-pack/controller.md)
 
 ### 3.2 本地执行
 !!! ms-abstract ""
@@ -164,8 +163,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!本地执行](../../img/api_test/api_automation/本地执行.png){ width="900px" }
 
 !!! ms-abstract "注意"
-    本地执行需在本地安装 task_runner 服务。 <br>
-    需要在【个人信息】处配置本地 task_runner 的地址。详情参考：[配置本地执行](../personal_center/information#4)
+    本地执行需在本地安装 task_runner 服务。详情参考：[task_runner 部署](../../installation/task_runner.md#2-task_runner) <br>
+    需要在【个人信息】处配置本地 task_runner 的地址。详情参考：[配置本地执行地址](../personal_center/information.md#4)
 
 ## 4 场景控制
 !!! ms-abstract ""
