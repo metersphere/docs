@@ -38,7 +38,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     msctl status
     ```
 ![配置主机3](../img/installation/dis_pressure/修改模式.png){ width="900px" }
-
+![配置主机3](../img/installation/dis_pressure/status.png){ width="900px" }
 
 
 !!! ms-abstract ""
