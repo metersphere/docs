@@ -47,6 +47,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     - 后端: [Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm)
     - 前端: [Vue.js](https://vuejs.org/)
-    - 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/), [Redis](https://redis.io/), [Minio](https://min.io/), [Prometheus](https://prometheus.io/)
+    - 中间件: [MySQL](https://www.mysql.com/), [Kafka](https://kafka.apache.org/), [Redis](https://redis.io/), [MinIO](https://min.io/), [Prometheus](https://prometheus.io/)
     - 基础设施: [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
     - 测试引擎: [JMeter](https://jmeter.apache.org/)
