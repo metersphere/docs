@@ -145,14 +145,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 查看 MeterSphere 状态，task-runner 状态为 healthy 安装完成。
     msctl status
 
-    #查看 Ubuntu 映射 ip 地址
-     ip addr 
-
     ```
 ![配置主机3](../img/installation/dis_pressure/修改模式w.png){ width="900px" }
 ![配置主机3](../img/installation/dis_pressure/部署w.png){ width="900px" }
 ![配置主机3](../img/installation/dis_pressure/ww.png){ width="900px" }
-![配置主机3](../img/installation/dis_pressure/ipaddr.png){ width="900px" }
+
 
 
 !!! ms-abstract ""
