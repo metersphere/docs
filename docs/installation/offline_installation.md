@@ -85,14 +85,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MS_KAFKA_HOST=10.1.11.29
     MS_KAFKA_PORT=9092
 
-    # 企业版配置
-    ## 是否使用企业版
-    MS_ENTERPRISE_ENABLE=false
-
-    # UI容器配置
-    ## 是否使用外部grid
-    MS_EXTERNAL_SELENIUM=false
-
     # minio 配置
     ## 是否使用外部minio
     MS_EXTERNAL_MINIO=false
