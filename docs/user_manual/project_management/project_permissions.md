@@ -76,7 +76,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!误报规则功能](../../img/project_management/project_permissions/误报规则功能.png){ width="900px" }
 
-## 3 成员 (有缺陷，后续替换截图)
+## 3 成员
 !!! ms-abstract ""
     点击【成员】，进入成员操作页面。
 ![!成员](../../img/project_management/project_permissions/成员.png){ width="900px" }
@@ -92,7 +92,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!表格设置页面](../../img/project_management/project_permissions/表格设置页面.png){ width="900px" }
 
 !!! ms-abstract ""
-    成员【启用/禁用】状态需要在【系统设置-组织-成员】进行设置。
+    成员【启用/禁用】状态需要在【系统设置-系统-用户】进行设置。
 ![!启用禁用状态](../../img/project_management/project_permissions/启用禁用状态.png){ width="900px" }
 
 !!! ms-abstract ""
