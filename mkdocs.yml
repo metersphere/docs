@@ -114,9 +114,7 @@ nav:
 #          - 服务集成相关: faq/service_integration.md
 #          - 企业版相关: faq/enterprise.md
     - 插件列表: plugin.md
-    - 开发文档:
-          - 开发环境搭建: dev_manual.md
-          - 接口自动化插件开发: automation_plugin_dev.md
+    - 开发文档: dev_manual.md
 #    - 用户案例: case_studies/user_cases.md
 #    - 更新日志: about/changelog.md
 #    - 安全公告: about/security_bulletins.md
