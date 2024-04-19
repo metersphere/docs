@@ -50,7 +50,7 @@ nav:
 #                - 在线升级: installation/online_upgrade.md
           - Windows 单机部署: installation/offline_installation_windows.md
 #          - Kubernetes 部署: installation/kubernetes_installation.md
-          - Task_Runner 部署: installation/task_runner.md
+          - Task Runner 部署: installation/task_runner.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
     - 快速开始:
@@ -114,9 +114,7 @@ nav:
 #          - 服务集成相关: faq/service_integration.md
 #          - 企业版相关: faq/enterprise.md
     - 插件列表: plugin.md
-    - 开发文档:
-          - 开发环境搭建: dev_manual.md
-          - 接口自动化插件开发: automation_plugin_dev.md
+    - 开发文档: dev_manual.md
 #    - 用户案例: case_studies/user_cases.md
 #    - 更新日志: about/changelog.md
 #    - 安全公告: about/security_bulletins.md
