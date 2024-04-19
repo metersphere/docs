@@ -14,23 +14,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     以配置【企业微信】机器人为例。创建企业微信群，选择【... -添加群机器人】后，获取【webhook】地址。
-![!创建webhook机器人](../../img/project_management/message_management/群创建机器人.png){ width="900px" }
+![!群创建机器人](../../img/project_management/message_management/群创建机器人.png){ width="900px" }
 
 !!! ms-abstract ""
     填写【webhook】地址进行保存。
-![!创建webhook机器人](../../img/project_management/message_management/填写企业微信具体信息.png){ width="900px" }
+![!填写企业微信具体信息](../../img/project_management/message_management/填写企业微信具体信息.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
     - 【编辑】编辑机器人名称、Webhook 地址。
     - 【删除】删除机器人后将不再推送绑定的消息事件！！！
     - 【启用/禁用】启用则会显示在消息设置列表中，禁用不会显示。
 
-![!创建webhook机器人](../../img/project_management/message_management/企业微信机器人功能.png){ width="900px" }
+![!企业微信机器人功能](../../img/project_management/message_management/企业微信机器人功能.png){ width="900px" }
 
 ## 2 消息设置 
 !!! ms-abstract ""
     点击【消息设置】进入消息设置页面，设置【缺陷管理】、【用例管理】、【接口测试】、【定时任务】的消息通知。
-![!自定义模板](../../img/project_management/message_management/消息设置页面.png){ width="900px" } 
+![!消息设置页面](../../img/project_management/message_management/消息设置页面.png){ width="900px" } 
 
 !!! ms-abstract "说明"
     - 【缺陷管理】缺陷的创建、更新、删除、评论、执行完成均可设置消息通知。
@@ -40,7 +40,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     以【缺陷管理】中【创建】功能为例，开启企业微信并设置消息通知接收人。
-![!自定义模板](../../img/project_management/message_management/缺陷创建通知.png){ width="900px" } 
+![!缺陷创建通知](../../img/project_management/message_management/缺陷创建通知.png){ width="900px" } 
+
+!!! ms-abstract "注意"
+    当创建人和操作人是同一人时，不会发消息通知。
 
 !!! ms-abstract ""
     点击【缺陷管理-创建缺陷】，填写缺陷内容后进行创建，企业微信群接收到消息通知。
