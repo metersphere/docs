@@ -17,7 +17,7 @@
             <td>接口测试</td>
             <td>企业版</td>
             <td>实现 tcp 协议的接口测试</td>
-            <td>联系商务或客户成功<a href="https://jinshuju.net/f/CzzAOe"> 试用企业版 </a></td>
+            <td><a href="https://jinshuju.net/f/CzzAOe"> 联系商务</a>或客户成功</td>
         </tr>
          <tr>
             <td>2</td>
@@ -26,7 +26,7 @@
             <td>项目管理</td>
             <td>企业版</td>
             <td>对接 jira 平台，实现需求的关联、缺陷的创建及同步</td>
-            <td>联系商务或客户成功<a href="https://jinshuju.net/f/CzzAOe"> 试用企业版 </a></td>
+            <td><a href="https://jinshuju.net/f/CzzAOe"> 联系商务</a>或客户成功</td>
         </tr>
          <tr>
             <td>3</td>
