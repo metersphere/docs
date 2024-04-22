@@ -132,12 +132,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     spring.datasource.username=root
 
     # kafka 配置，result-hub 服务需要使用 kafka 进行测试结果的收集和处理
-    kafka.partitions=3
-    kafka.replicas=1
-    kafka.topic=local-metric
-    kafka.bootstrap-servers=172.16.10.155:9092 
-    kafka.log.topic=local-log
-    kafka.test.topic=test
+    kafka.bootstrap-servers=172.16.10.155:9092
 
     # TCP Mock 端口范围
     tcp.mock.port=10000
