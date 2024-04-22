@@ -7,7 +7,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 服务端部署 Task Runner
 
 !!! ms-abstract ""
-部署 Task-Runner，需要采用服务器独立部署。 部署服务器要求：
+部署 Task Runner，需要采用服务器独立部署。 部署服务器要求：
 
 
         * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
