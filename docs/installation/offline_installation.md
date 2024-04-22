@@ -104,9 +104,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MS_RESULT_MEM_LIMIT=1g
     MS_KAFKA_MEM_LIMIT=1g
 
-    ## TOTP
+    ## TOTP 执行机接口开启认证
     MS_TOTP_ENABLED=false
-
+    MS_TOTP_SECRET=Password123@totp
     ```
 
 ### 4.2  数据库配置文件说明
