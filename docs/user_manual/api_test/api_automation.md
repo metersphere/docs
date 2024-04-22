@@ -34,6 +34,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ### 1.3 前/后置
 !!! ms-abstract ""
     场景前后置可以进行脚本操作和设置等待时间。详情参考：[前后置操作](request_params.md/#6)
+!!! ms-abstract "注意"
+    场景前置操作中的等待时间为场景中每一个步骤前添加等待时间。
 ![!场景前后置](../../img/api_test/api_automation/场景前后置.png){ width="900px" }
 
 ### 1.4 断言
