@@ -5,31 +5,30 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 项目结构
 ```
 .
-├── Jenkinsfile                                     # 构建JAR包使用的 jenkinsfile
+├── Jenkinsfile                                     # 构建镜像使用的 jenkinsfile
+├── Dockerfile                                      # 构建镜像使用的 Dockerfile
 ├── LICENSE
 ├── OWNERS
 ├── README.md                                       # 项目中文介绍
 ├── README-EN.md                                    # 项目英文介绍
 ├── SECURITY.md                                     # 安全说明
-├── CODE_OF_CONDUCT.md                        
+├── CODE_OF_CONDUCT.md                              # 
 ├── CONTRIBUTING.md 
 ├── build.md                                        # 构建过程
 ├── backend                                         # 后端项目主目录
-│   ├── app                                         # 后端代码目录
+│   ├── app                                   
 │   ├── framework
 │   ├── app
-│   ├── pom.xml                                     # 后端 maven 项目使用的 pom 文件
+│   ├── pom.xml                               # 后端 maven 项目使用的 pom 文件
 │   └── .gitignore                                  
 ├── frontend                                        # 前端项目主目录
-│   ├── public
-│   ├── src                                         # 前端代码目录
 │   ├── .husky
-│   ├── config
+│   ├── config                                # 项目构建配置
 │   ├── public
-│   ├── src
+│   ├── src                                   # 前端代码目录
 │   ├── types
-│   ├── .env.development
-│   ├── .env.production
+│   ├── .env.development                      # 开发环境变量声明
+│   ├── .env.production                       # 生产环境变量声明
 │   ├── .eslintignore
 │   ├── .eslintrc.js
 │   ├── .eslintrc-auto-import.json
@@ -38,13 +37,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 │   ├── .prettierrc.js
 │   ├── .stylelintrc.js
 │   ├── babel.config.js
-│   ├── commitlint.config.js
-│   ├── components.d.ts
-│   ├── Dockerfile
-│   ├── index.html
-│   ├── nginx.conf
-│   ├── package.json
-│   ├── pom.xml
+│   ├── commitlint.config.js                   # commitlint 配置，校验 commit 信息
+│   ├── components.d.ts                        # 组件注册 TS 声明
+│   ├── Dockerfile                             # 构建前端应用使用的 Dockerfile
+│   ├── index.html                             # 单页面html模板
+│   ├── nginx.conf                             # Nginx 配置文件
+│   ├── package.json                           # 前端项目中的元数据文件
+│   ├── pom.xml                                # 前端 maven 项目使用的 pom 文件
 │   ├── postcss.config.js
 │   ├── README.md
 │   ├── tailwind.config.js
@@ -52,14 +51,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 │   ├── vitest.config.ts
 │   ├── .editorconfig
 │   ├── .gitignore
-│   ├── babel.config.js
+│   ├── babel.config.js                        # babel配置，支持JSX
 │   ├── package.json
-│   ├── vue.config.js                               # 前端 maven 项目使用的 pom 文件
-│   └── 代码规范.MD                                      # 系统设置模块使用的 pom 文件
+│   ├── vue.config.js                               
+│   └── 代码规范.MD                                   
 ├── .gitignore
 ├── mvnw
 ├── mvnw.cmd
-└── pom.xml                                         # 整体 maven 项目使用的 pom 文件
+└── pom.xml                                           # 整体 maven 项目使用的 pom 文件
 ```
 
 ## 2 配置开发环境
@@ -69,11 +68,14 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ### 2.2 启动
 !!! ms-abstract ""
-    在启动 MeterSphere 服务之前要先启动 Mysql、Redis、Kafka、Minio 等服务。<br>
-    MeterSphere 后端使用了 Java 语言的 Spring Cloud 框架，并使用 Maven 作为项目管理工具。开发者需要先在开发环境中安装 JDK 21 及 Maven 3.8.6+。<br>
+    在启动 MeterSphere 服务之前要先启动 MySql、Redis、Kafka、Minio 等服务。<br>
+    MeterSphere 后端使用了 Java 语言的 Spring Boot 框架，并使用 Maven 作为项目管理工具。<br>
+    开发者需要先在开发环境中安装：
+        
+        JDK 21 
+        Maven 3.8.6 +
 
-    - **初始化配置**<br>
-    （1）数据库初始化<br>
+    - **数据库初始化**<br>
     MeterSphere 使用 MySQL 数据库 v8 版本。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改开发环境中的数据库配置文件。<br>
     
     ```
@@ -122,7 +124,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
 
-    （2）MeterSphere 配置文件<br>
+    - **MeterSphere 配置文件**<br>
     MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/metersphere.properties，请参考下列配置创建对应目录及配置文件。
 
     ```
@@ -132,64 +134,48 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     spring.datasource.username=root
 
     # kafka 配置，result-hub 服务需要使用 kafka 进行测试结果的收集和处理
-    kafka.partitions=3
-    kafka.replicas=1
-    kafka.topic=local-metric
-    kafka.bootstrap-servers=172.16.10.155:9092 
-    kafka.log.topic=local-log
-    kafka.test.topic=test
-
-    # TCP Mock 端口范围
-    tcp.mock.port=10000
-    
-    # task-runner 所使用的 jmeter 镜像版本
-    jmeter.image=registry.fit2cloud.com/metersphere/jmeter-master:0.0.8
-    
-    jmeter.report.granularity=10000
-    jmeter.heap=-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m
-
-    session.timeout=84200
-
-    # Redis 配置
-    spring.session.store-type=redis
-    spring.redis.host=172.16.200.18
-    spring.redis.port=6379
-    spring.redis.database=1
-    spring.redis.password=Password123@redis
-    
-    
-    # 启动模式，lcoal 表示以本地开发模式启动
-    run.mode=local
+    kafka.bootstrap-servers=172.16.10.155:9092
     
     # minio 配置
     minio.endpoint=http://172.16.200.18:9000
     minio.access-key=admin
     minio.secret-key=Password123@minio
-    
-    ## CAS
-    cas.server.url=
-    cas.client.url=
-    cas.client.name=                       
     ```
 
 !!! ms-abstract ""
 
-    （3）项目打包<br>
+    - **Redis 配置文件**<br>
+    MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/redisson.yml，请参考下列配置创建对应目录及配置文件。
 
-    在项目根目录下执行以下命令 <br>
     ```
-    1. 依赖打包
-    # parent pom 安装到本地仓库, sdk 也进行安装
+    # Redis 配置
+    singleServerConfig:
+    password: Password123@redis
+    address: "redis://localhost:6379"
+    database: 1 
+    ```
+
+!!! ms-abstract ""
+
+    - **项目打包**<br>
+    在项目根目录下执行以下命令
+
+    ```
+    1 依赖打包 
+    # 此命令会将parent pom 安装到本地仓库，其他外部子工程可以获得最新的 <properties></properties>
     ./mvnw install -N
+
+    # 此命令会将 domain sdk ，其他外部子工程可以获得最新的 jar
     ./mvnw clean install -DskipTests -DskipAntRunForJenkins --file backend/pom.xml
-     
-    2. 整体打包
+    
+    2 整体打包
     ./mvnw clean package
     ```
 ![server-start](./img/dev/project_package.png){ width="900px" } 
 
 !!! ms-abstract ""
-    启动服务。
+    
+    - **启动服务**<br>
 
 ![server-start](./img/dev/build-start.png){ width="900px" }
 ![server-start](./img/dev/satrt_success.png){ width="900px" } 

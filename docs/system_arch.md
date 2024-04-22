@@ -3,7 +3,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 ## 1 整体架构
-
 ![整体架构](./img/system-arch.png){ width="900px" }
 
 !!! ms-abstract "组件说明"

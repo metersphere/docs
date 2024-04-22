@@ -30,7 +30,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 3 界面展示
 
-![!界面说明2](./img/api/接口测试首页.png){ width="900px" }
+![!界面说明2](./img/接口测试首页.png){ width="900px" }
 
 ## 4 了解更多
 !!! ms-abstract ""
