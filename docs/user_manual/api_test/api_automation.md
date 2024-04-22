@@ -113,15 +113,19 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "说明"
 
-    - **表达式类型**：可分为【条件】和【表达式】两种类型。
+    - **表达式类型**：可分为条件和表达式两种类型。
         - **条件**： 匹配条件可以下拉选择。
         - **表达式**：数值表达式，如 1 == 1，1 !=  2，2 > 1 ；
                      字符串表达式，如 "abc".equals("abc")，"abc".contains("a")。
     - **超时时间**：由于 while 循环的特殊性，当条件满足时将会一直循环，为了避免死循环的情况出现，用户可以配置循环超时时间，到超过该时间后，不管循环条件是否满足，循环都将被终止。
 
 !!! ms-abstract ""
-    【forEach 循环】，将请求拖拽到控制器里，设置 forEach 遍历变量、时间间隔。
+    【forEach 循环】，将请求拖拽到控制器里，设置 forEach 遍历变量、时间间隔。以列表变量为例进行 forEach 循环
+![!forEach控制器](../../img/api_test/api_automation/foreach列表变量值.png){ width="900px" }
+
 ![!forEach控制器](../../img/api_test/api_automation/forEach控制器.png){ width="900px" }
+
+![!forEach控制器](../../img/api_test/api_automation/forEach循环执行结果.png){ width="900px" }
 
 !!! ms-abstract "注意"
     - **存储形式**：forEach 循环一般配合列表变量或提取列表变量或自定义列表变量进行使用，存储形式为 ID_1，ID_2，ID_3 的一组变量，才能进入 forEach 循环。 <br>
