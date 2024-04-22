@@ -10,7 +10,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     * 磁盘空间: 200G
 
 ## 2 安装部署
-### 2.1 在 Windows 系统中安装虚拟机
+### 2.1 安装虚拟机
 !!! ms-abstract ""
 	电脑上没有安装虚拟化软件，需要先安装虚拟化软件。市面上主流的桌面虚拟化软件有 VMware Workstation 和 VirtualBox。如果电脑上已经安装了其中一款软件，可以直接跳过这一部分。  
 	示例选择了 VirtualBox，因为 VirtualBox 是免费的，若有需求也可以自行选择安装收费的 VMware Workstation。  
@@ -26,7 +26,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 	虚拟化软件 VirtualBox 已经安装完成，点击 “完成” 会自动打开 VirtualBox 虚拟机。
 
-### 2.2  虚拟机导入 Ubuntu 系统 OVA 包
+### 2.2 导入 Ubuntu 系统 OVA 包
 !!! ms-abstract ""
 	在虚拟机中安装 Ubuntu 系统，可以下载 MeterSphere 提供的 Ubuntu OVA 文件，直接导入到 VirtualBox 就可以使用，省去安装系统的过程。  
 	通过网盘链接下载 Ubuntu OVA 文件: https://pan.baidu.com/s/1SDy2HZNlDQYCy6J7wPsmtw?pwd=423w  提取码：423w
@@ -59,7 +59,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 	查看虚拟机的 IP，输入命令 ip a，每个环境的 IP 地址都不一样，本次演示环境的虚拟机 IP 地址为 192.168.11.182
 ![启动](../img/installation/windows/查看虚拟机IP.png){ width="900px" }
 
-### 2.3  Ubuntu 系统中安装 MeterSphere
+### 2.3 安装 MeterSphere
 !!! ms-abstract ""
 	使用远程连接工具 XShell 或者 MobaXterm 进行连接。以 MobaXterm 连接为例，输入 IP、用户名(root)、密码(passwd)登录服务器。
 ![启动](../img/installation/windows/powershell.png){ width="900px" }
