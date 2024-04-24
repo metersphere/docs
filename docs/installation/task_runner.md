@@ -39,7 +39,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
 
      - **编辑资源池** <br>
-     【系统设置-系统-资源池】点击新建资源池，在弹出的界面中为资源池名称、描述、站点URL、应用组织、用途、类型、添加资源池方式等信息。
+     【系统设置-系统-资源池】点击新建资源池，在弹出的界面中为资源池名称、描述、内网 URL、应用组织、用途、类型、添加资源池方式等信息。
 ![配置主机3](../img/installation/dis_pressure/资源池添加.png){ width="900px" }
 
 !!! ms-abstract "注意"
@@ -48,20 +48,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "操作说明"
  
-     - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http://服务器IP:8081  ，站点 URL 地址和部署 task-runner 资源池服务器要求网络互通。</br>
-    - 【最大并发数】：单机部署 task-runner 最大支持 2000 并发 。</br>
-    - 【IP、端口】：Node 资源池部署服务器的真实 ip ，默认 8000 端口， Monitor 为监控端口 9100。
+    - 【内网URL】：资源池部署在内网时，可走内网地址，如 http://内网服务器IP:8081 。</br>
+    - 【IP、端口】：资源池部署服务器的 IP ，默认端口 8000 ，Monitor 为监控端口，默认是 9100。
   
 ## 2 本地执行部署 Task Runner
 ### 2.1 Windows 系统部署
 !!! ms-abstract ""
      Windows 部署 task-runner 可使用 WSL 安装。 虚拟机配置如下：</br>
-       
 
-        * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
-        * CPU/内存: 4C8G 
-        * 磁盘空间: 50 G
-
+    -  **操作系统**：Ubuntu 22 / CentOS 7 64 位系统
+    -  **CPU/内存**：4C8G
+    -  **磁盘空间**: 50 G
 
 !!! ms-abstract "安装 WSL"
         
