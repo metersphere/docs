@@ -19,7 +19,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
   	- **Redis**: MeterSphere 项目登录用户的Session存储在 Redis。
   	- **Kafka**: 接收 Task Runner 产生的接口、UI、性能测试的结果数据。
   	- **Prometheus**: 收集压力机及被测系统的监控数据。
-  	- **Docker Engine**: 为 Node Controller 提供 JMeter 容器运行环境。
+  	- **Docker Engine**: 为 Task Runner 提供 JMeter 容器运行环境。
   	- **Selenium Grid**: 为 UI自动化测试提供运行环境，支持分布式拓展。
 
 !!! ms-abstract ""

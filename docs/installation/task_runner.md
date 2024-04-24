@@ -2,17 +2,14 @@
 description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
 ---
 
-
-
 ## 1 服务端部署 Task Runner
 
 !!! ms-abstract ""
-部署 Task Runner，需要采用服务器独立部署。 部署服务器要求：
+    部署 Task Runner，需要采用服务器独立部署。 部署服务器要求：
 
-
-        * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
-        * CPU/内存: 4C8G 
-        * 磁盘空间: 50 G
+    -  **操作系统**：Ubuntu 22 / CentOS 7/ Mac OS 64 位系统
+    -  **CPU/内存**：4C8G
+    -  **磁盘空间**: 50 G
 
 !!! ms-abstract ""
 
@@ -36,10 +33,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     msctl status
     ```
 ![配置主机3](../img/installation/dis_pressure/修改模式.png){ width="900px" }
+
 ![配置主机3](../img/installation/dis_pressure/status.png){ width="900px" }
-
-
-
 
 !!! ms-abstract ""
 
@@ -144,7 +139,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     msctl status
     ```
 ![配置主机3](../img/installation/dis_pressure/修改模式w.png){ width="900px" }
+
 ![配置主机3](../img/installation/dis_pressure/部署w.png){ width="900px" }
+
 ![配置主机3](../img/installation/dis_pressure/ww.png){ width="900px" }
 
 !!! ms-abstract ""

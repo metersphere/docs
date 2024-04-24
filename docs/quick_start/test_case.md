@@ -19,6 +19,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
      编写完成 Halo 功能用例后发起用例评审活动。在【用例管理-用例评审】创建用例评审计划`halo用例评审`，评审标准`单人评审`、选择评审人`Administrator`、评审周期`2024-4-17--2024-4-18`，填写完成后创建评审。
 ![!测试用例](../img/track/用例评审入口.png){ width="900px" }
+
 ![!创建用例评审](../img/track/创建用例评审页面.png){ width="900px" }
 
 !!! ms-abstract "说明"
@@ -32,7 +33,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
      评审关联用例 </br>
     点击  `Halo 用例评审` ID进入评审详情关联用例，在点击【关联用例】按钮关联要评审`登录halo` 、 `删除附件`、 `上传附件`测试用例到评审任务中。
 ![!关联测试用例](../img/track/1.png){ width="900px" }
+
 ![!关联测试用例](../img/track/2.png){ width="900px" }
+
 ![!关联测试用例](../img/track/用例评审关联用例.png){ width="900px" }
 
 
@@ -41,6 +44,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     用例评审人`Administrator`点击评审列表`登录halo`、 `删除附件` 、`上传附件`用例 ID 或【评审】按钮，对用例编写的测试点进行意见评审，选择评审结果标记用例状态通过，每条用例都标记状态后，计划评审完成。
 ![!评审测试用例](../img/track/关联完成列表.png){ width="900px" }
+
 ![!评审测试用例](../img/track/评审操作.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
