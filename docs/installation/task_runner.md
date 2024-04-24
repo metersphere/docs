@@ -96,9 +96,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         wsl.exe --set-version Ubuntu 2
         ```
 
-        **出现下图结果即为成功：**
-![WSL版本2](../img/installation/dis_pressure/check-version-2.png){ width="900px" }
-
+        出现以下内容即为成功。
+        ```
+        正在进行转换，这可能需要几分钟时间...
+        有关与 WSL 2 的主要区别的信息，请访问 https://aka.ms.wsl2
+        转换完成。
+        ```
 
 !!! ms-abstract "Docker 安装与配置"
         下载[Docker Desktop for Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)，双击 Docker Desktop Installer.exe 完成docker 的安装。
