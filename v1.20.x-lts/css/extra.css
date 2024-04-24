@@ -19,12 +19,6 @@
   margin-top: 3rem;
 }
 
-@media (max-width: 768px){
-  .md-header{
-    top: 129px;
-  }
-}
-
 .progress-label {
   position: absolute;
   text-align: center;
