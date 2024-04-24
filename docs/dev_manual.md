@@ -150,9 +150,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
     # Redis 配置
     singleServerConfig:
-    password: Password123@redis
-    address: "redis://localhost:6379"
-    database: 1 
+      password: Password123@redis
+      address: "redis://localhost:6379"
+      database: 1 
     ```
 
 !!! ms-abstract ""
