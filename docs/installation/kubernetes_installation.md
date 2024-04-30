@@ -54,7 +54,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     helm upgrade metersphere metersphere-2.3.0.tgz -n ms
 
     # 根据需要修改 values.yml 文件配置后升级
-    helm upgrade metersphere metersphere-1.0.10.tgz -f metersphere/values.yml -n ms
+    helm upgrade metersphere metersphere-2.3.0.tgz -f metersphere/values.yml -n ms
     ```
 
 ## 5 values.yaml

@@ -187,7 +187,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 22 操作时提示：`check node-controller status`
 !!! ms-abstract ""
     - 检查【系统设置-系统参数设置-当前站点URL】是否正确，是不是多了"/" <br>
-    - docker exec ms-server nc -zv ms-node-controller 8082 或者去ms-server容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
+    - docker exec gateway nc -zv ms-node-controller 8082 或者去 gateway 容器里 curl localhost:8082/status 试试，实在不行就重启docker、重启服务器试试 <br>
     - 检查 JMeter 的镜像版本是不是对的，检查 JMeter 镜像有没有加载到 docker 中，执行docker load -i jmeter-master.tar，看能否加载到docker中，若不能则重新上传JMeter镜像，执行docker load -i jmeter-master.tar，修改.env环境里的JMeter镜像，重新加载项目msctl reload。<br>
 
 ## 23 操作提示：`Error:没有足够的资源启动测试`
