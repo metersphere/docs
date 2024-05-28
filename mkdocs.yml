@@ -61,10 +61,10 @@ nav:
           - 缺陷管理:
               - 概述: user_manual/defect_management/overview.md
               - 缺陷管理: user_manual/defect_management/defect_management.md
-          - 用例管理:
+          - 测试用例:
                 - 概述: user_manual/test_case/intro.md
-                - 功能用例: user_manual/test_case/test_case.md   
-                - 用例评审: user_manual/test_case/test_case_review.md
+                - 用例: user_manual/test_case/test_case.md   
+                - 评审: user_manual/test_case/test_case_review.md
           - 接口测试:
                 - 概述: user_manual/api_test/intro.md
                 - 接口调试: user_manual/api_test/debug.md
