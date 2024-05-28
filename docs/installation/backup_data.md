@@ -53,7 +53,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     zip -r $backupZipFileName $dumpSqlFilePath $data
     
     #scp 将备份的数据库文件上传到备份服务器对应目录下
-    scp $backupZipFileName remote_user@remote_host:remote_path
+    scp $backupZipFileName $remote_user@$remote_host:$remote_path
      
     echo rm -rf dumpSqlFilePath
     rm -rf $backupDir/ms_db_$currentTime.sql
