@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -35,7 +35,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -3276,9 +3276,19 @@ zip -r XXX.zip /opt/metersphere/data
 <div class="highlight"><pre><span></span><code>docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G &gt; metersphere.sql
 </code></pre></div></p>
 <h2 id="2">2 定时任务自动备份<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>ms_backup.sh
+<ol>
+<li>自动备份前需先生成 SSH 密钥对，并将公钥复制到备份服务器。
+    <div class="highlight"><pre><span></span><code>ssh-keygen -t rsa
+</code></pre></div></li>
+<li>将公钥复制到远程服务器。
+   <div class="highlight"><pre><span></span><code>ssh-copy-id remote_user@remote_host
+</code></pre></div></li>
+<li>ms_backup.sh
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
+remote_user=&quot;username&quot;     #备份服务器用户名
+remote_host=&quot;remote_host&quot;  #备份服务器IP地址
+remote_path=&quot;remote_path&quot;  #备份服务器目录
 backupDir=/opt/db_bak    
 data=/opt/metersphere/data
 currentTime=`date &quot;+%Y-%m-%d-%H-%M-%S&quot;`   
@@ -3288,11 +3298,15 @@ echo dumpSqlFilePath=$dumpSqlFilePath
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G &gt; $dumpSqlFilePath
 cd $backupDir
 zip -r $backupZipFileName $dumpSqlFilePath $data
+
+#scp 将备份的数据库文件上传到备份服务器对应目录下
+scp $backupZipFileName remote_user@remote_host:$remote_path
+
 echo rm -rf dumpSqlFilePath
 rm -rf $backupDir/ms_db_$currentTime.sql
 
-#remove outdated backup files
-keepBackupNum=3
+#保留最近7天的备份，可根据实际情况调整。
+keepBackupNum=7
 output=`ls -lt $backupDir/*.zip | awk &#39;{print $9}&#39;`
 step=0
 for backupFile in $output ;do
@@ -3304,7 +3318,8 @@ for backupFile in $output ;do
         rm -rf  $backupFile
     fi
 done
-</code></pre></div></p>
+</code></pre></div></li>
+</ol>
 <p>install_ms_backup.sh
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
@@ -3436,7 +3451,7 @@ source /var/lib/mysql/metersphere.sql
     
     
 
-      <script src="../../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
 <script>
