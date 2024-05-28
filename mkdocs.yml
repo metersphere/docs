@@ -58,12 +58,22 @@ nav:
           - 使用接口测试: quick_start/api_test.md
     - 功能手册:
           - 通用功能: user_manual/general.md
-          - 缺陷管理:
-              - 概述: user_manual/defect_management/overview.md
-              - 缺陷管理: user_manual/defect_management/defect_management.md
+          - 项目管理:
+              - 概述: user_manual/project_management/overview.md
+              - 项目与权限: user_manual/project_management/project_permissions.md
+              - 模板管理: user_manual/project_management/template_management.md
+              - 文件管理: user_manual/project_management/file_management.md
+              - 消息管理: user_manual/project_management/message_management.md
+              - 公共脚本: user_manual/project_management/public_script.md
+              - 环境管理: user_manual/project_management/environment.md
+              - 日志: user_manual/project_management/log.md
+          - 测试计划:
+              - 概述: user_manual/test_plan/intro.md
+              - 计划: user_manual/test_plan/test_plan.md
+              - 报告: user_manual/test_plan/test_plan_report.md
           - 测试用例:
                 - 概述: user_manual/test_case/intro.md
-                - 用例: user_manual/test_case/test_case.md   
+                - 用例: user_manual/test_case/test_case.md
                 - 评审: user_manual/test_case/test_case_review.md
           - 接口测试:
                 - 概述: user_manual/api_test/intro.md
@@ -73,6 +83,9 @@ nav:
                 - 场景管理: user_manual/api_test/api_automation.md
                 - 内置函数: user_manual/api_test/functions.md
                 - 报告: user_manual/api_test/test_report.md
+          - 缺陷管理:
+              - 概述: user_manual/defect_management/overview.md
+              - 缺陷管理: user_manual/defect_management/defect_management.md
 #          - 性能测试:
 #                - 概述: user_manual/load_test/intro.md
 #                - 性能测试: user_manual/load_test/load_test.md
@@ -80,15 +93,6 @@ nav:
 #          - 报表统计:
 #                - 项目报表: user_manual/report_statistics/project_statistics.md
 #                - 项目报告: user_manual/report_statistics/report.md
-          - 项目管理:
-                - 概述: user_manual/project_management/overview.md
-                - 项目与权限: user_manual/project_management/project_permissions.md
-                - 模板管理: user_manual/project_management/template_management.md
-                - 文件管理: user_manual/project_management/file_management.md
-                - 消息管理: user_manual/project_management/message_management.md
-                - 公共脚本: user_manual/project_management/public_script.md
-                - 环境管理: user_manual/project_management/environment.md
-                - 日志: user_manual/project_management/log.md
           - 系统设置:
               - 概述: user_manual/system_management/intro.md
               - 系统: user_manual/system_management/system.md
