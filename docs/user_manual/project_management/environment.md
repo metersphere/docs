@@ -7,9 +7,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!项目环境页面](../../img/project_management/enviroment/项目环境页面.png){ width="900px" }
 
 ## 1 环境
-### 1.1 全局请求头
+### 1.1 请求头
 !!! ms-abstract ""
-    配置【全局请求头】后，在整个项目中通用。
+    配置【请求头】后，在整个项目中通用。
 ![!全局请求头](../../img/project_management/enviroment/全局请求头.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -57,7 +57,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     添加【数据库】数据源操作，以 MySQL 数据库为例。
-![!数据源链接成功](../../img/project_management/enviroment/数据源链接成功.png){ width="900px" }
+![!数据源链接成功](../../img/project_management/enviroment/数据源连接成功.png){ width="900px" }
 
 !!! ms-abstract "数据源字段说明:"
 
@@ -98,13 +98,21 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!显示设置](../../img/project_management/enviroment/断言.png){ width="900px" }
 
 !!! ms-abstract ""
+    需要在【系统设置-系统-插件】处上传 TCP 的插件包，环境管理处才会显示【TCP配置】。
+![!显示设置](../../img/project_management/enviroment/TCP配置.png){ width="900px" }
+
+!!! ms-abstract ""
     【显示设置】进行【启用/关闭】操作。
 ![!显示设置](../../img/project_management/enviroment/显示设置.png){ width="900px" }
 
-## 2 环境组
-!!! ms-abstract ""
-    场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组。<br>
-    点击【项目管理-环境管理-环境组】进入环境组页面，进行【新增】、【删除】操作。
-![!显示设置](../../img/project_management/enviroment/环境组功能.png){ width="900px" }
+[//]: # (## 2 环境组)
+
+[//]: # (!!! ms-abstract "")
+
+[//]: # (    场景中跨项目引用接口时，需要给每个项目的接口设置运行环境，此时可以配置环境组。<br>)
+
+[//]: # (    点击【项目管理-环境管理-环境组】进入环境组页面，进行【新增】、【删除】操作。)
+
+[//]: # (![!显示设置]&#40;../../img/project_management/enviroment/环境组功能.png&#41;{ width="900px" })
 
 

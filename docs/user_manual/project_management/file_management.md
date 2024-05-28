@@ -42,6 +42,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     设置列表表头、每页显示数量。
 ![!表头设置](../../img/project_management/file_management/表头设置.png){ width="900px" }
+
 ![!页面显示数量](../../img/project_management/file_management/页面显示数量.png){ width="900px" }
 
 ## 3 存储库

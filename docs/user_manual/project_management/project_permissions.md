@@ -16,7 +16,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     点击【应用设置】，进入应用设置页面。
 ![!应用设置](../../img/project_management/project_permissions/应用设置.png){ width="900px" }
 
-### 2.1 缺陷管理
+### 2.1 测试计划
+!!! ms-abstract ""    
+    点击【测试计划】，以小时、天、月、年为单位，配置报告保留时间和报告链接有效期。
+![!测试计划](../../img/project_management/project_permissions/测试计划设置.png){ width="900px" }
+
+### 2.2 缺陷管理
 !!! ms-abstract ""
     需要先在【系统设置-组织-服务集成】处配置 JIRA、禅道、TAPD 等第三方平台。详情参考：[服务集成](../system_management/organization.md#4)<br>
     在【系统设置-组织-模板】处开启项目模板。启用项目模板后，将不存在组织模版。此操作不可逆，请谨慎操作！！！
@@ -36,7 +41,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - **同步频率**：设置自动同步的时间点。 <br>
     - **状态**：开启/关闭，平台创建的缺陷同步或不同步至第三方项目管理平台。
 
-### 2.2 用例管理
+### 2.3 用例管理
 !!! ms-abstract ""
     需要先在【系统设置-组织-服务集成】处配置 JIRA、禅道、TAPD 等第三方平台。详情参考：[服务集成](../system_management/organization.md#4)<br>
     在【系统设置-组织-模板】处开启项目模板，启用项目模板后，将不存在组织模版。此操作不可逆，请谨慎操作！！！
@@ -56,7 +61,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!配置需求同步](../../img/project_management/project_permissions/配置需求同步.png){ width="900px" }
 
-### 2.3 接口测试
+### 2.4 接口测试
 !!! ms-abstract ""
     点击【接口测试】，设置测试报告保留的时间范围、报告链接有效期、接口执行的资源池、误报规则等内容。
 ![!接口测试](../../img/project_management/project_permissions/接口测试.png){ width="900px" }
@@ -73,6 +78,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【编辑】编辑误报名称、标签、规则等内容。
     - 【启用/禁用】设置启用状态时，接口返回结果匹配上误报规则后，将接口执行结果标记为误报。
     - 【删除】误报删除，仅对新执行的测试报告生效，请谨慎操作！！！
+    - 【清空】清空勾选项
 
 ![!误报规则功能](../../img/project_management/project_permissions/误报规则功能.png){ width="900px" }
 
