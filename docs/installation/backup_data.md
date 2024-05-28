@@ -22,11 +22,21 @@ docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allo
 ```
 
 ## 2 定时任务自动备份
-
-ms_backup.sh
+1. 自动备份前需先生成 SSH 密钥对，并将公钥复制到备份服务器。
+    ```
+    ssh-keygen -t rsa
+    ```
+2. 将公钥复制到远程服务器。
+   ```
+   ssh-copy-id remote_user@remote_host
+   ```
+3. ms_backup.sh
 ```
 #!/bin/bash
 
+remote_user="username"     #备份服务器用户名
+remote_host="remote_host"  #备份服务器IP地址
+remote_path="remote_path"  #备份服务器目录
 backupDir=/opt/db_bak    
 data=/opt/metersphere/data
 currentTime=`date "+%Y-%m-%d-%H-%M-%S"`   
@@ -36,11 +46,15 @@ echo dumpSqlFilePath=$dumpSqlFilePath
 docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > $dumpSqlFilePath
 cd $backupDir
 zip -r $backupZipFileName $dumpSqlFilePath $data
+
+#scp 将备份的数据库文件上传到备份服务器对应目录下
+scp $backupZipFileName remote_user@remote_host:$remote_path
+ 
 echo rm -rf dumpSqlFilePath
 rm -rf $backupDir/ms_db_$currentTime.sql
 
-#remove outdated backup files
-keepBackupNum=3
+#保留最近7天的备份，可根据实际情况调整。
+keepBackupNum=7
 output=`ls -lt $backupDir/*.zip | awk '{print $9}'`
 step=0
 for backupFile in $output ;do
