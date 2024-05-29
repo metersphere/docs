@@ -15,7 +15,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。<br>
     ```
-    curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
+    docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data registry.fit2cloud.com/metersphere/metersphere-ce-allinone:v3.x.y
     ```
 
     安装成功后，通过浏览器访问如下页面登录 MeterSphere。<br>
