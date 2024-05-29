@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 新建接口
 !!! ms-abstract "" 
-    点击【新建请求】或者【＋】新建接口请求。
+    点击【新建】或者【＋】新建接口请求。
 ![!新建接口](../../img/api_test/definition/新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
@@ -16,7 +16,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 	- 内置函数：请求体参数可选择内置 Mock 函数。详情参考：[内置函数](../api_test/functions.md)。
 
 !!! ms-abstract "" 
-    点击【+】新建响应内容，点击【...】复制、重命名、设置默认、删除响应信息。
+    点击【+】新建响应内容，点击【...】复制、重命名、设为默认、删除响应信息。
 ![!新建接口](../../img/api_test/definition/新建请求3.png){ width="900px" }
 
 
@@ -181,5 +181,5 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!切换协议](../../img/api_test/definition/切换协议.png){ width="900px" }	
 
 !!! ms-abstract "说明" 
-	- 协议类型的插件：具体支持插件请查看表格，更多开源插件，请在此下载。
-	- 协议类型插件开发文档，请查看xxx。
+	- 协议类型的插件：具体支持插件请查看 [插件列表](../../plugin.md)。
+	- 协议类型插件开发文档，请查看 [接口测试插件开发文档](https://github.com/metersphere/api-test-plugins/wiki/MeterSphere-v3-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C)。
