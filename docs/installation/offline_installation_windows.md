@@ -73,8 +73,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
 	上传完成后，解压并执行安装命令。
 	```
-	tar -zxvf metersphere-ce-online-installer-v3.0.0-rc12.tar.gz
-	cd metersphere-ce-online-installer-v3.0.0-rc12
+	tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
+	cd metersphere-ce-online-installer-v3.x.y
 	/bin/bash install.sh
 	```
 ![启动](../img/installation/windows/安装MS.png){ width="900px" }
