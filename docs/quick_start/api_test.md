@@ -4,7 +4,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 1 调试
 !!! ms-abstract ""
-    如下图，点击【新建请求】或者【＋】新建接口请求。
+    如下图，在【调试】页面，点击【新建】或者【＋】新建接口请求。
 ![!新建请求](../img/quick_start/api/新建请求1.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -20,16 +20,20 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 创建接口
 !!! ms-abstract "" 
-    如下图，点击【新建请求】或者【＋】新建接口请求。
-![!新建接口](../img/quick_start/api/API新建请求.png){ width="900px" }
+    如下图，在【定义】页面，点击【新建】或者【＋】新建接口请求。
+![!新建接口](../img/quick_start/api/API新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
-    在新建接口页面，选择 GET 方法，输入获取文章列表接口的 PATH 地址 `api.console.halo.run/v1alpha1/posts`，选择 Query 参数，输入 `page 等于 1，size 等于 5`，输入接口名称 `获取文章列表`，所属模块选择 `未规划接口`，状态设置为 `进行中`。
+    在新建接口页面，选择 GET 方法，输入获取文章列表接口的 PATH 地址 `api.console.halo.run/v1alpha1/posts`，选择 Query 参数，输入 `page 等于 1，size 等于 5`。
 ![!新建接口](../img/quick_start/api/API新建请求2.png){ width="900px" }
+
+!!! ms-abstract ""
+    输入接口名称 `获取文章列表`，所属模块选择 `未规划接口`，状态设置为 `进行中`。
+![!新建接口](../img/quick_start/api/API新建请求3.png){ width="900px" }
 
 !!! ms-abstract "" 
     输入认证信息，选择【认证】，选择 `Basic Auth`,`用户名：demo，密码：P@ssw0rd123..`，然后点击保存。
-![!新建接口](../img/quick_start/api/API新建请求3.png){ width="900px" }
+![!新建接口](../img/quick_start/api/API新建请求4.png){ width="900px" }
 
 ## 3 创建环境
 !!! ms-abstract "" 
@@ -86,20 +90,20 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!创建场景](../img/quick_start/api/创建场景2.png){ width="900px" }
 
 !!! ms-abstract ""
-    选择【接口】，选择【获取文章列表】，点击【复制】，然后点击保存。
+    选择【接口】，选择【DraftPost】、【PublishPost】、【fetchPostHeadContent】，点击【引用】，然后点击保存。
 ![!创建场景](../img/quick_start/api/创建场景3.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【服务端执行】生成报告。
+    选择【Halo】环境，点击【服务端执行】生成报告。
 ![!创建场景](../img/quick_start/api/创建场景4.png){ width="900px" }
 
 ## 9 查看报告
 !!! ms-abstract "" 
-    如下图，在【报告】页面查看场景 `文章管理流程` 的【场景报告】。
+    如下图，在【报告】页面查看场景 `发布文章流程` 的【场景报告】。
 ![!查看测试报告](../img/quick_start/api/查看报告1.png){ width="900px" }
 
 !!! ms-abstract "" 
-    点击 `文章管理流程` 的报告名称预览报告详情。
+    点击 `发布文章流程` 的报告名称预览报告详情。
 ![!查看测试报告](../img/quick_start/api/查看报告2.png){ width="900px" }
 
 !!! ms-abstract "" 
