@@ -5,7 +5,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 创建用例
 !!! ms-abstract ""
 
-    进入【测试用例-用例】界面，点击【新建】按钮创建测试用例。
+    进入【测试用例-用例】界面，系统预置了以 Halo 建站平台测试为例做参考。点击【新建】按钮创建测试用例。
 ![!测试用例](../../img/track/用例入口1.png){ width="900px" }
 
 !!! ms-abstract ""
