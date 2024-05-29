@@ -126,54 +126,54 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ### 6.4 变更历史
 !!! ms-abstract "" 
     查看该用例的变更历史。
-![!变更历史](../../img/api_test/definition/用例变更历史.png){ width="900px" }	
+![!变更历史](../../img/api_test/definition/用例变更历史.png){ width="900px" }
 
-## 7 API/CASE 列表
-!!! ms-abstract "" 
-    切换【API】或者点击【全部接口】查看 API 列表。
-![!API/CASE 列表](../../img/api_test/definition/API列表.png){ width="900px" }	
-
-!!! ms-abstract "" 
-    切换【CASE】或者点击【全部 CASE 】查看 CASE 列表。
-![!API/CASE 列表](../../img/api_test/definition/CASE列表.png){ width="900px" }	
-
-## 8 MOCK功能
+## 7 MOCK 功能
 !!! ms-abstract ""
-    点击 API【ID】进入 API 详情页面，点击【MOCK】进行切换。
+    点击【接口定义 ID】进入 API 详情页面。
 ![!API/CASE 列表](../../img/api_test/definition/创建mock.png){ width="900px" }
 
 !!! ms-abstract ""
-    【MOCK-创建 MOCK】进入 MOCK 设置页面，可设置请求头和响应体内容，以请求体和响应体均为 json 为例。
+    如下图，按照序号顺序点击进入 MOCK 设置页面，按需设置请求头、QUERY、REST、请求体、以及响应体内容，并点击【创建】保存。
 ![!API/CASE 列表](../../img/api_test/definition/设置mock页面.png){ width="900px" }
 
 ![!API/CASE 列表](../../img/api_test/definition/mock设置页面设置.png){ width="900px" }
 
 !!! ms-abstract "说明"
-    - 【格式化】可以格式化为对应格式展示，如 json 格式，xml 格式。
-    - 【跟随 API】开启后，响应数据会默认为对应的 API 返回的数据。
+    - **格式化：** 可以格式化为对应格式展示，如 json 格式，xml 格式。
+    - **跟随 API：** 开启后，返回数据默认为对应的 API 定义的响应数据。
 
 !!! ms-abstract ""
-    在【MOCK】页面，点击调试按钮，进入 Mock 调试页面。
+    点击调试按钮，进入 Mock 调试页面。
 ![!API/CASE 列表](../../img/api_test/definition/mock调试.png){ width="900px" }
 
 !!! ms-abstract ""
-    默认是 Mock 环境，点击【服务端执行】即可返回 MOCK 数据。
+    选择 Mock 环境，点击【服务端执行】或者【本地执行】进行调试。
 ![!API/CASE 列表](../../img/api_test/definition/mock返回.png){ width="900px" }
 
 !!! ms-abstract ""
-    可对 MOCK 接口进行【编辑】、【调试】、【复制】、【复制 Mock 地址】、【删除】操作。
+    如下图对 MOCK 接口进行【编辑】、【调试】、【复制】、【复制 Mock 地址】、【删除】等操作。
 ![!API/CASE 列表](../../img/api_test/definition/mock功能.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
-    - 【编辑】编辑 MOCK 接口。
-    - 【调试】调试 MOCK 接口，可选择服务端调试或本地调试。
-    - 【复制】复制 MOCK 接口。
-    - 【复制 Mock 地址】将该 MOCK 地址复制下来，可以在其他地方进行调用。
-    - 【删除】删除 MOCK 接口。
+    - **编辑：** 编辑 MOCK 接口。
+    - **调试：** 调试 MOCK 接口，可选择服务端调试或本地调试。
+    - **复制：** 复制 MOCK 接口。
+    - **复制 Mock 地址：** 将该 MOCK 地址复制下来，供外部服务调用。
+    - **删除：** 删除 MOCK 接口。
+
+## 8 API/CASE/MOCK 列表
+!!! ms-abstract ""
+    切换【API】或者点击【全部接口】查看 API 列表。
+![!API/CASE 列表](../../img/api_test/definition/API列表.png){ width="900px" }
 
 !!! ms-abstract ""
-    【接口定义】列表页，切换【MOCK】即可查询全部 MOCK 接口。
-![!API/CASE 列表](../../img/api_test/definition/切换mock.png){ width="900px" }
+    切换【CASE】或者点击【全部 CASE 】查看 CASE 列表。
+![!API/CASE 列表](../../img/api_test/definition/CASE列表.png){ width="900px" }
+
+!!! ms-abstract ""
+    切换【MOCK】或者点击【全部 MOCK 】查看 MOCK 列表。
+![!API/CASE 列表](../../img/api_test/definition/MOCK列表.png){ width="900px" }
 
 ## 9 切换协议
 !!! ms-abstract "" 
@@ -181,5 +181,5 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!切换协议](../../img/api_test/definition/切换协议.png){ width="900px" }	
 
 !!! ms-abstract "说明" 
-	- 协议类型的插件：具体支持插件请查看 [插件列表](../../plugin.md)。
-	- 协议类型插件开发文档，请查看 [接口测试插件开发文档](https://github.com/metersphere/api-test-plugins/wiki/MeterSphere-v3-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C)。
+	- **协议类型的插件：** 具体支持插件请查看 [插件列表](../../plugin.md)。
+	- **协议类型插件开发文档：** 请查看 [接口测试插件开发文档](https://github.com/metersphere/api-test-plugins/wiki/MeterSphere-v3-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C)。
