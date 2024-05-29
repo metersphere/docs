@@ -19,6 +19,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         批量添加里的参数名重复，默认以最后一条数据为最新数据。
 ![!请求头2](../../img/api_test/request_params/请求头2.png){ width="900px" }
 
+![!请求头2](../../img/api_test/request_params/请求头3.png){ width="900px" }
+
 ## 3 请求体
 ### 3.1 none
 !!! ms-abstract ""
@@ -48,7 +50,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - application/ecmascript
 
 !!! ms-abstract ""
-【批量添加】操作同上 [请求头-批量添加](#2)。
+    【批量添加】操作同上 [请求头-批量添加](#2)。
 
 !!! ms-abstract ""
     参数类型为 file 时，如下图选择【本地上传】或者【关联文件】。
@@ -83,7 +85,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 描述：描述信息。
 
 !!! ms-abstract ""
-【   批量添加】操作同上 [请求头-批量添加](#2)。
+    【批量添加】操作同上 [请求头-批量添加](#2)。
 
 ### 3.4 json
 !!! ms-abstract ""
@@ -165,7 +167,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "" 
     - **手动录入** <br>
     按照【序号1-6】完成【手动录入】脚本并调试。
-![!手动录入1](../../img/api_test/extend_features/手动录入1.png){ width="900px" }   
+![!手动录入1](../../img/api_test/request_params/手动录入1.png){ width="900px" }   
 
 !!! ms-abstract "" 
      - **引用公共脚本** <br>
@@ -174,9 +176,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     引入的公共脚本仅参数值可修改。
     通过引入公共脚本方式添加的为引用关系，会跟随原始脚本的变化，当原始脚本更新时，有高亮 new 图标显示。
 
-![!引用公共脚本1](../../img/api_test/extend_features/引用公共脚本1.png){ width="900px" }   
+![!引用公共脚本1](../../img/api_test/request_params/引用公共脚本1.png){ width="900px" }   
 
-![!引用公共脚本2](../../img/api_test/extend_features/引用公共脚本2.png){ width="900px" }   
+![!引用公共脚本2](../../img/api_test/request_params/引用公共脚本2.png){ width="900px" }   
 
 !!! ms-abstract "说明" 
     【公共脚本】相关配置请参考： [公共脚本](../project_management/public_script.md)。
@@ -186,16 +188,16 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     【前置 SQL】在请求发送前执行，用于接口请求前的数据准备工作。
 !!! ms-abstract "" 
     按照【序号】顺序，添加【SQL 操作】并【引入数据源】。    
-![!SQL 操作](../../img/api_test/extend_features/SQL操作1.png){ width="900px" }  
+![!SQL 操作](../../img/api_test/request_params/SQL操作1.png){ width="900px" }  
 
-![!SQL 操作](../../img/api_test/extend_features/SQL操作2.png){ width="900px" }
+![!SQL 操作](../../img/api_test/request_params/SQL操作2.png){ width="900px" }
 
 !!! ms-abstract "说明" 
     【数据源】相关配置请参考： [添加数据源](../project_management/environment.md#1)。
 
 !!! ms-abstract ""
     如下图，下拉滚动条，选择【按列存储】或【按结果存储】，从 sql 执行结果集中提取信息。
-![!SQL 操作](../../img/api_test/extend_features/SQL操作3.png){ width="900px" }
+![!SQL 操作](../../img/api_test/request_params/SQL操作3.png){ width="900px" }
 
 !!! ms-abstract "说明"
     - 按列存储：指定从数据库结果集中提取的列的名称；多个列可以使用“,”分隔。
@@ -204,18 +206,18 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     在【SQL 操作】下一步添加一个【脚本操作】的步骤，把上图 sql 执行结果集中提取的信息打印到控制台。
-![!SQL 操作](../../img/api_test/extend_features/SQL操作4.png){ width="900px" }
+![!SQL 操作](../../img/api_test/request_params/SQL操作4.png){ width="900px" }
 
 ### 6.3 等待时间
 !!! ms-abstract "" 
     按照【序号】顺序，添加【等待时间】并修改等待时间。  
-![!等待时间](../../img/api_test/extend_features/等待时间.png){ width="900px" }  
+![!等待时间](../../img/api_test/request_params/等待时间.png){ width="900px" }  
 
 ### 6.4 启用全局前置
 !!! ms-abstract "" 
     点击 启用或关闭【全局前置】。<br>
     默认开启，关闭则运行该接口时不执行全局前置。
-![!启用全局前置](../../img/api_test/extend_features/启用全局前置.png){ width="900px" }  
+![!启用全局前置](../../img/api_test/request_params/启用全局前置.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
     【全局前置】相关配置请参考： [全局前置](../project_management/environment.md#12)。
@@ -223,7 +225,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ### 6.5 代码片段快捷功能
 !!! ms-abstract "" 
     在代码片段右侧可使用快捷操作生成代码片段。
-![!代码片段快捷功能](../../img/api_test/extend_features/代码片段快捷功能.png){ width="900px" }  
+![!代码片段快捷功能](../../img/api_test/request_params/代码片段快捷功能.png){ width="900px" }  
 
 !!! ms-abstract "说明"
     - 从 API 定义导入： 可根据接口定义自动生成该接口请求的代码片段。
@@ -282,7 +284,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     后置脚本操作同 [前置脚本操作](#61)。
-![!手动录入2](../../img/api_test/extend_features/手动录入2.png){ width="900px" }   
+![!手动录入2](../../img/api_test/request_params/手动录入2.png){ width="900px" }   
 
 
 ### 7.2 SQL 操作
@@ -290,38 +292,38 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     【后置 SQL】在请求发送后执行，用于接口请求后的数据验证工作。
 !!! ms-abstract "" 
     后置 SQL 操作同 [前置SQL操作](#62-sql)。    
-![!SQL 操作](../../img/api_test/extend_features/SQL操作5.png){ width="900px" }
+![!SQL 操作](../../img/api_test/request_params/SQL操作5.png){ width="900px" }
 
 ### 7.3 提取参数
 !!! ms-abstract "" 
     - 正则提取。<br>
-    输入【参数名称】，选择【参数类型】，选择【正则】提取方式，选择提取对象的【范围】。
-![!提取参数](../../img/api_test/extend_features/提取参数1.png){ width="900px" }      
+    输入【参数名称】，选择【参数类型】，选择【正则】提取方式。
+![!提取参数](../../img/api_test/request_params/提取参数1.png){ width="900px" }      
 
 !!! ms-abstract "" 
     在表达式处输入正则表达式或者点击【快捷提取】图标打开表达式【测试】页面。
-![!提取参数](../../img/api_test/extend_features/提取参数2.png){ width="900px" }         
+![!提取参数](../../img/api_test/request_params/提取参数2.png){ width="900px" }         
 
 !!! ms-abstract "" 
     在【快捷提取】页面，输入正则表达式，选择【匹配表达式/匹配组】点击【测试】，测试通过后设置【结果匹配规则】后点击【确认】。
-![!提取参数](../../img/api_test/extend_features/提取参数3.png){ width="900px" }  
+![!提取参数](../../img/api_test/request_params/提取参数3.png){ width="900px" }  
 
 !!! ms-abstract "" 
     在提取参数列表处，点击【...】可快捷设置【匹配规则】。
-![!提取参数](../../img/api_test/extend_features/提取参数4.png){ width="900px" }      
+![!提取参数](../../img/api_test/request_params/提取参数4.png){ width="900px" }      
 
 !!! ms-abstract "" 
     - JSONPath 提取。<br>
-    输入【参数名称】，选择【参数类型】，选择【JSONPath】提取方式，选择提取对象的【范围】。
-![!提取参数](../../img/api_test/extend_features/提取参数5.png){ width="900px" }      
+    输入【参数名称】，选择【参数类型】，选择【JSONPath】提取方式。
+![!提取参数](../../img/api_test/request_params/提取参数5.png){ width="900px" }      
 
 !!! ms-abstract "" 
     在表达式处输入 JSONPath 提取表达式或者点击【快捷提取】图标打开快捷提取页面。
-![!提取参数](../../img/api_test/extend_features/提取参数6.png){ width="900px" }         
+![!提取参数](../../img/api_test/request_params/提取参数6.png){ width="900px" }         
 
 !!! ms-abstract "" 
     在【快捷提取】页面，点击预期提取的字段快速生成 JSONPath 表达式，测试通过后设置【结果匹配规则】后点击【确认】。
-![!提取参数](../../img/api_test/extend_features/提取参数7.png){ width="900px" }  
+![!提取参数](../../img/api_test/request_params/提取参数7.png){ width="900px" }  
 
 !!! ms-abstract "结果匹配规则说明"
     - 随机匹配：获取任意一条匹配结果。
@@ -331,39 +333,36 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "" 
     在提取参数列表处，点击【...】可快捷设置【匹配结果规则】。
-![!提取参数](../../img/api_test/extend_features/提取参数8.png){ width="900px" }     
+![!提取参数](../../img/api_test/request_params/提取参数8.png){ width="900px" }     
 
 !!! ms-abstract "" 
     - XPath 提取。<br>
-    输入【参数名称】，选择【参数类型】，选择【XPath】提取方式，选择提取对象的【范围】。
-![!提取参数](../../img/api_test/extend_features/提取参数9.png){ width="900px" }      
+    输入【参数名称】，选择【参数类型】，选择【XPath】提取方式。
+![!提取参数](../../img/api_test/request_params/提取参数9.png){ width="900px" }      
 
 !!! ms-abstract "" 
     在表达式处输入 XPath 提取表达式或者点击【快捷提取】图标打开快捷提取页面。
-![!提取参数](../../img/api_test/extend_features/提取参数10.png){ width="900px" }         
+![!提取参数](../../img/api_test/request_params/提取参数10.png){ width="900px" }         
 
 !!! ms-abstract "" 
     在【快捷提取】页面，输入 XPath 表达式，测试通过后设置【结果匹配规则】和【响应内容格式】，然后点击【确认】。
-![!提取参数](../../img/api_test/extend_features/提取参数11.png){ width="900px" }  
+![!提取参数](../../img/api_test/request_params/提取参数11.png){ width="900px" }  
 
 !!! ms-abstract "" 
     在提取参数列表处，点击【...】可快捷设置【匹配结果规则】和【响应内容格式】。
-![!提取参数](../../img/api_test/extend_features/提取参数12.png){ width="900px" }     
-
-
-
+![!提取参数](../../img/api_test/request_params/提取参数12.png){ width="900px" }
 
 !!! ms-abstract "参数类型" 
     - 环境参数：提取的参数会同步设置到当前执行环境的环境参数里。
     - 临时参数：提取的参数仅当前测试步骤或者场景可用。   
-![!参数类型](../../img/api_test/extend_features/参数类型.png){ width="900px" } 
+![!参数类型](../../img/api_test/request_params/参数类型.png){ width="900px" } 
 
 
 ### 7.4 启用全局后置
 !!! ms-abstract "" 
     点击 启用或关闭【全局后置】。<br>
     默认开启，关闭则运行该接口时不执行全局后置。
-![!启用全局后置](../../img/api_test/extend_features/启用全局后置.png){ width="900px" }  
+![!启用全局后置](../../img/api_test/request_params/启用全局后置.png){ width="900px" }  
 
 !!! ms-abstract "说明" 
     【全局后置】相关配置请参考： [全局后置](../project_management/environment.md#12)。
@@ -376,37 +375,37 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ### 8.1 状态码
 !!! ms-abstract ""
     设置要断言的状态码及其匹配条件。
-![!状态码](../../img/api_test/extend_features/状态码.png){ width="900px" }      
+![!状态码](../../img/api_test/request_params/状态码.png){ width="900px" }      
 
 ### 8.2 响应头
 !!! ms-abstract ""
     下拉选择响应头的参数名称、匹配条件和匹配值。
-![!响应头](../../img/api_test/extend_features/响应头.png){ width="900px" }    
+![!响应头](../../img/api_test/request_params/响应头.png){ width="900px" }    
 
 ### 8.3 响应体
 !!! ms-abstract ""
     选择表达式类型，输入表达式和匹配值，选择匹配条件；具体不同表达式的生成方式同上 [提取参数](#23)。
-![!响应体](../../img/api_test/extend_features/响应体.png){ width="900px" }    
+![!响应体](../../img/api_test/request_params/响应体.png){ width="900px" }    
 
 ### 8.4 响应时间
 !!! ms-abstract ""
     输入要断言的响应时间（单位 ms ）。
-![!响应时间](../../img/api_test/extend_features/响应时间.png){ width="900px" }    
+![!响应时间](../../img/api_test/request_params/响应时间.png){ width="900px" }    
 
 ### 8.5 变量
 !!! ms-abstract ""
     输入要断言的变量名、匹配条件和匹配值。
-![!变量](../../img/api_test/extend_features/变量.png){ width="900px" }    
+![!变量](../../img/api_test/request_params/变量.png){ width="900px" }    
 
 ### 8.6 脚本
 !!! ms-abstract ""
     选择【手动录入/引用公共脚本】，输入断言脚本。
-![!断言脚本](../../img/api_test/extend_features/断言脚本.png){ width="900px" }  
+![!断言脚本](../../img/api_test/request_params/断言脚本.png){ width="900px" }  
 
 ## 9 认证
 !!! ms-abstract ""
     选择接口 Auth 认证方式，并输入用户名、密码。
-![!认证](../../img/api_test/extend_features/认证.png){ width="900px" } 
+![!认证](../../img/api_test/request_params/认证.png){ width="900px" } 
 
 !!! ms-abstract "说明"
     - No Auth：非 Auth 认证方式。
@@ -416,7 +415,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 10 设置
 !!! ms-abstract ""
     设置接口的 【连接超时】、【响应超时】时间，设置【重定向】方式。
-![!设置](../../img/api_test/extend_features/设置.png){ width="900px" } 
+![!设置](../../img/api_test/request_params/设置.png){ width="900px" } 
 
 !!! ms-abstract "说明"
     - 连接超时时间：接口请求和客户端建立连接的超时时间，默认 60s。
