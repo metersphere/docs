@@ -8,7 +8,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!缺陷创建](../../img/defect_management/缺陷创建.png){ width="900px" }
 
 !!! ms-abstract ""
-    进入缺陷页面，默认展示【JIRA 默认模板】内容，填写相应内容进行创建。也可以切换到【默认模板】，填写相应内容进行创建。
+    进入缺陷页面，【JIRA默认模板】可以切换到【默认模板】或其他模板，填写相应内容进行创建。
 ![!jira默认模板填写内容](../../img/defect_management/jira默认模板填写内容.png){ width="900px" }
 
 ![!系统默认模板](../../img/defect_management/系统默认模板.png){ width="900px" }
