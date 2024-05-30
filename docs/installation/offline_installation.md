@@ -5,7 +5,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求"
     * 操作系统: Ubuntu 22 / CentOS 7 64 位系统
-    * CPU/内存: 最低要求 4C8G
+    * CPU/内存: 4C8G
     * 磁盘空间: 200 G
 
 ## 2 下载安装包
