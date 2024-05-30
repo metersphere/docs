@@ -266,15 +266,18 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "注意"
     升级前务必检查磁盘容量并对数据库进行备份，详细操作请参考 [MeterSphere 数据备份](./backup_data.md)。</br>
     升级过程避免数据库执行定时任务造成数据损坏数据，请关闭正在运行的定时任务：
+
      ```
-        #进入数据库
-        docker exec -it mysql sh
-        mysql -uroot -pPassword123@mysql
-        #关闭定时任务。
-        use metersphere;
-        update schedule set enable=0;
-        #退出
-        exit;
+     # 进入数据库
+     docker exec -it mysql sh
+     mysql -uroot -pPassword123@mysql
+
+     # 关闭定时任务
+     use metersphere;
+     update schedule set enable=0;
+
+     # 退出
+     exit;
      ```
 
 ### 6.1 离线升级步骤
@@ -305,13 +308,16 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
 
      升级完成后，批量启用定时任务。
+
      ```
-        #进入数据库
-        docker exec -it mysql sh
-        mysql -uroot -pPassword123@mysql
-        #开启定时任务。
-        use metersphere;
-        update schedule set enable=1;
-        #退出
-        exit;
+     # 进入数据库
+     docker exec -it mysql sh
+     mysql -uroot -pPassword123@mysql
+
+     # 开启定时任务
+     use metersphere;
+     update schedule set enable=1;
+
+     # 退出
+     exit;
      ```
