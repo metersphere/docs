@@ -40,7 +40,7 @@ theme:
     custom_dir: "theme"
 nav:
     - 项目介绍: index.md
-    - 系统架构: system_arch.md
+#    - 系统架构: system_arch.md
     - 安装部署:
           - 网络端口要求: installation/network_port.md
           - Linux 单机部署:
