@@ -46,8 +46,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 4 接口定义调试
 !!! ms-abstract "" 
-    重新回到接口定义页面，点击调试，然后点击【服务端执行】，执行成功后查看执行结果。
-![!执行](../img/quick_start/api/调试.png){ width="900px" }	
+    切换到接口定义页面，在输入框中输入 `DraftPost` 搜索 `编写文章`接口，点击【执行】，执行成功后查看执行结果。
+![!执行](../img/quick_start/api/调试1.png){ width="900px" }	
+
+![!执行](../img/quick_start/api/调试2.png){ width="900px" }
 
 ## 5 添加后置操作
 !!! ms-abstract "" 
@@ -55,11 +57,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!执行](../img/quick_start/api/添加后置操作1.png){ width="900px" }	
 
 !!! ms-abstract "" 
-    输入参数名称 `total`，类型选择 `临时参数`，方式选择 `JSONPATH`,范围默认 `Body`，表达式选择【快捷提取】。
+    输入参数名称 `headSnapshot`，类型选择 `临时参数`，方式选择 `JSONPATH`,范围默认 `Body`，表达式选择【快捷提取】。
 ![!执行](../img/quick_start/api/添加后置操作2.png){ width="900px" }	
 
 !!! ms-abstract "" 
-    在【快捷提取】界面，点击 `total` 字段，然后点击确认。
+    在【快捷提取】界面，点击 `headSnapshot` 字段，然后点击确认。
 ![!执行](../img/quick_start/api/添加后置操作3.png){ width="900px" }	
 
 !!! ms-abstract "" 
