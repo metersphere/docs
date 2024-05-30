@@ -24,16 +24,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!新建接口](../img/quick_start/api/API新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
-    在新建接口页面，选择 GET 方法，输入获取文章列表接口的 PATH 地址 `api.console.halo.run/v1alpha1/posts`，选择 Query 参数，输入 `page 等于 1，size 等于 5`。
+    在新建接口页面，选择协议类型、接口方法、URL以及基本信息、请求头、请求体、QUERY、REST、认证等信息后点击保存。
 ![!新建接口](../img/quick_start/api/API新建请求2.png){ width="900px" }
 
-!!! ms-abstract ""
-    输入接口名称 `获取文章列表`，所属模块选择 `未规划接口`，状态设置为 `进行中`。
-![!新建接口](../img/quick_start/api/API新建请求3.png){ width="900px" }
-
-!!! ms-abstract "" 
-    输入认证信息，选择【认证】，选择 `Basic Auth`,`用户名：demo，密码：P@ssw0rd123..`，然后点击保存。
-![!新建接口](../img/quick_start/api/API新建请求4.png){ width="900px" }
 
 ## 3 创建环境
 !!! ms-abstract "" 
@@ -41,7 +34,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!创建环境](../img/quick_start/api/创建环境1.png){ width="900px" }
 
 !!! ms-abstract ""
-    按下图序号顺序，点击【+】后，填写环境名称 `Halo`，切换 HTTP ，点击【添加 HTTP 】，选择 https ,输入域名地址 `demo.halo.run`，点击确认。
+    按下图序号顺序，点击【+】后，填写环境名称 `Halo`，切换 HTTP ，点击【添加 HTTP 】，选择 https ,输入域名地址 `demo.halo.run`和 `Basic Auth` 信息后点击确认。
 ![!创建环境](../img/quick_start/api/创建环境2.png){ width="900px" }
 
 ## 4 接口定义调试
