@@ -25,7 +25,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     密码: metersphere
     ```
 
-    安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
+    安装脚本默认将主机的 ~/.metersphere/data 目录作为挂载目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
  
 !!! ms-abstract "安装目录结构说明"
@@ -44,8 +44,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ├── docker-compose-task-runner.yml              #-- MeterSphere Task-Runner 组件所需的 Docker Compose文件
     ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
     ├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
-    ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
-    ├── docker-compose-selenium.yml                 #-- MeterSphere UI 测试所需的Docker Compose 文件
     ├── install.conf -> /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
     ├── install.conf.example                        #-- MeterSphere 安装部署初始配置文件
     
