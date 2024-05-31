@@ -154,33 +154,32 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task Runner ，具体步骤参考：[服务端部署 Task-Runner](#1)。
-        
-        
-        ```
-        # 切换 root 用户
-        sudo -i
 
-        # 安装 wget ，如果已经忽略此步
-        sudo apt-get update
-        sudo apt-get install wget
-        wget --version
-        # 下载在线安装包
-        wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
-        # 解压安装包
-        tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
-        
-        # 进入离线部署包解压缩目录
-        cd metersphere-ce-online-installer-v3.x.y
-        
-        # 修改部署模式为 task-runner
-        vi install.conf
-        
-        # 运行安装脚本
-        /bin/bash install.sh
-        
-        # 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
-        msctl status
-        ```
+    ```
+    # 切换 root 用户
+    sudo -i
+
+    # 安装 wget ，如果已经忽略此步
+    sudo apt-get update
+    sudo apt-get install wget
+    wget --version
+    # 下载在线安装包
+    wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
+    # 解压安装包
+    tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
+    
+    # 进入离线部署包解压缩目录
+    cd metersphere-ce-online-installer-v3.x.y
+    
+    # 修改部署模式为 task-runner
+    vi install.conf
+    
+    # 运行安装脚本
+    /bin/bash install.sh
+    
+    # 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
+    msctl status
+    ```
 ![mac 部署](../img/installation/dis_pressure/mac部署2.png){ width="900px" }
 
 !!! ms-abstract ""
