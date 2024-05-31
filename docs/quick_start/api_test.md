@@ -44,7 +44,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!执行](../img/quick_start/api/调试2.png){ width="900px" }
 
-## 5 添加后置操作
+## 5 添加提取
 !!! ms-abstract "" 
     如下图，点击后置，点击【+ 后置条件】，选择【提取参数】。
 ![!执行](../img/quick_start/api/添加后置操作1.png){ width="900px" }	
