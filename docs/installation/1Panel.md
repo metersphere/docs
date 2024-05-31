@@ -11,7 +11,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![安装1Panel](../img/installation/1Panel/1Panel页面1.png){ width="900px" }
 
-## 3 安装 MeterSphere
+## 2 安装 MeterSphere
 
 !!! ms-abstract ""
     安装好 1Panel 后，进入应用商店应用列表，找到 MeterSphere 应用进行安装。在应用详情页选择 v3.x 最新的 MeterSphere 版本进行安装。
@@ -36,7 +36,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     点击开始安装后，页面自动跳转到已安装应用列表，等待安装的 MeterSphere 应用状态变为已启动。
 
-## 4 访问 MeterSphere
+## 3 访问 MeterSphere
 
 !!! ms-abstract ""
     安装成功后，通过浏览器访问如下页面登录 MeterSphere：
