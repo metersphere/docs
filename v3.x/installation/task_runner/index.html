@@ -1999,7 +1999,7 @@
 <ul>
 <li><strong>操作系统</strong>：Ubuntu 22 / CentOS 7/ Mac OS 64 位系统</li>
 <li><strong>CPU/内存</strong>：2C4G</li>
-<li><strong>磁盘空间</strong>: 50 G</li>
+<li><strong>磁盘空间</strong>：50 G</li>
 </ul>
 </div>
 <div class="admonition ms-abstract">
@@ -2033,13 +2033,13 @@ msctl status
 <p><a class="glightbox" href="../../img/installation/dis_pressure/%E8%B5%84%E6%BA%90%E6%B1%A0%E6%B7%BB%E5%8A%A0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机3" src="../../img/installation/dis_pressure/%E8%B5%84%E6%BA%90%E6%B1%A0%E6%B7%BB%E5%8A%A0.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意</p>
-<p>社区版不可添加资源池节点，企业版可以添加，具体参考：添加资源池(xpack)。</p>
+<p>社区版不可添加资源池节点，企业版可以添加，具体参考：添加资源池(X-Pack)。</p>
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">操作说明</p>
 <ul>
-<li>【内网URL】：资源池部署在内网时，可走内网地址，如 <a href="http://内网服务器IP:8081">http://内网服务器IP:8081</a> 。</br></li>
-<li>【IP、端口】：资源池部署服务器的 IP ，默认端口 8000 ，Monitor 为监控端口，默认是 9100。</li>
+<li>内网URL：资源池部署在内网时，可走内网地址，如 <a href="http://内网服务器IP:8081">http://内网服务器IP:8081</a> 。</br></li>
+<li>IP、端口：资源池部署服务器的 IP ，默认端口 8000 ，Monitor 为监控端口，默认是 9100。</li>
 </ul>
 </div>
 <h2 id="2-task-runner">2 本地执行部署 Task Runner<a class="headerlink" href="#2-task-runner" title="Permanent link">&para;</a></h2>
@@ -2054,69 +2054,49 @@ msctl status
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">安装 WSL</p>
-<div class="codehilite"><pre><span></span><code>参考[在 Windows 10 上安装 WSL | Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/wsl/install)进行 Windows 宿主机 WSL 的安装和配置。
-
-使用管理员身份运行以下命令，然后重启操作系统。
-<span class="s">```</span>
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+<p>参考 <a href="https://docs.microsoft.com/zh-cn/windows/wsl/install">在 Windows 10 上安装 WSL | Microsoft Docs</a> 进行 Windows 宿主机 WSL 的安装和配置。  </p>
+<p>使用管理员身份运行以下命令，然后重启操作系统。
+<div class="highlight"><pre><span></span><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-<span class="s">```</span>
-
-下载并安装 [适用于 x64 计算机的 WSL2 Linux 内核更新包](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
-
-以管理员身份执行以下命令，设置 WSL 默认版本：&lt;br&gt;
-<span class="s">```</span>
-wsl --set-default-version 2
-<span class="s">```</span>
-</code></pre></div>
-
+</code></pre></div></p>
+<p>下载并安装 <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a></p>
+<p>以管理员身份执行以下命令，设置 WSL 默认版本：<br>
+<div class="highlight"><pre><span></span><code>wsl --set-default-version 2
+</code></pre></div></p>
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">安装 Ubuntu</p>
-<div class="codehilite"><pre><span></span><code>在 Microsoft Store 里搜索&quot;Ubuntu&quot;并安装：
-</code></pre></div>
-
+<p>在 Microsoft Store 里搜索 Ubuntu 进行安装。</p>
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/windows-install-ubuntu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="安装Ubuntu" src="../../img/installation/dis_pressure/windows-install-ubuntu.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">检测 Ubuntu WSL 版本</p>
-<p>以管理员身份执行 PowerShell：
-    <div class="highlight"><pre><span></span><code>wsl.exe -l -v
+<p>以管理员身份执行 PowerShell
+<div class="highlight"><pre><span></span><code>wsl.exe -l -v
 </code></pre></div></p>
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/check-version-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="WSL版本1" src="../../img/installation/dis_pressure/check-version-1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">检查 Ubuntu 是否安装完成</p>
-<div class="codehilite"><pre><span></span><code>示例中安装的 Ubuntu Name 为 &quot;Ubuntu&quot;， 如像上图出现 Ubuntu 版本为 1， 则继续执行命令：
-```
-wsl.exe --set-version Ubuntu 2
-```
-
-出现以下内容即为成功。
-```
-正在进行转换，这可能需要几分钟时间...
+<p>示例中安装的 Ubuntu Name 为 "Ubuntu"， 如像上图出现 Ubuntu 版本为 1， 则继续执行命令：
+<div class="highlight"><pre><span></span><code>wsl.exe --set-version Ubuntu 2
+</code></pre></div></p>
+<p>出现以下内容即为成功。
+<div class="highlight"><pre><span></span><code>正在进行转换，这可能需要几分钟时间...
 有关与 WSL 2 的主要区别的信息，请访问 https://aka.ms.wsl2
 转换完成。
-```
-</code></pre></div>
-
+</code></pre></div></p>
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">Docker 安装与配置</p>
-<div class="codehilite"><pre><span></span><code>下载[<span class="nv">Docker</span><span class="w"> </span><span class="nv">Desktop</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">Windows</span>]<span class="ss">(</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">desktop</span>.<span class="nv">docker</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">win</span><span class="o">/</span><span class="nv">main</span><span class="o">/</span><span class="nv">amd64</span><span class="o">/</span><span class="nv">Docker</span><span class="o">%</span><span class="mi">20</span><span class="nv">Desktop</span><span class="o">%</span><span class="mi">20</span><span class="nv">Installer</span>.<span class="nv">exe</span><span class="ss">)</span>，双击<span class="w"> </span><span class="nv">Docker</span><span class="w"> </span><span class="nv">Desktop</span><span class="w"> </span><span class="nv">Installer</span>.<span class="nv">exe</span><span class="w"> </span>完成<span class="nv">docker</span><span class="w"> </span>的安装。
-
-<span class="nv">Docker</span><span class="w"> </span><span class="nv">Desktop</span><span class="w"> </span>安装完成后，进入<span class="w"> </span><span class="nv">Settings</span><span class="w"> </span>界面，选择<span class="w"> </span><span class="nv">Resources</span><span class="w"> </span>菜单下的<span class="w"> </span><span class="nv">WSL</span><span class="w"> </span><span class="nv">INTEGRATION</span>，按下图设置后，点击右下角的<span class="w"> </span>`<span class="nv">Apply</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nv">Restart</span>`。
-</code></pre></div>
-
+<p>下载 <a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe">Docker Desktop for Windows</a>，双击 Docker Desktop Installer.exe 完成docker 的安装。</p>
+<p>Docker Desktop 安装完成后，进入 Settings 界面，选择 Resources 菜单下的 WSL INTEGRATION，按下图设置后，点击右下角的 <code>Apply &amp; Restart</code>。</p>
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/docker-settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="docker设置" src="../../img/installation/dis_pressure/docker-settings.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">启动 Ubuntu</p>
-<div class="codehilite"><pre><span></span><code>在应用商店里，选择 Ubuntu，点击&quot;启动&quot;按钮启动 Ubuntu，并执行 `sudo su` 命令切换到 root 用户。&lt;/br&gt;
-
-在 Ubuntu 命令行中执行命令`docker version`，如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，则需要根据提示信息解决。
-</code></pre></div>
-
+<p>在应用商店里，选择 Ubuntu，点击"启动"按钮启动 Ubuntu，并执行 <code>sudo su</code> 命令切换到 root 用户。</br></p>
+<p>在 Ubuntu 命令行中执行命令<code>docker version</code>，如能像下图一样正常显示 docker 版本信息，则能正常执行 MeterSphere 后续的安装操作，如出现异常，则需要根据提示信息解决。</p>
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/check-docker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="docker检测" src="../../img/installation/dis_pressure/check-docker.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
