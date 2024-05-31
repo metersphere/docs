@@ -2140,33 +2140,30 @@ Intel 芯片无需开启 <code>Use Rosetta to run Intel code</code> 。</p>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mac 部署" src="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task Runner ，具体步骤参考：<a href="#1">服务端部署 Task-Runner</a>。</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span>
-<span class="c1"># 切换 root 用户</span>
-<span class="n">sudo</span><span class="w"> </span><span class="o">-</span><span class="n">i</span>
+<div class="highlight"><pre><span></span><code># 切换 root 用户
+sudo -i
 
-<span class="c1"># 安装 wget ，如果已经忽略此步</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">update</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">wget</span>
-<span class="n">wget</span><span class="w"> </span><span class="o">--</span><span class="n">version</span>
-<span class="c1"># 下载在线安装包</span>
-<span class="n">wget</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">metersphere</span><span class="o">/</span><span class="n">metersphere</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v3</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="o">/</span><span class="n">metersphere</span><span class="o">-</span><span class="n">online</span><span class="o">-</span><span class="n">installer</span><span class="o">-</span><span class="n">v3</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="c1"># 解压安装包</span>
-<span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">zxvf</span><span class="w"> </span><span class="n">metersphere</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">online</span><span class="o">-</span><span class="n">installer</span><span class="o">-</span><span class="n">v3</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+# 安装 wget ，如果已经忽略此步
+sudo apt-get update
+sudo apt-get install wget
+wget --version
+# 下载在线安装包
+wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
+# 解压安装包
+tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
 
-<span class="c1"># 进入离线部署包解压缩目录</span>
-<span class="n">cd</span><span class="w"> </span><span class="n">metersphere</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">online</span><span class="o">-</span><span class="n">installer</span><span class="o">-</span><span class="n">v3</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">y</span>
+# 进入离线部署包解压缩目录
+cd metersphere-ce-online-installer-v3.x.y
 
-<span class="c1"># 修改部署模式为 task-runner</span>
-<span class="n">vi</span><span class="w"> </span><span class="n">install</span><span class="o">.</span><span class="n">conf</span>
+# 修改部署模式为 task-runner
+vi install.conf
 
-<span class="c1"># 运行安装脚本</span>
-<span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span><span class="w"> </span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
+# 运行安装脚本
+/bin/bash install.sh
 
-<span class="c1"># 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。</span>
-<span class="n">msctl</span><span class="w"> </span><span class="n">status</span>
-<span class="err">```</span>
+# 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
+msctl status
 </code></pre></div>
-
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mac 部署" src="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
