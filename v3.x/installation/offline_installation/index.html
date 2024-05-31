@@ -2175,25 +2175,23 @@ tar zxvf metersphere-offline-installer-v3.x.y.tar.gz
 <h3 id="41">4.1 安装配置文件说明<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p class="admonition-title">安装配置文件说明</p>
-<p>如果无特殊需求可以不修改，采用默认参数安装。如需修改配置参数，则修改配置文件 install.conf 相关配置，修改完后执行 <code>/bin/bash install.sh</code> 命令进行安装。已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 修改，修改完后执行 <code>msctl reload</code> 重新加载配置参数生效。
+<p>如果无特殊需求可以不修改，采用默认参数安装。如需修改配置参数，则修改配置文件 install.conf 相关配置，修改完后执行 <code>/bin/bash install.sh</code> 命令进行安装。已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 修改，修改完后执行 <code>msctl reload</code> 重新加载配置参数生效。</p>
 <div class="highlight"><pre><span></span><code># 基础配置
 ## 安装路径, MeterSphere 配置及数据文件默认将安装在 ${MS_BASE}/metersphere 目录下
 MS_BASE=/opt
 ## MeterSphere 使用的 docker 网络网段信息
 MS_DOCKER_SUBNET=172.30.10.0/24
-## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.cn-qingdao.aliyuncs.com/metersphere
-MS_IMAGE_PREFIX=registry.cn-qingdao.aliyuncs.com/metersphere
+## 镜像前缀, MeterSphere 相关组件使用的 Docker 镜像前缀, 例如 registry.fit2cloud.com/metersphere
+MS_IMAGE_PREFIX=registry.fit2cloud.com/metersphere
 ## 镜像标签, MeterSphere 相关组件使用的 Docker 镜像标签
-MS_IMAGE_TAG=v3.0.0-rc12
-## 性能测试使用的 JMeter 镜像
-MS_JMETER_IMAGE=${MS_IMAGE_PREFIX}/jmeter:5.6.3-release1
-## 安装模式 allinone | server | task-runner | selenium-hub | middleware
+MS_IMAGE_TAG=v3.0.0-beta
+
+## 安装模式 allinone | server | task-runner
 MS_INSTALL_MODE=allinone
 ## MeterSphere 主程序的 HTTP 服务监听端口
 MS_SERVER_PORT=8081
 ## MeterSphere Task-Runner 组件的 HTTP 服务监听端口
 MS_TASK_RUNNER_PORT=8000
-MS_NODE_EXPORTER_PORT=9100
 
 # 数据库配置
 ## 是否使用外部数据库
@@ -2208,11 +2206,6 @@ MS_MYSQL_DB=metersphere
 MS_MYSQL_USER=root
 ## 数据库密码
 MS_MYSQL_PASSWORD=Password123@mysql
-
-# Prometheus 配置
-## 是否使用外部Prometheus
-MS_EXTERNAL_PROM=false
-MS_PROMETHEUS_PORT=9090
 
 # Redis 配置
 ## 是否使用外部Redis
@@ -2253,7 +2246,7 @@ MS_KAFKA_MEM_LIMIT=1g
 ## TOTP 执行机接口开启认证
 MS_TOTP_ENABLED=false
 MS_TOTP_SECRET=Password123@totp
-</code></pre></div></p>
+</code></pre></div>
 </div>
 <h3 id="42">4.2  数据库配置文件说明<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
@@ -2342,8 +2335,6 @@ cd metersphere-offline-installer-v3.x.y
 ├── docker-compose-task-runner.yml              #-- MeterSphere Task-Runner 组件所需的 Docker Compose文件
 ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
 ├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
-├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
-├── docker-compose-selenium.yml                 #-- MeterSphere UI 测试所需的Docker Compose 文件
 ├── install.conf -&gt; /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
 ├── install.conf.example                        #-- MeterSphere 安装部署初始配置文件
 </code></pre></div>

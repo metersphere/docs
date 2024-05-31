@@ -2049,7 +2049,7 @@
 用户名: admin
 密码: metersphere
 </code></pre></div></p>
-<p>安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。</p>
+<p>安装脚本默认将主机的 ~/.metersphere/data 目录作为挂载目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。</p>
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">安装目录结构说明</p>
@@ -2067,8 +2067,6 @@
 ├── docker-compose-task-runner.yml              #-- MeterSphere Task-Runner 组件所需的 Docker Compose文件
 ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
 ├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
-├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
-├── docker-compose-selenium.yml                 #-- MeterSphere UI 测试所需的Docker Compose 文件
 ├── install.conf -&gt; /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
 ├── install.conf.example                        #-- MeterSphere 安装部署初始配置文件
 </code></pre></div>
