@@ -652,11 +652,11 @@
         <li class="md-nav__item">
   <a href="#2-task-runner" class="md-nav__link">
     <span class="md-ellipsis">
-      2 本地执行部署 Task Runner
+      2 本地部署 Task Runner
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2 本地执行部署 Task Runner">
+    <nav class="md-nav" aria-label="2 本地部署 Task Runner">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1943,11 +1943,11 @@
         <li class="md-nav__item">
   <a href="#2-task-runner" class="md-nav__link">
     <span class="md-ellipsis">
-      2 本地执行部署 Task Runner
+      2 本地部署 Task Runner
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2 本地执行部署 Task Runner">
+    <nav class="md-nav" aria-label="2 本地部署 Task Runner">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2018,7 +2018,7 @@ vi install.conf
 # 运行安装脚本
 /bin/bash install.sh
 
-# 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
+# 查看 MeterSphere 状态，task-runner 状态为 healthy 即安装完成。
 msctl status
 </code></pre></div>
 </div>
@@ -2027,22 +2027,19 @@ msctl status
 <div class="admonition ms-abstract">
 <ul>
 <li><strong>编辑资源池</strong> <br>
- 【系统设置-系统-资源池】点击编辑资源池，在弹出的界面中为资源池名称、描述、内网 URL、应用组织、用途、类型、添加资源池方式等信息。</li>
+ 【系统设置-系统-资源池】点击编辑资源池，填写相应的 IP、Port 、最大并发数信息。</li>
 </ul>
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/%E8%B5%84%E6%BA%90%E6%B1%A0%E6%B7%BB%E5%8A%A0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机3" src="../../img/installation/dis_pressure/%E8%B5%84%E6%BA%90%E6%B1%A0%E6%B7%BB%E5%8A%A0.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p class="admonition-title">注意</p>
-<p>社区版不可添加资源池节点，企业版可以添加，具体参考：添加资源池(X-Pack)。</p>
-</div>
-<div class="admonition ms-abstract">
 <p class="admonition-title">操作说明</p>
 <ul>
-<li>内网URL：资源池部署在内网时，可走内网地址，如 <a href="http://内网服务器IP:8081">http://内网服务器IP:8081</a> 。</br></li>
-<li>IP、端口：资源池部署服务器的 IP ，默认端口 8000 ，Monitor 为监控端口，默认是 9100。</li>
+<li>内网URL：资源池部署在内网时，可走内网地址，如 <a href="http://MS服务器的内网IP:8081">http://MS服务器的内网IP:8081</a> 。</br></li>
+<li>IP、Port：资源池部署服务器的 IP ，默认端口 8000 。</li>
+<li>最大并发数：社区版单个节点最大并发数为 10，如需更大并发数，可申请 <a href="https://jinshuju.net/f/CzzAOe">企业版试用</a></li>
 </ul>
 </div>
-<h2 id="2-task-runner">2 本地执行部署 Task Runner<a class="headerlink" href="#2-task-runner" title="Permanent link">&para;</a></h2>
+<h2 id="2-task-runner">2 本地部署 Task Runner<a class="headerlink" href="#2-task-runner" title="Permanent link">&para;</a></h2>
 <h3 id="21-windows">2.1 Windows 系统部署<a class="headerlink" href="#21-windows" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p>Windows 部署 task-runner 可使用 WSL 安装。 虚拟机配置如下：</br></p>
