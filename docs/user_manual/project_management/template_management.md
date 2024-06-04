@@ -109,7 +109,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![新增字段设置](../../img/project_management/template_management/创建工作流.png){ width="900px" }
 
 !!! ms-abstract ""
-    横向为流转开始状态，纵向为流转结束状态，在状态列点击【创建流转步骤】打勾，表示该行状态可流转到列的状态。设置后，在【缺陷管理】页面更新缺陷时，【状态】字段下拉框中显示刚设置的状态。
+    第一列为缺陷状态，在状态列点击【创建流转步骤】打勾，表示该行状态可流转到列的状态。设置后，在【缺陷管理】页面更新缺陷时，【状态】字段下拉框中显示刚设置的状态。
 ![工作流阻塞状态](../../img/project_management/template_management/工作流阻塞状态.png){ width="900px" }
 
 ![缺陷里的状态流转](../../img/project_management/template_management/缺陷里的状态流转.png){ width="900px" }
