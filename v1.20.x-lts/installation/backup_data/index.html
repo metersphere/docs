@@ -1091,7 +1091,7 @@
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3 数据恢复
+      3 数据还原
     </span>
   </a>
   
@@ -3234,7 +3234,7 @@
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3 数据恢复
+      3 数据还原
     </span>
   </a>
   
@@ -3260,55 +3260,100 @@
 
   <h1>MeterSphere 数据备份</h1>
 
-<p>主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的目录备份。</p>
+<p>本文介绍了手动和自动两种备份方式，其中自动备份的脚本只备份数据库，备份完成后打包推送到指定服务器目录。<br>
+备份脚本中有多个变量可根据实际情况修改，用于满足不同的使用场景。</p>
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
-<p>数据库主要有 mysqldump 和 手动备份 /opt/metersphere/data/mysql 目录两种方式，可根据实际情况和已有备份工具制定备份策略和备份手段</p>
+<ol>
+<li>备份脚本中，默认保留最近的7份备份文件。（如每天备份一次，则保留最近7天的备份文件。）<br></li>
+<li>为加强数据的安全性，备份脚本中采取的本地加异地备份。</li>
+</ol>
 </div>
 <h2 id="1">1 手动备份<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code>#数据库备份：
-docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere &gt; metersphere.sql
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">数据库备份</span><span class="err">：</span>
+<span class="n">docker</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">mysql</span><span class="w"> </span><span class="n">mysqldump</span><span class="w"> </span><span class="o">-</span><span class="n">uroot</span><span class="w"> </span><span class="o">-</span><span class="n">pPassword123</span><span class="nv">@mysql</span><span class="w"> </span><span class="n">metersphere</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">metersphere</span><span class="p">.</span><span class="k">sql</span>
 
-#data 目录备份
-zip -r XXX.zip /opt/metersphere/data
+<span class="err">#</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">目录备份</span><span class="w"> </span><span class="err">（</span><span class="n">以实际安装目录为准</span><span class="err">）</span>
+<span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">cvf</span><span class="w"> </span><span class="n">data_backup</span><span class="p">.</span><span class="n">tar</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">metersphere</span><span class="o">/</span><span class="k">data</span>
 </code></pre></div>
-若备份数据库时出现mysqldump: Error 2020: Got packet bigger than ‘max_allowed_packet’ bytes when dumping tableapi_scenario_report_detailat row: 94，则添加max_allowed_packet参数，如下:
-<div class="highlight"><pre><span></span><code>docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G &gt; metersphere.sql
-</code></pre></div></p>
+
 <h2 id="2">2 定时任务自动备份<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>自动备份前需先生成 SSH 密钥对，并将公钥复制到备份服务器。
     <div class="highlight"><pre><span></span><code>ssh-keygen -t rsa
 </code></pre></div></li>
-<li>将公钥复制到远程服务器。
+<li>
+<p>将公钥复制到远程服务器。
    <div class="highlight"><pre><span></span><code>ssh-copy-id remote_user@remote_host
-</code></pre></div></li>
-<li>ms_backup.sh
-<div class="highlight"><pre><span></span><code>#!/bin/bash
+</code></pre></div></p>
+</li>
+<li>
+<p>创建用于数据备份的脚本文件
+    <div class="highlight"><pre><span></span><code>vi ms_backup.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>把以下内容复制到刚才创建的 ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
+    <div class="highlight"><pre><span></span><code>#!/bin/bash
 
-remote_user=&quot;username&quot;     #备份服务器用户名
-remote_host=&quot;remote_host&quot;  #备份服务器IP地址
-remote_path=&quot;remote_path&quot;  #备份服务器目录
-backupDir=/opt/db_bak    
-data=/opt/metersphere/data
-currentTime=`date &quot;+%Y-%m-%d-%H-%M-%S&quot;`   
-backupZipFileName=ms_db_$currentTime.zip  
-dumpSqlFilePath=$backupDir/ms_db_$currentTime.sql  
-echo dumpSqlFilePath=$dumpSqlFilePath
-docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G &gt; $dumpSqlFilePath
-cd $backupDir
-zip -r $backupZipFileName $dumpSqlFilePath $data
-
-#scp 将备份的数据库文件上传到备份服务器对应目录下
-scp $backupZipFileName $remote_user@$remote_host:$remote_path
-
-echo rm -rf dumpSqlFilePath
-rm -rf $backupDir/ms_db_$currentTime.sql
-
-#保留最近7天的备份，可根据实际情况调整。
+#历史备份数据保留天数
 keepBackupNum=7
-output=`ls -lt $backupDir/*.zip | awk &#39;{print $9}&#39;`
+#备份文件输出目录
+backupDir=/opt/db_bak
+#数据库用户名
+username=root
+#数据库密码
+password=Password123@mysql
+#需要备份的库名
+dbName=metersphere
+#备份文件的后缀名称
+currentTime=`date &quot;+%Y-%m-%d-%H-%M-%S&quot;`
+#备份文件的完整名称
+backupTarFileName=ms_db_$currentTime.tar.gz
+#导出sql文件的完整名称
+dumpSqlFile=ms_db_$currentTime.sql
+#推送远程服务器ip地址
+remoteIp=10.1.11.12
+#推送远程服务器用户名
+remoteUser=root
+#推送远程服务器目录
+remotePath=/opt
+#数据库是否内置
+isBuiltIn=true
+
+echo dumpSqlFilePath=$backupDir/$backupTarFileName
+
+#没有备份文件夹则创建
+if [  ! -d  &quot;$backupDir&quot; ];then
+    mkdir -p &quot;$backupDir&quot;
+else
+    echo &quot;--------------开始进行备份-----------------&quot;
+fi
+
+if [ &quot;${isBuiltIn}&quot; = &quot;true&quot; ]; then
+    docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G &gt; $dumpSqlFile
+else
+    mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G &gt; $dumpSqlFile
+fi
+
+cd $backupDir
+tar zcvf  $backupTarFileName $dumpSqlFile
+#发送备份文件到远程机器
+scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2&gt;&gt; &quot;error.log&quot;
+
+if [ $? -eq 0 ]; then
+    echo &quot;---------------远程备份完成----------------&quot;
+else
+    echo &quot;---------------远程备份失败----------------&quot;
+fi
+
+rm -rf $backupDir/$dumpSqlFile
+
+#remove outdated backup files
+
+output=`ls -lt $backupDir/*.tar.gz | awk &#39;{print $9}&#39;`
 step=0
+echo &quot;---------------开始清理$keepBackupNum天前备份数据----------------&quot;
 for backupFile in $output ;do
     step=$((step+1))
     echo step=$step
@@ -3318,9 +3363,16 @@ for backupFile in $output ;do
         rm -rf  $backupFile
     fi
 done
-</code></pre></div></li>
-</ol>
-<p>install_ms_backup.sh
+echo &quot;---------------结束清理$keepBackupNum天前备份数据----------------&quot;
+</code></pre></div></p>
+</li>
+<li>
+<p>创建用于定时任务脚本文件
+    <div class="highlight"><pre><span></span><code>vi install_ms_backup.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>把以下内容复制到刚才创建的 install_ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
 timedate_fields=&quot;0 1 * * *&quot;  #每天凌晨1:00执行备份程序
@@ -3332,12 +3384,16 @@ if test $? -ne 0; then
     crontab crontab.tmp
 fi
 </code></pre></div></p>
-<p>执行 crontab -l 即可</p>
-<h2 id="3">3 数据恢复<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+</li>
+<li>
+<p>执行 install_ms_backup.sh 文件（如果遇到文件权限问题，可以使用 chmod 命令增加权限），然后使用 crontab -l 命令即可查看定时任务</p>
+</li>
+</ol>
+<h2 id="3">3 数据还原<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
 <div class="highlight"><pre><span></span><code>cp metersphere.sql /opt/metersphere/data/mysql
 </code></pre></div></p>
-<p>进入 mysql 容器，进入数据库
+<p>进入 mysql 容器，登录数据库
 <div class="highlight"><pre><span></span><code>docker exec -it mysql sh
 mysql -uroot -pPassword123@mysql
 </code></pre></div></p>
