@@ -49,8 +49,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     keepBackupNum=7
     #备份文件输出目录
     backupDir=/opt/db_bak
-    #MeterSphere数据目录
-    data=/opt/metersphere/data
     #数据库用户名
     username=root
     #数据库密码
