@@ -25,7 +25,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     * 名称：要创建的 MeterSphere 应用的名称。
     * 版本：要安装的 MeterSphere 应用版本。
     * Web 端口：MeterSphere 应用的服务端口。
-    * JAVA 最大内存比例：JAVA 最大内存比例，默认 15%。
+    * JAVA 最大堆内存比例：JAVA 最大堆内存比例，默认 15%。
     * 容器名称：MeterSphere 应用容器名称。
     * 端口外部访问：MeterSphere 应用可以使用 IP:PORT 进行访问（MeterSphere 应用必须打开外部端口访问）。
     * CPU 限制：MeterSphere 应用可以使用的 CPU 核心数。
