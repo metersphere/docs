@@ -28,7 +28,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 运行安装脚本
     /bin/bash install.sh
     
-    # 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
+    # 查看 MeterSphere 状态，task-runner 状态为 healthy 即安装完成。
     msctl status
     ```
 ![配置主机3](../img/installation/dis_pressure/修改模式.png){ width="900px" }
@@ -37,18 +37,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
      - **编辑资源池** <br>
-     【系统设置-系统-资源池】点击编辑资源池，在弹出的界面中为资源池名称、描述、内网 URL、应用组织、用途、类型、添加资源池方式等信息。
+     【系统设置-系统-资源池】点击编辑资源池，填写相应的 IP、Port 、最大并发数信息。
 ![配置主机3](../img/installation/dis_pressure/资源池添加.png){ width="900px" }
 
-!!! ms-abstract "注意"
-    社区版不可添加资源池节点，企业版可以添加，具体参考：添加资源池(X-Pack)。
-
-
 !!! ms-abstract "操作说明"
-    - 内网URL：资源池部署在内网时，可走内网地址，如 http://内网服务器IP:8081 。</br>
-    - IP、端口：资源池部署服务器的 IP ，默认端口 8000 ，Monitor 为监控端口，默认是 9100。
+    - 内网URL：资源池部署在内网时，可走内网地址，如 http://MS服务器的内网IP:8081 。</br>
+    - IP、Port：资源池部署服务器的 IP ，默认端口 8000 。
+    - 最大并发数：社区版单个节点最大并发数为 10，如需更大并发数，可申请 [企业版试用](https://jinshuju.net/f/CzzAOe)
   
-## 2 本地执行部署 Task Runner
+## 2 本地部署 Task Runner
 ### 2.1 Windows 系统部署
 !!! ms-abstract ""
      Windows 部署 task-runner 可使用 WSL 安装。 虚拟机配置如下：</br>
