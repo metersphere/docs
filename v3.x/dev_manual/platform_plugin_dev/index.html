@@ -12,9 +12,13 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/docs/v3.x/teach_video/video_index/">
+        <link rel="canonical" href="https://metersphere.io/docs/v3.x/dev_manual/platform_plugin_dev/">
       
       
+        <link rel="prev" href="../dev_manual/">
+      
+      
+        <link rel="next" href="../../about/contact/">
       
       
       <link rel="icon" href="../../img/facio.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Video index - MeterSphere 文档</title>
+        <title>第三方平台插件开发 - MeterSphere 文档</title>
       
     
     
@@ -265,7 +269,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Video index
+              第三方平台插件开发
             
           </span>
         </div>
@@ -1949,8 +1953,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1961,11 +1967,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1979,7 +1985,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             开发文档
@@ -1993,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev_manual/dev_manual/" class="md-nav__link">
+      <a href="../dev_manual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2011,10 +2017,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../dev_manual/platform_plugin_dev/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第三方平台插件开发
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2023,6 +2047,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 项目结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 前端配置文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 前端配置文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-abstractplatformplugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 平台插件基础信息抽象类 AbstractPlatformPlugin（需实现）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-abstractplatform" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 平台接口抽象类AbstractPlatform（需实现）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2082,7 +2166,7 @@
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1 课程简介和线上环境介绍
+      1 项目结构
     </span>
   </a>
   
@@ -2091,54 +2175,33 @@
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2 测试跟踪
+      2 前端配置文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 前端配置文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-abstractplatformplugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 平台插件基础信息抽象类 AbstractPlatformPlugin（需实现）
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-abstractplatform" class="md-nav__link">
     <span class="md-ellipsis">
-      3 接口测试
+      2.2 平台接口抽象类AbstractPlatform（需实现）
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4 性能测试
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      5 UI 测试
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-devops" class="md-nav__link">
-    <span class="md-ellipsis">
-      6 融入 DevOps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      7 其它视频
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,42 +2223,222 @@
   
 
 
-  <h1>Video index</h1>
+  <h1>第三方平台插件开发</h1>
 
-<h2 id="1">1 课程简介和线上环境介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.bilibili.com/video/BV1XU4y127FK/"><img alt="MeterSphere 教学视频 课程简介" src="https://www.fit2cloud.com/metersphere/images/video/0.1.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1YY4y1b7vz/"><img alt="MeterSphere 专业测试云 线上环境" src="https://www.fit2cloud.com/metersphere/images/video/0.2.jpg" width="280" /></a></p>
-<h2 id="2">2 测试跟踪<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.bilibili.com/video/BV1BF411j7BB/"><img alt="测试跟踪 - 基本概念" src="https://www.fit2cloud.com/metersphere/images/video/1.1.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1nU4y1S7sR/"><img alt="创建功能用例 - 评审功能用例" src="https://www.fit2cloud.com/metersphere/images/video/1.2.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV12A4y1S7NS/"><img alt="测试计划关联功能用例" src="https://www.fit2cloud.com/metersphere/images/video/1.3.jpg" width="280" /></a></p>
-<h2 id="3">3 接口测试<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.bilibili.com/video/BV1x3411N72S/"><img alt="接口测试 - 基本概念" src="https://www.fit2cloud.com/metersphere/images/video/2.1.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1Ta411Y7V7/"><img alt="接口测试 - 接口定义" src="https://www.fit2cloud.com/metersphere/images/video/2.2.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1h34y1h7ZT/"><img alt="接口测试 - 接口用例" src="https://www.fit2cloud.com/metersphere/images/video/2.3.jpg" width="280" /></a> </br></p>
-<p><a href="https://www.bilibili.com/video/BV1ca411J79i/"><img alt="接口测试 - 接口自动化" src="https://www.fit2cloud.com/metersphere/images/video/2.4.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1Au411k7gw/"><img alt="测试计划关联功能用例和接口用例" src="https://www.fit2cloud.com/metersphere/images/video/2.5.jpg" width="280" /></a></p>
-<h2 id="4">4 性能测试<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.bilibili.com/video/BV16Y411A7rD/"><img alt="性能测试 - 基本概念" src="https://www.fit2cloud.com/metersphere/images/video/3.1.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV17L4y1F7ke/"><img alt="创建性能测试场景" src="https://www.fit2cloud.com/metersphere/images/video/3.2.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1EB4y1y7Sv/"><img alt="性能测试报告" src="https://www.fit2cloud.com/metersphere/images/video/3.3.jpg" width="280" /></a> </br></p>
-<p><a href="https://www.bilibili.com/video/BV1Y5411d73E/"><img alt="测试计划关联所有类型的测试用例" src="https://www.fit2cloud.com/metersphere/images/video/3.4.jpg" width="280" /></a></p>
-<h2 id="5-ui">5 UI 测试<a class="headerlink" href="#5-ui" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.bilibili.com/video/BV1EZ4y1a75S/"><img alt="UI 测试 - 创建 UI 自动化场景" src="https://www.fit2cloud.com/metersphere/images/video/4.1.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1gu411k7Px/"><img alt="引入元素库修改 UI 场景" src="https://www.fit2cloud.com/metersphere/images/video/4.2.jpg" width="280" /></a></p>
-<h2 id="6-devops">6 融入 DevOps<a class="headerlink" href="#6-devops" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.bilibili.com/video/BV18A4y1S7hd/"><img alt="用户组与权限" src="https://www.fit2cloud.com/metersphere/images/video/5.1.jpg" width="280" /></a>
-<a href="https://www.bilibili.com/video/BV1TF41177cG/"><img alt="Jenkins 插件调用 MeterSphere API" src="https://www.fit2cloud.com/metersphere/images/video/5.2.jpg" width="280" /></a></p>
-<h2 id="7">7 其它视频<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h2 id="1">1 项目结构<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
+<p>父工程 metersphere-platform-plugin 下, 创建插件子工程, 主要包括基本的实现类 impl 目录, 前端配置文件 script 目录, 静态文件 static 目录, POM 文件。</p>
+</div>
+<p><a class="glightbox" href="../../img/dev/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="服务集成插件" src="../../img/dev/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">POM文件</p>
+<div class="highlight"><pre><span></span><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;io.metersphere&lt;/groupId&gt;
+        &lt;artifactId&gt;metersphere-platform-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.x&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;metersphere-jira-plugin&lt;/artifactId&gt;
+
+    &lt;properties&gt;
+        &lt;!-- 打包时将这些参数写入 MANIFEST.MF， 供 pf4j 识别 --&gt;
+        &lt;plugin.id&gt;jira&lt;/plugin.id&gt;   &lt;!-- 插件ID --&gt;
+        &lt;plugin.class&gt;io.metersphere.plugin.jira.impl.JiraPlugin&lt;/plugin.class&gt;     &lt;!-- 插件基础信息实现类 --&gt;
+        &lt;plugin.provider&gt;fit2cloud&lt;/plugin.provider&gt;     &lt;!-- 插件提供者 --&gt;
+        &lt;plugin.dependencies/&gt;
+    &lt;/properties&gt;
+&lt;/project&gt;
+</code></pre></div>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">依赖关系</p>
 <ul>
-<li><a href="https://www.bilibili.com/video/BV1jr4y1c7Lg/">MeterSphere 如何与 TAPD和 Jira 对接</a></li>
-<li><a href="https://www.bilibili.com/video/BV1dp4y167ch/">MeterSphere 如何对接邮件、钉钉、企业微信</a></li>
-<li><a href="https://www.bilibili.com/video/BV1vy4y1q7f7/">如何在 MeterSphere 中做场景化的接口测试</a></li>
-<li><a href="https://www.bilibili.com/video/BV1W54y1C7uY">如何在 MeterSphere 中导入 Postman 脚本做接口测试</a></li>
-<li><a href="https://www.bilibili.com/video/BV1YK411A7E8/">如何在 MeterSphere 中导入 Swagger UI 脚本做接口测试</a></li>
+<li>metersphere-plugin-platform-sdk：定义了 MS 对接第三方项目平台的一些公共domain, 枚举, 以及开发中需要实现对应的接口。</li>
+<li>metersphere-plugin-sdk：封装 MS 插件的抽象接口规范, 及公共的工具类, 包含插件的日志类实现, 实现插件的热更新，同时支持将插件的静态资源上传到不同存储的机制，MS 平台插件将会上传到对象存储。</li>
+<li>spring-web：restTemplate 来作为第三方REST接口的调用模板工具类。</li>
+<li>httpclient：作为 restTemplate 底层的 HTTP 框架。</li>
+<li>commons-codec：编解码工具类, 例如: base64作为一些HTTP请求头参数的编码。</li>
 </ul>
 </div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">注意</p>
+<p>插件子工程项目直接依赖该项目父工程 <code>metersphere-platform-plugin</code> 即可，具体参考上面的POM文件，父工程有打包依赖上述所有的依赖。</p>
+</div>
+<p><a class="glightbox" href="../../img/dev/%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="服务集成插件" src="../../img/dev/%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB.png" width="900px" /></a>    </p>
+<h2 id="2">2 前端配置文件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<ul>
+<li>account.json：个人信息相关的配置文件。</li>
+<li>bug-inject.json：缺陷内置的平台字段相关配置文件（目前用来内置并替换MS的一些特殊字段，例如：处理人）。</li>
+<li>integration.json：服务集成的配置文件。</li>
+<li>project-bug.json：项目同步缺陷相关的配置文件。</li>
+<li>project-demand.json：项目需求关联相关的配置文件。</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">说明</p>
+<p>具体配置参考 Form-create 官网，或者其他子工程静态资源 script 目录；可以配置文件不同名，但注意每个脚本文件内容中的脚本 ID 需与 AbstractPlatformPlugin 
+里面的方法返回的 getXXXScriptId 一致，当然也可以重写 getXXXScriptId 方法。</p>
+</div>
+<h3 id="21-abstractplatformplugin">2.1 平台插件基础信息抽象类 AbstractPlatformPlugin（需实现）<a class="headerlink" href="#21-abstractplatformplugin" title="Permanent link">&para;</a></h3>
+<div class="admonition ms-abstract">
+<div class="highlight"><pre><span></span><code>    @Override
+public String getName() {
+    return PLUGIN_NAME;
+}
+
+@Override
+public String getDescription() {
+    return DESCRIPTION;
+}
+
+@Override
+public String getLogo() {
+    return LOGO_PATH;
+}
+</code></pre></div>
+</div>
+<h3 id="22-abstractplatform">2.2 平台接口抽象类AbstractPlatform（需实现）<a class="headerlink" href="#22-abstractplatform" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">```</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm"> * 校验服务集成配置</span>
+<span class="cm"> * 服务集成点击校验时调用</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">validateIntegrationConfig</span><span class="p">();</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 校验用户配置</span>
+<span class="cm"> * 个人中心-第三方平台点击时调用</span>
+<span class="cm"> * @param userConfig 用户配置</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">validateUserConfig</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">userConfig</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 校验项目配置</span>
+<span class="cm"> * 项目设置成点击校验项目 key 时调用</span>
+<span class="cm"> * @param projectConfig 项目配置</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">validateProjectConfig</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">projectConfig</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 平台是否支持第三方默认模板</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return True时会在MS平台展示第三方的默认模板</span>
+<span class="cm"> */</span>
+<span class="k">boolean</span><span class="w"> </span><span class="n">isSupportDefaultTemplate</span><span class="p">();</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 获取第三方平台模板的自定义字段(isSupportDefaultTemplate为true时才会调用)</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param projectConfig  项目配置信息</span>
+<span class="cm"> * @return 平台自定义字段集合</span>
+<span class="cm"> */</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">PlatformCustomFieldItemDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getDefaultTemplateCustomField</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">projectConfig</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 获取第三方联级下拉options</span>
+<span class="cm"> * @param optionsRequest 插件请求参数</span>
+<span class="cm"> * @return 选项集合</span>
+<span class="cm"> */</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">SelectOption</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getPluginOptions</span><span class="p">(</span><span class="n">PluginOptionsRequest</span><span class="w"> </span><span class="n">optionsRequest</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 获取第三方平台表单下拉选项</span>
+<span class="cm"> * @param optionsRequest 选项请求参数</span>
+<span class="cm"> * @return 选项集合</span>
+<span class="cm"> */</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">SelectOption</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getFormOptions</span><span class="p">(</span><span class="n">GetOptionRequest</span><span class="w"> </span><span class="n">optionsRequest</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 获取第三方平台缺陷状态选项</span>
+<span class="cm"> * @param projectConfig 项目配置信息</span>
+<span class="cm"> * @param issueKey 缺陷ID</span>
+<span class="cm"> * @return 缺陷平台状态</span>
+<span class="cm"> * @throws Exception 获取平台状态异常</span>
+<span class="cm"> */</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">SelectOption</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getStatusTransitions</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">projectConfig</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">issueKey</span><span class="p">)</span><span class="w"> </span><span class="n">throws</span><span class="w"> </span><span class="k">Exception</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 获取第三方平台关联需求列表</span>
+<span class="cm"> * @param request 需求分页查询参数</span>
+<span class="cm"> * @return 需求分页数据</span>
+<span class="cm"> */</span>
+<span class="n">PluginPager</span><span class="o">&lt;</span><span class="n">PlatformDemandDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pageDemand</span><span class="p">(</span><span class="n">DemandPageRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 根据关联的需求ID查询平台需求信息</span>
+<span class="cm"> * @param request 需求关联查询参数</span>
+<span class="cm"> * @return 平台需求信息</span>
+<span class="cm"> */</span>
+<span class="n">PlatformDemandDTO</span><span class="w"> </span><span class="n">getDemands</span><span class="p">(</span><span class="n">DemandRelateQueryRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 新增平台缺陷</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param request 平台缺陷参数</span>
+<span class="cm"> * @return 平台缺陷</span>
+<span class="cm"> */</span>
+<span class="n">PlatformBugUpdateDTO</span><span class="w"> </span><span class="n">addBug</span><span class="p">(</span><span class="n">PlatformBugUpdateRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 修改平台缺陷</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param request 平台缺陷参数</span>
+<span class="cm"> * @return 平台缺陷</span>
+<span class="cm"> */</span>
+<span class="n">PlatformBugUpdateDTO</span><span class="w"> </span><span class="n">updateBug</span><span class="p">(</span><span class="n">PlatformBugUpdateRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 删除平台缺陷</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param platformBugId 平台缺陷ID</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">deleteBug</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">platformBugId</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 平台是否支持附件API</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return 是否支持附件同步</span>
+<span class="cm"> */</span>
+<span class="k">boolean</span><span class="w"> </span><span class="n">isSupportAttachment</span><span class="p">();</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 同步MS附件至第三方平台(isSupportAttachment为true时执行同步附件的逻辑)</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param request 同步附件参数</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">syncAttachmentToPlatform</span><span class="p">(</span><span class="n">SyncAttachmentToPlatformRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 同步存量缺陷</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param request 同步缺陷参数</span>
+<span class="cm"> * @return 同步缺陷结果</span>
+<span class="cm"> */</span>
+<span class="n">SyncBugResult</span><span class="w"> </span><span class="n">syncBugs</span><span class="p">(</span><span class="n">SyncBugRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 同步全量缺陷</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param request 同步缺陷参数</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">syncAllBugs</span><span class="p">(</span><span class="n">SyncAllBugRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 获取附件输入流，并做相应处理</span>
+<span class="cm"> * 同步缺陷中，同步附件时会调用</span>
+<span class="cm"> * @param fileKey 文件关键字</span>
+<span class="cm"> * @param inputStreamHandler 获取响应的输入流后，做对应处理</span>
+<span class="cm"> */</span>
+<span class="n">void</span><span class="w"> </span><span class="n">getAttachmentContent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileKey</span><span class="p">,</span><span class="w"> </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">InputStream</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inputStreamHandler</span><span class="p">);</span>
+<span class="err">```</span>
+</code></pre></div>
 
 
 
