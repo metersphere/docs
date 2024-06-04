@@ -62,7 +62,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!测试计划](../img/quick_start/test_case/新建测试计划3.png){ width="900px" }
 
-## 4 测试计划执行
+## 6 测试计划执行
 !!! ms-abstract ""
     如图，点击【执行】进入【用例详情】在步骤描述处填写【实际结果】和【步骤执行结果】，修改当前用例【执行状态】和【评论】后，点击【提交结果】完成当前用例执行。
 ![!测试计划](../img/quick_start/test_case/测试计划执行1.png){ width="900px" }
@@ -75,12 +75,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![!测试计划](../img/quick_start/test_case/创建缺陷2.png){ width="900px" }
 
-## 5 生成报告
+## 7 生成报告
 !!! ms-abstract ""
     测试计划执行完成后，在【测试计划详情】页点击【生成报告】生成测试计划报告。
 ![!报告](../img/quick_start/test_case/生成报告.png){ width="900px" }
 
-## 6 查看报告
+## 8 查看报告
 !!! ms-abstract ""
     切换到【报告】页面，点击【报告 ID】查看报告详情。
 ![!报告](../img/quick_start/test_case/查看报告2.png){ width="900px" }

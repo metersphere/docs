@@ -93,7 +93,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【关联字段】新增字段。
     
 !!! ms-abstract ""
-    点击列表中缺陷模版名称，即可查看模板内容。
+    点击列表中缺陷模板名称，即可查看模板内容。
 ![查看缺陷模板](../../img/project_management/template_management/查看缺陷模板.png){ width="900px" }
 
 !!! ms-abstract ""

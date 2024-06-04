@@ -262,7 +262,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     - MeterSphere 格式：通过 MeterSphere 接口测试页面或者浏览器插件导出的 json 格式文件 <br>
     - JMeter 格式：支持 JMeter5.2-5.4版本的 JMX 文件，通过 JMeter 生成 JMX 文件 <br>
-    - ESB 格式：支持 ESB 模版的 xlsx 文件（支持模版下载/上传）<br>
+    - ESB 格式：支持 ESB 模板的 xlsx 文件（支持模板下载/上传）<br>
 
 ![! metersphere导入格式](../img/faq/TCP导入格式.png){ width="900px" }
 
