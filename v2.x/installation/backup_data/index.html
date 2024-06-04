@@ -3328,7 +3328,12 @@ tar -cvf data_backup.tar /opt/metersphere/data
 </code></pre></div></p>
 </li>
 <li>
-<p>备份脚本：ms_backup.sh
+<p>创建用于数据备份的脚本文件
+<div class="highlight"><pre><span></span><code>    vi ms_backup.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>把以下内容复制到刚才创建的 ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
 #历史备份数据保留天数
@@ -3416,10 +3421,14 @@ done
 echo &quot;---------------结束清理$keepBackupNum天前备份数据----------------&quot;
 </code></pre></div></p>
 </li>
-</ol>
-</div>
-<p>install_ms_backup.sh
-    <div class="highlight"><pre><span></span><code>#!/bin/bash
+<li>
+<p>创建用于定时任务脚本文件
+<div class="highlight"><pre><span></span><code>vi install_ms_backup.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>把以下内容复制到刚才创建的 install_ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
+<div class="highlight"><pre><span></span><code>#!/bin/bash
 
 timedate_fields=&quot;0 1 * * *&quot;  #每天凌晨1:00执行备份程序
 cmd=&quot;bash /opt/db_bak/ms_backup.sh&quot;
@@ -3430,7 +3439,12 @@ if test $? -ne 0; then
     crontab crontab.tmp
 fi
 </code></pre></div></p>
-<p>执行 crontab -l 即可查看定时任务</p>
+</li>
+<li>
+<p>执行 install_ms_backup.sh 文件（如果遇到文件权限问题，可以使用 chmod 命令增加权限），然后使用 crontab -l 命令即可查看定时任务</p>
+</li>
+</ol>
+</div>
 <h2 id="2">2 数据还原<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
