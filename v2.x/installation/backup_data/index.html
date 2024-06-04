@@ -3307,9 +3307,9 @@
 <h3 id="11">1.1 手动备份<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <div class="highlight"><pre><span></span><code># 数据库备份：
-docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G &gt; metersphere.sql
+docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere &gt; metersphere.sql
 
-# /opt/metersphere/data 目录备份
+# data 目录备份 （以实际安装目录为准）
 tar -cvf data_backup.tar /opt/metersphere/data
 </code></pre></div>
 </div>
