@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://metersphere.io/docs/v3.x/user_manual/x-pack/controller/">
       
       
+        <link rel="prev" href="../message/">
+      
+      
+        <link rel="next" href="../../../plugin/">
       
       
       <link rel="icon" href="../../../img/facio.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Controller - MeterSphere 文档</title>
+        <title>资源池 - MeterSphere 文档</title>
       
     
     
@@ -260,7 +264,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Controller
+              资源池
             
           </span>
         </div>
@@ -745,8 +749,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -766,14 +772,16 @@
       
         
       
+        
+      
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -787,7 +795,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             功能手册
@@ -1751,6 +1759,176 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    X-Pack
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            X-Pack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    组织
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自定义主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../message/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    消息模板
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    资源池
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1852,7 +2030,7 @@
   
 
 
-  <h1>Controller</h1>
+  <h1>资源池</h1>
 
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意</p>
@@ -1873,7 +2051,7 @@
 </ul>
 </div>
 <div class="admonition ms-abstract">
-<p>点击【单个添加】输入资源池的 IP、Port、Monitor、最大并发数。</p>
+<p>点击【单个添加】输入资源池的 IP、Port、最大并发数。</p>
 </div>
 <p><a class="glightbox" href="../../../img/X-Pack/controller/%E6%B7%BB%E5%8A%A0%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!添加资源池" src="../../../img/X-Pack/controller/%E6%B7%BB%E5%8A%A0%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
@@ -1881,12 +2059,11 @@
 <ul>
 <li>【IP】资源池服务器的 IP。</li>
 <li>【Port】资源池的端口号，默认是 8000。</li>
-<li>【Monitor】资源池的监控端口号，默认是 9100。</li>
-<li>【最大并发数】4C8G 的服务器配置支持 100-2000 并发。</li>
+<li>【最大并发数】4C8G 的服务器配置支持 1000-2000 并发。</li>
 </ul>
 </div>
 <div class="admonition ms-abstract">
-<p>点击【批量添加】在批量添加页面，依次输入资源池的 IP、Port、Monitor、最大并发数。</p>
+<p>点击【批量添加】在批量添加页面，依次输入资源池的 IP、Port、最大并发数。</p>
 </div>
 <p><a class="glightbox" href="../../../img/X-Pack/controller/%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E8%B5%84%E6%BA%90%E6%B1%A0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!批量添加资源池" src="../../../img/X-Pack/controller/%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0%E8%B5%84%E6%BA%90%E6%B1%A0.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
@@ -1894,7 +2071,7 @@
 <p><strong>切换资源池</strong>：项目可以切换其他资源池进行使用。详情参考：<a href="../../project_management/project_permissions/#23">切换资源池</a></p>
 </div>
 <div class="admonition ms-abstract">
-<p>资源池可进行【编辑】、【禁用】、【删除】操作。</p>
+<p>资源池可进行【编辑】、【启用/禁用】、【删除】操作。</p>
 </div>
 <p><a class="glightbox" href="../../../img/X-Pack/controller/%E8%B5%84%E6%BA%90%E6%B1%A0%E5%8A%9F%E8%83%BD%E6%93%8D%E4%BD%9C.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池功能操作" src="../../../img/X-Pack/controller/%E8%B5%84%E6%BA%90%E6%B1%A0%E5%8A%9F%E8%83%BD%E6%93%8D%E4%BD%9C.png" width="900px" /></a></p>
 
