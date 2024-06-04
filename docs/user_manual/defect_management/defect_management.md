@@ -15,7 +15,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "字段说明"
     - 【缺陷名称】自定义缺陷名称。
-    - 【缺陷模板】可选择本地平台模板或第三方平台模板，配置缺陷模板步骤。详情参考：[模板设置](../project_management/template_management.md#22)
+    - 【缺陷模板】可选择本地平台模板或第三方平台模板。本地平台模板配置参考：[模板设置](../project_management/template_management.md#22)
     - 【描述】缺陷的详细步骤进行描述。
     - 【附件】上传或关联任意类型文件，限制文件大小为 50 MB。
 
@@ -25,7 +25,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 同步缺陷
 !!! ms-abstract ""
-    【自动同步】根据在【项目管理-项目权限-应用设置-缺陷管理】处配置的内容生效。详情参考：[自动同步配置](../project_management/project_permissions.md#21)
+    【自动同步】根据在【项目管理-项目与权限-应用设置-缺陷管理】处配置的内容生效。详情参考：[自动同步配置](../project_management/project_permissions.md#21)
 ![!缺陷平台设置](../../img/defect_management/缺陷平台设置.png){ width="900px" }
 
 !!! ms-abstract ""
