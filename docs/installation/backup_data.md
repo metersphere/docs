@@ -37,7 +37,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ssh-copy-id remote_user@remote_host
     ```
 
-    3. 备份脚本：ms_backup.sh
+    3. 创建用于数据备份的脚本文件
+    ```
+        vi ms_backup.sh
+    ```
+    
+    4. 把以下内容复制到刚才创建的 ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
     ```
     #!/bin/bash
 
@@ -126,7 +131,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     echo "---------------结束清理$keepBackupNum天前备份数据----------------"
     ```
 
-install_ms_backup.sh
+    5. 创建用于定时任务脚本文件
+    ```
+    vi install_ms_backup.sh
+    ```
+    
+    6. 把以下内容复制到刚才创建的 install_ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
     ```
     #!/bin/bash
     
@@ -140,7 +150,7 @@ install_ms_backup.sh
     fi
     ```
 
-执行 crontab -l 即可查看定时任务
+    7. 执行 install_ms_backup.sh 文件（如果遇到文件权限问题，可以使用 chmod 命令增加权限），然后使用 crontab -l 命令即可查看定时任务
 
 ## 2 数据还原
 !!! ms-abstract ""
