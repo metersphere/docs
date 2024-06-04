@@ -3,63 +3,64 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 ## 1 项目结构
-```
-.
-├── Jenkinsfile                                     # 构建镜像使用的 jenkinsfile
-├── Dockerfile                                      # 构建镜像使用的 Dockerfile
-├── LICENSE
-├── OWNERS
-├── README.md                                       # 项目中文介绍
-├── README-EN.md                                    # 项目英文介绍
-├── SECURITY.md                                     # 安全说明
-├── CODE_OF_CONDUCT.md                              # 
-├── CONTRIBUTING.md 
-├── build.md                                        # 构建过程
-├── backend                                         # 后端项目主目录
-│   ├── app                                   
-│   ├── framework
-│   ├── app
-│   ├── pom.xml                               # 后端 maven 项目使用的 pom 文件
-│   └── .gitignore                                  
-├── frontend                                        # 前端项目主目录
-│   ├── .husky
-│   ├── config                                # 项目构建配置
-│   ├── public
-│   ├── src                                   # 前端代码目录
-│   ├── types
-│   ├── .env.development                      # 开发环境变量声明
-│   ├── .env.production                       # 生产环境变量声明
-│   ├── .eslintignore
-│   ├── .eslintrc.js
-│   ├── .eslintrc-auto-import.json
-│   ├── .gitignore
-│   ├── .prettierignore
-│   ├── .prettierrc.js
-│   ├── .stylelintrc.js
-│   ├── babel.config.js
-│   ├── commitlint.config.js                   # commitlint 配置，校验 commit 信息
-│   ├── components.d.ts                        # 组件注册 TS 声明
-│   ├── Dockerfile                             # 构建前端应用使用的 Dockerfile
-│   ├── index.html                             # 单页面html模板
-│   ├── nginx.conf                             # Nginx 配置文件
-│   ├── package.json                           # 前端项目中的元数据文件
-│   ├── pom.xml                                # 前端 maven 项目使用的 pom 文件
-│   ├── postcss.config.js
-│   ├── README.md
-│   ├── tailwind.config.js
-│   ├── tsconfig.json
-│   ├── vitest.config.ts
-│   ├── .editorconfig
-│   ├── .gitignore
-│   ├── babel.config.js                        # babel配置，支持JSX
-│   ├── package.json
-│   ├── vue.config.js                               
-│   └── 代码规范.MD                                   
-├── .gitignore
-├── mvnw
-├── mvnw.cmd
-└── pom.xml                                           # 整体 maven 项目使用的 pom 文件
-```
+!!! ms-abstract ""
+    ```
+    .
+    ├── Jenkinsfile                                     # 构建镜像使用的 jenkinsfile
+    ├── Dockerfile                                      # 构建镜像使用的 Dockerfile
+    ├── LICENSE
+    ├── OWNERS
+    ├── README.md                                       # 项目中文介绍
+    ├── README-EN.md                                    # 项目英文介绍
+    ├── SECURITY.md                                     # 安全说明
+    ├── CODE_OF_CONDUCT.md                              # 
+    ├── CONTRIBUTING.md 
+    ├── build.md                                        # 构建过程
+    ├── backend                                         # 后端项目主目录
+    │   ├── app                                   
+    │   ├── framework
+    │   ├── app
+    │   ├── pom.xml                               # 后端 maven 项目使用的 pom 文件
+    │   └── .gitignore                                  
+    ├── frontend                                        # 前端项目主目录
+    │   ├── .husky
+    │   ├── config                                # 项目构建配置
+    │   ├── public
+    │   ├── src                                   # 前端代码目录
+    │   ├── types
+    │   ├── .env.development                      # 开发环境变量声明
+    │   ├── .env.production                       # 生产环境变量声明
+    │   ├── .eslintignore
+    │   ├── .eslintrc.js
+    │   ├── .eslintrc-auto-import.json
+    │   ├── .gitignore
+    │   ├── .prettierignore
+    │   ├── .prettierrc.js
+    │   ├── .stylelintrc.js
+    │   ├── babel.config.js
+    │   ├── commitlint.config.js                   # commitlint 配置，校验 commit 信息
+    │   ├── components.d.ts                        # 组件注册 TS 声明
+    │   ├── Dockerfile                             # 构建前端应用使用的 Dockerfile
+    │   ├── index.html                             # 单页面html模板
+    │   ├── nginx.conf                             # Nginx 配置文件
+    │   ├── package.json                           # 前端项目中的元数据文件
+    │   ├── pom.xml                                # 前端 maven 项目使用的 pom 文件
+    │   ├── postcss.config.js
+    │   ├── README.md
+    │   ├── tailwind.config.js
+    │   ├── tsconfig.json
+    │   ├── vitest.config.ts
+    │   ├── .editorconfig
+    │   ├── .gitignore
+    │   ├── babel.config.js                        # babel配置，支持JSX
+    │   ├── package.json
+    │   ├── vue.config.js                               
+    │   └── 代码规范.MD                                   
+    ├── .gitignore
+    ├── mvnw
+    ├── mvnw.cmd
+    └── pom.xml                                           # 整体 maven 项目使用的 pom 文件
+    ```
 
 ## 2 配置开发环境
 ### 2.1 拉取代码
