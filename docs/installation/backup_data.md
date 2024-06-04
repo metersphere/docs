@@ -2,23 +2,24 @@
 description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
 ---
 
+!!! ms-abstract "概述"
+    本文介绍了手动和自动两种备份方式，其中自动备份的脚本只备份数据库，备份完成后打包推送到指定服务器目录。<br>
+    备份脚本中有多个变量可根据实际情况修改，用于满足不同的使用场景。
+
 !!! ms-abstract "注意"
-    主要是 MySQL 数据库的数据备份和 /opt/metersphere/data 路径下的目录备份。<br>
-    数据库主要有 mysqldump 和 手动备份 /opt/metersphere/data/mysql 目录两种方式，可根据企业实际情况和已有备份工具制定备份策略和备份手段。
+    1. 备份脚本中，默认保留最近的7份备份文件。（如每天备份一次，则保留最近7天的备份文件。）<br>
+    2. 为加强数据的安全性，备份脚本中采取的本地加异地备份。
 
 ## 1 数据备份
 ### 1.1 手动备份
 !!! ms-abstract ""
+
     ```
-    #数据库备份：
+    # 数据库备份：
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     
-    #data 目录备份
+    # data 目录备份 （以实际安装目录为准）
     tar -cvf data_backup.tar /opt/metersphere/data
-    ```
-    若备份数据库时出现`mysqldump: Error 2020: Got packet bigger than ‘max_allowed_packet’ bytes when dumping tableapi_scenario_report_detailat row: 94`，则添加max_allowed_packet参数，如下:
-    ```
-    docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
     ```
 
 ### 1.2 自动备份
@@ -35,33 +36,73 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ssh-copy-id remote_user@remote_host
     ```
 
-    3. 备份脚本：ms_backup.sh
+    3. 创建用于数据备份的脚本文件
+    ```
+        vi ms_backup.sh
+    ```
+    
+    4. 把以下内容复制到刚才创建的 ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
     ```
     #!/bin/bash
 
-    remote_user="username"     #备份服务器用户名
-    remote_host="remote_host"  #备份服务器IP地址
-    remote_path="remote_path"  #备份服务器目录
-    backupDir=/opt/db_bak    
-    data=/opt/metersphere/data
-    currentTime=`date "+%Y-%m-%d-%H-%M-%S"`   
-    backupZipFileName=ms_db_$currentTime.zip  
-    dumpSqlFilePath=$backupDir/ms_db_$currentTime.sql  
-    echo dumpSqlFilePath=$dumpSqlFilePath
-    docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > $dumpSqlFilePath
-    cd $backupDir
-    zip -r $backupZipFileName $dumpSqlFilePath $data
-    
-    #scp 将备份的数据库文件上传到备份服务器对应目录下
-    scp $backupZipFileName $remote_user@$remote_host:$remote_path
-     
-    echo rm -rf dumpSqlFilePath
-    rm -rf $backupDir/ms_db_$currentTime.sql
-    
-    #保留最近7天的备份，可根据实际情况调整。
+    #历史备份数据保留天数
     keepBackupNum=7
-    output=`ls -lt $backupDir/*.zip | awk '{print $9}'`
+    #备份文件输出目录
+    backupDir=/opt/db_bak
+    #数据库用户名
+    username=root
+    #数据库密码
+    password=Password123@mysql
+    #需要备份的库名
+    dbName=metersphere
+    #备份文件的后缀名称
+    currentTime=`date "+%Y-%m-%d-%H-%M-%S"`
+    #备份文件的完整名称
+    backupTarFileName=ms_db_$currentTime.tar.gz
+    #导出sql文件的完整名称
+    dumpSqlFile=ms_db_$currentTime.sql
+    #推送远程服务器ip地址
+    remoteIp=10.1.11.12
+    #推送远程服务器用户名
+    remoteUser=root
+    #推送远程服务器目录
+    remotePath=/opt
+    #数据库是否内置
+    isBuiltIn=true
+
+    echo dumpSqlFilePath=$backupDir/$backupTarFileName
+
+    #没有备份文件夹则创建
+    if [  ! -d  "$backupDir" ];then
+        mkdir -p "$backupDir"
+    else
+        echo "--------------开始进行备份-----------------"
+    fi
+
+    if [ "${isBuiltIn}" = "true" ]; then
+        docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
+    else
+        mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
+    fi
+
+    cd $backupDir
+    tar zcvf  $backupTarFileName $dumpSqlFile
+    #发送备份文件到远程机器
+    scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
+    
+    if [ $? -eq 0 ]; then
+        echo "---------------远程备份完成----------------"
+    else
+        echo "---------------远程备份失败----------------"
+    fi
+    
+    rm -rf $backupDir/$dumpSqlFile
+    
+    #remove outdated backup files
+    
+    output=`ls -lt $backupDir/*.tar.gz | awk '{print $9}'`
     step=0
+    echo "---------------开始清理$keepBackupNum天前备份数据----------------"
     for backupFile in $output ;do
         step=$((step+1))
         echo step=$step
@@ -71,9 +112,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
             rm -rf  $backupFile
         fi
     done
+    echo "---------------结束清理$keepBackupNum天前备份数据----------------"
     ```
 
-    install_ms_backup.sh
+    5. 创建用于定时任务脚本文件
+    ```
+    vi install_ms_backup.sh
+    ```
+    
+    6. 把以下内容复制到刚才创建的 install_ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
     ```
     #!/bin/bash
     
@@ -87,7 +134,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     fi
     ```
 
-    执行 crontab -l 即可查看定时任务
+    7. 执行 install_ms_backup.sh 文件（如果遇到文件权限问题，可以使用 chmod 命令增加权限），然后使用 crontab -l 命令即可查看定时任务
 
 ## 2 数据还原
 !!! ms-abstract ""
