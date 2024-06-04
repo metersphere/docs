@@ -120,6 +120,7 @@ nav:
     - 插件列表: plugin.md
     - 开发文档:
           - 开发环境搭建: dev_manual/dev_manual.md
+          - 接口自动化插件开发: dev_manual/api_dev_plugin.md
           - 第三方平台插件开发: dev_manual/platform_plugin_dev.md
   #    - 用户案例: case_studies/user_cases.md
 #    - 更新日志: about/changelog.md
