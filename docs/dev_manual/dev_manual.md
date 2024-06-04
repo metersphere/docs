@@ -172,15 +172,15 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     2 整体打包
     ./mvnw clean package
     ```
-![server-start](./img/dev/project_package.png){ width="900px" } 
+![server-start](../img/dev/project_package.png){ width="900px" } 
 
 !!! ms-abstract ""
     
     - **启动服务**<br>
 
-![server-start](./img/dev/build-start.png){ width="900px" }
+![server-start](../img/dev/build-start.png){ width="900px" }
 
-![server-start](./img/dev/satrt_success.png){ width="900px" } 
+![server-start](../img/dev/satrt_success.png){ width="900px" } 
 
 ## 3 插件开发
 !!! ms-abstract ""
