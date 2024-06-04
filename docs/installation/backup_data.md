@@ -9,7 +9,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract "注意"
     1. 备份脚本中，默认保留最近的7份备份文件。（如每天备份一次，则保留最近7天的备份文件。）<br>
     2. 为加强数据的安全性，备份脚本中采取的本地加异地备份。
-    3. 备份脚本中，有精简和全量备份两种选项，其中精简备份不会备份 MeterSphere 在数据库里保存的日志、消息通知、报告数据。
 
 ## 1 数据备份
 ### 1.1 手动备份
@@ -72,8 +71,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     remotePath=/opt
     #数据库是否内置
     isBuiltIn=true
-    #是否按照精简模式进行备份
-    isSimplify=true
 
     echo dumpSqlFilePath=$backupDir/$backupTarFileName
 
@@ -83,24 +80,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     else
         echo "--------------开始进行备份-----------------"
     fi
-    
+
     if [ "${isBuiltIn}" = "true" ]; then
-        if [ "${isSimplify}" = "false" ]; then
-        #内置全量备份
         docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
-        else
-        #内置精简数据备份(忽略报告数据、操作日志、消息通知的信息)
-        docker exec -i mysql mysqldump -u${username} -p${password}  ${dbName} --ignore-table=${dbName}.operating_log --ignore-table=${dbName}.notification --ignore-table=${dbName}.api_scenario_report_detail --ignore-table=${dbName}.api_scenario_report_result --ignore-table=${dbName}.api_scenario_report_structure --max_allowed_packet=2G > $dumpSqlFile
-        fi
     else
-        if [ "${isSimplify}" = "false" ]; then
-        #外置全量备份
         mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
-        else
-        #外置精简数据备份(忽略报告数据、操作日志、消息通知的信息)
-        mysqldump -u${username} -p${password}  ${dbName} --ignore-table=${dbName}.operating_log --ignore-table=${dbName}.notification --ignore-table=${dbName}.api_scenario_report_detail --ignore-table=${dbName}.api_scenario_report_result --ignore-table=${dbName}.api_scenario_report_structure --max_allowed_packet=2G > $dumpSqlFile
-        fi
     fi
+
     cd $backupDir
     tar zcvf  $backupTarFileName $dumpSqlFile
     #发送备份文件到远程机器
