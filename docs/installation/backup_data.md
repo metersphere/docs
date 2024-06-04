@@ -3,21 +3,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ---
 
 !!! ms-abstract "概述"
-    本文介绍了手动和自动两种备份方式，其中自动备份的脚本只备份数据库数据，备份完成后打包推送到指定服务器目录。<br>
+    本文介绍了手动和自动两种备份方式，其中自动备份的脚本只备份数据库，备份完成后打包推送到指定服务器目录。<br>
     备份脚本中有多个变量可根据实际情况修改，用于满足不同的使用场景。
+
+!!! ms-abstract "注意"
+    1. 备份脚本中，默认保留最近的7份备份文件。（如每天备份一次，则保留最近7天的备份文件。）<br>
+    2. 为加强数据的安全性，备份脚本中采取的本地加异地备份。
+    3. 备份脚本中，有精简和全量备份两种选项，其中精简备份不会备份 MeterSphere 在数据库里保存的日志、消息通知、报告数据。
 
 ## 1 数据备份
 ### 1.1 手动备份
 !!! ms-abstract ""
     ```
-    #数据库备份：
+
+    # 数据库备份：
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
     
-    #data 目录备份
-    
-    1. 先暂停服务
-    msctl stop 
-    2. 备份目录 /opt/metersphere/data
+    # /opt/metersphere/data 目录备份
     tar -cvf data_backup.tar /opt/metersphere/data
     ```
 
