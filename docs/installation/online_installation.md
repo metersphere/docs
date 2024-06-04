@@ -19,7 +19,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data metersphere/metersphere-ce-allinone
     ```
 
-    安装成功后，通过浏览器访问如下页面登录 MeterSphere。ds<br>
+    安装成功后，通过浏览器访问如下页面登录 MeterSphere。<br>
     ```
     地址: http://目标服务器IP地址:8081
     用户名: admin
