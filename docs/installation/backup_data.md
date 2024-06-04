@@ -13,12 +13,12 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 1 数据备份
 ### 1.1 手动备份
 !!! ms-abstract ""
-    ```
 
+    ```
     # 数据库备份：
-    docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere --max_allowed_packet=2G > metersphere.sql
+    docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     
-    # /opt/metersphere/data 目录备份
+    # data 目录备份 （以实际安装目录为准）
     tar -cvf data_backup.tar /opt/metersphere/data
     ```
 
