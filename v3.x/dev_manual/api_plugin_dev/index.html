@@ -2301,15 +2301,15 @@
 </ul>
 </div>
 <div class="admonition ms-abstract">
-<p>在项目的 pom.xml 文件中添加SDK（dependencies）的依赖项。<a href="https://github.com/metersphere/metersphere/tree/v3.x/backend/framework/plugin/plugin-api-sdk">SDK源码</a></p>
+<p>在项目的 pom.xml 文件中添加 SDK（dependencies）的依赖项。<a href="https://github.com/metersphere/metersphere/tree/v3.x/backend/framework/plugin/plugin-api-sdk">SDK源码</a></p>
 <div class="highlight"><pre><span></span><code>&lt;dependency&gt;
-&lt;groupId&gt;io.metersphere&lt;/groupId&gt;
-&lt;artifactId&gt;metersphere-plugin-api-sdk&lt;/artifactId&gt;
-&lt;version&gt;3.x&lt;/version&gt;
-&lt;scope&gt;provided&lt;/scope&gt;
+    &lt;groupId&gt;io.metersphere&lt;/groupId&gt;
+    &lt;artifactId&gt;metersphere-plugin-api-sdk&lt;/artifactId&gt;
+    &lt;version&gt;3.x&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
 &lt;/dependency&gt;
 
-&lt;!-- 打包时将这些参数写入 MANIFEST.MF供‘pf4j’识别,关键属性设置 --&gt;
+&lt;!-- 打包时将这些参数写入 MANIFEST.MF 供 ‘pf4j’ 识别,关键属性设置 --&gt;
 &lt;properties&gt;
     &lt;plugin.id&gt;sampler-name &lt;/plugin.id&gt; // 自身组件名称
     &lt;plugin.class&gt;io.metersphere.plugin.xxx&lt;/plugin.class&gt; // AbstractApiPlugin 子类名称
@@ -2322,21 +2322,21 @@
 </div>
 <p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E9%87%8D%E5%86%99%E6%96%B9%E6%B3%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E9%87%8D%E5%86%99%E6%96%B9%E6%B3%95.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p>编写数据转换类，继承基类 AbstractMsProtocolTestElement ，添加注解 “@PluginSubType ” 并添加自身相关属性，添加用于pf4j识别的注解“ @Extension ”。</p>
+<p>编写数据转换类，继承基类 AbstractMsProtocolTestElement ，添加注解 “@PluginSubType” 并添加自身相关属性，添加用于 pf4j 识别的注解 “@Extension”。</p>
 </div>
 <p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%B1%BB.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%B1%BB.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p>编写核心解析器，添加用于pf4j识别的注解“ @Extension ” 继承基础解析器 AbstractJmeterElementConverter，并重写 toHashTree() 方法。</p>
+<p>编写核心解析器，添加用于 pf4j 识别的注解 “@Extension” 继承基础解析器 AbstractJmeterElementConverter，并重写 toHashTree() 方法。</p>
 </div>
 <p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%A0%B8%E5%BF%83%E8%A7%A3%E6%9E%90%E5%99%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%A0%B8%E5%BF%83%E8%A7%A3%E6%9E%90%E5%99%A8.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意:</p>
 <p>一定要设置</p>
 <ul>
-<li>ElementProperty.MS_RESOURCE_ID, // 资源id</li>
-<li>ElementProperty.MS_STEP_ID, // 步骤唯一标识id</li>
-<li>ElementProperty.MS_REPORT_ID,  // 报告id</li>
-<li>ElementProperty.PROJECT_ID // 项目id</li>
+<li>ElementProperty.MS_RESOURCE_ID    // 资源id</li>
+<li>ElementProperty.MS_STEP_ID       // 步骤唯一标识id</li>
+<li>ElementProperty.MS_REPORT_ID    // 报告id</li>
+<li>ElementProperty.PROJECT_ID     // 项目id</li>
 </ul>
 </div>
 <div class="admonition ms-abstract">
@@ -2417,7 +2417,7 @@
             <td>id</td>
             <td>脚本资源唯一标识符，api | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
             <td>字符常量</td>
-            <td>environment | environment</td>
+            <td>api | environment</td>
         </tr>
         <tr>
             <td>name</td>
