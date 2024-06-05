@@ -17,17 +17,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 添加 SDK 依赖到 pom.xml
 
 !!! ms-abstract ""
-    在项目的 pom.xml 文件中添加SDK（dependencies）的依赖项。[SDK源码](https://github.com/metersphere/metersphere/tree/v3.x/backend/framework/plugin/plugin-api-sdk)
+    在项目的 pom.xml 文件中添加 SDK（dependencies）的依赖项。[SDK源码](https://github.com/metersphere/metersphere/tree/v3.x/backend/framework/plugin/plugin-api-sdk)
 
     ```
     <dependency>
-    <groupId>io.metersphere</groupId>
-    <artifactId>metersphere-plugin-api-sdk</artifactId>
-    <version>3.x</version>
-    <scope>provided</scope>
+        <groupId>io.metersphere</groupId>
+        <artifactId>metersphere-plugin-api-sdk</artifactId>
+        <version>3.x</version>
+        <scope>provided</scope>
     </dependency>
     
-    <!-- 打包时将这些参数写入 MANIFEST.MF供‘pf4j’识别,关键属性设置 -->
+    <!-- 打包时将这些参数写入 MANIFEST.MF 供 ‘pf4j’ 识别,关键属性设置 -->
     <properties>
         <plugin.id>sampler-name </plugin.id> // 自身组件名称
         <plugin.class>io.metersphere.plugin.xxx</plugin.class> // AbstractApiPlugin 子类名称
@@ -40,23 +40,23 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!重写](../img/dev_manual/api_dev_plugin/重写方法.png){ width="900px" }
 
 !!! ms-abstract ""
-    编写数据转换类，继承基类 AbstractMsProtocolTestElement ，添加注解 “@PluginSubType ” 并添加自身相关属性，添加用于pf4j识别的注解“ @Extension ”。
+    编写数据转换类，继承基类 AbstractMsProtocolTestElement ，添加注解 “@PluginSubType” 并添加自身相关属性，添加用于 pf4j 识别的注解 “@Extension”。
 ![!重写](../img/dev_manual/api_dev_plugin/编写数据转换类.png){ width="900px" }
 
 !!! ms-abstract ""
-    编写核心解析器，添加用于pf4j识别的注解“ @Extension ” 继承基础解析器 AbstractJmeterElementConverter，并重写 toHashTree() 方法。
+    编写核心解析器，添加用于 pf4j 识别的注解 “@Extension” 继承基础解析器 AbstractJmeterElementConverter，并重写 toHashTree() 方法。
 ![!重写](../img/dev_manual/api_dev_plugin/编写核心解析器.png){ width="900px" }
 
 !!! ms-abstract "注意:"
     一定要设置
 
-    - ElementProperty.MS_RESOURCE_ID, // 资源id
-    - ElementProperty.MS_STEP_ID, // 步骤唯一标识id
-    - ElementProperty.MS_REPORT_ID,  // 报告id
-    - ElementProperty.PROJECT_ID // 项目id
+    - ElementProperty.MS_RESOURCE_ID    // 资源id
+    - ElementProperty.MS_STEP_ID       // 步骤唯一标识id
+    - ElementProperty.MS_REPORT_ID    // 报告id
+    - ElementProperty.PROJECT_ID     // 项目id
 
 !!! ms-abstract ""
-    支持通过在线编辑器 [在线编辑器](https://form-create.com/v3/designer) 进行UI界面设计，[具体属性标准1](https://form-create.com/v3/arco-design/)， [具体属性标准2]( https://arco.design/vue/component/form)
+    支持通过在线编辑器 [在线编辑器](https://form-create.com/v3/designer) 进行UI界面设计，[具体属性标准1](https://form-create.com/v3/arco-design/)， [具体属性标准2](https://arco.design/vue/component/form)
 ![!重写](../img/dev_manual/api_dev_plugin/在线编辑器.png){ width="900px" }
 
 !!! ms-abstract "API 脚本 Props"
@@ -132,7 +132,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
             <td>id</td>
             <td>脚本资源唯一标识符，api | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
             <td>字符常量</td>
-            <td>environment | environment</td>
+            <td>api | environment</td>
         </tr>
         <tr>
             <td>name</td>
