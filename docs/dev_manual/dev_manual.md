@@ -182,9 +182,4 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ![server-start](../img/dev/satrt_success.png){ width="900px" } 
 
-## 3 插件开发
-!!! ms-abstract ""
-    - [接口测试插件开发文档](https://github.com/metersphere/api-test-plugins/wiki/MeterSphere-v3-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C)
-    - [第三方平台插件开发文档](https://github.com/metersphere/metersphere-platform-plugin/wiki/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%E2%80%90V3)
-
 
