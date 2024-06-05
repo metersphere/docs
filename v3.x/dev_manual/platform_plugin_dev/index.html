@@ -2311,7 +2311,7 @@ xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.o
 </div>
 <h3 id="21-abstractplatformplugin">2.1 平台插件基础信息抽象类 AbstractPlatformPlugin（需实现）<a class="headerlink" href="#21-abstractplatformplugin" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<div class="highlight"><pre><span></span><code>    @Override
+<div class="highlight"><pre><span></span><code>@Override
 public String getName() {
     return PLUGIN_NAME;
 }
@@ -2328,140 +2328,140 @@ public String getLogo() {
 </code></pre></div>
 </div>
 <h3 id="22-abstractplatform">2.2 平台接口抽象类AbstractPlatform（需实现）<a class="headerlink" href="#22-abstractplatform" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span>
-<span class="w">    </span><span class="cm">/**</span>
-<span class="cm"> * 校验服务集成配置</span>
-<span class="cm"> * 服务集成点击校验时调用</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">validateIntegrationConfig</span><span class="p">();</span>
+<div class="admonition ms-abstract">
+<div class="highlight"><pre><span></span><code>/**
+ * 校验服务集成配置
+ * 服务集成点击校验时调用
+ */
+void validateIntegrationConfig();
 
-<span class="cm">/**</span>
-<span class="cm"> * 校验用户配置</span>
-<span class="cm"> * 个人中心-第三方平台点击时调用</span>
-<span class="cm"> * @param userConfig 用户配置</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">validateUserConfig</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">userConfig</span><span class="p">);</span>
+/**
+ * 校验用户配置
+ * 个人中心-第三方平台点击时调用
+ * @param userConfig 用户配置
+ */
+void validateUserConfig(String userConfig);
 
-<span class="cm">/**</span>
-<span class="cm"> * 校验项目配置</span>
-<span class="cm"> * 项目设置成点击校验项目 key 时调用</span>
-<span class="cm"> * @param projectConfig 项目配置</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">validateProjectConfig</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">projectConfig</span><span class="p">);</span>
+/**
+ * 校验项目配置
+ * 项目设置成点击校验项目 key 时调用
+ * @param projectConfig 项目配置
+ */
+void validateProjectConfig(String projectConfig);
 
-<span class="cm">/**</span>
-<span class="cm"> * 平台是否支持第三方默认模板</span>
-<span class="cm"> *</span>
-<span class="cm"> * @return True时会在MS平台展示第三方的默认模板</span>
-<span class="cm"> */</span>
-<span class="k">boolean</span><span class="w"> </span><span class="n">isSupportDefaultTemplate</span><span class="p">();</span>
+/**
+ * 平台是否支持第三方默认模板
+ *
+ * @return True时会在MS平台展示第三方的默认模板
+ */
+boolean isSupportDefaultTemplate();
 
-<span class="cm">/**</span>
-<span class="cm"> * 获取第三方平台模板的自定义字段(isSupportDefaultTemplate为true时才会调用)</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param projectConfig  项目配置信息</span>
-<span class="cm"> * @return 平台自定义字段集合</span>
-<span class="cm"> */</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">PlatformCustomFieldItemDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getDefaultTemplateCustomField</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">projectConfig</span><span class="p">);</span>
+/**
+ * 获取第三方平台模板的自定义字段(isSupportDefaultTemplate为true时才会调用)
+ *
+ * @param projectConfig  项目配置信息
+ * @return 平台自定义字段集合
+ */
+List&lt;PlatformCustomFieldItemDTO&gt; getDefaultTemplateCustomField(String projectConfig);
 
-<span class="cm">/**</span>
-<span class="cm"> * 获取第三方联级下拉options</span>
-<span class="cm"> * @param optionsRequest 插件请求参数</span>
-<span class="cm"> * @return 选项集合</span>
-<span class="cm"> */</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">SelectOption</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getPluginOptions</span><span class="p">(</span><span class="n">PluginOptionsRequest</span><span class="w"> </span><span class="n">optionsRequest</span><span class="p">);</span>
+/**
+ * 获取第三方联级下拉options
+ * @param optionsRequest 插件请求参数
+ * @return 选项集合
+ */
+List&lt;SelectOption&gt; getPluginOptions(PluginOptionsRequest optionsRequest);
 
-<span class="cm">/**</span>
-<span class="cm"> * 获取第三方平台表单下拉选项</span>
-<span class="cm"> * @param optionsRequest 选项请求参数</span>
-<span class="cm"> * @return 选项集合</span>
-<span class="cm"> */</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">SelectOption</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getFormOptions</span><span class="p">(</span><span class="n">GetOptionRequest</span><span class="w"> </span><span class="n">optionsRequest</span><span class="p">);</span>
+/**
+ * 获取第三方平台表单下拉选项
+ * @param optionsRequest 选项请求参数
+ * @return 选项集合
+ */
+List&lt;SelectOption&gt; getFormOptions(GetOptionRequest optionsRequest);
 
-<span class="cm">/**</span>
-<span class="cm"> * 获取第三方平台缺陷状态选项</span>
-<span class="cm"> * @param projectConfig 项目配置信息</span>
-<span class="cm"> * @param issueKey 缺陷ID</span>
-<span class="cm"> * @return 缺陷平台状态</span>
-<span class="cm"> * @throws Exception 获取平台状态异常</span>
-<span class="cm"> */</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">SelectOption</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getStatusTransitions</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">projectConfig</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">issueKey</span><span class="p">)</span><span class="w"> </span><span class="n">throws</span><span class="w"> </span><span class="k">Exception</span><span class="p">;</span>
+/**
+ * 获取第三方平台缺陷状态选项
+ * @param projectConfig 项目配置信息
+ * @param issueKey 缺陷ID
+ * @return 缺陷平台状态
+ * @throws Exception 获取平台状态异常
+ */
+List&lt;SelectOption&gt; getStatusTransitions(String projectConfig, String issueKey) throws Exception;
 
-<span class="cm">/**</span>
-<span class="cm"> * 获取第三方平台关联需求列表</span>
-<span class="cm"> * @param request 需求分页查询参数</span>
-<span class="cm"> * @return 需求分页数据</span>
-<span class="cm"> */</span>
-<span class="n">PluginPager</span><span class="o">&lt;</span><span class="n">PlatformDemandDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pageDemand</span><span class="p">(</span><span class="n">DemandPageRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 获取第三方平台关联需求列表
+ * @param request 需求分页查询参数
+ * @return 需求分页数据
+ */
+PluginPager&lt;PlatformDemandDTO&gt; pageDemand(DemandPageRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 根据关联的需求ID查询平台需求信息</span>
-<span class="cm"> * @param request 需求关联查询参数</span>
-<span class="cm"> * @return 平台需求信息</span>
-<span class="cm"> */</span>
-<span class="n">PlatformDemandDTO</span><span class="w"> </span><span class="n">getDemands</span><span class="p">(</span><span class="n">DemandRelateQueryRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 根据关联的需求ID查询平台需求信息
+ * @param request 需求关联查询参数
+ * @return 平台需求信息
+ */
+PlatformDemandDTO getDemands(DemandRelateQueryRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 新增平台缺陷</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param request 平台缺陷参数</span>
-<span class="cm"> * @return 平台缺陷</span>
-<span class="cm"> */</span>
-<span class="n">PlatformBugUpdateDTO</span><span class="w"> </span><span class="n">addBug</span><span class="p">(</span><span class="n">PlatformBugUpdateRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 新增平台缺陷
+ *
+ * @param request 平台缺陷参数
+ * @return 平台缺陷
+ */
+PlatformBugUpdateDTO addBug(PlatformBugUpdateRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 修改平台缺陷</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param request 平台缺陷参数</span>
-<span class="cm"> * @return 平台缺陷</span>
-<span class="cm"> */</span>
-<span class="n">PlatformBugUpdateDTO</span><span class="w"> </span><span class="n">updateBug</span><span class="p">(</span><span class="n">PlatformBugUpdateRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 修改平台缺陷
+ *
+ * @param request 平台缺陷参数
+ * @return 平台缺陷
+ */
+PlatformBugUpdateDTO updateBug(PlatformBugUpdateRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 删除平台缺陷</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param platformBugId 平台缺陷ID</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">deleteBug</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">platformBugId</span><span class="p">);</span>
+/**
+ * 删除平台缺陷
+ *
+ * @param platformBugId 平台缺陷ID
+ */
+void deleteBug(String platformBugId);
 
-<span class="cm">/**</span>
-<span class="cm"> * 平台是否支持附件API</span>
-<span class="cm"> *</span>
-<span class="cm"> * @return 是否支持附件同步</span>
-<span class="cm"> */</span>
-<span class="k">boolean</span><span class="w"> </span><span class="n">isSupportAttachment</span><span class="p">();</span>
+/**
+ * 平台是否支持附件API
+ *
+ * @return 是否支持附件同步
+ */
+boolean isSupportAttachment();
 
-<span class="cm">/**</span>
-<span class="cm"> * 同步MS附件至第三方平台(isSupportAttachment为true时执行同步附件的逻辑)</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param request 同步附件参数</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">syncAttachmentToPlatform</span><span class="p">(</span><span class="n">SyncAttachmentToPlatformRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 同步MS附件至第三方平台(isSupportAttachment为true时执行同步附件的逻辑)
+ *
+ * @param request 同步附件参数
+ */
+void syncAttachmentToPlatform(SyncAttachmentToPlatformRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 同步存量缺陷</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param request 同步缺陷参数</span>
-<span class="cm"> * @return 同步缺陷结果</span>
-<span class="cm"> */</span>
-<span class="n">SyncBugResult</span><span class="w"> </span><span class="n">syncBugs</span><span class="p">(</span><span class="n">SyncBugRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 同步存量缺陷
+ *
+ * @param request 同步缺陷参数
+ * @return 同步缺陷结果
+ */
+SyncBugResult syncBugs(SyncBugRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 同步全量缺陷</span>
-<span class="cm"> *</span>
-<span class="cm"> * @param request 同步缺陷参数</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">syncAllBugs</span><span class="p">(</span><span class="n">SyncAllBugRequest</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+/**
+ * 同步全量缺陷
+ *
+ * @param request 同步缺陷参数
+ */
+void syncAllBugs(SyncAllBugRequest request);
 
-<span class="cm">/**</span>
-<span class="cm"> * 获取附件输入流，并做相应处理</span>
-<span class="cm"> * 同步缺陷中，同步附件时会调用</span>
-<span class="cm"> * @param fileKey 文件关键字</span>
-<span class="cm"> * @param inputStreamHandler 获取响应的输入流后，做对应处理</span>
-<span class="cm"> */</span>
-<span class="n">void</span><span class="w"> </span><span class="n">getAttachmentContent</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fileKey</span><span class="p">,</span><span class="w"> </span><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">InputStream</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inputStreamHandler</span><span class="p">);</span>
-<span class="err">```</span>
+/**
+ * 获取附件输入流，并做相应处理
+ * 同步缺陷中，同步附件时会调用
+ * @param fileKey 文件关键字
+ * @param inputStreamHandler 获取响应的输入流后，做对应处理
+ */
+void getAttachmentContent(String fileKey, Consumer&lt;InputStream&gt; inputStreamHandler);
 </code></pre></div>
+</div>
 
 
 
