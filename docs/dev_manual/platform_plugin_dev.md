@@ -66,7 +66,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
     
     ```
-        @Override
+    @Override
     public String getName() {
         return PLUGIN_NAME;
     }
@@ -83,9 +83,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
 ### 2.2 平台接口抽象类AbstractPlatform（需实现）
+!!! ms-abstract ""
 
     ```
-        /**
+    /**
      * 校验服务集成配置
      * 服务集成点击校验时调用
      */
