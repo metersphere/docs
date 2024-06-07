@@ -190,11 +190,25 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【禁用】：禁用当前使用插件。</br>
     - 【删除】：钮删除当前使用插件。</br>
 
+### 7.1 数据库驱动
 !!! ms-abstract ""
-    - **上传插件**<br>
-    进入下载地址：https://github.com/metersphere 下载需要使用的且和当前MeterSphere版本对应的插件 jar 包。
-    点击【上传插件】按钮，上传插件 jar 包，配置插件使用组织范围、描述。
+    默认内置 MySQL 驱动，其他数据库驱动需要在【系统设置-系统-插件】上传驱动包，以 Oracle 数据库插件为例。
 ![插件](../../img/system_management/上传插件.png){ width="900px" }
+
+!!! ms-abstract ""
+    数据库驱动上传后，在【项目管理-环境管理-数据库-添加数据库】页面，驱动选项下拉框可选择 oracle 驱动，具体参考：[数据源配置](../../user_manual/project_management/environment/#12)。
+![插件](../../img/system_management/oracle数据库.png){ width="900px" }
+
+### 7.2 接口协议插件
+!!! ms-abstract ""
+    默认内置 HTTP 协议，其他协议需要在【系统设置-系统-插件】上传协议插件，以 TCP 协议为例。
+![插件](../../img/system_management/上传接口协议插件.png){ width="900px" }
+
+!!! ms-abstract ""
+    协议插件上传后，在【项目管理-环境管理-TCP配置】处可进行配置，可切到 TCP 页面进行 TCP 请求。
+![插件](../../img/system_management/环境配置-tcp配置.png){ width="900px" }
+
+![插件](../../img/system_management/接口定义-tcp请求.png){ width="900px" }
 
 ## 8 日志
 !!! ms-abstract ""
