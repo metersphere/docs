@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -339,7 +339,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             正在初始化搜索引擎
@@ -1781,6 +1781,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="7 插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 数据库驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 接口协议插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2327,6 +2351,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="7 插件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 数据库驱动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 接口协议插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2552,14 +2600,25 @@
 <li>【删除】：钮删除当前使用插件。</br></li>
 </ul>
 </div>
+<h3 id="71">7.1 数据库驱动<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<ul>
-<li><strong>上传插件</strong><br>
-进入下载地址：<a href="https://github.com/metersphere">https://github.com/metersphere</a> 下载需要使用的且和当前MeterSphere版本对应的插件 jar 包。
-点击【上传插件】按钮，上传插件 jar 包，配置插件使用组织范围、描述。</li>
-</ul>
+<p>默认内置 MySQL 驱动，其他数据库驱动需要在【系统设置-系统-插件】上传驱动包，以 Oracle 数据库插件为例。</p>
 </div>
 <p><a class="glightbox" href="../../../img/system_management/%E4%B8%8A%E4%BC%A0%E6%8F%92%E4%BB%B6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="插件" src="../../../img/system_management/%E4%B8%8A%E4%BC%A0%E6%8F%92%E4%BB%B6.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>数据库驱动上传后，在【项目管理-环境管理-数据库-添加数据库】页面，驱动选项下拉框可选择 oracle 驱动，具体参考：<a href="../../user_manual/project_management/environment/#12">数据源配置</a>。</p>
+</div>
+<p><a class="glightbox" href="../../../img/system_management/oracle%E6%95%B0%E6%8D%AE%E5%BA%93.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="插件" src="../../../img/system_management/oracle%E6%95%B0%E6%8D%AE%E5%BA%93.png" width="900px" /></a></p>
+<h3 id="72">7.2 接口协议插件<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<div class="admonition ms-abstract">
+<p>默认内置 HTTP 协议，其他协议需要在【系统设置-系统-插件】上传协议插件，以 TCP 协议为例。</p>
+</div>
+<p><a class="glightbox" href="../../../img/system_management/%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%8D%8F%E8%AE%AE%E6%8F%92%E4%BB%B6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="插件" src="../../../img/system_management/%E4%B8%8A%E4%BC%A0%E6%8E%A5%E5%8F%A3%E5%8D%8F%E8%AE%AE%E6%8F%92%E4%BB%B6.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>协议插件上传后，在【项目管理-环境管理-TCP配置】处可进行配置，可切到 TCP 页面进行 TCP 请求。</p>
+</div>
+<p><a class="glightbox" href="../../../img/system_management/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-tcp%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="插件" src="../../../img/system_management/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-tcp%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/system_management/%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89-tcp%E8%AF%B7%E6%B1%82.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="插件" src="../../../img/system_management/%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89-tcp%E8%AF%B7%E6%B1%82.png" width="900px" /></a></p>
 <h2 id="8">8 日志<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p>点击左侧【系统设置-系统-日志】进入日志界面，显示登录用户权限范围内的全部测试资源日志信息，使用高级查询来快速查找相关日志。</p>
@@ -2671,7 +2730,7 @@
     
     
 
-      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
 <script>
