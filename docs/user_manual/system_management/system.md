@@ -205,10 +205,21 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![插件](../../img/system_management/上传接口协议插件.png){ width="900px" }
 
 !!! ms-abstract ""
-    协议插件上传后，在【项目管理-环境管理-TCP配置】处可进行配置，可切到 TCP 页面进行 TCP 请求。
+    协议插件上传后，在【项目管理-环境管理-TCP配置】处可进行配置。
 ![插件](../../img/system_management/环境配置-tcp配置.png){ width="900px" }
 
-![插件](../../img/system_management/接口定义-tcp请求.png){ width="900px" }
+!!! ms-abstract ""
+    点击【接口测试-调试-TCP】切换到 TCP 请求页面进行 TCP 请求的调试。
+![插件](../../img/system_management/tcp请求页面.png){ width="900px" }
+
+### 7.3 服务集成插件
+!!! ms-abstract ""
+    上传 TAPD、禅道服务集成插件，以 禅道服务集成插件为例。[服务集成插件下载](https://github.com/metersphere/metersphere-platform-plugin)
+![插件](../../img/system_management/禅道服务集成插件.png){ width="900px" }
+
+!!! ms-abstract ""
+    服务集成插件上传后，在【系统设置-组织-服务集成】处可进行配置。具体参考：[服务集成](../../user_manual/system_management/organization/#42)。
+![插件](../../img/system_management/禅道服务集成插件页面.png){ width="900px" }
 
 ## 8 日志
 !!! ms-abstract ""
