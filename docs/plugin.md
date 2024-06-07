@@ -35,7 +35,16 @@
             <td>项目管理</td>
             <td>社区版</td>
             <td>对接禅道平台，实现需求的关联、缺陷的创建及同步</td>
-            <td><a href="https://github.com/metersphere/metersphere-platform-plugin">插件下载</a></td>
+            <td><a href="https://github.com/metersphere/metersphere-platform-plugin/releases">插件下载</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>TAPD 同步插件</td>
+            <td>平台</td>
+            <td>项目管理</td>
+            <td>社区版</td>
+            <td>对接 TAPD 平台，实现需求的关联、缺陷的创建及同步</td>
+            <td><a href="https://github.com/metersphere/metersphere-platform-plugin/releases">插件下载</a></td>
         </tr>
     </tbody>
 </table>
