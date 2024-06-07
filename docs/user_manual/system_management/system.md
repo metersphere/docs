@@ -196,7 +196,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![插件](../../img/system_management/上传插件.png){ width="900px" }
 
 !!! ms-abstract ""
-    数据库驱动上传后，在【项目管理-环境管理-数据库-添加数据库】页面，驱动选项下拉框可选择 oracle 驱动，具体参考：[数据源配置](../../user_manual/project_management/environment/#12)。
+    数据库驱动上传后，在【项目管理-环境管理-数据库-添加数据库】页面，驱动选项下拉框可选择 oracle 驱动，具体参考：[数据源配置](../../project_management/environment/#23)。
 ![插件](../../img/system_management/oracle数据库.png){ width="900px" }
 
 ### 7.2 接口协议插件
@@ -218,7 +218,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![插件](../../img/system_management/禅道服务集成插件.png){ width="900px" }
 
 !!! ms-abstract ""
-    服务集成插件上传后，在【系统设置-组织-服务集成】处可进行配置。具体参考：[服务集成](../../user_manual/system_management/organization/#42)。
+    服务集成插件上传后，在【系统设置-组织-服务集成】处可进行配置。具体参考：[服务集成](../organization/#42)。
 ![插件](../../img/system_management/禅道服务集成插件页面.png){ width="900px" }
 
 ## 8 日志
