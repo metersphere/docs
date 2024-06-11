@@ -1,6 +1,4 @@
----
-description: X-Pack 功能总体描述，限制的功能点、组织数、资源池节点数、模块登。
----
+
 
 !!! ms-abstract "注意"
     需要先在服务器上安装 Task_Runner 服务，然后再添加资源池。详情参考：[Task_Runner 部署](../../installation/task_runner.md)<br>

@@ -1,6 +1,4 @@
----
-description: X-Pack 功能总体描述，限制的功能点、组织数、资源池节点数、模块登。
----
+
 
 !!! ms-abstract ""
     需要先在【项目管理-信息管理-机器人列表】开启消息通知方式。详情参考：[消息通知](../../user_manual/project_management/message_management.md)<br>
