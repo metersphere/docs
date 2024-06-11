@@ -180,7 +180,7 @@
 
 ## 7 插件
 !!! ms-abstract ""
-    点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 LTS 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
+    点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
 ![插件](../../img/system_management/插件管理.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
