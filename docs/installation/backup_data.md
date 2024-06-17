@@ -36,7 +36,7 @@
 
     3. 创建用于数据备份的脚本文件
     ```
-        vi ms_backup.sh
+    vi ms_backup.sh
     ```
     
     4. 把以下内容复制到刚才创建的 ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
@@ -84,6 +84,7 @@
     fi
 
     cd $backupDir
+    tar -cvf ms_data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus
     tar zcvf  $backupTarFileName $dumpSqlFile
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
@@ -94,7 +95,7 @@
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $backupDir/$dumpSqlFile
+    rm -rf $backupDir/$dumpSqlFile ms_data_backup.tar
     
     #remove outdated backup files
     
@@ -136,7 +137,7 @@
 
 ## 2 数据还原
 !!! ms-abstract ""
-    进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
+    还原 sql 数据，进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
     ```
     cp metersphere.sql /opt/metersphere/data/mysql
     ```
@@ -151,4 +152,10 @@
     ```
     use metersphere;
     source /var/lib/mysql/metersphere.sql
+    ```
+
+!!! ms-abstract ""
+    还原 data 目录数据，进入 ms_data_backup.tar 所在目录
+    ```
+    tar -xvf ms_data_backup.tar
     ```
