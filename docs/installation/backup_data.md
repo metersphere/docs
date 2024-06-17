@@ -17,7 +17,7 @@
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     
     # data 目录备份 （以实际安装目录为准）
-    tar -cvf data_backup.tar /opt/metersphere/data
+    tar -cvf ms_data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus
     ```
 
 ### 1.2 自动备份
