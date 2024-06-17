@@ -18,8 +18,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     # 数据库备份：
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     
-    # data 目录备份 （以实际安装目录为准）
-    tar -cvf data_backup.tar /opt/metersphere/data
+    # data 目录备份 （以实际安装目录为准，默认 /opt 目录）
+    tar -cvf data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus
     ```
 
 ### 1.2 自动备份
@@ -38,7 +38,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     3. 创建用于数据备份的脚本文件
     ```
-        vi ms_backup.sh
+    vi ms_backup.sh
     ```
     
     4. 把以下内容复制到刚才创建的 ms_backup.sh 脚本中（查看脚本中的参数，与实际场景是否相符）
@@ -84,9 +84,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     else
         mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     fi
-
+    
     cd $backupDir
-    tar zcvf  $backupTarFileName $dumpSqlFile
+    tar -cvf ms_data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus
+    tar -zcvf  $backupTarFileName $dumpSqlFile ms_data_backup.tar
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
     
@@ -96,7 +97,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $backupDir/$dumpSqlFile
+    rm -rf $backupDir/$dumpSqlFile ms_data_backup.tar
     
     #remove outdated backup files
     
@@ -138,7 +139,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 数据还原
 !!! ms-abstract ""
-    进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
+    还原 sql 数据，进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
     ```
     cp metersphere.sql /opt/metersphere/data/mysql
     ```
@@ -154,3 +155,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     use metersphere;
     source /var/lib/mysql/metersphere.sql
     ```
+
+!!! ms-abstract ""
+    还原 data 目录数据，进入 data_backup.tar 所在目录
+    ```
+    tar -xvf data_backup.tar
+    ```
+    
