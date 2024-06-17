@@ -157,8 +157,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     ```
 
 !!! ms-abstract ""
-    还原 data 目录数据，进入 data_backup.tar 所在目录
+    还原 data 目录数据，进入 ms_data_backup.tar 所在目录
     ```
-    tar -xvf data_backup.tar
+    tar -xvf ms_data_backup.tar
     ```
     
