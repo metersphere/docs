@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -2285,7 +2285,7 @@ tar -cvf data_backup.tar /opt/metersphere/data
 </li>
 <li>
 <p>创建用于数据备份的脚本文件
-<div class="highlight"><pre><span></span><code>    vi ms_backup.sh
+<div class="highlight"><pre><span></span><code>vi ms_backup.sh
 </code></pre></div></p>
 </li>
 <li>
@@ -2333,6 +2333,7 @@ else
 fi
 
 cd $backupDir
+tar -cvf ms_data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus
 tar zcvf  $backupTarFileName $dumpSqlFile
 #发送备份文件到远程机器
 scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2&gt;&gt; &quot;error.log&quot;
@@ -2343,7 +2344,7 @@ else
     echo &quot;---------------远程备份失败----------------&quot;
 fi
 
-rm -rf $backupDir/$dumpSqlFile
+rm -rf $backupDir/$dumpSqlFile ms_data_backup.tar
 
 #remove outdated backup files
 
@@ -2388,7 +2389,7 @@ fi
 </div>
 <h2 id="2">2 数据还原<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
+<p>还原 sql 数据，进入备份 sql 目录，将 sql 复制到 mysql 容器的挂载目录 /opt/metersphere/data/mysql 下
 <div class="highlight"><pre><span></span><code>cp metersphere.sql /opt/metersphere/data/mysql
 </code></pre></div></p>
 <p>进入 mysql 容器，登录数据库
@@ -2398,6 +2399,11 @@ mysql -uroot -pPassword123@mysql
 <p>使用 metersphere 库，并将数据导入到库里
 <div class="highlight"><pre><span></span><code>use metersphere;
 source /var/lib/mysql/metersphere.sql
+</code></pre></div></p>
+</div>
+<div class="admonition ms-abstract">
+<p>还原 data 目录数据，进入 ms_data_backup.tar 所在目录
+<div class="highlight"><pre><span></span><code>tar -xvf ms_data_backup.tar
 </code></pre></div></p>
 </div>
 
