@@ -15,7 +15,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     
     # data 目录备份 （以实际安装目录为准）
-    tar -cvf data_backup.tar /opt/metersphere/data
+    tar -cvf ms_data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus --exclude=/opt/metersphere/data/zookeeper
 
 
 
@@ -54,6 +54,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     backupTarFileName=ms_db_$currentTime.tar.gz
     #导出sql文件的完整名称
     dumpSqlFile=ms_db_$currentTime.sql
+    #data数据默认目录/opt/metersphere/data，以实际安装目录为准
+    msDataDir=/opt/metersphere/data
     #推送远程服务器ip地址
     remoteIp=10.1.11.12
     #推送远程服务器用户名
@@ -79,7 +81,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     fi
 
     cd $backupDir
-    tar zcvf  $backupTarFileName $dumpSqlFile
+    tar -cvf ms_data_backup.tar ${msDataDir} --exclude=${msDataDir}/kafka --exclude=${msDataDir}/mysql --exclude=${msDataDir}/redis --exclude=${msDataDir}/prometheus --exclude=${msDataDir}/zookeeper
+    tar -zcvf  $backupTarFileName $dumpSqlFile ms_data_backup.tar
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
     
@@ -89,7 +92,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $backupDir/$dumpSqlFile
+    rm -rf $backupDir/$dumpSqlFile ms_data_backup.tar
     
     #remove outdated backup files
     
@@ -146,3 +149,10 @@ mysql -uroot -pPassword123@mysql
 use metersphere;
 source /var/lib/mysql/metersphere.sql
 ```
+
+还原 data 目录数据，进入 ms_data_backup.tar 所在目录
+```
+mv ms_data_backup.tar /
+tar -xvf ms_data_backup.tar
+```
+
