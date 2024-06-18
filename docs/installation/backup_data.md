@@ -15,9 +15,6 @@
     ```
     # 数据库备份：
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
-    
-    # data 目录备份 （以实际安装目录为准，默认 /opt 目录）
-    tar -cvf ms_data_backup.tar /opt/metersphere/data --exclude=/opt/metersphere/data/kafka --exclude=/opt/metersphere/data/mysql --exclude=/opt/metersphere/data/redis --exclude=/opt/metersphere/data/prometheus
     ```
 
 ### 1.2 自动备份
@@ -59,8 +56,6 @@
     backupTarFileName=ms_db_$currentTime.tar.gz
     #导出sql文件的完整名称
     dumpSqlFile=ms_db_$currentTime.sql
-    #data数据默认目录/opt/metersphere/data，以实际安装目录为准
-    msDataDir=/opt/metersphere/data
     #推送远程服务器ip地址
     remoteIp=10.1.11.12
     #推送远程服务器用户名
@@ -78,8 +73,6 @@
     else
         echo "--------------开始进行备份-----------------"
     fi
-    
-    cd $backupDir
 
     if [ "${isBuiltIn}" = "true" ]; then
         docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
@@ -87,8 +80,8 @@
         mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     fi
     
-    tar -cvf ms_data_backup.tar ${msDataDir} --exclude=${msDataDir}/kafka --exclude=${msDataDir}/mysql --exclude=${msDataDir}/redis --exclude=${msDataDir}/prometheus
-    tar -zcvf $backupTarFileName $dumpSqlFile ms_data_backup.tar
+    cd $backupDir
+    tar -zcvf $backupTarFileName $dumpSqlFile
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
     
@@ -98,7 +91,7 @@
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $dumpSqlFile ms_data_backup.tar
+    rm -rf $backupDir/$dumpSqlFile
     
     #remove outdated backup files
     
@@ -155,11 +148,4 @@
     ```
     use metersphere;
     source /var/lib/mysql/metersphere.sql
-    ```
-
-!!! ms-abstract ""
-    还原 data 目录数据，进入 ms_data_backup.tar 所在目录
-    ```
-    mv ms_data_backup.tar /
-    tar -xvf ms_data_backup.tar
     ```
