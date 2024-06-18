@@ -78,14 +78,15 @@
     else
         echo "--------------开始进行备份-----------------"
     fi
+    
+    cd $backupDir
 
     if [ "${isBuiltIn}" = "true" ]; then
         docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     else
         mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     fi
-
-    cd $backupDir
+    
     tar -cvf ms_data_backup.tar ${msDataDir} --exclude=${msDataDir}/kafka --exclude=${msDataDir}/mysql --exclude=${msDataDir}/redis --exclude=${msDataDir}/prometheus
     tar -zcvf $backupTarFileName $dumpSqlFile ms_data_backup.tar
     #发送备份文件到远程机器
@@ -97,7 +98,7 @@
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $backupDir/$dumpSqlFile ms_data_backup.tar
+    rm -rf $dumpSqlFile ms_data_backup.tar
     
     #remove outdated backup files
     
