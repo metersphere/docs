@@ -81,15 +81,17 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     else
         echo "--------------开始进行备份-----------------"
     fi
+    
+    cd $backupDir
 
     if [ "${isBuiltIn}" = "true" ]; then
         docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     else
         mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     fi
-    
-    cd $backupDir
+
     tar -cvf ms_data_backup.tar ${msDataDir} --exclude=${msDataDir}/kafka --exclude=${msDataDir}/mysql --exclude=${msDataDir}/redis --exclude=${msDataDir}/prometheus
+    
     tar -zcvf  $backupTarFileName $dumpSqlFile ms_data_backup.tar
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
@@ -129,7 +131,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     #!/bin/bash
     
     timedate_fields="0 1 * * *"  #每天凌晨1:00执行备份程序
-    cmd="bash /opt/db_bak/ms_backup.sh"
+    cmd="bash /opt/db_bak/ms_backup.sh"  #替换 ms_backup.sh 所在路径
     crontab -l | grep "$cmd " > /dev/null 2>&1
     if test $? -ne 0; then
         crontab -l > crontab.tmp
