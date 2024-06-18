@@ -3372,14 +3372,16 @@ else
     echo &quot;--------------开始进行备份-----------------&quot;
 fi
 
+cd $backupDir
+
 if [ &quot;${isBuiltIn}&quot; = &quot;true&quot; ]; then
     docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G &gt; $dumpSqlFile
 else
     mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G &gt; $dumpSqlFile
 fi
 
-cd $backupDir
 tar -cvf ms_data_backup.tar ${msDataDir} --exclude=${msDataDir}/kafka --exclude=${msDataDir}/mysql --exclude=${msDataDir}/redis --exclude=${msDataDir}/prometheus
+
 tar -zcvf  $backupTarFileName $dumpSqlFile ms_data_backup.tar
 #发送备份文件到远程机器
 scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2&gt;&gt; &quot;error.log&quot;
@@ -3419,7 +3421,7 @@ echo &quot;---------------结束清理$keepBackupNum天前备份数据----------
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
 timedate_fields=&quot;0 1 * * *&quot;  #每天凌晨1:00执行备份程序
-cmd=&quot;bash /opt/db_bak/ms_backup.sh&quot;
+cmd=&quot;bash /opt/db_bak/ms_backup.sh&quot;  #替换 ms_backup.sh 所在路径
 crontab -l | grep &quot;$cmd &quot; &gt; /dev/null 2&gt;&amp;1
 if test $? -ne 0; then
     crontab -l &gt; crontab.tmp
