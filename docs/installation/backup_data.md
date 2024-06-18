@@ -94,7 +94,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $backupDir/$dumpSqlFile ms_data_backup.tar
+    rm -rf $dumpSqlFile ms_data_backup.tar
     
     #remove outdated backup files
     
