@@ -87,7 +87,7 @@
 
     cd $backupDir
     tar -cvf ms_data_backup.tar ${msDataDir} --exclude=${msDataDir}/kafka --exclude=${msDataDir}/mysql --exclude=${msDataDir}/redis --exclude=${msDataDir}/prometheus
-    tar -zcvf $backupTarFileName $dumpSqlFile
+    tar -zcvf $backupTarFileName $dumpSqlFile ms_data_backup.tar
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
     
