@@ -1,7 +1,5 @@
-
-
 !!! ms-abstract "概述"
-    本文介绍了手动和自动两种备份方式，其中自动备份的脚本只备份数据库，备份完成后打包推送到指定服务器目录。<br>
+    本文介绍了手动和自动两种备份方式，备份完成后打包推送到指定服务器目录。<br>
     备份脚本中有多个变量可根据实际情况修改，用于满足不同的使用场景。
 
 !!! ms-abstract "注意"
@@ -9,13 +7,25 @@
     2. 为加强数据的安全性，备份脚本中采取的本地加异地备份。
 
 ## 1 数据备份
-### 1.1 手动备份
-!!! ms-abstract ""
+!!! ms-abstract "注意"
+    MeterSphere 若通过 1Panel 安装，则在 1Panel 页面进行数据的备份和恢复。若在服务器上使用命令安装，则需要备份数据库 sql 和 minio 目录数据。
 
+### 1.1 手动备份
+!!! ms-abstract "备份数据库"
     ```
-    # 数据库备份：
     docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere > metersphere.sql
     ```
+
+!!! ms-abstract "备份 minio 目录"
+    在服务器上通过安装包安装，默认 /opt 目录，以实际安装目录为准。
+    ```
+    tar -cvf ms_data_backup.tar /opt/metersphere/data/minio
+    ```
+
+    在服务器上 docker run 命令一键安装，默认 ~/.metersphere/data 目录，以实际安装目录为准。
+    ```
+    tar -cvf ms_data_backup.tar ~/.metersphere/data/minio
+    ``` 
 
 ### 1.2 自动备份
 
@@ -56,6 +66,8 @@
     backupTarFileName=ms_db_$currentTime.tar.gz
     #导出sql文件的完整名称
     dumpSqlFile=ms_db_$currentTime.sql
+    #minio目录，以实际安装目录为准进行替换，此处以 /opt/metersphere/data/minio 路径为例
+    msDataDir=/opt/metersphere/data/minio
     #推送远程服务器ip地址
     remoteIp=10.1.11.12
     #推送远程服务器用户名
@@ -73,6 +85,8 @@
     else
         echo "--------------开始进行备份-----------------"
     fi
+    
+    cd $backupDir
 
     if [ "${isBuiltIn}" = "true" ]; then
         docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
@@ -80,8 +94,9 @@
         mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G > $dumpSqlFile
     fi
     
-    cd $backupDir
-    tar -zcvf $backupTarFileName $dumpSqlFile
+    tar -cvf ms_data_backup.tar ${msDataDir}
+
+    tar -zcvf $backupTarFileName $dumpSqlFile ms_data_backup.tar
     #发送备份文件到远程机器
     scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2>> "error.log"
     
@@ -91,7 +106,7 @@
         echo "---------------远程备份失败----------------"
     fi
     
-    rm -rf $backupDir/$dumpSqlFile
+    rm -rf $dumpSqlFile ms_data_backup.tar
     
     #remove outdated backup files
     
@@ -148,4 +163,11 @@
     ```
     use metersphere;
     source /var/lib/mysql/metersphere.sql
+    ```
+
+!!! ms-abstract ""
+    还原 minio 目录数据，进入 ms_data_backup.tar 所在目录
+    ```
+    mv ms_data_backup.tar /
+    tar -xvf ms_data_backup.tar
     ```
