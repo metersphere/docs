@@ -2387,7 +2387,7 @@ echo &quot;---------------结束清理$keepBackupNum天前备份数据----------
 <div class="highlight"><pre><span></span><code>#!/bin/bash
 
 timedate_fields=&quot;0 1 * * *&quot;  #每天凌晨1:00执行备份程序
-cmd=&quot;bash /opt/db_bak/ms_backup.sh&quot;
+cmd=&quot;bash /opt/db_bak/ms_backup.sh&quot; #替换 ms_backup.sh 所在路径
 crontab -l | grep &quot;$cmd &quot; &gt; /dev/null 2&gt;&amp;1
 if test $? -ne 0; then
     crontab -l &gt; crontab.tmp
