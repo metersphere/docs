@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/docs/v3.x/dev_manual/script_json/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/docs/v3.x/faq/api_test/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>

@@ -12,13 +12,9 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/docs/v3.x/dev_manual/api_plugin_dev/">
+        <link rel="canonical" href="https://metersphere.io/docs/v3.x/dev_manual/script_json/">
       
       
-        <link rel="prev" href="../dev_manual/">
-      
-      
-        <link rel="next" href="../platform_plugin_dev/">
       
       
       <link rel="icon" href="../../img/facio.ico">
@@ -26,7 +22,7 @@
     
     
       
-        <title>接口自动化插件开发 - MeterSphere 文档</title>
+        <title>Script json - MeterSphere 文档</title>
       
     
     
@@ -115,7 +111,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-api-scriptjson" class="md-skip">
           跳转至
         </a>
       
@@ -269,7 +265,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              接口自动化插件开发
+              Script json
             
           </span>
         </div>
@@ -1953,10 +1949,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1969,11 +1963,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1987,7 +1981,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             开发文档
@@ -2019,28 +2013,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    接口自动化插件开发
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../api_plugin_dev/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2049,84 +2025,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 概述
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 开发流程
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2 开发流程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-jmeter" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 JMeter 插件准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 基础环境准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 插件代码编写
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 打包
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2205,62 +2103,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-api-scriptjson" class="md-nav__link">
     <span class="md-ellipsis">
-      1 概述
+      1 api-script.json
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-env-scriptjson" class="md-nav__link">
     <span class="md-ellipsis">
-      2 开发流程
+      2 env-script.json
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2 开发流程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-jmeter" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 JMeter 插件准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 基础环境准备
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 插件代码编写
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 打包
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2282,195 +2138,742 @@
   
 
 
-  <h1>接口自动化插件开发</h1>
+  <h1>Script json</h1>
 
-<h2 id="1">1 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="1-api-scriptjson">1 api-script.json<a class="headerlink" href="#1-api-scriptjson" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>v3 插件进行全面升级改造，包括对基础JMeter组件的最低版本兼容性、平台 SDK 的升级以及 UI 渲染的全面改进。</p>
-</div>
-<h2 id="2">2 开发流程<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<h3 id="21-jmeter">2.1 JMeter 插件准备<a class="headerlink" href="#21-jmeter" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<p>要求插件能够兼容 JMeter 5.6.3 及以上版本，并确保插件在安全性和合规性方面达到标准，同时保持性能的稳定性。<a href="https://jmeter-plugins.org/">插件下载及开发标准</a></p>
-</div>
-<h3 id="22">2.2 基础环境准备<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<ul>
-<li>最低要求 JDK 21 及以上版本。</li>
-<li>添加 SDK 依赖到 pom.xml</li>
-</ul>
-</div>
-<div class="admonition ms-abstract">
-<p>在项目的 pom.xml 文件中添加 SDK（dependencies）的依赖项。<a href="https://github.com/metersphere/metersphere/tree/v3.x/backend/framework/plugin/plugin-api-sdk">SDK源码</a></p>
-<div class="highlight"><pre><span></span><code>&lt;dependency&gt;
-    &lt;groupId&gt;io.metersphere&lt;/groupId&gt;
-    &lt;artifactId&gt;metersphere-plugin-api-sdk&lt;/artifactId&gt;
-    &lt;version&gt;3.x&lt;/version&gt;
-    &lt;scope&gt;provided&lt;/scope&gt;
-&lt;/dependency&gt;
-
-&lt;!-- 打包时将这些参数写入 MANIFEST.MF 供 ‘pf4j’ 识别,关键属性设置 --&gt;
-&lt;properties&gt;
-    &lt;plugin.id&gt;sampler-name &lt;/plugin.id&gt; // 自身组件名称
-    &lt;plugin.class&gt;io.metersphere.plugin.xxx&lt;/plugin.class&gt; // AbstractApiPlugin 子类名称
-&lt;/properties&gt;
+<p class="admonition-title">api-script.json 示例</p>
+<div class="highlight"><pre><span></span><code>{
+&quot;id&quot;: &quot;api&quot;,
+&quot;name&quot;: &quot;TCP插件脚本&quot;,
+&quot;scriptType&quot;: &quot;FromCreate&quot;,
+&quot;options&quot;: {
+&quot;form&quot;: {
+&quot;labelAlign&quot;: &quot;right&quot;,
+&quot;layout&quot;: &quot;vertical&quot;,
+&quot;autoLabelWidth&quot;: true,
+&quot;size&quot;: &quot;small&quot;,
+&quot;hideRequiredAsterisk&quot;: false,
+&quot;showMessage&quot;: true,
+&quot;inlineMessage&quot;: false,
+&quot;scrollToFirstError&quot;: true
+},
+&quot;submitBtn&quot;: false,
+&quot;resetBtn&quot;: false
+},
+&quot;apiDefinitionFields&quot;: [
+&quot;content&quot;,
+&quot;comments&quot;,
+&quot;connTimeout&quot;,
+&quot;resTimeout&quot;
+],
+&quot;apiDebugFields&quot;: [
+&quot;comments&quot;,
+&quot;serverIp&quot;,
+&quot;connTimeout&quot;,
+&quot;port&quot;,
+&quot;resTimeout&quot;,
+&quot;soLinger&quot;,
+&quot;eolByte&quot;,
+&quot;closeConnection&quot;,
+&quot;reUseConnection&quot;,
+&quot;noDelay&quot;,
+&quot;content&quot;,
+&quot;classname&quot;,
+&quot;username&quot;,
+&quot;password&quot;
+],
+&quot;script&quot;: [
+{
+&quot;type&quot;: &quot;select&quot;,
+&quot;field&quot;: &quot;classname&quot;,
+&quot;title&quot;: &quot;TCPClient&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;value&quot;: &quot;TCPClientImpl&quot;,
+&quot;label&quot;: &quot;TCPClientImpl&quot;
+},
+{
+&quot;value&quot;: &quot;BinaryTCPClientImpl&quot;,
+&quot;label&quot;: &quot;BinaryTCPClientImpl&quot;
+},
+{
+&quot;value&quot;: &quot;LengthPrefixedBinaryTCPClientImpl&quot;,
+&quot;label&quot;: &quot;LengthPrefixedBinaryTCPClientImpl&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;select&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;$required&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;TCPClientImpl&quot;
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 12
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;serverIp&quot;,
+&quot;title&quot;: &quot;服务器名或 IP&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;$required&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 11,
+&quot;offset&quot;: 1
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;port&quot;,
+&quot;title&quot;: &quot;端口&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;$required&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;content&quot;,
+&quot;title&quot;: &quot;发送内容&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;textarea&quot;
+},
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;comments&quot;,
+&quot;title&quot;: &quot;描述&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;a-divider&quot;,
+&quot;props&quot;: {
+&quot;orientation&quot;: &quot;left&quot;
+},
+&quot;wrap&quot;: {
+&quot;show&quot;: false
+},
+&quot;native&quot;: false,
+&quot;children&quot;: [
+&quot;其他配置&quot;
+],
+&quot;_fc_drag_tag&quot;: &quot;a-divider&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 12,
+&quot;push&quot;: 0,
+&quot;offset&quot;: 0
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;connTimeout&quot;,
+&quot;title&quot;: &quot;链接超时(ms)&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;number&quot;,
+&quot;showWordLimit&quot;: false,
+&quot;placeholder&quot;: &quot;5000&quot;
+},
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;$required&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;5000&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 11,
+&quot;offset&quot;: 1
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;resTimeout&quot;,
+&quot;title&quot;: &quot;响应超时(ms)&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;number&quot;,
+&quot;showWordLimit&quot;: false,
+&quot;placeholder&quot;: &quot;5000&quot;
+},
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;$required&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;5000&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 12
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;username&quot;,
+&quot;title&quot;: &quot;用户名&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 11,
+&quot;offset&quot;: 1
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;password&quot;,
+&quot;title&quot;: &quot;密码&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;password&quot;
+}
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 12
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;soLinger&quot;,
+&quot;title&quot;: &quot;SO LINGER&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 11,
+&quot;offset&quot;: 1
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;eolByte&quot;,
+&quot;title&quot;: &quot;行尾(EOL)字节值&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 8
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;checkbox&quot;,
+&quot;field&quot;: &quot;closeConnection&quot;,
+&quot;title&quot;: &quot;关闭链接&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;label&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;checkbox&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 8
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;checkbox&quot;,
+&quot;field&quot;: &quot;reUseConnection&quot;,
+&quot;title&quot;: &quot;Re-use connection&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;label&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;checkbox&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 8
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;checkbox&quot;,
+&quot;field&quot;: &quot;noDelay&quot;,
+&quot;title&quot;: &quot;设置无延迟&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;label&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;checkbox&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+]
+}
 </code></pre></div>
 </div>
-<h3 id="23">2.3 插件代码编写<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<h2 id="2-env-scriptjson">2 env-script.json<a class="headerlink" href="#2-env-scriptjson" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>继承抽象类 AbstractProtocolPlugin，重写相关方法。</p>
+<p class="admonition-title">env-script.json 示例</p>
+<div class="highlight"><pre><span></span><code>{
+&quot;id&quot;: &quot;environment&quot;,
+&quot;name&quot;: &quot;TCP环境脚本&quot;,
+&quot;tabName&quot;: &quot;TCP配置&quot;,
+&quot;scriptType&quot;: &quot;FromCreate&quot;,
+&quot;options&quot;: {
+&quot;form&quot;: {
+&quot;labelAlign&quot;: &quot;right&quot;,
+&quot;layout&quot;: &quot;vertical&quot;,
+&quot;autoLabelWidth&quot;: true,
+&quot;size&quot;: &quot;small&quot;,
+&quot;hideRequiredAsterisk&quot;: false,
+&quot;showMessage&quot;: true,
+&quot;inlineMessage&quot;: false,
+&quot;scrollToFirstError&quot;: true
+},
+&quot;submitBtn&quot;: false,
+&quot;resetBtn&quot;: false
+},
+&quot;fields&quot;: [
+&quot;serverIp&quot;,
+&quot;port&quot;,
+&quot;connTimeout&quot;,
+&quot;resTimeout&quot;,
+&quot;soLinger&quot;,
+&quot;eolByte&quot;,
+&quot;closeConnection&quot;,
+&quot;reUseConnection&quot;,
+&quot;noDelay&quot;,
+&quot;classname&quot;,
+&quot;username&quot;,
+&quot;password&quot;
+],
+&quot;script&quot;: [
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 20
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;select&quot;,
+&quot;field&quot;: &quot;classname&quot;,
+&quot;title&quot;: &quot;TCPClient&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;value&quot;: &quot;TCPClientImpl&quot;,
+&quot;label&quot;: &quot;TCPClientImpl&quot;
+},
+{
+&quot;value&quot;: &quot;BinaryTCPClientImpl&quot;,
+&quot;label&quot;: &quot;BinaryTCPClientImpl&quot;
+},
+{
+&quot;value&quot;: &quot;LengthPrefixedBinaryTCPClientImpl&quot;,
+&quot;label&quot;: &quot;LengthPrefixedBinaryTCPClientImpl&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;select&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;$required&quot;: false
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;serverIp&quot;,
+&quot;title&quot;: &quot;服务器名或 IP&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;port&quot;,
+&quot;title&quot;: &quot;端口&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;username&quot;,
+&quot;title&quot;: &quot;用户名&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;password&quot;,
+&quot;title&quot;: &quot;密码&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;password&quot;
+},
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;soLinger&quot;,
+&quot;title&quot;: &quot;SO LINGER&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;eolByte&quot;,
+&quot;title&quot;: &quot;行尾(EOL)字节值&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 12
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;connTimeout&quot;,
+&quot;title&quot;: &quot;链接超时(ms)&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;number&quot;,
+&quot;showWordLimit&quot;: false,
+&quot;placeholder&quot;: &quot;5000&quot;
+},
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;value&quot;: &quot;5000&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 11,
+&quot;offset&quot;: 1
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;input&quot;,
+&quot;field&quot;: &quot;resTimeout&quot;,
+&quot;title&quot;: &quot;响应超时(ms)&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;props&quot;: {
+&quot;type&quot;: &quot;number&quot;,
+&quot;showWordLimit&quot;: false,
+&quot;placeholder&quot;: &quot;5000&quot;
+},
+&quot;_fc_drag_tag&quot;: &quot;input&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true,
+&quot;value&quot;: &quot;5000&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;FcRow&quot;,
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 8
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;checkbox&quot;,
+&quot;field&quot;: &quot;closeConnection&quot;,
+&quot;title&quot;: &quot;关闭链接&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;label&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;checkbox&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 8
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;checkbox&quot;,
+&quot;field&quot;: &quot;reUseConnection&quot;,
+&quot;title&quot;: &quot;Re-use connection&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;label&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;checkbox&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 8
+},
+&quot;children&quot;: [
+{
+&quot;type&quot;: &quot;checkbox&quot;,
+&quot;field&quot;: &quot;noDelay&quot;,
+&quot;title&quot;: &quot;设置无延迟&quot;,
+&quot;info&quot;: &quot;&quot;,
+&quot;effect&quot;: {
+&quot;fetch&quot;: &quot;&quot;
+},
+&quot;options&quot;: [
+{
+&quot;label&quot;: &quot;&quot;,
+&quot;value&quot;: &quot;&quot;
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;checkbox&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+},
+{
+&quot;type&quot;: &quot;col&quot;,
+&quot;props&quot;: {
+&quot;span&quot;: 4
+},
+&quot;_fc_drag_tag&quot;: &quot;col&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+],
+&quot;_fc_drag_tag&quot;: &quot;row&quot;,
+&quot;hidden&quot;: false,
+&quot;display&quot;: true
+}
+]
+}
+</code></pre></div>
 </div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E9%87%8D%E5%86%99%E6%96%B9%E6%B3%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E9%87%8D%E5%86%99%E6%96%B9%E6%B3%95.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>编写数据转换类，继承基类 AbstractMsProtocolTestElement ，添加注解 “@PluginSubType” 并添加自身相关属性，添加用于 pf4j 识别的注解 “@Extension”。</p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%B1%BB.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%B1%BB.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>编写核心解析器，添加用于 pf4j 识别的注解 “@Extension” 继承基础解析器 AbstractJmeterElementConverter，并重写 toHashTree() 方法。</p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%A0%B8%E5%BF%83%E8%A7%A3%E6%9E%90%E5%99%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E7%BC%96%E5%86%99%E6%A0%B8%E5%BF%83%E8%A7%A3%E6%9E%90%E5%99%A8.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p class="admonition-title">注意:</p>
-<p>一定要设置</p>
-<ul>
-<li>ElementProperty.MS_RESOURCE_ID    // 资源id</li>
-<li>ElementProperty.MS_STEP_ID       // 步骤唯一标识id</li>
-<li>ElementProperty.MS_REPORT_ID    // 报告id</li>
-<li>ElementProperty.PROJECT_ID     // 项目id</li>
-</ul>
-</div>
-<div class="admonition ms-abstract">
-<p>支持通过在线编辑器 <a href="https://form-create.com/v3/designer">在线编辑器</a> 进行UI界面设计，<a href="https://form-create.com/v3/arco-design/">具体属性标准1</a>， <a href="https://arco.design/vue/component/form">具体属性标准2</a></p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p class="admonition-title">API 脚本 Props</p>
-<p>在完成页面绘制后，将脚本内容复制到 resources/script 目录下，并创建一个 JSON 文件。在该文件中，按照示例中的脚本格式写入脚本内容。<a href="../script_json/#1-api-scriptjson">脚本示例</a></p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E8%84%9A%E6%9C%AC%E7%A4%BA%E4%BE%8B.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E8%84%9A%E6%9C%AC%E7%A4%BA%E4%BE%8B.png" width="900px" /></a></p>
-<table>
-    <tbody>
-        <tr>
-            <th width="2px">参数名</th>
-            <th width="450px">描述</th>
-            <th width="10px">类型</th>
-            <th width="300px">可选值</th>
-        </tr>
-        <tr>
-            <td>id</td>
-            <td>脚本资源唯一标识符，api | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
-            <td>字符常量</td>
-            <td>api ｜environment</td>
-        </tr>
-        <tr>
-            <td>script</td>
-            <td>整体页面脚本，可以参考 <a href="https://form-create.com/v3/designer"> FormCreate生成方式 </a></td>
-            <td>对象数组</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>name</td>
-            <td>插件协议名称（这个名称会在协议下拉列表出现）</td>
-            <td>字符常量</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>apiDebugFields</td>
-            <td>接口调试页面需要渲染的属性名称集</td>
-            <td>字符数组</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>apiDefinitionFields</td>
-            <td>接口定义页面需要渲染的属性名称集</td>
-            <td>字符数组</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>options</td>
-            <td>定义表单渲染样式<a href="https://arco.design/vue/component/form"> 文档参照 </a></td>
-            <td>对象</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>scriptType</td>
-            <td>使用什么插件来做动态页面渲染，分别是三方组件FormCreate 和 内建渲染</td>
-            <td>字符常量</td>
-            <td>FormCreate ｜ Embedded</td>
-        </tr>
-    </tbody>
-</table>
-
-<div class="admonition ms-abstract">
-<p>环境脚本 Props，可参考 <a href="../script_json/#2-env-scriptjson">脚本示例</a></p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E6%95%88%E6%9E%9C%E5%9B%BE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E6%95%88%E6%9E%9C%E5%9B%BE.png" width="900px" /></a></p>
-<table>
-    <tbody>
-        <tr>
-            <th width="2px">参数名</th>
-            <th width="450px">描述</th>
-            <th width="10px">类型</th>
-            <th width="300px">可选值</th>
-        </tr>
-        <tr>
-            <td>id</td>
-            <td>脚本资源唯一标识符，environment | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
-            <td>字符常量</td>
-            <td>api | environment</td>
-        </tr>
-        <tr>
-            <td>name</td>
-            <td>插件脚本名称</td>
-            <td>字符常量</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>scriptType</td>
-            <td>使用什么插件来做动态页面渲染，分别是三方组件FormCreate 和 内建渲染</td>
-            <td>字符常量</td>
-            <td>FormCreate ｜ Embedded</td>
-        </tr>
-        <tr>
-            <td>options</td>
-            <td>定义表单渲染样式<a href="https://arco.design/vue/component/form"> 文档参照 </a></td>
-            <td>对象</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>fields</td>
-            <td>环境页面需要渲染的属性名称集</td>
-            <td>字符数组</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>tabName</td>
-            <td>环境页面Tab反显的名称</td>
-            <td>字符</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>script</td>
-            <td>整体页面脚本<a href="https://form-create.com/v3/designer"> FormCreate的生成方式 </a></td>
-            <td>对象数组</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="24">2.4 打包<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
-<div class="admonition ms-abstract">
-<p class="admonition-title">注意</p>
-<p>SDK JAR 文件已经作为主应用的依赖项存在，因此在打包过程中无需再将其包含在当前包中，以避免导致 JAR 文件过大。</p>
-</div>
-<div class="admonition ms-abstract">
-<p>以下提到的内置 JAR 包同样适用相同的逻辑。如果已经在当前项目中使用，那在打包阶段无需再次将其包含在当前项目中。这样可以避免导致项目打包文件过大。</p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/%E6%89%93%E5%8C%851.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/%E6%89%93%E5%8C%851.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>上传插件到平台使用。</p>
-</div>
-<p><a class="glightbox" href="../../img/dev_manual/api_dev_plugin/MS%E5%B9%B3%E5%8F%B0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!重写" src="../../img/dev_manual/api_dev_plugin/MS%E5%B9%B3%E5%8F%B0.png" width="900px" /></a></p>
 
 
 
