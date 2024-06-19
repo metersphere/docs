@@ -58,7 +58,7 @@
 ![!重写](../img/dev_manual/api_dev_plugin/在线编辑器.png){ width="900px" }
 
 !!! ms-abstract "API 脚本 Props"
-    在完成页面绘制后，将脚本内容复制到 resources/script 目录下，并创建一个 JSON 文件。在该文件中，按照示例中的脚本格式写入脚本内容。[脚本示例](https://github.com/metersphere/api-test-plugins/blob/main/samplers/tcp-sampler/src/main/resources/script/api-script.json)
+    在完成页面绘制后，将脚本内容复制到 resources/script 目录下，并创建一个 JSON 文件。在该文件中，按照示例中的脚本格式写入脚本内容。[脚本示例](./script_json.md#1-api-scriptjson)
 ![!重写](../img/dev_manual/api_dev_plugin/脚本示例.png){ width="900px" }
 
 <table>
@@ -115,7 +115,7 @@
 </table>
 
 !!! ms-abstract ""
-    环境脚本 Props，可参考 [脚本示例](https://github.com/metersphere/api-test-plugins/blob/main/samplers/tcp-sampler/src/main/resources/script/env-script.json)
+    环境脚本 Props，可参考 [脚本示例](./script_json.md#2-env-scriptjson)
 ![!重写](../img/dev_manual/api_dev_plugin/效果图.png){ width="900px" }
 
 <table>
@@ -128,7 +128,7 @@
         </tr>
         <tr>
             <td>id</td>
-            <td>脚本资源唯一标识符，api | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
+            <td>脚本资源唯一标识符，environment | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
             <td>字符常量</td>
             <td>api | environment</td>
         </tr>
