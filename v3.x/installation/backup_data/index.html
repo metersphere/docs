@@ -2250,7 +2250,7 @@
 
 <div class="admonition ms-abstract">
 <p class="admonition-title">概述</p>
-<p>本文介绍了手动和自动两种备份方式，其中自动备份的脚本只备份数据库，备份完成后打包推送到指定服务器目录。<br>
+<p>本文介绍了手动和自动两种备份方式，备份完成后打包推送到指定服务器目录。<br>
 备份脚本中有多个变量可根据实际情况修改，用于满足不同的使用场景。</p>
 </div>
 <div class="admonition ms-abstract">
@@ -2261,11 +2261,24 @@
 </ol>
 </div>
 <h2 id="1">1 数据备份<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">注意</p>
+<p>MeterSphere 若通过 1Panel 安装，则在 1Panel 页面进行数据的备份和恢复。若在服务器上使用命令安装，则需要备份数据库 sql 和 minio 目录数据。</p>
+</div>
 <h3 id="11">1.1 手动备份<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<div class="highlight"><pre><span></span><code># 数据库备份：
-docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere &gt; metersphere.sql
+<p class="admonition-title">备份数据库</p>
+<div class="highlight"><pre><span></span><code>docker exec -i mysql mysqldump -uroot -pPassword123@mysql metersphere &gt; metersphere.sql
 </code></pre></div>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">备份 minio 目录</p>
+<p>在服务器上通过安装包安装，默认 /opt 目录，以实际安装目录为准。
+<div class="highlight"><pre><span></span><code>tar -cvf ms_data_backup.tar /opt/metersphere/data/minio
+</code></pre></div></p>
+<p>在服务器上 docker run 命令一键安装，默认 ~/.metersphere/data 目录，以实际安装目录为准。
+<div class="highlight"><pre><span></span><code>tar -cvf ms_data_backup.tar ~/.metersphere/data/minio
+</code></pre></div></p>
 </div>
 <h3 id="12">1.2 自动备份<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
@@ -2305,6 +2318,8 @@ currentTime=`date &quot;+%Y-%m-%d-%H-%M-%S&quot;`
 backupTarFileName=ms_db_$currentTime.tar.gz
 #导出sql文件的完整名称
 dumpSqlFile=ms_db_$currentTime.sql
+#minio目录，以实际安装目录为准进行替换，此处以 /opt/metersphere/data/minio 路径为例
+msDataDir=/opt/metersphere/data/minio
 #推送远程服务器ip地址
 remoteIp=10.1.11.12
 #推送远程服务器用户名
@@ -2323,14 +2338,17 @@ else
     echo &quot;--------------开始进行备份-----------------&quot;
 fi
 
+cd $backupDir
+
 if [ &quot;${isBuiltIn}&quot; = &quot;true&quot; ]; then
     docker exec -i mysql mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G &gt; $dumpSqlFile
 else
     mysqldump -u${username} -p${password} ${dbName} --max_allowed_packet=2G &gt; $dumpSqlFile
 fi
 
-cd $backupDir
-tar -zcvf $backupTarFileName $dumpSqlFile
+tar -cvf ms_data_backup.tar ${msDataDir}
+
+tar -zcvf $backupTarFileName $dumpSqlFile ms_data_backup.tar
 #发送备份文件到远程机器
 scp $backupTarFileName $remoteUser@$remoteIp:$remotePath  2&gt;&gt; &quot;error.log&quot;
 
@@ -2340,7 +2358,7 @@ else
     echo &quot;---------------远程备份失败----------------&quot;
 fi
 
-rm -rf $backupDir/$dumpSqlFile
+rm -rf $dumpSqlFile ms_data_backup.tar
 
 #remove outdated backup files
 
@@ -2395,6 +2413,12 @@ mysql -uroot -pPassword123@mysql
 <p>使用 metersphere 库，并将数据导入到库里
 <div class="highlight"><pre><span></span><code>use metersphere;
 source /var/lib/mysql/metersphere.sql
+</code></pre></div></p>
+</div>
+<div class="admonition ms-abstract">
+<p>还原 minio 目录数据，进入 ms_data_backup.tar 所在目录
+<div class="highlight"><pre><span></span><code>mv ms_data_backup.tar /
+tar -xvf ms_data_backup.tar
 </code></pre></div></p>
 </div>
 
