@@ -128,9 +128,9 @@
         </tr>
         <tr>
             <td>id</td>
-            <td>脚本资源唯一标识符，environment | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
+            <td>脚本资源唯一标识符，api | environment 分别代表接口各类协议脚本和环境扩展脚本</td>
             <td>字符常量</td>
-            <td>api | environment</td>
+            <td>environment | environment</td>
         </tr>
         <tr>
             <td>name</td>
