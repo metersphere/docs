@@ -135,7 +135,7 @@
     #!/bin/bash
     
     timedate_fields="0 1 * * *"  #每天凌晨1:00执行备份程序
-    cmd="bash /opt/db_bak/ms_backup.sh"
+    cmd="bash /opt/db_bak/ms_backup.sh" #替换 ms_backup.sh 所在路径
     crontab -l | grep "$cmd " > /dev/null 2>&1
     if test $? -ne 0; then
         crontab -l > crontab.tmp
