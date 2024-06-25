@@ -45,7 +45,7 @@ nav:
           - 网络端口要求: installation/network_port.md
           - 离线安装及升级: installation/offline_installation.md
           - 在线安装: installation/online_installation.md
-          - 1Panel 安装: installation/1Panel.md
+          - 1Panel 安装: installation/api_question.md
           - Windows 单机部署: installation/offline_installation_windows.md
           - Task Runner 部署: installation/task_runner.md
           - 数据备份与还原: installation/backup_data.md
@@ -95,6 +95,8 @@ nav:
               - 自定义主题: user_manual/x-pack/custom_theme.md
               - 消息模板: user_manual/x-pack/message.md
               - 资源池: user_manual/x-pack/controller.md
+    - 常见问题:
+          - 接口测试: ask_question/api_question.md
     - 插件列表: plugin.md
     - 开发文档:
           - 开发环境搭建: dev_manual/dev_manual.md
