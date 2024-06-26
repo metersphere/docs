@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://metersphere.io/docs/v3.x/ask_question/api_question/">
       
       
-        <link rel="prev" href="../../user_manual/x-pack/controller/">
+        <link rel="prev" href="../../plugin/">
       
       
-        <link rel="next" href="../../plugin/">
+        <link rel="next" href="../../dev_manual/dev_manual/">
       
       
       <link rel="icon" href="../../img/facio.ico">
@@ -1939,6 +1939,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    插件列表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -1955,10 +1975,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1969,8 +1989,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             常见问题
           </label>
@@ -2045,26 +2065,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../plugin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    插件列表
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2257,6 +2257,11 @@
 
 <h2 id="1-python3">1 Python3 如何引用第三方依赖包？<a class="headerlink" href="#1-python3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
+<p class="admonition-title">注意</p>
+<p>Python3 引用第三方依赖包有【挂载本地目录】 和【容器共享目录】两种方式，任选其中一种方式即可。</p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">挂载本地目录</p>
 <p>MeterSphere 里内嵌的 Python3 是 Python3.10，因此需要先在部署的环境里，先安装 Python3.10</p>
 <div class="highlight"><pre><span></span><code># 安装python3.10
 apt update &amp;&amp; sudo apt upgrade -y
@@ -2282,6 +2287,54 @@ pip install pinyin
 <p>配置完成后执行 msctl reload，服务启动后就可以在 Python3 脚本中直接使用三方包了
 <a class="glightbox" href="../../img/ask_question/api_question/python3%E4%BB%A3%E7%A0%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="安装1Panel" src="../../img/ask_question/api_question/python3%E4%BB%A3%E7%A0%81.png" width="900px" /></a>
 ```</p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">容器共享目录</p>
+<p>使用 Dockerfile 制作一个 python 容器</p>
+<div class="highlight"><pre><span></span><code>FROM python:3.10-alpine
+
+RUN pip install requests pinyin
+
+VOLUME [&quot;/usr/local/lib/python3.10/site-packages&quot;]
+</code></pre></div>
+<p>修改 docker-compose-task-runner.yml 文件
+<div class="highlight"><pre><span></span><code>version: &quot;3&quot;
+services:
+  python:
+    container_name: python
+    image: python:3.10
+    command: sh -c &quot;tail -f /dev/null&quot;  # 保持容器运行
+
+  task-runner:
+    image: ${MS_IMAGE_PREFIX}/metersphere-ce:${MS_IMAGE_TAG}
+    container_name: task-runner
+    deploy:
+      resources:
+        limits:
+          memory: ${MS_RUNNER_MEM_LIMIT}
+    entrypoint:
+      - sh
+      - -c
+      - |
+        sh /shells/task-runner.sh
+    environment:
+      TOTP_ENABLED: ${MS_TOTP_ENABLED}
+      TOTP_SECRET: ${MS_TOTP_SECRET}
+    ports:
+      - ${MS_TASK_RUNNER_PORT}:8000
+    healthcheck:
+      test: [ &quot;CMD&quot;, &quot;nc&quot;, &quot;-zv&quot;, &quot;localhost&quot;, &quot;8000&quot; ]
+      interval: 6s
+      timeout: 5s
+      retries: 50
+    volumes:
+      - ${MS_BASE}/metersphere/logs/task-runner:/opt/metersphere/logs/task-runner
+    volumes_from:
+      - python
+    restart: always
+    networks:
+      - ms-network
+</code></pre></div></p>
 </div>
 
 
