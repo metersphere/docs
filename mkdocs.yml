@@ -45,7 +45,7 @@ nav:
           - 网络端口要求: installation/network_port.md
           - 离线安装及升级: installation/offline_installation.md
           - 在线安装: installation/online_installation.md
-          - 1Panel 安装: installation/api_question.md
+          - 1Panel 安装: installation/1Panel.md
           - Windows 单机部署: installation/offline_installation_windows.md
           - Task Runner 部署: installation/task_runner.md
           - 数据备份与还原: installation/backup_data.md
