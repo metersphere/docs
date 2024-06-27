@@ -40,7 +40,6 @@ theme:
     custom_dir: "theme"
 nav:
     - 项目介绍: index.md
-#    - 系统架构: system_arch.md
     - 安装部署:
           - 网络端口要求: installation/network_port.md
           - 离线安装及升级: installation/offline_installation.md
@@ -102,6 +101,7 @@ nav:
           - 开发环境搭建: dev_manual/dev_manual.md
           - 接口自动化插件开发: dev_manual/api_plugin_dev.md
           - 第三方平台插件开发: dev_manual/platform_plugin_dev.md
+    - 更新日志: about/changelog.md
     - 联系我们: about/contact.md
 
 markdown_extensions:
