@@ -668,7 +668,7 @@
           <li class="md-nav__item">
   <a href="#21-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Windows 系统部署
+      2.1 Windows 环境
     </span>
   </a>
   
@@ -677,7 +677,7 @@
           <li class="md-nav__item">
   <a href="#22-mac" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 Mac 系统部署
+      2.2 Mac 环境
     </span>
   </a>
   
@@ -2301,7 +2301,7 @@
           <li class="md-nav__item">
   <a href="#21-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Windows 系统部署
+      2.1 Windows 环境
     </span>
   </a>
   
@@ -2310,7 +2310,7 @@
           <li class="md-nav__item">
   <a href="#22-mac" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 Mac 系统部署
+      2.2 Mac 环境
     </span>
   </a>
   
@@ -2343,10 +2343,12 @@
 
 <h2 id="1-task-runner">1 服务端部署 Task Runner<a class="headerlink" href="#1-task-runner" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>部署 Task Runner，需要采用服务器独立部署。 部署服务器要求：
-* 操作系统：Ubuntu 22 / CentOS 7/ Mac OS 64 位系统
-* CPU/内存：2C4G
-* 磁盘空间：50 G</p>
+<p class="admonition-title">部署服务器要求</p>
+<ul>
+<li>操作系统：Ubuntu 22 / CentOS 7</li>
+<li>CPU/内存：2C4G</li>
+<li>磁盘空间：50 G</li>
+</ul>
 </div>
 <div class="admonition ms-abstract">
 <div class="highlight"><pre><span></span><code># 下载在线安装包并上传到服务器
@@ -2386,15 +2388,12 @@ msctl status
 </ul>
 </div>
 <h2 id="2-task-runner">2 本地部署 Task Runner<a class="headerlink" href="#2-task-runner" title="Permanent link">&para;</a></h2>
-<h3 id="21-windows">2.1 Windows 系统部署<a class="headerlink" href="#21-windows" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>Windows 部署 task-runner 可使用 WSL 安装。 虚拟机配置如下：</br></p>
-<ul>
-<li><strong>操作系统</strong>：Ubuntu 22 / CentOS 7 64 位系统</li>
-<li><strong>CPU/内存</strong>：2C4G</li>
-<li><strong>磁盘空间</strong>: 50 G</li>
-</ul>
+<p class="admonition-title">说明</p>
+<p>Task Runner 在其 Docker Hub 组织内提供自动更新的 Docker 镜像。可以始终使用最新的稳定标签来更新 Docker 镜像。</br>
+Docker 安装可参考 <a href="https://docs.docker.com/desktop/install/windows-install/">官方文档</a></p>
 </div>
+<h3 id="21-windows">2.1 Windows 环境<a class="headerlink" href="#21-windows" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
 <p class="admonition-title">安装 WSL</p>
 <p>参考 <a href="https://docs.microsoft.com/zh-cn/windows/wsl/install">在 Windows 10 上安装 WSL | Microsoft Docs</a> 进行 Windows 宿主机 WSL 的安装和配置。  </p>
@@ -2467,48 +2466,18 @@ msctl status
 <p>安装完成后，在【个人中心-本地执行】填写完整的访问 url：<code>http://localhost:8000</code> 。</p>
 </div>
 <p><a class="glightbox" href="../../img/installation/dis_pressure/%E6%9C%AC%E5%9C%B0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机3" src="../../img/installation/dis_pressure/%E6%9C%AC%E5%9C%B0.png" width="900px" /></a></p>
-<h3 id="22-mac">2.2 Mac 系统部署<a class="headerlink" href="#22-mac" title="Permanent link">&para;</a></h3>
+<h3 id="22-mac">2.2 Mac 环境<a class="headerlink" href="#22-mac" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>安装 OrbStack ，下载地址：<a href="https://orbstack.dev/download">https://orbstack.dev/download</a> ,选择对应芯片架构的安装包下载、安装。</p>
+<p>Mac 推荐使用 OrbStack 作为 Docker 的客户端，OrbStack 更加轻量化、快捷。</br>
+安装 OrbStack ，下载地址：<a href="https://orbstack.dev/download">https://orbstack.dev/download</a> ,选择对应芯片架构的安装包下载、安装。</p>
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">说明</p>
-<p>如果是 Apple 芯片，需要开启 <code>Use Rosetta to run Intel code</code> ,开启后重启 OrbStack。<br>
-Intel 芯片无需开启 <code>Use Rosetta to run Intel code</code> 。</p>
+<p>安装成功并启动 OrbStack 后，在 Mac 终端中用 Docker 方式启动 Task Runner，命令如下：
+<div class="highlight"><pre><span></span><code>docker run -d -p 8000:8000 --name=task-runner registry.fit2cloud.com/metersphere/task-runner:v3.x.y
+</code></pre></div></p>
 </div>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mac 部署" src="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B21.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>在 OrbStack 创建 Ubuntu 虚拟机，操作系统建议选择 <code>Ubuntu 22.05 LTS</code>，CPU 架构选择 <code>Intel</code> 。</p>
-</div>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mac 部署" src="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task Runner ，具体步骤参考：<a href="#1">服务端部署 Task-Runner</a>。</p>
-<div class="highlight"><pre><span></span><code># 切换 root 用户
-sudo -i
-
-# 安装 wget ，如果已经忽略此步
-sudo apt-get update
-sudo apt-get install wget
-wget --version
-# 下载在线安装包
-wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
-# 解压安装包
-tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
-
-# 进入离线部署包解压缩目录
-cd metersphere-ce-online-installer-v3.x.y
-
-# 修改部署模式为 task-runner
-vi install.conf
-
-# 运行安装脚本
-/bin/bash install.sh
-
-# 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
-msctl status
-</code></pre></div>
-</div>
-<p><a class="glightbox" href="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mac 部署" src="../../img/installation/dis_pressure/mac%E9%83%A8%E7%BD%B22.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/dis_pressure/mac_install_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="配置主机3" src="../../img/installation/dis_pressure/mac_install_1.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p>安装完成后，在【个人中心-本地执行】填写完整的访问 url：<code>http://localhost:8000</code> 。</p>
 </div>
