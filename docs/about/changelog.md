@@ -4,7 +4,15 @@
 
 !!! ms-abstract ""
 
-    **MeterSphere v3.x 的版本发布计划**
+    MeterSphere 按年发布 LTS（Long Term Support）版本。
+
+    - v1.10-lts：发布时间为 2021 年 5 月 27 日，目前已经停止维护；
+    - v1.20-lts：发布时间为 2022 年 4 月 27 日，目前已经停止维护；
+    - v2.10-lts：发布时间为 2023 年 5 月 25 日，仅进行必要的安全类 Bug 修复和严重 Bug 修复。
+
+    与 MeterSphere v1.x 和 v2.x 相比，MeterSphere v3.x 产品定位发生变化，聚焦做好测试管理和接口测试，不再提供性能测试和 UI 测试相关的功能和能力，也不支持从 v1.x 和 v2.x 版本升级到 v3.x。
+
+    MeterSphere v3.x 的版本发布计划
 
     - 2024 年 5 月 30 日：发布 v3.0 beta 版本。
     - 2024 年 6 月 27 日：发布 v3.0 正式版本。
