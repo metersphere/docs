@@ -14,6 +14,35 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。
     - v2.10-lts：发布时间为 2023 年 5 月 25 日，每月发布小版本，持续进行 Bug 修复和部分功能的有限优化。
 
+## v2.10.16-lts
+
+------
+
+2024年6月28日
+
+!!! ms-abstract ""
+    💥💥 重要提醒 💥💥<br>
+    2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
+
+!!! ms-abstract "功能优化 :sunflower:"
+
+    - refactor(接口测试): 场景列表刷新优化 in #31265
+    - refactor(接口测试): 优化校验权限 in #31288
+    - refactor(系统设置): 优化特殊字符报错的缺陷 in #31297
+    - refactor(系统设置): 优化项目下拉框显示 in #31385
+
+
+!!! ms-abstract "问题修复 :palm_tree:"
+
+    - fix(测试计划): 修复批量修改环境的问题 in #31268
+    - fix(项目管理): 修复自定义代码片段无法使用三方jar包的缺陷 in #31260
+    - fix(测试跟踪): 测试评审打开用例报错 in #31389
+    - fix(测试跟踪): 用例评审切换上一条下一条，评论显示有误 in #31573
+    - fix(测试跟踪): 测试计划用例执行保存后，之前评论中的图片会被删除 in #31582
+    - fix(测试跟踪): 测试计划实时报告分享有效期跟应用配置不匹配 in #31602
+    - fix(测试跟踪): 用例模板文本描述默认值未设置 in #31804
+    - fix: 修复jenkins执行接口场景不能正常查看结果的问题 in #31269
+
 ## v2.10.15-lts
 
 ------
@@ -21,8 +50,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 2024年5月30日
 
 !!! ms-abstract ""
-💥💥 重要提醒 💥💥<br>
-2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
+    💥💥 重要提醒 💥💥<br>
+    2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
 
 
 !!! ms-abstract "功能优化 :sunflower:"
@@ -59,8 +88,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 2024年4月25日
 
 !!! ms-abstract ""
-💥💥 重要提醒 💥💥<br>
-2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
+    💥💥 重要提醒 💥💥<br>
+    2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
 
 
 !!! ms-abstract "功能优化 :sunflower:"
