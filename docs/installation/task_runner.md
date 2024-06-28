@@ -1,9 +1,9 @@
 
 ## 1 服务端部署 Task Runner
 
-!!! ms-abstract ""
-    部署 Task Runner，需要采用服务器独立部署。 部署服务器要求：
-    * 操作系统：Ubuntu 22 / CentOS 7/ Mac OS 64 位系统
+!!! ms-abstract "部署服务器要求"
+
+    * 操作系统：Ubuntu 22 / CentOS 7
     * CPU/内存：2C4G
     * 磁盘空间：50 G
 
@@ -42,13 +42,12 @@
     - 最大并发数：社区版单个节点最大并发数为 10，如需更大并发数，可申请 [企业版试用](https://jinshuju.net/f/CzzAOe)
   
 ## 2 本地部署 Task Runner
-### 2.1 Windows 系统部署
-!!! ms-abstract ""
-     Windows 部署 task-runner 可使用 WSL 安装。 虚拟机配置如下：</br>
 
-     -  **操作系统**：Ubuntu 22 / CentOS 7 64 位系统
-     -  **CPU/内存**：2C4G
-     -  **磁盘空间**: 50 G
+!!! ms-abstract "说明"
+    Task Runner 在其 Docker Hub 组织内提供自动更新的 Docker 镜像。可以始终使用最新的稳定标签来更新 Docker 镜像。</br>
+    Docker 安装可参考 [官方文档](https://docs.docker.com/desktop/install/windows-install/)
+
+### 2.1 Windows 环境
 
 !!! ms-abstract "安装 WSL"
     参考 [在 Windows 10 上安装 WSL | Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/wsl/install) 进行 Windows 宿主机 WSL 的安装和配置。  
@@ -132,48 +131,20 @@
     安装完成后，在【个人中心-本地执行】填写完整的访问 url：`http://localhost:8000` 。
 ![配置主机3](../img/installation/dis_pressure/本地.png){ width="900px" }
 
-### 2.2 Mac 系统部署
+### 2.2 Mac 环境
+
 !!! ms-abstract ""
+    Mac 推荐使用 OrbStack 作为 Docker 的客户端，OrbStack 更加轻量化、快捷。</br>
     安装 OrbStack ，下载地址：https://orbstack.dev/download ,选择对应芯片架构的安装包下载、安装。
 
 !!! ms-abstract "说明"
-    如果是 Apple 芯片，需要开启 `Use Rosetta to run Intel code` ,开启后重启 OrbStack。<br>
-    Intel 芯片无需开启 `Use Rosetta to run Intel code` 。
-![mac 部署](../img/installation/dis_pressure/mac部署1.png){ width="900px" }
-
-!!! ms-abstract ""
-    在 OrbStack 创建 Ubuntu 虚拟机，操作系统建议选择 `Ubuntu 22.05 LTS`，CPU 架构选择 `Intel` 。
-![mac 部署](../img/installation/dis_pressure/mac部署2.png){ width="900px" }
-
-!!! ms-abstract ""
-    Ubuntu 虚拟机创建完成后，双击进入虚拟机，切换 root 用户，然后下载 MeterSphere 安装包并解压安装 Task Runner ，具体步骤参考：[服务端部署 Task-Runner](#1)。
-
+    安装成功并启动 OrbStack 后，在 Mac 终端中用 Docker 方式启动 Task Runner，命令如下：
     ```
-    # 切换 root 用户
-    sudo -i
-
-    # 安装 wget ，如果已经忽略此步
-    sudo apt-get update
-    sudo apt-get install wget
-    wget --version
-    # 下载在线安装包
-    wget https://github.com/metersphere/metersphere/releases/download/v3.x.y/metersphere-online-installer-v3.x.y.tar.gz
-    # 解压安装包
-    tar -zxvf metersphere-ce-online-installer-v3.x.y.tar.gz
-    
-    # 进入离线部署包解压缩目录
-    cd metersphere-ce-online-installer-v3.x.y
-    
-    # 修改部署模式为 task-runner
-    vi install.conf
-    
-    # 运行安装脚本
-    /bin/bash install.sh
-    
-    # 查看 MeterSphere 状态，task-runner 状态为healthy 安装完成。
-    msctl status
+    docker run -d -p 8000:8000 --name=task-runner registry.fit2cloud.com/metersphere/task-runner:v3.x.y
     ```
-![mac 部署](../img/installation/dis_pressure/mac部署2.png){ width="900px" }
+
+![配置主机3](../img/installation/dis_pressure/mac_install_1.png){ width="900px" }
+    
 
 !!! ms-abstract ""
     安装完成后，在【个人中心-本地执行】填写完整的访问 url：`http://localhost:8000` 。
