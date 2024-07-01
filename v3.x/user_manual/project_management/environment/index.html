@@ -2476,7 +2476,7 @@
 <li>【编辑】编辑环境域名、启用条件、请求头等内容。</li>
 <li>【删除】删除环境。</li>
 <li>【导入】导入环境，开启覆盖，环境名称重复则覆盖，不重复则新增；关闭覆盖，环境名称重复则不导入。</li>
-<li>【导出】勾选或全选环境导出。</li>
+<li>【导出】导出当前选择的环境信息。</li>
 </ul>
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/%E7%8E%AF%E5%A2%83%E8%BF%9B%E8%A1%8C%E5%A4%8D%E5%88%B6%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!环境进行复制删除操作" src="../../../img/project_management/enviroment/%E7%8E%AF%E5%A2%83%E8%BF%9B%E8%A1%8C%E5%A4%8D%E5%88%B6%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.png" width="900px" /></a></p>
@@ -2487,16 +2487,16 @@
 <li><strong>环境变量</strong>：此处设置的变量是环境变量，可单个添加和批量添加。</li>
 <li><strong>HTTP配置</strong>：此处可配置环境地址以及启用条件，也可设置请求头。</li>
 <li><strong>数据库</strong>：配置数据库的数据源和连接信息。</li>
-<li><strong>HOST</strong>：设置 IP 和域名映射，仅支持接口测试。</li>
+<li><strong>HOST</strong>：设置 IP 和域名映射。</li>
 <li><strong>前置</strong>：分为【场景】和【请求】，【场景】是场景执行前执行一次，如 TOKEN 获取及场景初始化。【请求】是每一个 API 步骤执行前均执行一次，如请求内容加密。</li>
 <li><strong>后置</strong>：参考【前置】功能。</li>
-<li><strong>断言</strong>：参考接口 CASE 内的断言，只支持接口测试。</li>
+<li><strong>断言</strong>：参考接口 CASE 内的断言。</li>
 <li><strong>显示设置</strong>：显示环境配置内容，可进行【启用/关闭】。</li>
 </ul>
 </div>
 <h3 id="21">2.1 环境变量<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>【环境变量】进行单个添加和批量添加，可在请求体、前后置脚本里 ${变量名} 进行引用。</p>
+<p>【环境变量】进行单个添加和批量添加，可在请求体、前后置脚本里通过 <code>${变量名}</code> 方式进行引用。</p>
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!环境变量" src="../../../img/project_management/enviroment/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png" width="900px" /></a></p>
 <h3 id="22-http">2.2 HTTP<a class="headerlink" href="#22-http" title="Permanent link">&para;</a></h3>
@@ -2505,18 +2505,18 @@
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%86%85%E5%AE%B9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!添加环境内容" src="../../../img/project_management/enviroment/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%86%85%E5%AE%B9.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p>添加【HTTP】和【HTTPS】请求，环境启用条件有【无】、【模块】、【路径】。</p>
+<p>添加【HTTP】或【HTTPS】请求时，可通过不同的条件，例如模块、路径进行匹配。</p>
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/http%E8%AE%BE%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!环境变量" src="../../../img/project_management/enviroment/http%E8%AE%BE%E7%BD%AE.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
 <p class="admonition-title">环境启用条件规则:</p>
 <ul>
-<li>匹配顺序按【路径】&gt;【模块】&gt;【无】，相同匹配按从上到下的顺序匹配。</li>
-<li>有配置【无】的环境，当【路径】和【模块】都没有匹配上时，使用【无】的环境；没有配置【无】的环境，则环境为空，执行失败。</li>
+<li>匹配优先级按【路径】&gt;【模块】&gt;【无】顺序进行。</li>
+<li>当【路径】和【模块】都没有匹配上时，如配置了【无】的环境，使用【无】的环境，否则环境为空，执行失败。</li>
 </ul>
 </div>
 <div class="admonition ms-abstract">
-<p>设置【连接超时】时间、【响应超时】时间，默认值为60秒。</p>
+<p>设置【连接超时】时间、【响应超时】时间，默认值为 60 秒。</p>
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!设置超时时间" src="../../../img/project_management/enviroment/%E8%AE%BE%E7%BD%AE%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" width="900px" /></a></p>
 <h3 id="23">2.3 数据库<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
@@ -2527,13 +2527,13 @@
 <div class="admonition ms-abstract">
 <p class="admonition-title">数据源字段说明:</p>
 <ul>
-<li><strong>数据源名称</strong>：自定义名称。</li>
+<li><strong>数据源名称</strong>：自定义数据源名称。</li>
 <li><strong>驱动</strong>：默认内置 MySQL 驱动，其他驱动需要在【系统设置-系统-插件】上传驱动包，下拉选项中自动显示。具体参考：<a href="../../system_management/system/#71">插件管理</a>。</li>
 <li><strong>数据库连接 URL</strong>：常用数据库连接 URL 如下<br><ul>
-<li><strong>MySQL</strong>：jdbc:mysql://127.0.0.1:3306/database，若执行多条 SQL ，则连接地址为 jdbc:mysql://127.0.0.1:3306/database?allowMultiQueries=true</li>
+<li><strong>MySQL</strong>：jdbc:mysql://127.0.0.1:3306/database，若需要支持执行多条 SQL 语句 ，则连接地址为 jdbc:mysql://127.0.0.1:3306/database?allowMultiQueries=true</li>
 <li><strong>Oracle</strong>：jdbc:oracle:thin:@192.168.2.1:1521:database，12C 版本数据库连接地址为 jdbc:oracle:thin:@192.168.2.1:1521/database</li>
 <li><strong>SQLServer</strong>：jdbc:sqlserver://127.0.0.1:1433;DatabaseName=database;encrypt=true;trustServerCertificate=true;</li>
-<li><strong>Postgresql</strong>：jdbc:postgresql://127.0.0.1:5432/database</li>
+<li><strong>PostgreSQL</strong>：jdbc:postgresql://127.0.0.1:5432/database</li>
 </ul>
 </li>
 <li><strong>用户名</strong>：数据库登录的用户名。</li>
@@ -2549,7 +2549,7 @@
 <p><a class="glightbox" href="../../../img/project_management/enviroment/host%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!数据源链接成功" src="../../../img/project_management/enviroment/host%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png" width="900px" /></a></p>
 <h3 id="25">2.5 前置/后置<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>添加【场景】和【请求】的全局【前置】，进行【脚本操作】和【SQL操作】。以【场景-SQL操作】为例。</p>
+<p>添加【场景】或【请求】的全局【前置】条件，支持【脚本操作】和【SQL操作】两种类型。以【场景-SQL操作】为例。</p>
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/%E5%89%8D%E7%BD%AE%E6%93%8D%E4%BD%9Csql%E6%93%8D%E4%BD%9C.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!前置操作sql操作" src="../../../img/project_management/enviroment/%E5%89%8D%E7%BD%AE%E6%93%8D%E4%BD%9Csql%E6%93%8D%E4%BD%9C.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
@@ -2557,7 +2557,7 @@
 </div>
 <h3 id="26">2.6 断言<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>【断言】设置有多种断言方式，详细断言可参考【接口 CASE】处的断言。本处以【响应体-JSONPath】为例。</p>
+<p>【断言】设置有多种断言方式，详细断言可参考【接口 CASE】处的断言。以【响应体-JSONPath】为例。</p>
 </div>
 <p><a class="glightbox" href="../../../img/project_management/enviroment/%E6%96%AD%E8%A8%80.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!显示设置" src="../../../img/project_management/enviroment/%E6%96%AD%E8%A8%80.png" width="900px" /></a></p>
 <h3 id="27-tcp">2.7 TCP 设置<a class="headerlink" href="#27-tcp" title="Permanent link">&para;</a></h3>
