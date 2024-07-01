@@ -266,7 +266,7 @@
 !!! ms-abstract "离线升级步骤"
 
     ```
-    #完成数据备份并停止服务
+    # 完成数据备份并停止服务
     msctl stop
 
     # 下载离线安装包并上传到服务器
@@ -282,7 +282,7 @@
     /bin/bash install.sh
     
     # 查看 MeterSphere 状态，各个组件都是 healthy 状态升级完成。
-     msctl status
+    msctl status
 
     ```
 
