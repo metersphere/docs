@@ -42,11 +42,6 @@
     - 最大并发数：社区版单个节点最大并发数为 10，如需更大并发数，可申请 [企业版试用](https://jinshuju.net/f/CzzAOe)
   
 ## 2 本地部署 Task Runner
-
-!!! ms-abstract "说明"
-    Task Runner 在其 Docker Hub 组织内提供自动更新的 Docker 镜像。可以始终使用最新的稳定标签来更新 Docker 镜像。</br>
-    
-
 ### 2.1 Windows 环境
 
 !!! ms-abstract "安装 Docker"
