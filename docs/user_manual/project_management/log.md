@@ -10,5 +10,5 @@
 ![!查询功能](../../img/project_management/log/查询功能.png){ width="900px" }
 
 !!! ms-abstract ""
-    筛选条件进行【重置】操作。
+    点击【重置】按钮，对所有筛选条件恢复默认设置。
 ![!重置操作](../../img/project_management/log/重置操作.png){ width="900px" }
