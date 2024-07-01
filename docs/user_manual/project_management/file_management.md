@@ -30,18 +30,13 @@
     - 【下载】下载文件到本地。
     - 【删除】删除文件，会导致关联该文件的用例执行失败，请谨慎操作！！！
     - 【移动】移动文件到其他模块。
-    - 【开启/禁用】JAR 包需要开启，否则在接口前后置脚本中引用不到 JAR 包内容。
+    - 【开启/禁用】JAR 包需要设置为开启状态，否则在接口前后置脚本中无法引用对应 JAR 包内容。
     - 【切换显示】文件列表形式切换到图形样式。
 
 ![!上传文件功能操作](../../img/project_management/file_management/上传文件功能操作.png){ width="900px" }
 
 ![!上传文件展示形式](../../img/project_management/file_management/上传文件展示形式.png){ width="900px" }
 
-!!! ms-abstract ""
-    设置列表表头、每页显示数量。
-![!表头设置](../../img/project_management/file_management/表头设置.png){ width="900px" }
-
-![!页面显示数量](../../img/project_management/file_management/页面显示数量.png){ width="900px" }
 
 ## 3 存储库
 !!! ms-abstract ""
@@ -51,7 +46,7 @@
 ![!第三方具体仓库](../../img/project_management/file_management/第三方具体仓库.png){ width="900px" }
 
 !!! ms-abstract ""
-    以 Gitea 仓库为例，【存储库地址】要以【.git】结尾，点击【测试连接】连接成功。
+    以 Gitea 仓库为例，【存储库地址】要以【.git】结尾，输入 Token 后，点击【测试连接】验证输入信息是否正确。
 ![!gitea仓库为例](../../img/project_management/file_management/gitea仓库为例.png){ width="900px" }
 
 !!! ms-abstract ""
