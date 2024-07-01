@@ -6,7 +6,7 @@
 ![!机器人列表](../../img/project_management/message_management/机器人列表.png){ width="900px" }
 
 !!! ms-abstract ""
-    【站内信】、【邮件】、【企业微信】、【钉钉】、【飞书】等多种方式发送消息通知。<br>
+    MeterSphere 支持【站内信】、【邮件】、【企业微信】、【钉钉】、【飞书】等多种方式发送消息通知。<br>
     其中【邮件】通知需要在【系统设置-邮件设置】中配置 SMTP 服务，【企业微信】、【钉钉】、【飞书】需要配置机器人。
 ![!创建webhook机器人](../../img/project_management/message_management/创建webhook机器人.png){ width="900px" }
 
@@ -27,7 +27,7 @@
 
 ## 2 消息设置 
 !!! ms-abstract ""
-    点击【消息设置】进入消息设置页面，设置【测试计划】、【缺陷管理】、【用例管理】、【接口测试】、【定时任务】的消息通知。
+    点击【消息设置】进入消息设置页面，设置【测试计划】、【缺陷管理】、【用例管理】、【接口测试】、【定时任务】各场景的消息通知配置。
 ![!消息设置页面](../../img/project_management/message_management/消息设置页面.png){ width="900px" } 
 
 !!! ms-abstract "说明"
