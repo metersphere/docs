@@ -13,7 +13,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 | Node Exporter | 9100 | 用于采集 Node 的运行指标 |
 | Selenium Grid | 4444 | 为 UI自动化测试提供运行环境，支持分布式拓展 |
 | TCP Mock  | 10000-10010 | TCP Mock 对外提供服务需要开放的端口范围 |
-| MySQL | 3307 | MeterSphere 默认安装的数据库对外提供的端口  |
+| MySQL | 3306 | MeterSphere 默认安装的数据库对外提供的端口  |
 | Redis | 6379 | MeterSphere 默认安装的 Redis 对外提供的端口  |
 | Minio | 9000 | MeterSphere 默认安装的分布式对象存储对外提供的端口  |
 | Kafka | 9092 | MeterSphere 默认安装的消息中间件对外提供的端口  |
