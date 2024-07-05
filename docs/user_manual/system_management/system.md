@@ -1,6 +1,4 @@
----
-description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
----
+
 
 ## 1 用户
 !!! ms-abstract ""
@@ -33,7 +31,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
     - **导入用户**<br>
-    点击【导入用户】按钮，下载模版并填写用户信息，通过 Excel 文件批量导入用户。
+    点击【导入用户】按钮，下载模板并填写用户信息，通过 Excel 文件批量导入用户。
 ![!创建用户](../../img/system_management/导入用户.png){ width="900px" }
 
 
@@ -101,12 +99,13 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!工作空间管理](../../img/system_management/组织项目切换.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
+
     - 【编辑】: 编辑项目使用模块、资源池、描述等信息。</br>
     - 【添加成员】: 给当项目添加成员用户。</br>
     - 【进入项目】：切换到项目管理页签。</br>
     - 【结束】：结束项目不展示在项目切换列表。</br>
     - 【删除】：点击【...】按钮，删除项目，系统会在 30 天后执行删除项目。删除确认后，点击名称旁边【闹钟图标】撤销删除，项目删除前可正常使用。</br>
-    -  【查询】：列表右上方书输入框使用 ID 、名称查询项目。</br>
+    - 【查询】：列表右上方书输入框使用 ID 、名称查询项目。</br>
 
 
 !!! ms-abstract ""
@@ -118,10 +117,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "操作说明"
 
-    【项目管理员】：默认为当前创建人，项目管理员自动加入当前项目。当项目管理员不在当前创建的项目所属组织时，自动将项目管理员加入到项目所属组织，赋予组织成员用户组。</br>
-    【开启模块】：默认全选，可以自定义选择。若编辑项目取消模块，已产生数据保留，但是无入口进入对应模块。</br>
-    【资源池】：用于接口测试执行任务，默认可用 Local 资源池。资源池配置在[系统-资源池](./system.md#5)配置。</br>
-    【状态】：默认启用，有启用，关闭两种状态。</br>
+    - 【项目管理员】：默认为当前创建人，项目管理员自动加入当前项目。当项目管理员不在当前创建的项目所属组织时，自动将项目管理员加入到项目所属组织，赋予组织成员用户组。</br>
+    - 【开启模块】：默认全选，可以自定义选择。若编辑项目取消模块，已产生数据保留，但是无入口进入对应模块。</br>
+    - 【资源池】：用于接口测试执行任务，默认可用 Local 资源池。资源池配置在[系统-资源池](./system.md#5)配置。</br>
+    - 【状态】：默认启用，有启用，关闭两种状态。</br>
 
 
 ## 4 系统参数
@@ -132,6 +131,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【邮件设置】：设置SMTP邮件服务，用于用户邮箱邀请用户，测试消息推送。</br>
     - 【内存清理】：可以设置系统日志保留时长，定时每天 0 点定时清理。</br>
     - 【变更历史】：对系统内所有的项目生效，超出设置的用例变更历史会被清除，更新后立即生效。
+
 ![系统参数设置首页](../../img/system_management/系统设置.png){ width="900px" }
 ![系统参数设置首页](../../img/system_management/系统参数内存清理.png){ width="900px" }
 
@@ -161,74 +161,26 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
   
 
-!!! ms-abstract ""
- 
-    - **编辑资源池**<br>
+!!! ms-abstract "编辑资源池"
 
-     - 【站点URL】: MeterSphere 服务真实 ip 地址。 如：http：//ip：8081 ，站点 URL 地址和 Node 资源池服务器要求网络互通。</br>
-    - 【最大并发数】：按服务器可以提供的资源能力填写最大并发数 。</br>
-    - 【IP、端口】：Node 资源池部署服务器的真实 ip ，默认 8000 端口。
+    - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http://ip:8081 ，站点 URL 地址和 Node 资源池服务器要求网络互通。</br>
+    - 【最大并发数】：按服务器可以提供的资源能力填写最大并发数。</br>
+    - 【IP、Port】：Node 资源池部署服务器的真实 ip ，默认 8000 端口。
 
 ![!测试资源池管理](../../img/system_management/编辑资源池.png){ width="900px" }
-
-
-
-
-<!--
-### 4.2 创建 Kubernetes 资源池 (X-Pack)
-!!! ms-abstract ""
-    点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
-![!创建K8S资源池](../../img/system_management/系统下创建K8S资源池.png){ width="900px" }
-
-!!! ms-abstract ""
-    获取 Master URL，输入 kubectl describe svc kubernetes 可获得 Endpoints 地址<br>
-    获取 Token，需要有 k8s 集群环境，之后创建好 SA 和 token，命令如下
-    ```
-    # 1 创建 namespaces
-    kubectl create namespace metersphere
-    # 2 创建 SA
-    kubectl create serviceaccount ms -n metersphere
-    # 3 创建 namespace 授权 SA
-    kubectl create clusterrolebinding ms --clusterrole=admin --serviceaccount=metersphere:ms -n metersphere
-    # 4 查询 SA token
-    kubectl describe sa/ms -n metersphere
-    kubectl describe secrets -n metersphere ms-token-xxxx
-    ```
-!!! ms-abstract ""
-    Namespace 可以进行自定义，在 k8s 集群上创建自定义的 Namespace
-    ```
-    kubectl create ns ms-pool
-    ```
-!!! ms-abstract ""
-    下载 deployment.yaml 上传到 k8s 集群服务器上，输入命令使其生效后，输入命令查询自定义 Namespace 下的 ms-node-controller 是否正常起来
-    ```
-    # 使 deployment.yaml 生效
-    kubectl apply -f deployment.yaml -n ms-pool
-    # 查询 ms-node-controller 服务
-    kubectl get all -n ms-pool
-    ```
-![!创建K8S资源池](../../img/system_management/下载yaml文件.png){ width="900px" }
-
-!!! ms-abstract ""
-    Deploy Name 使用默认的 ms-node-controller 就行，不需要更改。<br>
-    配置完成后，点击确定即可。在资源池列表中有该资源池，在性能测试页面-压力配置处也可以看到该资源池。
-![!创建K8S资源池](../../img/system_management/k8s资源池配置完成.png){ width="900px" }
-
-![!创建K8S资源池](../../img/system_management/k8s列表显示.png){ width="900px" }
-
--->
 
 ## 6 任务中心
 !!! ms-abstract ""
     点击左侧【系统设置-系统-任务中心】进入任务中心管理界面。<br>
-    实时任务：支持查看当前接口用例、接口场景正在运行的任务状态。<br>
-    定时任务：可创建测试定时执行任务。
+
+    - 实时任务：可查看当前接口用例、接口场景正在运行的任务状态。<br>
+    - 定时任务：可创建测试定时执行任务。
   
   ![任务中心](../../img/system_management/任务中心1.png){ width="900px" } ![任务中心](../../img/system_management/任务中心.png){ width="900px" }
 
 ## 7 插件
 !!! ms-abstract ""
-    点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 LTS 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
+    点击左侧【系统设置-系统-插件】进入插件管理界面，MeterSphere v3.0 版本支持 DevOps、API 导入、请求、项目管理、协议 类型的插件。具体内容下载页面表格。
 ![插件](../../img/system_management/插件管理.png){ width="900px" }
 
 !!! ms-abstract "操作说明"
@@ -236,46 +188,42 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【禁用】：禁用当前使用插件。</br>
     - 【删除】：钮删除当前使用插件。</br>
 
-
-
+### 7.1 数据库驱动
 !!! ms-abstract ""
-    - **上传插件**<br>
-    进入下载地址：https://github.com/metersphere 下载需要使用的且和当前MeterSphere版本对应的插件 jar 包。
-    点击【上传插件】按钮，上传插件 jar 包，配置插件使用组织范围、描述。
+    默认内置 MySQL 驱动，其他数据库驱动需要在【系统设置-系统-插件】上传驱动包，以 Oracle 数据库插件为例。
 ![插件](../../img/system_management/上传插件.png){ width="900px" }
 
+!!! ms-abstract ""
+    数据库驱动上传后，在【项目管理-环境管理-数据库-添加数据库】页面，驱动选项下拉框可选择 oracle 驱动，具体参考：[数据源配置](../../project_management/environment/#23)。
+![插件](../../img/system_management/oracle数据库.png){ width="900px" }
 
+### 7.2 接口协议插件
+!!! ms-abstract ""
+    默认内置 HTTP 协议，其他协议需要在【系统设置-系统-插件】上传协议插件，以 TCP 协议为例。
+![插件](../../img/system_management/上传接口协议插件.png){ width="900px" }
+
+!!! ms-abstract ""
+    协议插件上传后，在【项目管理-环境管理-TCP配置】处可进行配置。
+![插件](../../img/system_management/环境配置-tcp配置.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【接口测试-调试-TCP】切换到 TCP 请求页面进行 TCP 请求的调试。
+![插件](../../img/system_management/tcp请求页面.png){ width="900px" }
+
+### 7.3 服务集成插件
+!!! ms-abstract ""
+    上传 TAPD、禅道服务集成插件，以 禅道服务集成插件为例。[服务集成插件下载](https://github.com/metersphere/metersphere-platform-plugin)
+![插件](../../img/system_management/禅道服务集成插件.png){ width="900px" }
+
+!!! ms-abstract ""
+    服务集成插件上传后，在【系统设置-组织-服务集成】处可进行配置。具体参考：[服务集成](../organization/#42)。
+![插件](../../img/system_management/禅道服务集成插件页面.png){ width="900px" }
 
 ## 8 日志
 !!! ms-abstract ""
     点击左侧【系统设置-系统-日志】进入日志界面，显示登录用户权限范围内的全部测试资源日志信息，使用高级查询来快速查找相关日志。
 ![系统参数设置首页](../../img/system_management/系统设置日志.png){ width="900px" }
 
-<!--
-### 5.3 LDAP 设置
-!!! ms-abstract ""
-    切换至【LDAP设置】标签，点击【编辑】按钮配置 LDAP 登录相关参数。
-![配置ldap](../../img/system_management/配置ldap.png){ width="900px" }
-
-!!! ms-abstract "选项"
-    * 【LDAP地址】：ldap://serveurl:389 或 ldaps://serveurl:636
-    * 【绑定DN】：cn=administrator,cn=Users,dc=metersphere,dc=com
-    * 【用户OU】：ou=metersphere,dc=metersphere,dc=com
-    * 【用户过滤器】：sAMAccountName={0}
-    * 【LDAP属性映射】：{"username":"sAMAccountName","name":"cn","email":"mail"}
-
-!!! ms-abstract "选项说明"
-    * 【OU】：同级多OU用｜分割
-    * 【用户过滤器】：根据规则到 用户OU 里面去检索用户，可能的选项为 (uid={0}) 或 (sAMAccountName={0}) 或 (cn={0}) 
-    * 【LDAP属性映射】：{"username":"sAMAccountName","name":"cn","email":"mail","phone":"phone"}，username,name,email 三项不可修改删除, phone 属性可选
-    * 【启用LDAP认证】：启用后登录页显示 LDAP 登录选项
-
-!!! ms-abstract "注意"
-    用户过滤器用什么筛选, LDAP 属性映射字段要与其一致, 过滤器用 sAMAccountName, LDAP属性映射也要用 sAMAccountName
-
-!!! ms-abstract ""    
-    启用 LDAP 认证后，登录页会新增 LDAP 登录选项。
-![ldap登录](../../img/system_management/ldap登录.png){ width="900px" }-->
 
 
 

@@ -1,6 +1,4 @@
----
-description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
----
+
 
 ##  1 内置 MOCK 函数
 
@@ -92,8 +90,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         </tr>
         <tr>
             <td>日期</td>
-            <td><b>@idCard</b></td>
-            <td>随机生成一个身份证号（生成的身份证号码并不一定是真实有效）</td>
+            <td><b>@date('yyyy-MM-dd')</b></td>
+            <td>返回一个随机的日期字符串。例：1983-01-29</td>
         </tr>
         <tr>
             <td>时间</td>
@@ -597,7 +595,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
         </tr>
         <tr>
             <td><b>${__timeShift}</b></td>
-            <td>返回各种格式的日期，并添加指定的秒/分钟/小时/天量</td>
+            <td>返回各种格式的日期，并添加指定的秒/分钟/小时/天</td>
         </tr>
         <tr>
             <td><b>${__dateTimeConvert}</b></td>

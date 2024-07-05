@@ -1,6 +1,4 @@
----
-description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
----
+
 
 ## 1 机器人列表
 !!! ms-abstract ""
@@ -8,7 +6,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![!机器人列表](../../img/project_management/message_management/机器人列表.png){ width="900px" }
 
 !!! ms-abstract ""
-    【站内信】、【邮件】、【企业微信】、【钉钉】、【飞书】等多种方式发送消息通知。<br>
+    MeterSphere 支持【站内信】、【邮件】、【企业微信】、【钉钉】、【飞书】等多种方式发送消息通知。<br>
     其中【邮件】通知需要在【系统设置-邮件设置】中配置 SMTP 服务，【企业微信】、【钉钉】、【飞书】需要配置机器人。
 ![!创建webhook机器人](../../img/project_management/message_management/创建webhook机器人.png){ width="900px" }
 
@@ -29,7 +27,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 2 消息设置 
 !!! ms-abstract ""
-    点击【消息设置】进入消息设置页面，设置【测试计划】、【缺陷管理】、【用例管理】、【接口测试】、【定时任务】的消息通知。
+    点击【消息设置】进入消息设置页面，设置【测试计划】、【缺陷管理】、【用例管理】、【接口测试】、【定时任务】各场景的消息通知配置。
 ![!消息设置页面](../../img/project_management/message_management/消息设置页面.png){ width="900px" } 
 
 !!! ms-abstract "说明"
@@ -40,14 +38,11 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - 【定时任务】定时任务的开启、关闭均可设置消息通知。
 
 !!! ms-abstract ""
-    以【缺陷管理】中【创建】功能为例，开启企业微信并设置消息通知接收人。
+    以【缺陷管理】中【创建】功能为例，开启企业微信并设置消息通知接收人，当在缺陷管理中创建缺陷后，企业微信群将收到对应的消息通知。
 ![!缺陷创建通知](../../img/project_management/message_management/缺陷创建通知.png){ width="900px" } 
 
 !!! ms-abstract "注意"
     当创建人和操作人是同一人时，不会发消息通知。
-
-!!! ms-abstract ""
-    点击【缺陷管理-创建缺陷】，填写缺陷内容后进行创建，企业微信群接收到消息通知。
 
 
     

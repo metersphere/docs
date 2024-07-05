@@ -1,7 +1,3 @@
----
-description: MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。
----
-
 ## 1 环境要求
 !!! ms-abstract "部署服务器要求："
 
@@ -15,8 +11,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 	电脑上没有安装虚拟化软件，需要先安装虚拟化软件。市面上主流的桌面虚拟化软件有 VMware Workstation 和 VirtualBox。如果电脑上已经安装了其中一款软件，可以直接跳过这一部分。  
 	示例选择了 VirtualBox，因为 VirtualBox 是免费的，若有需求也可以自行选择安装收费的 VMware Workstation。  
 	VirtualBox 下载链接：https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe。
-
-!!! ms-abstract ""
 	下载 VirtualBox 后，双击安装包进行安装，安装完成后默认打开 VirtualBox。
 ![VirtualBox](../img/installation/windows/ova部署安装VirtualBox1.png){ width="900px" }
 
@@ -67,7 +61,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![启动](../img/installation/windows/登录进服务器.png){ width="900px" }
 
 !!! ms-abstract ""
-	下载 MeterSphere 安装包上传到服务器，下载地址：https://community.fit2cloud.com/#/products/metersphere/downloads。
+	下载 MeterSphere 安装包并上传到服务器，下载地址：https://community.fit2cloud.com/#/products/metersphere/downloads。
 ![启动](../img/installation/windows/下载安装包.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -82,7 +76,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![启动](../img/installation/windows/安装完成.png){ width="900px" }
 
 !!! ms-abstract ""
-	安装完成后，执行【msctl status】命令查看服务都是 healthy 状态即可。
+	安装完成后，执行【msctl status】命令查看服务都是 healthy 状态即可访问并登录。
 ![启动](../img/installation/windows/查询状态.png){ width="900px" }
 
 
