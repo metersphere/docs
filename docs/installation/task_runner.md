@@ -39,7 +39,7 @@
 !!! ms-abstract "操作说明"
     - 内网URL：资源池部署在内网时，可使用内网网络，如 `http://MS服务器的内网IP:8081` 。</br>
     - IP、Port：资源池部署服务器的 IP ，默认端口 8000 。
-    - 最大并发数：社区版单个节点最大并发数为 30，如需更大并发数，可申请 [企业版试用](https://jinshuju.net/f/CzzAOe)
+    - 最大并发数：社区版单个节点最大并发数为 10，如需更大并发数，可申请 [企业版试用](https://jinshuju.net/f/CzzAOe)
   
 ## 2 本地部署 Task Runner
 ### 2.1 Windows 环境
