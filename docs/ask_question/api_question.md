@@ -26,13 +26,13 @@
     pip install pinyin
     ```
     
-    配置 task-runner 的目录挂载 /root/.venv/lib/python3.10/site-packages:/usr/local/lib/python3.10/dist-packages
+    配置 task-runner 的目录挂载 /root/.venv/lib/python3.10/site-packages:/usr/local/lib/python3.10/sist-packages
 
-    ![安装1Panel](../img/ask_question/api_question/task_runner_volumn.png){ width="900px" }
+    ![接口测试](../img/ask_question/api_question/task_runner_volumn.png){ width="900px" }
     
     配置完成后执行 msctl reload，服务启动后就可以在 Python3 脚本中直接使用三方包了
 
-    ![安装1Panel](../img/ask_question/api_question/python3代码.png){ width="900px" }
+    ![接口测试](../img/ask_question/api_question/python3代码.png){ width="900px" }
     ```
 
 !!! ms-abstract "容器共享目录"
