@@ -85,3 +85,36 @@
         networks:
           - ms-network
     ```
+
+## 2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+!!! ms-abstract "配置 localhost 异常"
+    【个人执行-本地执行】配置 http://localhost:8000，页面报“网络异常，请检查您的网络连接是否正常”
+![接口测试](../img/ask_question/api_question/本地执行localhost.png){ width="900px" }
+
+!!! ms-abstract ""
+    在浏览器上访问【chrome://flags/#block-insecure-private-network-requests】将该项设置为【disabled】，重启浏览器即可
+![接口测试](../img/ask_question/api_question/localhost设置.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【检测并保存】即可检测通过
+![接口测试](../img/ask_question/api_question/localhost检测通过.png){ width="900px" }
+
+!!! ms-abstract "配置本地IP异常"
+    【本地执行】配置 http://本地IP:8000 则会出现如下的跨域问题。
+![接口测试](../img/ask_question/api_question/本地执行.png){ width="900px" }
+
+!!! ms-abstract ""
+    在浏览器上访问【chrome://settings/】后，点击【隐私和安全-网站设置-更多内容设置-不安全内容-允许显示不安全内容-添加】
+![接口测试](../img/ask_question/api_question/IP浏览器设置.png){ width="900px" }
+    
+![接口测试](../img/ask_question/api_question/IP不安全内容.png){ width="900px" }
+
+!!! ms-abstract ""
+    添加 MeterSphere 平台域名后，点击小三角后，在"不安全内容"处设置"允许"
+![接口测试](../img/ask_question/api_question/IP添加运行域名.png){ width="900px" }
+
+![接口测试](../img/ask_question/api_question/不安全内容允许.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【检测并保存】即可检测通过
+![接口测试](../img/ask_question/api_question/IP检测通过.png){ width="900px" }
