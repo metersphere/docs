@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -35,7 +35,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2053,6 +2053,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2255,6 +2264,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2356,6 +2374,48 @@ services:
       - ms-network
 </code></pre></div></p>
 </div>
+<h2 id="2">2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">配置 localhost 异常</p>
+<p>【个人执行-本地执行】配置 <a href="http://localhost:8000">http://localhost:8000</a>，页面报“网络异常，请检查您的网络连接是否正常”</p>
+</div>
+<p><a class="glightbox" href="../img/ask_question/api_question/本地执行localhost.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../img/ask_question/api_question/本地执行localhost.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>在 Chrome 浏览器上访问【chrome://flags/#block-insecure-private-network-requests】将该项设置为【disabled】，重启浏览器即可</p>
+</div>
+<p><a class="glightbox" href="../img/ask_question/api_question/localhost设置.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../img/ask_question/api_question/localhost设置.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>若是 Edge 浏览器，则输入【edge://flags】后，搜索【block-insecure-private-network-requests】将其设置【disabled】</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/Edge%E6%B5%8F%E8%A7%88%E5%99%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/Edge%E6%B5%8F%E8%A7%88%E5%99%A8.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>点击【检测并保存】即可检测通过</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/localhost%E6%A3%80%E6%B5%8B%E9%80%9A%E8%BF%87.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/localhost%E6%A3%80%E6%B5%8B%E9%80%9A%E8%BF%87.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">配置本地IP异常</p>
+<p>【本地执行】配置 <a href="http://本地IP:8000">http://本地IP:8000</a> 则会出现如下的跨域问题。</p>
+</div>
+<p><a class="glightbox" href="../img/ask_question/api_question/本地执行.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../img/ask_question/api_question/本地执行.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>在 Chrome 浏览器上访问【chrome://settings/】后，点击【隐私和安全-网站设置-更多内容设置-不安全内容-允许显示不安全内容-添加】</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/IP%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BE%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/IP%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BE%E7%BD%AE.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/ask_question/api_question/IP%E4%B8%8D%E5%AE%89%E5%85%A8%E5%86%85%E5%AE%B9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/IP%E4%B8%8D%E5%AE%89%E5%85%A8%E5%86%85%E5%AE%B9.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>添加 MeterSphere 平台域名后，点击小三角后，在"不安全内容"处设置"允许"</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/IP%E6%B7%BB%E5%8A%A0%E8%BF%90%E8%A1%8C%E5%9F%9F%E5%90%8D.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/IP%E6%B7%BB%E5%8A%A0%E8%BF%90%E8%A1%8C%E5%9F%9F%E5%90%8D.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/ask_question/api_question/%E4%B8%8D%E5%AE%89%E5%85%A8%E5%86%85%E5%AE%B9%E5%85%81%E8%AE%B8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/%E4%B8%8D%E5%AE%89%E5%85%A8%E5%86%85%E5%AE%B9%E5%85%81%E8%AE%B8.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>若是 Edge 浏览器，则输入【edge://settings】后，搜索【不安全内容】后，点击不安全内容，添加 MeterSphere 平台域名即可</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/Edge%E4%B8%8D%E5%AE%89%E5%85%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/Edge%E4%B8%8D%E5%AE%89%E5%85%A8.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/ask_question/api_question/Edge%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/Edge%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>点击【检测并保存】即可检测通过</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/IP%E6%A3%80%E6%B5%8B%E9%80%9A%E8%BF%87.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/IP%E6%A3%80%E6%B5%8B%E9%80%9A%E8%BF%87.png" width="900px" /></a></p>
 
 
 
