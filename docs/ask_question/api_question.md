@@ -92,8 +92,12 @@
 ![接口测试](../img/ask_question/api_question/本地执行localhost.png){ width="900px" }
 
 !!! ms-abstract ""
-    在浏览器上访问【chrome://flags/#block-insecure-private-network-requests】将该项设置为【disabled】，重启浏览器即可
+    在 Chrome 浏览器上访问【chrome://flags/#block-insecure-private-network-requests】将该项设置为【disabled】，重启浏览器即可
 ![接口测试](../img/ask_question/api_question/localhost设置.png){ width="900px" }
+
+!!! ms-abstract ""
+    若是 Edge 浏览器，则输入【edge://flags】后，搜索【block-insecure-private-network-requests】将其设置【disabled】
+![接口测试](../img/ask_question/api_question/Edge浏览器.png){ width="900px" }
 
 !!! ms-abstract ""
     点击【检测并保存】即可检测通过
@@ -104,7 +108,7 @@
 ![接口测试](../img/ask_question/api_question/本地执行.png){ width="900px" }
 
 !!! ms-abstract ""
-    在浏览器上访问【chrome://settings/】后，点击【隐私和安全-网站设置-更多内容设置-不安全内容-允许显示不安全内容-添加】
+    在 Chrome 浏览器上访问【chrome://settings/】后，点击【隐私和安全-网站设置-更多内容设置-不安全内容-允许显示不安全内容-添加】
 ![接口测试](../img/ask_question/api_question/IP浏览器设置.png){ width="900px" }
     
 ![接口测试](../img/ask_question/api_question/IP不安全内容.png){ width="900px" }
@@ -114,6 +118,12 @@
 ![接口测试](../img/ask_question/api_question/IP添加运行域名.png){ width="900px" }
 
 ![接口测试](../img/ask_question/api_question/不安全内容允许.png){ width="900px" }
+
+!!! ms-abstract ""
+    若是 Edge 浏览器，则输入【edge://settings】后，搜索【不安全内容】后，点击不安全内容，添加 MeterSphere 平台域名即可
+![接口测试](../img/ask_question/api_question/Edge不安全.png){ width="900px" }
+
+![接口测试](../img/ask_question/api_question/Edge添加域名.png){ width="900px" }
 
 !!! ms-abstract ""
     点击【检测并保存】即可检测通过
