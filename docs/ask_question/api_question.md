@@ -26,7 +26,7 @@
     pip install pinyin
     ```
     
-    配置 task-runner 的目录挂载 /root/.venv/lib/python3.10/site-packages:/usr/local/lib/python3.10/sist-packages
+    配置 task-runner 的目录挂载 /root/.venv/lib/python3.10/site-packages:/usr/local/lib/python3.10/site-packages
 
     ![接口测试](../img/ask_question/api_question/task_runner_volumn.png){ width="900px" }
     
