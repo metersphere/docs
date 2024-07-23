@@ -92,6 +92,7 @@ nav:
               - 概述: user_manual/x-pack/intro.md
               - 组织: user_manual/x-pack/organization.md
               - 自定义主题: user_manual/x-pack/custom_theme.md
+              - 单点认证: user_manual/x-pack/single_sign.md
               - 消息模板: user_manual/x-pack/message.md
               - 资源池: user_manual/x-pack/controller.md
     - 插件列表: plugin.md
