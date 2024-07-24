@@ -2701,7 +2701,8 @@ server {
 <h2 id="8">8 离线升级<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意</p>
-<p>升级前务必检查磁盘容量是否充足，并关闭正在运行的定时任务，避免在升级过程因执行定时任务造成数据损坏。然后再对数据库进行备份，详细操作请参考 <a href="../backup_data/">MeterSphere 数据备份</a>。</p>
+<p>【特别注意事项】：由于v3版本产品定位发生了变化，不支持从 v1.x 和 v2.x 版本升级到 v3.x。本文档离线升级操作仅适用于v3.x系列升级。</br>
+升级前务必检查磁盘容量是否充足，并关闭正在运行的定时任务，避免在升级过程因执行定时任务造成数据损坏。然后再对数据库进行备份，详细操作请参考 <a href="../backup_data/">MeterSphere 数据备份</a>。</p>
 <div class="highlight"><pre><span></span><code># 进入数据库
 docker exec -it mysql sh
 mysql -uroot -pPassword123@mysql
