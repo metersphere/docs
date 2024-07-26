@@ -14,7 +14,11 @@
 
 ## 2 认证登录
 !!! ms-abstract ""
-    点击【系统-系统参数-认证设置-添加认证】进入认证配置页面。
+    点击【系统-系统参数-认证设置-添加认证】进入认证配置页面，支持【CAS】、【OIDC】、【OAUTH2】、【LDAP】多种类型认证。
+![!资源池列表页面](../../img/X-Pack/single_sign/认证配置图.png){ width="900px" }
+
+!!! ms-abstract ""
+    以 LDAP 登录为例，配置 LDAP 地址、绑定 DN、填写密码、用户 OU、用户过滤器、LDAP 属性映射等信息内容后，点击【测试连接】，连接通过后点击【保存】即可。
 ![!资源池列表页面](../../img/X-Pack/single_sign/ldap配置图.png){ width="900px" }
 
 !!! ms-abstract "字段"
