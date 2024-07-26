@@ -43,7 +43,7 @@
 !!! ms-abstract "注意" 
     支持 Swagger 3.0 版本的 json 文件，2.0 的文件建议自行在 [Swagger 官网](https://converter.swagger.io/) 转换成 3.0 再进行导入，大小不超过 50M。
 
-### 2.2 定时导入
+### 2.3 定时导入
 !!! ms-abstract "" 
     按照序号顺序，点击【定时导入】，输入任务名称、Swagger 的 JSON URL 地址、所属模块、导入模式、同步频率，点击导入。
 ![!定时导入](../../img/api_test/definition/定时导入.png){ width="900px" }	
@@ -54,6 +54,10 @@
 
 !!! ms-abstract "" 
     在 [任务中心](../general.md#62) 处也可以查看定时导入 API 的任务列表。
+
+### 2.4 IDEA 插件导入
+!!! ms-abstract ""
+    在 IDEA 工具安装插件，即可推送接口到平台，详细参考 [接口推送](https://kb.fit2cloud.com/?p=08e64011-725f-4546-86e0-8d1f88c72926) 。
 
 ## 3 API 预览
 ### 3.1 详情
