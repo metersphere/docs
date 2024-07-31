@@ -11,7 +11,7 @@
     通过 docker run 命令一键安装 metersphere：
 
     ```
-    docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data metersphere/metersphere-ce-allinone
+    docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data cr2.fit2cloud.com/metersphere/metersphere-ce-allinone
     ```
 
     安装成功后，通过浏览器访问如下页面登录 MeterSphere。<br>
