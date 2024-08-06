@@ -23,7 +23,7 @@
 
 ## 2 同步缺陷
 !!! ms-abstract ""
-    【自动同步】根据在【项目管理-项目与权限-应用设置-缺陷管理】处配置的内容生效。详情参考：[自动同步配置](../project_management/project_permissions.md#21)
+    【自动同步】根据在【项目管理-项目与权限-应用设置-缺陷管理】处配置的内容生效。详情参考：[自动同步配置](../project_management/project_permissions.md#22)
 ![!缺陷平台设置](../../img/defect_management/缺陷平台设置.png){ width="900px" }
 
 !!! ms-abstract ""
