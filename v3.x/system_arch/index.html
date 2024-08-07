@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Document">
+        <meta name="description" content="MeterSphere 一站式开源持续测试平台官方文档。MeterSphere 涵盖测试管理、接口测试、UI 测试和性能测试等功能，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队充分利用云弹性进行高度可 扩展的自动化测试，加速高质量的软件交付。">
       
       
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/docs/v3.x/plugin/">
+        <link rel="canonical" href="https://metersphere.io/docs/v3.x/system_arch/">
       
       
-        <link rel="prev" href="../user_manual/x-pack/controller/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../ask_question/api_question/">
+        <link rel="next" href="../installation/network_port/">
       
       
       <link rel="icon" href="../img/facio.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>插件列表 - MeterSphere 文档</title>
+        <title>系统架构 - MeterSphere 文档</title>
       
     
     
@@ -119,6 +119,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -270,7 +275,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              插件列表
+              系统架构
             
           </span>
         </div>
@@ -437,10 +442,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../system_arch/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    系统架构
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -449,6 +472,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 整体架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 管理模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 技术栈
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1977,17 +2045,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1996,7 +2057,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2239,6 +2299,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 整体架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 管理模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 技术栈
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2255,85 +2350,64 @@
   
 
 
-  <h1>插件列表</h1>
+  <h1>系统架构</h1>
 
+<h2 id="1">1 整体架构<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../img/system-arch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="整体架构" src="../img/system-arch.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p class="admonition-title"><a href="https://apps.fit2cloud.com/metersphere">下载请到插件应用市场</a></p>
+<p class="admonition-title">组件说明</p>
+<ul>
+<li><strong><a href="https://github.com/metersphere/metersphere">Frontend</a></strong>: MeterSphere 的前端工程, 基于 Vue.js 进行开发。</li>
+<li><strong><a href="https://github.com/metersphere/metersphere">Backend</a></strong>: MeterSphere 的后端工程, 基于 Spring Boot 进行开发, 为 MeterSphere 的功能主体。</li>
+<li><strong>[Chrome 浏览器插件]</strong>: Chrome 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试及性能测试。</li>
+<li><strong>[Jenkins 插件]</strong>: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口/性能测试进行触发执行。</li>
+<li><strong>[IDEA 插件]</strong>: IDEA 插件，基于javadoc解析，能够自动识别类，同步接口定义到 MeterSphere。</li>
+<li><strong>[Task Runner]</strong>: 所有执行任务统一交由 Task Runner 去调度 UI、接口、性能测试任务。</li>
+<li><strong>[Result Hub]</strong>: UI、接口、性能测试的执行结果由 Result Hub 处理。</li>
+<li><strong>MySQL</strong>: MeterSphere 项目的主要数据均存储在 MySQL。</li>
+<li><strong>Redis</strong>: MeterSphere 项目登录用户的Session存储在 Redis。</li>
+<li><strong>Kafka</strong>: 接收 Task Runner 产生的接口、UI、性能测试的结果数据。</li>
+<li><strong>Prometheus</strong>: 收集压力机及被测系统的监控数据。</li>
+<li><strong>Docker Engine</strong>: 为 Task Runner 提供 JMeter 容器运行环境。</li>
+</ul>
 </div>
-<table>
-    <tbody>
-        <tr>
-            <th width="2px">序号</th>
-            <th width="250px">插件名</th>
-            <th width="10px">插件类型</th>
-            <th width="10px">应用场景</th>
-            <th width="10px">授权类型</th> 
-            <th width="600px">描述</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>TCP 接口协议插件</td>
-            <td>协议拓展</td>
-            <td>接口测试</td>
-            <td>企业版</td>
-            <td>实现 TCP 协议的接口测试</td>
-        </tr> 
-        <tr>
-            <td>2</td>
-            <td>SSH 接口协议插件</td>
-            <td>协议拓展</td>
-            <td>接口测试</td>
-            <td>企业版</td>
-            <td>实现 SSH 协议的接口测试</td>
-        </tr> 
-         <tr>
-            <td>3</td>
-            <td>JIRA 对接插件</td>
-            <td>平台集成</td>
-            <td>测试管理</td>
-            <td>企业版</td>
-            <td>对接 JIRA 平台，实现需求的关联、缺陷的创建及双向同步</td>
-        </tr>
-         <tr>
-            <td>4</td>
-            <td>禅道对接插件</td>
-            <td>平台集成</td>
-            <td>测试管理</td>
-            <td>社区版</td>
-            <td>对接禅道平台，实现需求的关联、缺陷的创建及双向同步</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>TAPD 对接插件</td>
-            <td>平台集成</td>
-            <td>测试管理</td>
-            <td>社区版</td>
-            <td>对接 TAPD 平台，实现需求的关联、缺陷的创建及双向同步</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>IDEA 插件</td>
-            <td>API 导入</td>
-            <td>接口测试</td>
-            <td>社区版</td>
-            <td>将 HTTP 接口直接同步到 MeterSphere</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Jenkins 插件</td>
-            <td>持续集成</td>
-            <td>系统全局</td>
-            <td>社区版</td>
-            <td>可选择指定项目下的测试计划、接口、UI、性能测试触发执行</td>
-        </tr>
-    </tbody>
-</table>
+<div class="admonition ms-abstract">
+<p>各个组件间的关系可参考下图：<br></p>
+</div>
+<p><a class="glightbox" href="../img/components.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="组件说明" src="../img/components.png" width="900px" /></a></p>
+<h2 id="2">2 管理模型<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p>MeterSphere 提供了多租户、多角色的管理模型, 用户可根据所在团队的实际情况进行灵活的租户体系映射。</p>
+<ul>
+<li><strong>系统</strong>: 每个独立部署的 MeterSphere 即称为一套系统。</li>
+<li><strong>系统级角色</strong>: 角色的权限范围为整个系统, 常见的角色如系统管理员、系统成员, 可管理整个系统内的租户、用户及测试资源, 同时可变更修改系统级配置参数。</li>
+<li><strong>组织</strong>: MeterSphere 中的一级租户, 可映射为不同的部门或者产品线。</li>
+<li><strong>组织级角色</strong>: 角色的权限范围限定在某个组织当中, 常见的角色如组织管理员及组织成员, 可在组织中创建项目、发起测试、查看测试报告等。</li>
+<li><strong>项目</strong>: 以项目纬度管理各种类型测试数据，各个项目间数据隔离。</li>
+<li><strong>项目级角色</strong>: 角色的权限范围限定在某个项目当中, 常见的角色如项目管理员、项目成员，可在项目中创建、修改、执行测试计划、功能测试用例、接口测试用例、、UI 测试、性能测试用例、查看测试报告等。</li>
+<li><strong>自定义角色</strong>: 可创建不同所属类型的自定义角色，满足更多样化的团队管理及在线协作。</li>
+</ul>
+</div>
+<p><a class="glightbox" href="../img/management-model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="管理模型" src="../img/management-model.png" width="900px" /></a></p>
+<h2 id="3">3 技术栈<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<ul>
+<li>后端: <a href="https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm">Spring Boot</a></li>
+<li>前端: <a href="https://vuejs.org/">Vue.js</a></li>
+<li>中间件: <a href="https://www.mysql.com/">MySQL</a>, <a href="https://kafka.apache.org/">Kafka</a>, <a href="https://redis.io/">Redis</a>, <a href="https://min.io/">MinIO</a>, <a href="https://prometheus.io/">Prometheus</a></li>
+<li>基础设施: <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a></li>
+<li>测试引擎: <a href="https://jmeter.apache.org/">JMeter</a></li>
+</ul>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
