@@ -65,7 +65,7 @@
             <td>持续集成</td>
             <td>系统全局</td>
             <td>社区版</td>
-            <td>可选择指定项目下的测试计划、接口、UI、性能测试触发执行</td>
+            <td>实现在 Jenkins 流水线中触发并自动执行 MeteSphere 测试计划</td>
         </tr>
     </tbody>
 </table>
