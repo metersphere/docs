@@ -97,6 +97,7 @@ nav:
                   - 企业微信: user_manual/x-pack/work_weixin.md
                   - 钉钉: user_manual/x-pack/dingding.md
                   - 飞书: user_manual/x-pack/feishu.md
+                  - CAS: user_manual/x-pack/cas.md
               - 消息模板: user_manual/x-pack/message.md
               - 资源池: user_manual/x-pack/controller.md
     - 插件列表: plugin.md
