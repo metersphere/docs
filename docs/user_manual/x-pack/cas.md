@@ -5,10 +5,10 @@
 
 !!! ms-abstract "字段说明"
 
-    - 【服务端地址】cas 系统地址，格式为【http://cas系统url】
-    - 【登录地址】cas 系统的登录地址，格式为【http://cas系统url/login】
-    - 【回调地址】MeterSphere 的访问地址和/sso/callback/cas/\${authId} 进行拼接，格式为【http://metersphere系统url/sso/callback/cas/\${authId}】
-    - 【验证地址】cas 系统的验证地址，格式为【http://cas系统url/serviceValidate】
+    - 【服务端地址】cas 系统地址，格式为 `http://cas系统url`
+    - 【登录地址】cas 系统的登录地址，格式为 `http://cas系统url/login`
+    - 【回调地址】格式为 `http://MeterSphere 访问地址/sso/callback/cas/${authId}`
+    - 【验证地址】cas 系统的验证地址，格式为 `http://cas系统url/serviceValidate`
 
 ## 2 CAS 登录
 !!! ms-abstract ""
