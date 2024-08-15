@@ -11,9 +11,8 @@
   	- **[Task Runner]**: 所有执行任务统一交由 Task Runner 去调度接口测试任务。
   	- **[Result Hub]**: 接口测试的执行结果由 Result Hub 处理。
   	- **MySQL**: MeterSphere 项目的主要数据均存储在 MySQL。
-  	- **Redis**: MeterSphere 项目登录用户的 Session 存储在 Redis。
+  	- **Redis**: MeterSphere 登录用户的 Session 、权限、任务、分布式锁等信息存储在 Redis。
   	- **Kafka**: 接收 Task Runner 产生的接口测试的结果数据。
-  	- **Prometheus**: 收集压力机及被测系统的监控数据。
   	- **Docker Engine**: 为 MeterSphere 各个组件提供容器运行环境。
 
 !!! ms-abstract ""
