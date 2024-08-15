@@ -2475,12 +2475,13 @@
 <ul>
 <li><strong><a href="https://github.com/metersphere/metersphere">Frontend</a></strong>: MeterSphere 的前端工程, 基于 Vue.js 进行开发。</li>
 <li><strong><a href="https://github.com/metersphere/metersphere">Backend</a></strong>: MeterSphere 的后端工程, 基于 Spring Boot 进行开发, 为 MeterSphere 的功能主体。</li>
-<li><strong>[Chrome 浏览器插件]</strong>: Chrome 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试。</li>
-<li><strong>[Jenkins 插件]</strong>: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口测试进行触发执行。</li>
-<li><strong>[IDEA 插件]</strong>: IDEA 插件，基于javadoc解析，能够自动识别类，同步接口定义到 MeterSphere。</li>
-<li><strong>[Task Runner]</strong>: 所有执行任务统一交由 Task Runner 去调度接口测试任务。</li>
-<li><strong>[Result Hub]</strong>: 接口测试的执行结果由 Result Hub 处理。</li>
+<li><strong>Chrome 浏览器插件</strong>: Chrome 浏览器插件, 录制 Web 访问请求生成 JMeter 脚本并导入到 MeterSphere 中用于接口测试。</li>
+<li><strong>Jenkins 插件</strong>: Jenkins 插件，在 Jenkins 中安装该插件后可将 Jenkins 任务中添加 MeterSphere 构建环节，用户在该构建环节中配置 MeterSphere 平台的认证信息后，可选择指定项目下的接口测试进行触发执行。</li>
+<li><strong>IDEA 插件</strong>: IDEA 插件，基于javadoc解析，能够自动识别类，同步接口定义到 MeterSphere。</li>
+<li><strong>Task Runner</strong>: 所有执行任务统一交由 Task Runner 去调度接口测试任务。</li>
+<li><strong>Result Hub</strong>: 接口测试的执行结果由 Result Hub 处理。</li>
 <li><strong>MySQL</strong>: MeterSphere 项目的主要数据均存储在 MySQL。</li>
+<li><strong>Minio</strong>: MeterSphere 内置对象存储，用于存储插件及文件管理中上传的 jar csv 等文件。</li>
 <li><strong>Redis</strong>: MeterSphere 登录用户的 Session 、权限、任务、分布式锁等信息存储在 Redis。</li>
 <li><strong>Kafka</strong>: 接收 Task Runner 产生的接口测试的结果数据。</li>
 <li><strong>Docker Engine</strong>: 为 MeterSphere 各个组件提供容器运行环境。</li>
