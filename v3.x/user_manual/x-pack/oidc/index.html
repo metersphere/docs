@@ -12,9 +12,13 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/docs/v3.x/user_manual/x-pack/single_sign/">
+        <link rel="canonical" href="https://metersphere.io/docs/v3.x/user_manual/x-pack/oidc/">
       
       
+        <link rel="prev" href="../cas/">
+      
+      
+        <link rel="next" href="../oauth2/">
       
       
       <link rel="icon" href="../../../img/facio.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Single sign - MeterSphere 文档</title>
+        <title>OIDC - MeterSphere 文档</title>
       
     
     
@@ -117,7 +121,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-oidc" class="md-skip">
           跳转至
         </a>
       
@@ -271,7 +275,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Single sign
+              OIDC
             
           </span>
         </div>
@@ -776,8 +780,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -802,11 +808,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -820,7 +826,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             功能手册
@@ -1788,8 +1794,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1808,11 +1816,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" checked>
         
           
           <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
@@ -1826,7 +1834,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9">
             <span class="md-nav__icon md-icon"></span>
             X-Pack
@@ -1900,8 +1908,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1913,14 +1923,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_4" checked>
         
           
           <label class="md-nav__link" for="__nav_5_9_4" id="__nav_5_9_4_label" tabindex="0">
@@ -1934,7 +1950,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_9_4">
             <span class="md-nav__icon md-icon"></span>
             单点认证
@@ -2016,6 +2032,132 @@
   
   <span class="md-ellipsis">
     CAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OIDC
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    OIDC
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 OIDC 系统配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-metersphere-oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 MeterSphere 配置 OIDC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 OIDC 登录
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAUTH2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LDAP
   </span>
   
 
@@ -2355,18 +2497,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-oidc" class="md-nav__link">
     <span class="md-ellipsis">
-      1 扫码登录
+      1 OIDC 系统配置
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-metersphere-oidc" class="md-nav__link">
     <span class="md-ellipsis">
-      2 认证登录
+      2 MeterSphere 配置 OIDC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-oidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 OIDC 登录
     </span>
   </a>
   
@@ -2390,59 +2541,62 @@
   
 
 
-  <h1>Single sign</h1>
+  <h1>OIDC</h1>
 
-<h2 id="1">1 扫码登录<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h2 id="1-oidc">1 OIDC 系统配置<a class="headerlink" href="#1-oidc" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>点击【系统-系统参数-扫码登录】进入扫码登录配置页面。</p>
+<p>点击【Realm Setting】，输入名称后，点击【保存】。</p>
 </div>
-<p><a class="glightbox" href="../../../img/X-Pack/single_sign/%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E9%85%8D%E7%BD%AE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E9%85%8D%E7%BD%AE.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p>以企业微信为例，点击【添加】进入配置页面。</p>
+<p>点击【Client-Create】进入页面，填写 Client ID、Root URL 信息后，进行保存。</p>
 </div>
-<p><a class="glightbox" href="../../../img/X-Pack/single_sign/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E7%99%BB%E5%BD%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E7%99%BB%E5%BD%95.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E5%88%9B%E5%BB%BA.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E5%88%9B%E5%BB%BA.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/%E9%85%8D%E7%BD%AE%E5%9C%B0%E5%9D%80.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/%E9%85%8D%E7%BD%AE%E5%9C%B0%E5%9D%80.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p class="admonition-title">字段</p>
+<p>【Access Type】选择 confidential。</p>
+</div>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>点击【User】创建用户后，切到【Credentials】页面，关闭临时，并设置用户密码。</p>
+</div>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>点击【Realm Settings】后，切到【General】页面，点击【OpenID Endpoint Configuration】进入 openid-configuration 页面。</p>
+</div>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/%E7%82%B9%E5%87%BBOpenID.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/%E7%82%B9%E5%87%BBOpenID.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>留存此页面，用于 MeterSphere OIDC 配置参考。</p>
+</div>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/%E4%BF%A1%E6%81%AF%E9%A1%B5%E9%9D%A2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/%E4%BF%A1%E6%81%AF%E9%A1%B5%E9%9D%A2.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>点击【client-metersphere-Credentials】获取 Secret 值。</p>
+</div>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/secret%E9%A1%B5%E9%9D%A2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/secret%E9%A1%B5%E9%9D%A2.png" width="900px" /></a></p>
+<h2 id="2-metersphere-oidc">2 MeterSphere 配置 OIDC<a class="headerlink" href="#2-metersphere-oidc" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p>点击【系统设置-系统-系统参数-认证设置-添加认证-OIDC】填写认证信息，点击【添加】即可。</p>
+</div>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/MeterSphere%E9%85%8D%E7%BD%AE%E5%86%85%E5%AE%B9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/MeterSphere%E9%85%8D%E7%BD%AE%E5%86%85%E5%AE%B9.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">字段获取</p>
 <ul>
-<li>【企业 ID】登录企业微信管理后台页面，在【我的企业-企业信息-企业 ID】获取企业 ID</li>
-<li>【应用 ID/应用密钥】点击【应用管理-具体某应用-点击 API】可获取到 AgentId 和 Secret</li>
+<li>【授权端地址】对应 openid-configuration 页面 authorization_endpoint 参数</li>
+<li>【Token 端点地址】对应 openid-configuration 页面 token_endpoint 参数</li>
+<li>【用户信息端点地址】对应 openid-configuration 页面 token_endpoint 参数</li>
+<li>【回调地址】对应 openid-configuration 页面 userinfo_endpoint 参数</li>
+<li>【注销会话端地址】对应 openid-configuration 页面 end_session_endpoint 参数</li>
 </ul>
 </div>
-<h2 id="2">2 认证登录<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p>点击【系统-系统参数-认证设置-添加认证】进入认证配置页面，支持【CAS】、【OIDC】、【OAUTH2】、【LDAP】多种类型认证。</p>
-</div>
-<p><a class="glightbox" href="../../../img/X-Pack/single_sign/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE%E5%9B%BE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/%E8%AE%A4%E8%AF%81%E9%85%8D%E7%BD%AE%E5%9B%BE.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>以 LDAP 登录为例，配置 LDAP 地址、绑定 DN、填写密码、用户 OU、用户过滤器、LDAP 属性映射等信息内容后，点击【测试连接】，连接通过后点击【保存】即可。</p>
-</div>
-<p><a class="glightbox" href="../../../img/X-Pack/single_sign/ldap%E9%85%8D%E7%BD%AE%E5%9B%BE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/ldap%E9%85%8D%E7%BD%AE%E5%9B%BE.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p class="admonition-title">字段</p>
-<ul>
-<li>【LDAP 地址】ldap://ldapserver:389 或者 ldap://ldapserver:636</li>
-<li>【绑定 DN】cn=bindid,dc=company,dc=com</li>
-<li>【用户 OU】ou=people,dc=company,dc=com</li>
-<li>【用户过滤器】(sAMAccountName={0})</li>
-<li>【LDAP属性映射】{"username":"sAMAccountName","name":"sAMAccountName","email":"mail","phone":"telephoneNumber"}</li>
-</ul>
-</div>
-<div class="admonition ms-abstract">
-<p class="admonition-title">字段说明</p>
-<ul>
-<li>【OU】同级多OU用｜分割</li>
-<li>【用户过滤器】根据规则到 用户OU 里面去检索用户，可能的选项为 (uid={0}) 或 (sAMAccountName={0}) 或 (cn={0})</li>
-<li>【LDAP属性映射】{"username":"sAMAccountName","name":"sAMAccountName","email":"mail","phone":"telephoneNumber"}，username,name,email 三项不可修改删除, phone 属性可选</li>
-</ul>
-</div>
-<div class="admonition ms-abstract">
-<p>配置完成并启用后，在登录页面可以看到 LDAP 选项登录。</p>
-</div>
-<p><a class="glightbox" href="../../../img/X-Pack/single_sign/ldap%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/ldap%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>LDAP 可以进行编辑、禁用、删除操作。</p>
-</div>
-<p><a class="glightbox" href="../../../img/X-Pack/single_sign/Idap%E5%8A%9F%E8%83%BD%E6%93%8D%E4%BD%9C.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/Idap%E5%8A%9F%E8%83%BD%E6%93%8D%E4%BD%9C.png" width="900px" /></a></p>
+<h2 id="3-oidc">3 OIDC 登录<a class="headerlink" href="#3-oidc" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract"></div>
+<p>在 MeterSphere 登录页面，点击【OIDC】跳转 OIDC 登录页面进行登录。
+<a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E6%BA%90%E9%A1%B5%E9%9D%A2%E7%99%BB%E5%BD%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E6%BA%90%E9%A1%B5%E9%9D%A2%E7%99%BB%E5%BD%95.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E7%99%BB%E5%BD%95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E7%99%BB%E5%BD%95.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../../img/X-Pack/single_sign/oidc/oidc%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="!资源池列表页面" src="../../../img/X-Pack/single_sign/oidc/oidc%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png" width="900px" /></a></p>
 
 
 

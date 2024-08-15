@@ -18,7 +18,7 @@
         <link rel="prev" href="../feishu/">
       
       
-        <link rel="next" href="../message/">
+        <link rel="next" href="../oidc/">
       
       
       <link rel="icon" href="../../../img/facio.ico">
@@ -1923,6 +1923,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2084,6 +2090,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oidc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OIDC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAUTH2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LDAP
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2464,10 +2533,10 @@
 <div class="admonition ms-abstract">
 <p class="admonition-title">字段说明</p>
 <ul>
-<li>【服务端地址】cas 系统地址，格式为【<a href="http://cas系统url">http://cas系统url</a>】</li>
-<li>【登录地址】cas 系统的登录地址，格式为【<a href="http://cas系统url/login">http://cas系统url/login</a>】</li>
-<li>【回调地址】MeterSphere 的访问地址和/sso/callback/cas/${authId} 进行拼接，格式为【<a href="http://metersphere系统url/sso/callback/cas/">http://metersphere系统url/sso/callback/cas/</a>${authId}】</li>
-<li>【验证地址】cas 系统的验证地址，格式为【<a href="http://cas系统url/serviceValidate">http://cas系统url/serviceValidate</a>】</li>
+<li>【服务端地址】cas 系统地址，格式为 <code>http://cas系统url</code></li>
+<li>【登录地址】cas 系统的登录地址，格式为 <code>http://cas系统url/login</code></li>
+<li>【回调地址】格式为 <code>http://MeterSphere 访问地址/sso/callback/cas/${authId}</code></li>
+<li>【验证地址】cas 系统的验证地址，格式为 <code>http://cas系统url/serviceValidate</code></li>
 </ul>
 </div>
 <h2 id="2-cas">2 CAS 登录<a class="headerlink" href="#2-cas" title="Permanent link">&para;</a></h2>

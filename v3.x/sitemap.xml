@@ -281,17 +281,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/ldap/</loc>
+         <lastmod>2024-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/message/</loc>
          <lastmod>2024-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/organization/</loc>
+         <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/oauth2/</loc>
          <lastmod>2024-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/single_sign/</loc>
+         <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/oidc/</loc>
+         <lastmod>2024-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://metersphere.io/docs/v3.x/user_manual/x-pack/organization/</loc>
          <lastmod>2024-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
