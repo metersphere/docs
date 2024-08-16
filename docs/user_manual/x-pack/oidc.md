@@ -48,7 +48,7 @@
 
 ## 3 OIDC 登录
 !!! ms-abstract ""
-在 MeterSphere 登录页面，点击【OIDC】跳转 OIDC 登录页面进行登录。
+    在 MeterSphere 登录页面，点击【OIDC】跳转 OIDC 登录页面进行登录。
 ![!资源池列表页面](../../img/X-Pack/single_sign/oidc/oidc登录页面.png){ width="900px" }
 
 ![!资源池列表页面](../../img/X-Pack/single_sign/oidc/oidc源页面登录.png){ width="900px" }
