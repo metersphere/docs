@@ -24,9 +24,8 @@
 ## 2 了解更多
 !!! ms-abstract ""
 
-    - [获取《持续测试白皮书》](https://fit2cloud.com/whitepaper/metersphere-whitepaper_202309.pdf)
-
-[//]: # (    - [如何向团队介绍 MeterSphere？]&#40;https://fit2cloud.com/metersphere/download/introduce-metersphere_202306.pdf&#41;)
+[//]: # (    - [获取《持续测试白皮书》]&#40;https://fit2cloud.com/whitepaper/metersphere-whitepaper_202309.pdf&#41;)
+    - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202407.pdf)
     - [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
     - [MeterSphere 社区论坛](https://bbs.fit2cloud.com/c/ms/8)
     - [MeterSphere 培训和认证](https://edu.fit2cloud.com/index)
