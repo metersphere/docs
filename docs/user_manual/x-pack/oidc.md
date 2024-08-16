@@ -42,8 +42,8 @@
 
     - 【授权端地址】对应 openid-configuration 页面 authorization_endpoint 参数
     - 【Token 端点地址】对应 openid-configuration 页面 token_endpoint 参数
-    - 【用户信息端点地址】对应 openid-configuration 页面 token_endpoint 参数
-    - 【回调地址】对应 openid-configuration 页面 userinfo_endpoint 参数
+    - 【用户信息端点地址】对应 openid-configuration 页面 userinfo_endpoint 参数
+    - 【回调地址】格式为 `http://Metersphere 访问地址/sso/callback/oidc/${authId}`
     - 【注销会话端地址】对应 openid-configuration 页面 end_session_endpoint 参数
 
 ## 3 OIDC 登录
