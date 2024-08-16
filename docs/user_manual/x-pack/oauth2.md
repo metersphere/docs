@@ -8,7 +8,7 @@
 ![!资源池列表页面](../../img/X-Pack/single_sign/oauth2/获取凭证.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【系统设置-系统-系统参数-认证设置-添加认证-OIDC】填写认证信息，点击【添加】即可。
+    点击【系统设置-系统-系统参数-认证设置-添加认证-OAUTH2】填写认证信息，点击【添加】即可。
 ![!资源池列表页面](../../img/X-Pack/single_sign/oauth2/oauth2配置.png){ width="900px" }
 
 !!! ms-abstract "字段说明"
