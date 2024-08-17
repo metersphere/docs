@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -3467,7 +3467,17 @@ minio.secretKey=Password123@minio
 </code></pre></div>
 </div>
 <div class="admonition ms-abstract">
-<p>（3）项目打包<br></p>
+<p>（3）Redis 配置文件<br>
+MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/redisson.yml，请参考下列配置创建对应目录及配置文件。</p>
+<div class="highlight"><pre><span></span><code># Redis 配置
+singleServerConfig:
+password: Password123@redis
+address: &quot;redis://localhost:6379&quot;
+database: 1
+</code></pre></div>
+</div>
+<div class="admonition ms-abstract">
+<p>（4）项目打包<br></p>
 <p>在项目根目录下执行以下命令 <br>
 <div class="highlight"><pre><span></span><code>1. 依赖打包
 # parent pom 安装到本地仓库, sdk 也进行安装
