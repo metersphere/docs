@@ -169,7 +169,20 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract ""
 
-    （3）项目打包<br>
+    （3）Redis 配置文件<br>
+    MeterSphere 会默认加载该路径下的配置文件 /opt/metersphere/conf/redisson.yml，请参考下列配置创建对应目录及配置文件。
+
+    ```
+    # Redis 配置
+    singleServerConfig:
+    password: Password123@redis
+    address: "redis://localhost:6379"
+    database: 1
+    ```
+
+!!! ms-abstract ""
+
+    （4）项目打包<br>
 
     在项目根目录下执行以下命令 <br>
     ```
