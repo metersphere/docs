@@ -2275,16 +2275,25 @@
         <li class="md-nav__item">
   <a href="#1-python3" class="md-nav__link">
     <span class="md-ellipsis">
-      1 Python3 如何引用第三方依赖包？
+      1 离线包安装，如何引用 Python3 第三方依赖包？
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-python3" class="md-nav__link">
     <span class="md-ellipsis">
-      2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+      2 在线一键安装，如何引用 Python3 第三方依赖包？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
     </span>
   </a>
   
@@ -2486,16 +2495,25 @@
         <li class="md-nav__item">
   <a href="#1-python3" class="md-nav__link">
     <span class="md-ellipsis">
-      1 Python3 如何引用第三方依赖包？
+      1 离线包安装，如何引用 Python3 第三方依赖包？
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-python3" class="md-nav__link">
     <span class="md-ellipsis">
-      2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+      2 在线一键安装，如何引用 Python3 第三方依赖包？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
     </span>
   </a>
   
@@ -2521,7 +2539,7 @@
 
   <h1>接口测试</h1>
 
-<h2 id="1-python3">1 Python3 如何引用第三方依赖包？<a class="headerlink" href="#1-python3" title="Permanent link">&para;</a></h2>
+<h2 id="1-python3">1 离线包安装，如何引用 Python3 第三方依赖包？<a class="headerlink" href="#1-python3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意</p>
 <p>Python3 引用第三方依赖包有【挂载本地目录】 和【容器共享目录】两种方式，任选其中一种方式即可。</p>
@@ -2602,7 +2620,24 @@ services:
       - ms-network
 </code></pre></div></p>
 </div>
-<h2 id="2">2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h2 id="2-python3">2 在线一键安装，如何引用 Python3 第三方依赖包？<a class="headerlink" href="#2-python3" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p>宿主机的 Python3 环境已安装 requests 模块，执行 pip show requests 找到 Python3 环境的路径</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/python%E7%8E%AF%E5%A2%83%E8%B7%AF%E5%BE%84.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python%E7%8E%AF%E5%A2%83%E8%B7%AF%E5%BE%84.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<ul>
+<li>通过 docker run 命令一键安装 MeterSphere，需要添加 -v 参数，将宿主机 Python3 环境映射到容器内部</li>
+<li>执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages cr2.fit2cloud.com/metersphere/metersphere-ce-allinone】</li>
+</ul>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/python%E6%8C%82%E8%BD%BD%E8%B7%AF%E5%BE%84.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python%E6%8C%82%E8%BD%BD%E8%B7%AF%E5%BE%84.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>在【项目管理-公共脚本】处添加如下代码，进行测试，在执行结果页面，正常输出请求成功响应体。</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/python%E5%85%AC%E5%85%B1%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python%E5%85%AC%E5%85%B1%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/ask_question/api_question/python%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png" width="900px" /></a></p>
+<h2 id="3">3 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">配置 localhost 异常</p>
 <p>【个人执行-本地执行】配置 <a href="http://localhost:8000">http://localhost:8000</a>，页面报“网络异常，请检查您的网络连接是否正常”</p>
