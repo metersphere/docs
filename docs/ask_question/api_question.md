@@ -1,4 +1,4 @@
-## 1 Python3 如何引用第三方依赖包？
+## 1 离线包安装，如何引用 Python3 第三方依赖包？
 !!! ms-abstract "注意"
     Python3 引用第三方依赖包有【挂载本地目录】 和【容器共享目录】两种方式，任选其中一种方式即可。
 
@@ -85,8 +85,24 @@
         networks:
           - ms-network
     ```
+## 2 在线一键安装，如何引用 Python3 第三方依赖包？
+!!! ms-abstract ""
+    宿主机的 Python3 环境已安装 requests 模块，执行 pip show requests 找到 Python3 环境的路径
+![接口测试](../img/ask_question/api_question/python环境路径.png){ width="900px" }
 
-## 2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+!!! ms-abstract ""
+
+    - 通过 docker run 命令一键安装 MeterSphere，需要添加 -v 参数，将宿主机 Python3 环境映射到容器内部
+    - 执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages cr2.fit2cloud.com/metersphere/metersphere-ce-allinone】
+![接口测试](../img/ask_question/api_question/python挂载路径.png){ width="900px" }
+
+!!! ms-abstract ""
+    在【项目管理-公共脚本】处添加如下代码，进行测试，在执行结果页面，正常输出请求成功响应体。
+![接口测试](../img/ask_question/api_question/python公共脚本代码.png){ width="900px" }
+
+![接口测试](../img/ask_question/api_question/python代码测试成功.png){ width="900px" }
+
+## 3 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
 !!! ms-abstract "配置 localhost 异常"
     【个人执行-本地执行】配置 http://localhost:8000，页面报“网络异常，请检查您的网络连接是否正常”
 ![接口测试](../img/ask_question/api_question/本地执行localhost.png){ width="900px" }
