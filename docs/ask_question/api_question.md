@@ -145,3 +145,13 @@
 !!! ms-abstract ""
     点击【检测并保存】即可检测通过
 ![接口测试](../img/ask_question/api_question/IP检测通过.png){ width="900px" }
+
+## 4 资源池无法访问当前站点
+!!! ms-abstract ""
+    【接口测试】执行请求时，页面提示"资源池无法访问当前站点"
+![接口测试](../img/ask_question/api_question/资源池无法访问当前站点.png){ width="900px" }
+
+!!! ms-abstract ""
+    【系统设置-系统-资源池】编辑页面，工作节点 URL 填写为 MeterSphere 服务地址，该地址与 task-runner 容器服务之间网络要通。
+![接口测试](../img/ask_question/api_question/配置当前站点.png){ width="900px" }
+
