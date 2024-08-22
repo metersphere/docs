@@ -57,6 +57,17 @@
     点击【接口测试】，设置测试报告保留的时间范围、报告链接有效期、接口执行的资源池、误报规则等内容。
 ![!接口测试](../../img/project_management/project_permissions/接口测试.png){ width="900px" }
 
+!!! ms-abstract "注意"
+    开源版只有一个默认资源池，企业版可以添加多个资源池
+    
+!!! ms-abstract ""
+    先在【系统-资源池】处新增资源池，再【系统-组织与项目-项目】的编辑页面，添加资源池，此处【执行资源池】下拉选择资源池。
+![!接口测试](../../img/project_management/project_permissions/系统新增资源池.png){ width="900px" }
+
+![!接口测试](../../img/project_management/project_permissions/项目处新增资源池.png){ width="900px" }
+
+![!接口测试](../../img/project_management/project_permissions/下拉选择资源池.png){ width="900px" }
+
 !!! ms-abstract ""
     点击【误报规则】，进入新增规则页面。
 ![!接口测试](../../img/project_management/project_permissions/误报规则.png){ width="900px" }
@@ -75,12 +86,12 @@
 
 ## 3 成员
 !!! ms-abstract ""
-    点击【成员】，进入成员操作页面。
-![!成员](../../img/project_management/project_permissions/成员.png){ width="900px" }
+    点击【成员-添加成员】打开添加成员弹窗，选择成员和对应用户组，点击【保存】即可。
+![!新增成员](../../img/project_management/project_permissions/新增成员.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【添加成员】打开添加成员弹窗，选择成员和对应用户组，点击【保存】即可。
-![!新增成员](../../img/project_management/project_permissions/新增成员.png){ width="900px" }
+    如下图，即可给用户添加用户组。
+![!成员](../../img/project_management/project_permissions/添加成员用户组.png){ width="900px" }
 
 !!! ms-abstract ""
     点击【设置】进入表格设置页面，可对列表模式、每页显示数量、表头等内容进行设置。
