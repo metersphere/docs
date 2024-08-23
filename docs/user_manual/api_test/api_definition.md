@@ -103,14 +103,31 @@
     点击【ID】查看用例详细信息。
 ![!详情](../../img/api_test/definition/用例详情1.png){ width="900px" }	
 
-![!详情](../../img/api_test/definition/用例详情2.png){ width="900px" }	
+![!详情](../../img/api_test/definition/用例详情2.png){ width="900px" }
 
-### 6.2 引用关系
+### 6.2 同步更新
+!!! ms-abstract ""
+    API 的请求头、请求体、Query、REST 等内容发生变更，修改后点击【保存】
+![!引用关系](../../img/api_test/definition/api更新.png){ width="900px" }
+
+!!! ms-abstract ""
+    切到【用例】页面，该 case 右侧会有同步变更提示
+![!引用关系](../../img/api_test/definition/case提示.png){ width="900px" }
+
+!!! ms-abstract ""
+    进入【接口与用例差异对比】页面看到具体变更内容，点击【同步】后，跳转到【用例更新】页面，点击【更新】即可同步更新成功。
+![!引用关系](../../img/api_test/definition/case变更内容页面.png){ width="900px" }
+
+![!引用关系](../../img/api_test/definition/case用例进行更新.png){ width="900px" }
+
+![!引用关系](../../img/api_test/definition/case更新成功.png){ width="900px" }
+
+### 6.3 引用关系
 !!! ms-abstract "" 
     查看引用该用例的场景。
 ![!引用关系](../../img/api_test/definition/用例引用关系.png){ width="900px" }
 
-### 6.3 执行历史
+### 6.4 执行历史
 !!! ms-abstract "" 
     查看该用例的执行历史，在执行历史列表操作列点击【执行结果】查看执行结果详情。
 ![!执行历史](../../img/api_test/definition/用例执行历史1.png){ width="900px" }
@@ -125,7 +142,7 @@
     选择过滤条件快捷搜索执行历史报告。
 ![!执行历史](../../img/api_test/definition/用例执行历史4.png){ width="900px" }
 
-### 6.4 变更历史
+### 6.5 变更历史
 !!! ms-abstract "" 
     查看该用例的变更历史。
 ![!变更历史](../../img/api_test/definition/用例变更历史.png){ width="900px" }
