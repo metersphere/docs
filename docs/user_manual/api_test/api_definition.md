@@ -195,6 +195,9 @@
 ![!API/CASE 列表](../../img/api_test/definition/MOCK列表.png){ width="900px" }
 
 ## 9 切换协议
+!!! ms-abstract "注意"
+    系统内置 HTTP 协议，其他协议需要在【系统设置-系统-插件】上传协议插件，具体参考：[接口协议插件](../../system_management/system/#72)。
+
 !!! ms-abstract "" 
     点击具体协议名称，如 HTTP，切换到对应协议的 API/CASE 列表页面，进行相关接口定义、调试、创建用例等操作。
 ![!切换协议](../../img/api_test/definition/切换协议.png){ width="900px" }	
