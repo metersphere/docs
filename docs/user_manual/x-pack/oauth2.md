@@ -1,4 +1,4 @@
-## 1 OAUTH2 配置
+## 1 OAuth2.0 配置
 !!! ms-abstract ""
     使用 GitHub 平台作为 OAuth2.0 配置环境，进入 [创建应用](https://github.com/settings/applications/new) 页面，填写信息进行创建应用。
 ![!资源池列表页面](../../img/X-Pack/single_sign/oauth2/oauth2应用.png){ width="900px" }
