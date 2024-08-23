@@ -57,7 +57,7 @@
             <td>API 导入</td>
             <td>接口测试</td>
             <td>社区版</td>
-            <td>将 HTTP 接口直接同步到 MeterSphere</td>
+            <td>支持 API 本地调试以及将 API 同步到 MeterSphere</td>
         </tr>
         <tr>
             <td>7</td>
@@ -66,6 +66,30 @@
             <td>系统全局</td>
             <td>社区版</td>
             <td>实现在 Jenkins 流水线中触发并自动执行 MeteSphere 测试计划</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Redis 协议插件</td>
+            <td>协议拓展</td>
+            <td>接口测试</td>
+            <td>企业版</td>
+            <td>实现 Redis 的基本操作</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Oracle 数据库驱动</td>
+            <td>协议拓展</td>
+            <td>接口测试</td>
+            <td>社区版</td>
+            <td>实现 Oracle 数据库的 SQL 操作</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>SQL Server 数据库驱动</td>
+            <td>协议拓展</td>
+            <td>接口测试</td>
+            <td>社区版</td>
+            <td>实现 SQL Server 数据库的 SQL 操作</td>
         </tr>
     </tbody>
 </table>
