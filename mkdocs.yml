@@ -99,7 +99,7 @@ nav:
                   - 飞书: user_manual/x-pack/feishu.md
                   - CAS: user_manual/x-pack/cas.md
                   - OIDC: user_manual/x-pack/oidc.md
-                  - OAUTH2: user_manual/x-pack/oauth2.md
+                  - OAuth2.0: user_manual/x-pack/oauth2.md
                   - LDAP: user_manual/x-pack/ldap.md
               - 消息模板: user_manual/x-pack/message.md
               - 资源池: user_manual/x-pack/controller.md
