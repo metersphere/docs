@@ -12,33 +12,33 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/docs/v3.x/user_manual/system_management/intro/">
+        <link rel="canonical" href="https://metersphere.io/docs/v3.x/ask_question/install_question/">
       
       
-        <link rel="prev" href="../../defect_management/defect_management/">
+        <link rel="prev" href="../../plugin/">
       
       
-        <link rel="next" href="../system/">
+        <link rel="next" href="../api_question/">
       
       
-      <link rel="icon" href="../../../img/facio.ico">
+      <link rel="icon" href="../../img/facio.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
-        <title>概述 - MeterSphere 文档</title>
+        <title>安装部署 - MeterSphere 文档</title>
       
     
     
-<link rel="stylesheet" href="../../../css/lightgallery.min.css">
+<link rel="stylesheet" href="../../css/lightgallery.min.css">
 
-<link href="../../../css/f2c-header.css" rel="stylesheet" type="text/css" />
+<link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,12 +50,12 @@
 
       
     
-<script src="../../../js/lightgallery.min.js"></script>
+<script src="../../js/lightgallery.min.js"></script>
 
-<script src="../../../js/jquery-3.5.1.min.js"></script>
-<script src="../../../js/bootstrap.bundle.min.js"></script>
-<script src="../../../js/mega.js"></script>
-<script src="../../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script src="../../js/mega.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 <script
         async
@@ -74,9 +74,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -93,7 +93,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -102,7 +102,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -119,6 +119,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#1-kafka" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -159,7 +164,7 @@
         <div class="mega-nav-banner">
             <div class="container">
                 <div class="mega-nav-banner-item">
-                    <a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img src="../../../img/logo/logo-light-FIT2CLOUD.svg" alt="FIT2CLOUD Logo" /></a>
+                    <a class="mega-nav-banner-logo" href="https://www.fit2cloud.com/"><img src="../../img/logo/logo-light-FIT2CLOUD.svg" alt="FIT2CLOUD Logo" /></a>
                 </div>
                 <div class="mega-nav-banner-item">
                     <p class="mega-nav-tagline">
@@ -195,7 +200,7 @@
                                                 <div class="card-body card-item">
                                                     <h5 style="color: #000000">运维审计</h5>
                                                     <div class="mb-4">
-                                                        <img src="../../../img/logo/banner-nav-JumpServer.svg" alt="JumpServer Logo">
+                                                        <img src="../../img/logo/banner-nav-JumpServer.svg" alt="JumpServer Logo">
                                                         <p class="text-muted mb-2 pl-0 pr-0" style="font-size: 14px;">
                                                             广受欢迎的开源堡垒机</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/jumpserver/jumpserver?style=social">
@@ -210,7 +215,7 @@
                                                 <div class="card-body card-item">
                                                     <h5 style="color: #000000">BI 分析</h5>
                                                     <div class="mb-4">
-                                                        <img src="../../../img/logo/banner-nav-DataEase.svg" alt="DataEase Logo">
+                                                        <img src="../../img/logo/banner-nav-DataEase.svg" alt="DataEase Logo">
                                                         <p class="text-muted mb-2 pl-0 pr-0" style="font-size: 14px;">
                                                             人人可用的开源数据可视化分析工具</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/dataease/dataease?style=social">
@@ -225,7 +230,7 @@
                                                 <div class="card-body card-item">
                                                     <h5 style="color: #000000">软件测试</h5>
                                                     <div class="mb-4">
-                                                        <img src="../../../img/logo/banner-nav-MeterSphere.svg" alt="MeterSphere Logo">
+                                                        <img src="../../img/logo/banner-nav-MeterSphere.svg" alt="MeterSphere Logo">
                                                         <p class="text-muted mb-2 pl-0 pr-0" style="font-size: 14px;">
                                                             一站式开源持续测试平台</p>
                                                         <img alt="GitHub stars" src="https://img.shields.io/github/stars/metersphere/metersphere?style=social">
@@ -251,9 +256,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="MeterSphere 文档" class="md-header__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
+    <a href="../.." title="MeterSphere 文档" class="md-header__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
       
-  <img src="../../../img/logo-white.png" alt="logo">
+  <img src="../../img/logo-white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -270,7 +275,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              安装部署
             
           </span>
         </div>
@@ -391,9 +396,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="MeterSphere 文档" class="md-nav__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
+    <a href="../.." title="MeterSphere 文档" class="md-nav__button md-logo" aria-label="MeterSphere 文档" data-md-component="logo">
       
-  <img src="../../../img/logo-white.png" alt="logo">
+  <img src="../../img/logo-white.png" alt="logo">
 
     </a>
     MeterSphere 文档
@@ -420,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../system_arch/" class="md-nav__link">
+      <a href="../../system_arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/network_port/" class="md-nav__link">
+      <a href="../../installation/network_port/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/offline_installation/" class="md-nav__link">
+      <a href="../../installation/offline_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/online_installation/" class="md-nav__link">
+      <a href="../../installation/online_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/1Panel/" class="md-nav__link">
+      <a href="../../installation/1Panel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -597,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/offline_installation_windows/" class="md-nav__link">
+      <a href="../../installation/offline_installation_windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/task_runner/" class="md-nav__link">
+      <a href="../../installation/task_runner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/backup_data/" class="md-nav__link">
+      <a href="../../installation/backup_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/cli/" class="md-nav__link">
+      <a href="../../installation/cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../quick_start/test_case/" class="md-nav__link">
+      <a href="../../quick_start/test_case/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../quick_start/api_test/" class="md-nav__link">
+      <a href="../../quick_start/api_test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,10 +780,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -803,11 +806,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -821,7 +824,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             功能手册
@@ -835,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general/" class="md-nav__link">
+      <a href="../../user_manual/general/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/overview/" class="md-nav__link">
+      <a href="../../user_manual/project_management/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/project_permissions/" class="md-nav__link">
+      <a href="../../user_manual/project_management/project_permissions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/template_management/" class="md-nav__link">
+      <a href="../../user_manual/project_management/template_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/file_management/" class="md-nav__link">
+      <a href="../../user_manual/project_management/file_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/message_management/" class="md-nav__link">
+      <a href="../../user_manual/project_management/message_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/public_script/" class="md-nav__link">
+      <a href="../../user_manual/project_management/public_script/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/environment/" class="md-nav__link">
+      <a href="../../user_manual/project_management/environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/log/" class="md-nav__link">
+      <a href="../../user_manual/project_management/log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test_plan/intro/" class="md-nav__link">
+      <a href="../../user_manual/test_plan/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1149,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test_plan/test_plan/" class="md-nav__link">
+      <a href="../../user_manual/test_plan/test_plan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1170,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test_plan/test_plan_report/" class="md-nav__link">
+      <a href="../../user_manual/test_plan/test_plan_report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test_case/intro/" class="md-nav__link">
+      <a href="../../user_manual/test_case/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test_case/test_case/" class="md-nav__link">
+      <a href="../../user_manual/test_case/test_case/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test_case/test_case_review/" class="md-nav__link">
+      <a href="../../user_manual/test_case/test_case_review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1364,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/intro/" class="md-nav__link">
+      <a href="../../user_manual/api_test/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1385,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/debug/" class="md-nav__link">
+      <a href="../../user_manual/api_test/debug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1406,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/api_definition/" class="md-nav__link">
+      <a href="../../user_manual/api_test/api_definition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1427,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/request_params/" class="md-nav__link">
+      <a href="../../user_manual/api_test/request_params/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1448,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/api_automation/" class="md-nav__link">
+      <a href="../../user_manual/api_test/api_automation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1469,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/functions/" class="md-nav__link">
+      <a href="../../user_manual/api_test/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api_test/test_report/" class="md-nav__link">
+      <a href="../../user_manual/api_test/test_report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1560,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../defect_management/overview/" class="md-nav__link">
+      <a href="../../user_manual/defect_management/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../defect_management/defect_management/" class="md-nav__link">
+      <a href="../../user_manual/defect_management/defect_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,10 +1610,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1623,11 +1624,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
         
           
           <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
@@ -1641,7 +1642,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             系统设置
@@ -1652,17 +1653,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../user_manual/system_management/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1671,7 +1665,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1684,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system/" class="md-nav__link">
+      <a href="../../user_manual/system_management/system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1705,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../organization/" class="md-nav__link">
+      <a href="../../user_manual/system_management/organization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1773,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../personal_center/information/" class="md-nav__link">
+      <a href="../../user_manual/personal_center/information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/intro/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/organization/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/organization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/custom_theme/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/custom_theme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1965,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/work_weixin/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/work_weixin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1986,7 +1979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/dingding/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/dingding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2007,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/feishu/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/feishu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2028,7 +2021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/cas/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/cas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2049,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/oidc/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/oidc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2070,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/oauth2/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/oauth2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2091,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/ldap/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/ldap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/message/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2141,7 +2134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../x-pack/controller/" class="md-nav__link">
+      <a href="../../user_manual/x-pack/controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2177,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plugin/" class="md-nav__link">
+      <a href="../../plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2194,8 +2187,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -2206,11 +2201,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -2224,7 +2219,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             常见问题
@@ -2235,10 +2230,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../ask_question/install_question/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    安装部署
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2247,6 +2260,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 kafka 服务无法启动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 mysql 服务无法启动
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2259,7 +2308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ask_question/api_question/" class="md-nav__link">
+      <a href="../api_question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2330,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_manual/dev_manual/" class="md-nav__link">
+      <a href="../../dev_manual/dev_manual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2351,7 +2400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_manual/api_plugin_dev/" class="md-nav__link">
+      <a href="../../dev_manual/api_plugin_dev/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2372,7 +2421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dev_manual/platform_plugin_dev/" class="md-nav__link">
+      <a href="../../dev_manual/platform_plugin_dev/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2400,7 +2449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/changelog/" class="md-nav__link">
+      <a href="../../about/changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2420,7 +2469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/contact/" class="md-nav__link">
+      <a href="../../about/contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2451,6 +2500,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 kafka 服务无法启动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 mysql 服务无法启动
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2467,15 +2542,38 @@
   
 
 
-  <h1>概述</h1>
+  <h1>安装部署</h1>
 
+<h2 id="1-kafka">1 kafka 服务无法启动<a class="headerlink" href="#1-kafka" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>系统设置模块为不同角色的用户提供管理配置功能，包括：<br></p>
-<ul>
-<li><strong>系统</strong>：系统级别的管理配置功能，包含整个系统的用户、用户组、组织与项目，系统参数，资源池、日志，任务中心、插件管理等全局配置功能，具有【系统管理员】角色的用户可查看和编辑系统设置。<br></li>
-<li><strong>组织</strong>：组织级别的管理配置功能，开源版默认只可使用一个组织。可对组织成员、用户组、项目、服务集成、模板、日志、任务中心等模块配置管理，具有【组织管理员】角色的用户可以查看和编辑组织设置。</li>
-</ul>
+<p class="admonition-title">问题现象</p>
+<p>kafka 服务起不来，docker logs kafka 看到日志里出现 "/opt/kafka/config/file not writable"</p>
 </div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/kafka%E8%B5%B7%E4%B8%8D%E6%9D%A5%E6%97%A5%E5%BF%97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/kafka%E8%B5%B7%E4%B8%8D%E6%9D%A5%E6%97%A5%E5%BF%97.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">解决方法</p>
+<p>升级 docker 版本即可。若服务器有网环境，执行</p>
+<div class="highlight"><pre><span></span><code>yum update
+yum install docker-ce docker-ce-cli containerd.io
+</code></pre></div>
+<p>若服务器没网，MeterSpher 离线安装包里有离线 docker，执行
+<div class="highlight"><pre><span></span><code>chmod +x docker/bin/*
+cp docker/bin/* /usr/bin/
+cp docker/service/docker.service /etc/systemd/system/
+chmod 754 /etc/systemd/system/docker.service
+service docker start
+</code></pre></div></p>
+</div>
+<h2 id="2-mysql">2 mysql 服务无法启动<a class="headerlink" href="#2-mysql" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题现象</p>
+<p>mysql 服务起不来，docker logs mysql 日志里出现 "Fatal glibc error: CPU does not support x86-64-v2"</p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">解决方法</p>
+<p>降低 mysql 的镜像版本。修改安装目录 <code>/opt/metersphere/docker-compose-mysql.yml</code> 里 mysql 的镜像版本号后，执行 msctl reload 即可。</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/%E9%99%8D%E4%BD%8Emysql%E7%89%88%E6%9C%AC.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/%E9%99%8D%E4%BD%8Emysql%E7%89%88%E6%9C%AC.png" width="900px" /></a></p>
 
 
 
@@ -2575,11 +2673,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
 <script>
