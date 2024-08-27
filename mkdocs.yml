@@ -105,6 +105,7 @@ nav:
               - 资源池: user_manual/x-pack/controller.md
     - 插件列表: plugin.md
     - 常见问题:
+        - 安装部署: ask_question/install_question.md
         - 接口测试: ask_question/api_question.md
     - 开发文档:
           - 开发环境搭建: dev_manual/dev_manual.md
