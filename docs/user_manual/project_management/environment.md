@@ -71,7 +71,7 @@
 !!! ms-abstract "数据源字段说明:"
 
     - **数据源名称**：自定义数据源名称。
-    - **驱动**：默认内置 MySQL 驱动，其他驱动需要在【系统设置-系统-插件】上传驱动包，下拉选项中自动显示。具体参考：[插件管理](../../system_management/system/#71)。
+    - **驱动**：数据库驱动可在 [应用市场](https://apps.fit2cloud.com/metersphere) 下载驱动包，在【系统设置-系统-插件】上传，下拉选项中自动显示，具体参考：[插件管理](../../system_management/system/#71)。
     - **数据库连接 URL**：常用数据库连接 URL 如下<br>
         - **MySQL**：jdbc:mysql://127.0.0.1:3306/database，若需要支持执行多条 SQL 语句 ，则连接地址为 jdbc:mysql://127.0.0.1:3306/database?allowMultiQueries=true
         - **Oracle**：jdbc:oracle:thin:@192.168.2.1:1521:database，12C 版本数据库连接地址为 jdbc:oracle:thin:@192.168.2.1:1521/database
