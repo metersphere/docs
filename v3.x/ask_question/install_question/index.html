@@ -2551,7 +2551,7 @@
 </div>
 <p><a class="glightbox" href="../../img/ask_question/api_question/kafka%E8%B5%B7%E4%B8%8D%E6%9D%A5%E6%97%A5%E5%BF%97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/kafka%E8%B5%B7%E4%B8%8D%E6%9D%A5%E6%97%A5%E5%BF%97.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p class="admonition-title">解决方法</p>
+<p class="admonition-title">解决方法1</p>
 <p>升级 docker 版本即可。若服务器有网环境，执行</p>
 <div class="highlight"><pre><span></span><code>yum update
 yum install docker-ce docker-ce-cli containerd.io
@@ -2564,6 +2564,11 @@ chmod 754 /etc/systemd/system/docker.service
 service docker start
 </code></pre></div></p>
 </div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">解决方法2</p>
+<p>若使用的是离线包自带的 docker 也出现该错误，可以在 <code>/opt/metersphere/docker-compose-kafka.yml</code> 里添加 privileged: true 参数后，执行 msctl reload 即可。</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/api_question/kafka%E7%9A%84yml%E6%B7%BB%E5%8A%A0%E7%89%B9%E6%9D%83.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/kafka%E7%9A%84yml%E6%B7%BB%E5%8A%A0%E7%89%B9%E6%9D%83.png" width="900px" /></a></p>
 <h2 id="2-mysql">2 mysql 服务无法启动<a class="headerlink" href="#2-mysql" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">问题现象</p>
