@@ -1,0 +1,15 @@
+!!! ms-abstract ""
+
+    - [课程简介 - MeterSphere 四大核心能力](https://www.bilibili.com/video/BV1Ab421J7K1/)
+    - [测试管理 - 基本概念](https://www.bilibili.com/video/BV1HM4m1y7FF/)
+    - [测试管理 - 创建和评审功能用例](https://www.bilibili.com/video/BV1iS411w7kA/)
+    - [测试管理 - 缺陷管理](https://www.bilibili.com/video/BV1Ty411v7AQ/)
+    - [测试管理 - 测试计划](https://www.bilibili.com/video/BV1Ry411i7FG/)
+    - [接口测试 - 工作流程](https://www.bilibili.com/video/BV1sr421K7e2/)
+    - [接口测试 - 接口测试](https://www.bilibili.com/video/BV1wf421B7ri/)
+    - [接口测试 - 接口定义与接口用例](https://www.bilibili.com/video/BV1kM4m1y7bh/)
+    - [接口测试 - 接口自动化](https://www.bilibili.com/video/BV1qi421h77w/)
+    - [团队协作 - 用户组与权限](https://www.bilibili.com/video/BV13b42177bw/)
+    - [团队协作 - 消息管理](https://www.bilibili.com/video/BV1yM4m1y7Nr/)
+    - [插件体系 - 对接 TCP 协议](https://www.bilibili.com/video/BV1Zw4m1k7o8/)
+    - [插件体系 - 对接 Redis 数据库](https://www.bilibili.com/video/BV1KS421d71f/)

@@ -104,6 +104,7 @@ nav:
               - 消息模板: user_manual/x-pack/message.md
               - 资源池: user_manual/x-pack/controller.md
     - 插件列表: plugin.md
+    - 教学视频: video_index.md
     - 常见问题:
         - 安装部署: ask_question/install_question.md
         - 接口测试: ask_question/api_question.md
