@@ -57,7 +57,7 @@
 
 ### 2.4 IDEA 插件导入
 !!! ms-abstract ""
-    在 IDEA 工具安装插件，即可推送接口到平台，详细参考 [接口推送](https://kb.fit2cloud.com/?p=08e64011-725f-4546-86e0-8d1f88c72926) 。
+    在 IDEA 中安装插件，即可一键将 API 同步到 MeterSphere，详细参考 [IDEA插件接口导入](https://kb.fit2cloud.com/?p=08e64011-725f-4546-86e0-8d1f88c72926) 。
 
 ## 3 API 预览
 ### 3.1 详情

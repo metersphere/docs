@@ -73,7 +73,7 @@
             <td>API 导入</td>
             <td>接口测试</td>
             <td>社区版</td>
-            <td>支持 API 本地调试以及将 API 同步到 MeterSphere</td>
+            <td>支持 API 本地调试和 同步 API 到 MeterSphere</td>
         </tr>
         <tr>
             <td>9</td>
