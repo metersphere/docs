@@ -154,6 +154,15 @@
 ### 2.6 脚本操作
 !!! ms-abstract ""
     【脚本操作】不再需要依赖于请求作为其子步骤，可以独立为场景步骤运行，使用方式与前后置脚本使用方式类似。详情参考：[前后置操作](request_params.md/#61)
+![!条件控制器](../../img/api_test/api_automation/场景里的脚步操作.png){ width="900px" }
+
+!!! ms-abstract ""
+    可以编写脚本，并对脚本进行断言。
+![!条件控制器](../../img/api_test/api_automation/场景里脚本操作代码.png){ width="900px" }
+
+!!! ms-abstract ""
+    【脚本断言】支持对响应码、响应头、响应体、响应时间、变量、脚本等多种形式进行断言。详情参考：[断言操作](request_params.md/#8)
+![!条件控制器](../../img/api_test/api_automation/对脚本进行断言.png){ width="900px" }
 
 ### 2.7 等待时间
 !!! ms-abstract ""
