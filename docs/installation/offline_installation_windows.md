@@ -34,7 +34,7 @@
 ![导入 OVA](../img/installation/windows/选择磁盘空间.png){ width="900px" }
 
 !!! ms-abstract ""
-	等待 MeterSphere 虚拟机完成导入。
+	等待虚拟机完成导入。
 ![导入 OVA](../img/installation/windows/等待完成OVA导入.png){ width="900px" }
 
 !!! ms-abstract ""
