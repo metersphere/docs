@@ -14,6 +14,21 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     - v1.20-lts：发布时间为 2022 年 4 月 27 日，目前仅进行必要的安全类 Bug 修复和严重 Bug 修复。
     - v2.10-lts：发布时间为 2023 年 5 月 25 日，每月发布小版本，持续进行 Bug 修复和部分功能的有限优化。
 
+## v2.10.19-lts
+
+------
+
+2024年8月26日
+
+!!! ms-abstract ""
+    💥💥 重要提醒 💥💥<br>
+    2.10 LTS 在架构上和 1.20 LTS 有很大变化，请务必升级前进行备份，并详细查阅此文档：[1.20 lts至2.10 lts升级指南](https://kb.fit2cloud.com/?p=9a46f075-5cfe-46de-81f8-ab5278699697)
+
+
+!!! ms-abstract "问题修复 :palm_tree:"
+
+    - fix: 修复阿里云扫描漏洞 Spring Framework ETags 解析拒绝服务漏洞（CVE-2024-38809）#32822
+
 ## v2.10.18-lts
 
 ------
