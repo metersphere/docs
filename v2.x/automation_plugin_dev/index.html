@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
     
     
       
@@ -3370,14 +3370,14 @@
 <h2 id="2">2 开发流程<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="21">2.1 项目初始化<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <div class="admonition ms-abstract">
-<p>初始化一个 maven 项目，并添加如下依赖。
+<p>初始化一个 maven 项目，并添加如下依赖。公共插件包依赖对应的代码仓库见：<a href="https://github.com/metersphere/metersphere-plugin-core">metersphere-plugin-core</a> 。
 <div class="highlight"><pre><span></span><code>&lt;!-- 省略开头 --&gt;
     &lt;dependencies&gt;
         &lt;!-- 公共插件包，定义了执行数据的基类和公共接口 --&gt;
         &lt;dependency&gt;
             &lt;groupId&gt;io.metersphere&lt;/groupId&gt;
             &lt;artifactId&gt;metersphere-plugin-core&lt;/artifactId&gt;
-            &lt;version&gt;1.0.1&lt;/version&gt;
+            &lt;version&gt;2.0&lt;/version&gt;
             &lt;scope&gt;provided&lt;/scope&gt;
         &lt;/dependency&gt;
         &lt;!-- 原始的 JMeter DummySampler 插件 --&gt;
@@ -3385,7 +3385,6 @@
             &lt;groupId&gt;kg.apc&lt;/groupId&gt;
             &lt;artifactId&gt;jmeter-plugins-dummy&lt;/artifactId&gt;
             &lt;version&gt;0.4&lt;/version&gt;
-            &lt;scope&gt;provided&lt;/scope&gt;
         &lt;/dependency&gt;
     &lt;/dependencies&gt;
 &lt;!-- 省略结尾 --&gt;
@@ -3528,7 +3527,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
