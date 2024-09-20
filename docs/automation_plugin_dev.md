@@ -9,7 +9,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ## 2 开发流程
 ### 2.1 项目初始化
 !!! ms-abstract ""
-    初始化一个 maven 项目，并添加如下依赖。
+    初始化一个 maven 项目，并添加如下依赖。公共插件包依赖对应的代码仓库见：[metersphere-plugin-core](https://github.com/metersphere/metersphere-plugin-core) 。
     ```pom.xml
     <!-- 省略开头 -->
         <dependencies>
@@ -17,7 +17,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
             <dependency>
                 <groupId>io.metersphere</groupId>
                 <artifactId>metersphere-plugin-core</artifactId>
-                <version>1.0.1</version>
+                <version>2.0</version>
                 <scope>provided</scope>
             </dependency>
             <!-- 原始的 JMeter DummySampler 插件 -->
@@ -25,7 +25,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
                 <groupId>kg.apc</groupId>
                 <artifactId>jmeter-plugins-dummy</artifactId>
                 <version>0.4</version>
-                <scope>provided</scope>
             </dependency>
         </dependencies>
     <!-- 省略结尾 -->
