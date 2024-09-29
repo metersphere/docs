@@ -2,7 +2,7 @@
 
 ## 1 新建接口
 !!! ms-abstract "" 
-    点击【新建】或者【＋】新建接口请求。
+    点击【新建接口】或者【＋】新建接口请求。
 ![!新建接口](../../img/api_test/definition/新建请求1.png){ width="900px" }
 
 !!! ms-abstract "" 
@@ -13,15 +13,14 @@
     - 参数介绍：请求头、请求体、Query、REST。详情参考：[参数介绍](../api_test/request_params.md)。
 	- 内置函数：请求体参数可选择内置 Mock 函数。详情参考：[内置函数](../api_test/functions.md)。
 
-!!! ms-abstract "" 
-    点击【+】新建响应内容，点击【...】复制、重命名、设为默认、删除响应信息。
-![!新建接口](../../img/api_test/definition/新建请求3.png){ width="900px" }
-
-
 ## 2 导入接口
 ### 2.1 文件导入
 !!! ms-abstract "" 
-    按照序号顺序，点击【导入接口】，选择导入模块、导入模式、上传文件后，点击导入。
+    点击【导入接口】，支持 Swagger、Postman、Har、Jmeter、MeterSphere 等多种数据格式导入
+![!文件导入](../../img/api_test/definition/支持多种格式导入.png){ width="900px" }
+
+!!! ms-abstract ""
+    以 Swagger 格式为例，导入模块、导入模式、上传文件后，点击导入。
 ![!文件导入](../../img/api_test/definition/文件导入.png){ width="900px" }	
 
 !!! ms-abstract "导入模式说明" 
