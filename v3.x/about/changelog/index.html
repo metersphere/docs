@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
     
     
       
@@ -35,7 +35,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.06209087.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2468,6 +2468,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v330" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.3.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v320" class="md-nav__link">
     <span class="md-ellipsis">
       v3.2.0
@@ -2567,6 +2576,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v330" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.3.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v320" class="md-nav__link">
     <span class="md-ellipsis">
       v3.2.0
@@ -2635,6 +2653,54 @@
 <li>2024 年 5 月 30 日：发布 v3.0 beta 版本；</li>
 <li>2024 年 6 月 27 日：发布 v3.0 正式版本；</li>
 <li>2024 年 12 月 26 日：发布 v3.6-lts LTS 版本。</li>
+</ul>
+</div>
+<h2 id="v330">v3.3.0<a class="headerlink" href="#v330" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2024年8月22日</p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">💥💥 重要提醒 💥💥</p>
+</div>
+<p>MeterSphere v3.0 产品定位发生变化，不再提供性能测试和 UI 测试相关的功能和能力，也不支持从 v1.x 和 v2.x 版本升级到 v3.0。</p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">新增功能 <img alt="🌟" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f31f.png" title=":star2:" /></p>
+<ul>
+<li>feat: 接口导入支持Postman、JMX、HAR、MeterSphere格式文件</li>
+<li>feat: 测试管理新增视图与高级搜索功能</li>
+<li>feat: 测试计划支持一键生成缺陷详情</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>refactor(测试计划): 测试计划的用例列表支持批量新建或关联缺陷；</li>
+<li>refactor(测试计划): 测试计划报告新增按“测试点”维度展示列表数据；</li>
+<li>refactor(测试计划): 测试计划报告新增搜索功能；</li>
+<li>refactor(测试计划): 思维导图模式下执行测试用例增加常用快捷键；</li>
+<li>refactor(测试计划): 测试报告支持导出为PDF格式文件；</li>
+<li>refactor(测试计划): 测试计划的测试规划功能支持快捷修改运行环境和资源池；</li>
+<li>refactor(测试用例): 测试用例关联需求交互优化；</li>
+<li>refactor(测试用例): 测试用例导入功能交互优化；</li>
+<li>refactor(测试用例): 测试用例思维导图模式增加常用快捷键；</li>
+<li>refactor(测试用例): 测试评审的用例列表新增视图与高级搜索功能；</li>
+<li>refactor(接口测试): 通过Swagger URL导入接口新增Token认证方式；</li>
+<li>refactor(接口测试): 导入cURL功能新增支持解析Charles和Fiddler工具的抓包请求；</li>
+<li>refactor(接口测试): 接口场景的自定义请求步骤支持导入cURL请求；</li>
+<li>refactor(接口测试): 接口定义列表新增视图与高级搜索功能；</li>
+<li>refactor(接口测试): 接口测试报告支持导出为PDF格式文件；</li>
+<li>refactor(系统设置): 给指定组织或项目添加成员时支持选择所属的用户组；</li>
+<li>refactor(系统设置): 系统参数新增“自定义上传文件大小限制”功能。</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">缺陷修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(测试计划): 修复消息模板没有测试报告链接配置的问题（#32335）；</li>
+<li>fix(测试计划): 修复接口测试用例取值不正确的问题（#32100）；</li>
+<li>fix(测试用例): 修复编辑模式为空时导入失败的问题（#32338）；</li>
+<li>fix(测试用例): 修复评审人为空的问题（#32332）；</li>
+<li>fix(接口测试): 修复swagger文件导入失败的问题（#32739）；</li>
+<li>fix(系统设置): 修复插件解析失败导致无法重新上传的问题（#31768）；</li>
 </ul>
 </div>
 <h2 id="v320">v3.2.0<a class="headerlink" href="#v320" title="Permanent link">&para;</a></h2>
@@ -2840,7 +2906,7 @@
     
     
 
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
       
     
 <script>
