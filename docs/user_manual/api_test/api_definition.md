@@ -16,7 +16,7 @@
 ## 2 导入接口
 ### 2.1 文件导入
 !!! ms-abstract "" 
-    点击【导入接口】，支持 Swagger、Postman、Har、Jmeter、MeterSphere 等多种数据格式导入
+    点击【导入接口】，支持 Swagger、Postman、Har、Jmeter、MeterSphere 等多种数据格式导入。
 ![!文件导入](../../img/api_test/definition/支持多种格式导入.png){ width="900px" }
 
 !!! ms-abstract ""
