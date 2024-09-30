@@ -80,6 +80,10 @@
 ![!测试计划](../../img/test_plan/plan/脑图模式执行.png){ width="900px" }
 
 !!! ms-abstract ""
+    支持使用快捷键执行测试用例，成功快捷键 S，失败快捷键 E，阻塞快捷键 B。
+![!测试计划](../../img/test_plan/plan/脑图模式执行测试用例.png){ width="900px" }
+
+!!! ms-abstract ""
     功能用例可添加、关联缺陷、执行、详情、修改、取消关联用例等功能。
 ![!测试计划](../../img/test_plan/plan/测试计划脑图模式执行.png){ width="900px" }
 
