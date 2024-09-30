@@ -1,4 +1,12 @@
+!!! ms-abstract ""
+    点击【视图】可筛选出我关注的、我创建的数据展示在页面上。
+![!开启重新提审](../../img/api_test/definition/接口定义页面的视图.png){ width="900px" }
 
+!!! ms-abstract ""
+    点击筛选，可根据 ID、接口名称、所属模块、协议等条件进行过滤数据。
+![!开启重新提审](../../img/api_test/definition/接口定义页面的筛选.png){ width="900px" }
+
+![!开启重新提审](../../img/api_test/definition/接口定义页面的筛选条件.png){ width="900px" }
 
 ## 1 新建接口
 !!! ms-abstract "" 
