@@ -105,6 +105,10 @@
     - **引用环境**：请求地址自动填充 http 或 https 环境，只需输入接口地址。
     - **不引用环境**：请求地址需要输入包含 http 或 https 的完整的 URL。
 
+!!! ms-abstract ""
+    支持导入 cURL 请求。
+![!自定义请求](../../img/api_test/api_automation/cURL请求.png){ width="900px" }
+
 ### 2.3 循环控制器
 !!! ms-abstract ""                                               
     【循环控制器】包括次数循环、while 循环、forEach 循环。详情参考：[循环控制器使用教程](https://kb.fit2cloud.com/?p=247)
