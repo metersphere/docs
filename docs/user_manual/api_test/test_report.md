@@ -16,10 +16,20 @@
 ## 2 分享报告
 !!! ms-abstract ""
     在报告详情页面，点击【分享】按钮获取分享链接。报告链接有效期可在 [项目管理-应用设置](../project_management/project_permissions.md#23-接口测试) 处配置。
-
 ![!分享报告](../../img/api_test/report/分享报告.png){ width="900px" }
 
-## 3 删除报告
+## 3 导出报告
+!!! ms-abstract ""
+    在报告详情页面，点击【导出】按钮即可。
+![!分享报告](../../img/api_test/report/导出报告.png){ width="900px" }
+
+!!! ms-abstract ""
+    在报告列表页面，点击【导出】按钮或者勾选复选框，点击【导出】批量导出报告。
+![!分享报告](../../img/api_test/report/导出报告1.png){ width="900px" }
+    
+![!删除测试报告](../../img/api_test/report/导出报告2.png){ width="900px" }
+
+## 4 删除报告
 !!! ms-abstract "" 
     点击【删除】按钮删除报告。
 ![!删除测试报告](../../img/api_test/report/删除报告1.png){ width="900px" }
