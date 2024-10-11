@@ -6,6 +6,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     可上传测试所需的 JAR 包、脚本、相关文件，在项目级别统一管理。
 ![!项目设置](../../img/project_management/上传jar包.png){ width="900px" }
 
+!!! ms-abstract ""
+    上传文件大小可在【系统设置-系统参数设置-基本配置】处进行调整。
+![!项目设置](../../img/project_management/上传文件大小调整.png){ width="900px" }
+
 ## 1 模块管理
 !!! ms-abstract ""
     新建模块时，选择【模块】，可对模块目录进行重命名、新增、删除等操作

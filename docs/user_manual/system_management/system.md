@@ -177,7 +177,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 ## 5 系统参数设置
 !!! ms-abstract ""
-    点击左侧【系统】下拉菜单中的【系统参数设置】进入参数设置界面，用于平台【基本配置】、【邮件设置】、【LDAP设置】、【显示设置】、【认证设置】、【模块管理】等参数的设置。
+    点击左侧【系统】下拉菜单中的【系统参数设置】进入参数设置界面，用于平台【基本配置】、【邮件设置】、【LDAP设置】、【显示设置】、【认证设置】、【模块管理】、【扫码登录】等参数的设置。
 ![系统参数设置首页](../../img/system_management/系统参数设置首页.png){ width="900px" }
 
 ### 5.1 基本配置
@@ -187,11 +187,10 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 !!! ms-abstract "选项"
 
-     - 【当前站点URL】：当前 MeterSphere 站点地址，用于性能测试 JMeter 从 MeterSphere 站点获取压测脚本等数据。	 
-     - 【并发数】：限制场景接口自动化中场景并行执行时的并发数量。
+     - 【当前站点URL】：当前 MeterSphere 站点地址，用于性能测试 JMeter 从 MeterSphere 站点获取压测脚本等数据。
      - 【Prometheus 地址】：Prometheus 监控服务地址。
-     - 【selenium-docker 地址】：selenium 服务地址。
-     - 【接口默认本地执行】：禁用后所有执行功能只能通过测试资源池执行，为了不影响接口正常执行，选择【禁用】后，请在【 项目设置-应用管理-接口测试 】中配置接口执行的资源池。
+     - 【selenium-docker 地址】：UI测试 selenium-hub 服务地址。
+     - 【文件大小限制】：文件管理处上传文件大小。
 
 ### 5.2 邮件设置
 !!! ms-abstract ""
