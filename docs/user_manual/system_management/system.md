@@ -249,7 +249,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     切换至【扫码登录】标签，系统支持企业微信、钉钉、飞书等方式扫码登录。
 ![扫码登录](../../img/system_management/扫码登录.png){ width="900px" }
 
-!!! ms-abstract "获取企业ID、AgentId、Scret"
+!!! ms-abstract "企业微信"
     打开 [企业微信管理后台](https://work.weixin.qq.com/)，用管理员权限用户登录。点击【我的企业】获取企业ID。
 ![扫码登录](../../img/system_management/企业微信获取企业ID.png){ width="900px" }
 
@@ -278,6 +278,8 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![扫码登录](../../img/system_management/企业微信登录页.png){ width="900px" }
 
 ![扫码登录](../../img/system_management/企业微信扫码进行登录.png){ width="900px" }
+
+!!! ms-abstract "钉钉"
 
 
 ## 6 配额管理 (X-Pack)
