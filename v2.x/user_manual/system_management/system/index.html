@@ -3764,7 +3764,7 @@ kubectl get all -n ms-pool
 </div>
 <h2 id="5">5 系统参数设置<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p>点击左侧【系统】下拉菜单中的【系统参数设置】进入参数设置界面，用于平台【基本配置】、【邮件设置】、【LDAP设置】、【显示设置】、【认证设置】、【模块管理】等参数的设置。</p>
+<p>点击左侧【系统】下拉菜单中的【系统参数设置】进入参数设置界面，用于平台【基本配置】、【邮件设置】、【LDAP设置】、【显示设置】、【认证设置】、【模块管理】、【扫码登录】等参数的设置。</p>
 </div>
 <p><a class="glightbox" href="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="系统参数设置首页" src="../../../img/system_management/%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5.png" width="900px" /></a></p>
 <h3 id="51">5.1 基本配置<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
@@ -3775,11 +3775,10 @@ kubectl get all -n ms-pool
 <div class="admonition ms-abstract">
 <p class="admonition-title">选项</p>
 <ul>
-<li>【当前站点URL】：当前 MeterSphere 站点地址，用于性能测试 JMeter 从 MeterSphere 站点获取压测脚本等数据。    </li>
-<li>【并发数】：限制场景接口自动化中场景并行执行时的并发数量。</li>
+<li>【当前站点URL】：当前 MeterSphere 站点地址，用于性能测试 JMeter 从 MeterSphere 站点获取压测脚本等数据。</li>
 <li>【Prometheus 地址】：Prometheus 监控服务地址。</li>
-<li>【selenium-docker 地址】：selenium 服务地址。</li>
-<li>【接口默认本地执行】：禁用后所有执行功能只能通过测试资源池执行，为了不影响接口正常执行，选择【禁用】后，请在【 项目设置-应用管理-接口测试 】中配置接口执行的资源池。</li>
+<li>【selenium-docker 地址】：UI测试 selenium-hub 服务地址。</li>
+<li>【文件大小限制】：文件管理处上传文件大小。</li>
 </ul>
 </div>
 <h3 id="52">5.2 邮件设置<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
