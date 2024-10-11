@@ -270,7 +270,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![扫码登录](../../img/system_management/配置可信IP.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【企业微信】添加按钮，填写企业ID、应用ID、应用秘钥后，测试连接通过后即可。
+    点击【企业微信】添加按钮，填写企业ID、应用ID、应用密钥，测试连接通过后，开启状态，点击【确定】即可。
 ![扫码登录](../../img/system_management/配置企业微信连接成功.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -280,7 +280,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![扫码登录](../../img/system_management/企业微信扫码进行登录.png){ width="900px" }
 
 !!! ms-abstract "钉钉"
-    打开 [钉钉开发平台](https://open.dingtalk.com/developer)，用管理员权限用户登录。点击【应用开发-钉钉应用-创建应用】
+    打开 [钉钉开发平台](https://open.dingtalk.com/developer)，用管理员权限用户登录。点击【应用开发-钉钉应用-创建应用】。
 ![扫码登录](../../img/system_management/创建钉钉应用.png){ width="900px" }
 
 !!! ms-abstract ""
@@ -300,12 +300,57 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![扫码登录](../../img/system_management/钉钉个人信息权限.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击【钉钉】添加按钮，填写应用key、应用ID、应用秘钥后，测试连接通过后即可。
+    点击【钉钉】添加按钮，填写应用key、应用ID、应用密钥，测试连接通过后，开启状态，点击【确定】即可。
 ![扫码登录](../../img/system_management/配置钉钉连接成功.png){ width="900px" }
 
 !!! ms-abstract ""
     登录页面，点击钉钉扫码登录即可。
 ![扫码登录](../../img/system_management/钉钉扫码登录.png){ width="900px" }
+
+
+!!! ms-abstract "飞书"
+    打开 [飞书开放平台](https://open.feishu.cn/app/)，用管理员权限用户登录。点击【创建企业自建应用】。
+![扫码登录](../../img/system_management/飞书创建应用.png){ width="900px" }
+
+!!! ms-abstract ""
+    输入应用名称和应用描述，点击【创建】即可。
+![扫码登录](../../img/system_management/飞书应用名称.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【添加应用能力】，添加网页应用。
+![扫码登录](../../img/system_management/添加机器人能力.png){ width="900px" }
+
+!!! ms-abstract ""
+    在【网页应用】页面，填写"桌面端主页"和"移动端主页"内容，均为 MeterSphere 访问地址。
+![扫码登录](../../img/system_management/飞书配置回调地址.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【安全设置】，添加重定向 URL 和 H5 可信域名，均填写填写 MeterSphere 访问地址。
+![扫码登录](../../img/system_management/飞书配置域名地址.png){ width="900px" }
+
+!!! ms-abstract ""
+    如下图，批量开通【获取用户 user ID】、【获取与发送单聊、群组消息】、【获取用户性别】、【获取单位信息】、【获取通讯录部门组织架构信息】、【获取用户组信息】、【获取用户组织架构信息】、【获取角色权限】、【获取职务列表】、【获取部门基础信息】、【通过手机号或邮箱获取用户 ID】、【获取用户基本信息】、【获取工作城市列表】、【获取用户邮箱信息】、【获取用户手机号】、【获取通讯录基本信息】、【获取成员所在部门路径】、【获取用户受雇信息】等权限。
+![扫码登录](../../img/system_management/批量开通权限.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【版本管理与发布-创建版本】，填写应用版本号和更新说明等信息，点击【保存】。
+![扫码登录](../../img/system_management/创建版本发布.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【确认发布】即可将该应用提交到线上并自动生效。
+![扫码登录](../../img/system_management/确认发布.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【凭证与基础信息】，获取 APP ID 和 APP Secret 等凭证信息。
+![扫码登录](../../img/system_management/获取飞书的凭证.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【飞书】添加按钮，填写应用ID、应用密钥，测试连接通过后，开启状态，点击【确定】即可。
+![扫码登录](../../img/system_management/配置飞书连接成功.png){ width="900px" }
+
+!!! ms-abstract ""
+    登录页面，点击飞书扫码登录即可。
+![扫码登录](../../img/system_management/飞书扫码登录.png){ width="900px" }
 
 ## 6 配额管理 (X-Pack)
 !!! ms-abstract ""
