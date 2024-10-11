@@ -244,6 +244,45 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     切换至【模块管理】标签，点击【启用/禁用】按钮，系统只显示【启用】的模块，【禁用】的模块不会在系统中出现。
 ![模块管理](../../img/system_management/模块管理.png){ width="900px" }
 
+### 5.7 扫码登录 (X-Pack)
+!!! ms-abstract ""
+    切换至【扫码登录】标签，系统支持企业微信、钉钉、飞书等方式扫码登录。
+![扫码登录](../../img/system_management/扫码登录.png){ width="900px" }
+
+!!! ms-abstract "配置企业微信"
+    打开 [企业微信管理后台](https://work.weixin.qq.com/)，用管理员权限用户登录。
+
+!!! ms-abstract "获取企业ID、AgentId、Scret"
+    点击【我的企业】获取企业ID。
+![扫码登录](../../img/system_management/企业微信获取企业ID.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【工作台-应用管理-创建应用】，进入应用页面进行创建。
+![扫码登录](../../img/system_management/企业微信后台创建应用.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击应用进入，获取 AgentId、Scret。
+![扫码登录](../../img/system_management/获取应用ID和应用秘钥.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击企业微信授权登录，配置回调地址。
+![扫码登录](../../img/system_management/配置回调地址.png){ width="900px" }
+
+!!! ms-abstract ""
+    配置企业可信IP。
+![扫码登录](../../img/system_management/配置可信IP.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【企业微信】添加按钮，填写企业ID、应用ID、应用秘钥后，测试连接通过后即可。
+![扫码登录](../../img/system_management/配置企业微信连接成功.png){ width="900px" }
+
+!!! ms-abstract ""
+    登录页面，点击扫码登录即可。
+![扫码登录](../../img/system_management/企业微信登录页.png){ width="900px" }
+
+![扫码登录](../../img/system_management/企业微信扫码进行登录.png){ width="900px" }
+
+
 ## 6 配额管理 (X-Pack)
 !!! ms-abstract ""
     进入【配额管理】页面，可【编辑】上方的工作空间默认配额，编辑完成后，在配额列表中使用默认配置的，将同步更新编辑的数据。
