@@ -280,7 +280,32 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 ![扫码登录](../../img/system_management/企业微信扫码进行登录.png){ width="900px" }
 
 !!! ms-abstract "钉钉"
+    打开 [钉钉开发平台](https://open.dingtalk.com/developer)，用管理员权限用户登录。点击【应用开发-钉钉应用-创建应用】
+![扫码登录](../../img/system_management/创建钉钉应用.png){ width="900px" }
 
+!!! ms-abstract ""
+    点击应用进入，获取 AgentId、Client ID 和 Client Secret。
+![扫码登录](../../img/system_management/获取钉钉应用ID.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【分享设置-回调域名】，在配置页面填写回调域名(回调域名为 MeterSphere 的访问地址)，点击添加即可。
+![扫码登录](../../img/system_management/钉钉设置回调地址.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【安全设置】，填写服务器出口IP，点击保存即可。
+![扫码登录](../../img/system_management/钉钉出口配置.png){ width="900px" }
+
+!!! ms-abstract ""
+    进行【权限管理-成员信息读权限-勾选-批量申请】操作，搜索【User】后，开通【个人手机号信息】、【通讯录个人信息读权限】、【调用钉钉项目管理相关接口的权限】权限。
+![扫码登录](../../img/system_management/钉钉个人信息权限.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【钉钉】添加按钮，填写应用key、应用ID、应用秘钥后，测试连接通过后即可。
+![扫码登录](../../img/system_management/配置钉钉连接成功.png){ width="900px" }
+
+!!! ms-abstract ""
+    登录页面，点击钉钉扫码登录即可。
+![扫码登录](../../img/system_management/钉钉扫码登录.png){ width="900px" }
 
 ## 6 配额管理 (X-Pack)
 !!! ms-abstract ""
