@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
@@ -2312,6 +2312,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 MeterSphere 服务日志出现 Schema metersphere contains a failed migration to version 3.2.0.2 !
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2544,6 +2553,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 MeterSphere 服务日志出现 Schema metersphere contains a failed migration to version 3.2.0.2 !
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2599,6 +2617,26 @@ service docker start
 <p>降低 mysql 的镜像版本。修改安装目录 <code>/opt/metersphere/docker-compose-mysql.yml</code> 里 mysql 的镜像版本号后，执行 msctl reload 即可。</p>
 </div>
 <p><a class="glightbox" href="../../img/ask_question/api_question/%E9%99%8D%E4%BD%8Emysql%E7%89%88%E6%9C%AC.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/%E9%99%8D%E4%BD%8Emysql%E7%89%88%E6%9C%AC.png" width="900px" /></a></p>
+<h2 id="3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202">3 MeterSphere 服务日志出现 Schema <code>metersphere</code> contains a failed migration to version 3.2.0.2 !<a class="headerlink" href="#3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">问题现象</p>
+<p>metersphere 容器状态 Restarting ，执行 docker logs metersphere 查看日志</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/install_question/ms%E6%9C%8D%E5%8A%A1%E6%B2%A1%E5%90%AF%E5%8A%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/install_question/ms%E6%9C%8D%E5%8A%A1%E6%B2%A1%E5%90%AF%E5%8A%A8.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>错误为：Schema <code>metersphere</code> contains a failed migration to version 3.2.0.2 !</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/install_question/ms%E6%97%A5%E5%BF%97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/install_question/ms%E6%97%A5%E5%BF%97.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">解决方法</p>
+<p>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/v3.3.0/backend/framework/domain/src/main/resources/migration/3.2.0/ddl">https://github.com/metersphere/metersphere/tree/v3.3.0/backend/framework/domain/src/main/resources/migration/3.2.0/ddl</a> 下载文件名为 V3.2.0_2__ga_ddl.sql 的 flyway sql。此处链接 v3.3.0 为安装的版本号，如果不是该版本，可切换到目标版本再下载 sql 文件。</p>
+</div>
+<p><a class="glightbox" href="../../img/ask_question/install_question/%E4%B8%8B%E8%BD%BDsql.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/install_question/%E4%B8%8B%E8%BD%BDsql.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p>连接 mysql 切到 metersphere 库，将 sql 文件手动执行一下。执行成功后，修改 metersphere_version 表对应版本 3.2.0.2 的 success 值为 1 后，msctl reload 重启服务即可。
+<div class="highlight"><pre><span></span><code>update metersphere_version set success=1 where version=&quot;3.2.0.2&quot;;
+</code></pre></div></p>
+</div>
 
 
 
