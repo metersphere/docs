@@ -3,10 +3,20 @@
 ![!开启重新提审](../../img/api_test/definition/接口定义页面的视图.png){ width="900px" }
 
 !!! ms-abstract ""
-    点击筛选，可根据 ID、接口名称、所属模块、协议等条件进行过滤数据。
+    点击【筛选】，可根据 ID、接口名称、所属模块、协议等条件进行过滤数据。
 ![!开启重新提审](../../img/api_test/definition/接口定义页面的筛选.png){ width="900px" }
 
 ![!开启重新提审](../../img/api_test/definition/接口定义页面的筛选条件.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击【分享-新建分享】，输入分享名称、接口范围、截止时间、是否开启密码访问、是否允许导出后，进行新建。
+![!开启重新提审](../../img/api_test/definition/分享按钮.png){ width="900px" }
+
+![!开启重新提审](../../img/api_test/definition/新建分享.png){ width="900px" }
+
+!!! ms-abstract ""
+    在【分享列表】里，可以进行【查看链接】、【编辑】、【删除】等操作。
+![!开启重新提审](../../img/api_test/definition/分享列表.png){ width="900px" }
 
 ## 1 新建接口
 !!! ms-abstract "" 
