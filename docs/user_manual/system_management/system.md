@@ -157,7 +157,6 @@
     社区版限制一个资源池，
     不可删除默认资源池。
 
-    
 ![!测试资源池管理](../../img/system_management/资源池页面.png){ width="900px" }
 
 
@@ -166,15 +165,31 @@
     - 【查询】：左上角通用名称查询。</br>
     - 【编辑】：修改资源池信息。</br>
 
-  
-
 !!! ms-abstract "编辑资源池"
 
     - 【站点URL】： MeterSphere 服务真实 ip 地址。 如：http://ip:8081 ，站点 URL 地址和 Node 资源池服务器要求网络互通。</br>
     - 【最大并发数】：按服务器可以提供的资源能力填写最大并发数。</br>
-    - 【IP、Port】：Node 资源池部署服务器的真实 ip ，默认 8000 端口。
+    - 【IP、Port】：Node 资源池部署服务器的真实 ip ，默认 8000 端口。  
 
+## 4.1 创建 Node 资源池
+!!! ms-abstract ""
+    点击【创建资源池】按钮，在弹出的界面中为新建资源池编辑名称、描述等相关信息，【类型】选择【Node】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
 ![!测试资源池管理](../../img/system_management/编辑资源池.png){ width="900px" }
+
+## 4.2 创建 K8S 资源池
+!!! ms-abstract ""
+    【类型】选择【Kubernetes】，填写相应的配置信息，并支持设定资源池最大并发数量或最大线程数量。
+![!测试资源池管理](../../img/system_management/新增k8s资源池.png){ width="900px" }
+
+!!! ms-abstract "注意"
+    需要下载 yml 文件，在 K8S 环境上执行 kubectl apply -f Role.yml 和 kubectl apply -f Deployment.yml。
+
+!!! ms-abstract "配置信息"
+
+    - 【IP 地址/域名】：输入 kubectl describe svc kubernetes 可获得 Endpoints 地址。
+    - 【Token】：需要集群管理员权限，获取 token。
+    - 【命名空间】：默认填 ms-pool。  
+    - 【Deploy Name】：默认填 task-runner。
 
 ## 6 任务中心
 !!! ms-abstract ""
