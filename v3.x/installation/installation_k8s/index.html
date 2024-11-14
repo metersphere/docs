@@ -121,7 +121,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-helm-chart" class="md-skip">
           跳转至
         </a>
       
@@ -692,36 +692,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-helm-chart" class="md-nav__link">
     <span class="md-ellipsis">
-      1 在线部署
+      1 helm-chart 部署
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-helm-chart" class="md-nav__link">
     <span class="md-ellipsis">
-      2 在线升级
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 离线部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4 离线升级
+      2 helm-chart 升级
     </span>
   </a>
   
@@ -2591,36 +2573,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-helm-chart" class="md-nav__link">
     <span class="md-ellipsis">
-      1 在线部署
+      1 helm-chart 部署
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-helm-chart" class="md-nav__link">
     <span class="md-ellipsis">
-      2 在线升级
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 离线部署
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4 离线升级
+      2 helm-chart 升级
     </span>
   </a>
   
@@ -2646,37 +2610,7 @@
 
   <h1>K8S 部署</h1>
 
-<h2 id="1">1 在线部署<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p class="admonition-title">在线部署</p>
-<div class="highlight"><pre><span></span><code>kubectl create ns ms
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo add metersphere https://metersphere.github.io/helm-chart/
-# 从 chart 仓库中更新本地可用chart的信息
-helm repo update  
-helm install metersphere metersphere/metersphere -n ms
-</code></pre></div>
-</div>
-<h2 id="2">2 在线升级<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p class="admonition-title">在线升级</p>
-<div class="highlight"><pre><span></span><code>helm repo update  # 从 chart 仓库中更新本地可用chart的信息
-helm upgrade metersphere metersphere/metersphere -n ms
-</code></pre></div>
-</div>
-<h2 id="3">3 离线部署<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p class="admonition-title">导入镜像</p>
-<p>下载地址：<a href="https://community.fit2cloud.com/#/products/metersphere/downloads">https://community.fit2cloud.com/#/products/metersphere/downloads</a></p>
-</div>
-<p><a class="glightbox" href="../../img/installation/k8s/%E4%B8%8B%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E4%B8%8B%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<div class="highlight"><pre><span></span><code>tar -zxvf metersphere-ce-offline-installer-v3.4.0.tar.gz
-cd metersphere-ce-offline-installer-v3.4.0/images
-docker load &lt; metersphere.tar
-</code></pre></div>
-</div>
-<p><a class="glightbox" href="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
+<h2 id="1-helm-chart">1 helm-chart 部署<a class="headerlink" href="#1-helm-chart" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">下载 helm-chart 包</p>
 <p>下载地址：<a href="https://github.com/metersphere/helm-chart/releases">https://github.com/metersphere/helm-chart/releases</a></p>
@@ -2713,7 +2647,19 @@ vi values.yaml
 </code></pre></div>
 </div>
 <p><a class="glightbox" href="../../img/installation/k8s/%E6%9F%A5%E8%AF%A2%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E6%9F%A5%E8%AF%A2%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81.png" width="900px" /></a></p>
-<h2 id="4">4 离线升级<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">注意：</p>
+<p>若是无网环境，先下载离线包导入镜像后，再执行安装命令，下载地址：<a href="https://community.fit2cloud.com/#/products/metersphere/downloads">https://community.fit2cloud.com/#/products/metersphere/downloads</a></p>
+</div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E4%B8%8B%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E4%B8%8B%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<div class="highlight"><pre><span></span><code>tar -zxvf metersphere-ce-offline-installer-v3.4.0.tar.gz
+cd metersphere-ce-offline-installer-v3.4.0/images
+docker load &lt; metersphere.tar
+</code></pre></div>
+</div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
+<h2 id="2-helm-chart">2 helm-chart 升级<a class="headerlink" href="#2-helm-chart" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">离线升级</p>
 <p>下载新版本镜像导入环境、下载最新的离线 helm-chart 包，修改 values.yaml 配置文件，参考 <a href="./#3">离线安装</a>，执行更新命令即可。
