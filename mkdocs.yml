@@ -48,6 +48,7 @@ nav:
           - 1Panel 安装: installation/1Panel.md
           - 阿里云安装: installation/aliyun.md
           - Windows 单机部署: installation/offline_installation_windows.md
+          - K8S 部署: installation/installation_k8s.md
           - Task Runner 部署: installation/task_runner.md
           - 数据备份与还原: installation/backup_data.md
           - 命令行工具: installation/cli.md
