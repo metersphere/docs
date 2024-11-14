@@ -14,12 +14,12 @@
 ![执行命令](../img/installation/k8s/外置中间件.png){ width="900px" }
 
 !!! ms-abstract "配置说明"
-    
-    - 【enabled】默认内置为 true，外置则改为 false
-    - 【host】具体的 IP 地址
-    - 【port】具体端口地址
-    - 【username】用户名
-    - 【password】密码
+    - 【StorageClass】默认是 defalut，根据需要修改为已有的 StorageClass 即可。
+    - 【enabled】默认内置为 true，外置则改为 false。
+    - 【host】具体的 IP 地址。
+    - 【port】具体端口地址。
+    - 【username】用户名。
+    - 【password】密码。
 
 !!! ms-abstract "执行安装命令"
     ```
@@ -47,8 +47,8 @@
 
 
 ## 2 helm-chart 升级
-!!! ms-abstract "离线升级"
-    下载新版本镜像导入环境、下载最新的离线 helm-chart 包，修改 values.yaml 配置文件，参考 [离线安装](./#3)，执行更新命令即可。
+!!! ms-abstract "升级步骤"
+    下载新版本镜像导入环境、下载最新的离线 helm-chart 包，修改 values.yaml 配置文件，均可参考 [离线安装](./#1)，执行更新命令即可。
     ```
     helm upgrade metersphere metersphere3-3.4.0.tgz -f values.yml -n ms
     ```

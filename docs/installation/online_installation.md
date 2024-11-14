@@ -23,7 +23,38 @@
 
     安装脚本默认将主机的 ~/.metersphere/data 目录作为挂载目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
 
-## 3 配置反向代理
+## 3 在线升级
+!!! ms-abstract "升级步骤"
+    下载最新镜像：
+
+    ```
+    docker pull cr2.fit2cloud.com/metersphere/metersphere-ce-allinone
+    ```
+
+    查看并确认安装时的数据持久化目录，复制保存，以便后续使用
+    ```
+    docker inspect metersphere
+    ```
+    ![VirtualBox](../img/installation/在线升级.png){ width="900px" }
+
+    删除正在运行的 metersphere 容器
+    ```
+    docker rm -f metersphere
+    ```
+
+    **注意**： 务必确认数据持久化目录，否则启动后数据为空。
+
+    创建并启动 metersphere 容器
+    ```
+    docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data cr2.fit2cloud.com/metersphere/metersphere-ce-allinone
+    ```
+
+    查看服务状态
+    ```
+    docker ps -a|grep metersphere-ce-allinone
+    ```
+
+## 4 配置反向代理
 
 !!! ms-abstract ""
     如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
