@@ -12,13 +12,13 @@
         <meta name="author" content="MeterSphere 项目组">
       
       
-        <link rel="canonical" href="https://metersphere.io/docs/v3.x/ask_question/install_question/">
+        <link rel="canonical" href="https://metersphere.io/docs/v3.x/installation/installation_k8s/">
       
       
-        <link rel="prev" href="../../video_index/">
+        <link rel="prev" href="../offline_installation_windows/">
       
       
-        <link rel="next" href="../api_question/">
+        <link rel="next" href="../task_runner/">
       
       
       <link rel="icon" href="../../img/facio.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>安装部署 - MeterSphere 文档</title>
+        <title>K8S 部署 - MeterSphere 文档</title>
       
     
     
@@ -121,7 +121,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-kafka" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -275,7 +275,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              安装部署
+              K8S 部署
             
           </span>
         </div>
@@ -462,8 +462,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -490,11 +492,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -508,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             安装部署
@@ -522,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/network_port/" class="md-nav__link">
+      <a href="../network_port/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/offline_installation/" class="md-nav__link">
+      <a href="../offline_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/online_installation/" class="md-nav__link">
+      <a href="../online_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/1Panel/" class="md-nav__link">
+      <a href="../1Panel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/aliyun/" class="md-nav__link">
+      <a href="../aliyun/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/offline_installation_windows/" class="md-nav__link">
+      <a href="../offline_installation_windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,10 +647,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../installation/installation_k8s/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    K8S 部署
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -657,6 +677,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 在线部署
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 在线升级
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 离线部署
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 离线升级
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -669,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/task_runner/" class="md-nav__link">
+      <a href="../task_runner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/backup_data/" class="md-nav__link">
+      <a href="../backup_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2253,10 +2327,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -2267,11 +2339,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -2285,7 +2357,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             常见问题
@@ -2296,28 +2368,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    安装部署
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ask_question/install_question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2326,51 +2380,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-kafka" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 kafka 服务无法启动
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 mysql 服务无法启动
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 MeterSphere 服务日志出现 Schema metersphere contains a failed migration to version 3.2.0.2 !
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2383,7 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_question/" class="md-nav__link">
+      <a href="../../ask_question/api_question/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2582,27 +2591,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-kafka" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1 kafka 服务无法启动
+      1 在线部署
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-mysql" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2 mysql 服务无法启动
+      2 在线升级
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3 MeterSphere 服务日志出现 Schema metersphere contains a failed migration to version 3.2.0.2 !
+      3 离线部署
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 离线升级
     </span>
   </a>
   
@@ -2626,61 +2644,80 @@
   
 
 
-  <h1>安装部署</h1>
+  <h1>K8S 部署</h1>
 
-<h2 id="1-kafka">1 kafka 服务无法启动<a class="headerlink" href="#1-kafka" title="Permanent link">&para;</a></h2>
+<h2 id="1">1 在线部署<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p class="admonition-title">问题现象</p>
-<p>kafka 服务起不来，docker logs kafka 看到日志里出现 "/opt/kafka/config/file not writable"</p>
-</div>
-<p><a class="glightbox" href="../../img/ask_question/api_question/kafka%E8%B5%B7%E4%B8%8D%E6%9D%A5%E6%97%A5%E5%BF%97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/kafka%E8%B5%B7%E4%B8%8D%E6%9D%A5%E6%97%A5%E5%BF%97.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p class="admonition-title">解决方法1</p>
-<p>升级 docker 版本即可。若服务器有网环境，执行</p>
-<div class="highlight"><pre><span></span><code>yum update
-yum install docker-ce docker-ce-cli containerd.io
+<p class="admonition-title">在线部署</p>
+<div class="highlight"><pre><span></span><code>kubectl create ns ms
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add metersphere https://metersphere.github.io/helm-chart/
+# 从 chart 仓库中更新本地可用chart的信息
+helm repo update  
+helm install metersphere metersphere/metersphere -n ms
 </code></pre></div>
-<p>若服务器没网，MeterSpher 离线安装包里有离线 docker，执行
-<div class="highlight"><pre><span></span><code>chmod +x docker/bin/*
-cp docker/bin/* /usr/bin/
-cp docker/service/docker.service /etc/systemd/system/
-chmod 754 /etc/systemd/system/docker.service
-service docker start
-</code></pre></div></p>
+</div>
+<h2 id="2">2 在线升级<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">在线升级</p>
+<div class="highlight"><pre><span></span><code>helm repo update  # 从 chart 仓库中更新本地可用chart的信息
+helm upgrade metersphere metersphere/metersphere -n ms
+</code></pre></div>
+</div>
+<h2 id="3">3 离线部署<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<div class="admonition ms-abstract">
+<p class="admonition-title">导入镜像</p>
+<p>下载地址：<a href="https://community.fit2cloud.com/#/products/metersphere/downloads">https://community.fit2cloud.com/#/products/metersphere/downloads</a></p>
+</div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E4%B8%8B%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E4%B8%8B%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<div class="highlight"><pre><span></span><code>tar -zxvf metersphere-ce-offline-installer-v3.4.0.tar.gz
+cd metersphere-ce-offline-installer-v3.4.0/images
+docker load &lt; metersphere.tar
+</code></pre></div>
+</div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">下载 helm-chart 包</p>
+<p>下载地址：<a href="https://github.com/metersphere/helm-chart/releases">https://github.com/metersphere/helm-chart/releases</a></p>
+</div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E4%B8%8B%E8%BD%BDhelm-chart%E5%8C%85.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E4%B8%8B%E8%BD%BDhelm-chart%E5%8C%85.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">修改配置文件</p>
+<div class="highlight"><pre><span></span><code>tar -zxvf metersphere3-3.4.0.tgz
+cd metersphere3
+vi values.yaml
+</code></pre></div>
+</div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E4%BF%AE%E6%94%B9values%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E4%BF%AE%E6%94%B9values%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" width="900px" /></a></p>
+<p><a class="glightbox" href="../../img/installation/k8s/%E5%A4%96%E7%BD%AE%E4%B8%AD%E9%97%B4%E4%BB%B6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E5%A4%96%E7%BD%AE%E4%B8%AD%E9%97%B4%E4%BB%B6.png" width="900px" /></a></p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">配置说明</p>
+<ul>
+<li>【enabled】默认内置为 true，外置则改为 false</li>
+<li>【host】具体的 IP 地址</li>
+<li>【port】具体端口地址</li>
+<li>【username】用户名</li>
+<li>【password】密码</li>
+</ul>
 </div>
 <div class="admonition ms-abstract">
-<p class="admonition-title">解决方法2</p>
-<p>若使用的是离线包自带的 docker 也出现该错误，可以在 <code>/opt/metersphere/docker-compose-kafka.yml</code> 里添加 privileged: true 参数后，执行 msctl reload 即可。</p>
+<p class="admonition-title">执行安装命令</p>
+<div class="highlight"><pre><span></span><code>helm install metersphere metersphere3-3.4.0.tgz -f values.yaml -n ms
+</code></pre></div>
 </div>
-<p><a class="glightbox" href="../../img/ask_question/api_question/kafka%E7%9A%84yml%E6%B7%BB%E5%8A%A0%E7%89%B9%E6%9D%83.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/kafka%E7%9A%84yml%E6%B7%BB%E5%8A%A0%E7%89%B9%E6%9D%83.png" width="900px" /></a></p>
-<h2 id="2-mysql">2 mysql 服务无法启动<a class="headerlink" href="#2-mysql" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../../img/installation/k8s/%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4.png" width="900px" /></a></p>
 <div class="admonition ms-abstract">
-<p class="admonition-title">问题现象</p>
-<p>mysql 服务起不来，docker logs mysql 日志里出现 "Fatal glibc error: CPU does not support x86-64-v2"</p>
+<p class="admonition-title">查询服务状态</p>
+<div class="highlight"><pre><span></span><code> kubectl get pod -n ms
+</code></pre></div>
 </div>
+<p><a class="glightbox" href="../../img/installation/k8s/%E6%9F%A5%E8%AF%A2%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E6%9F%A5%E8%AF%A2%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81.png" width="900px" /></a></p>
+<h2 id="4">4 离线升级<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p class="admonition-title">解决方法</p>
-<p>降低 mysql 的镜像版本。修改安装目录 <code>/opt/metersphere/docker-compose-mysql.yml</code> 里 mysql 的镜像版本号后，执行 msctl reload 即可。</p>
-</div>
-<p><a class="glightbox" href="../../img/ask_question/api_question/%E9%99%8D%E4%BD%8Emysql%E7%89%88%E6%9C%AC.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/%E9%99%8D%E4%BD%8Emysql%E7%89%88%E6%9C%AC.png" width="900px" /></a></p>
-<h2 id="3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202">3 MeterSphere 服务日志出现 Schema <code>metersphere</code> contains a failed migration to version 3.2.0.2 !<a class="headerlink" href="#3-metersphere-schema-metersphere-contains-a-failed-migration-to-version-3202" title="Permanent link">&para;</a></h2>
-<div class="admonition ms-abstract">
-<p class="admonition-title">问题现象</p>
-<p>metersphere 容器状态 Restarting ，执行 docker logs metersphere 查看日志</p>
-</div>
-<p><a class="glightbox" href="../../img/ask_question/install_question/ms%E6%9C%8D%E5%8A%A1%E6%B2%A1%E5%90%AF%E5%8A%A8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/install_question/ms%E6%9C%8D%E5%8A%A1%E6%B2%A1%E5%90%AF%E5%8A%A8.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>错误为：Schema <code>metersphere</code> contains a failed migration to version 3.2.0.2 !</p>
-</div>
-<p><a class="glightbox" href="../../img/ask_question/install_question/ms%E6%97%A5%E5%BF%97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/install_question/ms%E6%97%A5%E5%BF%97.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p class="admonition-title">解决方法</p>
-<p>到 github 源码上 <a href="https://github.com/metersphere/metersphere/tree/v3.3.0/backend/framework/domain/src/main/resources/migration/3.2.0/ddl">https://github.com/metersphere/metersphere/tree/v3.3.0/backend/framework/domain/src/main/resources/migration/3.2.0/ddl</a> 下载文件名为 V3.2.0_2__ga_ddl.sql 的 flyway sql。此处链接 v3.3.0 为安装的版本号，如果不是该版本，可切换到目标版本再下载 sql 文件。</p>
-</div>
-<p><a class="glightbox" href="../../img/ask_question/install_question/%E4%B8%8B%E8%BD%BDsql.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/install_question/%E4%B8%8B%E8%BD%BDsql.png" width="900px" /></a></p>
-<div class="admonition ms-abstract">
-<p>连接 mysql 切到 metersphere 库，将 sql 文件手动执行一下。执行成功后，修改 metersphere_version 表对应版本 3.2.0.2 的 success 值为 1 后，msctl reload 重启服务即可。
-<div class="highlight"><pre><span></span><code>update metersphere_version set success=1 where version=&quot;3.2.0.2&quot;;
+<p class="admonition-title">离线升级</p>
+<p>下载新版本镜像导入环境、下载最新的离线 helm-chart 包，修改 values.yaml 配置文件，参考 <a href="./#3">离线安装</a>，执行更新命令即可。
+<div class="highlight"><pre><span></span><code>helm upgrade metersphere metersphere3-3.4.0.tgz -f values.yml -n ms
 </code></pre></div></p>
 </div>
 
