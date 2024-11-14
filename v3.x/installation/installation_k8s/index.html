@@ -2628,11 +2628,12 @@ vi values.yaml
 <div class="admonition ms-abstract">
 <p class="admonition-title">配置说明</p>
 <ul>
-<li>【enabled】默认内置为 true，外置则改为 false</li>
-<li>【host】具体的 IP 地址</li>
-<li>【port】具体端口地址</li>
-<li>【username】用户名</li>
-<li>【password】密码</li>
+<li>【StorageClass】默认是 defalut，根据需要修改为已有的 StorageClass 即可。</li>
+<li>【enabled】默认内置为 true，外置则改为 false。</li>
+<li>【host】具体的 IP 地址。</li>
+<li>【port】具体端口地址。</li>
+<li>【username】用户名。</li>
+<li>【password】密码。</li>
 </ul>
 </div>
 <div class="admonition ms-abstract">
@@ -2661,8 +2662,8 @@ docker load &lt; metersphere.tar
 <p><a class="glightbox" href="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="执行命令" src="../../img/installation/k8s/%E5%8A%A0%E8%BD%BD%E7%A6%BB%E7%BA%BF%E9%95%9C%E5%83%8F.png" width="900px" /></a></p>
 <h2 id="2-helm-chart">2 helm-chart 升级<a class="headerlink" href="#2-helm-chart" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
-<p class="admonition-title">离线升级</p>
-<p>下载新版本镜像导入环境、下载最新的离线 helm-chart 包，修改 values.yaml 配置文件，参考 <a href="./#3">离线安装</a>，执行更新命令即可。
+<p class="admonition-title">升级步骤</p>
+<p>下载新版本镜像导入环境、下载最新的离线 helm-chart 包，修改 values.yaml 配置文件，均可参考 <a href="./#1">离线安装</a>，执行更新命令即可。
 <div class="highlight"><pre><span></span><code>helm upgrade metersphere metersphere3-3.4.0.tgz -f values.yml -n ms
 </code></pre></div></p>
 </div>
