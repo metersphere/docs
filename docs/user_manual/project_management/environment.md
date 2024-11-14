@@ -27,6 +27,8 @@
 
 ![!环境进行复制删除操作](../../img/project_management/enviroment/环境进行复制删除操作.png){ width="900px" }
 
+![!环境进行复制删除操作](../../img/project_management/enviroment/环境复制删除导出操作.png){ width="900px" }
+
 ![!导入导出环境](../../img/project_management/enviroment/导入导出环境.png){ width="900px" }
 
 !!! ms-abstract "功能说明:"
