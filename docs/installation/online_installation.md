@@ -42,8 +42,10 @@
     docker rm -f metersphere
     ```
 
-    **注意**： 务必确认数据持久化目录，否则启动后数据为空。
+!!! ms-abstract "注意："
+    务必确认数据持久化目录，否则启动后数据为空。
 
+!!! ms-abstract ""
     创建并启动 metersphere 容器
     ```
     docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data cr2.fit2cloud.com/metersphere/metersphere-ce-allinone
