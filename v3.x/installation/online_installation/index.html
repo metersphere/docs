@@ -26,7 +26,7 @@
     
     
       
-        <title>在线安装 - MeterSphere 文档</title>
+        <title>在线安装及升级 - MeterSphere 文档</title>
       
     
     
@@ -275,7 +275,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              在线安装
+              在线安装及升级
             
           </span>
         </div>
@@ -577,7 +577,7 @@
           
   
   <span class="md-ellipsis">
-    在线安装
+    在线安装及升级
   </span>
   
 
@@ -588,7 +588,7 @@
         
   
   <span class="md-ellipsis">
-    在线安装
+    在线安装及升级
   </span>
   
 
@@ -2644,7 +2644,7 @@
   
 
 
-  <h1>在线安装</h1>
+  <h1>在线安装及升级</h1>
 
 <h2 id="1">1 环境要求<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
@@ -2682,7 +2682,12 @@
 <p>删除正在运行的 metersphere 容器
 <div class="highlight"><pre><span></span><code>docker rm -f metersphere
 </code></pre></div></p>
-<p><strong>注意</strong>： 务必确认数据持久化目录，否则启动后数据为空。</p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">注意：</p>
+<p>务必确认数据持久化目录，否则启动后数据为空。</p>
+</div>
+<div class="admonition ms-abstract">
 <p>创建并启动 metersphere 容器
 <div class="highlight"><pre><span></span><code>docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data cr2.fit2cloud.com/metersphere/metersphere-ce-allinone
 </code></pre></div></p>
