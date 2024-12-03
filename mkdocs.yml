@@ -57,6 +57,11 @@ nav:
           - 使用接口测试: quick_start/api_test.md
     - 功能手册:
           - 通用功能: user_manual/general.md
+          - 工作台:
+              - 首页: user_manual/workstation/index.md
+              - 我的待办: user_manual/workstation/todo.md
+              - 我关注的: user_manual/workstation/focus.md
+              - 我创建的: user_manual/workstation/create.md
           - 项目管理:
               - 概述: user_manual/project_management/overview.md
               - 项目与权限: user_manual/project_management/project_permissions.md
