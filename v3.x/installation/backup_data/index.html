@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
@@ -2897,6 +2897,11 @@ mysql -uroot -pPassword123@mysql
 <p>使用 metersphere 库，并将数据导入到库里
 <div class="highlight"><pre><span></span><code>use metersphere;
 source /var/lib/mysql/metersphere.sql
+</code></pre></div></p>
+</div>
+<div class="admonition ms-abstract">
+<p>将 minio 目录重命名一下
+<div class="highlight"><pre><span></span><code>mv /opt/metersphere/data/minio /opt/metersphere/data/minio_backup
 </code></pre></div></p>
 </div>
 <div class="admonition ms-abstract">
