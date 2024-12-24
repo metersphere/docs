@@ -159,7 +159,13 @@
     use metersphere;
     source /var/lib/mysql/metersphere.sql
     ```
-
+    
+!!! ms-abstract ""
+    将 minio 目录重命名一下
+    ```
+    mv /opt/metersphere/data/minio /opt/metersphere/data/minio_backup
+    ```
+    
 !!! ms-abstract ""
     还原 minio 目录数据，进入 ms_data_backup.tar 所在目录
     ```
