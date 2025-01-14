@@ -1,7 +1,15 @@
+!!! ms-abstract "在线部署使用命令"
+    使用 docker 命令进行控制
+    
+    ```
+    docker ps                   查看服务运行状态
+    docker stop containerID     停止服务
+    docker rm containerID       删除服务
+    docker restart containerID  重启服务
+    ```
 
-
-!!! ms-abstract "" 
-    MeterSphere 默认内置了命令行运维工具【msctl】，通过执行【msctl help】命令，可以查看详细说明。
+!!! ms-abstract "离线包部署使用命令" 
+    默认内置了命令行运维工具【msctl】，通过执行【msctl help】命令，可以查看详细说明。
 
     ```
     MeterSphere 控制脚本
