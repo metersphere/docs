@@ -2616,7 +2616,17 @@
   <h1>命令行工具</h1>
 
 <div class="admonition ms-abstract">
-<p>MeterSphere 默认内置了命令行运维工具【msctl】，通过执行【msctl help】命令，可以查看详细说明。</p>
+<p class="admonition-title">在线部署使用命令</p>
+<p>使用 docker 命令进行控制</p>
+<div class="highlight"><pre><span></span><code>docker ps                   查看服务运行状态
+docker stop containerID     停止服务
+docker rm containerID       删除服务
+docker restart containerID  重启服务
+</code></pre></div>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">离线包部署使用命令</p>
+<p>默认内置了命令行运维工具【msctl】，通过执行【msctl help】命令，可以查看详细说明。</p>
 <div class="highlight"><pre><span></span><code>MeterSphere 控制脚本
 
 Usage: 

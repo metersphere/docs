@@ -3462,14 +3462,14 @@ JavaScript
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.jmeter.config.Arguments</span><span class="p">;</span>
 
 <span class="o">//</span><span class="n">获取请求的body参数</span>
-<span class="n">Arguments</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sampler</span><span class="o">.</span><span class="n">getArguments</span><span class="p">();</span>
+<span class="n">Arguments</span> <span class="n">args</span> <span class="o">=</span> <span class="n">sampler</span><span class="o">.</span><span class="n">getArguments</span><span class="p">();</span>
 
 <span class="o">//</span><span class="n">将获取到的参数转换成字符串格式</span>
-<span class="nb">String</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">getValue</span><span class="p">();</span>
 <span class="o">//</span><span class="n">注意</span><span class="err">：</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="n">中的0</span><span class="err">，</span><span class="n">一般获取到的请求参数中只有第0个数据</span><span class="err">。</span>
 <span class="o">//</span><span class="n">在获取返回值时</span><span class="err">，</span><span class="n">才会有多个数据列</span>
 
-<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json</span><span class="p">);</span>
+<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">json</span><span class="p">);</span>
 <span class="o">//</span><span class="n">输出值为</span><span class="err">：</span><span class="p">{</span><span class="s2">&quot;userId&quot;</span><span class="p">:</span><span class="s2">&quot;123456&quot;</span><span class="p">,</span><span class="s2">&quot;userType&quot;</span><span class="p">:</span><span class="s2">&quot;123&quot;</span><span class="p">,</span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">}</span>
 </code></pre></div>
 
@@ -3607,10 +3607,10 @@ try {
 <p><strong>将文件响应内容存储到服务器。</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.</span><span class="o">*</span><span class="p">;</span>
 
-<span class="n">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prev</span><span class="o">.</span><span class="n">getResponseData</span><span class="p">();</span>
-<span class="nb">String</span><span class="w"> </span><span class="n">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/opt/metersphere/data/xxxx.xxx&quot;</span><span class="p">;</span>
-<span class="n">File</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">file_name</span><span class="p">);</span>
-<span class="n">FileOutputStream</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+<span class="n">byte</span><span class="p">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="n">prev</span><span class="o">.</span><span class="n">getResponseData</span><span class="p">();</span>
+<span class="n">String</span> <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;/opt/metersphere/data/xxxx.xxx&quot;</span><span class="p">;</span>
+<span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="n">new</span> <span class="n">File</span><span class="p">(</span><span class="n">file_name</span><span class="p">);</span>
+<span class="n">FileOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="n">new</span> <span class="n">FileOutputStream</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
 <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
 <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">();</span>
 </code></pre></div>
