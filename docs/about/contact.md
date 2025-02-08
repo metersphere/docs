@@ -14,7 +14,7 @@
     - 详细的问题描述。
     - 问题的截图说明。
 
-![wechat-group](../img/入群.png){ width="170px" }
+![wechat-group](../img/入群.jpg){ width="170px" }
 
 ## 3 开源社区论坛
 !!! ms-abstract ""
