@@ -25,7 +25,7 @@
 2025年1月23日
 
 !!! ms-abstract "💥💥 重要提醒 💥💥"
-MeterSphere v3.0 产品定位发生变化，不再提供性能测试和 UI 测试相关的功能和能力，也不支持从 v1.x 和 v2.x 版本升级到 v3.0。
+    MeterSphere v3.0 产品定位发生变化，不再提供性能测试和 UI 测试相关的功能和能力，也不支持从 v1.x 和 v2.x 版本升级到 v3.0。
 
 !!! ms-abstract "功能优化 :sunflower:"
 
