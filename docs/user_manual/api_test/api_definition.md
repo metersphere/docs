@@ -221,4 +221,4 @@
 
 !!! ms-abstract "说明" 
 	- **协议类型的插件：** 具体支持插件请查看 [插件列表](../../plugin.md)。
-	- **协议类型插件开发文档：** 请查看 [接口测试插件开发文档](https://github.com/metersphere/api-test-plugins/wiki/MeterSphere-v3-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C)。
+	- **协议类型插件开发文档：** 请查看 [接口测试插件开发文档](https://metersphere.io/docs/v3.x/dev_manual/api_plugin_dev/)。
