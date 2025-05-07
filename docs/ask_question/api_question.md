@@ -43,7 +43,7 @@
 !!! ms-abstract ""
 
     - 通过 docker run 命令一键安装 MeterSphere，需要添加 -v 参数，将宿主机 Python3 环境映射到容器内部
-    - 执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages cr2.fit2cloud.com/metersphere/metersphere-ce-allinone】
+    - 执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages metersphere/metersphere-ce-allinone】
 ![接口测试](../img/ask_question/api_question/python挂载路径.png){ width="900px" }
 
 !!! ms-abstract ""
