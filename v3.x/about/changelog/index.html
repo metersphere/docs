@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../img/facio.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -35,7 +35,7 @@
 <link href="../../css/f2c-header.css" rel="stylesheet" type="text/css" />
 
 
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2775,6 +2775,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v362-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.6.2-lts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v361-lts" class="md-nav__link">
     <span class="md-ellipsis">
       v3.6.1-lts
@@ -2921,6 +2930,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#v362-lts" class="md-nav__link">
+    <span class="md-ellipsis">
+      v3.6.2-lts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v361-lts" class="md-nav__link">
     <span class="md-ellipsis">
       v3.6.1-lts
@@ -3035,6 +3053,33 @@
 <li>2024 年 5 月 30 日：发布 v3.0 beta 版本；</li>
 <li>2024 年 6 月 27 日：发布 v3.0 正式版本；</li>
 <li>2024 年 12 月 26 日：发布 v3.6-lts LTS 版本。</li>
+</ul>
+</div>
+<h2 id="v362-lts">v3.6.2-lts<a class="headerlink" href="#v362-lts" title="Permanent link">&para;</a></h2>
+<hr />
+<p>2025年2月25日</p>
+<div class="admonition ms-abstract">
+<p class="admonition-title">💥💥 重要提醒 💥💥</p>
+<p>MeterSphere v3.0 产品定位发生变化，不再提供性能测试和 UI 测试相关的功能和能力，也不支持从 v1.x 和 v2.x 版本升级到 v3.0。</p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">功能优化 <img alt="🌻" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f33b.png" title=":sunflower:" /></p>
+<ul>
+<li>feat(接口测试): 后置操作添加等待时间</li>
+<li>feat(项目管理): 脚本代码片段添加打印脚本</li>
+</ul>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">缺陷修复 <img alt="🌴" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f334.png" title=":palm_tree:" /></p>
+<ul>
+<li>fix(接口测试): 提取参数 JSONPath 结果修复</li>
+<li>fix(接口测试): 参数提取表格空行过滤</li>
+<li>fix(接口测试): 批量执行场景用例，超过500条，会出现重复执行#34992</li>
+<li>fix(接口测试): 参数提取表格过滤条件修复</li>
+<li>fix(接口测试): 修复接口场景表头筛选问题</li>
+<li>fix(接口测试): 后置条件公共脚本参数修改不生效修复</li>
+<li>fix(任务中心): 测试计划报告页打开任务中心空白修复</li>
+<li>fix(测试用例): 修复测试用例前后置依赖无数据创建页面未关闭抽屉bug</li>
 </ul>
 </div>
 <h2 id="v361-lts">v3.6.1-lts<a class="headerlink" href="#v361-lts" title="Permanent link">&para;</a></h2>
@@ -3471,11 +3516,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
 
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
 <script>
