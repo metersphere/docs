@@ -14,7 +14,7 @@
     - 详细的问题描述。
     - 问题的截图说明。
 
-![wechat-group](https://metersphere.oss-cn-hangzhou.aliyuncs.com/img/wechat-helper.png)
+![wechat-group](https://metersphere.oss-cn-hangzhou.aliyuncs.com/img/wechat-helper.png){ width="170px" }
 
 ## 3 开源社区论坛
 !!! ms-abstract ""
