@@ -92,16 +92,22 @@
 
 [//]: # (![接口测试]&#40;../img/ask_question/api_question/python环境路径.png&#41;{ width="900px" })
 
-!!! ms-abstract ""
+[//]: # (!!! ms-abstract "")
 
-    - 通过 docker run 命令一键安装 MeterSphere，需要添加 -v 参数，将宿主机 Python3 环境映射到容器内部
-    - 执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages metersphere/metersphere-ce-allinone】
+[//]: # ()
+[//]: # (    - 通过 docker run 命令一键安装 MeterSphere，需要添加 -v 参数，将宿主机 Python3 环境映射到容器内部)
 
-!!! ms-abstract ""
-    在【项目管理-公共脚本】处添加如下代码，进行测试，在执行结果页面，正常输出请求成功响应体。
-![接口测试](../img/ask_question/api_question/python公共脚本代码.png){ width="900px" }
+[//]: # (    - 执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages metersphere/metersphere-ce-allinone】)
 
-![接口测试](../img/ask_question/api_question/python代码测试成功.png){ width="900px" }
+[//]: # ()
+[//]: # (!!! ms-abstract "")
+
+[//]: # (    在【项目管理-公共脚本】处添加如下代码，进行测试，在执行结果页面，正常输出请求成功响应体。)
+
+[//]: # (![接口测试]&#40;../img/ask_question/api_question/python公共脚本代码.png&#41;{ width="900px" })
+
+[//]: # ()
+[//]: # (![接口测试]&#40;../img/ask_question/api_question/python代码测试成功.png&#41;{ width="900px" })
 
 ## 2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
 !!! ms-abstract "配置 localhost 异常"
