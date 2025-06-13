@@ -2913,35 +2913,78 @@
 <h2 id="1-python3">1 离线包安装，如何引用 Python3 第三方依赖包？<a class="headerlink" href="#1-python3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意</p>
-<p>Python3 引用第三方依赖包有【挂载本地目录】方式。</p>
+<p>Python3 引用第三方依赖包有【挂载本地目录】和【容器共享目录】两种方式，任选其中一种方式即可。</p>
 </div>
 <div class="admonition ms-abstract">
 <p class="admonition-title">挂载本地目录</p>
-<p>MeterSphere 里内嵌的 Python3 是 Python3.10，因此需要先在部署的环境里，先安装 Python3.10</p>
-<div class="highlight"><pre><span></span><code># 安装python3.10
+<div class="highlight"><pre><span></span><code># 安装python3.11 及虚拟环境
 apt update &amp;&amp; sudo apt upgrade -y
 apt install software-properties-common -y
 add-apt-repository ppa:deadsnakes/ppa
-apt install python3.10
-
-# 安装虚拟环境
-apt install -y python3.10-venv
+apt install -y python3.11 python3.11-venv
 
 # 创建一个目录用于python虚拟环境
 mkdir /root/.venv
 cd /root/.venv
-python3 -m venv .
+python3.11 -m venv .
 source bin/activate
 
 # 安装三方包
 pip install requests
 pip install pinyin
 </code></pre></div>
-<p>配置 task-runner 的目录挂载 /root/.venv/lib/python3.10/site-packages:/usr/local/lib/python3.10/site-packages</p>
+<p>配置 task-runner 的目录挂载 /root/.venv/lib/python3.11/site-packages:/usr/local/lib/python3.11/site-packages</p>
 <p><a class="glightbox" href="../../img/ask_question/api_question/task_runner_volumn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/task_runner_volumn.png" width="900px" /></a></p>
 <p>配置完成后执行 msctl reload，服务启动后就可以在 Python3 脚本中直接使用三方包了</p>
-<p><a class="glightbox" href="../../img/ask_question/api_question/python3%E4%BB%A3%E7%A0%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python3%E4%BB%A3%E7%A0%81.png" width="900px" /></a>
-```</p>
+<p><a class="glightbox" href="../../img/ask_question/api_question/python3%E4%BB%A3%E7%A0%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python3%E4%BB%A3%E7%A0%81.png" width="900px" /></a></p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">容器共享目录</p>
+<p>使用 Dockerfile 制作一个 python 容器</p>
+<div class="highlight"><pre><span></span><code>FROM python:3.11-alpine
+
+RUN pip install requests pinyin -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple 
+
+VOLUME [&quot;/usr/local/lib/python3.11/site-packages&quot;]
+</code></pre></div>
+<p>修改 docker-compose-task-runner.yml 文件
+<div class="highlight"><pre><span></span><code>version: &quot;3&quot;
+services:
+  python:
+    container_name: python
+    image: python:3.11
+    command: sh -c &quot;tail -f /dev/null&quot;  # 保持容器运行
+
+  task-runner:
+    image: ${MS_IMAGE_PREFIX}/metersphere-ce:${MS_IMAGE_TAG}
+    container_name: task-runner
+    deploy:
+      resources:
+        limits:
+          memory: ${MS_RUNNER_MEM_LIMIT}
+    entrypoint:
+      - sh
+      - -c
+      - |
+        sh /shells/task-runner.sh
+    environment:
+      TOTP_ENABLED: ${MS_TOTP_ENABLED}
+      TOTP_SECRET: ${MS_TOTP_SECRET}
+    ports:
+      - ${MS_TASK_RUNNER_PORT}:8000
+    healthcheck:
+      test: [ &quot;CMD&quot;, &quot;nc&quot;, &quot;-zv&quot;, &quot;localhost&quot;, &quot;8000&quot; ]
+      interval: 6s
+      timeout: 5s
+      retries: 50
+    volumes:
+      - ${MS_BASE}/metersphere/logs/task-runner:/opt/metersphere/logs/task-runner
+    volumes_from:
+      - python
+    restart: always
+    networks:
+      - ms-network
+</code></pre></div></p>
 </div>
 <h2 id="2-python3">2 在线一键安装，如何引用 Python3 第三方依赖包？<a class="headerlink" href="#2-python3" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
