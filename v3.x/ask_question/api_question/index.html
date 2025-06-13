@@ -2968,17 +2968,6 @@ services:
       - ms-network
 </code></pre></div></p>
 </div>
-<div class="admonition ms-abstract">
-<ul>
-<li>通过 docker run 命令一键安装 MeterSphere，需要添加 -v 参数，将宿主机 Python3 环境映射到容器内部</li>
-<li>执行命令【docker run -d -p 8081:8081 --name=metersphere -v ~/.metersphere/data:/opt/metersphere/data -v /usr/local/python3/lib/python3.10/site-packages:/usr/local/python3/lib/python3.10/site-packages metersphere/metersphere-ce-allinone】</li>
-</ul>
-</div>
-<div class="admonition ms-abstract">
-<p>在【项目管理-公共脚本】处添加如下代码，进行测试，在执行结果页面，正常输出请求成功响应体。</p>
-</div>
-<p><a class="glightbox" href="../../img/ask_question/api_question/python%E5%85%AC%E5%85%B1%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python%E5%85%AC%E5%85%B1%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81.png" width="900px" /></a></p>
-<p><a class="glightbox" href="../../img/ask_question/api_question/python%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="接口测试" src="../../img/ask_question/api_question/python%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png" width="900px" /></a></p>
 <h2 id="2">2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <div class="admonition ms-abstract">
 <p class="admonition-title">配置 localhost 异常</p>
