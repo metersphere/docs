@@ -84,10 +84,13 @@
           - ms-network
     ```
 
-## 2 在线一键安装，如何引用 Python3 第三方依赖包？
-!!! ms-abstract ""
-    宿主机的 Python3 环境已安装 requests 模块，执行 pip show requests 找到 Python3 环境的路径
-![接口测试](../img/ask_question/api_question/python环境路径.png){ width="900px" }
+[//]: # (## 2 在线一键安装，如何引用 Python3 第三方依赖包？)
+
+[//]: # (!!! ms-abstract "")
+
+[//]: # (    宿主机的 Python3 环境已安装 requests 模块，执行 pip show requests 找到 Python3 环境的路径)
+
+[//]: # (![接口测试]&#40;../img/ask_question/api_question/python环境路径.png&#41;{ width="900px" })
 
 !!! ms-abstract ""
 
@@ -100,7 +103,7 @@
 
 ![接口测试](../img/ask_question/api_question/python代码测试成功.png){ width="900px" }
 
-## 3 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
+## 2 本地执行检测，出现 “网络异常，请检查您的网络连接是否正常”
 !!! ms-abstract "配置 localhost 异常"
     【个人执行-本地执行】配置 http://localhost:8000，页面报“网络异常，请检查您的网络连接是否正常”
 ![接口测试](../img/ask_question/api_question/本地执行localhost.png){ width="900px" }
@@ -143,7 +146,7 @@
     点击【检测并保存】即可检测通过
 ![接口测试](../img/ask_question/api_question/IP检测通过.png){ width="900px" }
 
-## 4 资源池无法访问当前站点
+## 3 资源池无法访问当前站点
 !!! ms-abstract "问题现象"
     【接口测试】执行请求时，页面提示"资源池无法访问当前站点"
 ![接口测试](../img/ask_question/api_question/资源池无法访问当前站点.png){ width="900px" }
