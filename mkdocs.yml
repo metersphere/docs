@@ -115,6 +115,7 @@ nav:
     - 常见问题:
         - 安装部署: ask_question/install_question.md
         - 接口测试: ask_question/api_question.md
+        - 如何接入AI: ask_question/ai_service.md
     - 开发文档:
           - 开发环境搭建: dev_manual/dev_manual.md
           - 接口自动化插件开发: dev_manual/api_plugin_dev.md
@@ -166,7 +167,7 @@ plugins:
           - en
           - ja
         separator: '[\s\-\.]+'
-    - glightbox        
+    - glightbox
 
 extra:
     version:
