@@ -105,14 +105,29 @@
     调试成功后，点击【保存为新用例】直接保存成用例。
 ![!保存为新用例](../../img/api_test/definition/保存为新用例.png){ width="900px" }	
 
-## 5 创建用例
+## 5 生成用例
+### 5.1 手动创建用例
 !!! ms-abstract "" 
     切换到【用例】页面，点击【创建用例】。
 ![!创建用例](../../img/api_test/definition/创建用例1.png){ width="900px" }		
 
 !!! ms-abstract "" 
     依次输入用例名称，用例等级、状态、标签、请求参数信息，选择环境。点击执行，执行成功后，点击【创建】或【保存并继续创建】。
-![!创建用例](../../img/api_test/definition/创建用例2.png){ width="900px" }	
+![!创建用例](../../img/api_test/definition/创建用例2.png){ width="900px" }
+### 5.2 AI 生成用例
+!!! ms-abstract "注意：使用 AI 生成用例需要先在 “系统设置”→“系统参数”→ “模型设置”或者登录用户的“个人中心”-“模型设置” 处配置并开启模型。"
+    切换到【用例】页面，点击【AI 生成】，打开 AI 对话框。
+![!AI生成用例对话框](../../img/api_test/definition/AI生成用例对话框.png){ width="900px" }
+
+!!! ms-abstract ""
+    点击对话框【设置】按钮，打开用例设置页，可配置用例生成场景和用例内容。
+![!AI用例配置页面](../../img/api_test/definition/AI用例配置页面.png){ width="900px" }
+
+!!! ms-abstract ""
+    输入用例生成要求，待用例生成后，可以勾选用例，点击【同步用例】至用例列表。
+![!AI用例同步页面](../../img/api_test/definition/AI用例同步页面.png){ width="900px" }
+![!AI用例同步成功页面](../../img/api_test/definition/AI用例同步成功页面.png){ width="900px" }
+
 
 ## 6 CASE 预览
 ### 6.1 详情
