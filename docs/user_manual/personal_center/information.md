@@ -37,3 +37,8 @@
 !!! ms-abstract ""
     绑定第三方缺陷管理平台账号。如：配置了禅道、JIRA、TAPD、飞书等平台时，在个人中心绑定对应三方平台的账号，MeterSphere将使用此处的账号作为缺陷创建人。
 ![个人中心](../../img/personal_center/禅道个人账号.png){ width="900px" }
+
+## 6  模型配置
+!!! ms-abstract ""
+    【模型设置】支持 DeepSeek，OpenAI、 智普AI三种供应商对接模型。选择对应供应商后，点击【添加模型】，即可打开模型配置页面。模型添加完成后，支持对已添加模型的编辑、删除操作。</br>
+![个人中心](../../img/personal_center/个人中心模型配置.png){ width="900px" }
