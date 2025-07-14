@@ -35,7 +35,7 @@
 ![!导入请求2](../../img/api_test/debug/导入请求2.png){ width="900px" }
 
 !!! ms-abstract "" 
-    录入上图复制的 cURL 请求信息，点击确认。
+    录入上图复制的 cURL 请求信息，点击导入。
 ![!导入请求3](../../img/api_test/debug/导入请求3.png){ width="900px" }    
 
 !!! ms-abstract "说明" 
