@@ -40,5 +40,5 @@
 
 ## 6  模型配置
 !!! ms-abstract ""
-    【模型设置】支持 DeepSeek，OpenAI、 智普AI三种供应商对接模型。选择对应供应商后，点击【添加模型】，即可打开模型配置页面。模型添加完成后，支持对已添加模型的编辑、删除操作。</br>
+    【模型设置】支持 DeepSeek，OpenAI、 智普AI三种供应商对接模型。具体模型配置参考[系统设置-模型设置](../system_management/system.md#42-模型设置)。</br>
 ![个人中心](../../img/personal_center/个人中心模型配置.png){ width="900px" }

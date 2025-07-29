@@ -146,6 +146,9 @@
     【模型设置】支持 DeepSeek，OpenAI、 智普AI三种供应商对接模型。选择对应供应商后，点击【添加模型】，即可打开模型配置页面。模型添加完成后，支持对已添加模型的编辑、删除操作。</br>
 
 ![系统参数模型设置](../../img/system_management/系统参数模型设置.png){ width="900px" }
+![DeepSeek模型配置](../../img/system_management/DeepSeek模型配置.png){ width="900px" }
+![OpenAI模型配置](../../img/system_management/OpenAI模型配置.png){ width="900px" }
+![智谱AI模型配置](../../img/system_management/智谱AI模型配置.png){ width="900px" }
 
 ### 4.3 数据清理
 !!! ms-abstract ""
