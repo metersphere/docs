@@ -52,3 +52,29 @@
     ```
     helm upgrade metersphere metersphere3-3.4.0.tgz -f values.yml -n ms
     ```
+
+## 3 创建Node Port访问方式
+!!! ms-abstract "操作步骤"
+    使用命令 kubectl get svc -n ms 可查看 metersphere 所占用的端口号。如果不使用 ingress 的访问方式，可以创建一个 nodeport。
+    ```
+    vi ms-nodeport.yaml
+
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: metersphere-nodeport
+      namespace: ms
+    spec:
+      ports:
+        - name: metersphere
+          protocol: TCP
+          port: 8081
+          targetPort: 8081
+          nodePort: 30801
+      type: NodePort
+      selector:
+        app: metersphere
+
+    kubectl create -f ms-nodeport.yaml
+    ```
+    访问 MeterSphere 页面: http://nodeIP:30801
