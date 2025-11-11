@@ -19,6 +19,24 @@
     - 2024 年 12 月 26 日：发布 v3.6-lts LTS 版本。
 
 
+## v3.6.6-lts
+
+------
+
+2025年10月21日
+
+!!! ms-abstract "💥💥重要提醒💥💥"
+    MeterSphere v3.0 产品定位发生变化，不再提供性能测试和 UI 测试相关的功能和能力，也不支持从 v1.x 和 v2.x 版本升级到 v3.0。
+
+!!! ms-abstract "功能优化 :sunflower:"
+
+    - feat: 升级Spring boot 版本到 3.5.6    
+    - feat: 升级内置 Redis 版本到 8.2.2
+
+!!! ms-abstract "缺陷修复 :palm_tree:"
+
+    - fix(接口测试): 修复执行附件解析问题 (#35485)
+
 ## v3.6.5-lts
 
 ------
