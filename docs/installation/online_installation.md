@@ -10,9 +10,53 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     * 网络要求：可访问互联网
     * 注：如用于生产环境，推荐使用 [离线安装包](https://community.fit2cloud.com/#/products/metersphere/downloads) 进行部署
 
+## 2 一键安装
+!!! ms-abstract ""
+    在服务器上以 `root` 用户执行如下命令一键安装 MeterSphere。<br>
+    ```
+    curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
+    ```
 
-## 2 手动安装
-### 2.1 手动安装
+    安装成功后，通过浏览器访问如下页面登录 MeterSphere。<br>
+    ```
+    地址: http://目标服务器IP地址:8081
+    用户名: admin
+    密码: metersphere
+    ```
+
+    安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。
+
+!!! ms-abstract "安装目录目录结构说明"
+    ```
+    /opt/metersphere/
+    ├── bin                                         #-- 安装过程中需要加载到容器中的脚本
+    ├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
+    ├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
+    ├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
+    ├── docker-compose-gateway.yml                  #-- MeterSphere 的 API 网关
+    ├── docker-compose-eureka.yml                   #-- MeterSphere 的服务注册中心
+    ├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
+    ├── docker-compose-workstation.yml              #-- MeterSphere 工作台模块的 Docker Compose 文件 
+    ├── docker-compose-test-track.yml               #-- MeterSphere 测试跟踪模块的 Docker Compose 文件 
+    ├── docker-compose-api-test.yml                 #-- MeterSphere 接口测试模块的 Docker Compose 文件 
+    ├── docker-compose-ui-test.yml                  #-- MeterSphere UI 测试模块的 Docker Compose 文件 
+    ├── docker-compose-performance-test.yml         #-- MeterSphere 性能测试模块的 Docker Compose 文件  
+    ├── docker-compose-report-stat.yml              #-- MeterSphere 报表统计模块的 Docker Compose 文件  
+    ├── docker-compose-project-management.yml       #-- MeterSphere 项目管理模块的 Docker Compose 文件  
+    ├── docker-compose-system-setting.yml           #-- MeterSphere 系统设置模块的 Docker Compose 文件  
+    ├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
+    ├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
+    ├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
+    ├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
+    ├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
+    ├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
+    ├── install.conf -> /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
+    ├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
+    └── version                                     #-- 安装包对应的 MeterSphere 版本信息
+    ```
+
+## 3 手动安装
+### 3.1 手动安装
 !!! ms-abstract ""
     MeterSphere 安装包下载链接: https://github.com/metersphere/metersphere/releases
     ```
@@ -46,7 +90,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
     ```
 
-### 2.2 安装配置文件说明
+### 3.2 安装配置文件说明
 !!! ms-abstract "安装配置文件说明"
     如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 `/bin/bash install.sh` 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 `msctl reload` 即可重新加载配置文件）。
     ```
@@ -134,7 +178,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     MS_API_MEM_LIMIT=1073741824（默认为 1g）
     ```
 
-### 2.3 数据库配置文件说明
+### 3.3 数据库配置文件说明
 !!! ms-abstract "注意"
     MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。
 
@@ -182,7 +226,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
     CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
     ```
 
-## 3 配置反向代理
+## 4 配置反向代理
 !!! ms-abstract ""
     如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
     ```

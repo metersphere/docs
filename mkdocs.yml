@@ -41,7 +41,7 @@ theme:
 nav:
     - 项目介绍: index.md
     - 快速开始:
-#          - 一键部署: quick_start/quick_start.md
+          - 一键部署: quick_start/quick_start.md
           - 创建项目: quick_start/create_project.md
           - 使用测试跟踪: quick_start/test_track.md
           - 使用接口测试: quick_start/api_test.md
@@ -51,7 +51,7 @@ nav:
     - 安装部署:
           - 网络端口要求: installation/network_port.md
           - Linux 单机部署:
-                - 离线安装: installation/offline_installation.md
+                - 离线安装: installation/offline_installation.md                
                 - 离线升级: installation/offline_upgrade.md
                 - 在线安装: installation/online_installation.md
                 - 在线升级: installation/online_upgrade.md
@@ -99,7 +99,7 @@ nav:
                 - 概述: user_manual/ui_test/intro.md
                 - 元素库: user_manual/ui_test/ui_element_store.md
                 - UI 自动化: user_manual/ui_test/ui_automation.md
-                - 测试报告: user_manual/ui_test/ui_test_report.md
+                - 测试报告: user_manual/ui_test/ui_test_report.md  
           - 性能测试:
                 - 概述: user_manual/load_test/intro.md
                 - 性能测试: user_manual/load_test/load_test.md
@@ -188,7 +188,7 @@ plugins:
           - en
           - ja
         separator: '[\s\-\.]+'
-    - glightbox
+    - glightbox        
 
 extra:
     version:
