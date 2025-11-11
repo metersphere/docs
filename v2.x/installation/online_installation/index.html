@@ -404,6 +404,8 @@
       
         
       
+        
+      
     
     
     
@@ -434,6 +436,29 @@
             快速开始
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/quick_start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    一键部署
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -820,35 +845,44 @@
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2 手动安装
+      2 一键安装
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2 手动安装">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 手动安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 手动安装">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 手动安装
+      3.1 手动安装
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 安装配置文件说明
+      3.2 安装配置文件说明
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
+  <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 数据库配置文件说明
+      3.3 数据库配置文件说明
     </span>
   </a>
   
@@ -860,9 +894,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      3 配置反向代理
+      4 配置反向代理
     </span>
   </a>
   
@@ -3462,35 +3496,44 @@
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2 手动安装
+      2 一键安装
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2 手动安装">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 手动安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 手动安装">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 手动安装
+      3.1 手动安装
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 安装配置文件说明
+      3.2 安装配置文件说明
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
+  <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 数据库配置文件说明
+      3.3 数据库配置文件说明
     </span>
   </a>
   
@@ -3502,9 +3545,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      3 配置反向代理
+      4 配置反向代理
     </span>
   </a>
   
@@ -3542,8 +3585,49 @@
 <li>注：如用于生产环境，推荐使用 <a href="https://community.fit2cloud.com/#/products/metersphere/downloads">离线安装包</a> 进行部署</li>
 </ul>
 </div>
-<h2 id="2">2 手动安装<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
-<h3 id="21">2.1 手动安装<a class="headerlink" href="#21" title="Permanent link">¶</a></h3>
+<h2 id="2">2 一键安装<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<div class="admonition ms-abstract">
+<p>在服务器上以 <code>root</code> 用户执行如下命令一键安装 MeterSphere。<br>
+</p><div class="highlight"><pre><span></span><code>curl -sSL https://resource.fit2cloud.com/metersphere/metersphere/releases/latest/download/quick_start.sh | bash
+</code></pre></div><p></p>
+<p>安装成功后，通过浏览器访问如下页面登录 MeterSphere。<br>
+</p><div class="highlight"><pre><span></span><code>地址: http://目标服务器IP地址:8081
+用户名: admin
+密码: metersphere
+</code></pre></div><p></p>
+<p>安装脚本默认使用 /opt/metersphere 目录作为安装目录，MeterSphere 的配置文件、数据及日志等均存放在该安装目录。</p>
+</div>
+<div class="admonition ms-abstract">
+<p class="admonition-title">安装目录目录结构说明</p>
+<div class="highlight"><pre><span></span><code>/opt/metersphere/
+├── bin                                         #-- 安装过程中需要加载到容器中的脚本
+├── compose_files                               #-- 根据不同的安装模式，保存需要使用到的 compose 文件信息
+├── conf                                        #-- MeterSphere 各组件及数据库等中间件的配置文件
+├── data                                        #-- MeterSphere 各组件及数据库等中间件的数据持久化目录
+├── docker-compose-gateway.yml                  #-- MeterSphere 的 API 网关
+├── docker-compose-eureka.yml                   #-- MeterSphere 的服务注册中心
+├── docker-compose-base.yml                     #-- MeterSphere 基础 Docker Compose 文件，定义了网络等基础信息 
+├── docker-compose-workstation.yml              #-- MeterSphere 工作台模块的 Docker Compose 文件 
+├── docker-compose-test-track.yml               #-- MeterSphere 测试跟踪模块的 Docker Compose 文件 
+├── docker-compose-api-test.yml                 #-- MeterSphere 接口测试模块的 Docker Compose 文件 
+├── docker-compose-ui-test.yml                  #-- MeterSphere UI 测试模块的 Docker Compose 文件 
+├── docker-compose-performance-test.yml         #-- MeterSphere 性能测试模块的 Docker Compose 文件  
+├── docker-compose-report-stat.yml              #-- MeterSphere 报表统计模块的 Docker Compose 文件  
+├── docker-compose-project-management.yml       #-- MeterSphere 项目管理模块的 Docker Compose 文件  
+├── docker-compose-system-setting.yml           #-- MeterSphere 系统设置模块的 Docker Compose 文件  
+├── docker-compose-kafka.yml                    #-- MeterSphere 自带的 Kafka 所需的 Docker Compose 文件
+├── docker-compose-mysql.yml                    #-- MeterSphere 自带的 MySQL 所需的 Docker Compose 文件
+├── docker-compose-node-controller.yml          #-- MeterSphere Node-Controller 组件所需的 Docker Compose文件
+├── docker-compose-redis.yml                    #-- MeterSphere Redis 组件所需的 Docker Compose文件
+├── docker-compose-minio.yml                    #-- MeterSphere 自带的分布式对象存储服务
+├── docker-compose-prometheus.yml               #-- MeterSphere Prometheus 组件所需的Docker Compose 文件
+├── install.conf -&gt; /opt/metersphere/.env       #-- MeterSphere 的配置文件 /opt/metersphere/.env 的软链接
+├── logs                                        #-- MeterSphere 各组件的日志文件持久化目录
+└── version                                     #-- 安装包对应的 MeterSphere 版本信息
+</code></pre></div>
+</div>
+<h2 id="3">3 手动安装<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<h3 id="31">3.1 手动安装<a class="headerlink" href="#31" title="Permanent link">¶</a></h3>
 <div class="admonition ms-abstract">
 <p>MeterSphere 安装包下载链接: <a href="https://github.com/metersphere/metersphere/releases">https://github.com/metersphere/metersphere/releases</a>
 </p><div class="highlight"><pre><span></span><code># 下载在线安装包
@@ -3573,7 +3657,7 @@ cd metersphere-online-installer-v2.x.y
  初始密码: metersphere
 </code></pre></div><p></p>
 </div>
-<h3 id="22">2.2 安装配置文件说明<a class="headerlink" href="#22" title="Permanent link">¶</a></h3>
+<h3 id="32">3.2 安装配置文件说明<a class="headerlink" href="#32" title="Permanent link">¶</a></h3>
 <div class="admonition ms-abstract">
 <p class="admonition-title">安装配置文件说明</p>
 <p>如果无特殊需求可以不进行修改采用默认参数安装（首次安装可修改配置 install.conf 文件中相关配置，修改完后执行 <code>/bin/bash install.sh</code> 命令进行安装，已安装成功如需再修改配置参数，需要到 ${MS_BASE}/metersphere/.env 里修改，修改完后执行 <code>msctl reload</code> 即可重新加载配置文件）。
@@ -3661,7 +3745,7 @@ MS_MINIO_SECRET_KEY=Password123@minio
 MS_API_MEM_LIMIT=1073741824（默认为 1g）
 </code></pre></div><p></p>
 </div>
-<h3 id="23">2.3 数据库配置文件说明<a class="headerlink" href="#23" title="Permanent link">¶</a></h3>
+<h3 id="33">3.3 数据库配置文件说明<a class="headerlink" href="#33" title="Permanent link">¶</a></h3>
 <div class="admonition ms-abstract">
 <p class="admonition-title">注意</p>
 <p>MeterSphere 使⽤ MySQL 8.0 对系统数据进⾏存储。同时 MeterSphere 对数据库部分配置项有要求，请参考下附的数据库配置，修改环境中的数据库配置文件。</p>
@@ -3706,7 +3790,7 @@ default-character-set=utf8mb4
 </p><div class="highlight"><pre><span></span><code>CREATE DATABASE `metersphere` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
 </code></pre></div><p></p>
 </div>
-<h2 id="3">3 配置反向代理<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<h2 id="4">4 配置反向代理<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
 <div class="admonition ms-abstract">
 <p>如果使用了 Nginx、HAProxy 进行反向代理配置，需要增加对 websocket 的支持。以 Nginx 为例，参考配置如下:
 </p><div class="highlight"><pre><span></span><code>server {
