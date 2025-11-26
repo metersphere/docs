@@ -97,7 +97,7 @@
             <td>持续集成</td>
             <td>测试计划</td>
             <td>社区版</td>
-            <td>实现在 Jenkins 流水线中触发并自动执行 MeteSphere 测试计划</td>
+            <td>实现在 Jenkins 流水线中触发并自动执行 MeterSphere 测试计划</td>
         </tr>
         <tr>
             <td>12</td>
