@@ -5,7 +5,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 # 项目介绍
 
 !!! warning "注意"
-    MeterSphere v1 社区版已停止维护，推荐使用 [v3 版本](https://metersphere.io/docs/v3.x/)。
+    MeterSphere v1 版本已停止维护，推荐使用 [v3 版本](https://metersphere.io/docs/v3.x/)。
 
 欢迎使用 MeterSphere。
 
