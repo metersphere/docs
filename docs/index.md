@@ -4,6 +4,9 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 
 # 项目介绍
 
+!!! warning "注意"
+    MeterSphere v1 社区版已停止维护，推荐使用 [v3 版本](https://metersphere.io/docs/v3.x/)。
+
 欢迎使用 MeterSphere。
 
 MeterSphere 是一站式开源持续测试平台, 涵盖测试跟踪、接口测试、UI 测试和性能测试等，全面兼容 JMeter、Selenium 等主流开源标准，能够有效助力开发和测试团队在线共享协作，实现端到端的测试管理跟踪可视化、自动化测试、性能测试及融入持续交付 DevOps 体系，并充分利用云弹性进行高度可扩展的自动化测试，从而加速高质量的软件交付，推动中国测试行业整体效率的提升。
