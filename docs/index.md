@@ -1,9 +1,7 @@
-
-
 # 项目介绍
 
 !!! ms-abstract ""
-	MeterSphere 是新一代的开源持续测试工具，让软件测试工作更简单、更高效，不再成为持续交付的瓶颈。
+	MeterSphere 是新一代的开源持续测试工具，内置 AI 助手，让软件测试工作更简单、更高效，不再成为持续交付的瓶颈。
 
 	- **测试管理**: 从测试用例管理，到测试计划执行、缺陷管理、测试报告生成，具有远超 TestLink 等传统测试管理工具的使用体验。
 	- **接口测试**: 集 Postman 的易用与 JMeter 的灵活于一体，接口调试、接口定义、接口 Mock、场景自动化、接口报告，你想要的都有。
@@ -24,8 +22,6 @@
 ## 2 了解更多
 !!! ms-abstract ""
 
-[//]: # (    - [获取《持续测试白皮书》]&#40;https://fit2cloud.com/whitepaper/metersphere-whitepaper_202309.pdf&#41;)
-    - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202407.pdf)
+    - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_2026.pdf)
     - [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
     - [MeterSphere 社区论坛](https://bbs.fit2cloud.com/c/ms/8)
-    - [MeterSphere 培训和认证](https://edu.fit2cloud.com/index)
