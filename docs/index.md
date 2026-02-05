@@ -5,7 +5,7 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 # 项目介绍
 
 !!! ms-abstract "温馨提示"
-	MeterSphere v3 版本已经发布，使用体验更佳，建议使用 [v3 版本](https://metersphere.io/docs/v3.x/)。
+	MeterSphere V2 社区版已经停止维护，建议使用 [MeterSphere V3 版本](https://metersphere.io/docs/v3.x/)。
 
 !!! ms-abstract ""
 	MeterSphere 是一站式开源持续测试平台，涵盖测试跟踪、接口测试、UI 测试和性能测试等，全面兼容 JMeter、Selenium 等主流开源标准，有效助力开发和测试团队在线共享协作，实现端到端的测试管理跟踪可视化、自动化测试、性能测试及融入持续交付 DevOps 体系，并充分利用云弹性进行高度可扩展的自动化测试，从而加速高质量的软件交付，推动中国测试行业整体效率的提升。
@@ -40,7 +40,6 @@ description: MeterSphere 一站式开源持续测试平台官方文档。MeterSp
 !!! ms-abstract ""
 
     - [获取《持续测试白皮书》](https://fit2cloud.com/whitepaper/metersphere-whitepaper_202309.pdf)
-    - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_202306.pdf)
     - [MeterSphere 知识库](https://kb.fit2cloud.com/categories/metersphere)
     - [MeterSphere 社区论坛](https://bbs.fit2cloud.com/c/ms/8)
     - [MeterSphere 培训和认证](https://edu.fit2cloud.com/index)
