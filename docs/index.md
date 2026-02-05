@@ -1,4 +1,4 @@
-# 项目介绍
+## 1 项目介绍
 
 !!! ms-abstract ""
 	MeterSphere 是新一代的开源持续测试工具，内置 AI 助手，让软件测试工作更简单、更高效，不再成为持续交付的瓶颈。
@@ -8,7 +8,7 @@
 	- **团队协作**: 采用“系统-组织-项目”分层设计理念，帮助用户摆脱单机测试工具的束缚，方便快捷地开展团队协作。
     - **插件体系**: 提供各种类别的插件，用户可以按需取用，快速实现 MeterSphere 测试能力的扩展以及与 DevOps 流水线的集成。
 
-## 1 界面展示
+## 2 界面展示
 
 ![!界面说明2](./img/登录.png){ width="900px" }
 ![!界面说明2](./img/项目管理.png){ width="900px" }
@@ -19,7 +19,7 @@
 ![!界面说明2](./img/接口测试2.png){ width="900px" }
 ![!界面说明2](./img/缺陷管理.png){ width="900px" }
 
-## 2 了解更多
+## 3 了解更多
 !!! ms-abstract ""
 
     - [如何向团队介绍 MeterSphere？](https://fit2cloud.com/metersphere/download/introduce-metersphere_2026.pdf)
