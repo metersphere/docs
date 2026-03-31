@@ -14,13 +14,43 @@
 !!! ms-abstract "💥💥重要提醒💥💥"
     MeterSphere V3 产品定位发生变化，不支持从 v1.x 和 v2.x 版本升级到 v3.0。
 
+## v3.6.8-lts
+
+------
+
+2026年3月30日
+
+!!! ms-abstract "💥💥重要提醒💥💥"
+    - MeterSphere V3 产品定位发生变化，不支持从 v1.x 和 v2.x 版本升级到 v3.0。
+    - License 由 GPLv3 变更为 [FIT2CLOUD Open Source License](https://github.com/metersphere/metersphere/blob/v3.x/LICENSE)。
+
+!!! ms-abstract "新增功能 :star2:"
+
+    - 新增 MeterSphere Skills 技能，详见 [GitHub 仓库](https://github.com/metersphere/metersphere-skills)；
+
+!!! ms-abstract "功能调整 :sunflower:"
+
+    - feat(系统设置): 单接口任务最大并发执行数从 3 调整为 1；
+    - feat(系统设置): 用户数量上限从 30 调整为 5；
+
+!!! ms-abstract "缺陷修复 :palm_tree:"
+
+    - fix(系统设置)：修复用户有权限的项目未开启测试计划时，进入工作台保存测试计划概览报错的问题（#35667)；
+    - fix(系统设置)：修复默认系统成员用户组缺少参数查询权限，导致非 admin 用户刷新页面时提示无资源权限的问题；
+    - fix(测试计划)：修复测试计划关联用例时，ID 和名称搜索框无法粘贴、仅能手动输入的问题（#35604)；
+    - fix(接口测试)：修复导入 curl 时请求体包含斜杠导致无法正确识别请求体的问题（#35563)；
+    - fix(接口测试)：修复定义-Mock-请求头/Query/REST 相关问题；
+    - fix(接口测试)：修复导入 Swagger v3.1.0 版本文档失败的问题。
+    
+
 ## v3.6.7-lts
 
 ------
 
 2025年11月10日
 
-
+!!! ms-abstract "💥💥重要提醒💥💥"
+    MeterSphere V3 产品定位发生变化，不支持从 v1.x 和 v2.x 版本升级到 v3.0。
 
 !!! ms-abstract "功能优化 :sunflower:"
 
