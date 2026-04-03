@@ -41,6 +41,7 @@ theme:
 nav:
     - 项目介绍: index.md
     - 系统架构: system_arch.md
+    - 版本对比: https://metersphere.io/v3/pricing.html
     - 安装部署:
           - 网络端口要求: installation/network_port.md
           - 离线安装（生产环境推荐）: installation/offline_installation.md
