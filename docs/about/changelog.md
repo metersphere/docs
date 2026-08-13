@@ -21,8 +21,8 @@
 2026年8月11日
 
 !!! ms-abstract "💥💥重要提醒💥💥"
-- MeterSphere V3 产品定位发生变化，不支持从 v1.x 和 v2.x 版本升级到 v3.0。
-- License 由 GPLv3 变更为 [FIT2CLOUD Open Source License](https://github.com/metersphere/metersphere/blob/v3.x/LICENSE)。
+    - MeterSphere V3 产品定位发生变化，不支持从 v1.x 和 v2.x 版本升级到 v3.0。
+    - License 由 GPLv3 变更为 [FIT2CLOUD Open Source License](https://github.com/metersphere/metersphere/blob/v3.x/LICENSE)。
 
 !!! ms-abstract "问题修复 :palm_tree:"
 
